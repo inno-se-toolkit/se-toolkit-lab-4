@@ -301,7 +301,7 @@ Work in branch `feature/roles-skills`.
 
 > 💡 **LLM check:**
 > 
-> - You can ask an LLM “what does a <role> usually do?”, but:
+> - You can ask an LLM “what does a *role* usually do?”, but:
 >     
 >     - You must visit roadmap.sh and real job postings yourself.
 >         
