@@ -345,7 +345,7 @@ You will act as both **author** and **reviewer**.
     
     - Make changes where reasonable.
         
-    - Reply to comments with something like “Fixed in 123abc” or explain why you disagree.
+    - Reply to comments with something like “Fixed in 123abc” (123abc being the commit id) or explain why you disagree.
         
 4. When both sides are happy, **merge the PR**.
     
