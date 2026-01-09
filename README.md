@@ -40,7 +40,12 @@ This and all other lab assignments will simulate the engineering practices in a 
 1. Create a GitHub account.
 2. Fork this repo to your GitHub account.
 3. Continue your work in the forked repo.
-4. In the repo Settings -> Code and automation -> Add branch ruleset:
+4. In the repo Settings -> General -> Features, enable Issues.
+5. In Issues -> Labels, create a new label:
+   1. Click `New label`.
+   2. Name: `task`.
+   3. Click `Create label`.
+6. In the repo Settings -> Code and automation -> Add branch ruleset:
    1. Ruleset Name: `push`
    2. Enforcement status: `Active`
    3. Target branches -> Add target -> Include default branch
@@ -51,33 +56,33 @@ This and all other lab assignments will simulate the engineering practices in a 
          2. Require conversation resolution before merging
          3. Allowed merge methods: `Merge`.
       3. [x] Block force pushes
-5. In the repo Settings -> Collaborators -> Add people, add a classmate as a collaborator.
-6. Make sure your collaborator have accepted the invitation sent to their email.
+7. In the repo Settings -> Collaborators -> Add people, add a classmate as a collaborator.
+8. Make sure your collaborator have accepted the invitation sent to their email.
 
-7. (If needed) On your computer, configure [`git`](https://git-scm.com/):
+9. (If needed) On your computer, configure [`git`](https://git-scm.com/):
 
     ```bash
     git config --global user.name "Your Name"
     git config --global user.email "your@email"
     ```
 
-8. (Recommended) Install [`VS Code`](https://code.visualstudio.com/).
-9. On your computer, create a directory `pre-swp`.
-10. In that directory, clone the lab repo.
+10. (Recommended) Install [`VS Code`](https://code.visualstudio.com/).
+11. On your computer, create a directory `pre-swp`.
+12. In that directory, clone the lab repo.
 
     ```bash
     git clone https://github.com/your-username/lab-01-market-product-and-git
     ```
 
-11. Open the repo in `VS Code`.
+13. Open the repo in `VS Code`.
 
     ```bash
     cd pre-swp
     code lab-01-market-product-and-git
     ```
 
-12. Install recommended VS Code extensions.
-13. Sign in to accounts.
+14. Install recommended VS Code extensions.
+15. Sign in to accounts.
 
     In the Activity Bar:
 
@@ -86,7 +91,7 @@ This and all other lab assignments will simulate the engineering practices in a 
     3. Click `Accounts`
     4. Click `Sign in with GitHub to use GitHub Pull Requests ...`.
 
-14. Check GitLens.
+16. Check GitLens.
 
     In the Activity Bar:
 
@@ -96,7 +101,7 @@ This and all other lab assignments will simulate the engineering practices in a 
     4. In the `GitLens` panel, click `Commits`.
     5. Make sure you can see commits to this repo.
 
-15. Skim this `README.md` file once so you know what’s coming.
+17. Skim this `README.md` file once so you know what’s coming.
 
 ---
 
@@ -108,12 +113,12 @@ When you're done with a task, you ask your collaborator to review your PR create
 
 The exact flow for each task is `Issue -> PR -> Review`:
 
-- [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a GitHub issue in your forked repo.
+- [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a GitHub issue in your forked repo using one of the suggested issue types.
 - [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue) a new branch for the issue.
 - Implement the task on the new branch.
 - [Create](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request#creating-the-pull-request) a PR to the `main` branch.
 - Request a review of the PR from the collaborator.
-- Make the necessary changes based on the review.
+- Make necessary changes based on the review.
 - Get the collaborator to approve the PR.
 - Merge the PR to the `main` branch.
 - Close the issue.
@@ -125,9 +130,9 @@ Be ready to demonstrate the completed tasks to the TA at the end of the lab.
 ### 1. Pick a product & describe its architecture (text)
 
 1. Create an issue `[Task] Product & architecture description`.
-1. Create a branch for it.
+2. Create a branch for it.
 
-1. In `docs/architecture.md`, write:
+3. In `docs/architecture.md`, write:
     1. **Product choice (5–7 sentences)**
         - Pick one product from this list or propose your own:
             - Yandex Taxi
@@ -167,7 +172,7 @@ Be ready to demonstrate the completed tasks to the TA at the end of the lab.
             ```
 
             Write at least two things in your architecture that you are not fully sure about (guesses, questions, etc.).
-2. Commit your changes with a clear message, e.g.:
+4. Commit your changes with a clear message, e.g.:
 
     ```bash
     git checkout -b feature/architecture
@@ -176,10 +181,10 @@ Be ready to demonstrate the completed tasks to the TA at the end of the lab.
     git push -u origin feature/architecture
     ```
 
-3. Open a **Pull Request** to `main`:
+5. Open a PR to `main`:
     - Link it to the issue (`Closes #<issue_number>`).
-    - Request a review from a classmate.
-4. Continue with next tasks, the reviews will be done in Task 4.
+    - Request a review from a collaborator.
+6. Continue with next tasks, the reviews will be done in Task 4.
 
 ---
 
@@ -332,7 +337,7 @@ You will act as both **author** and **reviewer**.
 > 💡 **LLM check:**
 >
 > - You can ask an LLM “how to phrase a polite review comment”,  
->     but you must read your classmate’s work and think of **real feedback**.
+>     but you must read your collaborator’s work and think of **real feedback**.
 >
 ---
 
