@@ -25,7 +25,7 @@ follow processes, communicate via issues/PRs, and keep the work reviewable.
 
 ## How the lab works (the overall flow)
 
-For starters, **fork** this repo to your GitHub account.
+> For starters, **fork** this repo to your GitHub account.
 
 For each task below you need to:
    - Create an **issue**.
@@ -61,6 +61,8 @@ Create an issue called `[Task] Lab 01 setup`
 Copy the following steps to the issue:
 
 - [ ] Add a classmate to the repo as a collaborator in Settings.
+- [ ] Make sure he accepts the invitation sent to his email.
+      
 - [ ] On your machine, configure git if needed:
 
   ```bash
@@ -68,13 +70,13 @@ Copy the following steps to the issue:
   git config --global user.email "your@email"
   ```
 
-- [ ] Clone the repo to your laptop.
+- [ ] Clone the forked repo to your machine.
 - [ ] Skim this `README.md` file once so you know what’s coming.
     
 
 _When the steps are done, check them off inside the issue, and eventually close the issue._
 
-_This Setup task does not require a review by a classmate_.
+_This Setup task does not require a review by a classmate and does not require a pull request_.
 
 ---
 
