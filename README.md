@@ -4,6 +4,7 @@ To kickstart the course, you will explore two things:
 > 1) How real software products are structured;
 > 2) What kind of engineers build and operate them.
 
+## Learning Outcomes
 By the end of this lab you should be able to:
 
 - Explain the basic architecture of a real-world digital product in terms of modules, data flow, and deployment.
@@ -12,7 +13,8 @@ By the end of this lab you should be able to:
     
 - Use GitHub issues, branches, and pull requests to structure your work and get a peer review.
 
-To complete this lab, you will:
+## Tasks overview
+To complete this lab, you will need to:
 - Pick an existing digital product.
 - Sketch its architecture: modules, data flow, deployment.
 - Map modules to tech roles and skills, using real job postings and roadmap.sh.
@@ -21,62 +23,51 @@ To complete this lab, you will:
 This and all other lab assignments will simulate the engineering practices in a real team:
 follow processes, communicate via issues/PRs, and keep the work reviewable.
 
----
-
-## How the lab works (the overall flow)
-
-For starters, **fork** this repo to your GitHub account.
-
-For each task below you need to:
-   - Create an **issue**.
-   - Implement the task on a **feature branch**.
-   - Open a **Pull Request**.
-   - Assign the classmate in the PR as the reviewer.
-   - After the review, make the necessary changes and get the classmate to approve the PR.
-   - Merge the PR to the `main` branch.
-   - Close the issue.
-At the end:
-   - Be ready to demonstrate the completed tasks to the TA.
-
-
 ## Repo structure
 
 - `.github/ISSUE_TEMPLATE` – templates for your issues.
 - `.github/pull_request_template.md` – checklist for PRs.
 - `src/` – place for any code/scripts/config.
 
-
-## Tasks
-
-> 🔁 _Reminder: every non-trivial task should have **its own GitHub issue** created from templates in `.github/ISSUE_TEMPLATE`._
-
-You work **independently** on your own repo, but you will ask a classmate to **review your work via a PR**.
-
 ---
 
-### 0. Setup
-
-Create an issue called `[Task] Lab 01 setup`
-
-Copy the following steps to the issue:
-
+## Lab Setup
+1. For starters, **fork** this repo to your GitHub account and continue your work in the forked repo.
+2. Create an issue called `[Task] Lab 01 setup`
+3. Copy the following steps to the issue:
 - [ ] Add a classmate to the repo as a collaborator in Settings.
+- [ ] Make sure he accepts the invitation sent to his email.    
 - [ ] On your machine, configure git if needed:
-
   ```bash
   git config --global user.name "Your Name"
   git config --global user.email "your@email"
   ```
-
-- [ ] Clone the repo to your laptop.
+- [ ] Clone the forked repo to your machine.
 - [ ] Skim this `README.md` file once so you know what’s coming.
-    
-
-_When the steps are done, check them off inside the issue, and eventually close the issue._
-
-_This Setup task does not require a review by a classmate_.
+4. Complete the steps, check them off inside the issue, and close the issue.
 
 ---
+
+## Main Tasks
+
+Each task below, you work **independently** on your forked repo.
+Then ask a classmate to **review your work via a Pull Request**.
+
+The exact flow for each task is `Issue -> PR -> Review`:
+   - Create an **issue**.
+   - Implement the task on a **new branch**.
+   - Open a **Pull Request**.
+   - Assign the classmate as the reviewer for the PR.
+   - Make the necessary changes based on the review
+   - Get the classmate to approve the PR.
+   - Merge the PR to the `main` branch.
+   - Close the issue.
+
+At the end:
+   - Be ready to demonstrate the completed tasks to the TA.
+
+---
+
 
 ### 1. Pick a product & describe its architecture (text)
 
@@ -444,4 +435,5 @@ Report each task to the TA when you’re done:
 -  Close the issue when all related activities (including TA approval) are done.
     
 -  Explain your diagram, chosen role in a short conversation with the TA.
+
 
