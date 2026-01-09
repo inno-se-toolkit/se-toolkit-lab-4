@@ -1,15 +1,15 @@
 # Story – Lab 01: Products, Architecture & Roles
 
 To kickstart the course, you will explore two things:
-> 1) How real software products are structured, and  
+> 1) How real software products are structured;
 > 2) What kind of engineers build and operate them.
 
 In this lab, you will:
 
 - Pick an existing digital product.
 - Sketch its architecture: modules, data flow, deployment.
-- Map modules → tech roles → skills, using real job postings and roadmap.sh.
-- Practice using GitHub/Gitlab issues, branches and pull requests to organize your work and get feedback.
+- Map modules to tech roles and skills, using real job postings and roadmap.sh.
+- Practice using GitHub issues, branches and pull requests to organize your work and get feedback.
 
 This and all other lab assignments will simulate the engineering practices in a real team:
 follow processes, communicate via issues/PRs, and keep the work reviewable.
