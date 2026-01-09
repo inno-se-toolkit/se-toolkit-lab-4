@@ -26,7 +26,9 @@ This and all other lab assignments will simulate the engineering practices in a 
 
 - Follow processes;
 - Communicate via issues/PRs;
-- Keep the work reviewable.
+- Keep the work reviewable;
+- Practice writing acceptance criteria;
+- Write clear commit messages.
 
 ## Repo structure
 
@@ -115,7 +117,8 @@ The exact flow for each task is `Issue -> PR -> Review`:
 
 - [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a GitHub issue in your forked repo using one of the suggested issue types.
 - [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue) a new branch for the issue.
-- Implement the task on the new branch.
+- Make commits to that branch to complete the task.
+- Write a commit message following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) format for each commit.
 - [Create](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request#creating-the-pull-request) a PR to the `main` branch.
 - Request a review of the PR from the collaborator.
 - Make necessary changes based on the review.
@@ -129,21 +132,22 @@ Be ready to demonstrate the completed tasks to the TA at the end of the lab.
 
 ### 1. Pick a product & describe its architecture (text)
 
-1. Create an issue `[Task] Product & architecture description`.
-2. Create a branch for it.
-
-3. In `docs/architecture.md`, write:
-    1. **Product choice (5–7 sentences)**
-        - Pick one product from this list or propose your own:
+1. [ ] Create an issue `[Task] Product & architecture description`.
+2. [ ] Create a branch for it.
+3. [ ] Switch to that branch.
+4. [ ] In `docs/architecture.md`:
+    1. [ ] In the `## Product choice` section:
+        - [ ] Pick one product from this list or propose your own:
             - Yandex Taxi
             - Telegram
-            - ChatGPT
-            - Wildberries
+            - ChatGPT.com
+            - Wildberries.ru
             - Uchi.ru
-            - Any other widely used fullstack app (agree with TA if picking this option).
-        - Explain why you personally would be interested to work on this product as a tech specialist.
-    2. **Modules & data flow**
-        - Describe the main system **modules** in your own words. For example:
+            - Any other widely used full-stack app (agree with TA if picking this option).
+    2. [ ] In the `## Motivation` section:
+        - [ ] Explain why you personally would be interested to work on this product as a tech specialist.
+    3. [ ] In the `## Main modules` section:
+        - [ ] Describe the main system modules in your own words. For example:
             - Mobile app
             - Backend API
             - Authentication service
@@ -151,40 +155,33 @@ Be ready to demonstrate the completed tasks to the TA at the end of the lab.
             - Notifications
             - Admin panel
             - Data analytics
-        - For each module:
-            - 1–2 sentences: what it does.
-        - Then add a short section “**Data flow**”:
+        - [ ] For each module, write in 1–2 sentences what it does.
+        - [ ] Provide a [component diagram](https://en.wikipedia.org/wiki/Component_diagram) in [`PlantUML`](https://plantuml.com/component-diagram) (see [how to draw a connection](https://stackoverflow.com/questions/55077828/using-required-provided-interfaces-in-component-diagrams-plantuml/57134601#57134601)).
+    4. [ ] In the `## Data flow` section:
             - Describe what happens when a typical user action occurs (e.g. user orders a taxi / sends a message).
             - Mention which modules talk to each other and what kind of data they exchange.
-    3. **Deployment (high level)**
-        - Briefly describe **where** these modules live:
-            - On user devices (mobile/web).
+            - Provide a [sequence diagram](https://en.wikipedia.org/wiki/Sequence_diagram) in [`PlantUML`](https://plantuml.com/sequence-diagram) or [`Mermaid`](https://mermaid.js.org/syntax/sequenceDiagram.html) (see [Creating Mermaid diagrams](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#creating-mermaid-diagrams)). Store the code for the diagram in the repo.
+    5. [ ] In the `## Deployment` section:
+        - [ ] Briefly describe where these modules live (high-level view):
+            - On user devices (mobile/web app).
             - On servers (backend services, databases).
-            - In the cloud (if you know/guess).
-    4. **Uncertainties (very important)**
-        - Add a section:
+        - [ ] Provide a [deployment diagram](https://en.wikipedia.org/wiki/Deployment_diagram) in [`PlantUML`](https://plantuml.com/deployment-diagram) or [`Mermaid`](https://mermaid.js.org/syntax/c4.html#c4-deployment-diagram-c4deployment).
+    6. [ ] In the `## Uncertainties` section:
+            - [ ] Write at least two things in your architecture that you are not fully sure about (guesses, questions, etc.).
+5. [ ] Commit your changes with a clear message using one of these methods:
+   - Method 1: Activity Bar -> Source Control
+   - Method 2: `git` CLI (replace `your-branch` with an actual branch name):
 
-            ```markdown
-            ## Things I am not sure about
-            
-            1. ...
-            2. ...
-            ```
+        ```bash
+        git checkout -b your-branch
+        git add docs/architecture.md
+        git commit -m "feat(docs): describe high-level architecture of <product>"
+        git push -u origin your-branch
+        ```
 
-            Write at least two things in your architecture that you are not fully sure about (guesses, questions, etc.).
-4. Commit your changes with a clear message, e.g.:
-
-    ```bash
-    git checkout -b feature/architecture
-    git add docs/architecture.md
-    git commit -m "describe modules and data flow for <product>"
-    git push -u origin feature/architecture
-    ```
-
-5. Open a PR to `main`:
-    - Link it to the issue (`Closes #<issue_number>`).
-    - Request a review from a collaborator.
-6. Continue with next tasks, the reviews will be done in Task 4.
+6. [ ] Open a PR to `main`:
+    - [ ] [Link the PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) to the issue, e.g. `Closes #<issue number>`.
+    - [ ] Request a review from the collaborator.
 
 ---
 
