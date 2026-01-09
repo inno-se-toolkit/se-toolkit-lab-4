@@ -11,7 +11,7 @@ By the end of this lab you should be able to:
 
 - Explain the basic architecture of a real-world digital product in terms of modules, data flow, and deployment.
 - Identify which tech roles work on which parts of that product, and which general skills are shared across roles.
-- Use GitHub issues, branches, and pull requests to structure your work and get a peer review.
+- Use GitHub issues, branches, and pull requests (PRs) to structure your work and get a peer review.
 
 ## Tasks overview
 
@@ -19,64 +19,113 @@ To complete this lab, you will need to:
 
 - Pick an existing digital product.
 - Sketch its architecture: modules, data flow, deployment.
-- Map modules to tech roles and skills, using real job postings and roadmap.sh.
-- Practice using GitHub issues, branches and pull requests to organize your work and get feedback.
+- Map modules to tech roles and skills using real job postings and `roadmap.sh`.
+- Practice using GitHub issues, branches and pull requests (PRs) to organize your work in a repository (repo) and get feedback from peers.
+
 This and all other lab assignments will simulate the engineering practices in a real team:
-follow processes, communicate via issues/PRs, and keep the work reviewable.
+
+- Follow processes;
+- Communicate via issues/PRs;
+- Keep the work reviewable.
 
 ## Repo structure
 
 - `.github/ISSUE_TEMPLATE` – templates for your issues.
-- `.github/pull_request_template.md` – checklist for PRs.
-- `src/` – place for any code/scripts/config.
+- `.github/pull_request_template.md` – a template for PRs.
 
 ---
 
-## Lab Setup
+## Lab setup
 
-1. For starters, **fork** this repo to your GitHub account and continue your work in the forked repo.
-2. Create an issue called `[Task] Lab 01 setup`
-3. Copy the following steps to the issue:
-   - [ ] Add a classmate to the repo as a collaborator in Settings.
-   - [ ] Make sure he accepts the invitation sent to his email.
-   - [ ] On your machine, configure git if needed:
+1. Create a GitHub account.
+2. Fork this repo to your GitHub account.
+3. Continue your work in the forked repo.
+4. In the repo Settings -> Code and automation -> Add branch ruleset:
+   1. Ruleset Name: `push`
+   2. Enforcement status: `Active`
+   3. Target branches -> Add target -> Include default branch
+   4. Rules:
+      1. [x] Restrict deletions
+      2. [x] Require a pull request before merging:
+         1. Required approvals: `1`
+         2. Require conversation resolution before merging
+         3. Allowed merge methods: `Merge`.
+      3. [x] Block force pushes
+5. In the repo Settings -> Collaborators -> Add people, add a classmate as a collaborator.
+6. Make sure your collaborator have accepted the invitation sent to their email.
 
-     ```bash
-     git config --global user.name "Your Name"
-     git config --global user.email "your@email"
-     ```
+7. (If needed) On your computer, configure [`git`](https://git-scm.com/):
 
-   - [ ] Clone the forked repo to your machine.
-   - [ ] Skim this `README.md` file once so you know what’s coming.
-4. Complete the steps, check them off inside the issue, and close the issue.
+    ```bash
+    git config --global user.name "Your Name"
+    git config --global user.email "your@email"
+    ```
+
+8. (Recommended) Install [`VS Code`](https://code.visualstudio.com/).
+9. On your computer, create a directory `pre-swp`.
+10. In that directory, clone the lab repo.
+
+    ```bash
+    git clone https://github.com/your-username/lab-01-market-product-and-git
+    ```
+
+11. Open the repo in `VS Code`.
+
+    ```bash
+    cd pre-swp
+    code lab-01-market-product-and-git
+    ```
+
+12. Install recommended VS Code extensions.
+13. Sign in to accounts.
+
+    In the Activity Bar:
+
+    1. Click `Accounts`
+    2. Click `Sign in with GitHub to use GitLens ...`
+    3. Click `Accounts`
+    4. Click `Sign in with GitHub to use GitHub Pull Requests ...`.
+
+14. Check GitLens.
+
+    In the Activity Bar:
+
+    1. Click `Source Control`
+    2. In the `GitLens` panel, click `Remotes`.
+    3. Make sure `origin` points to your repo URL.
+    4. In the `GitLens` panel, click `Commits`.
+    5. Make sure you can see commits to this repo.
+
+15. Skim this `README.md` file once so you know what’s coming.
 
 ---
 
-## Main Tasks
+## Main tasks
 
-Each task below, you work **independently** on your forked repo.
-Then ask a classmate to **review your work via a Pull Request**.
+You work **independently** on the tasks below in your forked repo.
+
+When you're done with a task, you ask your collaborator to review your PR created for that task.
+
 The exact flow for each task is `Issue -> PR -> Review`:
 
-- Create an **issue**.
-- Implement the task on a **new branch**.
-- Open a **Pull Request**.
-- Assign the classmate as the reviewer for the PR.
-- Make the necessary changes based on the review
-- Get the classmate to approve the PR.
+- [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a GitHub issue in your forked repo.
+- [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue) a new branch for the issue.
+- Implement the task on the new branch.
+- [Create](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request#creating-the-pull-request) a PR to the `main` branch.
+- Request a review of the PR from the collaborator.
+- Make the necessary changes based on the review.
+- Get the collaborator to approve the PR.
 - Merge the PR to the `main` branch.
 - Close the issue.
-At the end:
-- Be ready to demonstrate the completed tasks to the TA.
+
+Be ready to demonstrate the completed tasks to the TA at the end of the lab.
 
 ---
 
 ### 1. Pick a product & describe its architecture (text)
 
-Create an issue:
-
-- `[Task] Product & architecture description`
-Work in branch `feature/architecture` (or similar).
+1. Create an issue `[Task] Product & architecture description`.
+1. Create a branch for it.
 
 1. In `docs/architecture.md`, write:
     1. **Product choice (5–7 sentences)**
@@ -268,10 +317,10 @@ You will act as both **author** and **reviewer**.
     - Create two **PRs** that:
         - Adds `docs/architecture.md` with the diagram.
         - Adds `src/roles-and-skills.md`.
-    - Request a review from a classmate for at least one of the PRs.
+    - Request a review from a collaborator for at least one of the PRs.
     - Use the [PR template](.github/pull_request_template.md) and make sure the PR descriptions are clear and links the relevant issue(s).
 2. As a **reviewer**:
-    - Review at least **one PR** from a classmate.
+    - Review at least **one PR** from a collaborator.
     - Leave at least **2 meaningful comments** to improve your colleagues work, which they need to address. For example:
         - A question about architecture (“Why does the mobile app talk directly to the database?”).
         - Some important commonly-appearing skills weren't mentioned.
