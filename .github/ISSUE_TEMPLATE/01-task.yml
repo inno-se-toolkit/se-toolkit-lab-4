@@ -8,20 +8,22 @@ body:
     attributes:
       label: Description
       description: Summarize what this task is about in your own words.
-      placeholder: "Implement X, configure Y..."
-    validations:
-      required: true
-  - type: textarea
-    id: acceptance
-    attributes:
-      label: Acceptance Criteria
-      description: How do we know this task is done?
-      placeholder: "- [ ] ..."
+      placeholder: "Make X work with Y ..."
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
       label: Plan
-      description: Rough steps you plan to take (update as you go).
-      placeholder: "- Step 1\n- Step 2"
+      description: Steps you plan to take (update as you go).
+      placeholder: "- [ ] Step 1\n- [ ] Step 2 ..."
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: When is this task done with a good quality of work?
+      placeholder: "- [ ] Criterion 1\n- [ ] Criterion 2 ..."
+    validations:
+      required: true
