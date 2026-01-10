@@ -68,7 +68,11 @@ This and all other lab assignments will simulate the engineering practices in a 
     git config --global user.email "your@email"
     ```
 
-10. (Recommended) Install [`VS Code`](https://code.visualstudio.com/).
+10. (Recommended) Install [`VS Code`](https://code.visualstudio.com/) and read about:
+    - [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette).
+    - [Terminal](https://code.visualstudio.com/docs/terminal/getting-started).
+    - [Source Control](https://code.visualstudio.com/docs/sourcecontrol/overview).
+    - [Extension Marketplace](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace).
 11. On your computer, create a directory `pre-swp`.
 12. In that directory, clone the lab repo.
 
