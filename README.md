@@ -190,44 +190,6 @@ Be ready to demonstrate the completed tasks to the TA at the end of the lab.
     - [ ] [Link the PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) to the issue, e.g. `Closes #<issue number>`.
     - [ ] Request a review from the collaborator.
 
----
-
-### 2. Draw the architecture diagram
-
-Create an issue:
-
-- `[Task] Architecture diagram`
-Work on the same product.
-
-1. Using **draw.io**, draw a diagram that shows:
-    - Main modules as boxes.
-    - Arrows showing how data flows between them for a typical user action.
-    - A separation (if possible) between:
-        - Client-side (mobile/web).
-        - Server-side services.
-        - Data storage (databases, caches, etc.).
-2. Export the diagram to **PNG or SVG** and save as:
-    - `diagrams/architecture.png` (or `.svg`)
-    If your tool supports it, also save the **source file**:
-    - `diagrams/architecture.drawio` (or equivalent).
-3. Add a short caption inside `docs/architecture.md`:
-
-    ```markdown
-    ## Diagram
-    
-    See `diagrams/architecture.png` for a visual representation of the modules and data flow.
-    ```
-
-4. Commit and push your changes on the same branch to extend the PR.
-
-> 💡 **LLM check:**
->
-> - LLMs can help you **decide what boxes/arrows to include**, but the **diagram must be drawn by you**.
->
-> - The TA will ask you to verbally explain the diagram.
->
----
-
 ### 3. Roles, skills, roadmap.sh & job postings
 
 Create an issue:
