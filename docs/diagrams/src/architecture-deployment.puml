@@ -1,96 +1,115 @@
 @startuml Deployment Diagram
 !theme plain
-skinparam component {
-  BackgroundColor White
-  BorderColor Black
-  ArrowColor #444444
-}
 
 skinparam node {
-  BackgroundColor LightBlue
+  BackgroundColor WhiteSmoke
   BorderColor DarkBlue
   ArrowColor #444444
 }
 
-title Uber Application Deployment Diagram
-
-node "Mobile App" {
-  component [Mobile App\n(iOS/Android)]
+skinparam component {
+  BackgroundColor White
+  BorderColor Black
 }
 
-node "Web App" {
-  component [Web App\n(React)]
+skinparam cloud {
+  BackgroundColor LightCyan
+  BorderColor DarkCyan
 }
 
-node "API Gateway" {
-  component [API Gateway\n(Nginx)]
+skinparam database {
+  BackgroundColor White
+  BorderColor Black
 }
 
-node "Services" {
-  node "User Service" {
-    component [User Service\n(Java)]
-  }
-  
-  node "Payment Service" {
-    component [Payment Service\n(Java)]
-  }
-  
-  node "Driver Service" {
-    component [Driver Service\n(Java)]
-  }
-  
-  node "Notification Service" {
-    component [Notification Service\n(Java)]
+title Uber Application Deployment Diagram (Physical View)
+
+' --- Client Tier ---
+node "User Smartphone" <<device>> as SmartPhone {
+  component [Mobile App Instance\n(iOS/Android)] as MobileApp
+}
+
+node "User Computer" <<device>> as Computer {
+  node "Web Browser" <<execution environment>> {
+    component [Web App Instance\n(React SPA)] as WebApp
   }
 }
 
-node "Data Layer" {
-  database "Database" {
-    component [Database\n(PostgreSQL)]
+' --- External Systems ---
+node "External Payment Provider" <<external>> {
+  component [Stripe API] as Stripe
+}
+
+' --- Cloud Infrastructure ---
+cloud "Cloud Infrastructure (AWS)" {
+
+  node "Content Delivery Network / Web Server" as CDN {
+    artifact "React Static Files"
   }
-  
-  node "Cache" {
-    component [Cache\n(Redis)]
+
+  node "Load Balancer / Ingress" as LB {
+    component [Nginx Gateway] as Nginx
+  }
+
+  ' --- Compute Cluster ---
+  node "Kubernetes Cluster (Application Tier)" as K8s {
+    node "Pod" {
+      component [User Service] as UserService
+      component [Payment Service] as PaymentService
+      component [Driver Service] as DriverService
+      component [Notification Service] as NotifService
+    }
+  }
+
+  ' --- Middleware & Data ---
+  node "Message Broker Cluster" as KafkaCluster {
+    queue [Kafka Topic] as Kafka
+  }
+
+  node "Redis Cluster" as RedisNode {
+    component [Redis Cache] as Redis
+  }
+
+  node "Database Server (Primary)" as DBServer {
+    database [PostgreSQL] as Postgres
   }
 }
 
-node "Message Queue" {
-  component [Message Queue\n(Kafka)]
-}
+' --- Relationships ---
 
-node "External Services" {
-  node "External Payment Gateway" {
-    component [External Payment\nGateway (Stripe)]
-  }
-}
+' Client to Infrastructure
+MobileApp --> Nginx : HTTPS (JSON)
+Computer --> CDN : HTTPS (Fetch Static Assets)
+WebApp --> Nginx : HTTPS (API Calls)
 
-"Mobile App" --> "API Gateway" : HTTP/HTTPS
-"Web App" --> "API Gateway" : HTTP/HTTPS
-"API Gateway" --> "User Service" : HTTP/REST
-"API Gateway" --> "Payment Service" : HTTP/REST
-"API Gateway" --> "Driver Service" : HTTP/REST
-"API Gateway" --> "Notification Service" : HTTP/REST
+' Gateway to Services
+Nginx --> UserService : REST
+Nginx --> PaymentService : REST
+Nginx --> DriverService : REST
+Nginx --> NotifService : REST
 
-"User Service" --> "Database" : Database Queries
-"Payment Service" --> "Database" : Database Queries
-"Driver Service" --> "Database" : Database Queries
-"Notification Service" --> "Database" : Database Queries
+' Service to Database
+UserService --> Postgres : TCP
+PaymentService --> Postgres : TCP
+DriverService --> Postgres : TCP
+NotifService --> Postgres : TCP
 
-"User Service" --> "Cache" : Cache Operations
-"Payment Service" --> "Cache" : Cache Operations
-"Driver Service" --> "Cache" : Cache Operations
-"Notification Service" --> "Cache" : Cache Operations
+' Service to Cache
+UserService ..> Redis : TCP
+PaymentService ..> Redis : TCP
+DriverService ..> Redis : TCP
+NotifService ..> Redis : TCP
 
-"User Service" --> "Message Queue" : Publish Events
-"Payment Service" --> "Message Queue" : Publish Events
-"Driver Service" --> "Message Queue" : Publish Events
-"Notification Service" --> "Message Queue" : Publish Events
+' Service to Messaging
+UserService --> Kafka : Publish
+PaymentService --> Kafka : Publish
+DriverService --> Kafka : Publish
+NotifService --> Kafka : Subscribe
 
-"Message Queue" --> "User Service" : Consume Events
-"Message Queue" --> "Payment Service" : Consume Events
-"Message Queue" --> "Driver Service" : Consume Events
-"Message Queue" --> "Notification Service" : Consume Events
+' Inter-service via Queue (Example)
+Kafka ..> NotifService : Consume Events
 
-"Payment Service" --> "External Payment Gateway" : Payment Processing
+' External
+PaymentService --> Stripe : HTTPS (TLS)
 
 @enduml
