@@ -124,6 +124,7 @@ The exact flow for each task is `Issue -> PR -> Review`:
 - Make commits to that branch to complete the task.
 - Write a commit message following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) format for each commit.
 - [Create](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request#creating-the-pull-request) a PR to the `main` branch.
+- [Link the PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) to the issue, e.g. `Closes #<issue number>`.
 - Request a review of the PR from the collaborator.
 - Address the comments, e.g., make fixes or ask to clarify the comment.
 - Get the collaborator to approve the PR.
@@ -213,9 +214,7 @@ As a PR author, you must:
         git push -u origin task-1
         ```
 
-6. [ ] Open a PR to `main`:
-    - [ ] [Link the PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) to the issue, e.g. `Closes #<issue number>`.
-    - [ ] Request a review from the collaborator.
+6. [ ] Follow the process for [Main tasks](#main-tasks) to complete the issue with a PR.
 
 ---
 
