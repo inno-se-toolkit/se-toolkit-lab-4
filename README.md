@@ -143,11 +143,11 @@ Be ready to demonstrate the completed tasks to the TA at the end of the lab.
    2. You can write [PlantUML](https://plantuml.com/) code.
       - [ ] Install the [`jebbs.plantuml`](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) VS Code extension.
       - [ ] Run `docker run --name plantuml-server -d -p 48080:8080 plantuml/plantuml-server:jetty` to access the PlantUML server. The `48080` port is already set in `./.vscode/settings.json`.
-      - [ ] Write the PlantUML code in `docs/diagrams/src/` and render the diagrams to SVG in `docs/diagrams/out/` using the `jebbs.plantuml` extension. These directories are already set in `./.vscode/settings.json`.
+      - [ ] Write the PlantUML code in `./docs/diagrams/src/` and render the diagrams to SVG in `./docs/diagrams/out/` using the `jebbs.plantuml` extension. These directories are already set in `./.vscode/settings.json`.
       - [ ] [Include](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) the rendered images into your Markdown file.
    3. You can write [Mermaid](https://mermaid.js.org/) code in Markdown code blocks with the `mermaid` language tag (see [docs](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#creating-mermaid-diagrams)).
    4. You can use any other tool if it supports the "diagrams as code" approach, e.g., [Structurizr](https://structurizr.com/), [D2](https://d2lang.com/), [LikeC4](https://github.com/likec4/likec4) etc.
-4. [ ] Create `docs/architecture.md`. In `docs/architecture.md`:
+4. [ ] Create `./docs/architecture.md`. In `./docs/architecture.md`:
     1. [ ] In the `## Product choice` section:
          - [ ] Pick one product from this list or propose your own:
              - Yandex Taxi
@@ -170,14 +170,14 @@ Be ready to demonstrate the completed tasks to the TA at the end of the lab.
         - [ ] For each module, explain in 1–2 sentences what it does.
         - [ ] Provide a [component diagram](https://en.wikipedia.org/wiki/Component_diagram).
           - [ ] If you use [`PlantUML`](https://plantuml.com/component-diagram):
-            - [ ] Store the diagram source code in `docs/diagrams/src/architecture-component.puml`.
+            - [ ] Store the diagram source code in `./docs/diagrams/src/architecture-component.puml`.
             - [ ] See [how to draw a connection](https://stackoverflow.com/questions/55077828/using-required-provided-interfaces-in-component-diagrams-plantuml/57134601#57134601).
     4. [ ] In the `## Data flow` section:
           - [ ] Describe what happens when a typical user action occurs (e.g. user orders a taxi / sends a message).
           - [ ] Mention which modules talk to each other and what kind of data they exchange.
           - [ ] Provide a [sequence diagram](https://en.wikipedia.org/wiki/Sequence_diagram).
             - [ ] If you use [`PlantUML`](https://plantuml.com/sequence-diagram):
-              - [ ] Store the diagram source code in `docs/diagrams/src/architecture-sequence.puml`.
+              - [ ] Store the diagram source code in `./docs/diagrams/src/architecture-sequence.puml`.
             - [ ] Alternatively, use [`Mermaid`](https://mermaid.js.org/syntax/sequenceDiagram.html).
     5. [ ] In the `## Deployment` section:
          - [ ] Briefly describe where these modules live (high-level view):
@@ -185,7 +185,7 @@ Be ready to demonstrate the completed tasks to the TA at the end of the lab.
              - On servers (backend services, databases).
          - [ ] Provide a [deployment diagram](https://en.wikipedia.org/wiki/Deployment_diagram).
            - [ ] If you use [`PlantUML`](https://plantuml.com/deployment-diagram):
-             - [ ] Store the diagram source code in `docs/diagrams/src/architecture-deployment.puml`.
+             - [ ] Store the diagram source code in `./docs/diagrams/src/architecture-deployment.puml`.
            - [ ] Alternatively, use [`Mermaid`](https://mermaid.js.org/syntax/c4.html#c4-deployment-diagram-c4deployment).
     6. [ ] In the `## Knowledge Gaps` section:
          - [ ] Write at least two things in your architecture that you are not fully sure about (guesses, questions, etc.).
@@ -211,7 +211,7 @@ Be ready to demonstrate the completed tasks to the TA at the end of the lab.
 
 1. [ ] Create an issue `[Task] Roles and skills mapping`.
 2. [ ] Create a branch for it and switch to that branch, e.g., `git checkout -b task-2`.
-3. [ ] In `docs/roles-and-skills.md`:
+3. [ ] In `./docs/roles-and-skills.md`:
 
      - [ ] In the `## Roles for components` section:
         - [ ] For each component from `architecture.md`, list IT roles that are likely involved in the development and maintenance of that component.
@@ -241,7 +241,7 @@ Be ready to demonstrate the completed tasks to the TA at the end of the lab.
 5. [ ] Go to [`roadmap.sh`](https://roadmap.sh/) and sign up.
 6. [ ] Find the roadmap relevant for the role you chose.
 7. [ ] In that roadmap, mark the items you already have at least some knowledge in.
-8. [ ] In `docs/roles-and-skills.md`, in the `## My chosen role` section, write:
+8. [ ] In `./docs/roles-and-skills.md`, in the `## My chosen role` section, write:
 
     ```markdown
     ### Role
@@ -263,7 +263,7 @@ Be ready to demonstrate the completed tasks to the TA at the end of the lab.
     - Company name.
     - Role title.
     - 3–5 key skills/requirements they mention.
-11. [ ] In `docs/roles-and-skills.md`, in the `## Job market snapshot` section, write:
+11. [ ] In `./docs/roles-and-skills.md`, in the `## Job market snapshot` section, write:
 
     ```markdown
     ### Skills that appear in almost every posting
