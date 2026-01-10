@@ -52,12 +52,12 @@ This and all other lab assignments will simulate the engineering practices in a 
    2. Enforcement status: `Active`
    3. Target branches -> Add target -> Include default branch
    4. Rules:
-      1. [x] Restrict deletions
-      2. [x] Require a pull request before merging:
-         1. Required approvals: `1`
-         2. Require conversation resolution before merging
-         3. Allowed merge methods: `Merge`.
-      3. [x] Block force pushes
+      - [x] Restrict deletions
+      - [x] Require a pull request before merging:
+         - Required approvals: `1`
+         - Require conversation resolution before merging
+         - Allowed merge methods: `Merge`.
+      - [x] Block force pushes
 7. In the repo Settings -> Collaborators -> Add people, add a classmate as a collaborator.
 8. Make sure your collaborator have accepted the invitation sent to their email.
 
