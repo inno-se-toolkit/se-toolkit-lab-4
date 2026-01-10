@@ -1,0 +1,69 @@
+@startuml Component Diagram
+!theme plain
+
+title Uber Application Component Diagram
+
+package "Uber Application" {
+  [Mobile App] as mobile
+  [Web App] as web
+  
+  package "API Layer" {
+    [API Gateway] as gateway
+  }
+  
+  package "Business Services" {
+    [User Service] as user_svc
+    [Payment Service] as payment_svc
+    [Driver Service] as driver_svc
+    [Notification Service] as notification_svc
+  }
+  
+  package "Data Layer" {
+    [Database] as db
+    [Cache] as cache
+  }
+  
+  [Message Queue] as queue
+}
+
+package "External Systems" {
+  [External Payment Gateway] as ext_payment
+}
+
+' Client to API Gateway
+mobile --> gateway : HTTP/HTTPS
+web --> gateway : HTTP/HTTPS
+
+' API Gateway to Business Services
+gateway --> user_svc : REST API
+gateway --> payment_svc : REST API
+gateway --> driver_svc : REST API
+gateway --> notification_svc : REST API
+
+' Business Services to Data Layer
+user_svc --> db : CRUD Operations
+payment_svc --> db : CRUD Operations
+driver_svc --> db : CRUD Operations
+notification_svc --> db : CRUD Operations
+
+user_svc --> cache : Read/Write
+payment_svc --> cache : Read/Write
+driver_svc --> cache : Read/Write
+notification_svc --> cache : Read/Write
+
+' Business Services to Message Queue
+user_svc --> queue : Publish Events
+payment_svc --> queue : Publish Events
+driver_svc --> queue : Publish Events
+notification_svc --> queue : Publish Events
+
+' Message Queue to Business Services
+queue --> user_svc : Consume Events
+queue --> payment_svc : Consume Events
+queue --> driver_svc : Consume Events
+queue --> notification_svc : Consume Events
+
+' Payment Service to External Payment Gateway
+payment_svc --> ext_payment : Payment Processing
+
+@enduml

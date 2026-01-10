@@ -1,0 +1,96 @@
+@startuml Deployment Diagram
+!theme plain
+skinparam component {
+  BackgroundColor White
+  BorderColor Black
+  ArrowColor #444444
+}
+
+skinparam node {
+  BackgroundColor LightBlue
+  BorderColor DarkBlue
+  ArrowColor #444444
+}
+
+title Uber Application Deployment Diagram
+
+node "Mobile App" {
+  component [Mobile App\n(iOS/Android)]
+}
+
+node "Web App" {
+  component [Web App\n(React/Vue.js)]
+}
+
+node "API Gateway" {
+  component [API Gateway\n(Nginx/Kong)]
+}
+
+node "Services" {
+  node "User Service" {
+    component [User Service\n(Node.js/Java)]
+  }
+  
+  node "Payment Service" {
+    component [Payment Service\n(Node.js/Java)]
+  }
+  
+  node "Driver Service" {
+    component [Driver Service\n(Node.js/Java)]
+  }
+  
+  node "Notification Service" {
+    component [Notification Service\n(Node.js/Java)]
+  }
+}
+
+node "Data Layer" {
+  database "Database" {
+    component [Database\n(PostgreSQL/MongoDB)]
+  }
+  
+  node "Cache" {
+    component [Cache\n(Redis/Memcached)]
+  }
+}
+
+node "Message Queue" {
+  component [Message Queue\n(Kafka/RabbitMQ)]
+}
+
+node "External Services" {
+  node "External Payment Gateway" {
+    component [External Payment\nGateway (Stripe/PayPal)]
+  }
+}
+
+"Mobile App" --> "API Gateway" : HTTP/HTTPS
+"Web App" --> "API Gateway" : HTTP/HTTPS
+"API Gateway" --> "User Service" : HTTP/REST
+"API Gateway" --> "Payment Service" : HTTP/REST
+"API Gateway" --> "Driver Service" : HTTP/REST
+"API Gateway" --> "Notification Service" : HTTP/REST
+
+"User Service" --> "Database" : Database Queries
+"Payment Service" --> "Database" : Database Queries
+"Driver Service" --> "Database" : Database Queries
+"Notification Service" --> "Database" : Database Queries
+
+"User Service" --> "Cache" : Cache Operations
+"Payment Service" --> "Cache" : Cache Operations
+"Driver Service" --> "Cache" : Cache Operations
+"Notification Service" --> "Cache" : Cache Operations
+
+"User Service" --> "Message Queue" : Publish Events
+"Payment Service" --> "Message Queue" : Publish Events
+"Driver Service" --> "Message Queue" : Publish Events
+"Notification Service" --> "Message Queue" : Publish Events
+
+"Message Queue" --> "User Service" : Consume Events
+"Message Queue" --> "Payment Service" : Consume Events
+"Message Queue" --> "Driver Service" : Consume Events
+"Message Queue" --> "Notification Service" : Consume Events
+
+"Payment Service" --> "External Payment Gateway" : Payment Processing
+
+@enduml

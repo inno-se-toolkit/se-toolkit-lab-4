@@ -1,0 +1,74 @@
+@startuml Sequence Diagram
+!theme plain
+
+title Uber Application Sequence Diagram - Ride Booking Process
+
+actor Customer
+participant "Mobile App" as app
+participant "API Gateway" as gateway
+participant "User Service" as user_svc
+participant "Driver Service" as driver_svc
+participant "Payment Service" as payment_svc
+participant "Notification Service" as notification_svc
+database "Database" as db
+participant "Cache" as cache
+participant "Message Queue" as queue
+participant "External Payment Gateway" as ext_payment
+
+== Customer Authentication ==
+Customer -> app: Login Request
+app -> gateway: Forward Login Request
+gateway -> user_svc: Authenticate User
+user_svc -> db: Validate Credentials
+db -> user_svc: Return User Data
+user_svc -> cache: Store Session
+user_svc -> gateway: Authentication Response
+gateway -> app: Login Success/Failure
+app -> Customer: Display Result
+
+== Find Nearby Drivers ==
+Customer -> app: Request Ride
+app -> gateway: Get Available Drivers
+gateway -> driver_svc: Find Nearby Drivers
+driver_svc -> db: Query Driver Locations
+db -> driver_svc: Return Driver List
+driver_svc -> gateway: Available Drivers
+gateway -> app: Driver Options
+app -> Customer: Display Driver Options
+
+== Book Ride ==
+Customer -> app: Select Driver & Confirm Ride
+app -> gateway: Create Ride Request
+gateway -> user_svc: Validate User
+user_svc -> cache: Check User Status
+user_svc -> gateway: Validation Result
+gateway -> driver_svc: Assign Ride to Driver
+driver_svc -> db: Update Ride Status
+db -> driver_svc: Confirmation
+driver_svc -> queue: Publish Ride Assignment
+queue -> notification_svc: Process Notification
+notification_svc -> app: Send Driver Assignment
+notification_svc -> "Driver App": Notify Driver Assignment
+driver_svc -> gateway: Ride Created Response
+gateway -> app: Ride Confirmed
+app -> Customer: Show Ride Status
+
+== Process Payment ==
+Customer -> app: Confirm Ride Completion
+app -> gateway: Complete Ride Request
+gateway -> payment_svc: Process Payment
+payment_svc -> db: Retrieve Payment Info
+db -> payment_svc: Payment Details
+payment_svc -> ext_payment: Charge Customer
+ext_payment -> payment_svc: Payment Confirmation
+payment_svc -> db: Update Transaction
+db -> payment_svc: Transaction Saved
+payment_svc -> queue: Publish Payment Event
+queue -> notification_svc: Send Receipt
+notification_svc -> app: Send Receipt to Customer
+notification_svc -> "Driver App": Send Payment to Driver
+payment_svc -> gateway: Payment Success
+gateway -> app: Payment Confirmed
+app -> Customer: Show Receipt
+
+@enduml
