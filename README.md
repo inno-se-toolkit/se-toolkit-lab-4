@@ -52,19 +52,28 @@ follow processes, communicate via issues/PRs, and keep the work reviewable.
 
 Each task below, you work **independently** on your forked repo.
 Then ask a classmate to **review your work via a Pull Request**.
+Ror each task, we follow the `Issue -> PR -> Review` flow.
 
-The exact flow for each task is `Issue -> PR -> Review`:
-   - Create an **issue**.
+
+You will act as both **author** and **reviewer**.
+   - Create an **issue** `[Task] Task name`.
    - Implement the task on a **new branch**.
-   - Open a **Pull Request**.
+   - Open a **Pull Request** using the [PR template](.github/pull_request_template.md) and make sure the PR descriptions are clear and links the relevant issue(s).
    - Assign the classmate as the reviewer for the PR.
+     
+   - In the meantime, review the **PRs** of your a classmate.
+   - Leave at least **2 meaningful comments** in each PR to improve your colleagues work, which they need to address.
+    
    - Make the necessary changes based on the review
+   - Reply to comments with something like “Fixed in 123abc” (123abc being the commit id) and explain what exactly you did.
    - Get the classmate to approve the PR.
+     
    - Merge the PR to the `main` branch.
    - Close the issue.
+    
 
-At the end:
-   - Be ready to demonstrate the completed tasks to the TA.
+> You must read your classmate’s work and think of **real feedback**.
+
 
 ---
 
@@ -76,7 +85,7 @@ Create an issue:
 - `[Task] Product & architecture description`
     
 
-Work in branch `feature/architecture` (or similar).
+Work in branch `task/architecture` (or similar).
 
 1. In `docs/architecture.md`, write:
     
@@ -152,10 +161,10 @@ Work in branch `feature/architecture` (or similar).
 2. Commit your changes with a clear message, e.g.:
     
     ```bash
-    git checkout -b feature/architecture
+    git checkout -b task/architecture
     git add docs/architecture.md
     git commit -m "describe modules and data flow for <product>"
-    git push -u origin feature/architecture
+    git push -u origin task/architecture
     ```
     
 3. Open a **Pull Request** to `main`:
@@ -163,9 +172,7 @@ Work in branch `feature/architecture` (or similar).
     - Link it to the issue (`Closes #<issue_number>`).
         
     - Request a review from a classmate.
-        
-4. Continue with next tasks, the reviews will be done in Task 4.
-    
+            
 ---
 
 ### 2. Draw the architecture diagram
@@ -211,12 +218,8 @@ Work on the same product.
 4. Commit and push your changes on the same branch to extend the PR.
     
 
-> 💡 **LLM check:**
-> 
-> - LLMs can help you **decide what boxes/arrows to include**, but the **diagram must be drawn by you**.
->     
-> - The TA will ask you to verbally explain the diagram.
->     
+> The **diagram must be drawn by you** using the aforementioned tool.
+> The TA will ask you to verbally explain the diagram.
 
 ---
 
@@ -227,7 +230,7 @@ Create an issue:
 - `[Task] Roles and skills mapping`
     
 
-Work in branch `feature/roles-skills`.
+Work in branch `task/roles-skills`.
 
 1. In `src/roles-and-skills.md`, add the following sections.
     
@@ -259,15 +262,8 @@ Work in branch `feature/roles-skills`.
     - Based on your intuition and some research, list **skills that almost everyone needs**, for example:
         
         - Git
-            
         - Basic Linux usage
-            
-        - Understanding of HTTP / REST APIs
-            
-        - Communicating in a team
-            
-        - Writing clear issues/PR descriptions
-            
+        - ...
     
     #### 3.3 Choose a role and visit roadmap.sh
     
@@ -308,7 +304,7 @@ Work in branch `feature/roles-skills`.
         ```markdown
         ## Job market snapshot
         
-        - Skills that appear in almost every posting:
+        - Skills that appear in the posting and roadmap.sh:
           - ...
         - Skills that surprised me:
           - ...
@@ -319,66 +315,13 @@ Work in branch `feature/roles-skills`.
 2. Commit and push your changes, open a PR and link it to the issue.
     
 
-> 💡 **LLM check:**
-> 
-> - You can ask an LLM “what does a *role* usually do?”, but:
->     
->     - You must visit roadmap.sh and real job postings yourself.
->         
->     - Your reflections about what you have / don’t have must be honest and personal.
+> You must visit roadmap.sh and real job postings.
+> Your marked roadmap and reflections must be ready for review.
 >         
 
 ---
 
-### 4. Peer review via PR
-
-Create an issue:
-
-- `[Task] Code review for Lab 01`
-    
-
-You will act as both **author** and **reviewer**.
-
-1. As an **author**:
-    
-    - Create two **PRs** that:
-        
-        - Adds `docs/architecture.md` with the diagram.
-            
-        - Adds `src/roles-and-skills.md`.
-            
-    - Request a review from a classmate for at least one of the PRs.
-        
-    - Use the [PR template](.github/pull_request_template.md) and make sure the PR descriptions are clear and links the relevant issue(s).
-        
-2. As a **reviewer**:
-    
-    - Review at least **one PR** from a classmate.
-        
-    - Leave at least **2 meaningful comments** to improve your colleagues work, which they need to address. For example:
-        
-        - A question about architecture (“Why does the mobile app talk directly to the database?”).
-            
-        - Some important commonly-appearing skills weren't mentioned.
-            
-3. As an **author**, address the comments:
-    
-    - Make changes where reasonable.
-        
-    - Reply to comments with something like “Fixed in 123abc” (123abc being the commit id) or explain why you disagree.
-        
-4. When both sides are happy, **merge the PR**.
-    
-
-> 💡 **LLM check:**
-> 
-> - You can ask an LLM “how to phrase a polite review comment”,  
->     but you must read your classmate’s work and think of **real feedback**.
->     
-
----
-
-### 5. Short personal reflection
+### 4. Short personal reflection
 
 Create an issue:
 
@@ -388,40 +331,33 @@ Create an issue:
 1. In `src/reflection.md` write 5–10 sentences answering:
     
     - Which role did you choose and why?
+           
+    - Which skills seem most relevant to your chosen role?
         
-    - What is one thing about the product’s architecture that was new to you?
+    - What are a few core skill you would like to improve this semester?
         
-    - Which course topics (Git, Linux, Docker, REST, CI/CD, fullstack, data) seem most relevant to your chosen role?
-        
-    - What is one concrete skill you would like to improve this semester?
-        
-2. Commit, push, and (optionally) open a small PR, or add it to an existing one.
+2. Open a small PR and review it with the TA.
     
 
-> 💡 **LLM check:**
-> 
-> - Write this section **without** an LLM. It’s about your own thoughts.
->     
+> This section must be your own thoughts.
 
 ---
 
-### 6. Stretch tasks (optional)
+### 5. Stretch tasks (optional)
 
-If you finish early:
+If you finish fast:
 
--  Add a second diagram showing **only backend services** and how they might scale (load balancer, multiple service instances, database).
+-  Pick another service, explore their architecture, and analyze the differences.
     
--  Create a file `src/agent-idea.md`:
-    
-    - Sketch how an “agent/script” could:
+-  Create a file `src/agent-idea.md` and sketch how an agent could:
+
+    - Generate GitHub issues automatically via API,
         
-        - Read `LAB_STORY.md`,
+    - Do the work and create PRs.
+ 
+    - Review your classmates PRs.
             
-        - Generate GitHub issues automatically via API,
-            
-        - Create initial markdown files for you.
-            
--  Try to implement a tiny part of that agent (even just a script that reads this file and prints task titles).
+-  Implement a basic version of the agent.
     
 
 ---
@@ -431,9 +367,10 @@ If you finish early:
 Report each task to the TA when you’re done:
 
 -  The tasks must have an **issue** linked to PRs.
-    
--  Close the issue when all related activities (including TA approval) are done.
-    
--  Explain your diagram, chosen role in a short conversation with the TA.
 
+-  The PR must be peer-reviewed.
+    
+-  Close the issue when all step are done and PR is merged.
+    
+-  Be ready to show your diagram, chosen role, roadmap and reflection to the TA.
 
