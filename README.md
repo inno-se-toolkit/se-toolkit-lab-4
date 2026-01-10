@@ -210,7 +210,15 @@ Be ready to demonstrate the completed tasks to the TA at the end of the lab.
 ### 2. Roles, skills, roadmap.sh, and job postings
 
 1. [ ] Create an issue `[Task] Roles and skills mapping`.
+
 2. [ ] Create a branch for it and switch to that branch, e.g., `git checkout -b task-2`.
+
+    > [!IMPORTANT]
+    > You can ask an LLM “what does a *role* usually do?”, but:
+    >
+    > - You must visit `roadmap.sh` and real job postings yourself.
+    > - Your reflections about what you have / don’t have must be honest and personal.
+
 3. [ ] In `./docs/roles-and-skills.md`:
 
      - [ ] In the `## Roles for components` section:
@@ -278,14 +286,8 @@ Be ready to demonstrate the completed tasks to the TA at the end of the lab.
     ...
     ```
 
-12. Commit and push your changes, open a PR and link it to the issue.
+12. Follow the process for [Main tasks](#main-tasks) to complete the issue with a PR.
 
-> 💡 **LLM check:**
->
-> - You can ask an LLM “what does a *role* usually do?”, but:
->   - You must visit `roadmap.sh` and real job postings yourself.
->   - Your reflections about what you have / don’t have must be honest and personal.
->
 ---
 
 ### 4. Peer review via PR
