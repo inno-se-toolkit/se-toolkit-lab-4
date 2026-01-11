@@ -90,7 +90,7 @@ This and all other lab assignments will simulate the engineering practices in a 
     code lab-01-market-product-and-git
     ```
 
-14. Install recommended VS Code extensions.
+14. Install the recommended VS Code extensions (listed in `./.vscode/extensions.json`) when VS Code suggests to install them.
 15. Sign in to accounts.
 
     In the Activity Bar:
