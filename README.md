@@ -11,7 +11,7 @@ By the end of this lab you should be able to:
 
 - Explain the basic architecture of a real-world digital product in terms of modules, data flow, and deployment.
 - Identify which tech roles work on which parts of that product, and which general skills are shared across roles.
-- Use GitHub issues, branches, and pull requests (PRs) to structure your work and get a peer review.
+- Use GitHub issues, branches, and pull requests to structure your work and get a peer review.
 
 ## Tasks overview
 
@@ -122,6 +122,7 @@ By the end of the lab:
 
 - Make sure that each non-optional task has a corresponding issue linked to a PR.
 - Close the issues for which all related activities are done.
+<!-- - TODO how does a TA check the work? -->
 - Explain your diagram, chosen role in a short conversation with the TA.
 
 ---
