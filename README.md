@@ -73,6 +73,7 @@ This and all other lab assignments will simulate the engineering practices in a 
     - [Terminal](https://code.visualstudio.com/docs/terminal/getting-started).
     - [Source Control](https://code.visualstudio.com/docs/sourcecontrol/overview).
     - [Extension Marketplace](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace).
+    - How to enable [`files.autoSave`](https://code.visualstudio.com/docs/editing/codebasics#_save-auto-save) and [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting).
 11. On your computer, create a directory `pre-swp`.
 12. In that directory, clone the lab repo.
 
