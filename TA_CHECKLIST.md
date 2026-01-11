@@ -1,13 +1,31 @@
-A checklist for TA's convenience.
+# Instructions for TAs
 
-For each tasks check both the issue and implementation (most often PR).
+## Grading
 
-- [ ] 0. Setup: repo created and access configured  
-- [ ] 1. Product & Architecture: Product selected + architecture description ready (architecture.md)
-- [ ] 2. Architecture Diagram: Diagram created and committed (PNG/SVG + source file)  
-- [ ] 3. Roles-and-skills.md complete: roles per module, roadmap.sh reflection, job postings  
-- [ ] 4. Peer Review: one PR reviewed **by** a classmate, and another **for** a classmate.
-- [ ] 5. Personal Reflection: reflection.md complete  
-- [ ] 6. Stretch Task (optional): Completed any stretch task  
+Points are given as follows:
 
-TA walks around, looks at repo + PRs, signs off in his own file, a full participation point is given if all non-optional tasks are complete. If more than half than 0.5, if all and at least one optional then 1.5.
+- `0.5` if only tasks 1 and 2 are complete.
+- `1` if all non-optional tasks are complete.
+- `1.5` if all non-optional tasks and at least one optional task are complete.
+
+## Process
+
+<!-- TODO review the process -->
+
+TA walks around, looks at repo and PRs, signs off in their file.
+
+## Checklist
+
+1. Setup: repo created and accessible.
+2. Issues and PRs: issues and PRs are created, linked, and closed.
+3. Product & architecture: Product selected and architecture description ready (`./docs/architecture.md`).
+4. Architecture diagrams: Diagrams created and committed (SVG + source file).
+5. `./docs/roles-and-skills.md` complete:
+   1. Roles per component;
+   2. `roadmap.sh` reflection;
+   3. Job postings.
+6. Peer reviews:
+   1. All PRs reviewed by a classmate.
+   2. The student reviewed all PRs of a classmate.
+7. Personal reflection: `./docs/reflection.md` complete.
+8. Stretch tasks (optional): Completed any stretch task.
