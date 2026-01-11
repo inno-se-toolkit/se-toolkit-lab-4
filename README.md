@@ -42,8 +42,8 @@ This and all other lab assignments will simulate the engineering practices in a 
 1. Create a GitHub account.
 2. Fork this repo to your GitHub account.
 3. Continue your work in the forked repo.
-4. In the repo Settings -> General -> Features, enable Issues.
-5. In Issues -> Labels, create a new label:
+4. In the repo -> `Settings` -> `General` -> `Features`, enable `Issues`.
+5. In the repo -> `Issues` -> `Labels`, create a new label:
    1. Click `New label`.
    2. Name: `task`.
    3. Click `Create label`.
@@ -134,7 +134,7 @@ By the end of the lab:
 3. Make [commits](https://smartprogramming.in/tutorials/git-and-github/git-commit) to that branch to complete the task.
      - Commit messages must follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) format.
      - Commit to the branch using one of these approaches:
-       1. Using VS Code (see [docs](https://code.visualstudio.com/docs/sourcecontrol/staging-commits)): "Activity Bar" -> "Source Control" -> Click a file -> Select lines in the editor -> Right mouse click the selected lines -> Click "Stage Selected Ranges" -> Write a commit message -> Click "Commit".
+       1. Using VS Code (see [docs](https://code.visualstudio.com/docs/sourcecontrol/staging-commits)): "Activity Bar" -> "Source Control" -> Click a file -> Select lines in the editor -> Right mouse click the selected lines -> Click `Stage Selected Ranges` -> Write a commit message -> Click `Commit`.
        2. Using a terminal (adds all changes in these files to the staging area):
 
           ```console
@@ -189,7 +189,7 @@ For each task, follow the [procedure](#procedure-for-each-task).
       - [ ] Write the `PlantUML` code in `./docs/diagrams/src/` and render the diagrams to SVG in `./docs/diagrams/out/` using the `jebbs.plantuml` extension. These directories are already set in `./.vscode/settings.json`.
       - [ ] [Include](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) the rendered images into your Markdown file.
    3. You can write [Mermaid](https://mermaid.js.org/) code in Markdown code blocks with the `mermaid` language tag (see [docs](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#creating-mermaid-diagrams)).
-   4. You can use any other tool if it supports the "diagrams as code" approach, e.g., [Structurizr](https://structurizr.com/), [D2](https://d2lang.com/), [LikeC4](https://github.com/likec4/likec4) etc.
+   4. You can use any other tool if it supports the "diagrams as code" approach, e.g., [`Structurizr`](https://structurizr.com/), [`D2`](https://d2lang.com/), [`LikeC4`](https://github.com/likec4/likec4) etc.
 
     > [!IMPORTANT]
     >
