@@ -116,11 +116,17 @@ This and all other lab assignments will simulate the engineering practices in a 
 
 ---
 
-## Main tasks
+## Submission checklist
 
-You work **independently** on the tasks below in your forked repo.
+By the end of the lab:
 
-Follow this process for each task:
+- Make sure that each non-optional task has a corresponding issue linked to a PR.
+- Close the issues for which all related activities are done.
+- Explain your diagram, chosen role in a short conversation with the TA.
+
+---
+
+## Procedure for each task
 
 1. [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a GitHub issue in your forked repo using the "Lab Task" option and fill in the details.
 2. Create a new branch for the issue via [GitHub](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue) or via `git checkout -b <branch name>`.
@@ -163,6 +169,12 @@ As a PR author, you must:
 - Make necessary changes based on the review.
 
 ---
+
+## Tasks
+
+You work **independently** on the tasks below in your forked repo.
+
+For each task, follow the [procedure](#procedure-for-each-task).
 
 ### 1. Pick a product and describe its architecture
 
@@ -345,13 +357,3 @@ As a PR author, you must:
 
 3. [ ] Try to implement a part of that agent.
 4. [ ] Test that agent in a different fork of this repo.
-
----
-
-### Submission checklist
-
-Report each task to the TA when you’re done:
-
-- The tasks must have an **issue** linked to PRs.
-- Close the issue when all related activities (including TA approval) are done.
-- Explain your diagram, chosen role in a short conversation with the TA.
