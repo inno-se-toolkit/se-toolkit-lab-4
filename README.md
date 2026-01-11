@@ -9,7 +9,7 @@ To kickstart the course, you will explore two things:
 
 By the end of this lab you should be able to:
 
-- Explain the basic architecture of a real-world digital product in terms of modules, data flow, and deployment.
+- Explain the basic architecture of a real-world digital product in terms of components, data flow, and deployment.
 - Identify which tech roles work on which parts of that product, and which general skills are shared across roles.
 - Use GitHub issues, branches, and pull requests to structure your work and get a peer review.
 
@@ -18,8 +18,8 @@ By the end of this lab you should be able to:
 To complete this lab, you will need to:
 
 - Pick an existing digital product.
-- Sketch its architecture: modules, data flow, deployment.
-- Map modules to tech roles and skills using real job postings and `roadmap.sh`.
+- Sketch its architecture: components, data flow, deployment.
+- Map components to tech roles and skills using real job postings and `roadmap.sh`.
 - Practice using GitHub issues, branches and pull requests (PRs) to organize your work in a repository (repo) and get feedback from peers.
 
 This and all other lab assignments will simulate the engineering practices in a real team:
@@ -189,6 +189,7 @@ For each task, follow the [procedure](#procedure-for-each-task).
       - [ ] [Include](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) the rendered images into your Markdown file.
    3. You can write [Mermaid](https://mermaid.js.org/) code in Markdown code blocks with the `mermaid` language tag (see [docs](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#creating-mermaid-diagrams)).
    4. You can use any other tool if it supports the "diagrams as code" approach, e.g., [Structurizr](https://structurizr.com/), [D2](https://d2lang.com/), [LikeC4](https://github.com/likec4/likec4) etc.
+
 3. [ ] Create `./docs/architecture.md`. In `./docs/architecture.md`:
     1. [ ] In the `## Product choice` section:
          - [ ] Pick one product from this list or propose your own:
@@ -200,8 +201,8 @@ For each task, follow the [procedure](#procedure-for-each-task).
              - Any other widely used full-stack app except for Uber because it's used in examples (agree with TA if you choose this option).
     2. [ ] In the `## Motivation` section:
          - [ ] Explain in 3-4 sentences why you personally would be interested to work on this product as a tech specialist.
-    3. [ ] In the `## Main modules` section:
-        - [ ] Select at least 5 main system modules. For example:
+    3. [ ] In the `## Main components` section:
+        - [ ] Select at least 5 main [components](https://c4model.com/abstractions/component) of the product. For example:
           - Mobile app
           - Backend API
           - Authentication service
@@ -209,20 +210,20 @@ For each task, follow the [procedure](#procedure-for-each-task).
           - Notifications
           - Admin panel
           - Data analytics
-        - [ ] For each module, explain in 1–2 sentences what it does.
+        - [ ] For each component, explain in 1–2 sentences what it does.
         - [ ] Provide a [component diagram](https://en.wikipedia.org/wiki/Component_diagram).
           - [ ] If you use [`PlantUML`](https://plantuml.com/component-diagram):
             - [ ] Store the diagram source code in `./docs/diagrams/src/architecture-component.puml`.
             - [ ] See [how to draw a connection](https://stackoverflow.com/questions/55077828/using-required-provided-interfaces-in-component-diagrams-plantuml/57134601#57134601).
     4. [ ] In the `## Data flow` section:
           - [ ] Describe what happens when a typical user action occurs (e.g. user orders a taxi / sends a message).
-          - [ ] Mention which modules talk to each other and what kind of data they exchange.
+          - [ ] Mention which components talk to each other and what kind of data they exchange.
           - [ ] Provide a [sequence diagram](https://en.wikipedia.org/wiki/Sequence_diagram).
             - [ ] If you use [`PlantUML`](https://plantuml.com/sequence-diagram):
               - [ ] Store the diagram source code in `./docs/diagrams/src/architecture-sequence.puml`.
             - [ ] Alternatively, use [`Mermaid`](https://mermaid.js.org/syntax/sequenceDiagram.html).
     5. [ ] In the `## Deployment` section:
-         - [ ] Briefly describe where these modules live (high-level view):
+         - [ ] Briefly describe where these components live (high-level view). Example:
              - On user devices (mobile/web app).
              - On servers (backend services, databases).
          - [ ] Provide a [deployment diagram](https://en.wikipedia.org/wiki/Deployment_diagram).
