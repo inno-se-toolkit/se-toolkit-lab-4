@@ -161,6 +161,7 @@ By the end of the lab:
 10. Get the collaborator to approve the PR.
 11. Merge the PR to the `main` branch.
 12. Close the issue.
+13. Delete the branch.
 
 ## PR reviews
 
