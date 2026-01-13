@@ -90,7 +90,7 @@ This and all other lab assignments will simulate real-life engineering practices
 
 ### Open the repository on your machine
 
-11. On your computer, create a directory `pre-swp`.
+1. On your computer, create a directory `pre-swp`.
 2. In that directory, clone the lab repo.
 
     ```bash
@@ -106,7 +106,7 @@ This and all other lab assignments will simulate real-life engineering practices
 
 ### Set up VS Code extensions
 
-14. Install the recommended VS Code extensions (listed in `./.vscode/extensions.json`) when VS Code suggests to install them.
+1. Install the recommended VS Code extensions (listed in `./.vscode/extensions.json`) when VS Code suggests to install them.
 2. Sign in to accounts.
     In the Activity Bar:
     1. Click `Accounts`
@@ -114,7 +114,7 @@ This and all other lab assignments will simulate real-life engineering practices
     3. Repeat for any of the extensions if neeeded.
 
 <!-- TODO: move all gitlens related points to extra section (recommendations) -->
-1. Check GitLens.
+3. Check GitLens.
 
     In the Activity Bar:
 
@@ -126,11 +126,11 @@ This and all other lab assignments will simulate real-life engineering practices
 
 ### Set up an agent
 
-17. Set up [Kilo Code](https://kilo.ai/install) with Qwen3 Coder (watch [tutorial](https://www.youtube.com/watch?v=G0uIVEt3aj4)) or another [free model](https://openrouter.ai/collections/free-models).
+1. Set up [Kilo Code](https://kilo.ai/install) with Qwen3 Coder (watch [tutorial](https://www.youtube.com/watch?v=G0uIVEt3aj4)) or another [free model](https://openrouter.ai/collections/free-models).
 
 ### Skim the lab description
 
-18. Skim this `README.md` file once so you know what’s coming.
+1. Skim this `README.md` file once so you know what’s coming.
 
 ---
 
