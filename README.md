@@ -261,7 +261,7 @@ Tasks are non-optional unless marked as "optional".
     >
     > The goal of the diagram drawing tasks is to get familiar with certain architectural views (static, dynamic), not to design a system.
     >
-    > To design a system rationally, you need to consider the architectural drivers. This approach is outlined in the optional [Task 4](#4-update-architecture-optional-stretch-task).
+    > To design a system rationally, you need to consider the architectural drivers. This approach is outlined in the optional [Task 4](#4-optional-update-architecture).
 
 3. [ ] Create `./docs/architecture.md`. In `./docs/architecture.md`:
     1. [ ] In the `## Product choice` section:
