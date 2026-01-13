@@ -374,3 +374,6 @@ Report each task to the TA when you’re done:
     
 -  Be ready to show your diagram, chosen role, roadmap and reflection to the TA.
 
+### Take home exercise
+- Learn about Git -> Github -> Github flow
+https://hackmd.io/@aabounegm/SWP-git
