@@ -146,6 +146,8 @@ This and all other lab assignments will simulate real-life engineering practices
     4. Make sure `origin` points to your repo URL.
     5. In the `GitLens` panel, click `Commits`.
     6. Make sure you can see commits on the current branch.
+
+    Learn more about [`GitLens` features](https://help.gitkraken.com/gitlens/gitlens-features/).
   
   </details>
   
