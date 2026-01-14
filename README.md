@@ -129,7 +129,7 @@ This and all other lab assignments will simulate real-life engineering practices
     In the `Activity Bar`:
     1. Click `Accounts`
     2. Click `Sign in with GitHub`
-    3. Repeat for any of the extensions if neeeded.
+    3. Repeat for any of the extensions if needed.
 
 3. <details><summary> (Optional) Check <code>GitLens</code>.</summary>
 
