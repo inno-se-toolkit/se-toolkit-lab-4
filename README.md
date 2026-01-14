@@ -268,6 +268,7 @@ Tasks are non-optional unless marked as "optional".
 3. [ ] Create `./docs/architecture.md`. In `./docs/architecture.md`:
     1. [ ] In the `## Product choice` section:
          - [ ] Pick one product from this list or propose your own:
+             <!-- TODO exclude? Yandex Taxi may be too similar to the Uber example -->
              - Yandex Taxi
              - Telegram
              - ChatGPT.com
