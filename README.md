@@ -245,38 +245,7 @@ Tasks are non-optional unless marked as "optional".
 ### 1. Pick a product and describe its architecture
 
 1. [ ] Create an issue `[Task] Product & architecture description`.
-2. [ ] Decide on how to make the architecture diagrams. We suggest the following approaches:
-   1. You can *prototype* diagrams in `./docs/diagrams/prototype` via the [`hediet.vscode-drawio`](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) extension ([example](./docs/diagrams/prototype/example.drawio.svg)).
-
-      However, it's not a good idea to version control images because you can't conveniently visualize their diffs and therefore can't track changes well.
-
-      Therefore, you must use the ["diagrams as code"](https://simmering.dev/blog/diagrams/) approach and eventually switch to one of the following approaches.
-   2. <details><summary> You can write <code><a href="https://plantuml.com/">PlantUML</a></code> code (click to expand).</summary>
-
-      - [ ] Install the [`jebbs.plantuml`](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) `VS Code` extension.
-      - [ ] Install [`Docker`](https://docs.docker.com/get-started/get-docker/).
-      - [ ] Run in the terminal `docker run --name plantuml-server -d -p 48080:8080 plantuml/plantuml-server:jetty` to start a `PlantUML` server.
-      - [ ] Open the `PlantUML` server in the browser at `http://localhost:48080` to make sure it works.
-      - [ ] Open [`./docs/diagrams/src/architecture-component.puml`](./docs/diagrams/src/architecture-component.puml) in `VS Code`.
-      - [ ] Click the `Preview Current Diagram` icon.
-
-          The `48080` port is already set in [`./.vscode/settings.json`](./.vscode/settings.json). Therefore, previewing should work out of the box.
-
-      - [ ] Write the `PlantUML` code in `./docs/diagrams/src/` and render the diagrams to SVG in `./docs/diagrams/out/` using the `jebbs.plantuml` extension. These directories are already set in [`./.vscode/settings.json`](./.vscode/settings.json).
-      - [ ] To render diagrams to SVG, open the [`Command Palette`](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette), write `PlantUML: Export Workspace Diagrams`, and choose `svg`.
-      - [ ] [Include](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) the rendered images into your `Markdown` file.
-
-      </details>
-   3. You can write [`Mermaid`](https://mermaid.js.org/) code in `Markdown` files in code blocks with the `mermaid` language tag (see [docs](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#creating-mermaid-diagrams)).
-   4. You can use any other tool if it supports the "diagrams as code" approach, e.g., [`Structurizr`](https://structurizr.com/), [`D2`](https://d2lang.com/), [`LikeC4`](https://github.com/likec4/likec4) etc.
-
-    > [!IMPORTANT]
-    >
-    > The goal of the diagram drawing tasks is to get familiar with certain architectural views (static, dynamic), not to design a system.
-    >
-    > To design a system rationally, you need to consider the architectural drivers. This approach is outlined in the optional [Task 4](#4-optional-update-architecture).
-
-3. [ ] Create `./docs/architecture.md`. In `./docs/architecture.md`:
+2. [ ] Create `./docs/architecture.md`. In `./docs/architecture.md`:
     1. [ ] In the `## Product choice` section:
          - [ ] Pick one product from this list or propose your own:
              <!-- TODO exclude? Yandex Taxi may be too similar to the Uber example -->
@@ -454,3 +423,45 @@ Tasks are non-optional unless marked as "optional".
 ### HW1. Take-home exercise
 
 - [ ] Read this [tutorial](https://hackmd.io/@aabounegm/SWP-git) to learn about `Git`, `Github`, and `Git` workflows.
+
+## Appendix
+
+### Visualize the architecture
+
+> [!NOTE]
+> Visualizing the architecture is not the same as designing the architecture.
+>
+> To design the architecture of a system, you need to consider the architectural drivers. This approach is outlined in the optional [Task 4](#4-optional-update-architecture).
+
+#### Visualize the architecture - `Draw.io`
+
+You can *prototype* diagrams in `./docs/diagrams/prototype` via the [`hediet.vscode-drawio`](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) extension ([example](./docs/diagrams/prototype/example.drawio.svg)).
+
+However, it's not a good idea to version control images because you can't conveniently visualize their diffs and therefore can't track changes well.
+
+Therefore, you must use the ["diagrams as code"](https://simmering.dev/blog/diagrams/) approach and eventually switch to one of the following approaches.
+
+#### Visualize the architecture - `PlantUML`
+
+You can write <code><a href="https://plantuml.com/">PlantUML</a></code> code.
+
+- [ ] Install the [`jebbs.plantuml`](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) `VS Code` extension.
+- [ ] Install [`Docker`](https://docs.docker.com/get-started/get-docker/).
+- [ ] Run in the terminal `docker run --name plantuml-server -d -p 48080:8080 plantuml/plantuml-server:jetty` to start a `PlantUML` server.
+- [ ] Open the `PlantUML` server in the browser at `http://localhost:48080` to make sure it works.
+- [ ] Open [`./docs/diagrams/src/architecture-component.puml`](./docs/diagrams/src/architecture-component.puml) in `VS Code`.
+- [ ] Click the `Preview Current Diagram` icon.
+
+    The `48080` port is already set in [`./.vscode/settings.json`](./.vscode/settings.json). Therefore, previewing should work out of the box.
+
+- [ ] Write the `PlantUML` code in `./docs/diagrams/src/` and render the diagrams to SVG in `./docs/diagrams/out/` using the `jebbs.plantuml` extension. These directories are already set in [`./.vscode/settings.json`](./.vscode/settings.json).
+- [ ] To render diagrams to SVG, open the [`Command Palette`](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette), write `PlantUML: Export Workspace Diagrams`, and choose `svg`.
+- [ ] [Include](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) the rendered images into your `Markdown` file.
+
+#### Visualize the architecture - `Mermaid`
+
+You can write [`Mermaid`](https://mermaid.js.org/) code in `Markdown` files in code blocks with the `mermaid` language tag (see [docs](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#creating-mermaid-diagrams)).
+
+#### Visualize the architecture - other tools
+
+You can use any other tool if it supports the "diagrams as code" approach, e.g., [`Structurizr`](https://structurizr.com/), [`D2`](https://d2lang.com/), [`LikeC4`](https://github.com/likec4/likec4) etc.
