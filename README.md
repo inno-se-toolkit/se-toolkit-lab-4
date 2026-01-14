@@ -235,9 +235,9 @@ Tasks are non-optional unless marked as "optional".
 
 1. [ ] Create an issue `[Task] Product & architecture description`.
 2. [ ] Decide on how to make the architecture diagrams. We suggest the following approaches:
-   1. You can *prototype* diagrams via the [`hediet.vscode-drawio`](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) extension.
+   1. You can *prototype* diagrams in `./docs/diagrams/prototype` via the [`hediet.vscode-drawio`](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) extension ([example](./docs/diagrams/prototype/example.drawio.svg)).
 
-      However, it's not a good idea to version control images because you can't conveniently visualize their diffs and therefore can't track changes.
+      However, it's not a good idea to version control images because you can't conveniently visualize their diffs and therefore can't track changes well.
 
       Therefore, you must use the ["diagrams as code"](https://simmering.dev/blog/diagrams/) approach and eventually switch to one of the following approaches.
    2. <details><summary> You can write <code><a href="https://plantuml.com/">PlantUML</a></code> code.</summary>
