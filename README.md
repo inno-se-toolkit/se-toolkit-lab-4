@@ -329,10 +329,9 @@ Follow the [procedure for each task](#procedure-for-each-task).
     ```
 
 6. [ ] Find **5-7 job postings** for this role on [`HH.ru`](https://hh.ru) or a similar job site.
-7. [ ] For each posting, list:
-    - Link to the posting.
-    - Company name.
+7. [ ] For each posting, write:
     - Role title.
+    - Link to the posting.
     - 3–5 key skills/requirements they mention.
 8. [ ] In `./docs/roles-and-skills.md`, in the `## Job market snapshot` section, write:
 
