@@ -359,18 +359,6 @@ Tasks are non-optional unless marked as "optional" or "homework".
 
 ---
 
-### 5. (Optional) Work on an agent
-
-1. [ ] Create the issue `[Task] Work on an agent`.
-2. [ ] In `docs/agent-idea.md`, sketch how an AI agent could:
-    - [ ] Read `README.md`;
-    - [ ] Generate `GitHub` issues automatically;
-    - [ ] Create initial `Markdown` files for you.
-    - [ ] Complete all tasks for you.
-
-3. [ ] Try to implement a part of that agent.
-4. [ ] Test that agent in a different fork of this repo.
-
 ### 6. (Optional) Deep dives (pick one)
 
 > [!NOTE]
