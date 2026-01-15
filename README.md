@@ -245,6 +245,9 @@ Tasks are non-optional unless marked as "optional" or "homework".
 
 ### 1. Pick a product and study its architecture
 
+> [!WARNING]
+> System architecture diagrams are a part of the architecture documentation and not the [system architecture](https://github.com/inno-se/the-guide?tab=readme-ov-file#architecture).
+
 1. [ ] Create an issue `[Task] Product & architecture description`.
 2. [ ] Learn how to [embed images](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images) into your `Markdown` files.
 3. [ ] Pick one product from this list or propose your own:
