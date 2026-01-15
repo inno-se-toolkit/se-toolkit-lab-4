@@ -233,7 +233,7 @@ As a PR author, you must:
 
 ---
 
-## Tasks
+## Required tasks
 
 You work **independently** on the tasks below in your forked repo.
 
