@@ -10,7 +10,7 @@ To kickstart the course, you will explore two things:
 By the end of this lab you should be able to:
 
 - Use GitHub to structure your work and collaborate with peers (issues, branches, pull requests, and reviews).
-- Explain the basic architecture of a real-world digital product in terms of components, data flow, and deployment.
+- Explain the basic architecture of a real-world digital product in terms of components, data flow, deployment, and tech roles.
 - Reflect on your career in tech, examine your current skillset, and plan for the future.
 
 ## Tasks overview
@@ -224,7 +224,8 @@ By the end of the lab:
 
 As a PR reviewer, you must:
 
-- Review the assigned PR and leave at least 2 meaningful comments created for [particular lines](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request).
+- Review the assigned PR.
+- Leave at least 2 meaningful comments highlighting [particular lines](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request).
 - Approve the PR if you're satisfied with the PR.
 
 As a PR author, you must:
@@ -238,9 +239,9 @@ As a PR author, you must:
 
 You work **independently** on the tasks below in your forked repo.
 
-For each task, follow the [procedure](#procedure-for-each-task).
+For each task, follow the [procedure above](#procedure-for-each-task).
 
-Tasks are non-optional unless marked as "optional".
+Tasks are non-optional unless marked as "optional" or "homework".
 
 ### 1. Pick a product and study its architecture
 
@@ -248,58 +249,48 @@ Tasks are non-optional unless marked as "optional".
 2. [ ] Learn how to [embed images](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images) into your `Markdown` files.
 3. [ ] Pick one product from this list or propose your own:
     <!-- TODO update the project list and provide diagrams for each project -->
-    <!-- TODO exclude? Yandex Taxi may be too similar to the Uber example -->
     - Yandex Taxi
     - Telegram
-    - ChatGPT.com
     - Wildberries.ru
-    - Uchi.ru
-    - Any other widely used full-stack app (except for Uber because it's used in examples). Agree with your TA if you choose this option.
-4. [ ] Find the directory with the product's `PlantUML` architecture diagrams in `./docs/diagrams/src/<product-name>`.  [visualizing the architecture](#visualize-the-architecture).
-5. [ ] Find the directory with the product's rendered architecture diagrams in `./docs/diagrams/out/<product-name>`.
-6. [ ] Create `./docs/architecture.md`.
-7. [ ] In `./docs/architecture.md`:
+
+4. [ ] Find the directory with the product's architecture in two formats:
+    - `PlantUML`  diagrams in `./docs/diagrams/src/<product-name>`  (see [visualizing the architecture](#visualize-the-architecture)).
+    - Rendered architecture diagrams in `./docs/diagrams/out/<product-name>`.
+
+5. [ ] Create `./docs/architecture.md` and add the following contents:
     1. [ ] In the `## Product choice` section:
          - [ ] Provide:
            - [ ] The product's name;
            - [ ] A link to the product's website.
            - [ ] A short description of the product (1–2 sentences).
-    2. [ ] In the `## Motivation` section:
-         - [ ] Explain in 3-4 sentences why you personally would be interested to work on this product as a tech specialist.
-    3. [ ] In the `## Main components` section:
-        - [ ] Embed the product's `Component Diagram.svg`.
+    2. [ ] In the `## Main components` section:
+        > [!NOTE]
+        > According to the [`C4 model`](https://c4model.com/abstractions/component), a *component* is a grouping of related functionality encapsulated behind a well-defined interface.
+        - [ ] Add the product's `Component Diagram.svg`.
         - [ ] Provide a link to the `PlantUML` code for that [component diagram](#component-diagram).
-        - [ ] Read about the `C4 model` [components](https://c4model.com/abstractions/component) (just the first paragraph).
         - [ ] Select at least 5 main components of the product from the component diagram.
-        - [ ] For each component, explain in 1–2 sentences what it does.
-    4. [ ] In the `## Data flow` section:
+        - [ ] For each selected component, explain in 1–2 sentences what it does.
+    3. [ ] In the `## Data flow` section:
           - [ ] Embed the product's `Sequence Diagram.svg`.
           - [ ] Provide a link to the `PlantUML` code for that [sequence diagram](#sequence-diagram).
           - [ ] Describe what happens when a typical user action occurs (e.g. a user orders a taxi or sends a message).
           - [ ] Mention which components talk to each other and what kind of data they exchange.
-    5. [ ] In the `## Deployment` section:
+    4. [ ] In the `## Deployment` section:
          - [ ] Embed the product's `Deployment Diagram.svg`.
          - [ ] Provide a link to the `PlantUML` code for that [deployment diagram](#deployment-diagram).
          - [ ] Briefly describe where the components are deployed.
-    6. [ ] In the `## Knowledge Gaps` section:
+    5. [ ] In the `## Knowledge Gaps` section:
          - [ ] Write at least two things in your architecture that you are not fully sure about (guesses, questions, etc.).
 
 ---
 
-### 2. Roles, skills, roadmap.sh, and job postings
+### 2. Tech roles involved in the selected product
 
 1. [ ] Create an issue `[Task] Roles and skills mapping`.
-
-    > [!IMPORTANT]
-    > You can ask an LLM “what does a `<role-name>` usually do?”, but:
-    >
-    > - You must visit `roadmap.sh` and real job postings yourself.
-    > - Your reflections about what you have / don’t have must be honest and personal.
-
 2. [ ] In `./docs/roles-and-skills.md`:
 
-     - [ ] In the `## Roles for components` section:
-        - [ ] For each component from `architecture.md`, list IT roles that are likely involved in the development and maintenance of that component.
+     - [ ] In the `## Roles and components` section:
+        - [ ] For each selected component from `architecture.md`, list IT roles that are likely involved in the development and maintenance of that component.
         - [ ] Use a nested list. Example:
           - Mobile app
             - Mobile engineer (iOS/Android)
@@ -310,23 +301,19 @@ Tasks are non-optional unless marked as "optional".
             - DevOps
             - QA
           - ...
-
+     - [ ] Select any five roles.
+        - [ ] Do you know what are the typical responsibilities of that role? Consult an LLM or search engine to find out.
+        - [ ] Briefly describe the responsibilities for chosen roles.
      - [ ] In the `## Common skills across roles` section:
-       - [ ] Based on your intuition and some research, list **skills that almost everyone needs**. Example:
-          - Git
-          - Basic Linux usage
-          - Understanding of HTTP and REST APIs
-          - Agentic coding
-          - Communicating in a team
-          - Writing clear issues and PR descriptions
-          - Planning
-          - ...
+       - [ ] Based on your intuition and some research, list **tech skills that almost everyone needs**.
 
-3. [ ] Choose *one* role that seems most interesting to you now.
-4. [ ] Go to [`roadmap.sh`](https://roadmap.sh/) and sign up.
-5. [ ] Find the roadmap relevant for the role you chose.
-6. [ ] In that roadmap, mark the items you already have at least some knowledge in.
-7. [ ] In `./docs/roles-and-skills.md`, in the `## My chosen role` section, write:
+### 3. My tech skills and the market: roadmap.sh and job postings
+
+1. [ ] Choose *one* role that seems most interesting to you now.
+2. [ ] Go to [`roadmap.sh`](https://roadmap.sh/) and sign up.
+3. [ ] Find the roadmap relevant for the role you chose.
+4. [ ] In that roadmap, mark the items you already have at least some knowledge in.
+5. [ ] In `./docs/roles-and-skills.md`, in the `## My chosen role` section, write:
 
     ```markdown
     ### Role
@@ -338,45 +325,36 @@ Tasks are non-optional unless marked as "optional".
     - ...
     
     ### Skills I clearly lack
-    <!-- from roadmap.sh, 8-10 skills -->
+    <!-- 4-5 skills from roadmap.sh that seemed important to have -->
     - ...
     ```
 
-8. [ ] Find **5-7 job postings** for this role on [`HH.ru`](https://hh.ru) or a similar job site.
-9. [ ] For each posting, list:
+6. [ ] Find **5-7 job postings** for this role on [`HH.ru`](https://hh.ru) or a similar job site.
+7. [ ] For each posting, list:
     - Link to the posting.
     - Company name.
     - Role title.
     - 3–5 key skills/requirements they mention.
-10. [ ] In `./docs/roles-and-skills.md`, in the `## Job market snapshot` section, write:
+8. [ ] In `./docs/roles-and-skills.md`, in the `## Job market snapshot` section, write:
 
     ```markdown
-    ### Skills that appear in almost every posting
+    ### Skills that appear in several postings
     <!-- 3-10 skills -->
     - ...
     
-    ### Skills from postings that I haven't yet seen on roadmap.sh
-    <!-- 1-5 skills -->
+    ### Skills specific to a single posting
+    <!-- 2-5 skills -->
     - ...
-    
-    ### My key takeaway
-    ...
+
     ```
 
----
-
-### 3. Short personal reflection
-
-1. [ ] Create the issue `[Task] Personal reflection`.
-
+9. [ ] In `./docs/roles-and-skills.md`, in the `## Personal reflection.` section write 5–10 sentences reflecting on the following questions:
     > [!IMPORTANT]
-    > Write this section **without** an LLM. It’s about your own thoughts.
-
-2. [ ] In `./docs/reflection.md` write 5–10 sentences answering:
-    - [ ] Which role did you choose and why?
-    - [ ] What is one thing about the product’s architecture that was new to you?
-    - [ ] Which course topics (`Git`, `Linux`, `Docker`, `REST`, `CI/CD`, full-stack development, data processing) seem most relevant to your chosen role?
-    - [ ] What is one concrete skill you would like to improve this semester?
+    > Write this section **without** an LLM.
+    > This is your opportunity to think and arrive at useful conclusions.
+    - [ ] Which role did I choose and why?
+    - [ ] How my skillset compares to the market demands?
+    - [ ] What is one or two key skills I would like to improve this semester?
 
 ---
 
@@ -411,7 +389,7 @@ Tasks are non-optional unless marked as "optional".
 3. [ ] Try to implement a part of that agent.
 4. [ ] Test that agent in a different fork of this repo.
 
-### HW1. Take-home exercise
+### 6 (Homework) Learn about Git, Github, and Github Flow
 
 - [ ] Read this [tutorial](https://hackmd.io/@aabounegm/SWP-git) to learn about `Git`, `Github`, and `Git` workflows.
 
