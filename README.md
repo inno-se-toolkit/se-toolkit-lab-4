@@ -409,4 +409,5 @@ Follow the [procedure for each task](#procedure-for-each-task).
 ## Homework
 
 - [ ] Read this [tutorial](https://hackmd.io/@aabounegm/SWP-git) to learn about `Git`, `Github`, and `Git` workflows.
-- [ ] Learn about `GitHub Flow`.
+- [ ] Practice on [Learn Git Branching](https://learngitbranching.js.org/) (focus on merge/rebase and conflicts).
+- [ ] Read about [`GitHub flow`](https://docs.github.com/en/get-started/using-github/github-flow).
