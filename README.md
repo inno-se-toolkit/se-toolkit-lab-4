@@ -258,10 +258,10 @@ Follow the [procedure for each task](#procedure-for-each-task).
 
 5. [ ] Create `./docs/architecture.md` and add the following contents:
     1. [ ] In the `## Product choice` section:
-         - [ ] Provide:
-           - [ ] The product's name;
-           - [ ] A link to the product's website.
-           - [ ] A short description of the product (1–2 sentences).
+        - [ ] Provide:
+          - [ ] The product's name;
+          - [ ] A link to the product's website.
+          - [ ] A short description of the product (1–2 sentences).
     2. [ ] In the `## Main components` section:
         > [!NOTE]
         > According to the [`C4 model`](https://c4model.com/abstractions/component), a *component* is a grouping of related functionality encapsulated behind a well-defined interface.
@@ -270,16 +270,16 @@ Follow the [procedure for each task](#procedure-for-each-task).
         - [ ] Select at least 5 main components of the product from the component diagram.
         - [ ] For each selected component, explain in 1–2 sentences what it does.
     3. [ ] In the `## Data flow` section:
-          - [ ] Embed the product's `Sequence Diagram.svg`.
-          - [ ] Provide a link to the `PlantUML` code for that [sequence diagram](./Appendix.md#sequence-diagram).
-          - [ ] Describe what happens when a typical user action occurs (e.g. a user orders a taxi or sends a message).
-          - [ ] Mention which components talk to each other and what kind of data they exchange.
+        - [ ] Embed the product's `Sequence Diagram.svg`.
+        - [ ] Provide a link to the `PlantUML` code for that [sequence diagram](./Appendix.md#sequence-diagram).
+        - [ ] Describe what happens when a typical user action occurs (e.g. a user orders a taxi or sends a message).
+        - [ ] Mention which components talk to each other and what kind of data they exchange.
     4. [ ] In the `## Deployment` section:
-         - [ ] Embed the product's `Deployment Diagram.svg`.
-         - [ ] Provide a link to the `PlantUML` code for that [deployment diagram](./Appendix.md#deployment-diagram).
-         - [ ] Briefly describe where the components are deployed.
+        - [ ] Embed the product's `Deployment Diagram.svg`.
+        - [ ] Provide a link to the `PlantUML` code for that [deployment diagram](./Appendix.md#deployment-diagram).
+        - [ ] Briefly describe where the components are deployed.
     5. [ ] In the `## Knowledge Gaps` section:
-         - [ ] Write at least two things in your architecture that you are not fully sure about (guesses, questions, etc.).
+        - [ ] Write at least two things in your architecture that you are not fully sure about (guesses, questions, etc.).
 
 ---
 
