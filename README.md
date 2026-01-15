@@ -158,12 +158,14 @@ This and all other lab assignments will simulate real-life engineering practices
 
     Learn more about [`GitLens` features](https://help.gitkraken.com/gitlens/gitlens-features/).
   
-  </details>
-  
-### (Optional) Set up an agent
+   </details>
 
-1. Watch [tutorial](https://www.youtube.com/watch?v=G0uIVEt3aj4).
-2. Set up [`Kilo Code`](https://kilo.ai/install) or another coding agent with [`Qwen3 Coder`](https://github.com/QwenLM/Qwen3-Coder) or another free model, e.g., from [`OpenRouter`](https://openrouter.ai/collections/free-models).
+4. <details><summary> (Optional) Add <code>Kilo Code</code> extension and setup a free coding agent to help you with the lab (click to expand).</summary>
+
+    1. Watch [tutorial](https://www.youtube.com/watch?v=G0uIVEt3aj4).
+    2. Set up [`Kilo Code`](https://kilo.ai/install) or another coding agent with [`Qwen3 Coder`](https://github.com/QwenLM/Qwen3-Coder) or another free model, e.g., from [`OpenRouter`](https://openrouter.ai/collections/free-models).  
+
+  </details>
 
 ### Skim the lab description
 
@@ -177,10 +179,7 @@ By the end of the lab:
 
 - Make sure that each task that you have completed has a corresponding issue linked to a PR.
 - Close the issues for which all related activities are done.
-<!-- - TODO how does a TA check the work? -->
-- Explain your diagram, chosen role in a short conversation with the TA.
-
-<!-- TODO check out all completed steps -->
+- Show your progress to the TA as your proceed with the lab. TA will share a link to the table to mark the status of your tasks.
 
 ---
 
@@ -191,7 +190,8 @@ By the end of the lab:
 
 1. [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a `GitHub` issue in your forked repo using the `Lab Task` [issue form](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms).
 2. Create a new branch for the issue via [`GitHub`](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue) or via `git checkout -b <branch-name>`.
-3. Make [commits](https://smartprogramming.in/tutorials/git-and-github/git-commit) to that branch to complete the task.
+3. <details><summary> Make <a href="https://smartprogramming.in/tutorials/git-and-github/git-commit">commits</a> to that branch to complete the task (click to expand).</summary>
+
      - Commit messages must follow the [`Conventional Commits`](https://www.conventionalcommits.org/en/v1.0.0/) format.
      - Commit to the branch using one of these approaches:
        1. Using `VS Code` (see [docs](https://code.visualstudio.com/docs/sourcecontrol/staging-commits)): `Activity Bar` -> `Source Control` -> Click a file -> Select lines in the editor -> Right mouse click the selected lines -> Click `Stage Selected Ranges` -> Write a commit message -> Click `Commit`.
@@ -202,17 +202,19 @@ By the end of the lab:
           git commit -m "<message>"
           ```
 
+   </details>
+
 4. Push the branch to your forked repo:
 
     ```console
     git push -u origin <branch-name>
     ```
 
-5. Create a PR to the `main` branch via [`GitHub`](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) ([tutorial](https://www.geeksforgeeks.org/git/creating-a-pull-request-on-any-public-repository-from-github-using-vs-code/)) or via [`GitHub Pull Requests`](https://code.visualstudio.com/docs/sourcecontrol/github#_pull-requests).
+5. Create a PR to the `main` branch via [`GitHub`](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) ([tutorial](https://www.geeksforgeeks.org/git/creating-a-pull-request-on-any-public-repository-from-github-using-vs-code/)) or via the [`GitHub Pull Requests` extension](https://code.visualstudio.com/docs/sourcecontrol/github#_pull-requests).
 6. Write an appropriate PR description following the PR template.
 7. [Link the PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) to the issue, e.g. `Closes #<issue number>`.
 8. [Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review#requesting-reviews-from-collaborators-and-organization-members) a review of the PR from the collaborator.
-9. Address the comments, e.g., make fixes or ask to clarify the comment.
+9. Get the collaborator comments and address them, e.g., make fixes or ask to clarify the comment.
 10. Get the collaborator to approve the PR.
 11. Merge the PR to the `main` branch.
 12. Close the issue.
@@ -449,6 +451,6 @@ Tasks are non-optional unless marked as "optional".
 3. [ ] Try to implement a part of that agent.
 4. [ ] Test that agent in a different fork of this repo.
 
-### 6. (Optional) Take-home exercise
+### HW1. Take-home exercise
 
 - [ ] Read this [tutorial](https://hackmd.io/@aabounegm/SWP-git) to learn about `Git`, `Github`, and `Git` workflows.
