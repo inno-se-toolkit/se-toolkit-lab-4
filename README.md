@@ -279,7 +279,7 @@ Follow the [procedure for each task](#procedure-for-each-task).
         - [ ] Provide a link to the `PlantUML` code for that [deployment diagram](./Appendix.md#deployment-diagram).
         - [ ] Briefly describe where the components are deployed.
     5. [ ] In the `## Knowledge Gaps` section:
-        - [ ] Write at least two things in your architecture that you are not fully sure about (guesses, questions, etc.).
+        - [ ] Write at least two things in your architecture descriptions that you're not fully sure about (guesses, questions, etc.).
 
 ---
 
