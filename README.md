@@ -158,7 +158,7 @@ This and all other lab assignments will simulate real-life engineering practices
   
    </details>
 
-4. <details><summary> (Optional) Add <code>Kilo Code</code> extension and setup a free coding agent to help you with the lab (click to expand).</summary>
+4. <details><summary> (Optional) Add the <code>Kilo Code</code> extension and setup a free coding agent to help you with the lab (click to expand).</summary>
 
     1. Watch [tutorial](https://www.youtube.com/watch?v=G0uIVEt3aj4).
     2. Set up [`Kilo Code`](https://kilo.ai/install) or another coding agent with [`Qwen3 Coder`](https://github.com/QwenLM/Qwen3-Coder) or another free model, e.g., from [`OpenRouter`](https://openrouter.ai/collections/free-models).  
@@ -237,7 +237,7 @@ As a PR author, you must:
 
 You work **independently** on the tasks below in your forked repo.
 
-For each task, follow the [procedure above](#procedure-for-each-task).
+Follow the [procedure for each task](#procedure-for-each-task).
 
 ### 1. Pick a product and study its architecture
 
@@ -360,7 +360,7 @@ For each task, follow the [procedure above](#procedure-for-each-task).
 ## Optional tasks
 
 > [!NOTE]
-> Pick **one** deep dive track below. Still follow the [procedure for each task](#procedure-for-each-task).
+> Pick **one** optional task below. Still follow the [procedure for each task](#procedure-for-each-task).
 
 #### Track A — Merge conflicts & resolution
 
@@ -423,4 +423,4 @@ For each task, follow the [procedure above](#procedure-for-each-task).
 ## Homework
 
 - [ ] Read this [tutorial](https://hackmd.io/@aabounegm/SWP-git) to learn about `Git`, `Github`, and `Git` workflows.
-- [ ] Learn about `Github Flow`.
+- [ ] Learn about `GitHub Flow`.
