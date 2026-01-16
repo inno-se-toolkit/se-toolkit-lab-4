@@ -8,4 +8,7 @@
   "editor.formatOnSave": true,
   "chat.disableAIFeatures": true,
 
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  }
 }
