@@ -113,6 +113,7 @@ This and all other lab assignments will simulate real-life engineering practices
 5. Enable:
     - [`files.autoSave`](https://code.visualstudio.com/docs/editing/codebasics#_save-auto-save) - to not lose your work if VS Code closes;
     - [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting) - to keep your code formatted;
+    - Force saving and hence formatting by clicking `Ctrl + S` (or `Cmd + S` on `macOS`).
 
 ### Open the repository on your machine
 
