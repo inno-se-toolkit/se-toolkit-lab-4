@@ -5,5 +5,7 @@
   "plantuml.exportOutDir": "docs/diagrams/out",
   "git.autofetch": true,
   "files.autoSave": "onFocusChange",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "chat.disableAIFeatures": true,
+
 }
