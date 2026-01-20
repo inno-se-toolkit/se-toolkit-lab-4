@@ -2,94 +2,140 @@
 !theme plain
 autonumber
 
-title Yandex Go Sequence Diagram - Ride Booking Flow
+title Yandex Go Ride Booking Flow - Ride Booking Flow
 
-actor "User" as user
-participant "Mobile App" as app
-participant "API Gateway" as gateway
+' --- Participants Definition ---
 
-box "Core Services" #WhiteSmoke
-    participant "User Service" as user_svc
-    participant "Maps & Routing\nService" as maps_svc
-    participant "Pricing Service" as pricing_svc
-    participant "Dispatch Service" as dispatch_svc
-    participant "Payment Service" as payment_svc
-    participant "Notification\nService" as notif_svc
+box "Client Side" #White
+  actor "User" as User
+  participant "Mobile App" as App
 end box
 
-box "Data Layer" #LightCyan
-    participant "Cache (Redis)" as redis
-    database "Operational DB\n(YDB)" as ydb
-    queue "Message Broker\n(Kafka)" as kafka
+box "Connection Layer" #WhiteSmoke
+  participant "API Gateway" as Gateway
 end box
 
-box "External Services" #White
-    participant "Yandex Maps" as ext_maps
-    participant "Yandex Pay" as ext_pay
+box "Core Services" #E6F3FF
+  participant "User Service" as UserSvc
+  participant "Maps & Pricing" as LogicSvc
+  participant "Dispatch Service" as DispatchSvc
+  participant "Payment Service" as PaySvc
+  participant "Push Service" as PushSvc
 end box
 
-== 1. App Initialization & Auth ==
-user -> app: Open App
-app -> gateway: Validate Session
-gateway -> user_svc: Authenticate Token (gRPC)
-user_svc -> redis: Check Cached Session
-redis --> user_svc: Session Valid
-user_svc --> gateway: User Profile Data
-gateway --> app: Auth Success
+box "Data & Middleware" #FFFFE0
+  queue "Kafka Event Bus" as Kafka
+  database "State Cache" as Cache
+  database "Operational DB" as DB
+end box
 
-== 2. Price Estimation & Routing (Pre-Ride) ==
-user -> app: Enter Destination
-app -> gateway: Request Estimate (Coords A to B)
+box "External Ecosystem" #MistyRose
+  participant "Ext Maps API" as ExtMaps
+  participant "Ext Payment" as ExtPay
+end box
 
-par
-    gateway -> maps_svc: Calculate Route & ETA
-    maps_svc -> ext_maps: Get Traffic/Route Data
-    ext_maps --> maps_svc: Route Details
-    maps_svc --> gateway: Route Info
-else
-    gateway -> pricing_svc: Calculate Fare
-    pricing_svc -> ydb: Fetch Tariff Rules
-    pricing_svc -> redis: Check Surge/Demand
-    pricing_svc --> gateway: Estimated Price
+' --- Flow 1: Initialization ---
+
+group #F9F9F9 1. App Initialization & Auth
+    note right of App: Session validation occurs\non app launch.
+
+    User -> App: Open App
+    App -> Gateway: RPC: validateSession(token)
+    activate Gateway
+    
+    Gateway -> UserSvc: Authenticate Token
+    activate UserSvc
+    
+    UserSvc -> Cache: Lookup Session/Profile
+    Cache -->> UserSvc: Session Valid
+    
+    UserSvc -->> Gateway: User Profile Data
+    deactivate UserSvc
+    
+    Gateway -->> App: Auth Success
+    deactivate Gateway
 end
 
-gateway --> app: Show Route & Price Options (Economy, Comfort, etc.)
+' --- Flow 2: Estimation ---
 
-== 3. Ride Booking & Dispatch ==
-user -> app: Click "Order Ride"
-app -> gateway: Create Order Request
-gateway -> dispatch_svc: Initialize Ride
-dispatch_svc -> user_svc: Validate Payment Method
-user_svc --> dispatch_svc: Payment Method OK
+group #F0FFF0 2. Price Estimation (Pre-Ride)
+    User -> App: Enter Destination
+    App -> Gateway: RPC: estimateRide(coords_A, coords_B)
+    activate Gateway
 
-dispatch_svc -> ydb: Create Order Record (Status: SEARCHING)
-dispatch_svc -> redis: Find Nearby Drivers (Geospatial)
-redis --> dispatch_svc: Candidate Drivers
-
-loop Matching Logic
-    dispatch_svc -> dispatch_svc: Algorithm matches Driver
+    Gateway -> LogicSvc: Calculate Options
+    activate LogicSvc
+    
+    LogicSvc -> ExtMaps: Fetch Route & Traffic
+    ExtMaps -->> LogicSvc: Route Data
+    
+    LogicSvc -> DB: Fetch Tariff Rules
+    LogicSvc -> Cache: Check Demand Surge
+    
+    LogicSvc -->> Gateway: Options (Economy, Comfort)
+    deactivate LogicSvc
+    
+    Gateway -->> App: Show Route & Price
+    deactivate Gateway
 end
 
-dispatch_svc -> ydb: Update Order (Status: ASSIGNED)
-dispatch_svc -> kafka: Publish Event: <font color=blue>RideAssigned</font>
+' --- Flow 3: Booking & Dispatch ---
 
-kafka -> notif_svc: Consume: <font color=blue>RideAssigned</font>
-notif_svc -> app: Push Notification: "Driver Found (Plate 123)"
-app -> user: Show Driver on Map
+group #FFF0F0 3. Booking & Async Dispatch
+    App -> Gateway: RPC: createOrder(class, payment_id)
+    activate Gateway
+    
+    Gateway -> DispatchSvc: Initialize Ride
+    activate DispatchSvc
+    
+    DispatchSvc -> UserSvc: Validate Payment Method
+    UserSvc -->> DispatchSvc: OK
+    
+    DispatchSvc -> DB: Persist Order (Status: SEARCHING)
+    DispatchSvc -> Cache: Geospatial Search (Drivers)
+    Cache -->> DispatchSvc: Candidate Drivers
+    
+    note left of DispatchSvc: Matching algorithm runs\ninternally.
+    
+    DispatchSvc -> DB: Update Order (Status: ASSIGNED)
+    DispatchSvc -> Kafka: Publish Event (RideAssigned)
+    
+    DispatchSvc -->> Gateway: Order Created
+    deactivate DispatchSvc
+    Gateway -->> App: ACK (Searching UI)
+    deactivate Gateway
+    
+    ' -- Async Notification --
+    Kafka -->> PushSvc: Consume Event (RideAssigned)
+    activate PushSvc
+    PushSvc -> App: Push Notification ("Driver Found")
+    deactivate PushSvc
+    App -->> User: Update Map (Show Driver)
+end
 
-== 4. Ride Completion & Payment ==
-note right of dispatch_svc: Ride physically occurs... \nDriver marks "Complete" via Driver App (implied)
+' --- Flow 4: Completion & Payment ---
 
-dispatch_svc -> payment_svc: Initiate Payment (Ride Cost)
-payment_svc -> ydb: Fetch Order Details
-payment_svc -> ext_pay: Charge User Card
-ext_pay --> payment_svc: Transaction Success
+group #FFFFE0 4. Ride Completion (Payment)
+    note right of DispatchSvc: Triggered by Driver App\n(physically completing ride).
 
-payment_svc -> ydb: Update Payment Status (PAID)
-payment_svc -> kafka: Publish Event: <font color=green>PaymentSuccess</font>
-
-kafka -> notif_svc: Consume: <font color=green>PaymentSuccess</font>
-notif_svc -> app: Push Notification: "Receipt"
-app -> user: Display Receipt & Rate Driver
+    DispatchSvc -> PaySvc: Initiate Transaction
+    activate PaySvc
+    
+    PaySvc -> DB: Fetch Order Details
+    PaySvc -> ExtPay: Charge Card
+    ExtPay -->> PaySvc: Transaction Success
+    
+    PaySvc -> DB: Update Status (PAID)
+    PaySvc -> Kafka: Publish Event (PaymentSuccess)
+    deactivate PaySvc
+    
+    Kafka -->> PushSvc: Consume Event (PaymentSuccess)
+    activate PushSvc
+    
+    PushSvc -> App: Push Notification ("Receipt Available")
+    deactivate PushSvc
+    
+    App -> User: Display Receipt & Rate
+end
 
 @enduml
