@@ -249,15 +249,19 @@ Follow the [procedure for each task](#procedure-for-each-task).
 
 1. [ ] Create an issue `[Task] Product & architecture description`.
 2. [ ] Learn how to [embed images](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images) into your `Markdown` files.
-3. [ ] Pick one product from this list or propose your own:
-    <!-- TODO update the project list and provide diagrams for each project -->
+3. [ ] Pick one product from this list:
+
     - Yandex Taxi
     - Telegram
     - Wildberries.ru
 
+    Alternatively, choose another full-stack product with at least a million users. In that case, you'll have to [visualize the architecture](./Appendix.md#visualize-the-architecture) on your own.
+
 4. [ ] Find the directory with the product's architecture diagrams in two formats:
-    - `PlantUML` code in `./docs/diagrams/src/<product-name>` (see [visualizing the architecture](./Appendix.md#visualize-the-architecture)).
+    - `PlantUML` code in `./docs/diagrams/src/<product-name>`.
     - Rendered architecture diagrams in `./docs/diagrams/out/<product-name>`.
+
+    If you chose another project, provide component, deployment, sequence diagrams in two formats in corresponding directories.
 
 5. [ ] Create `./docs/architecture.md` and add the following contents:
     1. [ ] In the `## Product choice` section:
