@@ -38,6 +38,7 @@ This and all other lab assignments will simulate real-life engineering practices
 - [`./docs/diagrams`](./docs/diagrams) - diagrams of the product's architecture.
 - [`./.vscode/settings.json`](./.vscode/settings.json) - `VS Code` settings.
 - [`./.vscode/extensions.json`](./.vscode/extensions.json) - recommended `VS Code` extensions.
+- [`./Appendix.md`](./Appendix.md) - Additional info.
 
 ---
 
