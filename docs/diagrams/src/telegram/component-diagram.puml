@@ -25,7 +25,7 @@ package "Telegram Ecosystem" {
   package "Data Layer" {
     [Sharded Chat DB] as sharded_db
     [Distributed File System (DFS)] as media_storage
-    [State Cache (RamCloud/Redis)] as cache
+    [State Cache (Redis)] as cache
   }
   
   queue "Event Bus (Kafka/Internal)" as broker

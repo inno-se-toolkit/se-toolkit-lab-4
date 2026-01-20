@@ -71,7 +71,7 @@ cloud "Telegram Global Infrastructure (Primary DC)" {
   }
 
   node "In-Memory Cluster" as CacheNode {
-    component [State Cache\n(RamCloud/Redis)] as cache
+    component [State Cache\n(Redis)] as cache
   }
 
   node "Storage Cluster" as DBServer {
