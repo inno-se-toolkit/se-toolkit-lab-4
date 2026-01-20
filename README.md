@@ -251,7 +251,7 @@ Follow the [procedure for each task](#procedure-for-each-task).
 2. [ ] Learn how to [embed images](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images) into your `Markdown` files.
 3. [ ] Pick one product from this list:
 
-    - Yandex Taxi
+    - Yandex Go
     - Telegram
     - Wildberries.ru
 
