@@ -44,8 +44,6 @@ This and all other lab assignments will simulate real-life engineering practices
 
 ## Lab setup
 
-<!-- TODO list what you'll get as a result of the setup -->
-
 ### Set up a fork
 
 1. Create a `GitHub` account.

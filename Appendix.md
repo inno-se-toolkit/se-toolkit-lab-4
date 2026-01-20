@@ -36,8 +36,6 @@ Learn more about the deployment diagrams on [wiki](https://en.wikipedia.org/wiki
 
 ## Visualize the architecture
 
-<!-- TODO update wording -->
-
 > [!NOTE]
 > Visualizing the architecture is not the same as designing the architecture.
 >
