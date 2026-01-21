@@ -51,7 +51,7 @@
     "ms-vsliveshare.vsliveshare",
 
     // Format files.
-    "prettier.prettier-vscode",
+    "esbenp.prettier-vscode",
 
     // Edit Markdown tables.
     "takumii.markdowntable"
