@@ -5,6 +5,35 @@ To kickstart the course, you will explore two things:
 > 1) How real software products are structured;
 > 2) What kind of engineers build and operate them.
 >
+
+## Table of contents
+
+- [Lab 01 – Products, Architecture \& Roles](#lab-01--products-architecture--roles)
+  - [Table of contents](#table-of-contents)
+  - [Learning Outcomes](#learning-outcomes)
+  - [Tasks overview](#tasks-overview)
+  - [Repo structure](#repo-structure)
+  - [Lab setup](#lab-setup)
+    - [Set up a fork](#set-up-a-fork)
+    - [Add a classmate as a collaborator](#add-a-classmate-as-a-collaborator)
+    - [Set up your local tools](#set-up-your-local-tools)
+    - [Open the repository on your machine](#open-the-repository-on-your-machine)
+    - [Set up `VS Code` extensions](#set-up-vs-code-extensions)
+    - [Skim the lab description](#skim-the-lab-description)
+  - [Submission checklist](#submission-checklist)
+  - [Procedure for each task](#procedure-for-each-task)
+  - [PR reviews](#pr-reviews)
+  - [Required tasks](#required-tasks)
+    - [1. Pick a product and study its architecture](#1-pick-a-product-and-study-its-architecture)
+    - [2. Tech roles involved in the selected product](#2-tech-roles-involved-in-the-selected-product)
+    - [3. My tech skills and the market: roadmap.sh and job postings](#3-my-tech-skills-and-the-market-roadmapsh-and-job-postings)
+  - [Optional tasks](#optional-tasks)
+    - [1. Merge conflicts \& resolution](#1-merge-conflicts--resolution)
+    - [2. Add a CI check (`GitHub Actions`)](#2-add-a-ci-check-github-actions)
+    - [3. Tag and release notes (shipping mindset)](#3-tag-and-release-notes-shipping-mindset)
+    - [4. Skill development strategy (from job market → deep learning → planning)](#4-skill-development-strategy-from-job-market--deep-learning--planning)
+  - [Homework](#homework)
+
 ## Learning Outcomes
 
 By the end of this lab you should be able to:
