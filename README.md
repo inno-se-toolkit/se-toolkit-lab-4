@@ -127,7 +127,7 @@ This and all other lab assignments will simulate real-life engineering practices
 
 3. Install [`VS Code`](https://code.visualstudio.com/). This is our code editor of choice that we'll use in this course.
 
-4. Skim these docs:
+4. <details> <summary> Skim <code>VS Code</code> docs. </summary>
 
     - [`Basic Layout`](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout) - Basic UI elements in `VS Code`.
     - `Activity Bar`, `Status Bar` (see [`Basic Layout`](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)) - Menus of extensions;
@@ -137,6 +137,8 @@ This and all other lab assignments will simulate real-life engineering practices
     - [`Extension Marketplace`](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace) - How to install extensions;
     - [`Custom Layout`](https://code.visualstudio.com/docs/configure/custom-layout) - E.g., move the `Primary Side Bar` to the right so that it doesn't move your code whenever it opens;
     - [Keyboard shortcuts](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-reference).
+  
+   </details>
 
 5. Enable:
     - [`files.autoSave`](https://code.visualstudio.com/docs/editing/codebasics#_save-auto-save) - to not lose your work if VS Code closes;
