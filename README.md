@@ -255,7 +255,8 @@ By the end of the lab:
 As a PR reviewer, you must:
 
 - Review the assigned PR.
-- Leave at least 2 meaningful comments highlighting [particular lines](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request).
+- Leave at least 2 meaningful comments highlighting [particular lines](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request). It's enough to select line(s), write a comment and click `Comment`.
+- Click `Submit review` if you clicked `Start a review` before.
 - Approve the PR if you're satisfied with the PR.
 
 As a PR author, you must:
