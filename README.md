@@ -190,10 +190,10 @@ This and all other lab assignments will simulate real-life engineering practices
   
    </details>
 
-4. <details><summary> (Optional) Add the <code>Kilo Code</code> extension and setup a free coding agent to help you with the lab (click to expand).</summary>
+4. <details><summary> (Optional) Set up a free coding agent to help you with the lab (click to expand).</summary>
 
-    1. Watch [tutorial](https://www.youtube.com/watch?v=G0uIVEt3aj4).
-    2. Set up [`Kilo Code`](https://kilo.ai/install) or another coding agent with [`Qwen3 Coder`](https://github.com/QwenLM/Qwen3-Coder) or another free model, e.g., from [`OpenRouter`](https://openrouter.ai/collections/free-models).  
+    1. Watch the [tutorial](https://youtube.com/shorts/SQ-bwPDIrVY).
+    2. Set up [`Roo Code`](https://roocode.com/) or another coding agent with [`Qwen3 Coder`](https://github.com/QwenLM/Qwen3-Coder) or another free model, e.g., from [`OpenRouter`](https://openrouter.ai/collections/free-models).
 
   </details>
 
@@ -255,7 +255,8 @@ By the end of the lab:
 As a PR reviewer, you must:
 
 - Review the assigned PR.
-- Leave at least 2 meaningful comments highlighting [particular lines](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request).
+- Leave at least 2 meaningful comments highlighting [particular lines](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request). It's enough to select line(s), write a comment and click `Comment`.
+- Click `Submit review` if you clicked `Start a review` before.
 - Approve the PR if you're satisfied with the PR.
 
 As a PR author, you must:
