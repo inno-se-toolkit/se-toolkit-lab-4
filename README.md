@@ -193,7 +193,7 @@ This and all other lab assignments will simulate real-life engineering practices
 4. <details><summary> (Optional) Set up a free coding agent to help you with the lab (click to expand).</summary>
 
     1. Watch the [tutorial](https://youtube.com/shorts/SQ-bwPDIrVY).
-    2. Set up [`Roo Code`](https://kilo.ai/install) or another coding agent with [`Qwen3 Coder`](https://github.com/QwenLM/Qwen3-Coder) or another free model, e.g., from [`OpenRouter`](https://openrouter.ai/collections/free-models).
+    2. Set up [`Roo Code`](https://roocode.com/) or another coding agent with [`Qwen3 Coder`](https://github.com/QwenLM/Qwen3-Coder) or another free model, e.g., from [`OpenRouter`](https://openrouter.ai/collections/free-models).
 
   </details>
 
