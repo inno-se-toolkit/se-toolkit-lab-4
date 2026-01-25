@@ -141,11 +141,13 @@ This and all other lab assignments will simulate real-life engineering practices
 
 3. Install [`VS Code`](https://code.visualstudio.com/). This is our code editor of choice that we'll use in this course.
 
-4. <details> <summary> Skim <code>VS Code</code> docs. </summary>
+4. <details> <summary> Skim <code>VS Code</code> docs (click to open). </summary>
 
     - [`Basic Layout`](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout) - Basic UI elements in `VS Code`.
     - `Activity Bar`, `Status Bar` (see [`Basic Layout`](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)) - Menus of extensions;
-    - [`Command Palette`](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) - How to use commands provided by extensions;
+    - `Command Palette` ([docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette), [docs 2](https://code.visualstudio.com/docs/getstarted/getting-started#_access-commands-with-the-command-palette)) - How to use editor commands;
+
+      To run a command, open `Command Palette`, type the command, select an appropriate command, press `Enter`.
     - [`Terminal`](https://code.visualstudio.com/docs/terminal/getting-started) - How to run terminal commands inside `VS Code`;
     - [`Source Control`](https://code.visualstudio.com/docs/sourcecontrol/overview) - How to use `Git` via `VS Code` UI;
     - [`Extension Marketplace`](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace) - How to install extensions;
