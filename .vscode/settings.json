@@ -6,8 +6,6 @@
   "git.autofetch": true,
   "files.autoSave": "onFocusChange",
   "editor.formatOnSave": true,
-  "chat.disableAIFeatures": true,
-
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   }
