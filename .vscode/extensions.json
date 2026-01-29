@@ -24,8 +24,8 @@
     // Work with Git.
     "eamodio.gitlens",
 
-    // AI coding assistant.
-    "rooveterinaryinc.roo-cline",
+    // Coding agent.
+    "qwenlm.qwen-code-vscode-ide-companion",
 
     // Work with PlantUML diagrams.
     "jebbs.plantuml",
