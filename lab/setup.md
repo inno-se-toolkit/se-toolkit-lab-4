@@ -1,5 +1,10 @@
 # Lab setup
 
+## Find a partner
+
+1. Find a classmate to be your partner for this lab.
+2. Sit together.
+
 ## Set up a fork
 
 1. Create a `GitHub` account.
