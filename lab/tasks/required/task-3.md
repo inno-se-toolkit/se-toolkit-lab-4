@@ -74,7 +74,3 @@ In `docs/roles-and-skills.md`, in the `## Personal reflection.` section write 5â
 - Which role did I choose and why?
 - How my skillset compares to the market demands?
 - Which one or two key skills for this role would I like to develop this semester and why?
-- What did I learn in this lab?
-- If you used an AI tool to work on this lab:
-  - What did the tool do well?
-  - What did it do bad?
