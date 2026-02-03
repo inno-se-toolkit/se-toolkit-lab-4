@@ -115,8 +115,9 @@ You can write [`Mermaid`](https://mermaid.js.org/) code in `Markdown` files in c
 
 ### Visualize the architecture - other tools
 
-Other tools that implement the "diagrams as code" approach are:
+Other tools that implement the "diagrams as code" approach include:
 
 - [`Structurizr`](https://structurizr.com/)
 - [`D2`](https://d2lang.com/)
-- [`LikeC4`](https://github.com/likec4/likec4) etc.
+- [`LikeC4`](https://github.com/likec4/likec4)
+- [`IcePanel`](https://icepanel.io/)
