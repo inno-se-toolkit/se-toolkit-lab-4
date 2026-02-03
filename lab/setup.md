@@ -130,4 +130,6 @@
   
    </details>
 
-4. (Optional) Set up a free coding agent to help you with the lab. See [Coding agents](./appendix.md#coding-agents).
+## Set up a coding agent
+
+(Optional) Set up a free coding agent to help you with the lab. See [Coding agents](./appendix.md#coding-agents).
