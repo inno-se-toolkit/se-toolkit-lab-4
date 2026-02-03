@@ -10,7 +10,7 @@
 
 ### 1. Create an issue
 
-Title: `[Task 1] Product & architecture description`
+Title: `[Task] Product & architecture description`
 
 ### 2. Choose a product
 
