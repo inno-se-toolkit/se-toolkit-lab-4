@@ -1,9 +1,7 @@
 # Visualize the architecture
 
-> [!NOTE]
-> Visualizing the architecture is not the same as designing the architecture.
->
-> To design the architecture of a system, you need to consider the architectural drivers. This approach is outlined in the optional [Task 4](./README.md#4-optional-update-architecture).
+> [!WARNING]
+> System architecture diagrams represent the system architecture but they are not the [system architecture](https://github.com/inno-se/the-guide?tab=readme-ov-file#architecture).
 
 ## `Draw.io`
 
