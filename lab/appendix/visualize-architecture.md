@@ -5,7 +5,7 @@
 
 ## `Draw.io`
 
-You can *prototype* diagrams in `./docs/diagrams/prototype` via the [`hediet.vscode-drawio`](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) extension ([example](./docs/diagrams/prototype/example.drawio.svg)).
+You can *prototype* diagrams in `./docs/diagrams/prototype` via the [`hediet.vscode-drawio`](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) extension ([example](../../docs/diagrams/prototype/example.drawio.svg)).
 
 However, it's not a good idea to version control images because you can't conveniently visualize their diffs and therefore can't track changes well.
 
@@ -26,9 +26,9 @@ If you want to preview the `PlantUML` diagrams in `VS Code`, follow these steps:
 
     The extension should connect to the `PlantUML` server and render the diagram.
 
-    The `48080` port is already set in [`./.vscode/settings.json`](./.vscode/settings.json).
+    The `48080` port is already set in [`../../.vscode/settings.json`](../../.vscode/settings.json).
 
-- [ ] Write the `PlantUML` code in `./docs/diagrams/src/` and render the diagrams to `SVG` in `./docs/diagrams/out/` using the `jebbs.plantuml` extension. These directories are already set in [`./.vscode/settings.json`](./.vscode/settings.json)..
+- [ ] Write the `PlantUML` code in `./docs/diagrams/src/` and render the diagrams to `SVG` in `./docs/diagrams/out/` using the `jebbs.plantuml` extension. These directories are already set in [`../../.vscode/settings.json`](../../.vscode/settings.json).
 - [ ] To render diagrams to SVG, open the [`Command Palette`](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette), write `PlantUML: Export Workspace Diagrams`, and choose `svg`.
 - [ ] [Embed](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) the rendered images into your `Markdown` file.
 

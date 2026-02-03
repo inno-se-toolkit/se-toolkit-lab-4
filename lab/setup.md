@@ -103,7 +103,7 @@
 
 ## Set up `VS Code` extensions
 
-1. Install the recommended `VS Code` extensions (listed in [`./.vscode/extensions.json`](./.vscode/extensions.json)) when `VS Code` suggests to install them.
+1. Install the recommended `VS Code` extensions (listed in [`../.vscode/extensions.json`](../.vscode/extensions.json)) when `VS Code` suggests to install them.
 2. Sign in to accounts.
     In the `Activity Bar`:
     1. Click `Accounts`
