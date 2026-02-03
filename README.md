@@ -1,86 +1,60 @@
 # Lab 01 – Products, Architecture & Roles
 
 To kickstart the course, you will explore two things:
->
-> 1) How real software products are structured;
-> 2) What kind of engineers build and operate them.
->
 
-## Quick Start
-
-1. **Setup**: Fork repo → Clone locally → Open in VS Code
-2. **For each task**: Issue → Branch → Commits → PR → Review → Merge
-3. **Start with**: [Task 1: Pick a product](./lab/tasks/required/task-1.md)
-
-### Time estimates
-
-| Section                                  | Time             |
-| ---------------------------------------- | ---------------- |
-| [Setup](./lab/setup.md)                  | ~30 min          |
-| [Task 1](./lab/tasks/required/task-1.md) | ~30–40 min       |
-| [Task 2](./lab/tasks/required/task-2.md) | ~20–30 min       |
-| [Task 3](./lab/tasks/required/task-3.md) | ~30–40 min       |
-| **Total**                                | **~2–2.5 hours** |
-
----
+1. How real software products may be structured;
+2. What kind of engineers may build and operate them.
 
 ## Table of contents
 
-### Overview
-
-- [Learning Outcomes](#learning-outcomes)
+- [Table of contents](#table-of-contents)
+- [Learning outcomes](#learning-outcomes)
 - [Tasks overview](#tasks-overview)
-- [Repo structure](#repo-structure)
-
-### Before you start
-
-- [Lab setup](./lab/setup.md)
 - [Submission checklist](#submission-checklist)
-- [Procedure for each task](./lab/tasks/required/procedure.md)
-- [PR reviews](./lab/tasks/required/procedure.md#pr-reviews)
-
-### Tasks
-
-- [Lab 01 – Products, Architecture \& Roles](#lab-01--products-architecture--roles)
-  - [Quick Start](#quick-start)
-    - [Time estimates](#time-estimates)
-  - [Table of contents](#table-of-contents)
-    - [Overview](#overview)
-    - [Before you start](#before-you-start)
-    - [Tasks](#tasks)
-  - [Learning Outcomes](#learning-outcomes)
-  - [Tasks overview](#tasks-overview)
-  - [Repo structure](#repo-structure)
-  - [Submission checklist](#submission-checklist)
+- [Repo structure](#repo-structure)
+- [Tasks](#tasks)
+- [Time estimates](#time-estimates)
+  - [Lab setup](#lab-setup)
   - [Required tasks](#required-tasks)
   - [Optional tasks](#optional-tasks)
   - [Homework](#homework)
 
-## Learning Outcomes
+## Learning outcomes
 
-By the end of this lab you should be able to:
+By the end of this lab, you should be able to:
 
-- Use GitHub to structure your work and collaborate with peers (issues, branches, pull requests, and reviews).
+- Use `GitHub` to structure your work and collaborate with peers (issues, branches, pull requests, and reviews).
 - Explain the basic architecture of a real-world digital product in terms of components, data flow, deployment, and tech roles.
 - Reflect on your career in tech, examine your current skillset, and plan for the future.
 
 ## Tasks overview
 
-To complete this lab, you will need to:
+To complete this lab, you'll need to:
 
-- Set up your `GitHub` account and this lab's repo.
+- Set up your `GitHub` account and fork this repo.
 - Pick an existing digital product.
-- Sketch its architecture: components, data flow, deployment.
+- Study its architecture: components, data flow, deployment.
 - Map components to tech roles and skills using real job postings and `roadmap.sh`.
 - Practice using GitHub issues, branches and pull requests (PRs) to organize your work in a repository (repo) and get feedback from peers.
 
-This and all other lab assignments will simulate real-life engineering practices:
+This and all other lab assignments will simulate some of the real-life engineering practices:
 
 - Follow processes;
 - Communicate via issues/PRs;
 - Keep the work reviewable;
-- Write acceptance criteria;
+- Come up with acceptance criteria;
 - Write clear commit messages.
+
+## Submission checklist
+
+As your proceed with the lab:
+
+- Show your progress to the TA. TA will mark your progress.
+
+By the end of the lab:
+
+- Make sure that each task that you have completed has a corresponding issue linked to a PR.
+- Close the issues for which all related activities are done.
 
 ## Repo structure
 
@@ -91,48 +65,41 @@ This and all other lab assignments will simulate real-life engineering practices
 - [`.vscode/extensions.json`](./.vscode/extensions.json) - recommended `VS Code` extensions.
 - [`lab/appendix`](./lab/appendix) - Additional info.
 
----
+## Tasks
 
-## Submission checklist
+## Time estimates
 
-By the end of the lab:
+| Task      | Time             |
+| --------- | ---------------- |
+| Lab setup | ~30 min          |
+| Task 1    | ~30–40 min       |
+| Task 2    | ~30–40 min       |
+| Task 3    | ~30–40 min       |
+|           |                  |
+| **Total** | **~2–2.5 hours** |
 
-- Make sure that each task that you have completed has a corresponding issue linked to a PR.
-- Close the issues for which all related activities are done.
-- Show your progress to the TA as your proceed with the lab. TA will share a link to the table to mark the status of your tasks.
+### Lab setup
 
----
+First complete the [lab setup](./lab/setup.md).
 
-## Required tasks
+### Required tasks
 
-> [!TIP]
-> **Start here** after completing the [lab setup](./lab/setup.md).
-
-You work **independently** on the tasks below in your forked repo.
-
-Follow the [procedure for each task](./lab/tasks/required/procedure.md).
-
-Tasks:
+Follow the [procedure for each task](./lab/tasks/required/procedure.md) and complete all these tasks:
 
 1. [Choose a product and study its architecture](./lab/tasks/required/task-1.md#choose-a-product-and-study-its-architecture)
 2. [Study tech roles involved in the chosen product](./lab/tasks/required/task-2.md#study-tech-roles-involved-in-the-chosen-product)
 3. [Compare your tech skills with the market needs](./lab/tasks/required/task-3.md#compare-your-tech-skills-with-the-market-needs)
 
----
+### Optional tasks
 
-## Optional tasks
-
-> [!NOTE]
-> Pick **one** optional task below. Still follow the [procedure for each task](./lab/tasks/required/procedure.md).
-
-Tasks:
+Complete one or more tasks below:
 
 1. [Resolve a merge conflict](./lab/tasks/optional/task-1.md#resolve-a-merge-conflict).
 2. [Add a CI check](./lab/tasks/optional/task-2.md#add-a-ci-check)
 3. [Create a release](./lab/tasks/optional/task-3.md#create-a-release)
 4. [Plan skill development](./lab/tasks/optional/task-4.md#plan-skill-development)
 
-## Homework
+### Homework
 
 - [ ] Read this [tutorial](https://hackmd.io/@aabounegm/SWP-git) to learn about `Git`, `Github`, and `Git` workflows.
 - [ ] Practice on [Learn Git Branching](https://learngitbranching.js.org/) (focus on merge/rebase and conflicts).
