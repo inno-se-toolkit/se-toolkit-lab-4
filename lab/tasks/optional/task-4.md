@@ -1,6 +1,6 @@
 # Plan skill development
 
-1. Create the issue `[Task] Skill development plan`.
+1. Create the issue `[Task] Plan skill development`.
 2. Choose one skill that you decided to improve this semester in the required [Task 3](../required/task-3.md).
 3. Create `./docs/skill-development-plan.md` with the sections:
     - `## About the skill` (3–5 sentences):

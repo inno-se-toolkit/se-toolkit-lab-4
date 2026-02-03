@@ -1,6 +1,6 @@
 # Create a release
 
-1. Create the issue `[Task] Tag and release`.
+1. Create the issue `[Task] Create a release`.
 2. Read [Managing releases in a repository](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository).
 3. Skim [Semantic Versioning 2.0.0](https://semver.org/).
 4. Create a tag `v0.1.0` for the current state of your lab repo.

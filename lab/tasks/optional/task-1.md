@@ -1,6 +1,6 @@
 # Resolve a merge conflict
 
-1. Create the issue `[Task] Deep dive: Merge conflicts`.
+1. Create the issue `[Task] Resolve a merge conflict`.
 2. Complete a short learning resource on conflicts:
     - [Learn Git Branching](https://learngitbranching.js.org/) (focus on merge/rebase and conflicts).
 3. Coordinate with your collaborator:
