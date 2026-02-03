@@ -37,7 +37,7 @@ To kickstart the course, you will explore two things:
 - [Lab setup](./lab/setup.md)
 - [Submission checklist](#submission-checklist)
 - [Procedure for each task](./lab/tasks/required/procedure.md)
-- [PR reviews](#pr-reviews)
+- [PR reviews](./lab/tasks/required/procedure.md#pr-reviews)
 
 **Tasks**
 
