@@ -1,7 +1,7 @@
 # Resolve a merge conflict
 
 1. Create the issue `[Task] Resolve a merge conflict`.
-2. Complete the first three tasks in `Introduction Sequence` on [Learn Git Branching](https://learngitbranching.js.org/).
+2. (Optional) Complete the first three tasks in `Introduction Sequence` on [Learn Git Branching](https://learngitbranching.js.org/).
 3. Open your cloned fork in `VS Code`.
 4. Switch to the `main` branch.
 
