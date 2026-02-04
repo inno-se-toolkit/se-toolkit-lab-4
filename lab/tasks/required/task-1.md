@@ -79,17 +79,21 @@ Provide:
 2. Provide a link to the `PlantUML` code for that [deployment diagram](../../appendix/architectural-views.md#deployment-diagram).
 3. Briefly describe where the components are deployed.
 
-#### `## Assumptions and Open Questions`
+#### `## Assumptions`
 
-1. List at least two assumptions you made while describing the architecture.
+List two or more assumptions you made while describing the architecture. Examples:
 
-    Examples:
+- Yandex Go: *"I assume the pricing service handles surge pricing calculations based on demand and supply in real-time."*
+- Telegram: *"I assume the cloud storage system implements deduplication to optimize storage costs for shared media files."*
+- Wildberries: *"I assume the Logistics & Routing service integrates with multiple delivery partners to optimize shipping costs and delivery times"*
 
-    - Yandex Go: *"I assumed the rider app talks directly to the driver app, but there's probably a server in between."*
-    - Telegram: *"I'm not sure if media files are stored on the same servers as text messages."*
-    - Wildberries: *"I don't know if payments are processed by Wildberries or by an external payment service."*
+#### `## Open questions`
 
-2. List at least two questions you couldn't answer from public information.
+List two or more questions that you couldn't answer based on the openly available information. Examples:
+
+- Yandex Go: *"How does the actual load balancing mechanism work between the microservices in production?"*
+- Telegram: *"How does the data flow look like in secret chats?"*
+- Wildberries: *"What specific caching strategies are used to handle high traffic during sales events?"*
 
 ## Acceptance criteria
 
