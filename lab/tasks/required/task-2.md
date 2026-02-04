@@ -1,6 +1,6 @@
 # Study tech roles involved in the chosen product
 
-**Time:** ~20-30 min
+**Time:** ~30-40 min
 
 **Purpose:** Understand the different tech roles involved in developing and maintaining a software product and their responsibilities.
 
