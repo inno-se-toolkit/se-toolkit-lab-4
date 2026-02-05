@@ -38,6 +38,8 @@ git config --global user.email "your@email"
    - **Terminal**: Press `` Ctrl+` `` (`` Cmd+` `` on Mac) — you'll use this to run git commands
    - **Source Control**: Press `Ctrl+Shift+G` (`Cmd+Shift+G` on Mac) — you'll use this to commit changes
 
+[Learn more](./lab/appendix/vs-code.md) about `VS Code`.
+
 ## Open the repository on your computer
 
 1. On your computer, create a directory `software-engineering-toolkit`.
@@ -65,7 +67,7 @@ git config --global user.email "your@email"
 
 ---
 
-## Optional enhancements
+## Optional enhancements to make your life easier
 
 ### Repo: Create a label for tasks
 
@@ -91,16 +93,6 @@ In the repo -> `Settings` -> `Code and automation` -> `Add branch ruleset`:
       - `Require conversation resolution before merging`
       - `Allowed merge methods`: `Merge`.
    - [ ] Block force pushes
-
-### Git: Learn more
-
-Short videos to build your mental model of how Git works:
-
-- [Git Explained in 100 Seconds](https://www.youtube.com/watch?v=hwP7WQkmECE)
-- [What is Git? Explained in 2 Minutes!](https://www.youtube.com/watch?v=2ReR1YJrNOM)
-- [A brief introduction to Git for beginners](https://www.youtube.com/watch?v=r8jQ9hVA2qs)
-- [How Git Works: Explained in 4 Minutes](https://www.youtube.com/watch?v=e9lnsKot_SQ)
-- [Git MERGE vs REBASE: Everything You Need to Know](https://www.youtube.com/watch?v=0chZFIZLR_0)
 
 ### VS Code: Check `GitLens`
 
