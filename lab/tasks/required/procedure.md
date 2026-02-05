@@ -11,21 +11,28 @@
 
 1. [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a `GitHub` issue in your forked repo using the `Lab Task` [issue form](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms).
 2. Create a new branch for the issue via [`GitHub`](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue) or via `git checkout -b <branch-name>`.
-3. <details><summary> Make commits to that branch to complete the task (click to expand).</summary>
+3. Make commits to that branch to complete the task. You can use either terminal or VS Code.
 
-     - Read a [tutorial](https://smartprogramming.in/tutorials/git-and-github/git-commit) on `git commit`.
-     - Commit messages should (not must) follow the [`Conventional Commits`](https://www.conventionalcommits.org/en/v1.0.0/) format.
-     - Commit to the branch using one of these approaches:
-       1. Using a terminal (adds all changes in specified files to the [staging area](https://smartprogramming.in/tutorials/git-and-github/git-add-files-to-staging)):
+   **Commit message format:** `type: short description`
 
-          ```console
-          git add <file 1> <file 2> ... <file n>
-          git commit -m "<message>"
-          ```
+   Common types:
+   - `docs:` — documentation changes (most common in this lab)
+   - `feat:` — new functionality
+   - `fix:` — bug fixes
 
-       2. Using `VS Code` (see [docs](https://code.visualstudio.com/docs/sourcecontrol/staging-commits)): `Activity Bar` -> `Source Control` -> `Changes` -> Click a file -> Select changed lines in the editor (red-green) -> Right mouse click the selected lines -> Click `Stage Selected Ranges` -> Write a commit message -> Click `Commit`.
+   **Using terminal:**
 
-   </details>
+   ```console
+   git add <file>                                  # e.g., git add docs/architecture.md
+   git commit -m "<type>: <short description>"    # e.g., git commit -m "docs: add architecture diagram"
+   ```
+
+   **Using VS Code:**
+
+   1. Open `Source Control` (`Ctrl+Shift+G`)
+   2. Click `+` next to changed files to stage them
+   3. Type commit message, e.g., `docs: add architecture diagram`
+   4. Click `Commit`
 
 4. Push the branch to your forked repo:
 
@@ -45,14 +52,13 @@
 
 ## PR reviews
 
-As a PR reviewer, you must:
+As a PR reviewer:
 
-- Review the assigned PR.
-- Leave at least 2 meaningful comments highlighting [particular lines](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request). It's enough to select line(s), write a comment and click `Comment`.
-- Click `Submit review` if you clicked `Start a review` before.
-- Approve the PR if you're satisfied with the PR.
+1. Check the task's **Reviewer checklist**
+2. Leave comments on [particular lines](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request) if something is missing or unclear
+3. Approve the PR if all items are checked
 
-As a PR author, you must:
+As a PR author:
 
-- Reply to comments in a meaningful way, e.g., write “Fixed in d0d5aeb” (`d0d5aeb` being the id of commit where you addressed the comment), ask to clarify the comment, or explain why you disagree.
-- Make necessary changes based on the review.
+- Address reviewer comments (fix issues or explain your reasoning)
+- Reply to comments, e.g., "Fixed in d0d5aeb"
