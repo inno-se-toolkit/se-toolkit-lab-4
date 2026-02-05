@@ -55,8 +55,8 @@
 As a PR reviewer:
 
 1. Check the task's **Reviewer checklist**
-2. Leave comments on [particular lines](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request) if something is missing or unclear
-3. Approve the PR if all items are checked
+2. Leave at least one [comment](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request) — point out issues or confirm that items look good
+3. Approve the PR if all checklist items are met
 
 As a PR author:
 
