@@ -1,10 +1,10 @@
 # Resolve a merge conflict
 
-**Time:** ~20-30 min
+**Time:** ~15-20 min
 
-**Purpose:** Learn how to handle merge conflicts in Git, a common challenge in collaborative software development.
+**Purpose:** Learn how to resolve merge conflicts — a common situation when working with Git.
 
-**Context:** In team environments, multiple developers often work on the same codebase simultaneously, leading to situations where changes conflict with each other. Understanding how to resolve these conflicts is essential for maintaining a healthy codebase.
+**Context:** When multiple changes affect the same lines of code, Git cannot automatically merge them. You need to manually decide which changes to keep. This exercise creates that situation so you can practice resolving it.
 
 ## Steps
 
@@ -12,99 +12,91 @@
 
 Title: `[Task] Resolve a merge conflict`
 
-### 2. Learn `Git` basics (Optional)
+### 2. Create a practice branch
 
-Complete the first three tasks in `Introduction Sequence` on [Learn Git Branching](https://learngitbranching.js.org/).
+```console
+git switch main
+git switch -c conflict-practice
+```
 
-### 3. Prepare your environment
+### 3. Make a change on the practice branch
 
-Open your cloned fork in `VS Code`.
+Edit `CONTRIBUTORS.md` — change the comment text to something else (e.g., "Add your name here").
 
-### 4. Switch to the `main` branch
+Commit:
+
+```console
+git add CONTRIBUTORS.md
+git commit -m "docs: update contributors instructions"
+```
+
+### 4. Make a conflicting change on main
+
+Switch to main and edit the **same line** differently:
 
 ```console
 git switch main
 ```
 
-Alternatively, use [`Command Palette`](../../appendix/vs-code.md#command-palette) -> `GitLens: Git Switch to...`.
+Edit `CONTRIBUTORS.md` — change the same comment to something different (e.g., "Write your name below").
 
-### 5. Create two branches from `main`
-
-```console
-git branch feature-1
-git branch feature-2
-```
-
-Alternatively, use `Command Palette` -> `GitLens: Git Create Branch...`.
-
-### 6. Modify the same file on `feature-1` branch
-
-On `feature-1` branch:
-
-- Edit a file (e.g., change the first line in `README.md`).
-- Commit your changes.
-
-### 7. Modify the same lines on `feature-2` branch
-
-On `feature-2` branch:
-
-- Edit the **same lines** in the same file that you edited on the `feature-1` branch.
-- Note that the changes on `feature-2` must differ from changes on `feature-1`.
-- Commit your changes.
-
-### 8. Merge `feature-2` into `feature-1`
+Commit:
 
 ```console
-git switch feature-1
-git merge feature-2
+git add CONTRIBUTORS.md
+git commit -m "docs: update contributors comment"
 ```
 
-This will create a merge conflict since both branches modified the same lines.
+### 5. Merge and resolve the conflict
 
-### 9. Resolve the merge conflict
+```console
+git merge conflict-practice
+```
 
-- In the `Primary Sidebar` -> `Merge Changes` -> Click the file that you changed. The file will open.
+Git will report a conflict. Open `CONTRIBUTORS.md` — you'll see conflict markers:
 
-- Click inside that file.
+```
+<<<<<<< HEAD
+<!-- Write your name below -->
+=======
+<!-- Add your name here -->
+>>>>>>> conflict-practice
+```
 
-- Click `Resolve in Merge Editor` to resolve the merge conflict in the [3-way merge editor](https://code.visualstudio.com/docs/sourcecontrol/merge-conflicts#_use-the-3way-merge-editor).
+Edit the file to keep one version (or combine them). Remove the conflict markers.
 
-- Accept a change that you like more.
+Then complete the merge:
 
-- Click `Complete Merge`.
+```console
+git add CONTRIBUTORS.md
+git commit -m "docs: resolve merge conflict in contributors"
+```
 
-### 10. Review your changes
+### 6. Document what you learned
 
-- In the `Primary Sidebar` -> `Source Control` -> `Staged Changes` -> Click the file to see changes that you applied.
+Create a PR from `main` to `main` of your fork (or simply add a comment to your issue) explaining:
 
-- Click `Continue`.
+- What caused the conflict (1 sentence)
+- How you resolved it (1 sentence)
 
-### 11. Push your branch
+### 7. Clean up
 
-Click `Publish Branch` to push `feature-1` to `GitHub`.
+Delete the practice branch:
 
-### 12. Create a pull request
+```console
+git branch -d conflict-practice
+```
 
-Create a PR from `feature-1` to `main`.
-
-### 13. Document your resolution
-
-In the PR summary, explain:
-
-- What conflicted (1–2 sentences).
-- How you resolved the conflict (1–2 sentences).
-
-### 14. Complete the task
-
-- Provide a link to the PR in the issue description.
-- Close the PR. Don't merge it.
-- Close the issue.
+Close the issue.
 
 ## Acceptance criteria
 
 - [ ] Issue created
-- [ ] Successfully resolved a merge conflict
-- [ ] Created a pull request with explanation of the conflict and resolution
-- [ ] Provided link to the PR in the issue description
-- [ ] Closed the PR without merging
+- [ ] Successfully created and resolved a merge conflict
+- [ ] Documented what caused the conflict and how you resolved it
 - [ ] Closed the issue
+
+## Reviewer checklist
+
+- [ ] Issue shows evidence of conflict resolution (screenshot or explanation)
+- [ ] Documentation explains what conflicted and how it was resolved
