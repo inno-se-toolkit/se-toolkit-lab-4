@@ -1,5 +1,9 @@
 # `VS Code`
 
+> [!IMPORTANT]
+> The first keyboard shortcut is always for `Linux`.
+> It usually coincides with the shortcut for `Windows`.
+
 ## `Basic Layout`
 
 Basic UI elements in `VS Code`.
