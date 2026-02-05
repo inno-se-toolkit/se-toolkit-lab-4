@@ -75,10 +75,14 @@ Complete all optional tasks to leave up to 1 hour early (lab is 3 hours):
 3. [Create a release](./lab/tasks/optional/task-3.md#create-a-release)
 4. [Plan skill development](./lab/tasks/optional/task-4.md#plan-skill-development)
 
-### Homework
-
+### Additional Resources on Git
 - Read this [tutorial](https://hackmd.io/@aabounegm/SWP-git) to learn about `Git`, `Github`, and `Git` workflows.
+- Short videos to build your mental model of how Git works:
+	- [Git Explained in 100 Seconds](https://www.youtube.com/watch?v=hwP7WQkmECE)
+	- [What is Git? Explained in 2 Minutes!](https://www.youtube.com/watch?v=2ReR1YJrNOM)
+	- [A brief introduction to Git for beginners](https://www.youtube.com/watch?v=r8jQ9hVA2qs)
+	- [How Git Works: Explained in 4 Minutes](https://www.youtube.com/watch?v=e9lnsKot_SQ)
+	- [Git MERGE vs REBASE: Everything You Need to Know](https://www.youtube.com/watch?v=0chZFIZLR_0)
 - Practice on [Learn Git Branching](https://learngitbranching.js.org/) (focus on merge/rebase and conflicts).
 - Read about [`GitHub flow`](https://docs.github.com/en/get-started/using-github/github-flow).
-- (Optional) Learn about [`Conventional Commits`](https://www.conventionalcommits.org/en/v1.0.0/) for commit message formatting.
-- (Optional) [Learn more](./lab/appendix/vs-code.md) about `VS Code`.
+- Learn about [`Conventional Commits`](https://www.conventionalcommits.org/en/v1.0.0/) for commit message formatting.
