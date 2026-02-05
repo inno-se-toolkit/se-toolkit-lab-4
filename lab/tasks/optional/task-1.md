@@ -141,6 +141,8 @@ Alternatively:
 
 Close the issue.
 
+Close the PR.
+
 ## Acceptance criteria
 
 - [ ] Issue created
