@@ -38,8 +38,8 @@ Docs:
 To run a command:
 
 - Open `Command Palette`: `Ctrl+Shift+P` (`Cmd+Shift+P` on `macOS`).
-- Type the command.
-- Select an appropriate command.
+- Start typing a command.
+- Select the necessary command (move the cursor via arrow up and arrow down on your keyboard).
 - Press `Enter`.
 
 ## `Terminal`
