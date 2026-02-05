@@ -99,7 +99,7 @@ git commit -m "docs: resolve merge conflict in contributors"
 
 #### Resolve the conflict using the merge editor
 
-1. Open [`Source Control`](../../appendix/vs-code.md#source-control).
+1. [Open the `Source Control`](../../appendix/vs-code.md#open-the-source-control).
 2. Go to `Merge Changes`.
 3. Click the file that you changed.
 4. The file will open.
@@ -107,7 +107,7 @@ git commit -m "docs: resolve merge conflict in contributors"
 6. Click `Resolve in Merge Editor` to resolve the merge conflict in the [3-way merge editor](https://code.visualstudio.com/docs/sourcecontrol/merge-conflicts#_use-the-3way-merge-editor).
 7. Accept a change that you like more.
 8. Click `Complete Merge`.
-9. Open [`Source Control`](../../appendix/vs-code.md#source-control).
+9. [Open the `Source Control`](../../appendix/vs-code.md#open-the-source-control).
 10. Go to `Staged Changes`.
 11. Click the file to see changes that you applied.
 12. Click `Continue`.

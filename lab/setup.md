@@ -39,8 +39,8 @@ git config --global user.email "your@email"
     ![VS Code UI](./images/vs-code-ui.png)
 
 1. Try to [open `Folders`](./appendix/vs-code.md#folders).
-1. Try to [open `Terminal`](./appendix/vs-code.md#terminal).
-1. Try to [open `Source Control`](./appendix/vs-code.md#source-conrol).
+1. Try to [open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
+1. Try to [open the `Source Control`](./appendix/vs-code.md#open-the-source-control).
 1. (Optional) [Learn more](../lab/appendix/vs-code.md) about `VS Code`.
 
 ## Open the repository on your computer
@@ -61,14 +61,8 @@ git config --global user.email "your@email"
 
 ## Set up `VS Code` extensions
 
-1. Install the recommended `VS Code` extensions (listed in [`.vscode/extensions.json`](../.vscode/extensions.json)) when `VS Code` prompts to install them.
-2. If you missed the prompt:
-   1. Go to the [`Activity Bar`](./appendix/vs-code.md#activity-bar).
-   2. Click the icon `Extensions`. Alternatively, press `Ctrl+Shift+X` (`Cmd+Shift+G` on `macOS`).
-   3. In the input field, type `@recommended`.
-   4. Look at `WORKSPACE RECOMMENDATIONS`.
-   5. Click the icon `Install Workspace Recommended extensions`.
-3. Sign in to accounts.
+1. Install the recommended `VS Code` [extensions](./appendix/vs-code.md#extensions) (listed in [`.vscode/extensions.json`](../.vscode/extensions.json)) when `VS Code` prompts to install them.
+2. Sign in to accounts.
     1. Go to the [`Activity Bar`](./appendix/vs-code.md#activity-bar).
     2. Click the icon `Accounts`.
     3. Click `Sign in with GitHub ...`.
@@ -102,7 +96,7 @@ GitLens shows commit history, blame annotations, and branch visualization right 
 
 #### Inspect remotes and the current branch
 
-1. Open [`Source Control`](../lab/appendix/vs-code.md#source-control).
+1. [Open the `Source Control`](../lab/appendix/vs-code.md#open-the-source-control).
 1. Click `GitLens` in the opened `Primary Side Bar`.
 1. In the `GitLens` panel, click the icon `Remotes`.
 1. Make sure `origin` points to your repo URL (hover over it an look at URLs).

@@ -14,5 +14,10 @@
   // Move sidebar to the right so that
   // it doesn't move the code whenever it opens.
   // Change this setting if necessary.
-  "workbench.sideBar.location": "right"
+  "workbench.sideBar.location": "right",
+
+  // Set these settings to "true" if you want
+  // Markdown and preview to scroll synchronously.
+  "markdown.preview.scrollEditorWithPreview": false,
+  "markdown.preview.scrollPreviewWithEditor": false
 }

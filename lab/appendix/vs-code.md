@@ -1,12 +1,14 @@
 # `VS Code`
 
+> [!IMPORTANT]
+> The first keyboard shortcut is always for `Linux`.
+> It usually coincides with the shortcut for `Windows`.
+
 ## `Basic Layout`
 
 Basic UI elements in `VS Code`.
 
 ![VS Code UI](../images/vs-code-ui.png)
-
-Docs:
 
 - [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 
@@ -14,15 +16,11 @@ Docs:
 
 Menus of extensions on the side.
 
-Docs:
-
 - [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 
 ## `Status Bar`
 
 Statuses and menus of extensions at the bottom.
-
-Docs:
 
 - [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 
@@ -30,23 +28,21 @@ Docs:
 
 Run editor commands.
 
-Docs:
-
 - [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)
 - [docs 2](https://code.visualstudio.com/docs/getstarted/getting-started#_access-commands-with-the-command-palette)
 
-To open the `Command Palette`:
+### Open the `Command Palette`
 
 1. Press `Ctrl+Shift+P` (`Cmd+Shift+P` on `macOS`).
 
-To run a command:
+### Run a command using the `Command Palette`
 
 1. Open the `Command Palette`.
 1. Start typing a command.
 1. Select the necessary command (move the cursor via `UpArrow` and `DownArrow` on your keyboard).
 1. Press `Enter`.
 
-To open a file:
+### Open a file
 
 1. Press `Ctrl+P` (`Cmd+P` on `macOS`).
 2. Start typing the name of the file.
@@ -57,83 +53,93 @@ To open a file:
 
 Run terminal commands inside `VS Code`.
 
-Docs:
-
 - [docs](https://code.visualstudio.com/docs/terminal/getting-started)
 
-To open a terminal:
+### Open the `Terminal`
 
-- Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
+Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 
-To close a terminal:
+### Close the `Terminal`
 
-- Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
+Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 
-Copy inside the terminal:
+### Copy inside the `Terminal`
 
-- Select text.
-- Press `Ctrl+Shift+C` (`Cmd+C` on `macOS`).
+1. Select text.
+1. Press `Ctrl+Shift+C` (`Cmd+C` on `macOS`).
+
+### Paste inside the `Terminal`
+
+`Ctrl+Shift+V` (`Cmd+V` on `macOS`, `Ctrl+V` on `Windows`)
+
+### Run a command using the `Terminal`
+
+1. Write or paste a command.
+1. Press `Enter`.
 
 ## `Folders`
 
 View the file tree.
 
-Docs:
-
 - [docs](https://code.visualstudio.com/docs/editing/workspaces/workspaces)
 
-To open `Folders`:
+### Open `Folders`
 
-- [`Activity Bar`](#activity-bar) -> Click `Folders`.
+[`Activity Bar`](#activity-bar) -> Click `Folders`.
 
 ## `Source Control`
 
 Interact with `Git` via `VS Code` UI.
 
-Ways to open:
+- [docs](https://code.visualstudio.com/docs/sourcecontrol/overview)
+
+### Open the `Source Control`
+
+Approaches:
 
 - [`Activity Bar`](#activity-bar) -> Click `Source Control`
-- `Ctrl+Shift+G G` or `Ctrl+Shift+G` on `macOS`
+- `Ctrl+Shift+G G` (`Ctrl+Shift+G` on `macOS`)
 
-Ways to close:
+### Close the `Source Control`
+
+Approaches:
 
 - [`Activity Bar`](#activity-bar) -> Click `Source Control`
 - `Ctrl+B` (`Cmd+B` on `macOS`)
-
-Docs:
-
-- [docs](https://code.visualstudio.com/docs/sourcecontrol/overview)
 
 ## `Extensions`
 
 Install extensions for `VS Code` from [`VS Code Marketplace`](https://marketplace.visualstudio.com/vscode) to enable new functionality.
 
-Docs:
-
 - [docs](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace)
+
+### Install recommended extensions
+
+1. Go to the [`Activity Bar`](#activity-bar).
+2. Click the icon `Extensions`.
+3. Alternatively, press `Ctrl+Shift+X` (`Cmd+Shift+G` on `macOS`).
+4. In the input field, type `@recommended`.
+5. Look at `WORKSPACE RECOMMENDATIONS`.
+6. Click the icon `Install Workspace Recommended extensions`.
 
 ## `Custom Layout`
 
 Change the [Basic Layout](#basic-layout).
 
-Docs:
-
 - [docs](https://code.visualstudio.com/docs/configure/custom-layout)
 
-Use cases:
+### Use cases
 
-- [Move](https://code.visualstudio.com/docs/configure/custom-layout#_primary-side-bar) the `Primary Side Bar` to the right so that it doesn't move your code whenever the `Primary Side Bar` opens.
+- [Move](https://code.visualstudio.com/docs/configure/custom-layout#_primary-side-bar) the `Primary Side Bar` to the right so that it doesn't move your code whenever the `Primary Side Bar` opens. This setting is already used in [`.vscode/settings.json`](../../.vscode/settings.json).
 
 ## Keyboard shortcuts
 
 Keyboard shortcuts for various commands.
 
-Docs:
-
 - [docs 1](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-reference)
 - [docs 2](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-editor)
 
-Useful:
+### Frequently used shortcuts
 
 - `Alt+-` (`Ctrl+-` on `macOS`) - go back.
 - `Ctrl+Tab` - switch to the previous editor.

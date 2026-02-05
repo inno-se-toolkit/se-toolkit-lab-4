@@ -20,7 +20,7 @@ Below, we explain how to set up coding agents based on the [`Qwen3-Coder`](https
 1. Open the `Chat` panel using one of these methods:
     1. Method 1: Click the Qwen icon in the top-right corner of the editor.
     2. Method 2:
-       - Open [`Command Palette`](../appendix/vs-code.md#command-palette).
+       - [Open the `Command Palette`](../appendix/vs-code.md#open-the-command-palette).
        - Run `Qwen Code: Open`.
 1. Write `/login` in the chat.
 
@@ -28,14 +28,14 @@ Below, we explain how to set up coding agents based on the [`Qwen3-Coder`](https
 
 1. [Set up `Qwen Code`](#set-up-qwen-code).
 1. [Install](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace#_browse-for-extensions) the `github.copilot-chat` and `denizhandaklr.vscode-qwen-copilot` extensions.
-1. Open [`Command Palette`](../appendix/vs-code.md#command-palette).
+1. [Open the `Command Palette`](../appendix/vs-code.md#open-the-command-palette).
 1. Run `Qwen Copilot: Authenticate`.
 1. Complete the authentication procedure.
-1. Open `Command Palette`.
+1. Open the `Command Palette`.
 1. Run `Chat: Manage Language Models`.
 1. Click `Add Models`.
 1. Click `Qwen Code`.
 1. Double click `Qwen 3 Coder Plus` to make the model visible.
-1. Open `Command Palette`.
+1. [Open the `Command Palette`](../appendix/vs-code.md#open-the-command-palette).
 1. Run `Chat: Open Chat`.
 1. In the `Chat`, click `Auto` (`Pick Model`) and then click `Qwen 3 Coder Plus`.
