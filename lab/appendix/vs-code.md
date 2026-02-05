@@ -106,7 +106,7 @@ Interact with `Git` via `VS Code` UI.
 Ways to open:
 
 - [`Activity Bar`](#activity-bar) -> Click `Source Control`
-- `Ctrl+Shift+G G` or `Ctrl+Shift+G` on `macOS`
+- `Ctrl+Shift+G G` (`Ctrl+Shift+G` on `macOS`)
 
 Ways to close:
 
