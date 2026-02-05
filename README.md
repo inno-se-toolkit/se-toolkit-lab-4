@@ -5,7 +5,7 @@ Questions:
 - Do you know what skills are needed to build software projects?
 - Have you thought about which tech role you want to pursue as your career?
 
-In this lab, we will explore three things:
+In this lab, you will explore three things:
 
 1. How real software products may be structured;
 2. What kind of engineers may build and operate them;
@@ -45,7 +45,7 @@ After this lab, you should be able to say:
 □ Task 3  — compare your skills to market demands
 ```
 
-In this lab, we will simulate some of the real-life engineering practices:
+In this lab, you'll simulate some of the real-life engineering practices:
 
 - Communicate via issues/PRs;
 - Check your work against acceptance criteria;
