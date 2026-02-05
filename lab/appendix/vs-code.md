@@ -76,9 +76,9 @@ Docs:
 
 - [docs 1](https://code.visualstudio.com/docs/sourcecontrol/overview)
 
-## `Extension Marketplace`
+## `Extensions`
 
-Install other people's extensions for `VS Code` to enable new functionality.
+Install extensions for `VS Code` from [`VS Code Marketplace`](https://marketplace.visualstudio.com/vscode) to enable new functionality.
 
 Docs:
 
