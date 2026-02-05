@@ -4,13 +4,23 @@
 
 Basic UI elements in `VS Code`.
 
+![VS Code UI](../images/vs-code-ui.png)
+
 Docs:
 
 - [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 
-## `Activity Bar`, `Status Bar`
+## `Activity Bar`
 
-Menus of extensions.
+Menus of extensions on the side.
+
+Docs:
+
+- [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
+
+## `Status Bar`
+
+Statuses and menus of extensions at the bottom.
 
 Docs:
 
