@@ -64,8 +64,13 @@ Interact with `git` via `VS Code` UI.
 
 Ways to open:
 
-- [`Activity Bar`](#activity-bar) -> `Source Control`
+- [`Activity Bar`](#activity-bar) -> Click `Source Control`
 - `Ctrl+Shift+G G` or `Ctrl+Shift+G` on `macOS`
+
+Ways to close:
+
+- [`Activity Bar`](#activity-bar) -> Click `Source Control`
+- `Ctrl+B` (`Cmd+B` on `macOS`)
 
 Docs:
 
