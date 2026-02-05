@@ -31,18 +31,18 @@ Run editor commands.
 - [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)
 - [docs 2](https://code.visualstudio.com/docs/getstarted/getting-started#_access-commands-with-the-command-palette)
 
-### To open the `Command Palette`
+### Open the `Command Palette`
 
 1. Press `Ctrl+Shift+P` (`Cmd+Shift+P` on `macOS`).
 
-### To run a command
+### Run a command using the `Command Palette`
 
 1. Open the `Command Palette`.
 1. Start typing a command.
 1. Select the necessary command (move the cursor via `UpArrow` and `DownArrow` on your keyboard).
 1. Press `Enter`.
 
-### To open a file
+### Open a file
 
 1. Press `Ctrl+P` (`Cmd+P` on `macOS`).
 2. Start typing the name of the file.
@@ -55,24 +55,24 @@ Run terminal commands inside `VS Code`.
 
 - [docs](https://code.visualstudio.com/docs/terminal/getting-started)
 
-### Open a terminal
+### Open the `Terminal`
 
 Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 
-### Close a terminal
+### Close the `Terminal`
 
 Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 
-### Copy inside the terminal
+### Copy inside the `Terminal`
 
 1. Select text.
 1. Press `Ctrl+Shift+C` (`Cmd+C` on `macOS`).
 
-### Paste inside the terminal
+### Paste inside the `Terminal`
 
 `Ctrl+Shift+V` (`Cmd+V` on `macOS`, `Ctrl+V` on `Windows`)
 
-### Run a command
+### Run a command using the `Terminal`
 
 1. Write or paste a command.
 1. Press `Enter`.
@@ -93,12 +93,16 @@ Interact with `Git` via `VS Code` UI.
 
 - [docs](https://code.visualstudio.com/docs/sourcecontrol/overview)
 
-### Ways to open
+### Open the `Source Control`
+
+Approaches:
 
 - [`Activity Bar`](#activity-bar) -> Click `Source Control`
 - `Ctrl+Shift+G G` (`Ctrl+Shift+G` on `macOS`)
 
-### Ways to close
+### Close the `Source Control`
+
+Approaches:
 
 - [`Activity Bar`](#activity-bar) -> Click `Source Control`
 - `Ctrl+B` (`Cmd+B` on `macOS`)
@@ -111,11 +115,12 @@ Install extensions for `VS Code` from [`VS Code Marketplace`](https://marketplac
 
 ### Install recommended extensions
 
-1. Go to the [`Activity Bar`](./appendix/vs-code.md#activity-bar).
-2. Click the icon `Extensions`. Alternatively, press `Ctrl+Shift+X` (`Cmd+Shift+G` on `macOS`).
-3. In the input field, type `@recommended`.
-4. Look at `WORKSPACE RECOMMENDATIONS`.
-5. Click the icon `Install Workspace Recommended extensions`.
+1. Go to the [`Activity Bar`](#activity-bar).
+2. Click the icon `Extensions`.
+3. Alternatively, press `Ctrl+Shift+X` (`Cmd+Shift+G` on `macOS`).
+4. In the input field, type `@recommended`.
+5. Look at `WORKSPACE RECOMMENDATIONS`.
+6. Click the icon `Install Workspace Recommended extensions`.
 
 ## `Custom Layout`
 
