@@ -1,23 +1,22 @@
-# Lab 01 – Products, Architecture & Roles
+# Lab 01 – Product architecture, tech roles, & your skills
 
-To kickstart the course, you will explore two things:
+Questions:
+- Do you know what skills are needed to build software projects? 
+- Have you thought about which tech role you want to pursue as your career?
 
+In this lab, we will explore three things:
 1. How real software products may be structured;
-2. What kind of engineers may build and operate them.
+2. What kind of engineers may build and operate them;
+3. How your skills compare to market demands.
+
+Along the way, you'll practice using Git and GitHub — essential tools for collaboration between developers.
 
 ## Table of contents
 
-- [Table of contents](#table-of-contents)
 - [Learning outcomes](#learning-outcomes)
 - [Tasks overview](#tasks-overview)
-- [Submission checklist](#submission-checklist)
-- [Repo structure](#repo-structure)
 - [Tasks](#tasks)
-  - [Time estimates](#time-estimates)
-  - [Lab setup](#lab-setup)
-  - [Required tasks](#required-tasks)
-  - [Optional tasks](#optional-tasks)
-  - [Homework](#homework)
+- [Repo structure](#repo-structure)
 
 ## Learning outcomes
 
@@ -27,15 +26,19 @@ By the end of this lab, you should be able to:
 - Explain the basic architecture of a real-world digital product in terms of components, data flow, deployment, and tech roles.
 - Reflect on your career in tech, examine your current skillset, and plan for the future.
 
+After this lab, you should be able to say: 
+
+> I can use git and github, I understand how products are built, and I know what I could learn to grow as an engineer.
+
 ## Tasks overview
 
-To complete this lab, you'll need to:
-
-- Set up your `GitHub` account and fork this repo.
-- Pick an existing digital product.
-- Study its architecture: components, data flow, deployment.
-- Map components to tech roles and skills using real job postings and `roadmap.sh`.
-- Practice using GitHub issues, branches and pull requests (PRs) to organize your work in a repository (repo) and get feedback from peers.
+```
+□ Setup   — fork repo, find a partner
+□ Task 0  — practice git workflow
+□ Task 1  — analyze a product's architecture
+□ Task 2  — map components to tech roles
+□ Task 3  — compare your skills to market demands
+```
 
 ### Pair work
 
@@ -43,31 +46,13 @@ You'll work with a partner throughout this lab. You complete tasks individually,
 
 This and all other lab assignments will simulate some of the real-life engineering practices:
 
-- Follow processes;
 - Communicate via issues/PRs;
-- Keep the work reviewable;
 - Check your work against acceptance criteria;
 - Write clear commit messages.
 
-## Submission checklist
-
 As your proceed with the lab:
 
-- Show your progress to the TA. TA will mark your progress.
-
-By the end of the lab:
-
-- Make sure that each task that you have completed has a corresponding issue linked to a PR.
-- Close the issues for which all related activities are done.
-
-## Repo structure
-
-- [`.github/ISSUE_TEMPLATE/01-task.yml`](./.github/ISSUE_TEMPLATE/01-task.yml) - an issue form for a task.
-- [`.github/pull_request_template.md`](./.github/pull_request_template.md) - a template for PRs.
-- [`docs/diagrams`](./docs/diagrams) - diagrams of the product's architecture.
-- [`.vscode/settings.json`](./.vscode/settings.json) - `VS Code` settings.
-- [`.vscode/extensions.json`](./.vscode/extensions.json) - recommended `VS Code` extensions.
-- [`lab/appendix`](./lab/appendix) - Additional info.
+- Show your progress to the TA. 
 
 ## Tasks
 
@@ -91,7 +76,7 @@ First complete the [lab setup](./lab/setup.md).
 
 ### Required tasks
 
-Follow the [procedure for tasks](./lab/tasks/required/procedure.md) for each of these tasks:
+For all tasks, we follow the same [git workflow procedure](./lab/tasks/required/procedure.md). Task 0 below allows you to practice it.
 
 0. [Practice the git workflow](./lab/tasks/required/task-0.md#practice-the-git-workflow)
 1. [Choose a product and study its architecture](./lab/tasks/required/task-1.md#choose-a-product-and-study-its-architecture)
@@ -100,7 +85,7 @@ Follow the [procedure for tasks](./lab/tasks/required/procedure.md) for each of 
 
 ### Optional tasks
 
-Complete one or more tasks below:
+Complete all optional tasks to leave up to 1 hour early (lab is 3 hours):
 
 1. [Resolve a merge conflict](./lab/tasks/optional/task-1.md#resolve-a-merge-conflict).
 2. [Add a CI check](./lab/tasks/optional/task-2.md#add-a-ci-check)
@@ -113,3 +98,13 @@ Complete one or more tasks below:
 - Practice on [Learn Git Branching](https://learngitbranching.js.org/) (focus on merge/rebase and conflicts).
 - Read about [`GitHub flow`](https://docs.github.com/en/get-started/using-github/github-flow).
 - (Optional) Learn about [`Conventional Commits`](https://www.conventionalcommits.org/en/v1.0.0/) for commit message formatting.
+
+
+## Repo structure
+
+- [`.github/ISSUE_TEMPLATE/01-task.yml`](./.github/ISSUE_TEMPLATE/01-task.yml) - an issue form for a task.
+- [`.github/pull_request_template.md`](./.github/pull_request_template.md) - a template for PRs.
+- [`docs/diagrams`](./docs/diagrams) - diagrams of the product's architecture.
+- [`.vscode/settings.json`](./.vscode/settings.json) - `VS Code` settings.
+- [`.vscode/extensions.json`](./.vscode/extensions.json) - recommended `VS Code` extensions.
+- [`lab/appendix`](./lab/appendix) - Additional info.
