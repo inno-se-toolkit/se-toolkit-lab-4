@@ -13,7 +13,7 @@ Therefore, you must use the ["diagrams as code"](https://simmering.dev/blog/diag
 
 ## `PlantUML`
 
-[`PlantUML`](https://plantuml.com/) supports all the diagrams we need. Therefore, we use it to visualize the architecture.
+[`PlantUML`](https://plantuml.com/) supports all the necessary types of diagrams. Therefore, we recommend using it to visualize the architecture.
 
 If you want to preview the `PlantUML` diagrams in `VS Code`, follow these steps:
 
