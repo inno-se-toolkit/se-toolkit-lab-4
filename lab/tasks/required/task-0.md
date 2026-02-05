@@ -50,11 +50,14 @@ git push -u origin add-contributor
 ### 5. Create a Pull Request (PR)
 
 1. Go to your repo on `GitHub`.
-2. Click `Pull requests`.
-3. Click `Compare & pull request`.
-4. Title: `Add @<your-username> to contributors`.
-5. Write PR description.
-6. Click `Create pull request`.
+2. Click `main`.
+3. In the `Find or create a branch...`, start typing the branch name (`add-contributor`).
+4. Click the branch name in the list.
+5. Click `Contribute`.
+6. Click `Open pull request`.
+7. Write the PR title (`Add @<your-username> to contributors`).
+8. Write the PR description.
+9. Click `Create pull request`.
 
 ### 6. Get review and merge
 
