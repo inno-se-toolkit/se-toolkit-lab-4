@@ -29,7 +29,11 @@ By the end of this lab, you should be able to:
 
 After this lab, you should be able to say:
 
-> I can use `git` and `GitHub`, I understand how products are built, and I know what I could learn to grow as an engineer.
+> I can use `git` and `GitHub`.
+>
+> I understand how software products can be structured.
+>
+> I know how I can grow as an IT specialist.
 
 ## Tasks overview
 
