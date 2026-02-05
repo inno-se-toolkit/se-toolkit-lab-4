@@ -39,49 +39,32 @@ After this lab, you should be able to say:
 □ Task 3  — compare your skills to market demands
 ```
 
-### Pair work
-
-You'll work with a partner throughout this lab. You complete tasks individually, but review each other's work via pull requests.
-
-This and all other lab assignments will simulate some of the real-life engineering practices:
+In this lab, we will simulate some of the real-life engineering practices:
 
 - Communicate via issues/PRs;
 - Check your work against acceptance criteria;
 - Write clear commit messages.
+### Pair work and TA
 
-As your proceed with the lab:
+You'll work with a partner throughout this lab. You complete tasks individually, but review each other's work via pull requests.
 
-- Show your progress to the TA. 
+As your proceed with the lab, show your progress to the TA. 
 
 ## Tasks
 
-### Time estimates
+For all tasks, we follow the same [git workflow procedure](./lab/tasks/required/procedure.md). 
+Task 0 allows you to practice it.
 
-Lab setup + Required tasks
-
-| Task      | Time             |
-| --------- | ---------------- |
-| Lab setup | ~30 min          |
-| Task 0    | ~15 min          |
-| Task 1    | ~30–40 min       |
-| Task 2    | ~30–40 min       |
-| Task 3    | ~30–40 min       |
-|           |                  |
-| **Total** | **~2–2.5 hours** |
-
-### Lab setup
+### Setup (~30 min)
 
 First complete the [lab setup](./lab/setup.md).
 
-### Required tasks
+### Required tasks (~2 hours)
 
-For all tasks, we follow the same [git workflow procedure](./lab/tasks/required/procedure.md). 
-Task 0 below allows you to practice it.
-
-0. [Practice the git workflow](./lab/tasks/required/task-0.md#practice-the-git-workflow)
-1. [Choose a product and study its architecture](./lab/tasks/required/task-1.md#choose-a-product-and-study-its-architecture)
-2. [Study tech roles involved in the chosen product](./lab/tasks/required/task-2.md#study-tech-roles-involved-in-the-chosen-product)
-3. [Compare your tech skills with the market needs](./lab/tasks/required/task-3.md#compare-your-tech-skills-with-the-market-needs)
+0. [Practice the git workflow](./lab/tasks/required/task-0.md#practice-the-git-workflow) (~15 min)
+1. [Choose a product and study its architecture](./lab/tasks/required/task-1.md#choose-a-product-and-study-its-architecture) (~30 min)
+2. [Study tech roles involved in the chosen product](./lab/tasks/required/task-2.md#study-tech-roles-involved-in-the-chosen-product) (~30 min)
+3. [Compare your tech skills with the market needs](./lab/tasks/required/task-3.md#compare-your-tech-skills-with-the-market-needs) (~30 min)
 
 ### Optional tasks
 
