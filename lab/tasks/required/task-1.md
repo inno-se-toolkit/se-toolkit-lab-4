@@ -14,6 +14,9 @@ Title: `[Task] Product & architecture description`
 
 ### 2. Choose a product
 
+> [!IMPORTANT]
+> You and your partner must pick **different products**. This way, during PR reviews, you'll learn about each other's products.
+
 Available products:
 
 - Yandex Go

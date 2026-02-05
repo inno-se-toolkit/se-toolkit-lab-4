@@ -37,6 +37,10 @@ To complete this lab, you'll need to:
 - Map components to tech roles and skills using real job postings and `roadmap.sh`.
 - Practice using GitHub issues, branches and pull requests (PRs) to organize your work in a repository (repo) and get feedback from peers.
 
+### Pair work
+
+You'll work with a partner throughout this lab. You complete tasks individually, but review each other's work via pull requests.
+
 This and all other lab assignments will simulate some of the real-life engineering practices:
 
 - Follow processes;
