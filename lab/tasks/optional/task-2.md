@@ -56,8 +56,8 @@ Close the issue.
 - [ ] Issue created with a correct title
 - [ ] `.github/workflows/ci.yml` created with proper workflow
 - [ ] Workflow runs on PRs and push
-- [ ] Markdown linter check is included
-- [ ] Markdown link checker is included
+- [ ] `Markdown` linter check is included
+- [ ] `Markdown` link checker is included
 - [ ] PR opened and workflow passes without warnings
 - [ ] Link to PR added to issue description
 - [ ] PR closed without merging
