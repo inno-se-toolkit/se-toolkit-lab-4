@@ -99,19 +99,18 @@ git commit -m "docs: resolve merge conflict in contributors"
 
 #### Resolve the conflict using the merge editor
 
-- In the `Primary Sidebar` -> `Merge Changes` -> Click the file that you changed. The file will open.
-
-- Click inside that file.
-
-- Click `Resolve in Merge Editor` to resolve the merge conflict in the [3-way merge editor](https://code.visualstudio.com/docs/sourcecontrol/merge-conflicts#_use-the-3way-merge-editor).
-
-- Accept a change that you like more.
-
-- Click `Complete Merge`.
-
-- In the `Primary Sidebar` -> `Source Control` -> `Staged Changes` -> Click the file to see changes that you applied.
-
-- Click `Continue`.
+1. Open [`Source Control`](../../appendix/vs-code.md#source-control).
+2. Go to `Merge Changes`.
+3. Click the file that you changed.
+4. The file will open.
+5. Click inside that file.
+6. Click `Resolve in Merge Editor` to resolve the merge conflict in the [3-way merge editor](https://code.visualstudio.com/docs/sourcecontrol/merge-conflicts#_use-the-3way-merge-editor).
+7. Accept a change that you like more.
+8. Click `Complete Merge`.
+9. Open [`Source Control`](../../appendix/vs-code.md#source-control).
+10. Go to `Staged Changes`.
+11. Click the file to see changes that you applied.
+12. Click `Continue`.
 
 ### 6. Create a PR
 
