@@ -11,7 +11,7 @@ In this lab, we will explore three things:
 2. What kind of engineers may build and operate them;
 3. How your skills compare to market demands.
 
-Along the way, you'll practice using `git` and `GitHub` — essential tools for collaboration between developers.
+Along the way, you'll practice using `Git` and `GitHub` — essential tools for collaboration between developers.
 
 ## Table of contents
 
@@ -29,7 +29,7 @@ By the end of this lab, you should be able to:
 
 After this lab, you should be able to say:
 
-> I can use `git` and `GitHub`.
+> I can use `Git` and `GitHub`.
 >
 > I understand how software products can be structured.
 >
@@ -65,9 +65,9 @@ First complete the [lab setup](./lab/setup.md).
 
 ### Required tasks (~2 hours)
 
-For all required tasks, you must follow the same [git workflow](./lab/tasks/required/procedure.md).
+For all required tasks, you must follow the same [`Git workflow`](./lab/tasks/required/procedure.md).
 
-1. [Practice the git workflow](./lab/tasks/required/task-0.md#practice-the-git-workflow) (~15 min)
+1. [Practice the `Git workflow`](./lab/tasks/required/task-0.md#practice-the-git-workflow) (~15 min)
 2. [Choose a product and study its architecture](./lab/tasks/required/task-1.md#choose-a-product-and-study-its-architecture) (~30 min)
 3. [Study tech roles involved in the chosen product](./lab/tasks/required/task-2.md#study-tech-roles-involved-in-the-chosen-product) (~30 min)
 4. [Compare your tech skills with the market needs](./lab/tasks/required/task-3.md#compare-your-tech-skills-with-the-market-needs) (~30 min)
@@ -83,8 +83,8 @@ Complete all optional tasks to leave up to 1 hour early (lab is 3 hours):
 
 ### Additional Resources on Git
 
-- Read this [tutorial](https://hackmd.io/@aabounegm/SWP-git) to learn about `git`, `Github`, and `git` workflows.
-- Short videos to build your mental model of how Git works:
+- Read this [tutorial](https://hackmd.io/@aabounegm/SWP-git) to learn about `Git`, `Github`, and `Git workflows`.
+- Short videos to build your mental model of how `Git` works:
   - [Git Explained in 100 Seconds](https://www.youtube.com/watch?v=hwP7WQkmECE)
   - [What is Git? Explained in 2 Minutes!](https://www.youtube.com/watch?v=2ReR1YJrNOM)
   - [A brief introduction to Git for beginners](https://www.youtube.com/watch?v=r8jQ9hVA2qs)

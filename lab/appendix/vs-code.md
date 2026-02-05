@@ -71,7 +71,7 @@ To close a terminal:
 
 ## `Source Control`
 
-Interact with `git` via `VS Code` UI.
+Interact with `Git` via `VS Code` UI.
 
 Ways to open:
 

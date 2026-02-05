@@ -76,7 +76,7 @@ git merge conflict-branch-1
 
 #### Resolve the conflict using without the merge editor
 
-Git will report a conflict.
+`Git` will report a conflict.
 
 Open [`CONTRIBUTORS.md`](../../../CONTRIBUTORS.md) — you'll see conflict markers:
 

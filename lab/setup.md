@@ -19,9 +19,9 @@ You'll complete tasks individually, but review each other's work via pull reques
 1. In the repo `Settings` -> `Collaborators` -> `Add people`, add your partner as a collaborator.
 2. Make sure your collaborator has accepted the invitation sent to their email.
 
-## Set up `git`
+## Set up `Git`
 
-(If needed) On your computer, configure [`git`](https://git-scm.com/):
+(If needed) On your computer, configure [`Git`](https://git-scm.com/):
 
 ```bash
 git config --global user.name "Your Name"
@@ -85,7 +85,7 @@ See [Coding agents](./appendix/coding-agents.md).
 
 ### Shell: Set up the prompt
 
-Starship shows your current `git` branch, status, and other useful info directly in your terminal prompt.
+Starship shows your current `Git` branch, status, and other useful info directly in your terminal prompt.
 
 Install [`Starship`](https://github.com/starship/starship#-installation).
 

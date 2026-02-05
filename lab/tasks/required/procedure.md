@@ -1,4 +1,4 @@
-# Git workflow for tasks
+# `Git workflow` for tasks
 
 > [!NOTE]
 > This procedure is based on the [`GitHub flow`](https://docs.github.com/en/get-started/using-github/github-flow).
