@@ -8,7 +8,7 @@ Basic UI elements in `VS Code`.
 
 Docs:
 
-- [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
+- [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 
 ## `Activity Bar`
 
@@ -16,7 +16,7 @@ Menus of extensions on the side.
 
 Docs:
 
-- [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
+- [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 
 ## `Status Bar`
 
@@ -24,7 +24,7 @@ Statuses and menus of extensions at the bottom.
 
 Docs:
 
-- [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
+- [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 
 ## `Command Palette`
 
@@ -59,7 +59,7 @@ Run terminal commands inside `VS Code`.
 
 Docs:
 
-- [docs 1](https://code.visualstudio.com/docs/terminal/getting-started)
+- [docs](https://code.visualstudio.com/docs/terminal/getting-started)
 
 To open a terminal:
 
@@ -85,7 +85,7 @@ Ways to close:
 
 Docs:
 
-- [docs 1](https://code.visualstudio.com/docs/sourcecontrol/overview)
+- [docs](https://code.visualstudio.com/docs/sourcecontrol/overview)
 
 ## `Extensions`
 
@@ -93,7 +93,7 @@ Install extensions for `VS Code` from [`VS Code Marketplace`](https://marketplac
 
 Docs:
 
-- [docs 1](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace)
+- [docs](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace)
 
 ## `Custom Layout`
 
@@ -101,7 +101,7 @@ Change the [Basic Layout](#basic-layout).
 
 Docs:
 
-- [docs 1](https://code.visualstudio.com/docs/configure/custom-layout)
+- [docs](https://code.visualstudio.com/docs/configure/custom-layout)
 
 Use cases:
 
@@ -131,7 +131,7 @@ This repo has [`.vscode/settings.json`](../../.vscode/settings.json).
 
 Docs:
 
-- [docs 1](https://code.visualstudio.com/docs/configure/settings#_settings-json-file)
+- [docs](https://code.visualstudio.com/docs/configure/settings#_settings-json-file)
 
 ### Settings
 
