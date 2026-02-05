@@ -5,6 +5,8 @@
 1. Find a classmate to be your partner for this lab.
 2. Sit together.
 
+You'll complete tasks individually, but review each other's work via pull requests.
+
 ## Set up a fork
 
 1. Create a `GitHub` account.
@@ -63,7 +65,11 @@
 
     ![VS Code UI](./images/vs-code-ui.png)
 
-1. (Optional) [Learn more](./appendix/vs-code.md) about `VS Code`.
+2. Try opening:
+   - **Terminal**: Press `` Ctrl+` `` (`` Cmd+` `` on Mac) — you'll use this to run git commands
+   - **Source Control**: Press `Ctrl+Shift+G` (`Cmd+Shift+G` on Mac) — you'll use this to commit changes
+
+3. (Optional) [Learn more](./appendix/vs-code.md) about `VS Code`.
 
 ## Set up the shell prompt
 
