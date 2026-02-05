@@ -1,4 +1,4 @@
-@startuml Sequence Diagram - Media Flow
+@startuml Sequence Diagram
 !theme plain
 autonumber
 

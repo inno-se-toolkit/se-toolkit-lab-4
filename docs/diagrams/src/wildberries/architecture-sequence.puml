@@ -1,4 +1,4 @@
-@startuml Sequence Diagram - Wildberries Order Flow
+@startuml Sequence Diagram
 !theme plain
 autonumber
 
