@@ -59,11 +59,17 @@ git config --global user.email "your@email"
 ## Set up `VS Code` extensions
 
 1. Install the recommended `VS Code` extensions (listed in [`.vscode/extensions.json`](../.vscode/extensions.json)) when `VS Code` suggests to install them.
-2. Sign in to accounts.
-    In the [`Activity Bar`](./appendix/vs-code.md#activity-bar):
-    1. Click `Accounts`.
-    2. Click `Sign in with GitHub ...`.
-    3. Repeat for the remaining extensions if there are any.
+2. If you missed the prompt:
+   1. Go to the [`Activity Bar`](./appendix/vs-code.md#activity-bar).
+   2. Click the icon `Extensions`. Alternatively, press `Ctrl+Shift+X`.
+   3. In the input field, type `@recommended`.
+   4. Look at `WORKSPACE RECOMMENDATIONS`.
+   5. Click the icon `Install Workspace Recommended extensions`.
+3. Sign in to accounts.
+    1. Go to the [`Activity Bar`](./appendix/vs-code.md#activity-bar).
+    2. Click the icon `Accounts`.
+    3. Click `Sign in with GitHub ...`.
+    4. Repeat for the remaining extensions if there are any.
 
 ---
 
@@ -85,21 +91,25 @@ Install [`Starship`](https://github.com/starship/starship#-installation).
 
 GitLens shows commit history, blame annotations, and branch visualization right inside VS Code.
 
-In the `Status Bar`:
+#### Look at the commit graph
 
-1. Click `Visualize commits on the Commit Graph`.
-2. Make sure you can see the commit graph.
+1. Go to the [`Status Bar`](../lab/appendix/vs-code.md#status-bar):
+1. Click the icon `Visualize commits on the Commit Graph`.
+1. Make sure you can see the commit graph.
 
-In the `Activity Bar`:
+#### Inspect remotes and the current branch
 
-1. Click `Source Control`.
-2. Click `GitLens` in the opened `Primary Side Bar` to open the `GitLens` panel.
-3. In the `GitLens` panel, click `Remotes`.
-4. Make sure `origin` points to your repo URL.
-5. In the `GitLens` panel, click `Commits`.
-6. Make sure you can see commits on the current branch.
+1. Go to the [`Activity Bar`](../lab/appendix/vs-code.md#activity-bar).
+1. Click the icon [`Source Control`](../lab/appendix/vs-code.md#source-control).
+1. Click `GitLens` in the opened `Primary Side Bar`.
+1. In the `GitLens` panel, click the icon `Remotes`.
+1. Make sure `origin` points to your repo URL (hover over it an look at URLs).
+1. In the `GitLens` panel, click the icon `Commits`.
+1. Make sure you can see commits on the current branch.
 
-Learn more about [`GitLens` features](https://help.gitkraken.com/gitlens/gitlens-features/).
+#### (Optional) Learn more about `GitLens`
+
+See [`GitLens` features](https://help.gitkraken.com/gitlens/gitlens-features/).
 
 ### Repo: Protect your `main` branch
 
@@ -112,12 +122,12 @@ In the repo -> `Settings` -> `Code and automation` -> `Add branch ruleset`:
 2. `Enforcement status`: `Active`
 3. `Target branches` -> `Add target` -> `Include default branch`
 4. Rules:
-   - [ ] `Restrict deletions`
-   - [ ] `Require a pull request before merging`:
+   - [x] `Restrict deletions`
+   - [x] `Require a pull request before merging`:
       - `Required approvals`: `1`
       - `Require conversation resolution before merging`
       - `Allowed merge methods`: `Merge`.
-   - [ ] Block force pushes
+   - [x] Block force pushes
 
 ### Repo: Create a label for tasks
 
