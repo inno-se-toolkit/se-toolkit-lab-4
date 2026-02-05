@@ -35,10 +35,10 @@ git config --global user.email "your@email"
     ![VS Code UI](./images/vs-code-ui.png)
 
 2. Try opening:
-   - **Terminal**: Press `` Ctrl+` `` (`` Cmd+` `` on Mac) — you'll use this to run git commands
-   - **Source Control**: Press `Ctrl+Shift+G` (`Cmd+Shift+G` on Mac) — you'll use this to commit changes
+   - **Terminal**: Press `` Ctrl+` `` (`` Cmd+` `` on Mac) — you'll use this to run `git` commands.
+   - **Source Control**: Press `Ctrl+Shift+G G` (`Ctrl+Shift+G` on `macOS`) — you'll use this to interact with `git` using the `VS Code` UI.
 
-[Learn more](./lab/appendix/vs-code.md) about `VS Code`.
+3. (Optional) [Learn more](./lab/appendix/vs-code.md) about `VS Code`.
 
 ## Open the repository on your computer
 
@@ -60,29 +60,51 @@ git config --global user.email "your@email"
 
 1. Install the recommended `VS Code` extensions (listed in [`.vscode/extensions.json`](../.vscode/extensions.json)) when `VS Code` suggests to install them.
 2. Sign in to accounts.
-    In the `Activity Bar`:
-    1. Click `Accounts`
-    2. Click `Sign in with GitHub ...`
-    3. Repeat for the remaining extensions if there any.
+    In the [`Activity Bar`](./appendix/vs-code.md#activity-bar):
+    1. Click `Accounts`.
+    2. Click `Sign in with GitHub ...`.
+    3. Repeat for the remaining extensions if there are any.
 
 ---
 
 ## Optional enhancements to make your life easier
 
+### Coding: Set up a coding agent
+
+A coding agent can help you write code, explain concepts, and debug issues.
+
+See [Coding agents](./appendix/coding-agents.md).
+
 ### Repo: Create a label for tasks
 
-Labels help you filter and organize issues. With a `task` label, you can quickly see all lab tasks in one view.
+> [!TIP]
+> If you create the `task` label before creating issues, your issues will have this label automatically as configured in the [issue form](../.github/ISSUE_TEMPLATE/01-task.yml).
+
+[Labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) help you filter and organize issues.
+
+With a `task` label, you can see in one view all lab tasks that have this label.
 
 In the repo -> `Issues` -> `Labels`, create a new label:
+
 1. Click `New label`.
 2. Name: `task`.
 3. Click `Create label`.
+
+Then [add this label](https://github.com/orgs/community/discussions/53473#discussioncomment-5697478) to some of your task issues.
+
+Next, in the repo -> `Issues`, filter by the label:
+
+1. Click `Labels`.
+2. In the `Filter labels` input area, write `task`.
+3. Click the suggested label.
+4. You'll see all issues that have this label.
 
 ### Repo: Protect your `main` branch
 
 Branch protection prevents accidental pushes directly to `main`. This enforces the PR workflow and ensures all changes are reviewed.
 
 In the repo -> `Settings` -> `Code and automation` -> `Add branch ruleset`:
+
 1. `Ruleset Name`: `push`
 2. `Enforcement status`: `Active`
 3. `Target branches` -> `Add target` -> `Include default branch`
@@ -116,11 +138,6 @@ Learn more about [`GitLens` features](https://help.gitkraken.com/gitlens/gitlens
 
 ### Shell: Set up the prompt
 
-Starship shows your current git branch, status, and other useful info directly in your terminal prompt.
+Starship shows your current `git` branch, status, and other useful info directly in your terminal prompt.
 
 Install [`Starship`](https://github.com/starship/starship#-installation).
-
-### Coding: Set up a coding agent
-
-A coding agent can help you write code, explain concepts, and debug issues. 
-See [Coding agents](./appendix/coding-agents.md).
