@@ -37,7 +37,7 @@ Docs:
 
 To run a command:
 
-- Open `Command Palette`: `Ctrl + Shift + P` (`Cmd + Shift + P` on `macOS`).
+- Open `Command Palette`: `Ctrl+Shift+P` (`Cmd+Shift+P` on `macOS`).
 - Type the command.
 - Select an appropriate command.
 - Press `Enter`.
@@ -52,7 +52,7 @@ Docs:
 
 To open a terminal:
 
-- Press ```Ctrl + ` ``` (```Cmd + ` ``` on `macOS`)
+- Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 
 ## `Source Control`
 
@@ -108,4 +108,4 @@ Docs:
 ### Settings
 
 - [`files.autoSave`](https://code.visualstudio.com/docs/editing/codebasics#_save-auto-save) - Enabled to save your work if VS Code closes;
-- [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting) - Enabled to run formatters when you press `Ctrl + S` (or `Cmd + S` on `macOS`) to save code.
+- [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting) - Enabled to run formatters when you press `Ctrl+S` (or `Cmd+S` on `macOS`) to save code.
