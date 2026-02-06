@@ -9,6 +9,10 @@
 └───────┘    └────────┘    └─────────┘    └────┘    └────────┘    └───────┘
 ```
 
+Here's this workflow in the context of repos (issues and PR reviews not mentioned for brevity):
+
+![Git workflow](../images/git-workflow.drawio.svg)
+
 Outline:
 
 - [Create an issue](#create-an-issue)
