@@ -150,13 +150,16 @@ Keyboard shortcuts for various commands.
 
 Workspace settings in a `JSON` file that you can store in the repo and share with other collaborators.
 
-This repo has [`.vscode/settings.json`](../../.vscode/settings.json).
-
 Docs:
 
 - [docs](https://code.visualstudio.com/docs/configure/settings#_settings-json-file)
 
-### Settings
+### Workspace settings
+
+The settings for this repo workspace are in [`.vscode/settings.json`](../../.vscode/settings.json).
+
+Here are some settings that you can change:
 
 - [`files.autoSave`](https://code.visualstudio.com/docs/editing/codebasics#_save-auto-save) - Enabled to save your work if VS Code closes;
 - [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting) - Enabled to run formatters when you press `Ctrl+S` (or `Cmd+S` on `macOS`) to save code.
+- `Markdown` editor and preview [synchronization settings](https://code.visualstudio.com/docs/languages/markdown#_editor-and-preview-synchronization) - Disabled for smoother scrolling of the editor and the preview.
