@@ -112,7 +112,7 @@ Get the collaborator to approve the PR.
 
 1. Check the task's **Acceptance criteria**.
 2. Leave at least one [comment](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request) — point out problems or confirm that items look good.
-3. Approve the PR when all relevant acceptance criteria are met.
+3. [Approve](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request#submitting-your-review) the PR when all relevant acceptance criteria are met.
 
 #### As a PR author
 
