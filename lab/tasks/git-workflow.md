@@ -11,7 +11,7 @@
 
 ## Create an issue
 
-[Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a `GitHub` issue in your forked repo using the `Lab Task` [issue form](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms) (defined in [`.github/ISSUE_TEMPLATE/01-task.yml`](../../../.github/ISSUE_TEMPLATE/01-task.yml)).
+[Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a `GitHub` issue in your forked repo using the `Lab Task` [issue form](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms) (defined in [`.github/ISSUE_TEMPLATE/01-task.yml`](../../.github/ISSUE_TEMPLATE/01-task.yml)).
 
 ## Create a branch
 
@@ -21,14 +21,14 @@ Create a new branch for the issue using one of these ways:
 
 1. [Create a branch](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue).
 1. Copy the command.
-1. [Open the `Terminal`](../../appendix/vs-code.md#open-the-terminal).
+1. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
 1. Paste the command to the `Terminal`.
 1. Press `Enter` to run the command.
 
 ### Using `Terminal`
 
-1. [Open the `Terminal`](../../appendix/vs-code.md#open-the-terminal).
-2. [Run](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
+2. [Run](../appendix/vs-code.md#run-a-command-using-the-terminal):
 
     ```console
     git checkout -b <branch-name>
@@ -36,7 +36,7 @@ Create a new branch for the issue using one of these ways:
 
 ### Using `VS Code`
 
-1. [Open the `Command Palette`](../../appendix/vs-code.md#open-the-command-palette).
+1. [Open the `Command Palette`](../appendix/vs-code.md#open-the-command-palette).
 2. Run `GitLens: Git Create Branch...`.
 
 ## Make commits
@@ -55,7 +55,7 @@ Common types:
 
 ### Commit using the `Terminal`
 
-1. Open the [`Terminal`](../../appendix/vs-code.md#open-the-terminal).
+1. Open the [`Terminal`](../appendix/vs-code.md#open-the-terminal).
 2. Run:
 
   ```console
@@ -65,14 +65,14 @@ Common types:
 
 ### Commit using `Source Control`
 
-1. [Open the `Source Control`](../../appendix/vs-code.md#open-the-source-control).
+1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
 2. Click `+` next to changed files to stage them.
 3. Type commit message, e.g., `docs: add architecture diagram`.
 4. Click `Commit`.
 
 ### Commit using `Source Control` (specific changes)
 
-1. [Open the `Source Control`](../../appendix/vs-code.md#open-the-source-control).
+1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
 2. Go to `Changes`.
 3. Click a file.
 4. Select changed lines in the editor (red-green).
