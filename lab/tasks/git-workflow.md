@@ -58,10 +58,12 @@ Common types:
 1. Open the [`Terminal`](../appendix/vs-code.md#open-the-terminal).
 2. Run:
 
-  ```console
-  git add <file>                                 # e.g., git add docs/architecture.md
-  git commit -m "<type>: <short description>"    # e.g., git commit -m "docs: add architecture diagram"
-  ```
+   ```console
+   git add <file>
+   # example: git add docs/architecture.md
+   git commit -m "<type>: <short description>"
+   # example: git commit -m "docs: add architecture diagram"
+   ```
 
 ### Commit using `Source Control`
 
