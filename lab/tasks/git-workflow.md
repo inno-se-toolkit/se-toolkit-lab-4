@@ -98,10 +98,10 @@ Common types:
 2. Run:
 
    ```console
-   git add <file>
-   # example: git add docs/architecture.md
-   git commit -m "<type>: <short description>"
-   # example: git commit -m "docs: add architecture diagram"
+   git add '<file>'
+   # example: git add 'docs/diagrams/out/yandex-go/architecture-sequence/Sequence Diagram.svg'
+   git commit -m '<type>: <short description>'
+   # example: git commit -m 'docs: add architecture diagram'
    ```
 
 ### Commit using `Source Control`

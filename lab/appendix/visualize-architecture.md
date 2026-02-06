@@ -9,7 +9,7 @@ You can *prototype* diagrams in [`docs/diagrams/prototype`](../../docs/diagrams/
 
 However, it's not a good idea to version control images because you can't conveniently visualize their diffs and therefore can't track changes well.
 
-Therefore, you must use the ["diagrams as code"](https://simmering.dev/blog/diagrams/) approach and eventually switch to one of the following approaches.
+Therefore, you must use the [`diagrams as code`](https://simmering.dev/blog/diagrams/) approach and eventually switch to one of the following approaches.
 
 ## `PlantUML`
 
@@ -38,7 +38,7 @@ You can write [`Mermaid`](https://mermaid.js.org/) code in `Markdown` files in c
 
 ## Other tools
 
-Other tools that implement the "diagrams as code" approach include:
+Other tools that implement the `diagrams as code` approach include:
 
 - [`Structurizr`](https://structurizr.com/)
 - [`D2`](https://d2lang.com/)

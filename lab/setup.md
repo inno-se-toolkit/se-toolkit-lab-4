@@ -24,8 +24,8 @@ You'll complete tasks individually, but review each other's work via pull reques
 (If needed) On your computer, configure [`Git`](https://git-scm.com/):
 
 ```bash
-git config --global user.name "Your Name"
-git config --global user.email "your@email"
+git config --global user.name 'Your Name'
+git config --global user.email 'your@email'
 ```
 
 ## Set up `VS Code`

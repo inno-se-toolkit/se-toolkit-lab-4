@@ -43,23 +43,42 @@ git checkout -b add-contributor
 
 ```bash
 git add CONTRIBUTORS.md
-git commit -m "docs: add <your-username> to contributors"
+git commit -m 'docs: add <your-username> to contributors'
 git push -u origin add-contributor
 ```
 
 ### 5. Create a Pull Request (PR)
 
-1. Go to your fork on `GitHub`.
-2. If you see the `Compare & pull request` button, click it.
-3. Otherwise:
-   1. Click `main`.
-   2. In the `Find or create a branch...`, start typing the branch name (`add-contributor`).
-   3. Click the branch name in the list.
-   4. Click `Contribute`.
-   5. Click `Open pull request`.
-4. Write the PR title (`Add @<your-username> to contributors`).
-5. Write the PR description.
-6. Click `Create pull request`.
+Go to your fork on `GitHub`.
+
+Open PR editor using one of the following methods.
+
+#### Open PR editor using a prompt
+
+If you see the `Compare & pull request` button, click it.
+
+#### Open PR editor using `Pull requests`
+
+1. Click `Pull requests`.
+2. Click `New pull request`.
+3. Click `base repository: <your-username>/lab-01-market-product-and-git`.
+4. Click `<your-username>/lab-01-market-product-and-git`.
+5. Click `compare: main`.
+6. Click `add-contributor`.
+7. Click `Create pull request`.
+
+#### Open PR editor using the branch list
+
+1. Click `main`.
+2. Click `add-contributor` in the list.
+3. Click `Contribute`.
+4. Click `Open pull request`.
+
+#### Finish creating a PR
+
+1. Write the PR title (`Add @<your-username> to contributors`).
+2. Write the PR description.
+3. Click `Create pull request`.
 
 ### 6. Get review and merge
 
