@@ -19,6 +19,31 @@ You'll complete tasks individually, but review each other's work via pull reques
 1. In the repo `Settings` -> `Collaborators` -> `Add people`, add your partner as a collaborator.
 2. Make sure your collaborator has accepted the invitation sent to their email.
 
+## Protect your `main` branch
+
+Branch protection prevents accidental pushes directly to `main`.
+This enforces the PR workflow and ensures all changes are reviewed.
+
+1. Go to your fork.
+2. Go to `Settings`.
+3. Go to `Code and automation`.
+4. Go to `Rules`.
+5. Go to `Rulesets`.
+6. Go to `New ruleset`.
+7. Go to `Add branch ruleset`.
+8. Set:
+
+   1. `Ruleset Name`: `push`
+   2. `Enforcement status`: `Active`
+   3. `Target branches` -> `Add target` -> `Include default branch`
+   4. Rules:
+      - [x] `Restrict deletions`
+      - [x] `Require a pull request before merging`:
+         - `Required approvals`: `1`
+         - `Require conversation resolution before merging`
+         - `Allowed merge methods`: `Merge`.
+      - [x] Block force pushes
+
 ## Set up `Git`
 
 (If needed) On your computer, configure [`Git`](https://git-scm.com/):
@@ -123,31 +148,6 @@ GitLens shows commit history, blame annotations, and branch visualization right 
 #### (Optional) Learn more about `GitLens`
 
 See [`GitLens` features](https://help.gitkraken.com/gitlens/gitlens-features/).
-
-### Repo: Protect your `main` branch
-
-Branch protection prevents accidental pushes directly to `main`.
-This enforces the PR workflow and ensures all changes are reviewed.
-
-1. Open the repo.
-2. Go to `Settings`.
-3. Go to `Code and automation`.
-4. Go to `Rules`.
-5. Go to `Rulesets`.
-6. Go to `New ruleset`.
-7. Go to `Add branch ruleset`.
-8. Set:
-
-   1. `Ruleset Name`: `push`
-   2. `Enforcement status`: `Active`
-   3. `Target branches` -> `Add target` -> `Include default branch`
-   4. Rules:
-      - [x] `Restrict deletions`
-      - [x] `Require a pull request before merging`:
-         - `Required approvals`: `1`
-         - `Require conversation resolution before merging`
-         - `Allowed merge methods`: `Merge`.
-      - [x] Block force pushes
 
 ### Repo: Create a label for tasks
 
