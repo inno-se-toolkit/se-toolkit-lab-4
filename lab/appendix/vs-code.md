@@ -3,6 +3,7 @@
 - [`Basic Layout`](#basic-layout)
 - [`Activity Bar`](#activity-bar)
 - [`Status Bar`](#status-bar)
+- [`Editor Toolbar`](#editor-toolbar)
 - [`Command Palette`](#command-palette)
   - [Open the `Command Palette`](#open-the-command-palette)
   - [Run a command using the `Command Palette`](#run-a-command-using-the-command-palette)
@@ -58,6 +59,12 @@ Menus of extensions on the side.
 Statuses and menus of extensions at the bottom.
 
 - [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
+
+## `Editor Toolbar`
+
+Quick actions buttons located above the editor.
+
+- [docs](https://code.visualstudio.com/api/ux-guidelines/overview#editor-toolbar)
 
 ## `Command Palette`
 
