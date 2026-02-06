@@ -16,8 +16,27 @@ Along the way, you'll practice using `Git` and `GitHub` — essential tools for 
 ## Table of contents
 
 - [Learning outcomes](#learning-outcomes)
+- [Learning advice](#learning-advice)
 - [Tasks overview](#tasks-overview)
 - [Tasks](#tasks)
+
+## Learning advice
+
+You need to read the lab tasks and docs to understand them. Do what you can by yourself.
+
+When stuck or unsure, feel free to ask an LLM:
+
+> Give me directions on how to solve this task. I want to maximize learning.
+
+You can also ask LLMs to explain the logic behind tasks if you don't understand it. Example:
+
+> Why is this task important? What exactly do they want to teach me?
+
+Remember: Use LLMs as a tool to enhance your understanding, not replace it.
+
+Always critically evaluate the information provided by LLMs.
+
+Verify this information against credible sources such as official documentation, course materials, and what you observe in reality.
 
 ## Learning outcomes
 
