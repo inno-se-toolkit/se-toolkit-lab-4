@@ -43,7 +43,7 @@ git checkout -b add-contributor
 
 ```bash
 git add CONTRIBUTORS.md
-git commit -m "docs: add <your-username> to contributors"
+git commit -m 'docs: add <your-username> to contributors'
 git push -u origin add-contributor
 ```
 

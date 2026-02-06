@@ -48,7 +48,7 @@ Commit:
 
 ```console
 git add CONTRIBUTORS.md
-git commit -m "docs: update contributors instructions"
+git commit -m 'docs: update contributors instructions'
 ```
 
 ### 4. Make a conflicting change on `conflict-branch-2`
@@ -63,7 +63,7 @@ Commit:
 
 ```console
 git add CONTRIBUTORS.md
-git commit -m "docs: update contributors comment"
+git commit -m 'docs: update contributors comment'
 ```
 
 ### 5. Merge and resolve the conflict
@@ -94,7 +94,7 @@ Then complete the merge:
 
 ```console
 git add CONTRIBUTORS.md
-git commit -m "docs: resolve merge conflict in contributors"
+git commit -m 'docs: resolve merge conflict in contributors'
 ```
 
 #### Resolve the conflict using the merge editor
