@@ -2,7 +2,7 @@
 
 **Time:** ~15 min
 
-**Purpose:** Practice the [`Git workflow`](./procedure.md) before working on the main tasks.
+**Purpose:** Practice the [`Git workflow`](../git-workflow.md) before working on the main tasks.
 
 **Context:** This task is an opportunity to practice the full cycle (Issue → Branch → Commits → PR → Review → Merge).
 
@@ -49,15 +49,17 @@ git push -u origin add-contributor
 
 ### 5. Create a Pull Request (PR)
 
-1. Go to your repo on `GitHub`.
-2. Click `main`.
-3. In the `Find or create a branch...`, start typing the branch name (`add-contributor`).
-4. Click the branch name in the list.
-5. Click `Contribute`.
-6. Click `Open pull request`.
-7. Write the PR title (`Add @<your-username> to contributors`).
-8. Write the PR description.
-9. Click `Create pull request`.
+1. Go to your fork on `GitHub`.
+2. If you see the `Compare & pull request` button, click it.
+3. Otherwise:
+   1. Click `main`.
+   2. In the `Find or create a branch...`, start typing the branch name (`add-contributor`).
+   3. Click the branch name in the list.
+   4. Click `Contribute`.
+   5. Click `Open pull request`.
+4. Write the PR title (`Add @<your-username> to contributors`).
+5. Write the PR description.
+6. Click `Create pull request`.
 
 ### 6. Get review and merge
 

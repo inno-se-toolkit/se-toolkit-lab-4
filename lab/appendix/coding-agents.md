@@ -18,7 +18,9 @@ Below, we explain how to set up coding agents based on the [`Qwen3-Coder`](https
 
 1. [Set up `Qwen Code`](#set-up-qwen-code).
 1. Open the `Chat` panel using one of these methods:
-    1. Method 1: Click the Qwen icon in the top-right corner of the editor.
+    1. Method 1:
+       1. Go to the [`Editor Toolbar`](../appendix/vs-code.md#editor-toolbar).
+       2. Click the `Qwen` icon.
     2. Method 2:
        - [Open the `Command Palette`](../appendix/vs-code.md#open-the-command-palette).
        - Run `Qwen Code: Open`.

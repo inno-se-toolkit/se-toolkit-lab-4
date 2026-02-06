@@ -1,16 +1,52 @@
 # `VS Code`
 
+- [`Basic Layout`](#basic-layout)
+- [`Activity Bar`](#activity-bar)
+- [`Status Bar`](#status-bar)
+- [`Editor Toolbar`](#editor-toolbar)
+- [`Command Palette`](#command-palette)
+  - [Open the `Command Palette`](#open-the-command-palette)
+  - [Run a command using the `Command Palette`](#run-a-command-using-the-command-palette)
+  - [Open a file](#open-a-file)
+- [`Terminal`](#terminal)
+  - [Open the `Terminal`](#open-the-terminal)
+  - [Close the `Terminal`](#close-the-terminal)
+  - [Copy inside the `Terminal`](#copy-inside-the-terminal)
+  - [Paste inside the `Terminal`](#paste-inside-the-terminal)
+  - [Run a command using the `Terminal`](#run-a-command-using-the-terminal)
+- [`Folders`](#folders)
+  - [Open `Folders`](#open-folders)
+- [`Source Control`](#source-control)
+  - [Open the `Source Control`](#open-the-source-control)
+  - [Close the `Source Control`](#close-the-source-control)
+- [`Extensions`](#extensions)
+  - [Install recommended extensions](#install-recommended-extensions)
+- [`Custom Layout`](#custom-layout)
+  - [Use cases](#use-cases)
+- [Keyboard shortcuts](#keyboard-shortcuts)
+  - [Frequently used shortcuts](#frequently-used-shortcuts)
+- [`settings.json`](#settingsjson)
+  - [Workspace settings](#workspace-settings)
+
 > [!IMPORTANT]
-> The first keyboard shortcut is always for `Linux`.
+> The first [keyboard shortcut](#keyboard-shortcuts) is always for `Linux`.
 > It usually coincides with the shortcut for `Windows`.
+>
+> You can check shortcuts for your platform in the [reference](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-reference).
 
 ## `Basic Layout`
 
-Basic UI elements in `VS Code`.
+Basic layout elements in `VS Code`.
+
+- [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 
 ![VS Code UI](../images/vs-code-ui.png)
 
-- [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
+There are actually more layout elements:
+
+- [docs](https://code.visualstudio.com/api/ux-guidelines/overview#items)
+
+![VS Code UI (more elements)](../images/vs-code-ui-more.png)
 
 ## `Activity Bar`
 
@@ -23,6 +59,12 @@ Menus of extensions on the side.
 Statuses and menus of extensions at the bottom.
 
 - [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
+
+## `Editor Toolbar`
+
+Quick actions buttons located above the editor.
+
+- [docs](https://code.visualstudio.com/api/ux-guidelines/overview#editor-toolbar)
 
 ## `Command Palette`
 
@@ -150,13 +192,16 @@ Keyboard shortcuts for various commands.
 
 Workspace settings in a `JSON` file that you can store in the repo and share with other collaborators.
 
-This repo has [`.vscode/settings.json`](../../.vscode/settings.json).
-
 Docs:
 
 - [docs](https://code.visualstudio.com/docs/configure/settings#_settings-json-file)
 
-### Settings
+### Workspace settings
+
+The settings for this repo workspace are in [`.vscode/settings.json`](../../.vscode/settings.json).
+
+Here are some settings that you can change:
 
 - [`files.autoSave`](https://code.visualstudio.com/docs/editing/codebasics#_save-auto-save) - Enabled to save your work if VS Code closes;
 - [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting) - Enabled to run formatters when you press `Ctrl+S` (or `Cmd+S` on `macOS`) to save code.
+- `Markdown` editor and preview [synchronization settings](https://code.visualstudio.com/docs/languages/markdown#_editor-and-preview-synchronization) - Disabled for smoother scrolling of the editor and the preview.

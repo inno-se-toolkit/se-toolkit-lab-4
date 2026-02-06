@@ -34,13 +34,6 @@ git config --global user.email "your@email"
 
    We chose this editor because it has built-in AI features and many useful [extensions](./appendix/vs-code.md#extensions).
 
-1. This is the [`Basic Layout`](./appendix/vs-code.md#basic-layout) of `VS Code`:
-
-    ![VS Code UI](./images/vs-code-ui.png)
-
-1. Try to [open `Folders`](./appendix/vs-code.md#folders).
-1. Try to [open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
-1. Try to [open the `Source Control`](./appendix/vs-code.md#open-the-source-control).
 1. (Optional) [Learn more](../lab/appendix/vs-code.md) about `VS Code`.
 
 ## Open the repository on your computer
@@ -67,6 +60,30 @@ git config --global user.email "your@email"
     2. Click the icon `Accounts`.
     3. Click `Sign in with GitHub ...`.
     4. Repeat for the remaining extensions if there are any.
+
+## Explore `VS Code` layout
+
+Look at the [`Basic Layout`](./appendix/vs-code.md#basic-layout).
+
+## Open `Markdown` file preview
+
+Open `README.md` using one of these approaches.
+
+- [Use the `Command Palette`](./appendix/vs-code.md#open-a-file).
+- Use `Folders`:
+    1. [Open `Folders`](./appendix/vs-code.md#open-folders).
+    1. Click `README.md`.
+
+Open the [`Markdown` preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) using one of these approaches:
+
+- In the [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar), click `Open Preview to the Side`.
+- Use the `Command Palette`:
+  1. [Open the `Command Palette`](./appendix/vs-code.md#open-the-command-palette).
+  2. Run `Markdown: Open Preview to the Side`.
+
+## Change workspace settings
+
+Look at the [workspace settings](./appendix/vs-code.md#workspace-settings) and change them as necessary.
 
 ---
 

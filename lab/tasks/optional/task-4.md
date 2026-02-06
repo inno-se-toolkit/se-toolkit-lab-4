@@ -8,7 +8,7 @@
 
 ## Steps
 
-Note: follow the [procedure for tasks](../required/procedure.md) to complete this task.
+Note: follow the [`Git workflow`](../git-workflow.md) to complete this task.
 
 ### 1. Create an issue
 
