@@ -81,7 +81,7 @@ Complete all optional tasks to leave up to 1 hour early (lab is 3 hours):
 3. [Create a release](./lab/tasks/optional/task-3.md#create-a-release)
 4. [Plan skill development](./lab/tasks/optional/task-4.md#plan-skill-development)
 
-### Additional Resources on Git
+## Additional Resources on `Git`
 
 - Read this [tutorial](https://hackmd.io/@aabounegm/SWP-git) to learn about `Git`, `Github`, and other `Git` workflows.
 - Short videos to build your mental model of how `Git` works:
