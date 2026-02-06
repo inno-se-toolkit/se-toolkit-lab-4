@@ -5,7 +5,7 @@
 1. Find a classmate to be your partner for this lab.
 2. Sit together.
 
-You'll complete tasks individually, but review each other's work via pull requests.
+You'll complete tasks individually, but review each other's work via pull requests (PRs).
 
 ## Set up a fork
 

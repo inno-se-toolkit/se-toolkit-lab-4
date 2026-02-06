@@ -9,7 +9,7 @@
 └───────┘    └────────┘    └─────────┘    └────┘    └────────┘    └───────┘
 ```
 
-Here's this workflow in the context of repos (issues and PR reviews not mentioned for brevity; `improve-lab` is given for an example):
+Here's this workflow in the context of repos (issues and pull request (PR) reviews not mentioned for brevity; `improve-lab` is given for an example):
 
 ![Git workflow](../images/git-workflow.drawio.svg)
 
