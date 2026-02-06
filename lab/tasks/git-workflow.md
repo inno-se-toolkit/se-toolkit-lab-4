@@ -67,6 +67,12 @@ Create a new branch for the issue using one of these ways:
 
 1. [Open the `Command Palette`](../appendix/vs-code.md#open-the-command-palette).
 2. Run `GitLens: Git Create Branch...`.
+3. Select `main` as the base branch (e.g., using `UpArrow` and `DownArrow` on your keyboard).
+4. Press `Enter`.
+5. Write `<branch-name>`.
+6. Press `Enter`.
+7. `Select Create & Switch to Branch` (e.g., using `UpArrow` and `DownArrow` on your keyboard).
+8. Press `Enter`.
 
 ## Make commits
 
