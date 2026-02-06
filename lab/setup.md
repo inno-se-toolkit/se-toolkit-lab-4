@@ -76,7 +76,7 @@ Open `README.md` using one of these approaches.
 
 Open the [`Markdown` preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) using one of these approaches:
 
-- In the `Editor Toolbar`, click `Open Preview to the Side`.
+- In the [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar), click `Open Preview to the Side`.
 - Use the `Command Palette`:
   1. [Open the `Command Palette`](./appendix/vs-code.md#open-the-command-palette).
   2. Run `Markdown: Open Preview to the Side`.
