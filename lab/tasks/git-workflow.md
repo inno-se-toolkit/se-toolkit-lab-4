@@ -189,9 +189,30 @@ Delete the PR branch.
 
 ## Pull changes
 
-In the repository on your computer, switch to `main` and pull changes:
+### Pull using the `Terminal`
 
-```console
-git switch main
-git pull
-```
+1. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
+1. Switch to `main`:
+
+   ```console
+   git switch main
+   ```
+
+1. Pull changes:
+
+   ```console
+   git pull
+   ```
+
+### Pull using `GitLens`
+
+Switch to `main`:
+
+1. Go to the [`Status Bar`](../appendix/vs-code.md#status-bar).
+2. Click the `<branch-name>`.
+3. Click `main`.
+
+Synchronize changes:
+
+1. Go to the [`Status Bar`](../appendix/vs-code.md#status-bar).
+2. Click the `Synchronize Changes` icon to the right of `<branch-name>`.
