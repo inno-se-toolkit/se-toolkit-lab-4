@@ -1,5 +1,32 @@
 # `VS Code`
 
+- [`Basic Layout`](#basic-layout)
+- [`Activity Bar`](#activity-bar)
+- [`Status Bar`](#status-bar)
+- [`Command Palette`](#command-palette)
+  - [Open the `Command Palette`](#open-the-command-palette)
+  - [Run a command using the `Command Palette`](#run-a-command-using-the-command-palette)
+  - [Open a file](#open-a-file)
+- [`Terminal`](#terminal)
+  - [Open the `Terminal`](#open-the-terminal)
+  - [Close the `Terminal`](#close-the-terminal)
+  - [Copy inside the `Terminal`](#copy-inside-the-terminal)
+  - [Paste inside the `Terminal`](#paste-inside-the-terminal)
+  - [Run a command using the `Terminal`](#run-a-command-using-the-terminal)
+- [`Folders`](#folders)
+  - [Open `Folders`](#open-folders)
+- [`Source Control`](#source-control)
+  - [Open the `Source Control`](#open-the-source-control)
+  - [Close the `Source Control`](#close-the-source-control)
+- [`Extensions`](#extensions)
+  - [Install recommended extensions](#install-recommended-extensions)
+- [`Custom Layout`](#custom-layout)
+  - [Use cases](#use-cases)
+- [Keyboard shortcuts](#keyboard-shortcuts)
+  - [Frequently used shortcuts](#frequently-used-shortcuts)
+- [`settings.json`](#settingsjson)
+  - [Workspace settings](#workspace-settings)
+
 > [!IMPORTANT]
 > The first keyboard shortcut is always for `Linux`.
 > It usually coincides with the shortcut for `Windows`.
