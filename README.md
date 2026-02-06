@@ -65,7 +65,7 @@ First complete the [lab setup](./lab/setup.md).
 
 ### Required tasks (~2 hours)
 
-For all required tasks, you must follow the same [`Git workflow`](./lab/tasks/required/procedure.md).
+For all required tasks, you must follow the same [`Git workflow`](./lab/tasks/git-workflow.md).
 
 1. [Practice the `Git workflow`](./lab/tasks/required/task-0.md#practice-the-git-workflow) (~15 min)
 2. [Choose a product and study its architecture](./lab/tasks/required/task-1.md#choose-a-product-and-study-its-architecture) (~30 min)

@@ -2,7 +2,7 @@
 
 **Time:** ~15 min
 
-**Purpose:** Practice the [`Git workflow`](./procedure.md) before working on the main tasks.
+**Purpose:** Practice the [`Git workflow`](../git-workflow.md) before working on the main tasks.
 
 **Context:** This task is an opportunity to practice the full cycle (Issue → Branch → Commits → PR → Review → Merge).
 
