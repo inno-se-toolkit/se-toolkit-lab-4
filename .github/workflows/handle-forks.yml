@@ -1,12 +1,16 @@
 name: Close PRs from forks
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize]
 
 jobs:
   check-and-close-fork-prs:
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
+    # Grant write permissions to the GITHUB_TOKEN
+    permissions:
+      pull-requests: write
+      issues: write
     
     steps:
       - name: Check if PR is from a fork
