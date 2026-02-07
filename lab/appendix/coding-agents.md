@@ -41,4 +41,7 @@ Below, we explain how to set up coding agents based on the [`Qwen3-Coder`](https
 1. Double click `Qwen 3 Coder Plus` to make the model visible.
 1. [Open the `Command Palette`](../appendix/vs-code.md#open-the-command-palette).
 1. Run `Chat: Open Chat`.
-1. In the `Chat`, click `Auto` (`Pick Model`) and then click `Qwen 3 Coder Plus`.
+1. The `CHAT` panel will open.
+1. Go to `CHAT`.
+1. Click `Auto` (`Pick Model`)
+1. Click `Qwen 3 Coder Plus`.
