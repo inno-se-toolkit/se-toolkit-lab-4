@@ -4,7 +4,8 @@
   "plantuml.diagramsRoot": "docs/diagrams/src",
   "plantuml.exportOutDir": "docs/diagrams/out",
   "git.autofetch": true,
-  "files.autoSave": "onFocusChange",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 500,
   "editor.formatOnSave": true,
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
