@@ -2,4 +2,5 @@
   "no-inline-html": false,
   "line-length": false,
   "first-line-heading": false,
+  "no-blanks-blockquote": false,
 }
