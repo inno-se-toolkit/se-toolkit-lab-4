@@ -148,7 +148,7 @@ Common types:
 ### Publish using `GitLens`
 
 1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
-2. Click `GITLENS`.
+2. Click `GITLENS` to open the `GitLens` panel.
 3. Click the `Commits` icon.
 4. Click the `Publish Branch` icon to the right of `Publish <branch-name> to GitHub`.
 5. Press `Enter`.
