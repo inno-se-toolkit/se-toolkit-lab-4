@@ -72,6 +72,9 @@ Create a new branch for the issue using one of these ways:
     git checkout -b <branch-name>
     ```
 
+> [!IMPORTANT]
+> Replace `<branch-name>` with an actual branch name in all subsequent commands.
+
 ### Create using `GitLens`
 
 1. [Open the `Command Palette`](../appendix/vs-code.md#open-the-command-palette).

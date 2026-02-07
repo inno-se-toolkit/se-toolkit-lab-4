@@ -46,12 +46,19 @@ This enforces the PR workflow and ensures all changes are reviewed.
 
 ## Set up `Git`
 
-(If needed) On your computer, configure [`Git`](https://git-scm.com/):
+[Install `Git`](https://git-scm.com/install/).
+
+On your computer, configure `Git`:
 
 ```bash
-git config --global user.name 'Your Name'
-git config --global user.email 'your@email'
+git config --global user.name '<your-name>'
+git config --global user.email '<your-email>'
 ```
+
+> ![NOTE]
+> Replace `<your-name>` with a name and `<your-email>` with an email that you want to see in the commits.
+>
+> See [docs](https://git-scm.com/docs/git-config#Documentation/git-config.txt-username).
 
 ## Set up `VS Code`
 
@@ -63,17 +70,20 @@ git config --global user.email 'your@email'
 
 ## Open the repository on your computer
 
-1. On your computer, create a directory `software-engineering-toolkit`.
-2. In that directory, clone the lab repo.
+1. On your computer, create somewhere a directory `software-engineering-toolkit`.
+2. Open a terminal in that directory.
+3. Clone the lab repo.
 
     ```bash
     git clone https://github.com/<your-username>/lab-01-market-product-and-git
     ```
 
-3. Open the repo in `VS Code`.
+> ![IMPORTANT]
+> Replace `<your-username>` with your `GitHub` username.
+
+1. Open the repo in `VS Code`.
 
     ```bash
-    cd software-engineering-toolkit
     code lab-01-market-product-and-git
     ```
 
@@ -92,19 +102,23 @@ Look at the [`Basic Layout`](./appendix/vs-code.md#basic-layout).
 
 ## Open `Markdown` file preview
 
-Open `README.md` using one of these approaches.
+Open `README.md` using one of these approaches:
 
-- [Use the `Command Palette`](./appendix/vs-code.md#open-a-file).
-- Use `Folders`:
+- Approach 1:
+  - [Use the `Command Palette`](./appendix/vs-code.md#open-a-file).
+- Approach 2:
     1. [Open `Folders`](./appendix/vs-code.md#open-folders).
-    1. Click `README.md`.
+    2. Click `README.md`.
 
 Open the [`Markdown` preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) using one of these approaches:
 
-- In the [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar), click `Open Preview to the Side`.
-- Use the `Command Palette`:
-  1. [Open the `Command Palette`](./appendix/vs-code.md#open-the-command-palette).
-  2. Run `Markdown: Open Preview to the Side`.
+- Approach 1:
+  1. Go to [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar).
+  2. Click `Open Preview to the Side`.
+
+- Approach 2:
+   1. [Open the `Command Palette`](./appendix/vs-code.md#open-the-command-palette).
+   2. Run `Markdown: Open Preview to the Side`.
 
 ## Change workspace settings
 

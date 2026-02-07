@@ -49,9 +49,7 @@ git push -u origin add-contributor
 
 ### 5. Create a Pull Request (PR)
 
-See [Create a PR](../git-workflow.md#create-a-pr).
-
-Replace `<branch-name>` with `add-contributor`.
+[Create a PR](../git-workflow.md#create-a-pr) and continue following the `Git workflow` from there.
 
 ## Acceptance criteria
 
