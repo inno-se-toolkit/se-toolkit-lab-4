@@ -14,9 +14,13 @@
 
 ## Add a classmate as a collaborator
 
-1. In your repo `Settings` -> `Collaborators` -> `Add people`, add your partner as a collaborator.
-2. Your partner should add you as a collaborator in their repo.
-3. Make sure your collaborator has accepted the invitation sent to their email.
+In your repo `Settings` -> `Collaborators` -> `Add people`, add your partner as a collaborator.
+
+Your partner should add you as a collaborator in their repo.
+
+Make sure your collaborator has accepted the invitation sent to their email.
+
+It's OK if your collaborator can't change `Settings` in your repo.
 
 ## Protect your `main` branch
 
