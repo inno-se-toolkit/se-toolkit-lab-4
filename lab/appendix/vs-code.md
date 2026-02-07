@@ -56,7 +56,7 @@ Menus of extensions on the side.
 
 ## `Status Bar`
 
-Statuses and menus of extensions at the bottom.
+Statuses and menus of extensions at the bottom of the `VS Code` window.
 
 - [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 
