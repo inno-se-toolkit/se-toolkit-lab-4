@@ -28,7 +28,8 @@ git checkout -b add-contributor
 ### 3. Add your name
 
 > [!NOTE]
-> Replace `<your-username>` with your `GitHub` username without `@`.
+> Replace `@<your-username>` with your `GitHub` username.
+> Example: `@johndoe`
 
 1. Open [`CONTRIBUTORS.md`](../../../CONTRIBUTORS.md).
 2. Add your GitHub username below the comment:
@@ -51,6 +52,10 @@ git push -u origin add-contributor
 ```
 
 ### 5. Create a Pull Request (PR)
+
+> [!IMPORTANT]
+> Use the title `Add @<your-username> to contributors` but replace `@<your-username>`.
+> Example: `Add @johndoe to contributors`
 
 [Create a PR](../git-workflow.md#create-a-pr) and continue following the `Git workflow` from there.
 
