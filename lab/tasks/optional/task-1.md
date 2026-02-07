@@ -132,12 +132,10 @@ git branch -d conflict-branch-2
 Alternatively:
 
 1. Open [`Command Palette`](../../appendix/vs-code.md#command-palette).
-2. Start typing and select `GitLens: Git Delete Branch...`.
-3. Press `Enter`.
-4. Select `conflict-branch-1` and `conflict-branch-2`.
-5. Press `Enter`.
-6. Select `Delete Branches`.
-7. Press `Enter`.
+2. Run `GitLens: Git Delete Branch...`.
+3. Select `conflict-branch-1` and `conflict-branch-2` to delete them.
+4. Click `OK`.
+5. Click `Delete Branches`.
 
 Close the issue.
 
