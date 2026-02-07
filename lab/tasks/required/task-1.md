@@ -57,13 +57,25 @@ Provide:
 >
 > According to the [`C4 model`](https://c4model.com/abstractions/component), a *component* is a grouping of related functionality encapsulated behind a well-defined interface.
 
+> [!IMPORTANT]
+> Use paths relative to your file.
+>
+> Replace space in the path with `%20` (see [URL encoding](https://en.wikipedia.org/wiki/Percent-encoding)).
+>
+
 1. Embed the product's `Component Diagram.svg`.
 
-   Example: `![Telegram Component Diagram](./diagrams/out/telegram/component-diagram/Component Diagram.svg)`
+   Example: `![Telegram Component Diagram](../../../docs/diagrams/out/telegram/component-diagram/Component%20Diagram.svg)`
+
+   <details><summary>Rendered image (click to open)</summary>
+
+   ![Telegram Component Diagram](../../../docs/diagrams/out/telegram/component-diagram/Component%20Diagram.svg)
+
+   </details>
 
 2. Provide a link to the `PlantUML` code for that [component diagram](../../appendix/architectural-views.md#component-diagram).
   
-   Example: `![Telegram Component Diagram code](./diagrams/src/telegram/component-diagram.puml)`
+   Example: [Telegram Component Diagram Code](../../../docs/diagrams/src/telegram/component-diagram.puml)
 
 3. Select at least 5 components of the product from the component diagram.
 
