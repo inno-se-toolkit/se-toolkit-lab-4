@@ -54,7 +54,7 @@ git config --global user.name '<your-name>'
 git config --global user.email '<your-email>'
 ```
 
-> ![NOTE]
+> [!NOTE]
 > Replace `<your-name>` with a name and `<your-email>` with an email that you want to see in the commits.
 >
 > See [docs](https://git-scm.com/docs/git-config#Documentation/git-config.txt-username).
