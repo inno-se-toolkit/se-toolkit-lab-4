@@ -65,7 +65,7 @@ Provide:
 > 3. Use suggestions to continue the path.
 
 > [!IMPORTANT]
-> Use paths relative to **`docs/architecture.md`** file.
+> Use paths relative to the **`docs/architecture.md`** file.
 >
 > Replace space in the path with `%20` (see [URL encoding](https://en.wikipedia.org/wiki/Percent-encoding)).
 
