@@ -1,4 +1,4 @@
-# Lab 01 – Product architecture, tech roles, and your skills
+# Lab 1 – Product architecture, tech roles, and your skills
 
 Questions:
 
