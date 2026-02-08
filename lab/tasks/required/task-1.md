@@ -71,9 +71,9 @@ Provide:
 
 1. Embed the product's `Component Diagram.svg`.
 
-   Example: `![Telegram Component Diagram](../../../docs/diagrams/out/telegram/component-diagram/Component%20Diagram.svg)`
+   Example (path provided relative to this file): `![Telegram Component Diagram](../../../docs/diagrams/out/telegram/component-diagram/Component%20Diagram.svg)`
 
-   <details><summary>Rendered image (click to open)</summary>
+   <details><summary>Embedded image example (click to open)</summary>
 
    ![Telegram Component Diagram](../../../docs/diagrams/out/telegram/component-diagram/Component%20Diagram.svg)
 
