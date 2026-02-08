@@ -25,6 +25,7 @@
   - [Install recommended extensions](#install-recommended-extensions)
 - [`Custom Layout`](#custom-layout)
   - [Use cases](#use-cases)
+    - [Move the `Primary Sidebar` to the right](#move-the-primary-sidebar-to-the-right)
 - [Keyboard shortcuts](#keyboard-shortcuts)
   - [Frequently used shortcuts](#frequently-used-shortcuts)
 - [`settings.json`](#settingsjson)
@@ -190,7 +191,11 @@ Change the [Basic Layout](#basic-layout).
 
 ### Use cases
 
-- [Move](https://code.visualstudio.com/docs/configure/custom-layout#_primary-side-bar) the `Primary Side Bar` to the right so that it doesn't move your code whenever the `Primary Side Bar` opens. This setting is already used in [`.vscode/settings.json`](../../.vscode/settings.json).
+#### Move the `Primary Sidebar` to the right
+
+[Move](https://code.visualstudio.com/docs/configure/custom-layout#_primary-side-bar) the [`Primary Sidebar`](#primary-sidebar) to the right so that it doesn't move your code whenever the `Primary Sidebar` opens.
+
+Edit the [`Workspace Settings`](#workspace-settings) if you don't like that the `Primary Sidebar` on the right side.
 
 ## Keyboard shortcuts
 
