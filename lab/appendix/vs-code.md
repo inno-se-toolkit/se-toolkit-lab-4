@@ -49,7 +49,7 @@ Docs:
 
 ## `Activity Bar`
 
-Menus of extensions on the side.
+Menus of extensions on a side of the editor.
 
 - [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 
