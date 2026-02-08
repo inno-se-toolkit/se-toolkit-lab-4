@@ -2,6 +2,8 @@
 
 - [`Basic Layout`](#basic-layout)
 - [`Activity Bar`](#activity-bar)
+- [`Primary Sidebar`](#primary-sidebar)
+  - [Open the `Primary Sidebar`](#open-the-primary-sidebar)
 - [`Status Bar`](#status-bar)
 - [`Editor Toolbar`](#editor-toolbar)
 - [`Command Palette`](#command-palette)
@@ -50,6 +52,14 @@ Docs:
 Menus of extensions on the side.
 
 - [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
+
+## `Primary Sidebar`
+
+Panels and views on a side of the editor.
+
+### Open the `Primary Sidebar`
+
+For example, [open the `Source Control`](#open-the-source-control).
 
 ## `Status Bar`
 
