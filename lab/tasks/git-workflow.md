@@ -108,17 +108,14 @@ Create a new branch using one of these approaches:
 
 Make commits to the `<branch-name>` to complete the task.
 
-### Commit message format
-
-Format: `type: short description`
-
-Common types:
-
-- `docs:` — documentation changes (most common in this lab)
-- `feat:` — new functionality
-- `fix:` — bug fixes
-
-### Commit
+> ![NOTE]
+> Commit message format is: `type: short description`
+>
+> Common types:
+>
+> - `fix:` — bug fixes
+> - `feat:` — additions (e.g., new feature)
+> - `docs:` — documentation changes
 
 Commit using one of these approaches:
 
