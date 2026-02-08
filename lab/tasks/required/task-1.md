@@ -57,6 +57,13 @@ Provide:
 >
 > According to the [`C4 model`](https://c4model.com/abstractions/component), a *component* is a grouping of related functionality encapsulated behind a well-defined interface.
 
+> [!TIP]
+> Use auto-completion for paths.
+>
+> 1. Write `![Telegram Component Diagram]()`.
+> 2. Inside parentheses `()`, start typing `./`.
+> 3. Use suggestions to continue the path.
+
 > [!IMPORTANT]
 > Use paths relative to your file.
 >
