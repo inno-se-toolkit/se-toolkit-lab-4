@@ -169,6 +169,11 @@ Clone the fork using one of these approaches:
     3. Click `Sign in with GitHub ...`.
     4. Repeat for the remaining extensions if there are any.
 
+## Reload `VS Code`
+
+[Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette): `Developer: Reload Window`.
+
+
 ## Explore `VS Code` layout
 
 Look at the [`Basic Layout`](./appendix/vs-code.md#basic-layout).
