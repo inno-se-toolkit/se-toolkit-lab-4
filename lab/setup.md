@@ -8,8 +8,14 @@
 ## Set up a fork
 
 1. Create a `GitHub` account.
-2. [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository) this repo (repository) to your `GitHub` account and make your fork public.
-3. Continue your work in the forked repo.
+2. Go to the [original repo](https://github.com/inno-se-toolkit/lab-01-market-product-and-git) (repository).
+3. [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository) the original repo.
+4. Go to your fork. The `URL` should be like `https://github.com/<your-username>/lab-01-market-product-and-git`.
+5. If you see a lock sign near your fork name, [make your fork public](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#changing-a-repositorys-visibility).
+
+> [!NOTE]
+> Continue working in your fork.
+
 4. In the repo -> `Settings` -> `General` -> `Features`, enable `Issues`.
 
 ## Add a classmate as a collaborator
