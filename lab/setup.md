@@ -191,9 +191,17 @@ Install [`Starship`](https://github.com/starship/starship#-installation).
 
 Complete these steps:
 
-1. [Look at the commit graph](#look-at-the-commit-graph)
-2. [Inspect remotes and the current branch](#inspect-remotes-and-the-current-branch)
-3. [(Optional) Learn more about `GitLens`](#optional-learn-more-about-gitlens)
+1. [See all branches](#see-all-branches)
+2. [Look at the commit graph](#look-at-the-commit-graph)
+3. [Inspect remotes and the current branch](#inspect-remotes-and-the-current-branch)
+4. [(Optional) Learn more about `GitLens`](#optional-learn-more-about-gitlens)
+
+#### See all branches
+
+1. Go to the [`Status Bar`](../lab/appendix/vs-code.md#status-bar).
+2. Look at the branch name.
+3. Click it to see all available branches.
+4. If you click a branch, you'll be able to switch to it.
 
 #### Look at the commit graph
 
