@@ -7,7 +7,7 @@
 - [`Command Palette`](#command-palette)
   - [Open the `Command Palette`](#open-the-command-palette)
   - [Run a command using the `Command Palette`](#run-a-command-using-the-command-palette)
-  - [Open a file](#open-a-file)
+  - [Open a file using the `Command Palette`](#open-a-file-using-the-command-palette)
 - [`Terminal`](#terminal)
   - [Open the `Terminal`](#open-the-terminal)
   - [Close the `Terminal`](#close-the-terminal)
@@ -81,7 +81,7 @@ Run editor commands.
 1. Select the necessary command (move the cursor via `UpArrow` and `DownArrow` on your keyboard).
 1. Press `Enter`.
 
-### Open a file
+### Open a file using the `Command Palette`
 
 1. Press `Ctrl+P` (`Cmd+P` on `macOS`).
 2. Start typing the name of the file.
