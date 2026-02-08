@@ -17,9 +17,9 @@ Outline:
 
 - [Create an issue](#create-an-issue)
 - [Create a branch](#create-a-branch)
-  - [Create using `GitHub`](#create-using-github)
-  - [Create using the `Terminal`](#create-using-the-terminal)
-  - [Create using `GitLens`](#create-using-gitlens)
+  - [Create a branch using `GitHub`](#create-a-branch-using-github)
+  - [Create a branch using the `Terminal`](#create-a-branch-using-the-terminal)
+  - [Create a branch using `GitLens`](#create-a-branch-using-gitlens)
 - [Make commits](#make-commits)
   - [Commit message format](#commit-message-format)
   - [Commit using the `Terminal`](#commit-using-the-terminal)
@@ -60,20 +60,30 @@ Outline:
 
 ## Create a branch
 
-Create a new branch for the issue using one of these ways:
+Create a new branch using one of these approaches:
 
-### Create using `GitHub`
+- [Create a branch using `GitHub`](#create-a-branch-using-github)
+- [Create a branch using the `Terminal`](#create-a-branch-using-the-terminal)
+- [Create a branch using `GitLens`](#create-a-branch-using-gitlens)
 
+### Create a branch using `GitHub`
+
+1. Go to your fork on `GitHub`.
 1. [Create a branch](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue).
-1. Copy the command.
-1. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
-1. Paste the command to the `Terminal`.
-1. Press `Enter` to run the command.
+1. Copy the command provided by `GitHub`. It's something like:
 
-### Create using the `Terminal`
+   ```console
+   git fetch origin
+   git checkout <branch-name>
+   ```
 
 1. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
-2. [Run](../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run the copied command](../appendix/vs-code.md#run-a-command-using-the-terminal).
+
+### Create a branch using the `Terminal`
+
+1. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
+1. [Run](../appendix/vs-code.md#run-a-command-using-the-terminal):
 
     ```console
     git checkout -b <branch-name>
@@ -82,7 +92,7 @@ Create a new branch for the issue using one of these ways:
 > [!IMPORTANT]
 > Replace `<branch-name>` with an actual branch name in all subsequent commands.
 
-### Create using `GitLens`
+### Create a branch using `GitLens`
 
 1. [Open the `Command Palette`](../appendix/vs-code.md#open-the-command-palette).
 2. Run `GitLens: Git Create Branch...`.
