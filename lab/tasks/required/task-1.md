@@ -6,28 +6,31 @@
 
 **Context:** Imagine you have joined one of these product teams. On your first days, you need to understand what the product does and how it is structured.
 
-- [Steps](#steps)
-  - [1. Create an issue](#1-create-an-issue)
-  - [2. Choose a product](#2-choose-a-product)
-  - [3. Find the diagrams](#3-find-the-diagrams)
-  - [4. Create `docs/architecture.md`](#4-create-docsarchitecturemd)
-    - [`## Product Choice`](#-product-choice)
-    - [`## Main components`](#-main-components)
-    - [`## Data flow`](#-data-flow)
-    - [`## Deployment`](#-deployment)
-    - [`## Assumptions`](#-assumptions)
-    - [`## Open questions`](#-open-questions)
+- [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
+- [1. Create an issue](#1-create-an-issue)
+- [2. Choose a product](#2-choose-a-product)
+- [3. Find the diagrams](#3-find-the-diagrams)
+- [4. Create `docs/architecture.md`](#4-create-docsarchitecturemd)
+  - [`## Product Choice`](#-product-choice)
+  - [`## Main components`](#-main-components)
+    - [Embed the product's `Component Diagram.svg`](#embed-the-products-component-diagramsvg)
+    - [Add link to `PlantUML` code](#add-link-to-plantuml-code)
+    - [Explain the components](#explain-the-components)
+  - [`## Data flow`](#-data-flow)
+  - [`## Deployment`](#-deployment)
+  - [`## Assumptions`](#-assumptions)
+  - [`## Open questions`](#-open-questions)
 - [Acceptance criteria](#acceptance-criteria)
 
 ## 0. Follow the `Git workflow`
 
 Follow the [`Git workflow`](../git-workflow.md) to complete this task.
 
-### 1. Create an issue
+## 1. Create an issue
 
 Title: `[Task] Product & architecture description`
 
-### 2. Choose a product
+## 2. Choose a product
 
 > [!IMPORTANT]
 > You and your partner must pick **different products**. This way, during PR reviews, you'll learn about each other's products.
@@ -40,7 +43,7 @@ Available products:
 
 Alternatively, choose another full-stack product with at least a million users. In that case, you'll have to [visualize the architecture](../../appendix/visualize-architecture.md) on your own.
 
-### 3. Find the diagrams
+## 3. Find the diagrams
 
 > [!IMPORTANT]
 > System architecture diagrams represent the system architecture but they are not the [system architecture](https://github.com/inno-se/the-guide?tab=readme-ov-file#architecture).
@@ -54,11 +57,11 @@ Alternatively, choose another full-stack product with at least a million users. 
 
 2. If you chose another project, provide component, deployment, sequence diagrams in two formats in corresponding directories.
 
-### 4. Create `docs/architecture.md`
+## 4. Create `docs/architecture.md`
 
 Create the file and add the following sections:
 
-#### `## Product Choice`
+### `## Product Choice`
 
 Provide:
 
@@ -66,7 +69,7 @@ Provide:
 - Link to the product's website;
 - Short description of the product (1-2 sentences).
 
-#### `## Main components`
+### `## Main components`
 
 > [!NOTE]
 >
@@ -116,7 +119,7 @@ Example: [Telegram Component Diagram Code](../../../docs/diagrams/src/telegram/c
 
 2. For each selected component, explain in 1-2 sentences what it does (as you think).
 
-#### `## Data flow`
+### `## Data flow`
 
 1. Embed the product's `Sequence Diagram.svg`.
 2. Provide a link to the `PlantUML` code for that [sequence diagram](../../appendix/architectural-views.md#sequence-diagram).
@@ -124,13 +127,13 @@ Example: [Telegram Component Diagram Code](../../../docs/diagrams/src/telegram/c
 4. Describe what happens in that group of steps.
 5. Mention which components talk to each other and what data they exchange.
 
-#### `## Deployment`
+### `## Deployment`
 
 1. Embed the product's `Deployment Diagram.svg`.
 2. Provide a link to the `PlantUML` code for that [deployment diagram](../../appendix/architectural-views.md#deployment-diagram).
 3. Briefly describe where the components are deployed.
 
-#### `## Assumptions`
+### `## Assumptions`
 
 List two or more assumptions you made while describing the architecture. Examples:
 
@@ -138,7 +141,7 @@ List two or more assumptions you made while describing the architecture. Example
 - Telegram: *"I assume the cloud storage system implements deduplication to optimize storage costs for shared media files."*
 - Wildberries: *"I assume the Logistics & Routing service integrates with multiple delivery partners to optimize shipping costs and delivery times"*
 
-#### `## Open questions`
+### `## Open questions`
 
 List two or more questions that you couldn't answer based on the openly available information. Examples:
 
