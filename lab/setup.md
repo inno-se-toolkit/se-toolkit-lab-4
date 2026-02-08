@@ -188,12 +188,14 @@ Install [`Starship`](https://github.com/starship/starship#-installation).
 #### Inspect remotes and the current branch
 
 1. [Open the `Source Control`](../lab/appendix/vs-code.md#open-the-source-control).
-1. Click `GITLENS` in the opened [`Primary Side Bar`](../lab/appendix/vs-code.md#basic-layout).
-1. Go to the `GITLENS` panel.
-1. Click the icon `Remotes`.
-1. Make sure `origin` points to your repo URL (hover over it an look at URLs).
-1. Click the icon `Commits`.
-1. Make sure you can see commits on the current branch.
+2. Go to [`Sidebar Toolbar`](../lab/appendix/vs-code.md#basic-layout).
+3. Click three dots.
+4. Click `GITLENS` in the opened [`Primary Side Bar`](../lab/appendix/vs-code.md#basic-layout).
+5. Go to the `GITLENS` panel.
+6. Click the icon `Remotes`.
+7. Make sure `origin` points to your repo URL (hover over it an look at URLs).
+8. Click the icon `Commits`.
+9. Make sure you can see commits on the current branch.
 
 #### (Optional) Learn more about `GitLens`
 
