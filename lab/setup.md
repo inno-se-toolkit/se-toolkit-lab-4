@@ -18,21 +18,16 @@
 
 ## Enable issues
 
-Go to `Settings` -> `General` -> `Features`.
-
-Check the box near `Issues`.
+1. Go to `Settings` -> `General` -> `Features`.
+2. Check the box near `Issues`.
 
 ## Add a classmate as a collaborator
 
-Go to `Settings` -> `Collaborators` -> `Add people`.
-
-Add your partner as a collaborator.
-
-Your partner should add you as a collaborator in their repo.
-
-Make sure your collaborator has accepted the invitation sent to their email.
-
-It's OK if your collaborator can't change `Settings` in your repo.
+1. Go to `Settings` -> `Collaborators` -> `Add people`.
+2. Add your partner as a collaborator.
+3. Your partner should add you as a collaborator in their repo.
+4. Make sure your collaborator has accepted the invitation sent to their email.
+5. It's OK if your collaborator can't change `Settings` in your repo.
 
 ## Protect your `main` branch
 
