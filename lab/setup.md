@@ -74,7 +74,7 @@ git config --global user.email '<your-email>'
 
    We chose this editor because it has built-in AI features and many useful [extensions](./appendix/vs-code.md#extensions).
 
-1. (Optional) [Learn more](../lab/appendix/vs-code.md) about `VS Code`.
+2. (Optional) [Learn more](../lab/appendix/vs-code.md) about `VS Code`.
 
 ## Open the repository on your computer
 
