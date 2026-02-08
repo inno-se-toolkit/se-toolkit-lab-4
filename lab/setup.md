@@ -16,7 +16,11 @@
 > [!NOTE]
 > Continue working in your fork.
 
-4. In the repo -> `Settings` -> `General` -> `Features`, enable `Issues`.
+## Enable issues
+
+Go to `Settings` -> `General` -> `Features`.
+
+Check the box near `Issues`.
 
 ## Add a classmate as a collaborator
 
