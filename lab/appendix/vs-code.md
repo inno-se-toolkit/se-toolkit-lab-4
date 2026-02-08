@@ -123,6 +123,7 @@ Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 
 ### Run a command using the `Terminal`
 
+1. [Open the `Terminal`](#open-the-terminal).
 1. Write or [paste](#paste-inside-the-terminal) a command.
 1. Press `Enter`.
 
