@@ -247,7 +247,7 @@ Complete these steps:
 
 #### Look at the commit graph
 
-1. Go to the [`Status Bar`](../lab/appendix/vs-code.md#status-bar):
+1. Go to the [`Status Bar`](../lab/appendix/vs-code.md#status-bar).
 1. Click the icon `Visualize commits on the Commit Graph`.
 1. Make sure you can see the commit graph.
 
