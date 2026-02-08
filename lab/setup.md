@@ -171,21 +171,21 @@ Look at the [workspace settings](./appendix/vs-code.md#workspace-settings) and c
 
 ---
 
-## Optional enhancements to make your life easier
+## Optional enhancements
 
-### Coding: Set up a coding agent
+### Set up a coding agent
 
 A coding agent can help you write code, explain concepts, and debug issues.
 
 See [Coding agents](./appendix/coding-agents.md).
 
-### Shell: Set up the prompt
+### Set up the shell prompt
 
 Starship shows your current `Git` branch, status, and other useful info directly in your terminal prompt.
 
 Install [`Starship`](https://github.com/starship/starship#-installation).
 
-### `VS Code`: Check `GitLens`
+### Check `GitLens` in `VS Code`
 
 `GitLens` shows commit history, blame annotations, and branch visualization right inside `VS Code`.
 
