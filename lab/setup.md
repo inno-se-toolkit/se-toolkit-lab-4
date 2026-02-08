@@ -27,7 +27,7 @@ It's OK if your collaborator can't change `Settings` in your repo.
 Branch protection prevents accidental pushes directly to `main`.
 This enforces the PR workflow and ensures all changes are reviewed.
 
-1. Go to your fork.
+1. Go to your fork on `GitHub`.
 2. Go to `Settings`.
 3. Go to `Code and automation`.
 4. Go to `Rules`.
