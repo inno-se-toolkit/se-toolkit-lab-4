@@ -97,7 +97,7 @@ git config --global user.email '<your-email>'
 
 ## Set up `VS Code` extensions
 
-1. Install the recommended `VS Code` [extensions](./appendix/vs-code.md#extensions) (listed in [`.vscode/extensions.json`](../.vscode/extensions.json)) when `VS Code` prompts to install them.
+1. [Install recommended `VS Code` extensions](./appendix/vs-code.md#install-recommended-extensions).
 2. Sign in to accounts.
     1. Go to the [`Activity Bar`](./appendix/vs-code.md#activity-bar).
     2. Click the icon `Accounts`.
