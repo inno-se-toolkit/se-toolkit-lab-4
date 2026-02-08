@@ -230,9 +230,13 @@ See [Coding agents](./appendix/coding-agents.md).
 
 ### Set up the shell prompt
 
-`Starship` shows your current `Git` branch, status, and other useful info directly in your shell prompt in almost any terminal, including the [`Terminal`](./appendix/vs-code.md#terminal).
+`Starship` shows your current `Git` branch, status, and other useful info directly in your [shell prompt](https://en.wikibooks.org/wiki/Guide_to_Unix/Explanations/Shell_Prompt) in almost any terminal, including the [`Terminal`](./appendix/vs-code.md#terminal).
 
-Install [`Starship`](https://github.com/starship/starship#-installation).
+Complete these steps:
+
+1. Install [`Starship`](https://github.com/starship/starship#-installation).
+2. [Open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
+3. You should see something like `lab-01-market-product-and-git on main`.
 
 ### Check `GitLens` in `VS Code`
 
