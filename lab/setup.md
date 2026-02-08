@@ -68,7 +68,7 @@ git config --global user.email '<your-email>'
 # example: git config --global user.name 'johndoe@gmail.com'
 ```
 
-## Set up `VS Code`
+## Install `VS Code`
 
 1. Install [`VS Code`](https://code.visualstudio.com/).
 
