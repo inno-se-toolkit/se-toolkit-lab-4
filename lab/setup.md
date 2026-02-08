@@ -211,26 +211,42 @@ Install [`Starship`](https://github.com/starship/starship#-installation).
 
 See [`GitLens` features](https://help.gitkraken.com/gitlens/gitlens-features/).
 
-### Repo: Create a label for tasks
+### Create a label for tasks
+
+[Labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) help you filter and organize issues.
+
+With a `task` label, you can see in one view all issues created for lab tasks.
 
 > [!TIP]
 > If you create the `task` label before creating issues, your issues will have this label automatically as configured in the [issue form](../.github/ISSUE_TEMPLATE/01-task.yml).
 
-[Labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) help you filter and organize issues.
+Complete these steps:
 
-With a `task` label, you can see in one view all lab tasks that have this label.
+1. [Create the `task` label](#create-the-task-label)
+1. [Add the label to issues](#add-the-label-to-issues)
+1. [See all issues with the label](#see-all-issues-with-the-label)
 
-In the repo -> `Issues` -> `Labels`, create a new label:
+#### Create the `task` label
 
-1. Click `New label`.
-2. Name: `task`.
-3. Click `Create label`.
+1. Go to your fork.
+2. Go to `Issues` -> `Labels`.
+3. Create a new label:
+   1. Click `New label`.
+   2. Name: `task`.
+   3. Click `Create label`.
 
-Then [add this label](https://github.com/orgs/community/discussions/53473#discussioncomment-5697478) to some of your task issues.
+#### Add the label to issues
 
-Next, in the repo -> `Issues`, filter by the label:
+1. Go to your fork.
+2. [Add](https://github.com/orgs/community/discussions/53473#discussioncomment-5697478) the `task` label to some of your issues.
 
-1. Click `Labels`.
-2. In the `Filter labels` input area, write `task`.
-3. Click the suggested label.
-4. You'll see all issues that have this label.
+#### See all issues with the label
+
+1. Go to your fork.
+2. Go to `Issues`.
+3. If you don't see any `Open` issues, click `Closed`.
+4. Filter issues by the label:
+   1. Click `Labels`.
+   2. In the `Filter labels` input area, write `task`.
+   3. Click the suggested label.
+5. You should see all issues that have the `task` label.
