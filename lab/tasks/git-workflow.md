@@ -123,7 +123,7 @@ Commit using one of these approaches:
 - [Commit using `Source Control`](#commit-using-source-control)
 - [Commit using `Source Control` (specific changes)](#commit-using-source-control-specific-changes)
 
-#### Commit using the `Terminal`
+### Commit using the `Terminal`
 
 1. Open the [`Terminal`](../appendix/vs-code.md#open-the-terminal).
 2. Run:
@@ -137,7 +137,7 @@ Commit using one of these approaches:
    # example: git commit -m 'docs: add architecture diagram'
    ```
 
-#### Commit using `Source Control`
+### Commit using `Source Control`
 
 1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
 2. Go to `Changes`.
@@ -146,7 +146,7 @@ Commit using one of these approaches:
 5. Write a commit message, e.g., `docs: add architecture diagram`.
 6. Click `Commit`.
 
-#### Commit using `Source Control` (specific changes)
+### Commit using `Source Control` (specific changes)
 
 1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
 2. Go to `Changes`.
