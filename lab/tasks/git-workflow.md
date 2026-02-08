@@ -21,11 +21,12 @@ Outline:
   - [Create a branch using the `Terminal`](#create-a-branch-using-the-terminal)
   - [Create a branch using `GitLens`](#create-a-branch-using-gitlens)
 - [Make commits](#make-commits)
-  - [Commit message format](#commit-message-format)
-  - [Commit](#commit)
-    - [Commit using the `Terminal`](#commit-using-the-terminal)
-    - [Commit using `Source Control`](#commit-using-source-control)
-    - [Commit using `Source Control` (specific changes)](#commit-using-source-control-specific-changes)
+  - [Commit using the `Terminal`](#commit-using-the-terminal)
+  - [Commit using `Source Control`](#commit-using-source-control)
+  - [Commit using `Source Control` (specific changes)](#commit-using-source-control-specific-changes)
+    - [Stage specific changes](#stage-specific-changes)
+    - [(Optional) Unstage specific changes](#optional-unstage-specific-changes)
+    - [Commit staged changes](#commit-staged-changes)
 - [Publish the branch](#publish-the-branch)
   - [Publish using the `Terminal`](#publish-using-the-terminal)
   - [Publish using `GitLens`](#publish-using-gitlens)
@@ -148,15 +149,35 @@ Commit using one of these approaches:
 
 ### Commit using `Source Control` (specific changes)
 
+Complete these steps:
+
+- [Stage specific changes](#stage-specific-changes)
+- [(Optional) Unstage specific changes](#optional-unstage-specific-changes)
+- [Commit staged changes](#commit-staged-changes)
+
+#### Stage specific changes
+
 1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
 2. Go to `Changes`.
 3. Click a file to open it.
 4. Select changed lines in the editor (red-green).
 5. Right mouse click the selected lines.
 6. Click `Stage Selected Ranges`.
-7. Go to `Changes`.
-8. Write a commit message.
-9. Click `Commit`.
+
+#### (Optional) Unstage specific changes
+
+1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
+2. Go to `Staged Changes`.
+3. Click a file.
+4. Select changed lines in the editor (red-green).
+5. Right mouse click the selected lines.
+6. Click `Unstage Selected Ranges`.
+
+#### Commit staged changes
+
+1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
+1. Write a commit message.
+1. Click `Commit`.
 
 ## Publish the branch
 
