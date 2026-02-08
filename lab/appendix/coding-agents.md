@@ -22,26 +22,22 @@ Below, we explain how to set up coding agents based on the [`Qwen3-Coder`](https
        1. Go to the [`Editor Toolbar`](../appendix/vs-code.md#editor-toolbar).
        2. Click the `Qwen` icon.
     2. Method 2:
-       - [Open the `Command Palette`](../appendix/vs-code.md#open-the-command-palette).
-       - Run `Qwen Code: Open`.
+       - [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `Qwen Code: Open`.
 1. Write `/login` in the chat.
 1. Write `@<file-name>` to refer to the file `<file-name>`.
 
 ## Set up `GitHub Copilot Chat` with `Qwen3-Coder`
 
 1. [Set up `Qwen Code`](#set-up-qwen-code).
-1. [Install](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace#_browse-for-extensions) the `github.copilot-chat` and `denizhandaklr.vscode-qwen-copilot` extensions.
-1. [Open the `Command Palette`](../appendix/vs-code.md#open-the-command-palette).
-1. Run `Qwen Copilot: Authenticate`.
-1. Complete the authentication procedure.
-1. Open the `Command Palette`.
-1. Run `Chat: Manage Language Models`.
-1. Click `Add Models`.
-1. Click `Qwen Code`.
-1. Double click `Qwen 3 Coder Plus` to make the model visible.
-1. [Open the `Command Palette`](../appendix/vs-code.md#open-the-command-palette).
-1. Run `Chat: Open Chat`.
-1. The `CHAT` panel will open.
-1. Go to `CHAT`.
-1. Click `Auto` (`Pick Model`)
-1. Click `Qwen 3 Coder Plus`.
+2. [Install](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace#_browse-for-extensions) the `github.copilot-chat` and `denizhandaklr.vscode-qwen-copilot` extensions.
+3. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `Qwen Copilot: Authenticate`.
+4. Complete the authentication procedure.
+5. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `Chat: Manage Language Models`.
+6. Click `Add Models`.
+7. Click `Qwen Code`.
+8. Double click `Qwen 3 Coder Plus` to make the model visible.
+9. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `Chat: Open Chat`.
+10. The `CHAT` panel will open.
+11. Go to `CHAT`.
+12. Click `Auto` (`Pick Model`)
+13. Click `Qwen 3 Coder Plus`.
