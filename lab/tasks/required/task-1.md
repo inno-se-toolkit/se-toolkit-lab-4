@@ -65,10 +65,9 @@ Provide:
 > 3. Use suggestions to continue the path.
 
 > [!IMPORTANT]
-> Use paths relative to your file.
+> Use paths relative to **`docs/architecture.md`** file.
 >
 > Replace space in the path with `%20` (see [URL encoding](https://en.wikipedia.org/wiki/Percent-encoding)).
->
 
 1. Embed the product's `Component Diagram.svg`.
 
