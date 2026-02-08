@@ -189,6 +189,12 @@ Install [`Starship`](https://github.com/starship/starship#-installation).
 
 `GitLens` shows commit history, blame annotations, and branch visualization right inside `VS Code`.
 
+Complete these steps:
+
+1. [Look at the commit graph](#look-at-the-commit-graph)
+2. [Inspect remotes and the current branch](#inspect-remotes-and-the-current-branch)
+3. [(Optional) Learn more about `GitLens`](#optional-learn-more-about-gitlens)
+
 #### Look at the commit graph
 
 1. Go to the [`Status Bar`](../lab/appendix/vs-code.md#status-bar):
