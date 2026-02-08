@@ -6,6 +6,19 @@
 
 **Context:** As a software engineer, you'll often need to set up automated checks that run on every pull request to maintain code quality standards.
 
+- [Steps](#steps)
+  - [1. Create an issue](#1-create-an-issue)
+  - [2. Read documentation](#2-read-documentation)
+  - [3. Enable GitHub Actions](#3-enable-github-actions)
+  - [4. Create the workflow file](#4-create-the-workflow-file)
+  - [5. Add the check job](#5-add-the-check-job)
+  - [6. Commit and publish](#6-commit-and-publish)
+  - [7. Open a PR](#7-open-a-pr)
+  - [8. Document the PR](#8-document-the-pr)
+  - [9. Close the PR](#9-close-the-pr)
+  - [10. Close the issue](#10-close-the-issue)
+- [Acceptance criteria](#acceptance-criteria)
+
 ## Steps
 
 ### 1. Create an issue

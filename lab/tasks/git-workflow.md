@@ -17,14 +17,19 @@ Outline:
 
 - [Create an issue](#create-an-issue)
 - [Create a branch](#create-a-branch)
-  - [Create using `GitHub`](#create-using-github)
-  - [Create using the `Terminal`](#create-using-the-terminal)
-  - [Create using `GitLens`](#create-using-gitlens)
+  - [Create a branch using `GitHub`](#create-a-branch-using-github)
+  - [Create a branch using the `Terminal`](#create-a-branch-using-the-terminal)
+  - [Create a branch using `GitLens`](#create-a-branch-using-gitlens)
 - [Make commits](#make-commits)
-  - [Commit message format](#commit-message-format)
   - [Commit using the `Terminal`](#commit-using-the-terminal)
   - [Commit using `Source Control`](#commit-using-source-control)
   - [Commit using `Source Control` (specific changes)](#commit-using-source-control-specific-changes)
+    - [Stage specific changes](#stage-specific-changes)
+    - [(Optional) Unstage specific changes](#optional-unstage-specific-changes)
+    - [Commit staged changes](#commit-staged-changes)
+- [(Optional) Undo commits](#optional-undo-commits)
+  - [Undo commits using the `Terminal`](#undo-commits-using-the-terminal)
+  - [Undo commits using `GitLens`](#undo-commits-using-gitlens)
 - [Publish the branch](#publish-the-branch)
   - [Publish using the `Terminal`](#publish-using-the-terminal)
   - [Publish using `GitLens`](#publish-using-gitlens)
@@ -49,24 +54,41 @@ Outline:
 
 ## Create an issue
 
-[Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a `GitHub` issue in your forked repo using the `Lab Task` [issue form](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms) (defined in [`.github/ISSUE_TEMPLATE/01-task.yml`](../../.github/ISSUE_TEMPLATE/01-task.yml)).
+1. Go to your fork on `GitHub`.
+2. [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) an issue.
+3. Click `Lab Task` if asked.
+
+> [!NOTE]
+> What you see when creating an issue is described using an [issue form](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms).
+>
+> There is an issue form in [`.github/ISSUE_TEMPLATE/01-task.yml`](../../.github/ISSUE_TEMPLATE/01-task.yml).
 
 ## Create a branch
 
-Create a new branch for the issue using one of these ways:
+Create a new branch using one of these approaches:
 
-### Create using `GitHub`
+- [Create a branch using `GitHub`](#create-a-branch-using-github)
+- [Create a branch using the `Terminal`](#create-a-branch-using-the-terminal)
+- [Create a branch using `GitLens`](#create-a-branch-using-gitlens)
 
+### Create a branch using `GitHub`
+
+1. Go to your fork on `GitHub`.
 1. [Create a branch](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue).
-1. Copy the command.
-1. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
-1. Paste the command to the `Terminal`.
-1. Press `Enter` to run the command.
+1. Copy the command provided by `GitHub`. It's something like:
 
-### Create using the `Terminal`
+   ```console
+   git fetch origin
+   git checkout <branch-name>
+   ```
 
 1. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
-2. [Run](../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run the copied command](../appendix/vs-code.md#run-a-command-using-the-terminal).
+
+### Create a branch using the `Terminal`
+
+1. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
+1. [Run](../appendix/vs-code.md#run-a-command-using-the-terminal):
 
     ```console
     git checkout -b <branch-name>
@@ -75,7 +97,7 @@ Create a new branch for the issue using one of these ways:
 > [!IMPORTANT]
 > Replace `<branch-name>` with an actual branch name in all subsequent commands.
 
-### Create using `GitLens`
+### Create a branch using `GitLens`
 
 1. [Open the `Command Palette`](../appendix/vs-code.md#open-the-command-palette).
 2. Run `GitLens: Git Create Branch...`.
@@ -88,17 +110,22 @@ Create a new branch for the issue using one of these ways:
 
 ## Make commits
 
-Make commits to that branch to complete the task.
+Make commits to the `<branch-name>` to complete the task.
 
-### Commit message format
+> ![NOTE]
+> Commit message format is: `type: short description`
+>
+> Common types:
+>
+> - `fix:` — bug fixes
+> - `feat:` — additions (e.g., new feature)
+> - `docs:` — documentation changes
 
-Format: `type: short description`
+Commit using one of these approaches:
 
-Common types:
-
-- `docs:` — documentation changes (most common in this lab)
-- `feat:` — new functionality
-- `fix:` — bug fixes
+- [Commit using the `Terminal`](#commit-using-the-terminal)
+- [Commit using `Source Control`](#commit-using-source-control)
+- [Commit using `Source Control` (specific changes)](#commit-using-source-control-specific-changes)
 
 ### Commit using the `Terminal`
 
@@ -108,7 +135,7 @@ Common types:
    ```console
    git add <file>
    # example: git add README.md
-   # example (spaces): git add 'path/some image.svg'
+   # example (path with spaces): git add 'path/some image.svg'
    
    git commit -m '<type>: <short description>'
    # example: git commit -m 'docs: add architecture diagram'
@@ -120,10 +147,18 @@ Common types:
 2. Go to `Changes`.
 3. Hover over a file name.
 4. Click `+` to stage the file.
-5. Type commit message, e.g., `docs: add architecture diagram`.
+5. Write a commit message, e.g., `docs: add architecture diagram`.
 6. Click `Commit`.
 
 ### Commit using `Source Control` (specific changes)
+
+Complete these steps:
+
+- [Stage specific changes](#stage-specific-changes)
+- [(Optional) Unstage specific changes](#optional-unstage-specific-changes)
+- [Commit staged changes](#commit-staged-changes)
+
+#### Stage specific changes
 
 1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
 2. Go to `Changes`.
@@ -131,9 +166,65 @@ Common types:
 4. Select changed lines in the editor (red-green).
 5. Right mouse click the selected lines.
 6. Click `Stage Selected Ranges`.
-7. Go to `Changes`.
-8. Write a commit message.
-9. Click `Commit`.
+
+#### (Optional) Unstage specific changes
+
+1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
+2. Go to `Staged Changes`.
+3. Click a file.
+4. Select changed lines in the editor (red-green).
+5. Right mouse click the selected lines.
+6. Click `Unstage Selected Ranges`.
+
+#### Commit staged changes
+
+1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
+1. Write a commit message.
+1. Click `Commit`.
+
+## (Optional) Undo commits
+
+> [!NOTE]
+> There can appear a conflict when you try to undo.
+
+Undo commits using one of these approaches:
+
+- [Undo commits using the `Terminal`](#undo-commits-using-the-terminal)
+- [Undo commits using `GitLens`](#undo-commits-using-gitlens)
+
+### Undo commits using the `Terminal`
+
+[Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
+
+```console
+git reset --soft HEAD~1
+```
+
+Your changes are staged now.
+
+You can stage more changes.
+
+```console
+git add some-file
+```
+
+Then, you can commit using the previous message.
+
+```console
+git commit -C ORIG_HEAD
+```
+
+### Undo commits using `GitLens`
+
+1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
+2. Click `GITLENS`.
+3. Go to the latest commit (the highest one).
+4. Undo using one of these approaches:
+   1. Approach 1:
+      1. Click the `Undo Commit` icon.
+   2. Approach 2:
+      1. Click the commit.
+      2. Click `Undo Commit`.
 
 ## Publish the branch
 
@@ -208,7 +299,9 @@ If you see the `Compare & pull request` button, click it.
 
 ### Finish creating a PR
 
-1. Write the PR title (`Add @<your-username> to contributors`).
+1. Write the PR title.
+
+   Example: `Solve task 1`.
 2. Write the PR description.
 3. [Link the PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) to the issue, e.g. `Closes #<issue number>`.
 4. Check the boxes.

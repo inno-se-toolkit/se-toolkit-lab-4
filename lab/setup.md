@@ -1,5 +1,40 @@
 # Lab setup
 
+- [Find a partner](#find-a-partner)
+- [Set up a fork](#set-up-a-fork)
+- [Enable issues](#enable-issues)
+- [Add a classmate as a collaborator](#add-a-classmate-as-a-collaborator)
+- [Protect your `main` branch](#protect-your-main-branch)
+- [Install `Git`](#install-git)
+- [Install `VS Code`](#install-vs-code)
+- [Open the `Terminal`](#open-the-terminal)
+- [Configure `Git`](#configure-git)
+- [Open `VS Code` in the `software-engineering-toolkit` directory](#open-vs-code-in-the-software-engineering-toolkit-directory)
+- [Copy your fork URL](#copy-your-fork-url)
+- [Clone the fork on your computer](#clone-the-fork-on-your-computer)
+  - [Clone the fork using the `Terminal`](#clone-the-fork-using-the-terminal)
+  - [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
+- [Open the repo in `VS Code`](#open-the-repo-in-vs-code)
+- [Set up `VS Code` extensions](#set-up-vs-code-extensions)
+- [Reload `VS Code`](#reload-vs-code)
+- [Explore `VS Code` layout](#explore-vs-code-layout)
+- [Open `README.md`](#open-readmemd)
+- [Open `Markdown` preview](#open-markdown-preview)
+- [Change workspace settings](#change-workspace-settings)
+- [Optional enhancements](#optional-enhancements)
+  - [Set up a coding agent](#set-up-a-coding-agent)
+  - [Set up the shell prompt](#set-up-the-shell-prompt)
+  - [Check `GitLens` in `VS Code`](#check-gitlens-in-vs-code)
+    - [See all branches](#see-all-branches)
+    - [Look at the commit graph](#look-at-the-commit-graph)
+    - [Inspect the current branch](#inspect-the-current-branch)
+    - [Inspect remotes](#inspect-remotes)
+    - [(Optional) Learn more about `GitLens`](#optional-learn-more-about-gitlens)
+  - [Create a label for tasks](#create-a-label-for-tasks)
+    - [Create the `task` label](#create-the-task-label)
+    - [Add the label to issues](#add-the-label-to-issues)
+    - [See all issues with the label](#see-all-issues-with-the-label)
+
 ## Find a partner
 
 1. Find a classmate to be your partner for this lab.
@@ -8,26 +43,34 @@
 ## Set up a fork
 
 1. Create a `GitHub` account.
-2. [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository) this repo (repository) to your `GitHub` account and make your fork public.
-3. Continue your work in the forked repo.
-4. In the repo -> `Settings` -> `General` -> `Features`, enable `Issues`.
+2. Go to the [original repo](https://github.com/inno-se-toolkit/lab-01-market-product-and-git) (repository).
+3. [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository) the original repo.
+4. Go to your fork.
+5. The URL should be like `https://github.com/<your-username>/lab-01-market-product-and-git`.
+6. If you see a lock sign near your fork name, [make your fork public](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#changing-a-repositorys-visibility).
+
+> [!NOTE]
+> Continue working in your fork.
+
+## Enable issues
+
+1. Go to `Settings` -> `General` -> `Features`.
+2. Check the box near `Issues`.
 
 ## Add a classmate as a collaborator
 
-In your repo `Settings` -> `Collaborators` -> `Add people`, add your partner as a collaborator.
-
-Your partner should add you as a collaborator in their repo.
-
-Make sure your collaborator has accepted the invitation sent to their email.
-
-It's OK if your collaborator can't change `Settings` in your repo.
+1. Go to `Settings` -> `Collaborators` -> `Add people`.
+2. Add your partner as a collaborator.
+3. Your partner should add you as a collaborator in their repo.
+4. Make sure your collaborator has accepted the invitation sent to their email.
+5. It's OK if your collaborator can't change `Settings` in your repo.
 
 ## Protect your `main` branch
 
 Branch protection prevents accidental pushes directly to `main`.
 This enforces the PR workflow and ensures all changes are reviewed.
 
-1. Go to your fork.
+1. Go to your fork on `GitHub`.
 2. Go to `Settings`.
 3. Go to `Code and automation`.
 4. Go to `Rules`.
@@ -47,76 +90,158 @@ This enforces the PR workflow and ensures all changes are reviewed.
          - `Allowed merge methods`: `Merge`.
       - [x] Block force pushes
 
-## Set up `Git`
+## Install `Git`
 
 [Install `Git`](https://git-scm.com/install/).
 
-On your computer, configure `Git`:
-
-```bash
-git config --global user.name '<your-name>'
-git config --global user.email '<your-email>'
-```
-
-> [!NOTE]
-> Replace `<your-name>` with a name and `<your-email>` with an email that you want to see in the commits.
->
-> See [docs](https://git-scm.com/docs/git-config#Documentation/git-config.txt-username).
-
-## Set up `VS Code`
+## Install `VS Code`
 
 1. Install [`VS Code`](https://code.visualstudio.com/).
 
    We chose this editor because it has built-in AI features and many useful [extensions](./appendix/vs-code.md#extensions).
 
-1. (Optional) [Learn more](../lab/appendix/vs-code.md) about `VS Code`.
+2. (Optional) [Learn more](../lab/appendix/vs-code.md) about `VS Code`.
 
-## Open the repository on your computer
+## Open the `Terminal`
 
-1. On your computer, create somewhere a directory `software-engineering-toolkit`.
-2. Open a terminal in that directory.
-3. Clone the lab repo.
+1. Open `VS Code`.
+1. [Open the Terminal](./appendix/vs-code.md#open-the-terminal).
 
-    ```bash
-    git clone https://github.com/<your-username>/lab-01-market-product-and-git
+## Configure `Git`
+
+> [!IMPORTANT]
+> Replace `<your-name>` with a name and `<your-email>` with an email that you want to see in the commits.
+
+1. (Optional) See [docs](https://git-scm.com/docs/git-config#Documentation/git-config.txt-username) for an explanation of what these commands do.
+2. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+
+    ```console
+    git config --global user.name '<your-name>'
     ```
 
-> ![IMPORTANT]
-> Replace `<your-username>` with your `GitHub` username.
+    Example: `git config --global user.name 'John Doe'`
 
-1. Open the repo in `VS Code`.
+3. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
 
-    ```bash
-    code lab-01-market-product-and-git
+     ```console
+     git config --global user.email '<your-email>'
+     ```
+
+     Example: `git config --global user.name 'johndoe@gmail.com'`
+
+## Open `VS Code` in the `software-engineering-toolkit` directory
+
+1. On your computer, create somewhere a directory `software-engineering-toolkit` (e.g., on your `Desktop`).
+2. Open `VS Code`.
+3. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette): `File: Open Folder...`.
+4. Find the `software-engineering-toolkit` directory that you created.
+5. Open this directory.
+6. `VS Code` should now open in that directory.
+7. [Open `Folders`](./appendix/vs-code.md#open-folders).
+8. Look at `FOLDERS`.
+9. You should see `SOFTWARE-ENGINEERING-TOOLKIT` there.
+
+## Copy your fork URL
+
+1. Go to your fork on `Gitub`.
+1. Copy its [URL](https://en.wikipedia.org/wiki/URL).
+1. It should look like `https://github.com/<your-username>/lab-01-market-product-and-git`.
+
+## Clone the fork on your computer
+
+Clone the fork using one of these approaches:
+
+- [Clone the fork using the `Terminal`](#clone-the-fork-using-the-terminal)
+- [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
+
+### Clone the fork using the `Terminal`
+
+1. [Open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
+1. Make sure you see `software-engineering-toolkit` as your current directory.
+1. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+
+   ```console
+    git clone <fork-url>
     ```
+
+    Note: replace `<fork-url>` with the copied fork URL.
+1. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+
+   ```console
+   ls
+   ```
+
+1. You should see `lab-01-market-product-and-git` - the directory with the cloned repo.
+
+### Clone the fork using the `Command Palette`
+
+1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette): `Git: Clone`.
+2. Click `Clone from GitHub`.
+3. Allow the extension to sign in.
+4. Find your fork in the list.
+5. It should look like `<your-username>/lab-01-market-product-and-git`.
+6. Click it.
+7. Choose a directory where to clone the repo.
+8. You should choose `software-engineering-toolkit` that you created before.
+9. Confirm the choice.
+
+## Open the repo in `VS Code`
+
+1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette): `File: Open Folder...`.
+2. Choose the directory `lab-01-market-product-and-git` that is a clone of your fork.
+3. Make sure there is `README.md` inside that directory.
+4. `VS Code` should open in that directory.
+5. [Open `Folders`](./appendix/vs-code.md#open-folders).
+6. Look at `FOLDERS`.
+7. You should see `LAB-01-MARKET-PRODUCT-AND-GIT` there.
+8. You can close the `VS Code` that you [opened in the `software-engineering-toolkit` directory](#open-vs-code-in-the-software-engineering-toolkit-directory).
 
 ## Set up `VS Code` extensions
 
-1. Install the recommended `VS Code` [extensions](./appendix/vs-code.md#extensions) (listed in [`.vscode/extensions.json`](../.vscode/extensions.json)) when `VS Code` prompts to install them.
+1. [Install recommended `VS Code` extensions](./appendix/vs-code.md#install-recommended-extensions).
 2. Sign in to accounts.
     1. Go to the [`Activity Bar`](./appendix/vs-code.md#activity-bar).
     2. Click the icon `Accounts`.
     3. Click `Sign in with GitHub ...`.
     4. Repeat for the remaining extensions if there are any.
 
+## Reload `VS Code`
+
+[Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette): `Developer: Reload Window`.
+
+<!-- 
+TODO hide graph 
+collapse graph and gitlens
+click and hold gitlens
+move it over graph
+-->
+
 ## Explore `VS Code` layout
 
 Look at the [`Basic Layout`](./appendix/vs-code.md#basic-layout).
 
-## Open `Markdown` file preview
+## Open `README.md`
 
-Open `README.md` using one of these approaches:
+> [!NOTE]
+> This file (`lab/setup.md`), `README.md`, and other files in this repository that have the extension `.md` are written in [`Markdown`](https://en.wikipedia.org/wiki/Markdown) (more precisely, in [`GitHub-flavored Markdown`](https://github.github.com/gfm/)).
 
-- Approach 1:
-  - [Use the `Command Palette`](./appendix/vs-code.md#open-a-file).
+Open [`README.md`](../README.md) using one of these approaches:
+
+- Approach 1: [Open the file using the `Command Palette`](./appendix/vs-code.md#open-a-file).
 - Approach 2:
     1. [Open `Folders`](./appendix/vs-code.md#open-folders).
     2. Click `README.md`.
 
+## Open `Markdown` preview
+
+> [!NOTE]
+> `Markdown` gets translated into [`HTML`](https://en.wikipedia.org/wiki/HTML).
+> You see the rendered `HTML` when you open a preview in `VS Code` or on `GitHub`.
+
 Open the [`Markdown` preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) using one of these approaches:
 
 - Approach 1:
-  1. Go to [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar).
+  1. Go to the [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar).
   2. Click `Open Preview to the Side`.
 
 - Approach 2:
@@ -129,64 +254,119 @@ Look at the [workspace settings](./appendix/vs-code.md#workspace-settings) and c
 
 ---
 
-## Optional enhancements to make your life easier
+## Optional enhancements
 
-### Coding: Set up a coding agent
+These enhancements can make your life easier:
+
+- [Set up a coding agent](#set-up-a-coding-agent)
+- [Set up the shell prompt](#set-up-the-shell-prompt)
+- [Check `GitLens`](#check-gitlens)
+- [Create a label for tasks](#create-a-label-for-tasks)
+
+### Set up a coding agent
 
 A coding agent can help you write code, explain concepts, and debug issues.
 
 See [Coding agents](./appendix/coding-agents.md).
 
-### Shell: Set up the prompt
+### Set up the shell prompt
 
-Starship shows your current `Git` branch, status, and other useful info directly in your terminal prompt.
+`Starship` shows your current `Git` branch, status, and other useful info directly in your [shell prompt](https://en.wikibooks.org/wiki/Guide_to_Unix/Explanations/Shell_Prompt) in almost any terminal, including the [`Terminal`](./appendix/vs-code.md#terminal).
 
-Install [`Starship`](https://github.com/starship/starship#-installation).
+Complete these steps:
 
-### `VS Code`: Check `GitLens`
+1. Install [`Starship`](https://github.com/starship/starship#-installation).
+2. [Open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
+3. You should see something like `lab-01-market-product-and-git on main`.
 
-GitLens shows commit history, blame annotations, and branch visualization right inside `VS Code`.
+### Check `GitLens` in `VS Code`
+
+<!-- TODO create appendix gitlens -->
+<!-- TODO move to the appendix -->
+
+`GitLens` shows commit history, blame annotations, and branch visualization right inside `VS Code`.
+
+Complete these steps:
+
+1. Open `VS Code`.
+2. [See all branches](#see-all-branches)
+3. [Look at the commit graph](#look-at-the-commit-graph)
+4. [Inspect the current branch](#inspect-the-current-branch)
+5. [(Optional) Learn more about `GitLens`](#optional-learn-more-about-gitlens)
+
+#### See all branches
+
+1. Go to the [`Status Bar`](../lab/appendix/vs-code.md#status-bar).
+2. Look at the branch name.
+3. Click it to see all available branches.
+4. If you click a branch, you'll be able to switch to it.
 
 #### Look at the commit graph
 
-1. Go to the [`Status Bar`](../lab/appendix/vs-code.md#status-bar):
+1. Go to the [`Status Bar`](../lab/appendix/vs-code.md#status-bar).
 1. Click the icon `Visualize commits on the Commit Graph`.
 1. Make sure you can see the commit graph.
 
-#### Inspect remotes and the current branch
+#### Inspect the current branch
 
 1. [Open the `Source Control`](../lab/appendix/vs-code.md#open-the-source-control).
-1. Click `GITLENS` in the opened [`Primary Side Bar`](../lab/appendix/vs-code.md#basic-layout).
-1. Go to the `GITLENS` panel.
-1. Click the icon `Remotes`.
-1. Make sure `origin` points to your repo URL (hover over it an look at URLs).
-1. Click the icon `Commits`.
-1. Make sure you can see commits on the current branch.
+2. Click `GITLENS`.
+3. Click the `Commits` icon.
+4. See `COMMITS <branch-name>`.
+5. See commits below it.
+6. Click a commit to open a list of files changed in that commit.
+7. Click a file changed in that commit to see changes in that file.
+
+#### Inspect remotes
+
+1. [Open the `Source Control`](../lab/appendix/vs-code.md#open-the-source-control).
+2. Click `GITLENS` to uncollapse the view.
+3. Hover over the `GITLENS` view name.
+4. Click the icon `Remotes` (looks like a cloud).
+5. Make sure `origin` points to your repo URL:
+   1. Hover over `origin`:
+   2. Look at URLs.
 
 #### (Optional) Learn more about `GitLens`
 
 See [`GitLens` features](https://help.gitkraken.com/gitlens/gitlens-features/).
 
-### Repo: Create a label for tasks
+### Create a label for tasks
+
+[Labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) help you filter and organize issues.
+
+With a `task` label, you can see in one view all issues created for lab tasks.
 
 > [!TIP]
 > If you create the `task` label before creating issues, your issues will have this label automatically as configured in the [issue form](../.github/ISSUE_TEMPLATE/01-task.yml).
 
-[Labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) help you filter and organize issues.
+Complete these steps:
 
-With a `task` label, you can see in one view all lab tasks that have this label.
+1. [Create the `task` label](#create-the-task-label)
+1. [Add the label to issues](#add-the-label-to-issues)
+1. [See all issues with the label](#see-all-issues-with-the-label)
 
-In the repo -> `Issues` -> `Labels`, create a new label:
+#### Create the `task` label
 
-1. Click `New label`.
-2. Name: `task`.
-3. Click `Create label`.
+1. Go to your fork.
+2. Go to `Issues` -> `Labels`.
+3. Create a new label:
+   1. Click `New label`.
+   2. Name: `task`.
+   3. Click `Create label`.
 
-Then [add this label](https://github.com/orgs/community/discussions/53473#discussioncomment-5697478) to some of your task issues.
+#### Add the label to issues
 
-Next, in the repo -> `Issues`, filter by the label:
+1. Go to your fork.
+2. [Add](https://github.com/orgs/community/discussions/53473#discussioncomment-5697478) the `task` label to some of your issues.
 
-1. Click `Labels`.
-2. In the `Filter labels` input area, write `task`.
-3. Click the suggested label.
-4. You'll see all issues that have this label.
+#### See all issues with the label
+
+1. Go to your fork.
+2. Go to `Issues`.
+3. If you don't see any `Open` issues, click `Closed`.
+4. Filter issues by the label:
+   1. Click `Labels`.
+   2. In the `Filter labels` input area, write `task`.
+   3. Click the suggested label.
+5. You should see all issues that have the `task` label.

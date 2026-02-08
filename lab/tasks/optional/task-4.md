@@ -6,6 +6,16 @@
 
 **Context:** Building on the skills assessment from [Task 3](../required/task-3.md), you will now create a detailed plan to develop one key skill with specific goals, resources, and tracking methods.
 
+- [Steps](#steps)
+  - [1. Create an issue](#1-create-an-issue)
+  - [2. Choose a skill](#2-choose-a-skill)
+  - [3. Create `docs/skill-development-plan.md`](#3-create-docsskill-development-planmd)
+    - [`## About the skill` (3–5 sentences)](#-about-the-skill-35-sentences)
+    - [`## Goals`](#-goals)
+    - [`## Planning` (5–10 sentences)](#-planning-510-sentences)
+    - [`## Tracking` (5-10 sentences)](#-tracking-5-10-sentences)
+- [Acceptance Criteria](#acceptance-criteria)
+
 ## Steps
 
 Note: follow the [`Git workflow`](../git-workflow.md) to complete this task.

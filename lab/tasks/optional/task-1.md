@@ -6,6 +6,18 @@
 
 **Context:** In team environments, multiple developers often work on the same codebase simultaneously. They might edit the same lines of code, leading to situations where changes conflict with each other. Understanding how to resolve these conflicts is essential for maintaining a healthy codebase.
 
+- [Steps](#steps)
+  - [1. Create an issue](#1-create-an-issue)
+  - [2. Create practice branches](#2-create-practice-branches)
+  - [3. Make a change on the `conflict-branch-1`](#3-make-a-change-on-the-conflict-branch-1)
+  - [4. Make a conflicting change on `conflict-branch-2`](#4-make-a-conflicting-change-on-conflict-branch-2)
+  - [5. Merge and resolve the conflict](#5-merge-and-resolve-the-conflict)
+    - [Resolve the conflict using without the merge editor](#resolve-the-conflict-using-without-the-merge-editor)
+    - [Resolve the conflict using the merge editor](#resolve-the-conflict-using-the-merge-editor)
+  - [6. Create a PR](#6-create-a-pr)
+  - [7. Clean up](#7-clean-up)
+- [Acceptance criteria](#acceptance-criteria)
+
 ## Steps
 
 ### 1. Create an issue
@@ -22,7 +34,7 @@ git branch conflict-branch-2
 
 Alternatively:
 
-1. Open [`Command Palette`](../../appendix/vs-code.md#command-palette).
+1. [Open the `Command Palette`](../../appendix/vs-code.md#open-the-command-palette).
 2. Run `GitLens: Git Create Branch...`.
 3. Select `main`.
 4. Enter `conflict-branch-1`.
@@ -37,7 +49,7 @@ git switch conflict-branch-1
 
 Alternatively:
 
-1. Open [`Command Palette`](../../appendix/vs-code.md#command-palette).
+1. [Open the `Command Palette`](../../appendix/vs-code.md#open-the-command-palette).
 2. Run `GitLens: Git Switch to...`.
 3. Start typing and select `conflict-branch-1`.
 4. Press `Enter`.
@@ -131,7 +143,7 @@ git branch -d conflict-branch-2
 
 Alternatively:
 
-1. Open [`Command Palette`](../../appendix/vs-code.md#command-palette).
+1. [Open the `Command Palette`](../../appendix/vs-code.md#open-the-command-palette).
 2. Run `GitLens: Git Delete Branch...`.
 3. Select `conflict-branch-1` and `conflict-branch-2` to delete them.
 4. Click `OK`.
