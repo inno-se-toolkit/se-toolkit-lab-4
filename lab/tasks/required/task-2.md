@@ -57,7 +57,7 @@ Use a nested list. Example:
 
 ### `## Common skills across roles`
 
-Based on your intuition and some research, list technical skills that are required for these responsibilities.
+Based on your intuition and some research, list common technical skills that are required for these responsibilities.
 
 ## Acceptance Criteria
 
