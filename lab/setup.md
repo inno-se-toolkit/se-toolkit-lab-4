@@ -148,7 +148,7 @@ Open `README.md` using one of these approaches:
 Open the [`Markdown` preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) using one of these approaches:
 
 - Approach 1:
-  1. Go to [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar).
+  1. Go to the [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar).
   2. Click `Open Preview to the Side`.
 
 - Approach 2:
