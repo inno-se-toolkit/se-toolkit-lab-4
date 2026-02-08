@@ -150,17 +150,18 @@ Interact with `Git` via `VS Code` UI.
 
 ### Open the `Source Control`
 
-Approaches:
-
-- [`Activity Bar`](#activity-bar) -> Click `Source Control`
-- `Ctrl+Shift+G G` (`Ctrl+Shift+G` on `macOS`)
+- Approach 1:
+  1. Go to the [`Activity Bar`](#activity-bar).
+  2. Click `Source Control`.
+  
+- Approach 2: Press `Ctrl+Shift+G G` (`Ctrl+Shift+G` on `macOS`)
 
 ### Close the `Source Control`
 
-Approaches:
-
-- [`Activity Bar`](#activity-bar) -> Click `Source Control`
-- `Ctrl+B` (`Cmd+B` on `macOS`)
+- Approach 1:
+  1. Go to the [`Activity Bar`](#activity-bar)
+  2. Click `Source Control`.
+- Approach 2: Press `Ctrl+B` (`Cmd+B` on `macOS`)
 
 ## `Extensions`
 
