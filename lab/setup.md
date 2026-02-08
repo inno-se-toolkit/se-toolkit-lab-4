@@ -57,26 +57,9 @@ This enforces the PR workflow and ensures all changes are reviewed.
          - `Allowed merge methods`: `Merge`.
       - [x] Block force pushes
 
-## Set up `Git`
+## Install `Git`
 
 [Install `Git`](https://git-scm.com/install/).
-
-On your computer, configure `Git`:
-
-> [!IMPORTANT]
-> Replace `<your-name>` with a name and `<your-email>` with an email that you want to see in the commits.
->
-> See [docs](https://git-scm.com/docs/git-config#Documentation/git-config.txt-username).
-
-```console
-git config --global user.name '<your-name>'
-# example: git config --global user.name 'John Doe'
-```
-
-```console
-git config --global user.email '<your-email>'
-# example: git config --global user.name 'johndoe@gmail.com'
-```
 
 ## Install `VS Code`
 
@@ -85,6 +68,33 @@ git config --global user.email '<your-email>'
    We chose this editor because it has built-in AI features and many useful [extensions](./appendix/vs-code.md#extensions).
 
 2. (Optional) [Learn more](../lab/appendix/vs-code.md) about `VS Code`.
+
+## Open the `Terminal`
+
+1. Open `VS Code`.
+1. [Open the Terminal](./appendix/vs-code.md#open-the-terminal).
+
+## Configure `Git`
+
+> [!IMPORTANT]
+> Replace `<your-name>` with a name and `<your-email>` with an email that you want to see in the commits.
+
+1. (Optional) See [docs](https://git-scm.com/docs/git-config#Documentation/git-config.txt-username) for an explanation of what these commands do.
+2. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+
+    ```console
+    git config --global user.name '<your-name>'
+    ```
+
+    Example: `git config --global user.name 'John Doe'`
+
+3. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+
+     ```console
+     git config --global user.email '<your-email>'
+     ```
+
+     Example: `git config --global user.name 'johndoe@gmail.com'`
 
 ## Clone the repo on your computer
 
