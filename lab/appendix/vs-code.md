@@ -28,8 +28,8 @@
     - [Move the `Primary Sidebar` to the right](#move-the-primary-sidebar-to-the-right)
 - [Keyboard shortcuts](#keyboard-shortcuts)
   - [Frequently used shortcuts](#frequently-used-shortcuts)
-- [`settings.json`](#settingsjson)
-  - [Workspace settings](#workspace-settings)
+- [Workspace settings](#workspace-settings)
+  - [Change the workspace settings](#change-the-workspace-settings)
 
 > [!IMPORTANT]
 > The first [keyboard shortcut](#keyboard-shortcuts) is always for `Linux`.
@@ -195,7 +195,7 @@ Change the [Basic Layout](#basic-layout).
 
 [Move](https://code.visualstudio.com/docs/configure/custom-layout#_primary-side-bar) the [`Primary Sidebar`](#primary-sidebar) to the right so that it doesn't move your code whenever the `Primary Sidebar` opens.
 
-Edit the [`Workspace Settings`](#workspace-settings) if you don't like that the `Primary Sidebar` on the right side.
+[Change the workspace settings](#change-the-workspace-settings) if you don't like that the `Primary Sidebar` on the right side.
 
 ## Keyboard shortcuts
 
@@ -211,19 +211,18 @@ Keyboard shortcuts for various commands.
 - `Ctrl+F` (`Cmd+F` on `macOS`) - search in the current editor.
 - `Ctrl+Shift+F` (`Cmd+Shift+F` on `macOS`) - search in all files.
 
-## `settings.json`
+## Workspace settings
 
-Workspace settings in a `JSON` file that you can store in the repo and share with other collaborators.
+`VS Code` settings for the workspace.
 
-Docs:
+- [docs 1](https://code.visualstudio.com/docs/configure/settings#_workspace-settings)
+- [docs 2](https://code.visualstudio.com/docs/configure/settings#_settings-json-file)
 
-- [docs](https://code.visualstudio.com/docs/configure/settings#_settings-json-file)
+Settings for this workspace are in [`.vscode/settings.json`](../../.vscode/settings.json).
 
-### Workspace settings
+### Change the workspace settings
 
-The settings for this repo workspace are in [`.vscode/settings.json`](../../.vscode/settings.json).
-
-Here are some settings that you can change:
+Here are some [workspace settings](#workspace-settings) that you can change:
 
 - [`files.autoSave`](https://code.visualstudio.com/docs/editing/codebasics#_save-auto-save) - Enabled to save your work if VS Code closes;
 - [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting) - Enabled to run formatters when you press `Ctrl+S` (or `Cmd+S` on `macOS`) to save code.
