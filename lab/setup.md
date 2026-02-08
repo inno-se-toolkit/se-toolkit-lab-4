@@ -76,24 +76,51 @@ git config --global user.email '<your-email>'
 
 2. (Optional) [Learn more](../lab/appendix/vs-code.md) about `VS Code`.
 
-## Open the repository on your computer
+## Clone the repo on your computer
 
-1. On your computer, create somewhere a directory `software-engineering-toolkit`.
-2. Open a terminal in that directory.
-3. Clone the lab repo.
+Clone the repo using one of these approaches:
 
-    ```bash
-    git clone https://github.com/<your-username>/lab-01-market-product-and-git
+- [Clone the repo using a terminal](#clone-the-repo-using-a-terminal)
+- [Clone the repo using `VS Code`](#clone-the-repo-using-vs-code)
+
+### Clone the repo using a terminal
+
+1. On your computer, create a directory `software-engineering-toolkit`.
+2. Open a terminal in that directory (google how to do that).
+3. In the terminal, you should see `software-engineering-toolkit`.
+4. Copy your fork link ([`URL`](https://en.wikipedia.org/wiki/URL)):
+   1. Go to your fork on `GitHub`.
+   2. Copy its `URL`.
+   3. It should look like `https://github.com/<your-username>/lab-01-market-product-and-git`.
+5. Return to the terminal.
+6. Run the command (replace `<fork-url>` with the copied `URL`):
+
+    ```console
+    git clone <fork-url>
     ```
 
-> ![IMPORTANT]
-> Replace `<your-username>` with your `GitHub` username.
+### Clone the repo using `VS Code`
 
-1. Open the repo in `VS Code`.
+1. Open `VS Code`.
+2. [Open the `Command Palette`](../lab/appendix/vs-code.md#open-the-command-palette).
+3. Run
+4. [Open the `Source Control`](../lab/appendix/vs-code.md#open-the-source-control).
+5. Click `CHANGES` to uncollapse that panel.
+6. Click `Clone Repository`.
+7. Click `Clone from GitHub`.
+8. Allow the extension to sign in.
+9. Find your fork in the list.
+10. Click it.
+11. Choose a directory where to clone the repo.
+12. Confirm the choice.
 
-    ```bash
-    code lab-01-market-product-and-git
-    ```
+## Open the repo in `VS Code`
+
+1. Open `VS Code`.
+2. [Open the `Command Palette`](../lab/appendix/vs-code.md#command-palette).
+3. Run `File: Open Folder...`
+4. Find the directory `lab-01-market-product-and-git` that stores the clone of your fork.
+5. Make sure there is `README.md` inside that directory.
 
 ## Set up `VS Code` extensions
 
