@@ -1,6 +1,7 @@
 # `VS Code`
 
 - [`Basic Layout`](#basic-layout)
+- [`Editor`](#editor)
 - [`Activity Bar`](#activity-bar)
 - [`Primary Sidebar`](#primary-sidebar)
   - [Open the `Primary Sidebar`](#open-the-primary-sidebar)
@@ -48,15 +49,21 @@ Some of the `Basic Layout` elements:
 
 ![VS Code UI](../images/vs-code-ui.drawio.svg)
 
+## `Editor`
+
+Space where you can edit files.
+
+- [docs](https://code.visualstudio.com/docs/editing/codebasics)
+
 ## `Activity Bar`
 
-Menus of extensions on a side of the editor.
+Menus of extensions on a side of the [`Editor`](#editor).
 
 - [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 
 ## `Primary Sidebar`
 
-Views on a side of the editor.
+Views on a side of the [`Editor`](#editor).
 
 Click icons in the [`Activity Bar`](#activity-bar) to switch between views.
 
@@ -74,7 +81,7 @@ Statuses and menus of extensions at the bottom of the `VS Code` window.
 
 ## `Editor Toolbar`
 
-Quick actions buttons located above the editor.
+Quick actions buttons located above the [`Editor`](#editor).
 
 - [docs](https://code.visualstudio.com/api/ux-guidelines/overview#editor-toolbar)
 
