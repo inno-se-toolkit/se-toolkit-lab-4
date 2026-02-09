@@ -24,12 +24,7 @@
 - [Optional enhancements](#optional-enhancements)
   - [Set up a coding agent](#set-up-a-coding-agent)
   - [Set up the shell prompt](#set-up-the-shell-prompt)
-  - [Check `GitLens` in `VS Code`](#check-gitlens-in-vs-code)
-    - [See all branches](#see-all-branches)
-    - [Look at the commit graph](#look-at-the-commit-graph)
-    - [Inspect the current branch](#inspect-the-current-branch)
-    - [Inspect remotes](#inspect-remotes)
-    - [(Optional) Learn more about `GitLens`](#optional-learn-more-about-gitlens)
+  - [Get familiar with `GitLens`](#get-familiar-with-gitlens)
   - [Create a label for tasks](#create-a-label-for-tasks)
     - [Create the `task` label](#create-the-task-label)
     - [Add the label to issues](#add-the-label-to-issues)
@@ -255,7 +250,7 @@ These enhancements can make your life easier:
 
 - [Set up a coding agent](#set-up-a-coding-agent)
 - [Set up the shell prompt](#set-up-the-shell-prompt)
-- [Check `GitLens` in `VS Code`](#check-gitlens-in-vs-code)
+- [Get familiar with `GitLens`](#get-familiar-with-gitlens)
 - [Create a label for tasks](#create-a-label-for-tasks)
 
 ### Set up a coding agent
@@ -274,10 +269,7 @@ Complete these steps:
 2. [Open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
 3. You should see something like `lab-01-market-product-and-git on main`.
 
-### Check `GitLens` in `VS Code`
-
-<!-- TODO create appendix gitlens -->
-<!-- TODO move to the appendix -->
+### Get familiar with `GitLens`
 
 <!-- 
 TODO hide graph 
@@ -286,52 +278,14 @@ click and hold gitlens
 move it over graph
 -->
 
-`GitLens` shows commit history, blame annotations, and branch visualization right inside `VS Code`.
+[`GitLens`](./appendix/gitlens.md) helps you work with `Git` in `VS Code`.
 
 Complete these steps:
 
-1. Open `VS Code`.
-2. [See all branches](#see-all-branches)
-3. [Look at the commit graph](#look-at-the-commit-graph)
-4. [Inspect the current branch](#inspect-the-current-branch)
-5. [(Optional) Learn more about `GitLens`](#optional-learn-more-about-gitlens)
-
-#### See all branches
-
-1. Go to the [`Status Bar`](../lab/appendix/vs-code.md#status-bar).
-2. Look at the branch name.
-3. Click it to see all available branches.
-4. If you click a branch, you'll be able to switch to it.
-
-#### Look at the commit graph
-
-1. Go to the [`Status Bar`](../lab/appendix/vs-code.md#status-bar).
-1. Click the icon `Visualize commits on the Commit Graph`.
-1. Make sure you can see the commit graph.
-
-#### Inspect the current branch
-
-1. [Open the `Source Control`](../lab/appendix/vs-code.md#open-the-source-control).
-2. Click `GITLENS`.
-3. Click the `Commits` icon.
-4. See `COMMITS <branch-name>`.
-5. See commits below it.
-6. Click a commit to open a list of files changed in that commit.
-7. Click a file changed in that commit to see changes in that file.
-
-#### Inspect remotes
-
-1. [Open the `Source Control`](../lab/appendix/vs-code.md#open-the-source-control).
-2. Click `GITLENS` to uncollapse the view.
-3. Hover over the `GITLENS` view name.
-4. Click the icon `Remotes` (looks like a cloud).
-5. Make sure `origin` points to your repo URL:
-   1. Hover over `origin`:
-   2. Look at URLs.
-
-#### (Optional) Learn more about `GitLens`
-
-See [`GitLens` features](https://help.gitkraken.com/gitlens/gitlens-features/).
+1. [See all branches](./appendix/gitlens.md#see-all-branches)
+2. [Look at the commit graph](./appendix/gitlens.md#look-at-the-commit-graph)
+3. [Inspect the current branch](./appendix/gitlens.md#inspect-the-current-branch)
+4. [Inspect the remotes](./appendix/gitlens.md#inspect-the-remotes)
 
 ### Create a label for tasks
 
