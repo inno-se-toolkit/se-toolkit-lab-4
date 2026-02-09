@@ -22,6 +22,8 @@ Outline:
 - [Pull changes from `origin/main`](#pull-changes-from-originmain)
   - [Pull changes from `origin/main` using the `Terminal`](#pull-changes-from-originmain-using-the-terminal)
   - [Pull changes from `origin/main` using `GitLens`](#pull-changes-from-originmain-using-gitlens)
+- [Resolve conflicts](#resolve-conflicts)
+  - [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
 - [Switch to a new branch](#switch-to-a-new-branch)
   - [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
   - [Switch to a new branch using the `Terminal`](#switch-to-a-new-branch-using-the-terminal)
@@ -107,6 +109,32 @@ We call that branch `origin/main`.
 ### Pull changes from `origin/main` using `GitLens`
 
 1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Pull`
+
+## Resolve conflicts
+
+You may see some errors and messages about conflicts after pulling.
+
+It may happen that commits on your `origin/main` are different from commits on your local `main` branch in your cloned repo on your computer.
+
+You can see that in the [`Status Bar`](../appendix/vs-code.md#status-bar).
+
+<img alt="Commit Conflict" src="../images/appendix/vs-code/status-bar-commit-conflict.png" style="width:400px"></img>
+
+You need to pull commits from `origin/main` into your local `main`.
+
+These commits from `origin/main` will find a place somewhere among the commits on your local `main`.
+
+However, you can get conflicts if commits from `origin/main` modified the same lines of text in files as your local commits but in a different way.
+
+In this case, you have to choose how to pull changes from `origin/main` and resolve conflicts.
+
+### Pull and rebase using `GitLens`
+
+When you rebase, your local commits are placed on top of the commits from `origin/main`.
+
+1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Pull`.
+2. Select `Pull with Rebase` (e.g., using `UpArrow` and `DownArrow` on your keyboard).
+3. Press `Enter` to confirm.
 
 ## Switch to a new branch
 
