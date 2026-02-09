@@ -15,7 +15,7 @@ Example:
 <!-- Go over all the following points, and put an `x` in all the boxes that apply. -->
 <!-- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
 
-- [ ] I made this PR to the `main` branch **of my fork (NOT the upstream repo)**.
+- [ ] I made this PR to the `main` branch **of my fork (NOT the course instructors' repo)**.
 - [ ] I see `base: main` <- `compare: <branch-name>` above the PR title.
 - [ ] I linked at least one issue (`Closes #<issue-number>`).
 - [ ] I wrote clear commit messages.
