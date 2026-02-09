@@ -17,10 +17,10 @@ Outline:
 
 - [Create a `Lab Task` issue](#create-a-lab-task-issue)
 - [Switch to the `main` branch](#switch-to-the-main-branch)
-- [Create a branch](#create-a-branch)
-  - [Create a branch using `GitHub`](#create-a-branch-using-github)
-  - [Create a branch using the `Terminal`](#create-a-branch-using-the-terminal)
-  - [Create a branch using `GitLens`](#create-a-branch-using-gitlens)
+- [Switch to a new branch](#switch-to-a-new-branch)
+  - [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
+  - [Switch to a new branch using the `Terminal`](#switch-to-a-new-branch-using-the-terminal)
+  - [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
 - [Edit files](#edit-files)
 - [Commit](#commit)
   - [Commit using the `Terminal`](#commit-using-the-terminal)
@@ -74,18 +74,19 @@ Outline:
    git switch main
    ```
 
-## Create a branch
+## Switch to a new branch
 
-Create a new branch using any of these approaches:
+Create a new branch and switch to it using any of these approaches:
 
-- [Create a branch using `GitHub`](#create-a-branch-using-github)
-- [Create a branch using the `Terminal`](#create-a-branch-using-the-terminal)
-- [Create a branch using `GitLens`](#create-a-branch-using-gitlens)
+<!-- no toc -->
+- [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
+- [Switch to a new branch using the `Terminal`](#switch-to-a-new-branch-using-the-terminal)
+- [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
 
 > [!IMPORTANT]
 > Replace the `<branch-name>` with the actual branch name.
 
-### Create a branch using `GitHub`
+### Switch to a new branch using `GitHub`
 
 1. Go to your fork on `GitHub`.
 2. [Create a branch](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue).
@@ -98,7 +99,7 @@ Create a new branch using any of these approaches:
 
 4. [Run the copied command using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal).
 
-### Create a branch using the `Terminal`
+### Switch to a new branch using the `Terminal`
 
 1. [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
 
@@ -106,7 +107,7 @@ Create a new branch using any of these approaches:
     git checkout -b <branch-name>
     ```
 
-### Create a branch using `GitLens`
+### Switch to a new branch using `GitLens`
 
 1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Git Create Branch...`.
 2. Select `main` as the base branch (e.g., using `UpArrow` and `DownArrow` on your keyboard).
