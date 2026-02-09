@@ -274,7 +274,8 @@ Complete these steps:
 ## Customize the `Source Control`
 
 1. [Open the `Source Control`](./appendix/vs-code.md#open-the-source-control).
-2. Put checkmarks only near `Changes` and `GitLens` to see only these views.
+2. Click three dots to the right of `SOURCE CONTROL`.
+3. Put checkmarks only near `Changes` and `GitLens` to see only these views.
 
    <img alt="Changes and GitLens" src="./images/appendix/vs-code/source-control-allowed-views.png" style="width:400px"></img>
 
