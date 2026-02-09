@@ -36,11 +36,12 @@ Use `<add-contributor>` instead of the `<branch-name>`.
 
 ## 4. Commit and push
 
-```bash
-git add CONTRIBUTORS.md
-git commit -m 'docs: add <your-username> to contributors'
-git push -u origin add-contributor
-```
+[Commit changes](../git-workflow.md#commit).
+
+Note that:
+
+- You should stage changes in `CONTRIBUTORS.md`.
+- The commit message should be like `docs: add @johndoe to contributors`. Replace `@johndoe` with `@<your-username>`.
 
 ## 5. Create a Pull Request (PR)
 
