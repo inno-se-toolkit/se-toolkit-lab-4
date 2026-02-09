@@ -80,6 +80,11 @@ Views on a side of the [`Editor`](#editor). See [`Basic Layout`](#basic-layout).
 
 - [docs](https://code.visualstudio.com/docs/configure/custom-layout#_primary-side-bar)
 
+Actions:
+
+- [Open the `Primary Sidebar`](#open-the-primary-sidebar)
+- [Switch between `Primary Sidebar` views](#switch-between-primary-sidebar-views)
+
 ### Open the `Primary Sidebar`
 
 For example, [open the `Source Control`](#open-the-source-control).
@@ -111,6 +116,12 @@ Run editor commands.
 - [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)
 - [docs 2](https://code.visualstudio.com/docs/getstarted/getting-started#_access-commands-with-the-command-palette)
 
+Actions:
+
+- [Open the `Command Palette`](#open-the-command-palette)
+- [Run a command using the `Command Palette`](#run-a-command-using-the-command-palette)
+- [Open a file using the `Command Palette`](#open-a-file-using-the-command-palette)
+
 ### Open the `Command Palette`
 
 1. Press `Ctrl+Shift+P` (`Cmd+Shift+P` on `macOS`).
@@ -134,6 +145,14 @@ Run editor commands.
 Run terminal commands inside `VS Code`.
 
 - [docs](https://code.visualstudio.com/docs/terminal/getting-started)
+
+Actions:
+
+- [Open the `Terminal`](#open-the-terminal)
+- [Close the `Terminal`](#close-the-terminal)
+- [Copy text inside the `Terminal`](#copy-text-inside-the-terminal)
+- [Paste text inside the `Terminal`](#paste-text-inside-the-terminal)
+- [Run a command using the `Terminal`](#run-a-command-using-the-terminal)
 
 ### Open the `Terminal`
 
@@ -164,6 +183,10 @@ View the file tree.
 
 - [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_explorer-view)
 
+Actions:
+
+- [Open `Folders`](#open-folders)
+
 ### Open `Folders`
 
 1. Go to the [`Activity Bar`](#activity-bar).
@@ -174,6 +197,11 @@ View the file tree.
 Interact with `Git` via `VS Code` UI.
 
 - [docs](https://code.visualstudio.com/docs/sourcecontrol/overview)
+
+Actions:
+
+- [Open the `Source Control`](#open-the-source-control)
+- [Close the `Source Control`](#close-the-source-control)
 
 ### Open the `Source Control`
 
