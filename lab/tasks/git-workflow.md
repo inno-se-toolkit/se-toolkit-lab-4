@@ -82,13 +82,11 @@ Create a new branch using any of these approaches:
    git checkout <branch-name>
    ```
 
-4. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
-5. [Run the copied command](../appendix/vs-code.md#run-a-command-using-the-terminal).
+4. [Run the copied command using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal).
 
 ### Create a branch using the `Terminal`
 
-1. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
-2. [Run](../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
 
     ```console
     git checkout -b <branch-name>
@@ -221,8 +219,7 @@ See [Undo commit on the current branch](../appendix/gitlens.md#undo-a-commit-on-
 
 ### Publish using the `Terminal`
 
-1. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
-2. Run:
+1. [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
 
    ```console
    git push -u origin <branch-name>
@@ -240,8 +237,7 @@ See [Undo commit on the current branch](../appendix/gitlens.md#undo-a-commit-on-
 
 ### Push using the `Terminal`
 
-1. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
-2. Run:
+1. [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
 
    ```console
    git push
@@ -333,17 +329,20 @@ Delete the PR branch.
 
 ### Pull using the `Terminal`
 
-1. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
-2. Switch to `main`:
+1. Switch to the `main` branch.
+
+   [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
 
    ```console
    git switch main
    ```
 
-3. Pull changes:
+2. Pull changes from `origin`.
+
+   [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
 
    ```console
-   git pull
+   git pull origin main
    ```
 
 ### Pull using `GitLens`
