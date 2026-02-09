@@ -6,6 +6,7 @@
 - [`Activity Bar`](#activity-bar)
 - [`Primary Sidebar`](#primary-sidebar)
   - [Open the `Primary Sidebar`](#open-the-primary-sidebar)
+  - [Switch between views](#switch-between-views)
 - [`Status Bar`](#status-bar)
 - [`Editor Toolbar`](#editor-toolbar)
 - [`Command Palette`](#command-palette)
