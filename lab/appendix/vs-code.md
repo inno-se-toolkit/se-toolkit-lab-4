@@ -175,21 +175,27 @@ Interact with `Git` via `VS Code` UI.
 
 ### Open the `Source Control`
 
-- Approach 1:
-  1. Go to the [`Activity Bar`](#activity-bar).
-  2. Click `Source Control`.
-  3. Click `CHANGES` to uncollapse the view.
+Approach 1:
+
+1. Go to the [`Activity Bar`](#activity-bar).
+2. Click `Source Control`.
+3. Click `CHANGES` to uncollapse the view.
   
-- Approach 2:
-  1. Press `Ctrl+Shift+G G` (`Ctrl+Shift+G` on `macOS`)
-  2. Click `CHANGES` to uncollapse the view.
+Approach 2:
+
+1. Press `Ctrl+Shift+G G` (`Ctrl+Shift+G` on `macOS`)
+2. Click `CHANGES` to uncollapse the view.
 
 ### Close the `Source Control`
 
-- Approach 1:
-  1. Go to the [`Activity Bar`](#activity-bar)
-  2. Click `Source Control`.
-- Approach 2: Press `Ctrl+B` (`Cmd+B` on `macOS`)
+Approach 1:
+
+1. Go to the [`Activity Bar`](#activity-bar)
+2. Click `Source Control`.
+
+Approach 2:
+
+1. Press `Ctrl+B` (`Cmd+B` on `macOS`)
 
 ## `Extensions`
 
