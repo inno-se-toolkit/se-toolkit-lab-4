@@ -26,7 +26,7 @@ Title: `[Task] Resolve a merge conflict`
 
 ### 2. Create practice branches
 
-```console
+```terminal
 git switch main
 git branch conflict-branch-1
 git branch conflict-branch-2
@@ -42,7 +42,7 @@ Alternatively:
 
 ### 3. Make a change on the `conflict-branch-1`
 
-```console
+```terminal
 git switch conflict-branch-1
 ```
 
@@ -56,14 +56,14 @@ Edit [`CONTRIBUTORS.md`](../../../CONTRIBUTORS.md) — change the comment text t
 
 Commit:
 
-```console
+```terminal
 git add CONTRIBUTORS.md
 git commit -m 'docs: update contributors instructions'
 ```
 
 ### 4. Make a conflicting change on `conflict-branch-2`
 
-```console
+```terminal
 git switch conflict-branch-2
 ```
 
@@ -71,7 +71,7 @@ Edit `CONTRIBUTORS.md` — change the same comment to something different (e.g.,
 
 Commit:
 
-```console
+```terminal
 git add CONTRIBUTORS.md
 git commit -m 'docs: update contributors comment'
 ```
@@ -80,7 +80,7 @@ git commit -m 'docs: update contributors comment'
 
 You're currently on the branch `conflict-branch-2`.
 
-```console
+```terminal
 git merge conflict-branch-1
 ```
 
@@ -102,7 +102,7 @@ Edit the file to keep one version (or combine them). Remove the conflict markers
 
 Then complete the merge:
 
-```console
+```terminal
 git add CONTRIBUTORS.md
 git commit -m 'docs: resolve merge conflict in contributors'
 ```
@@ -134,7 +134,7 @@ Link the issue as usually.
 
 Delete the practice branches:
 
-```console
+```terminal
 git branch -d conflict-branch-1
 git branch -d conflict-branch-2
 ```

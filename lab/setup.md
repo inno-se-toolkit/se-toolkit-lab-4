@@ -114,7 +114,7 @@ Complete these steps:
 1. (Optional) See [docs](https://git-scm.com/docs/git-config#Documentation/git-config.txt-username) for an explanation of what these commands do.
 2. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
 
-    ```console
+    ```terminal
     git config --global user.name '<your-name>'
     ```
 
@@ -122,7 +122,7 @@ Complete these steps:
 
 3. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
 
-     ```console
+     ```terminal
      git config --global user.email '<your-email>'
      ```
 
@@ -156,17 +156,17 @@ Clone the fork using any of these approaches:
 ### Clone the fork using the `Terminal`
 
 1. [Open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
-2. Make sure you see `software-engineering-toolkit` as your current directory.
+2. You should see `software-engineering-toolkit` as your current directory.
 3. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
 
-   ```console
+   ```terminal
     git clone <fork-url>
     ```
 
     Note: replace `<fork-url>` with the copied fork URL.
 4. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
 
-   ```console
+   ```terminal
    ls
    ```
 

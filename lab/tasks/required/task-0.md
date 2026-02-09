@@ -28,7 +28,7 @@ On the issue page, click `Create a branch` in the right sidebar.
 
 Alternatively, use the terminal:
 
-```bash
+```terminal
 git checkout -b add-contributor
 ```
 

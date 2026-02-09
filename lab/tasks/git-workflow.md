@@ -77,7 +77,7 @@ Create a new branch using any of these approaches:
 2. [Create a branch](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue).
 3. Copy the command provided by `GitHub`. It's something like:
 
-   ```console
+   ```terminal
    git fetch origin
    git checkout <branch-name>
    ```
@@ -88,7 +88,7 @@ Create a new branch using any of these approaches:
 
 1. [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
 
-    ```console
+    ```terminal
     git checkout -b <branch-name>
     ```
 
@@ -129,7 +129,7 @@ Commit using any of these approaches:
 1. Open the [`Terminal`](../appendix/vs-code.md#open-the-terminal).
 2. Run:
 
-   ```console
+   ```terminal
    git add <file>
    # example: git add README.md
    # example (path with spaces): git add 'path/some image.svg'
@@ -193,7 +193,7 @@ Undo commits using any of these approaches:
 
 [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
 
-```console
+```terminal
 git reset --soft HEAD~1
 ```
 
@@ -201,13 +201,13 @@ Your changes are staged now.
 
 You can stage more changes.
 
-```console
+```terminal
 git add some-file
 ```
 
 Then, you can commit using the previous message.
 
-```console
+```terminal
 git commit -C ORIG_HEAD
 ```
 
@@ -221,7 +221,7 @@ See [Undo commit on the current branch](../appendix/gitlens.md#undo-a-commit-on-
 
 1. [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
 
-   ```console
+   ```terminal
    git push -u origin <branch-name>
    ```
 
@@ -239,7 +239,7 @@ See [Undo commit on the current branch](../appendix/gitlens.md#undo-a-commit-on-
 
 1. [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
 
-   ```console
+   ```terminal
    git push
    ```
 
@@ -333,7 +333,7 @@ Delete the PR branch.
 
    [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
 
-   ```console
+   ```terminal
    git switch main
    ```
 
@@ -341,7 +341,7 @@ Delete the PR branch.
 
    [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
 
-   ```console
+   ```terminal
    git pull origin main
    ```
 
