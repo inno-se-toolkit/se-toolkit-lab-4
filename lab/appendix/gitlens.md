@@ -10,7 +10,10 @@
 - [Open the commit graph](#open-the-commit-graph)
   - [Open the commit graph using the `Status Bar`](#open-the-commit-graph-using-the-status-bar)
   - [Open the commit graph using the `Command Palette`](#open-the-commit-graph-using-the-command-palette)
-- [Inspect the current branch](#inspect-the-current-branch)
+- [Open commits on the current branch](#open-commits-on-the-current-branch)
+- [View changes in a commit on the current branch](#view-changes-in-a-commit-on-the-current-branch)
+- [Open a commit menu on the current branch](#open-a-commit-menu-on-the-current-branch)
+- [Undo a commit on the current branch](#undo-a-commit-on-the-current-branch)
 - [Inspect remotes](#inspect-remotes)
 
 ## `GitLens` features
@@ -65,16 +68,36 @@ Open the commit graph using any of these approaches:
 
 1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette): `GitLens: Show Commit Graph`.
 
-## Inspect the current branch
+## Open commits on the current branch
 
 1. [Open the `GITLENS` view](#open-the-gitlens-view).
 2. Click the icon `Commits`.
 
-   <img alt="View Commits" src="../images/appendix/gitlens/view-commits.png" style="width:200px"></img>
-3. See `COMMITS <branch-name>`.
-4. See commits below it.
-5. Click a commit to open a list of files changed in that commit.
-6. Click a file changed in that commit to see changes in that file.
+   <img alt="View Commits" src="../images/appendix/gitlens/view-commits.png" style="width:400px"></img>
+3. Look at something like `- on <branch-name> fetched 1 minute ago`.
+4. Below that text are the commits on the branch `<branch-name>`.
+5. Here, the latest not pushed commit is highlighted:
+
+   <img alt="Latest commit" src="../images/appendix/gitlens/view-commits-latest.png" style="width:400px"></img>
+
+## View changes in a commit on the current branch
+
+1. [Open commits on the current branch](#open-commits-on-the-current-branch).
+2. Click a commit to open a list of files changed in that commit.
+3. Click a file changed in that commit to see changes in that file.
+
+## Open a commit menu on the current branch
+
+1. [Open commits on the current branch](#open-commits-on-the-current-branch).
+2. Right click a commit.
+3. A menu will open that shows possible actions with the commit.
+
+## Undo a commit on the current branch
+
+1. [Open the commit menu on the current branch](#open-a-commit-menu-on-the-current-branch).
+2. Click `Undo Commit` in the menu.
+3. The commit will be undone.
+4. Changes from the commit will be added to `Staged Changes`.
 
 ## Inspect remotes
 
