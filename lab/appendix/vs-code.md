@@ -20,7 +20,7 @@
   - [Paste text inside the `Terminal`](#paste-text-inside-the-terminal)
   - [Run a command using the `Terminal`](#run-a-command-using-the-terminal)
 - [`Folders`](#folders)
-  - [Open `Folders`](#open-folders)
+  - [Open the `Folders`](#open-the-folders)
 - [`Source Control`](#source-control)
   - [Open the `Source Control`](#open-the-source-control)
   - [Close the `Source Control`](#close-the-source-control)
@@ -185,9 +185,9 @@ View the file tree.
 
 Actions:
 
-- [Open `Folders`](#open-folders)
+- [Open the `Folders`](#open-the-folders)
 
-### Open `Folders`
+### Open the `Folders`
 
 1. Go to the [`Activity Bar`](#activity-bar).
 2. Click `Folders`.
