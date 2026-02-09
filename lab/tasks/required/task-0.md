@@ -24,13 +24,9 @@ Title: `[Task] Add my name to contributors`
 
 ## 2. Create a branch
 
-On the issue page, click `Create a branch` in the right sidebar.
+See [Create a branch](../git-workflow.md#create-a-branch).
 
-Alternatively, use the terminal:
-
-```bash
-git checkout -b add-contributor
-```
+Use `<add-contributor>` instead of the `<branch-name>`.
 
 ## 3. Add your name
 
@@ -40,11 +36,12 @@ git checkout -b add-contributor
 
 ## 4. Commit and push
 
-```bash
-git add CONTRIBUTORS.md
-git commit -m 'docs: add <your-username> to contributors'
-git push -u origin add-contributor
-```
+[Commit changes](../git-workflow.md#commit).
+
+Note that:
+
+- You should stage changes in `CONTRIBUTORS.md`.
+- The commit message should be like `docs: add @johndoe to contributors`. Replace `@johndoe` with `@<your-username>`.
 
 ## 5. Create a Pull Request (PR)
 

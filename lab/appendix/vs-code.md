@@ -140,9 +140,9 @@ Actions:
 ### Run a command using the `Command Palette`
 
 1. [Open the `Command Palette`](#open-the-command-palette).
-1. Start typing a command.
-1. Select the necessary command (move the cursor via `UpArrow` and `DownArrow` on your keyboard).
-1. Press `Enter` or click the necessary command.
+2. Start typing a command.
+3. Select the necessary command (move the cursor via `UpArrow` and `DownArrow` on your keyboard).
+4. Press `Enter` or click the necessary command.
 
 ### Open a file using the `Command Palette`
 
@@ -176,7 +176,7 @@ Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 ### Copy text inside the `Terminal`
 
 1. Select text.
-1. Press `Ctrl+Shift+C` (`Cmd+C` on `macOS`).
+2. Press `Ctrl+Shift+C` (`Cmd+C` on `macOS`).
 
 ### Paste text inside the `Terminal`
 
@@ -185,8 +185,8 @@ Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 ### Run a command using the `Terminal`
 
 1. [Open the `Terminal`](#open-the-terminal).
-1. Write or [paste](#paste-text-inside-the-terminal) a command.
-1. Press `Enter`.
+2. Write or [paste](#paste-text-inside-the-terminal) a command.
+3. Press `Enter`.
 
 ## `Folders`
 

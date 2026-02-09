@@ -6,87 +6,89 @@
 
 **Context:** In team environments, multiple developers often work on the same codebase simultaneously. They might edit the same lines of code, leading to situations where changes conflict with each other. Understanding how to resolve these conflicts is essential for maintaining a healthy codebase.
 
-- [Steps](#steps)
-  - [1. Create an issue](#1-create-an-issue)
-  - [2. Create practice branches](#2-create-practice-branches)
-  - [3. Make a change on the `conflict-branch-1`](#3-make-a-change-on-the-conflict-branch-1)
-  - [4. Make a conflicting change on `conflict-branch-2`](#4-make-a-conflicting-change-on-conflict-branch-2)
-  - [5. Merge and resolve the conflict](#5-merge-and-resolve-the-conflict)
-    - [Resolve the conflict using without the merge editor](#resolve-the-conflict-using-without-the-merge-editor)
-    - [Resolve the conflict using the merge editor](#resolve-the-conflict-using-the-merge-editor)
-  - [6. Create a PR](#6-create-a-pr)
-  - [7. Clean up](#7-clean-up)
+- [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
+- [1. Create an issue](#1-create-an-issue)
+- [2. Switch to `main`](#2-switch-to-main)
+- [3. Switch to `conflict-branch-1`](#3-switch-to-conflict-branch-1)
+- [4. Edit `CONTRIBUTORS.md` on `conflict-branch-1`](#4-edit-contributorsmd-on-conflict-branch-1)
+- [5. Commit changes to `conflict-branch-1`](#5-commit-changes-to-conflict-branch-1)
+- [6. Switch to `main`](#6-switch-to-main)
+- [7. Switch to the `conflict-branch-2`](#7-switch-to-the-conflict-branch-2)
+- [8. Make a conflicting change on `conflict-branch-2`](#8-make-a-conflicting-change-on-conflict-branch-2)
+- [8. Commit changes to `conflict-branch-2`](#8-commit-changes-to-conflict-branch-2)
+- [9. Merge `conflict-branch-1` into `conflict-branch-2`](#9-merge-conflict-branch-1-into-conflict-branch-2)
+- [10. Resolve a conflict](#10-resolve-a-conflict)
+  - [Resolve the conflict without the merge editor](#resolve-the-conflict-without-the-merge-editor)
+  - [Resolve the conflict using the merge editor](#resolve-the-conflict-using-the-merge-editor)
+- [11. Create a PR](#11-create-a-pr)
+- [12. Switch to `main`](#12-switch-to-main)
+- [13. Delete conflict branches](#13-delete-conflict-branches)
 - [Acceptance criteria](#acceptance-criteria)
 
-## Steps
+## 0. Follow the `Git workflow`
 
-### 1. Create an issue
+Follow the [`Git workflow`](../git-workflow.md) to complete this task.
+
+The task specifies what to do not as in the `Git workflow`.
+
+## 1. Create an issue
 
 Title: `[Task] Resolve a merge conflict`
 
-### 2. Create practice branches
+## 2. Switch to `main`
 
-```console
-git switch main
-git branch conflict-branch-1
-git branch conflict-branch-2
-```
+1. [Switch to the `main` branch](../git-workflow.md#switch-to-the-main-branch).
 
-Alternatively:
+## 3. Switch to `conflict-branch-1`
 
-1. [Run using the `Command Palette`](../../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Git Create Branch...`.
-2. Select `main`.
-3. Enter `conflict-branch-1`.
-4. Press `Create Branch`.
-5. Repeat for another branch.
+1. [Switch to the new branch](../git-workflow.md#switch-to-a-new-branch) `conflict-branch-1`.
 
-### 3. Make a change on the `conflict-branch-1`
+## 4. Edit `CONTRIBUTORS.md` on `conflict-branch-1`
 
-```console
-git switch conflict-branch-1
-```
+1. Edit [`CONTRIBUTORS.md`](../../../CONTRIBUTORS.md). For example, add `- @johndoe` on the next line after `- @<your-username>`.
 
-Alternatively:
+## 5. Commit changes to `conflict-branch-1`
 
-1. [Run using the `Command Palette`](../../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Git Switch to...`.
-2. Start typing and select `conflict-branch-1`.
-3. Press `Enter`.
+[Commit](../git-workflow.md#commit) changes in `CONTRIBUTORS.md` to `conflict-branch-1`.
 
-Edit [`CONTRIBUTORS.md`](../../../CONTRIBUTORS.md) — change the comment text to something else (e.g., "Add your name here").
+The commit message should be `docs: add @johndoe to contributors`.
 
-Commit:
+## 6. Switch to `main`
 
-```console
-git add CONTRIBUTORS.md
-git commit -m 'docs: update contributors instructions'
-```
+1. [Switch to the `main` branch](../git-workflow.md#switch-to-the-main-branch).
 
-### 4. Make a conflicting change on `conflict-branch-2`
+## 7. Switch to the `conflict-branch-2`
 
-```console
-git switch conflict-branch-2
-```
+1. [Switch to the new branch](../git-workflow.md#switch-to-a-new-branch) `conflict-branch-2`.
 
-Edit `CONTRIBUTORS.md` — change the same comment to something different (e.g., "Write your name below").
+## 8. Make a conflicting change on `conflict-branch-2`
 
-Commit:
+1. Edit [`CONTRIBUTORS.md`](../../../CONTRIBUTORS.md) in a different way than before. For example, add `- @janedoe` on the next line after `- @<your-username>`.
 
-```console
-git add CONTRIBUTORS.md
-git commit -m 'docs: update contributors comment'
-```
+## 8. Commit changes to `conflict-branch-2`
 
-### 5. Merge and resolve the conflict
+[Commit](../git-workflow.md#commit) changes in `CONTRIBUTORS.md` to `conflict-branch-2`.
 
-You're currently on the branch `conflict-branch-2`.
+The commit message should be `docs: add @janedoe to contributors`.
 
-```console
+## 9. Merge `conflict-branch-1` into `conflict-branch-2`
+
+[Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+
+```terminal
 git merge conflict-branch-1
 ```
 
-#### Resolve the conflict using without the merge editor
+## 10. Resolve a conflict
 
 `Git` will report a conflict.
+
+Resolve it using one of these approaches:
+
+- [Resolve the conflict without the merge editor](#resolve-the-conflict-without-the-merge-editor)
+- [Resolve the conflict using the merge editor](#resolve-the-conflict-using-the-merge-editor)
+
+### Resolve the conflict without the merge editor
 
 Open [`CONTRIBUTORS.md`](../../../CONTRIBUTORS.md) — you'll see conflict markers:
 
@@ -102,12 +104,12 @@ Edit the file to keep one version (or combine them). Remove the conflict markers
 
 Then complete the merge:
 
-```console
+```terminal
 git add CONTRIBUTORS.md
 git commit -m 'docs: resolve merge conflict in contributors'
 ```
 
-#### Resolve the conflict using the merge editor
+### Resolve the conflict using the merge editor
 
 1. [Open the `Source Control`](../../appendix/vs-code.md#open-the-source-control).
 2. Go to `Merge Changes`.
@@ -122,33 +124,41 @@ git commit -m 'docs: resolve merge conflict in contributors'
 11. Click the file to see changes that you applied.
 12. Click `Continue`.
 
-### 6. Create a PR
+## 11. Create a PR
 
-Create a PR from `conflict-branch-2` to `main`.
+[Create a PR](../git-workflow.md#create-a-pr) from `conflict-branch-2` to `main`.
 
 Don't merge it.
 
 Link the issue as usually.
 
-### 7. Clean up
+Close the issue.
 
-Delete the practice branches:
+Close the PR.
 
-```console
-git branch -d conflict-branch-1
-git branch -d conflict-branch-2
-```
+## 12. Switch to `main`
 
-Alternatively:
+1. [Switch to the `main` branch](../git-workflow.md#switch-to-the-main-branch).
+
+## 13. Delete conflict branches
+
+Delete the practice branches using one of the following approaches.
+
+Approach 1:
+
+1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+
+    ```terminal
+    git branch -d conflict-branch-1
+    git branch -d conflict-branch-2
+    ```
+
+Approach 2:
 
 1. [Run using the `Command Palette`](../../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Git Delete Branch...`.
 2. Select `conflict-branch-1` and `conflict-branch-2` to delete them.
 3. Click `OK`.
 4. Click `Delete Branches`.
-
-Close the issue.
-
-Close the PR.
 
 ## Acceptance criteria
 

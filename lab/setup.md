@@ -104,7 +104,7 @@ Complete these steps:
 ## Open the `Terminal`
 
 1. Open `VS Code`.
-1. [Open the Terminal](./appendix/vs-code.md#open-the-terminal).
+2. [Open the Terminal](./appendix/vs-code.md#open-the-terminal).
 
 ## Configure `Git`
 
@@ -114,7 +114,7 @@ Complete these steps:
 1. (Optional) See [docs](https://git-scm.com/docs/git-config#Documentation/git-config.txt-username) for an explanation of what these commands do.
 2. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
 
-    ```console
+    ```terminal
     git config --global user.name '<your-name>'
     ```
 
@@ -122,7 +122,7 @@ Complete these steps:
 
 3. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
 
-     ```console
+     ```terminal
      git config --global user.email '<your-email>'
      ```
 
@@ -143,12 +143,12 @@ Complete these steps:
 ## Copy your fork URL
 
 1. Go to your fork on `Gitub`.
-1. Copy its [URL](https://en.wikipedia.org/wiki/URL).
-1. It should look like `https://github.com/<your-username>/lab-01-market-product-and-git`.
+2. Copy its [URL](https://en.wikipedia.org/wiki/URL).
+3. It should look like `https://github.com/<your-username>/lab-01-market-product-and-git`.
 
 ## Clone the fork on your computer
 
-Clone the fork using one of these approaches:
+Clone the fork using any of these approaches:
 
 - [Clone the fork using the `Terminal`](#clone-the-fork-using-the-terminal)
 - [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
@@ -156,21 +156,21 @@ Clone the fork using one of these approaches:
 ### Clone the fork using the `Terminal`
 
 1. [Open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
-1. Make sure you see `software-engineering-toolkit` as your current directory.
-1. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+2. You should see `software-engineering-toolkit` as your current directory.
+3. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
 
-   ```console
+   ```terminal
     git clone <fork-url>
     ```
 
     Note: replace `<fork-url>` with the copied fork URL.
-1. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+4. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
 
-   ```console
+   ```terminal
    ls
    ```
 
-1. You should see `lab-01-market-product-and-git` - the output of the command. This is the directory that contains the cloned repo.
+5. You should see `lab-01-market-product-and-git` - the output of the command. This is the directory that contains the cloned repo.
 
 ### Clone the fork using the `Command Palette`
 
@@ -217,12 +217,16 @@ Look at the [`Basic Layout`](./appendix/vs-code.md#basic-layout).
 > [!NOTE]
 > This file (`lab/setup.md`), `README.md`, and other files in this repository that have the extension `.md` are written in [`Markdown`](https://en.wikipedia.org/wiki/Markdown) (more precisely, in [`GitHub-flavored Markdown`](https://github.github.com/gfm/)).
 
-Open [`README.md`](../README.md) using one of these approaches:
+Open [`README.md`](../README.md) using any of the following approaches.
 
-- Approach 1: [Open the file using the `Command Palette`](./appendix/vs-code.md#open-a-file).
-- Approach 2:
-    1. [Open `Folders`](./appendix/vs-code.md#open-folders).
-    2. Click `README.md`.
+Approach 1:
+
+1. [Open the file using the `Command Palette`](./appendix/vs-code.md#open-a-file).
+
+Approach 2:
+
+1. [Open `Folders`](./appendix/vs-code.md#open-folders).
+2. Click `README.md`.
 
 ## Open `Markdown` preview
 
@@ -230,14 +234,16 @@ Open [`README.md`](../README.md) using one of these approaches:
 > `Markdown` gets translated into [`HTML`](https://en.wikipedia.org/wiki/HTML).
 > You see the rendered `HTML` when you open a preview in `VS Code` or on `GitHub`.
 
-Open the [`Markdown` preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) using one of these approaches:
+Open the [`Markdown` preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) using any of the following approaches.
 
-- Approach 1:
-  1. Go to the [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar).
-  2. Click `Open Preview to the Side`.
+Approach 1:
 
-- Approach 2:
-   1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette): `Markdown: Open Preview to the Side`.
+1. Go to the [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar).
+2. Click `Open Preview to the Side`.
+
+Approach 2:
+
+1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette): `Markdown: Open Preview to the Side`.
 
 ## Change workspace settings
 
@@ -274,7 +280,8 @@ Complete these steps:
 ## Customize the `Source Control`
 
 1. [Open the `Source Control`](./appendix/vs-code.md#open-the-source-control).
-2. Put checkmarks only near `Changes` and `GitLens` to see only these views.
+2. Click three dots to the right of `SOURCE CONTROL`.
+3. Put checkmarks only near `Changes` and `GitLens` to see only these views.
 
    <img alt="Changes and GitLens" src="./images/appendix/vs-code/source-control-allowed-views.png" style="width:400px"></img>
 
@@ -301,8 +308,8 @@ With a `task` label, you can see in one view all issues created for lab tasks.
 Complete these steps:
 
 1. [Create the `task` label](#create-the-task-label)
-1. [Add the label to issues](#add-the-label-to-issues)
-1. [See all issues with the label](#see-all-issues-with-the-label)
+2. [Add the label to issues](#add-the-label-to-issues)
+3. [See all issues with the label](#see-all-issues-with-the-label)
 
 #### Create the `task` label
 

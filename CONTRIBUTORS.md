@@ -1,10 +1,12 @@
 # Contributors
 
-Students who completed this lab:
+Students who contributed changes to this repository:
 
 <!--
-Add your GitHub username under this comment when you work on the Task 0.
-Use commit message: "docs: add <your-username> to contributors"
+johndoe is an example of a GitHub username.
+
+Replace @johndoe with @<your-username> where 
+<your-username> is your GitHub username.
 -->
 
 - @johndoe
