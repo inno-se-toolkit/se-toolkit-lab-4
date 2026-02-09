@@ -24,6 +24,7 @@
 - [Optional enhancements](#optional-enhancements)
   - [Set up a coding agent](#set-up-a-coding-agent)
   - [Set up the shell prompt](#set-up-the-shell-prompt)
+- [Customize the `Source Control`](#customize-the-source-control)
   - [Get familiar with `GitLens`](#get-familiar-with-gitlens)
   - [Create a label for tasks](#create-a-label-for-tasks)
     - [Create the `task` label](#create-the-task-label)
@@ -250,6 +251,7 @@ These enhancements can make your life easier:
 
 - [Set up a coding agent](#set-up-a-coding-agent)
 - [Set up the shell prompt](#set-up-the-shell-prompt)
+- [Customize the `Source Control`](#customize-the-source-control)
 - [Get familiar with `GitLens`](#get-familiar-with-gitlens)
 - [Create a label for tasks](#create-a-label-for-tasks)
 
@@ -269,14 +271,14 @@ Complete these steps:
 2. [Open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
 3. You should see something like `lab-01-market-product-and-git on main`.
 
-### Get familiar with `GitLens`
+## Customize the `Source Control`
 
-<!-- 
-TODO hide graph 
-collapse graph and gitlens
-click and hold gitlens
-move it over graph
--->
+1. [Open the `Source Control`](./appendix/vs-code.md#open-the-source-control).
+2. Put checkmarks only near `Changes` and `GitLens` to see only these views.
+
+   <img alt="Changes and GitLens" src="./images/appendix/vs-code/source-control-allowed-views.png" style="width:400px"></img>
+
+### Get familiar with `GitLens`
 
 [`GitLens`](./appendix/gitlens.md) helps you work with `Git` in `VS Code`.
 
