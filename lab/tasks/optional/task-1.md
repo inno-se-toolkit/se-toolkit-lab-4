@@ -6,25 +6,22 @@
 
 **Context:** In team environments, multiple developers often work on the same codebase simultaneously. They might edit the same lines of code, leading to situations where changes conflict with each other. Understanding how to resolve these conflicts is essential for maintaining a healthy codebase.
 
-- [Steps](#steps)
-  - [1. Create an issue](#1-create-an-issue)
-  - [2. Create practice branches](#2-create-practice-branches)
-  - [3. Make a change on the `conflict-branch-1`](#3-make-a-change-on-the-conflict-branch-1)
-  - [4. Make a conflicting change on `conflict-branch-2`](#4-make-a-conflicting-change-on-conflict-branch-2)
-  - [5. Merge and resolve the conflict](#5-merge-and-resolve-the-conflict)
-    - [Resolve the conflict using without the merge editor](#resolve-the-conflict-using-without-the-merge-editor)
-    - [Resolve the conflict using the merge editor](#resolve-the-conflict-using-the-merge-editor)
-  - [6. Create a PR](#6-create-a-pr)
-  - [7. Clean up](#7-clean-up)
+- [1. Create an issue](#1-create-an-issue)
+- [2. Create practice branches](#2-create-practice-branches)
+- [3. Make a change on the `conflict-branch-1`](#3-make-a-change-on-the-conflict-branch-1)
+- [4. Make a conflicting change on `conflict-branch-2`](#4-make-a-conflicting-change-on-conflict-branch-2)
+- [5. Merge and resolve the conflict](#5-merge-and-resolve-the-conflict)
+  - [Resolve the conflict without the merge editor](#resolve-the-conflict-without-the-merge-editor)
+  - [Resolve the conflict using the merge editor](#resolve-the-conflict-using-the-merge-editor)
+- [6. Create a PR](#6-create-a-pr)
+- [7. Clean up](#7-clean-up)
 - [Acceptance criteria](#acceptance-criteria)
 
-## Steps
-
-### 1. Create an issue
+## 1. Create an issue
 
 Title: `[Task] Resolve a merge conflict`
 
-### 2. Create practice branches
+## 2. Create practice branches
 
 ```terminal
 git switch main
@@ -40,7 +37,7 @@ Alternatively:
 4. Press `Create Branch`.
 5. Repeat for another branch.
 
-### 3. Make a change on the `conflict-branch-1`
+## 3. Make a change on the `conflict-branch-1`
 
 ```terminal
 git switch conflict-branch-1
@@ -61,7 +58,7 @@ git add CONTRIBUTORS.md
 git commit -m 'docs: update contributors instructions'
 ```
 
-### 4. Make a conflicting change on `conflict-branch-2`
+## 4. Make a conflicting change on `conflict-branch-2`
 
 ```terminal
 git switch conflict-branch-2
@@ -76,7 +73,7 @@ git add CONTRIBUTORS.md
 git commit -m 'docs: update contributors comment'
 ```
 
-### 5. Merge and resolve the conflict
+## 5. Merge and resolve the conflict
 
 You're currently on the branch `conflict-branch-2`.
 
@@ -84,7 +81,7 @@ You're currently on the branch `conflict-branch-2`.
 git merge conflict-branch-1
 ```
 
-#### Resolve the conflict using without the merge editor
+### Resolve the conflict without the merge editor
 
 `Git` will report a conflict.
 
@@ -107,7 +104,7 @@ git add CONTRIBUTORS.md
 git commit -m 'docs: resolve merge conflict in contributors'
 ```
 
-#### Resolve the conflict using the merge editor
+### Resolve the conflict using the merge editor
 
 1. [Open the `Source Control`](../../appendix/vs-code.md#open-the-source-control).
 2. Go to `Merge Changes`.
@@ -122,7 +119,7 @@ git commit -m 'docs: resolve merge conflict in contributors'
 11. Click the file to see changes that you applied.
 12. Click `Continue`.
 
-### 6. Create a PR
+## 6. Create a PR
 
 Create a PR from `conflict-branch-2` to `main`.
 
@@ -130,7 +127,7 @@ Don't merge it.
 
 Link the issue as usually.
 
-### 7. Clean up
+## 7. Clean up
 
 Delete the practice branches:
 
