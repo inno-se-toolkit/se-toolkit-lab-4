@@ -99,7 +99,7 @@ Statuses and menus of extensions at the bottom of the `VS Code` window.
 
 - [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 
-<img alt="Status Bar (left)" src="../images/appendix/vs-code/status-bar-left.png" style="width:200px"></img>
+<img alt="Status Bar (left)" src="../images/appendix/vs-code/status-bar-left.png" style="width:400px"></img>
 
 <img alt="Status Bar (right)" src="../images/appendix/vs-code/status-bar-right.png" style="width:400px"></img>
 
