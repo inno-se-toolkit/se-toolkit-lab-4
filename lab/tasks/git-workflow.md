@@ -24,6 +24,7 @@ Outline:
   - [Pull changes from `origin/main` using `GitLens`](#pull-changes-from-originmain-using-gitlens)
 - [Resolve conflicts](#resolve-conflicts)
   - [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
+  - [Resolve conflicts using `GitLens`](#resolve-conflicts-using-gitlens)
 - [Switch to a new branch](#switch-to-a-new-branch)
   - [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
   - [Switch to a new branch using the `Terminal`](#switch-to-a-new-branch-using-the-terminal)
@@ -126,7 +127,10 @@ These commits from `origin/main` will find a place somewhere among the commits o
 
 However, you can get conflicts if commits from `origin/main` modified the same lines of text in files as your local commits but in a different way.
 
-In this case, you have to choose how to pull changes from `origin/main` and resolve conflicts.
+In this case, you should rebase your local branch and resolve conflicts:
+
+- [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
+- [Resolve conflicts using `GitLens`](#resolve-conflicts-using-gitlens)
 
 ### Pull and rebase using `GitLens`
 
@@ -135,6 +139,27 @@ When you rebase, your local commits are placed on top of the commits from `origi
 1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Pull`.
 2. Select `Pull with Rebase` (e.g., using `UpArrow` and `DownArrow` on your keyboard).
 3. Press `Enter` to confirm.
+4. You're done if `GitLens` doesn't show any error.
+
+### Resolve conflicts using `GitLens`
+
+Continue resolving conflicts if you see an error like this:
+
+<img alt="Pull Error" src="../images/appendix/gitlens/pull-error.png" style="width:400px"></img>
+
+1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
+2. Go to `Merge Changes`.
+3. Click a file.
+4. Click `Resolve in Merge Editor`.
+5. Accept changes that you like more.
+6. Click `Complete Merge`.
+7. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
+8. Click `Continue`.
+9. This should be resolved.
+10. There may be other conflicts.
+11. `VS Code` can show something like `Rebasing (1/3)` and `Cancel`.
+12. Click that `Cancel`.
+13. Repeat steps.
 
 ## Switch to a new branch
 
