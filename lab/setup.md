@@ -67,8 +67,11 @@
 
 ## Protect your `main` branch
 
-Branch protection prevents accidental pushes directly to `main`.
-This enforces the PR workflow and ensures all changes are reviewed.
+> [!NOTE]
+> Branch protection prevents accidental pushes directly to `main`.
+> This enforces the PR workflow and ensures all changes are reviewed.
+
+Complete these steps:
 
 1. Go to your fork on `GitHub`.
 2. Go to `Settings`.
