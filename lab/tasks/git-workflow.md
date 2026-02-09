@@ -15,7 +15,7 @@ Here's this workflow in the context of repos:
 
 Outline:
 
-- [Create an issue](#create-an-issue)
+- [Create a `Lab Task` issue](#create-a-lab-task-issue)
 - [Create a branch](#create-a-branch)
   - [Create a branch using `GitHub`](#create-a-branch-using-github)
   - [Create a branch using the `Terminal`](#create-a-branch-using-the-terminal)
@@ -52,11 +52,11 @@ Outline:
   - [Pull using the `Terminal`](#pull-using-the-terminal)
   - [Pull using `GitLens`](#pull-using-gitlens)
 
-## Create an issue
+## Create a `Lab Task` issue
 
 1. Go to your fork on `GitHub`.
 2. [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) an issue.
-3. Click `Lab Task` if asked.
+3. Click `Lab Task` when asked about the issue type.
 
 > [!NOTE]
 > What you see when creating an issue is described using an [issue form](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms).
