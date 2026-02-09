@@ -2,6 +2,7 @@
 
 - [`Basic Layout`](#basic-layout)
 - [`Custom Layout`](#custom-layout)
+  - [Move the `Primary Sidebar` to the right](#move-the-primary-sidebar-to-the-right)
 - [`Editor`](#editor)
 - [`Activity Bar`](#activity-bar)
 - [`Primary Sidebar`](#primary-sidebar)
@@ -28,8 +29,6 @@
   - [Open the `Extensions`](#open-the-extensions)
   - [Filter the `Extensions`](#filter-the-extensions)
   - [Install recommended `Extensions`](#install-recommended-extensions)
-  - [Use cases](#use-cases)
-    - [Move the `Primary Sidebar` to the right](#move-the-primary-sidebar-to-the-right)
 - [Keyboard shortcuts](#keyboard-shortcuts)
   - [Frequently used shortcuts](#frequently-used-shortcuts)
 - [Workspace settings](#workspace-settings)
@@ -61,6 +60,16 @@ Custom UI appearance.
 
 - [docs 1](https://www.youtube.com/watch?v=nORT3-kONgA)
 - [docs 2](https://code.visualstudio.com/docs/configure/custom-layout)
+
+Actions:
+
+- [Move the `Primary Sidebar` to the right](#move-the-primary-sidebar-to-the-right)
+
+### Move the `Primary Sidebar` to the right
+
+[Move](https://code.visualstudio.com/docs/configure/custom-layout#_primary-side-bar) the [`Primary Sidebar`](#primary-sidebar) to the right so that it doesn't move your code whenever the `Primary Sidebar` opens.
+
+[Change the workspace settings](#change-the-workspace-settings) if you don't like that the `Primary Sidebar` on the right side.
 
 ## `Editor`
 
@@ -272,14 +281,6 @@ Approach 2:
 4. Click the icon `Install Workspace Recommended extensions`.
 
    <img alt="Filter Extensions" src="../images/appendix/vs-code/extensions-install-workspace-recommended.png" style="width:400px"></img>
-
-### Use cases
-
-#### Move the `Primary Sidebar` to the right
-
-[Move](https://code.visualstudio.com/docs/configure/custom-layout#_primary-side-bar) the [`Primary Sidebar`](#primary-sidebar) to the right so that it doesn't move your code whenever the `Primary Sidebar` opens.
-
-[Change the workspace settings](#change-the-workspace-settings) if you don't like that the `Primary Sidebar` on the right side.
 
 ## Keyboard shortcuts
 
