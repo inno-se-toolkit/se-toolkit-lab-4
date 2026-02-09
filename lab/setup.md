@@ -104,7 +104,7 @@ Complete these steps:
 ## Open the `Terminal`
 
 1. Open `VS Code`.
-1. [Open the Terminal](./appendix/vs-code.md#open-the-terminal).
+2. [Open the Terminal](./appendix/vs-code.md#open-the-terminal).
 
 ## Configure `Git`
 
@@ -143,8 +143,8 @@ Complete these steps:
 ## Copy your fork URL
 
 1. Go to your fork on `Gitub`.
-1. Copy its [URL](https://en.wikipedia.org/wiki/URL).
-1. It should look like `https://github.com/<your-username>/lab-01-market-product-and-git`.
+2. Copy its [URL](https://en.wikipedia.org/wiki/URL).
+3. It should look like `https://github.com/<your-username>/lab-01-market-product-and-git`.
 
 ## Clone the fork on your computer
 
@@ -156,21 +156,21 @@ Clone the fork using one of these approaches:
 ### Clone the fork using the `Terminal`
 
 1. [Open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
-1. Make sure you see `software-engineering-toolkit` as your current directory.
-1. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+2. Make sure you see `software-engineering-toolkit` as your current directory.
+3. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
 
    ```console
     git clone <fork-url>
     ```
 
     Note: replace `<fork-url>` with the copied fork URL.
-1. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+4. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
 
    ```console
    ls
    ```
 
-1. You should see `lab-01-market-product-and-git` - the output of the command. This is the directory that contains the cloned repo.
+5. You should see `lab-01-market-product-and-git` - the output of the command. This is the directory that contains the cloned repo.
 
 ### Clone the fork using the `Command Palette`
 
@@ -302,8 +302,8 @@ With a `task` label, you can see in one view all issues created for lab tasks.
 Complete these steps:
 
 1. [Create the `task` label](#create-the-task-label)
-1. [Add the label to issues](#add-the-label-to-issues)
-1. [See all issues with the label](#see-all-issues-with-the-label)
+2. [Add the label to issues](#add-the-label-to-issues)
+3. [See all issues with the label](#see-all-issues-with-the-label)
 
 #### Create the `task` label
 

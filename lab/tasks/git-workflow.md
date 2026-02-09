@@ -74,21 +74,21 @@ Create a new branch using one of these approaches:
 ### Create a branch using `GitHub`
 
 1. Go to your fork on `GitHub`.
-1. [Create a branch](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue).
-1. Copy the command provided by `GitHub`. It's something like:
+2. [Create a branch](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue).
+3. Copy the command provided by `GitHub`. It's something like:
 
    ```console
    git fetch origin
    git checkout <branch-name>
    ```
 
-1. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
-1. [Run the copied command](../appendix/vs-code.md#run-a-command-using-the-terminal).
+4. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
+5. [Run the copied command](../appendix/vs-code.md#run-a-command-using-the-terminal).
 
 ### Create a branch using the `Terminal`
 
 1. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
-1. [Run](../appendix/vs-code.md#run-a-command-using-the-terminal):
+2. [Run](../appendix/vs-code.md#run-a-command-using-the-terminal):
 
     ```console
     git checkout -b <branch-name>
@@ -178,8 +178,8 @@ Complete these steps:
 #### Commit staged changes
 
 1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
-1. Write a commit message.
-1. Click `Commit`.
+2. Write a commit message.
+3. Click `Commit`.
 
 ## (Optional) Undo commits
 
@@ -222,7 +222,7 @@ See [Undo commit on the current branch](../appendix/gitlens.md#undo-a-commit-on-
 ### Publish using the `Terminal`
 
 1. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
-1. Run:
+2. Run:
 
    ```console
    git push -u origin <branch-name>
@@ -271,14 +271,14 @@ If you see the `Compare & pull request` button, click it.
 #### Open the PR editor using `Pull requests`
 
 1. Go to your fork on `GitHub`.
-1. Click `Pull requests`.
-1. Click `New pull request`.
-1. Click `base repository: <your-username>/lab-01-market-product-and-git`.
-1. Click `<your-username>/lab-01-market-product-and-git` to select the base repo.
-1. The PR will be created in your repo with `main` as the base branch.
-1. Click `compare: main` to choose a branch to compare with the base.
-1. Click `<branch-name>`.
-1. Click `Create pull request`.
+2. Click `Pull requests`.
+3. Click `New pull request`.
+4. Click `base repository: <your-username>/lab-01-market-product-and-git`.
+5. Click `<your-username>/lab-01-market-product-and-git` to select the base repo.
+6. The PR will be created in your repo with `main` as the base branch.
+7. Click `compare: main` to choose a branch to compare with the base.
+8. Click `<branch-name>`.
+9. Click `Create pull request`.
 
 #### Open the PR editor using the branch list
 
@@ -334,13 +334,13 @@ Delete the PR branch.
 ### Pull using the `Terminal`
 
 1. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
-1. Switch to `main`:
+2. Switch to `main`:
 
    ```console
    git switch main
    ```
 
-1. Pull changes:
+3. Pull changes:
 
    ```console
    git pull
