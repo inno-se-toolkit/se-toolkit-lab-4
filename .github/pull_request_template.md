@@ -3,10 +3,13 @@
 ## Summary
 
 <!-- What does this PR do?
-Write under the commented-out lines (2–3 sentences max). 
-Example:
-- Closes #<issue-number>
+
+Replace <issue-number> with the number of the corresponding task issue.
+
+Add more details if necessary.
 -->
+
+- Closes #<issue-number>
 
 ---
 
@@ -15,8 +18,9 @@ Example:
 <!-- Go over all the following points, and put an `x` in all the boxes that apply. -->
 <!-- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
 
-- [ ] I made this PR to the `main` branch **of my fork (NOT the original repo)**.
-- [ ] I linked at least one issue (`Closes #<issue-number>`).
+- [ ] I made this PR to the `main` branch **of my fork (NOT the course instructors' repo)**.
+- [ ] I see `base: main` <- `compare: <branch-name>` above the PR title.
+- [ ] I edited the line `- Closes #<issue-number>`.
 - [ ] I wrote clear commit messages.
 - [ ] I reviewed my own diff before requesting review.
-- [ ] I understand the code I’m submitting (not blindly copy-pasted).
+- [ ] I understand the changes I’m submitting.

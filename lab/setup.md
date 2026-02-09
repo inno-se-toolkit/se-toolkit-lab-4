@@ -1,7 +1,7 @@
 # Lab setup
 
 - [Find a partner](#find-a-partner)
-- [Set up a fork](#set-up-a-fork)
+- [Fork the course instructors' repo](#fork-the-course-instructors-repo)
 - [Enable issues](#enable-issues)
 - [Add a classmate as a collaborator](#add-a-classmate-as-a-collaborator)
 - [Protect your `main` branch](#protect-your-main-branch)
@@ -24,12 +24,8 @@
 - [Optional enhancements](#optional-enhancements)
   - [Set up a coding agent](#set-up-a-coding-agent)
   - [Set up the shell prompt](#set-up-the-shell-prompt)
-  - [Check `GitLens` in `VS Code`](#check-gitlens-in-vs-code)
-    - [See all branches](#see-all-branches)
-    - [Look at the commit graph](#look-at-the-commit-graph)
-    - [Inspect the current branch](#inspect-the-current-branch)
-    - [Inspect remotes](#inspect-remotes)
-    - [(Optional) Learn more about `GitLens`](#optional-learn-more-about-gitlens)
+- [Customize the `Source Control`](#customize-the-source-control)
+  - [Get familiar with `GitLens`](#get-familiar-with-gitlens)
   - [Create a label for tasks](#create-a-label-for-tasks)
     - [Create the `task` label](#create-the-task-label)
     - [Add the label to issues](#add-the-label-to-issues)
@@ -40,14 +36,14 @@
 1. Find a classmate to be your partner for this lab.
 2. Sit together.
 
-## Set up a fork
+## Fork the course instructors' repo
 
 1. Create a `GitHub` account.
-2. Go to the [original repo](https://github.com/inno-se-toolkit/lab-01-market-product-and-git) (repository).
-3. [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository) the original repo.
-4. Go to your fork.
-5. The URL should be like `https://github.com/<your-username>/lab-01-market-product-and-git`.
-6. If you see a lock sign near your fork name, [make your fork public](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#changing-a-repositorys-visibility).
+2. Go to the course instructors' [repo](https://github.com/inno-se-toolkit/lab-01-market-product-and-git) (repository).
+3. Fork this repo: follow the [instructions on forking](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository).
+4. Go to your fork (a partial copy of the instructors' repo stored on `GitHub`).
+5. The URL of your fork should be like `https://github.com/<your-username>/lab-01-market-product-and-git`.
+6. If you don't see `Public` near your fork name, [make your fork public](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#changing-a-repositorys-visibility).
 
 > [!NOTE]
 > Continue working in your fork.
@@ -67,8 +63,11 @@
 
 ## Protect your `main` branch
 
-Branch protection prevents accidental pushes directly to `main`.
-This enforces the PR workflow and ensures all changes are reviewed.
+> [!NOTE]
+> Branch protection prevents accidental pushes directly to `main`.
+> This enforces the PR workflow and ensures all changes are reviewed.
+
+Complete these steps:
 
 1. Go to your fork on `GitHub`.
 2. Go to `Settings`.
@@ -171,7 +170,7 @@ Clone the fork using one of these approaches:
    ls
    ```
 
-1. You should see `lab-01-market-product-and-git` - the directory with the cloned repo.
+1. You should see `lab-01-market-product-and-git` - the output of the command. This is the directory that contains the cloned repo.
 
 ### Clone the fork using the `Command Palette`
 
@@ -209,13 +208,6 @@ Clone the fork using one of these approaches:
 
 [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette): `Developer: Reload Window`.
 
-<!-- 
-TODO hide graph 
-collapse graph and gitlens
-click and hold gitlens
-move it over graph
--->
-
 ## Explore `VS Code` layout
 
 Look at the [`Basic Layout`](./appendix/vs-code.md#basic-layout).
@@ -245,8 +237,7 @@ Open the [`Markdown` preview](https://code.visualstudio.com/docs/languages/markd
   2. Click `Open Preview to the Side`.
 
 - Approach 2:
-   1. [Open the `Command Palette`](./appendix/vs-code.md#open-the-command-palette).
-   2. Run `Markdown: Open Preview to the Side`.
+   1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette): `Markdown: Open Preview to the Side`.
 
 ## Change workspace settings
 
@@ -260,7 +251,8 @@ These enhancements can make your life easier:
 
 - [Set up a coding agent](#set-up-a-coding-agent)
 - [Set up the shell prompt](#set-up-the-shell-prompt)
-- [Check `GitLens`](#check-gitlens)
+- [Customize the `Source Control`](#customize-the-source-control)
+- [Get familiar with `GitLens`](#get-familiar-with-gitlens)
 - [Create a label for tasks](#create-a-label-for-tasks)
 
 ### Set up a coding agent
@@ -279,57 +271,23 @@ Complete these steps:
 2. [Open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
 3. You should see something like `lab-01-market-product-and-git on main`.
 
-### Check `GitLens` in `VS Code`
+## Customize the `Source Control`
 
-<!-- TODO create appendix gitlens -->
-<!-- TODO move to the appendix -->
+1. [Open the `Source Control`](./appendix/vs-code.md#open-the-source-control).
+2. Put checkmarks only near `Changes` and `GitLens` to see only these views.
 
-`GitLens` shows commit history, blame annotations, and branch visualization right inside `VS Code`.
+   <img alt="Changes and GitLens" src="./images/appendix/vs-code/source-control-allowed-views.png" style="width:400px"></img>
+
+### Get familiar with `GitLens`
+
+[`GitLens`](./appendix/gitlens.md) helps you work with `Git` in `VS Code`.
 
 Complete these steps:
 
-1. Open `VS Code`.
-2. [See all branches](#see-all-branches)
-3. [Look at the commit graph](#look-at-the-commit-graph)
-4. [Inspect the current branch](#inspect-the-current-branch)
-5. [(Optional) Learn more about `GitLens`](#optional-learn-more-about-gitlens)
-
-#### See all branches
-
-1. Go to the [`Status Bar`](../lab/appendix/vs-code.md#status-bar).
-2. Look at the branch name.
-3. Click it to see all available branches.
-4. If you click a branch, you'll be able to switch to it.
-
-#### Look at the commit graph
-
-1. Go to the [`Status Bar`](../lab/appendix/vs-code.md#status-bar).
-1. Click the icon `Visualize commits on the Commit Graph`.
-1. Make sure you can see the commit graph.
-
-#### Inspect the current branch
-
-1. [Open the `Source Control`](../lab/appendix/vs-code.md#open-the-source-control).
-2. Click `GITLENS`.
-3. Click the `Commits` icon.
-4. See `COMMITS <branch-name>`.
-5. See commits below it.
-6. Click a commit to open a list of files changed in that commit.
-7. Click a file changed in that commit to see changes in that file.
-
-#### Inspect remotes
-
-1. [Open the `Source Control`](../lab/appendix/vs-code.md#open-the-source-control).
-2. Click `GITLENS` to uncollapse the view.
-3. Hover over the `GITLENS` view name.
-4. Click the icon `Remotes` (looks like a cloud).
-5. Make sure `origin` points to your repo URL:
-   1. Hover over `origin`:
-   2. Look at URLs.
-
-#### (Optional) Learn more about `GitLens`
-
-See [`GitLens` features](https://help.gitkraken.com/gitlens/gitlens-features/).
+1. [See all branches](./appendix/gitlens.md#see-all-branches)
+2. [Look at the commit graph](./appendix/gitlens.md#look-at-the-commit-graph)
+3. [Inspect the current branch](./appendix/gitlens.md#inspect-the-current-branch)
+4. [Inspect the remotes](./appendix/gitlens.md#inspect-the-remotes)
 
 ### Create a label for tasks
 

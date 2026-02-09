@@ -34,12 +34,11 @@ git branch conflict-branch-2
 
 Alternatively:
 
-1. [Open the `Command Palette`](../../appendix/vs-code.md#open-the-command-palette).
-2. Run `GitLens: Git Create Branch...`.
-3. Select `main`.
-4. Enter `conflict-branch-1`.
-5. Press `Create Branch`.
-6. Repeat for another branch.
+1. [Run using the `Command Palette`](../../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Git Create Branch...`.
+2. Select `main`.
+3. Enter `conflict-branch-1`.
+4. Press `Create Branch`.
+5. Repeat for another branch.
 
 ### 3. Make a change on the `conflict-branch-1`
 
@@ -49,10 +48,9 @@ git switch conflict-branch-1
 
 Alternatively:
 
-1. [Open the `Command Palette`](../../appendix/vs-code.md#open-the-command-palette).
-2. Run `GitLens: Git Switch to...`.
-3. Start typing and select `conflict-branch-1`.
-4. Press `Enter`.
+1. [Run using the `Command Palette`](../../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Git Switch to...`.
+2. Start typing and select `conflict-branch-1`.
+3. Press `Enter`.
 
 Edit [`CONTRIBUTORS.md`](../../../CONTRIBUTORS.md) — change the comment text to something else (e.g., "Add your name here").
 
@@ -143,11 +141,10 @@ git branch -d conflict-branch-2
 
 Alternatively:
 
-1. [Open the `Command Palette`](../../appendix/vs-code.md#open-the-command-palette).
-2. Run `GitLens: Git Delete Branch...`.
-3. Select `conflict-branch-1` and `conflict-branch-2` to delete them.
-4. Click `OK`.
-5. Click `Delete Branches`.
+1. [Run using the `Command Palette`](../../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Git Delete Branch...`.
+2. Select `conflict-branch-1` and `conflict-branch-2` to delete them.
+3. Click `OK`.
+4. Click `Delete Branches`.
 
 Close the issue.
 

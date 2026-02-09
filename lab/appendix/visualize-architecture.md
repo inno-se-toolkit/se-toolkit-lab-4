@@ -1,5 +1,10 @@
 # Visualize the architecture
 
+- [`Draw.io`](#drawio)
+- [`PlantUML`](#plantuml)
+- [`Mermaid`](#mermaid)
+- [Other tools](#other-tools)
+
 > [!WARNING]
 > System architecture diagrams represent the system architecture but they are not the [system architecture](https://github.com/inno-se/the-guide?tab=readme-ov-file#architecture).
 
