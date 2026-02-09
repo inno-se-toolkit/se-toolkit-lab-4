@@ -19,6 +19,9 @@ Outline:
 - [Switch to the `main` branch](#switch-to-the-main-branch)
   - [Switch to the `main` branch using the `Terminal`](#switch-to-the-main-branch-using-the-terminal)
   - [Switch to the `main` branch using `GitLens`](#switch-to-the-main-branch-using-gitlens)
+- [Pull changes from `origin/main`](#pull-changes-from-originmain)
+  - [Pull changes from `origin/main` using the `Terminal`](#pull-changes-from-originmain-using-the-terminal)
+  - [Pull changes from `origin/main` using `GitLens`](#pull-changes-from-originmain-using-gitlens)
 - [Switch to a new branch](#switch-to-a-new-branch)
   - [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
   - [Switch to a new branch using the `Terminal`](#switch-to-a-new-branch-using-the-terminal)
@@ -52,9 +55,6 @@ Outline:
     - [As a PR author](#as-a-pr-author)
 - [Merge the PR](#merge-the-pr)
 - [Clean up](#clean-up)
-- [Pull changes](#pull-changes)
-  - [Pull using the `Terminal`](#pull-using-the-terminal)
-  - [Pull using `GitLens`](#pull-using-gitlens)
 
 ## Create a `Lab Task` issue
 
@@ -89,6 +89,24 @@ Switch to the `main` branch using any of these approaches:
 1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Git Switch to...`.
 2. Select the `main` branch (e.g., using `UpArrow` and `DownArrow` on your keyboard).
 3. Press `Enter` to confirm.
+
+## Pull changes from `origin/main`
+
+Pull changes from the `main` branch in your fork on `GitHub`.
+
+We call that branch `origin/main`.
+
+### Pull changes from `origin/main` using the `Terminal`
+
+1. [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
+
+   ```terminal
+   git pull origin main
+   ```
+
+### Pull changes from `origin/main` using `GitLens`
+
+1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Pull`
 
 ## Switch to a new branch
 
@@ -356,36 +374,3 @@ Click `Merge pull request`.
 Close the issue.
 
 Delete the PR branch.
-
-## Pull changes
-
-### Pull using the `Terminal`
-
-1. Switch to the `main` branch.
-
-   [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
-
-   ```terminal
-   git switch main
-   ```
-
-2. Pull changes from `origin`.
-
-   [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
-
-   ```terminal
-   git pull origin main
-   ```
-
-### Pull using `GitLens`
-
-Switch to `main`:
-
-1. Go to the [`Status Bar`](../appendix/vs-code.md#status-bar).
-2. Click the `<branch-name>`.
-3. Click `main`.
-
-Synchronize changes:
-
-1. Go to the [`Status Bar`](../appendix/vs-code.md#status-bar).
-2. Click the `Synchronize Changes` icon to the right of `<branch-name>`.
