@@ -109,6 +109,8 @@ Quick actions buttons located above the [`Editor`](#editor).
 
 - [docs](https://code.visualstudio.com/api/ux-guidelines/overview#editor-toolbar)
 
+<img alt="Editor Toolbar" src="../images/appendix/vs-code/editor-toolbar.png" style="width:400px"></img>
+
 ## `Command Palette`
 
 Run editor commands.
