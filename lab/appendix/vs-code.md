@@ -235,6 +235,7 @@ Keyboard shortcuts for various commands.
 
 `VS Code` settings for the workspace.
 
+- [docs](https://code.visualstudio.com/docs/editing/workspaces/workspaces)
 - [docs 1](https://code.visualstudio.com/docs/configure/settings#_workspace-settings)
 - [docs 2](https://code.visualstudio.com/docs/configure/settings#_settings-json-file)
 
