@@ -38,7 +38,7 @@ See all branches using any of these approaches:
 1. Go to the [`Status Bar`](./vs-code.md#status-bar).
 2. Look at the branch name.
 
-   <img alt="Current branch" src="../images/appendix/gitlens/status-bar-current-branch.png" style="width:200px"></img>
+   <img alt="Current branch" src="../images/appendix/gitlens/status-bar-current-branch.png" style="width:400px"></img>
 3. Click it to see all available branches.
 4. If you click a branch, you'll be able to switch to it.
 
@@ -47,7 +47,7 @@ See all branches using any of these approaches:
 1. [Open the `GITLENS` view](#open-the-gitlens-view).
 2. Click the icon `Branches`.
 
-   <img alt="View Branches" src="../images/appendix/gitlens/view-branches.png" style="width:200px"></img>
+   <img alt="View Branches" src="../images/appendix/gitlens/view-branches.png" style="width:400px"></img>
 
 ## Open the commit graph
 
@@ -62,7 +62,7 @@ Open the commit graph using any of these approaches:
 1. Go to the [`Status Bar`](./vs-code.md#status-bar).
 2. Click the icon `Visualize commits on the Commit Graph`.
 
-   <img alt="Status Bar Commit Graph" src="../images/appendix/gitlens/status-bar-commit-graph.png" style="width:200px"></img>
+   <img alt="Status Bar Commit Graph" src="../images/appendix/gitlens/status-bar-commit-graph.png" style="width:400px"></img>
 
 ### Open the commit graph using the `Command Palette`
 
@@ -105,7 +105,7 @@ Open the commit graph using any of these approaches:
 2. Hover over the `GITLENS` view name.
 3. Click the icon `Remotes`.
 
-    <img alt="View Remotes" src="../images/appendix/gitlens/view-remotes.png" style="width:200px"></img>
+    <img alt="View Remotes" src="../images/appendix/gitlens/view-remotes.png" style="width:400px"></img>
 4. Make sure `origin` points to your repo URL:
    1. Hover over `origin`.
    2. Look at URLs.
