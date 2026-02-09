@@ -355,11 +355,23 @@ See [Undo commit on the current branch](../appendix/gitlens.md#undo-a-commit-on-
 
 ## Create a PR
 
-Create a PR to the `main` branch via [`GitHub`](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request#creating-the-pull-request) or via the [`GitHub Pull Requests` extension](https://code.visualstudio.com/docs/sourcecontrol/github#_creating-pull-requests).
+Create a PR to the `main` branch **of your fork**.
+
+Complete these steps:
+
+- [Open the PR editor using `GitHub`](#open-the-pr-editor-using-github)
+- [Finish creating a PR](#finish-creating-a-pr)
+
+> [!TIP]
+> You can also [create a PR using  `GitHub Pull Requests` extension](https://code.visualstudio.com/docs/sourcecontrol/github#_creating-pull-requests).
 
 ### Open the PR editor using `GitHub`
 
-Open the PR editor using one of the following methods.
+Open the PR editor using any of these approaches:
+
+- [Open the PR editor using a button](#open-the-pr-editor-using-a-button)
+- [Open the PR editor using `Pull requests`](#open-the-pr-editor-using-pull-requests)
+- [Open the PR editor using the branch list](#open-the-pr-editor-using-the-branch-list)
 
 #### Open the PR editor using a button
 
