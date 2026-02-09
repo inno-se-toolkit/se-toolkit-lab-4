@@ -1,6 +1,6 @@
 # Contributors
 
-Students who completed this lab:
+Students who contributed changes to this repository:
 
 <!--
 Add your GitHub username under this comment when you work on the Task 0.
