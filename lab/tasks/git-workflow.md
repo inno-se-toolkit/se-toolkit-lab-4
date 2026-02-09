@@ -215,15 +215,7 @@ git commit -C ORIG_HEAD
 
 ### Undo commits using `GitLens`
 
-1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
-2. Click `GITLENS`.
-3. Go to the latest commit (the highest one).
-4. Undo using one of these approaches:
-   1. Approach 1:
-      1. Click the `Undo Commit` icon.
-   2. Approach 2:
-      1. Click the commit.
-      2. Click `Undo Commit`.
+See [Undo commit on the current branch](../appendix/gitlens.md#undo-a-commit-on-the-current-branch).
 
 ## Publish the branch
 
