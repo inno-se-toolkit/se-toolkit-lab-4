@@ -65,7 +65,7 @@ Outline:
 
 ## Create a branch
 
-Create a new branch using one of these approaches:
+Create a new branch using any of these approaches:
 
 - [Create a branch using `GitHub`](#create-a-branch-using-github)
 - [Create a branch using the `Terminal`](#create-a-branch-using-the-terminal)
@@ -120,7 +120,7 @@ Make commits to the `<branch-name>` to complete the task.
 > - `feat:` — additions (e.g., new feature)
 > - `docs:` — documentation changes
 
-Commit using one of these approaches:
+Commit using any of these approaches:
 
 - [Commit using the `Terminal`](#commit-using-the-terminal)
 - [Commit using `Source Control`](#commit-using-source-control)
@@ -186,7 +186,7 @@ Complete these steps:
 > [!NOTE]
 > There can appear a conflict when you try to undo.
 
-Undo commits using one of these approaches:
+Undo commits using any of these approaches:
 
 - [Undo commits using the `Terminal`](#undo-commits-using-the-terminal)
 - [Undo commits using `GitLens`](#undo-commits-using-gitlens)
