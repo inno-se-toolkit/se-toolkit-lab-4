@@ -111,7 +111,7 @@ Run editor commands.
 1. [Open the `Command Palette`](#open-the-command-palette).
 1. Start typing a command.
 1. Select the necessary command (move the cursor via `UpArrow` and `DownArrow` on your keyboard).
-1. Press `Enter`.
+1. Press `Enter` or click the necessary command.
 
 ### Open a file using the `Command Palette`
 
