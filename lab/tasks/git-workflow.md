@@ -20,6 +20,7 @@ Outline:
   - [Create a branch using `GitHub`](#create-a-branch-using-github)
   - [Create a branch using the `Terminal`](#create-a-branch-using-the-terminal)
   - [Create a branch using `GitLens`](#create-a-branch-using-gitlens)
+- [Edit files](#edit-files)
 - [Commit](#commit)
   - [Commit using the `Terminal`](#commit-using-the-terminal)
   - [Commit using `Source Control`](#commit-using-source-control)
@@ -104,6 +105,10 @@ Create a new branch using any of these approaches:
 5. Press `Enter` to confirm.
 6. `Select Create & Switch to Branch` (e.g., using `UpArrow` and `DownArrow` on your keyboard).
 7. Press `Enter` to confirm.
+
+## Edit files
+
+Edit files in the [`Editor`](../appendix/vs-code.md#editor) to produce changes.
 
 ## Commit
 
