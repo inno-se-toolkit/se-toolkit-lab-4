@@ -22,7 +22,9 @@ You'll use `Git` and `GitHub` for development, collaboration, and deployment.
 
 ## Lab story
 
-You were hired by a company that develops a novel e-learning system which recommends educational resources to students.
+You were hired by a company that develops a novel e-learning system.
+
+The system recommends educational resources to students.
 
 You have joined a [back end](https://roadmap.sh/backend) team in that company.
 
