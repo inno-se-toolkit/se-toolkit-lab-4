@@ -1,6 +1,5 @@
 # Environments
 
-- [Environment](#environment)
 - [Environment variables](#environment-variables)
 - [`.env` file](#env-file)
 - [Secrets](#secrets)
@@ -10,11 +9,9 @@
   - [Add files containing secrets to `.gitignore`](#add-files-containing-secrets-to-gitignore)
 - [Deployment environments](#deployment-environments)
 
-## Environment
-
 ## Environment variables
 
-Environment variables are named values that are available to a running program.
+Environment variables are named values that are available to a program running in a particular [deployment environment](#deployment-environments).
 
 Look at the environment variables available to the `Terminal`:
 
@@ -77,6 +74,6 @@ Match in [`.gitignore`](./git.md#gitignore) all files that can contain [unencryp
 
 ## Deployment environments
 
-A program can run in multiple deployment [environments](https://github.com/inno-se/the-guide?tab=readme-ov-file#environments).
+A program can run in multiple [deployment environments](https://github.com/inno-se/the-guide?tab=readme-ov-file#environments).
 
-Each deployment environment can have own [environment variables](#environment-variables).
+Each development environment may need a specific set of [environment variables](#environment-variables). This set can be different for each environment.
