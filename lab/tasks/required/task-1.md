@@ -1,165 +1,133 @@
-# Choose a product and study its architecture
+# Run the web server
 
-**Time:** ~30-40 min
+<h4>Time</h4>
 
-**Purpose:** Understand how a real software product may be structured by examining its components, data flow, and deployment.
+~30-40 min
 
-**Context:** Imagine you have joined one of these product teams. On your first days, you need to understand what the product does and how it is structured.
+<h4>Purpose</h4>
 
-- [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
+Learn to run the web server written in `Python`.
+
+<h4>Context</h4>
+
+You should be able to run the web server on your computer.
+Then, you can check whether the web server works before the web server is deployed.
+
+<h4>Table of contents</h4>
+
 - [1. Create an issue](#1-create-an-issue)
-- [2. Choose a product](#2-choose-a-product)
-- [3. Find the diagrams](#3-find-the-diagrams)
-- [4. Create `docs/architecture.md`](#4-create-docsarchitecturemd)
-  - [`## Product Choice`](#-product-choice)
-  - [`## Main components`](#-main-components)
-    - [Embed the product's `Component Diagram.svg`](#embed-the-products-component-diagramsvg)
-    - [Add link to `PlantUML` code](#add-link-to-plantuml-code)
-    - [Explain the components](#explain-the-components)
-  - [`## Data flow`](#-data-flow)
-  - [`## Deployment`](#-deployment)
-  - [`## Assumptions`](#-assumptions)
-  - [`## Open questions`](#-open-questions)
+- [2. Learn about environments](#2-learn-about-environments)
+- [Open the file `.env.no-docker.example`](#open-the-file-envno-dockerexample)
+  - [Copy the `.env.example` file](#copy-the-envexample-file)
+  - [Run the web server using `uv` and `poe`](#run-the-web-server-using-uv-and-poe)
+- [Check `/status`](#check-status)
+  - [Check `/status` using a browser](#check-status-using-a-browser)
+  - [Check `/status` using `curl`](#check-status-using-curl)
+- [Stop the web server](#stop-the-web-server)
+- [Check `/status` again](#check-status-again)
+- [Write a comment for the issue](#write-a-comment-for-the-issue)
 - [Acceptance criteria](#acceptance-criteria)
-
-## 0. Follow the `Git workflow`
-
-Follow the [`Git workflow`](../git-workflow.md) to complete this task.
 
 ## 1. Create an issue
 
-Title: `[Task] Product & architecture description`
+Title: `[Task] Run the web server`
 
-## 2. Choose a product
+## 2. Learn about environments
 
-> [!IMPORTANT]
-> You and your partner must pick **different products**. This way, during PR reviews, you'll learn about each other's products.
+Read these sections:
 
-Available products:
+1. [Environment variables](../../appendix/environments.md#environment-variables)
+2. [`.env` file](../../appendix/environments.md#env-file)
 
-- Yandex Go
-- Telegram
-- Wildberries.ru
+## Open the file `.env.no-docker.example`
 
-Alternatively, choose another full-stack product with at least a million users. In that case, you'll have to [visualize the architecture](../../appendix/visualize-architecture.md) on your own.
+1. [Open the file using the `Command Palette`](../../appendix/vs-code.md#open-a-file-using-the-command-palette): [`.env.no-docker.example`](../../../.env.no-docker.example).
 
-## 3. Find the diagrams
+### Copy the `.env.example` file
 
-> [!IMPORTANT]
-> System architecture diagrams represent the system architecture but they are not the [system architecture](https://github.com/inno-se/the-guide?tab=readme-ov-file#architecture).
->
-> The provided architecture diagrams are based on educated guesses since the products in the list are mostly closed-source.
-> All diagrams were generated via Gemini 3 Pro (free web version) and edited by the course instructors.
+1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
 
-1. Find the directory with the product's architecture diagrams in two formats:
-    - `PlantUML` code is in [`docs/diagrams/src/<product-name>`](../../../docs/diagrams/src/).
-    - Rendered architecture diagrams are in [`docs/diagrams/out/<product-name>`](../../../docs/diagrams/out/).
-
-2. If you chose another project, provide component, deployment, sequence diagrams in two formats in corresponding directories.
-
-## 4. Create `docs/architecture.md`
-
-Create the file and add the following sections:
-
-### `## Product Choice`
-
-Provide:
-
-- Product name;
-- Link to the product's website;
-- Short description of the product (1-2 sentences).
-
-### `## Main components`
+   ```terminal
+   cp .env.no-docker.example .env.no-docker
+   ```
 
 > [!NOTE]
->
-> According to the [`C4 model`](https://c4model.com/abstractions/component), a *component* is a grouping of related functionality encapsulated behind a well-defined interface.
+> The `.env.no-docker` file is added to [`.gitignore`](../../../.gitignore) because you may specify there
+> [secrets](../../appendix/environments.md#secrets) such as the address of your VM.
 
-> [!IMPORTANT]
-> Use paths relative to the `docs/architecture.md` file when embedding images and providing links.
->
-> Quick intro:
->
-> - `.` - the current directory.
-> - `..` - parent directory.
-> - `./file` - file in the current directory.
-> - `../file` - file in the parent directory.
+### Run the web server using `uv` and `poe`
 
-> [!TIP]
-> Use auto-completion for paths.
->
-> 1. [Open `docs/architecture.md`](../../appendix/vs-code.md#open-a-file).
-> 2. Write `![Telegram Component Diagram]()`.
-> 3. Inside parentheses `()`, start typing `./`.
-> 4. Use suggestions to continue the path.
+> [!NOTE]
+> [`poe`](https://poethepoet.natn.io/) can run tasks
+> specified in the [`pyproject.toml`](../../../pyproject.toml) in the `[tool.poe.tasks]` section.
 
-> [!IMPORTANT]
->
-> Replace space in the path with `%20` (see [URL encoding](https://en.wikipedia.org/wiki/Percent-encoding)).
+1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
 
-#### Embed the product's `Component Diagram.svg`
+   ```terminal
+   uv run poe dev
+   ```
 
-Example (path provided relative to this file): `![Telegram Component Diagram](../../../docs/diagrams/out/telegram/component-diagram/Component%20Diagram.svg)`
+2. The web server will automatically read the [environment variables](../../appendix/environments.md#environment-variables) from the `.env.no-docker` file.
 
-<details><summary>Embedded image example (click to open)</summary>
+> [!NOTE]
+> You will see in the output a key shortcut to stop the server such as `Ctrl+C`.
 
-![Telegram Component Diagram](../../../docs/diagrams/out/telegram/component-diagram/Component%20Diagram.svg)
+## Check `/status`
 
-</details>
+> [!NOTE]
+> `/status` is an [endpoint](../../appendix/web-development.md#endpoint) of the web server.
 
-#### Add link to `PlantUML` code
+### Check `/status` using a browser
 
-Provide a link to the `PlantUML` code for that [component diagram](../../appendix/architectural-views.md#component-diagram).
-  
-Example: [Telegram Component Diagram Code](../../../docs/diagrams/src/telegram/component-diagram.puml)
+1. Open in a browser: `http://127.0.0.1:42000/status`
+2. You should see the response from the web server like:
 
-#### Explain the components
+    ```text
+    status: "ok"
+    service: "course-material"
+    ```
 
-1. Select at least 5 components of the product from the component diagram.
+<!-- TODO view JSON -->
 
-2. For each selected component, explain in 1-2 sentences what it does (as you think).
+### Check `/status` using `curl`
 
-### `## Data flow`
+1. [Open a new `Terminal`](../../appendix/vs-code.md#open-a-new-terminal).
+2. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
 
-1. Embed the product's `Sequence Diagram.svg`.
-2. Provide a link to the `PlantUML` code for that [sequence diagram](../../appendix/architectural-views.md#sequence-diagram).
-3. Choose a group of actions (a box in the diagram, `group` or `Flow` in the `PlantUML` code).
-4. Describe what happens in that group of steps.
-5. Mention which components talk to each other and what data they exchange.
+    ```text
+    curl http://127.0.0.1:42000/status
+    ```
 
-### `## Deployment`
+3. You should see the `JSON` response from the web server:
 
-1. Embed the product's `Deployment Diagram.svg`.
-2. Provide a link to the `PlantUML` code for that [deployment diagram](../../appendix/architectural-views.md#deployment-diagram).
-3. Briefly describe where the components are deployed.
+    ```json
+    {"status":"ok","service":"course-material"}
+    ```
 
-### `## Assumptions`
+<!-- TODO add check status using the /docs -->
 
-List two or more assumptions you made while describing the architecture. Examples:
+## Stop the web server
 
-- Yandex Go: *"I assume the pricing service handles surge pricing calculations based on demand and supply in real-time."*
-- Telegram: *"I assume the cloud storage system implements deduplication to optimize storage costs for shared media files."*
-- Wildberries: *"I assume the Logistics & Routing service integrates with multiple delivery partners to optimize shipping costs and delivery times"*
+1. [Switch to the old `Terminal`](../../appendix/vs-code.md#switch-to-another-terminal) where the web server runs.
+2. Run the key shortcut that you saw when running the server to stop the server.
 
-### `## Open questions`
+## Check `/status` again
 
-List two or more questions that you couldn't answer based on the openly available information. Examples:
+The server has stopped. Therefore, it should not respond to requests.
 
-- Yandex Go: *"How does the actual load balancing mechanism work between the microservices in production?"*
-- Telegram: *"How does the data flow look like in secret chats?"*
-- Wildberries: *"What specific caching strategies are used to handle high traffic during sales events?"*
+[Check `/status`](#check-status) again to ensure that.
+
+You shouldn't see the response that you got before.
+
+## Write a comment for the issue
+
+1. Go to the issue that you created for this task.
+2. Scroll down.
+3. Go to `Add a comment`.
+4. Write one of the responses that you got when the web server was running.
+5. Click `Close with comment`.
 
 ## Acceptance criteria
 
-- [ ] Issue created
-- [ ] `docs/architecture.md` created with all required sections
-- [ ] Product name, link, and description are present
-- [ ] Component diagram is visible
-- [ ] At least 5 components are described (1-2 sentences each)
-- [ ] Sequence diagram is visible
-- [ ] Data flow description explains which components interact and what data they exchange during a user action
-- [ ] Deployment diagram is visible
-- [ ] Deployment is briefly described
-- [ ] At least 2 assumptions and 2 open questions listed
-- [ ] Partner reviewed and approved
-- [ ] PR merged
+- [ ] Issue has the correct title
+- [ ] The comment with the `JSON` response of the `/status` endpoint exists.
