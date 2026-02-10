@@ -10,8 +10,8 @@
 - [Protect your `main` branch](#protect-your-main-branch)
 - [Install `Git`](#install-git)
 - [Install `VS Code`](#install-vs-code)
-- [Open the `Terminal`](#open-the-terminal)
 - [(Windows only) Set the default shell](#windows-only-set-the-default-shell)
+- [Open the `Terminal`](#open-the-terminal)
 - [Configure `Git`](#configure-git)
 - [Open `VS Code` in the `software-engineering-toolkit` directory](#open-vs-code-in-the-software-engineering-toolkit-directory)
 - [Copy your fork URL](#copy-your-fork-url)
@@ -129,18 +129,18 @@ Complete these steps:
 
 2. (Optional) [Learn more](../lab/appendix/vs-code.md) about `VS Code`.
 
-## Open the `Terminal`
-
-1. Open `VS Code`.
-2. [Open the Terminal](./appendix/vs-code.md#open-the-terminal).
-
 ## (Windows only) Set the default shell
 
 1. Go to [`.vscode/settings.json`](../.vscode/settings.json).
 2. If you have `WSL` installed: write there the [setting](https://code.visualstudio.com/docs/terminal/profiles#_wsl) for `WSL`.
 3. If you don't have `WSL` installed:
    1. Find the line `// Uncomment to set Git Bash as the default shell.`.
-   2. Uncomment the `"terminal.integrated.defaultProfile.windows"` and `"terminal.integrated.profiles.windows"` settings.
+   2. Under that line, [uncomment](./appendix/vs-code.md#basic-layout) the `"terminal.integrated.defaultProfile.windows"` and `"terminal.integrated.profiles.windows"` settings.
+
+## Open the `Terminal`
+
+1. Open `VS Code`.
+2. [Open the Terminal](./appendix/vs-code.md#open-the-terminal).
 
 ## Configure `Git`
 
