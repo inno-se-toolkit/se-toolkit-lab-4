@@ -15,7 +15,7 @@ class Settings(BaseSettings):
         return f"http://{self.address}:{self.port}"
 
     model_config = SettingsConfigDict(
-        env_file=".env", env_file_encoding="utf-8", case_sensitive=True, extra="allow"
+        env_file=".env.secret", env_file_encoding="utf-8", case_sensitive=True, extra="allow"
     )
 
 
