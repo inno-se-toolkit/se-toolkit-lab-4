@@ -60,18 +60,18 @@ Verify this information against credible sources such as official documentation,
 
 By the end of this lab, you should be able to:
 
-- Use `Git` and `GitHub` to structure your work and collaborate with peers (commits with clear messages, branches, issues, pull requests, and reviews).
+- Follow the [`Git workflow`](./lab/tasks/git-workflow.md).
 - Check your work against specified acceptance criteria.
-- Explain the basic architecture of a real-world digital product in terms of components, data flow, deployment, and tech roles.
-- Reflect on your career in tech, examine your current skillset, and plan for the future.
-
-After this lab, you should be able to say:
-
-> I can use `Git` and `GitHub`.
->
-> I understand how software products can be structured.
->
-> I know how I can grow as an IT specialist.
+- Explore the code of an existing web server written in `Python`.
+- Run the web server on your computer.
+- Query the web server.
+- Inspect the responses of the web server.
+- Test the web server.
+- Identify a bug (problem) in the web server.
+- Document the bug using a `GitHub` issue.
+- Submit a fix of the bug as a PR.
+- Deploy the fixed web server to a remote `Linux` virtual machine (VM).
+- Test the deployed web server.
 
 ## Tasks
 
