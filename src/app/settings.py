@@ -15,7 +15,10 @@ class Settings(BaseSettings):
     reload: bool = Field(default=False, alias="RELOAD")
 
     model_config = SettingsConfigDict(
-        env_file=".env.secret", env_file_encoding="utf-8", case_sensitive=True, extra="allow"
+        env_file=".env.secret",
+        env_file_encoding="utf-8",
+        case_sensitive=True,
+        extra="allow",
     )
 
     # Additional constants
