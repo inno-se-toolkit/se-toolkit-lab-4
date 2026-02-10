@@ -276,7 +276,10 @@ Method 2:
 ## Open `Markdown` preview
 
 > [!NOTE]
+> `Markdown` is a [markup language](https://en.wikipedia.org/wiki/Markup_language).
+>
 > `Markdown` gets translated into [`HTML`](https://en.wikipedia.org/wiki/HTML).
+>
 > You see the rendered `HTML` when you open a preview in `VS Code` or on `GitHub`.
 
 Open the [`Markdown` preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) using any of the following methods.
