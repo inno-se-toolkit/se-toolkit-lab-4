@@ -1,15 +1,8 @@
 # Lab 2 — Understand, improve, and deploy a web server
 
-In this lab, you'll do these things:
-
-1. Run a web server.
-2. Fix a bug.
-3. Deploy the web server.
-
-You'll use `Git` and `GitHub` for development, collaboration, and deployment.
-
 <h2>Table of contents</h2>
 
+- [Lab overview](#lab-overview)
 - [Learning advice](#learning-advice)
 - [Learning outcomes](#learning-outcomes)
 - [Tasks](#tasks)
@@ -17,6 +10,15 @@ You'll use `Git` and `GitHub` for development, collaboration, and deployment.
   - [Required tasks (~2 hours)](#required-tasks-2-hours)
   - [Optional tasks](#optional-tasks)
 - [Additional Resources on `Git`](#additional-resources-on-git)
+
+## Lab overview
+
+1. Run a web server.
+2. Fix a bug.
+3. Deploy the web server.
+
+You'll use `Git` and `GitHub` for development, collaboration, and deployment.
+
 
 ## Learning advice
 
