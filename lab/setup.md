@@ -9,7 +9,6 @@
 - [Add a classmate as a collaborator](#add-a-classmate-as-a-collaborator)
 - [Protect your `main` branch](#protect-your-main-branch)
 - [Install `Git`](#install-git)
-- [(Windows only) Open `Git Bash`](#windows-only-open-git-bash)
 - [Install `VS Code`](#install-vs-code)
 - [Open the `Terminal`](#open-the-terminal)
 - [(Windows only) Set the default shell](#windows-only-set-the-default-shell)
@@ -121,10 +120,6 @@ Complete these steps:
 ## Install `Git`
 
 [Install `Git`](https://git-scm.com/install/).
-
-## (Windows only) Open `Git Bash`
-
-Open `Git Bash` - a terminal for running commands.
 
 ## Install `VS Code`
 
