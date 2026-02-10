@@ -1,0 +1,34 @@
+# `Git`
+
+- [How `Git` works - text](#how-git-works---text)
+- [How `Git` works - videos](#how-git-works---videos)
+- [Practice `Git`](#practice-git)
+- [`GitHub flow`](#github-flow)
+- [`Conventional Commits`](#conventional-commits)
+
+## How `Git` works - text
+
+<!-- TODO copy the necessary parts of the tutorial -->
+
+- Read this [tutorial](https://hackmd.io/@aabounegm/SWP-git) to learn about `Git`, `Github`, and other `Git` workflows.
+
+## How `Git` works - videos
+
+- Watch videos to build your mental model of how `Git` works:
+  - [Git Explained in 100 Seconds](https://www.youtube.com/watch?v=hwP7WQkmECE)
+  - [What is Git? Explained in 2 Minutes!](https://www.youtube.com/watch?v=2ReR1YJrNOM)
+  - [A brief introduction to Git for beginners](https://www.youtube.com/watch?v=r8jQ9hVA2qs)
+  - [How Git Works: Explained in 4 Minutes](https://www.youtube.com/watch?v=e9lnsKot_SQ)
+  - [Git MERGE vs REBASE: Everything You Need to Know](https://www.youtube.com/watch?v=0chZFIZLR_0)
+
+## Practice `Git`
+
+- Practice on [Learn Git Branching](https://learngitbranching.js.org/) (focus on merge/rebase and conflicts).
+
+## `GitHub flow`
+
+- Read about the [`GitHub flow`](https://docs.github.com/en/get-started/using-github/github-flow).
+
+## `Conventional Commits`
+
+- Learn about [`Conventional Commits`](https://www.conventionalcommits.org/en/v1.0.0/) for commit message formatting.
