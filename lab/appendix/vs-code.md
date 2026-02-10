@@ -31,6 +31,10 @@
   - [Install recommended `Extensions`](#install-recommended-extensions)
 - [Keyboard shortcuts](#keyboard-shortcuts)
   - [Frequently used shortcuts](#frequently-used-shortcuts)
+    - [Shortcut: Go back](#shortcut-go-back)
+    - [Shortcut: Switch to the previous editor](#shortcut-switch-to-the-previous-editor)
+    - [Shortcut: Search in the current editor](#shortcut-search-in-the-current-editor)
+    - [Shortcut: Search in all files](#shortcut-search-in-all-files)
 - [Workspace settings](#workspace-settings)
   - [Change the workspace settings](#change-the-workspace-settings)
 
@@ -291,10 +295,26 @@ Keyboard shortcuts for various commands.
 
 ### Frequently used shortcuts
 
-- `Alt+-` (`Ctrl+-` on `macOS`) - go back.
-- `Ctrl+Tab` - switch to the previous editor.
-- `Ctrl+F` (`Cmd+F` on `macOS`) - search in the current editor.
-- `Ctrl+Shift+F` (`Cmd+Shift+F` on `macOS`) - search in all files.
+- [Shortcut: Go back](#shortcut-go-back)
+- [Shortcut: Switch to the previous editor](#shortcut-switch-to-the-previous-editor)
+- [Shortcut: Search in the current editor](#shortcut-search-in-the-current-editor)
+- [Shortcut: Search in all files](#shortcut-search-in-all-files)
+
+#### Shortcut: Go back
+
+`Alt+-` (`Ctrl+-` on `macOS`)
+
+#### Shortcut: Switch to the previous editor
+
+`Ctrl+Tab`
+
+#### Shortcut: Search in the current editor
+
+`Ctrl+F` (`Cmd+F` on `macOS`)
+
+#### Shortcut: Search in all files
+
+`Ctrl+Shift+F` (`Cmd+Shift+F` on `macOS`) - search in all files.
 
 ## Workspace settings
 
