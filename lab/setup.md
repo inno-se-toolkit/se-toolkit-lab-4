@@ -1,6 +1,7 @@
 # Lab setup
 
 - [Find a partner](#find-a-partner)
+- [Sign in on `GitHub`](#sign-in-on-github)
 - [Fork the course instructors' repo](#fork-the-course-instructors-repo)
 - [Enable issues](#enable-issues)
 - [Add a classmate as a collaborator](#add-a-classmate-as-a-collaborator)
@@ -42,6 +43,19 @@
 > You work on tasks independently from your partner.
 >
 > You and your partner work together when reviewing each other's work.
+
+## Sign in on `GitHub`
+
+1. Sign in on [`GitHub`](https://github.com/).
+
+> [!NOTE]
+> We'll refer to your `GitHub` username as `<your-username>`.
+>
+> Example of a username: `johndoe`.
+>
+> Note that this username doesn't include `@`.
+>
+> `<your-username>` also doesn't include `@`.
 
 ## Fork the course instructors' repo
 
