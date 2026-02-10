@@ -198,7 +198,7 @@ Clone the fork using any of the following methods:
 5. [Open `Folders`](./appendix/vs-code.md#open-folders).
 6. Look at `FOLDERS`.
 7. You should see `LAB-01-MARKET-PRODUCT-AND-GIT` there.
-8. You can close the `VS Code` that you [opened in the `software-engineering-toolkit` directory](#open-vs-code-in-the-software-engineering-toolkit-directory).
+8. You can close the `VS Code` where you [opened the `software-engineering-toolkit` directory](#open-the-software-engineering-toolkit-directory-in-vs-code).
 
 ## Set up `VS Code` extensions
 
