@@ -46,7 +46,8 @@ Verify this information against credible sources such as official documentation,
 
 By the end of this lab, you should be able to:
 
-- Use `GitHub` to structure your work and collaborate with peers (issues, branches, pull requests, and reviews).
+- Use `Git` and `GitHub` to structure your work and collaborate with peers (commits with clear messages, branches, issues, pull requests, and reviews).
+- Check your work against specified acceptance criteria.
 - Explain the basic architecture of a real-world digital product in terms of components, data flow, deployment, and tech roles.
 - Reflect on your career in tech, examine your current skillset, and plan for the future.
 
@@ -67,12 +68,6 @@ After this lab, you should be able to say:
 □ Task 2  — map components to tech roles
 □ Task 3  — compare your skills to market demands
 ```
-
-In this lab, you'll simulate some of the real-life engineering practices:
-
-- Communicate via issues/PRs;
-- Check your work against acceptance criteria;
-- Write clear commit messages.
 
 ## Tasks
 
