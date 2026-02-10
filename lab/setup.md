@@ -33,8 +33,13 @@
 
 ## Find a partner
 
-1. Find a classmate to be your partner for this lab.
-2. Sit together.
+1. Find a partner for this lab.
+2. Sit next to them.
+
+> [!IMPORTANT]
+> You work on tasks independently from your partner.
+>
+> You and your partner work together when reviewing each other's work.
 
 ## Fork the course instructors' repo
 

@@ -74,12 +74,6 @@ In this lab, you'll simulate some of the real-life engineering practices:
 - Check your work against acceptance criteria;
 - Write clear commit messages.
 
-### Pair work and TA
-
-You'll work with a partner throughout this lab. You complete tasks individually, but review each other's work via pull requests.
-
-As your proceed with the lab, show your progress to the TA.
-
 ## Tasks
 
 ### Setup (~30 min)
