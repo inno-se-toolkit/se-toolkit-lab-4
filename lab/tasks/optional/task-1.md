@@ -83,7 +83,7 @@ git merge conflict-branch-1
 
 `Git` will report a conflict.
 
-Resolve it using one of the following approaches:
+Resolve it using one of the following methods:
 
 - [Resolve the conflict without the merge editor](#resolve-the-conflict-without-the-merge-editor)
 - [Resolve the conflict using the merge editor](#resolve-the-conflict-using-the-merge-editor)
@@ -142,9 +142,9 @@ Close the PR.
 
 ## 13. Delete conflict branches
 
-Delete the practice branches using one of the following approaches.
+Delete the practice branches using one of the following methods.
 
-Approach 1:
+Method 1:
 
 1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
 
@@ -153,7 +153,7 @@ Approach 1:
     git branch -d conflict-branch-2
     ```
 
-Approach 2:
+Method 2:
 
 1. [Run using the `Command Palette`](../../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Git Delete Branch...`.
 2. Select `conflict-branch-1` and `conflict-branch-2` to delete them.

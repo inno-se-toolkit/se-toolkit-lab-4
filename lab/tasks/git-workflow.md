@@ -74,7 +74,7 @@ Outline:
 
 Go to `VS Code`.
 
-Switch to the `main` branch using any of the following approaches:
+Switch to the `main` branch using any of the following methods:
 
 - [Switch to the `main` branch using the `Terminal`](#switch-to-the-main-branch-using-the-terminal)
 - [Switch to the `main` branch using `GitLens`](#switch-to-the-main-branch-using-gitlens)
@@ -163,7 +163,7 @@ Continue resolving conflicts if you see an error like this:
 
 ## Switch to a new branch
 
-Create a new branch and switch to it using any of the following approaches:
+Create a new branch and switch to it using any of the following methods:
 
 <!-- no toc -->
 - [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
@@ -221,7 +221,7 @@ Commit changes to the `<branch-name>` to complete the task.
 > - `feat:` — additions (e.g., new feature)
 > - `docs:` — documentation changes
 
-Commit using any of the following approaches:
+Commit using any of the following methods:
 
 - [Commit using the `Terminal`](#commit-using-the-terminal)
 - [Commit using `Source Control`](#commit-using-source-control)
@@ -287,7 +287,7 @@ Complete these steps:
 > [!NOTE]
 > There can appear a conflict when you try to undo.
 
-Undo commits using any of the following approaches:
+Undo commits using any of the following methods:
 
 - [Undo commits using the `Terminal`](#undo-commits-using-the-terminal)
 - [Undo commits using `GitLens`](#undo-commits-using-gitlens)
@@ -367,7 +367,7 @@ Complete these steps:
 
 ### Open the PR editor using `GitHub`
 
-Open the PR editor using any of the following approaches:
+Open the PR editor using any of the following methods:
 
 - [Open the PR editor using a button](#open-the-pr-editor-using-a-button)
 - [Open the PR editor using `Pull requests`](#open-the-pr-editor-using-pull-requests)

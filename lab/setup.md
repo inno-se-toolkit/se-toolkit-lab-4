@@ -153,7 +153,7 @@ Complete these steps:
 
 ## Clone the fork on your computer
 
-Clone the fork using any of the following approaches:
+Clone the fork using any of the following methods:
 
 - [Clone the fork using the `Terminal`](#clone-the-fork-using-the-terminal)
 - [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
@@ -222,13 +222,13 @@ Look at the [`Basic Layout`](./appendix/vs-code.md#basic-layout).
 > [!NOTE]
 > This file (`lab/setup.md`), `README.md`, and other files in this repository that have the extension `.md` are written in [`Markdown`](https://en.wikipedia.org/wiki/Markdown) (more precisely, in [`GitHub-flavored Markdown`](https://github.github.com/gfm/)).
 
-Open [`README.md`](../README.md) using any of the following approaches.
+Open [`README.md`](../README.md) using any of the following methods.
 
-Approach 1:
+Method 1:
 
 1. [Open the file using the `Command Palette`](./appendix/vs-code.md#open-a-file).
 
-Approach 2:
+Method 2:
 
 1. [Open `Folders`](./appendix/vs-code.md#open-folders).
 2. Click `README.md`.
@@ -239,14 +239,14 @@ Approach 2:
 > `Markdown` gets translated into [`HTML`](https://en.wikipedia.org/wiki/HTML).
 > You see the rendered `HTML` when you open a preview in `VS Code` or on `GitHub`.
 
-Open the [`Markdown` preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) using any of the following approaches.
+Open the [`Markdown` preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) using any of the following methods.
 
-Approach 1:
+Method 1:
 
 1. Go to the [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar).
 2. Click `Open Preview to the Side`.
 
-Approach 2:
+Method 2:
 
 1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette): `Markdown: Open Preview to the Side`.
 

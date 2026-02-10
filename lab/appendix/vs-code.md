@@ -216,25 +216,25 @@ Actions:
 
 ### Open the `Source Control`
 
-Approach 1:
+Method 1:
 
 1. Go to the [`Activity Bar`](#activity-bar).
 2. Click `Source Control`.
 3. Click `CHANGES` to uncollapse the view.
   
-Approach 2:
+Method 2:
 
 1. Press `Ctrl+Shift+G G` (`Ctrl+Shift+G` on `macOS`)
 2. Click `CHANGES` to uncollapse the view.
 
 ### Close the `Source Control`
 
-Approach 1:
+Method 1:
 
 1. Go to the [`Activity Bar`](#activity-bar)
 2. Click `Source Control`.
 
-Approach 2:
+Method 2:
 
 1. Press `Ctrl+B` (`Cmd+B` on `macOS`)
 
@@ -252,12 +252,12 @@ Actions:
 
 ### Open the `Extensions`
 
-Approach 1:
+Method 1:
 
 1. Go to the [`Activity Bar`](#activity-bar).
 2. Click the icon `Extensions`.
 
-Approach 2:
+Method 2:
 
 1. Press `Ctrl+Shift+X` (`Cmd+Shift+X` on `macOS`).
 
