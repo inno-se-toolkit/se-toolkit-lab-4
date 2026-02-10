@@ -153,7 +153,7 @@ Complete these steps:
 
 ## Clone the fork on your computer
 
-Clone the fork using any of these approaches:
+Clone the fork using any of the following approaches:
 
 - [Clone the fork using the `Terminal`](#clone-the-fork-using-the-terminal)
 - [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)

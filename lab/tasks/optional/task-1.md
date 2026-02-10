@@ -83,7 +83,7 @@ git merge conflict-branch-1
 
 `Git` will report a conflict.
 
-Resolve it using one of these approaches:
+Resolve it using one of the following approaches:
 
 - [Resolve the conflict without the merge editor](#resolve-the-conflict-without-the-merge-editor)
 - [Resolve the conflict using the merge editor](#resolve-the-conflict-using-the-merge-editor)

@@ -34,7 +34,7 @@ Complete these steps:
 
 ### Set up a coding agent in `VS Code`
 
-Set up a coding agent in `VS Code` using any of these approaches:
+Set up a coding agent in `VS Code` using any of the following approaches:
 
 <!-- no toc -->
 - [Set up `Qwen Code Companion` with `Qwen3-Coder`](#set-up-qwen-code-companion-with-qwen3-coder)
