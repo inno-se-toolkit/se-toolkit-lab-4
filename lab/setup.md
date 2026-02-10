@@ -266,11 +266,11 @@ Open [`README.md`](../README.md) using any of the following methods.
 
 Method 1:
 
-1. [Open the file using the `Command Palette`](./appendix/vs-code.md#open-a-file).
+1. [Open the file using the `Command Palette`](./appendix/vs-code.md#open-a-file-using-the-command-palette).
 
 Method 2:
 
-1. [Open `Folders`](./appendix/vs-code.md#open-folders).
+1. [Open `Folders`](./appendix/vs-code.md#open-the-folders).
 2. Click `README.md`.
 
 ## Open `Markdown` preview
