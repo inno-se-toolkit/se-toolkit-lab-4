@@ -2,7 +2,6 @@
 
 <h2>Table of contents</h2>
 
-- [Lab overview](#lab-overview)
 - [Lab story](#lab-story)
 - [Learning advice](#learning-advice)
 - [Learning outcomes](#learning-outcomes)
@@ -11,14 +10,6 @@
   - [Required tasks (~2 hours)](#required-tasks-2-hours)
   - [Optional tasks](#optional-tasks)
 - [Additional Resources on `Git`](#additional-resources-on-git)
-
-## Lab overview
-
-1. Run a web server.
-2. Fix a bug.
-3. Deploy the web server.
-
-You'll use `Git` and `GitHub` for development, collaboration, and deployment.
 
 ## Lab story
 
