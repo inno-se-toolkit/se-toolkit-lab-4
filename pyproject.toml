@@ -3,7 +3,7 @@ name = "course-material-service"
 version = "0.1.0"
 description = "Course Materials Service"
 readme = "README.md"
-requires-python = "==3.12.*"
+requires-python = "==3.14.*"
 dependencies = [
   "fastapi==0.128.0",
   "httpx==0.28.1",
