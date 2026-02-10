@@ -155,7 +155,8 @@ Method 1:
 
 Method 2:
 
-1. [Run using the `Command Palette`](../../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Git Delete Branch...`.
+1. [Run using the `Command Palette`](../../appendix/vs-code.md#run-a-command-using-the-command-palette):
+   `GitLens: Git Delete Branch..`.
 2. Select `conflict-branch-1` and `conflict-branch-2` to delete them.
 3. Click `OK`.
 4. Click `Delete Branches`.

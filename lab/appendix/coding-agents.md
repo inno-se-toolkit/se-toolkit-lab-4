@@ -47,20 +47,24 @@ Set up a coding agent in `VS Code` using any of the following methods:
        1. Go to the [`Editor Toolbar`](../appendix/vs-code.md#editor-toolbar).
        2. Click the `Qwen` icon.
     2. Method 2:
-       - [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `Qwen Code: Open`.
+       1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
+          `Qwen Code: Open`
 2. Write `/login` in the chat.
 3. Write `@<file-name>` to refer to the file `<file-name>`.
 
 #### Set up `GitHub Copilot Chat` with `Qwen3-Coder`
 
 1. [Install](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace#_browse-for-extensions) the `github.copilot-chat` and `denizhandaklr.vscode-qwen-copilot` extensions.
-2. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `Qwen Copilot: Authenticate`.
+2. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
+   `Qwen Copilot: Authenticate`
 3. Complete the authentication procedure.
-4. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `Chat: Manage Language Models`.
+4. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
+   `Chat: Manage Language Models`
 5. Click `Add Models`.
 6. Click `Qwen Code`.
 7. Double click `Qwen 3 Coder Plus` to make the model visible.
-8. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `Chat: Open Chat`.
+8. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
+   `Chat: Open Chat`
 9. The `CHAT` panel will open.
 10. Go to `CHAT`.
 11. Click `Auto` (`Pick Model`)

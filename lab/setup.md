@@ -137,7 +137,8 @@ Complete these steps:
 
 1. On your computer, create somewhere a directory `software-engineering-toolkit` (e.g., on your `Desktop`).
 2. Open `VS Code`.
-3. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette): `File: Open Folder...`.
+3. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
+   `File: Open Folder...`
 4. Find the `software-engineering-toolkit` directory that you created.
 5. Open this directory.
 6. `VS Code` should now open in that directory.
@@ -179,7 +180,8 @@ Clone the fork using any of the following methods:
 
 ### Clone the fork using the `Command Palette`
 
-1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette): `Git: Clone`.
+1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette):
+   `Git: Clone`.
 2. Click `Clone from GitHub`.
 3. Allow the extension to sign in.
 4. Find your fork in the list.
@@ -191,7 +193,8 @@ Clone the fork using any of the following methods:
 
 ## Open the cloned repo in `VS Code`
 
-1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette): `File: Open Folder...`.
+1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette):
+   `File: Open Folder...`.
 2. Choose the directory `lab-01-market-product-and-git` that is a clone of your fork.
 3. Make sure there is `README.md` inside that directory.
 4. `VS Code` should open in that directory.
@@ -211,7 +214,8 @@ Clone the fork using any of the following methods:
 
 ## Reload `VS Code`
 
-[Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette): `Developer: Reload Window`.
+[Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
+`Developer: Reload Window`.
 
 ## Explore `VS Code` layout
 
@@ -248,7 +252,9 @@ Method 1:
 
 Method 2:
 
-1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette): `Markdown: Open Preview to the Side`.
+1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
+
+   `Markdown: Open Preview to the Side`
 
 ## Change workspace settings
 

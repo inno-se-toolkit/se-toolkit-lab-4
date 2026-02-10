@@ -66,7 +66,8 @@ Open the commit graph using any of the following methods:
 
 ### Open the commit graph using the `Command Palette`
 
-1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette): `GitLens: Show Commit Graph`.
+1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
+   `GitLens: Show Commit Graph`
 
 ## Open commits on the current branch
 
