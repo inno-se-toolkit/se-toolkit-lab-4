@@ -1,20 +1,12 @@
 # Lab 2 — Understand, improve, and deploy a back end service
 
-Questions:
+In this lab, you'll do these things:
 
-- Do you know what skills are needed to build software projects?
-- Have you thought about which tech role you want to pursue as your career?
+1. Run a web server.
+2. Fix a bug.
+3. Deploy the web server.
 
-In this lab, you will explore three things:
-
-1. How real software products may be structured;
-2. What kind of engineers may build and operate them;
-3. How your skills compare to market demands.
-
-You'll also practice using `Git` and `GitHub`. These tools are essential for:
-
-- collaboration between developers;
-- incremental and iterative improvement of the code base.
+You'll use `Git` and `GitHub` for development, collaboration, and deployment.
 
 <h2>Table of contents</h2>
 
