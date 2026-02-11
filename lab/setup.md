@@ -292,7 +292,8 @@ Method 2:
 
 ## Change the workspace settings
 
-Look at the [workspace settings](./appendix/vs-code.md#workspace-settings) and change them as necessary.
+1. Go to the [workspace settings](./appendix/vs-code.md#workspace-settings).
+2. Change them as necessary.
 
 ---
 
