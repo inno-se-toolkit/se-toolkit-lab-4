@@ -1,4 +1,4 @@
-# Identify, report, and fix a bug
+# Deploy the web server to the VM
 
 <h4>Time</h4>
 

@@ -88,4 +88,4 @@ By the end of this lab, you should be able to:
 ### Optional
 
 1. [Implement the `/outcomes` endpoint](./lab/tasks/optional/task-1.md)
-2. [Make your VM a proxy to your partner's VM](./lab/tasks/optional/task-2.md)
+2. [Make your VM a proxy to your partner's web server](./lab/tasks/optional/task-2.md)
