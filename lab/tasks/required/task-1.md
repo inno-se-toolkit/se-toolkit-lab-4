@@ -167,7 +167,7 @@ Method 2:
    ```
 
 2. Confirm suggested actions.
-3. Rerun in the `Terminal` the command provided above until you see something like `Port 42000 is free`.
+3. Rerun using the `Terminal` the command provided above until you see something like `Port 42000 is free`.
 
 ### 11. Check `/status` again
 
