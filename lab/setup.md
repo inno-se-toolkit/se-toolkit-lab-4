@@ -324,13 +324,13 @@ Method 2:
 1. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
 
    ```terminal
-   uv python install
+   uv python install 3.12.12
    ```
 
 2. The output should be similar to this:
 
    ```terminal
-   Installed Python 3.14.3 in 33ms
+   Installed Python 3.12.12 in 44.55s
    ```
 
 3. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
@@ -342,7 +342,7 @@ Method 2:
 4. The output should be similar this:
 
    ```terminal
-   Using CPython 3.14.3
+   Using CPython 3.12.12
    Creating virtual environment at: .venv
    ```
 
@@ -401,7 +401,7 @@ Method 2:
 3. The output should be similar to this:
 
    ```terminal
-   Python 3.14.3
+   Python 3.12.12
    ```
 
 > [!NOTE]
