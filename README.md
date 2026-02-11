@@ -16,21 +16,20 @@ You were hired by a company that develops a novel e-learning system.
 
 The system recommends educational resources to students.
 
-You joined a [back end](https://roadmap.sh/backend) team working on a service called **Course Materials Service**.
+You joined a [back end](https://roadmap.sh/backend) team working on a web server for the **Course Materials Service**.
 
-The service is implemented using the [`FastAPI`](https://fastapi.tiangolo.com/) framework in [`Python`](https://www.python.org/).
+The web server is implemented using the [`FastAPI`](https://fastapi.tiangolo.com/) framework in [`Python`](https://www.python.org/).
 
 Currently, it serves courses-related items (courses, labs, tasks, steps).
 
-For simplicity, the service uses data stored is [`JSON`](https://en.wikipedia.org/wiki/JSON) files (`JSON resources`) in [`src/app/data/course_items.json`](./src/app/data/course_items.json).
+For simplicity, the web server uses data stored is [`JSON`](https://en.wikipedia.org/wiki/JSON) files (`JSON resources`) in [`src/app/data/course_items.json`](./src/app/data/course_items.json).
 
 A senior engineer explains your first assignment:
 
-> 1. Run our service on your machine.
+> 1. Run our web server on your machine.
 > 2. Verify that it’s working: query the `/status` endpoint.
 > 3. Investigate and fix a bug in the `/items` endpoint.
-> 4. Deploy the service to a remote `Linux` server.
->
+> 4. Deploy the web server to a remote `Linux` [virtual machine](./lab/appendix/vm.md).
 > Communicate through issues and PRs and deliver a working deployment.
 
 ## Learning advice
@@ -68,9 +67,9 @@ By the end of this lab, you should be able to:
 
 In simple words, you should be able to say:
 >
-> 1. I ran a backend server locally on my computer and it worked!
+> 1. I ran a web server locally on my computer and it worked!
 > 2. I found and fixed a bug and the tests passed!
-> 3. I deployed the service on a remote server and made it available to others!
+> 3. I deployed the web server on a remote VM and made it available to others!
 
 ## Tasks
 
