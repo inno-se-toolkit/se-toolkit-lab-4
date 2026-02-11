@@ -11,6 +11,8 @@
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
   "markdown.extension.toc.levels": "2..6",
+  
+  "python.languageServer": "Pylance",
 
   // Move sidebar to the right so that
   // it doesn't move the code whenever it opens.
