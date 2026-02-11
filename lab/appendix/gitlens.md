@@ -10,11 +10,14 @@
 - [Open the commit graph](#open-the-commit-graph)
   - [Open the commit graph using the `Status Bar`](#open-the-commit-graph-using-the-status-bar)
   - [Open the commit graph using the `Command Palette`](#open-the-commit-graph-using-the-command-palette)
+- [Look at the commit graph](#look-at-the-commit-graph)
 - [Open commits on the current branch](#open-commits-on-the-current-branch)
+- [Inspect the current branch](#inspect-the-current-branch)
 - [View changes in a commit on the current branch](#view-changes-in-a-commit-on-the-current-branch)
 - [Open a commit menu on the current branch](#open-a-commit-menu-on-the-current-branch)
 - [Undo a commit on the current branch](#undo-a-commit-on-the-current-branch)
 - [Inspect remotes](#inspect-remotes)
+- [Inspect the remotes](#inspect-the-remotes)
 
 ## `GitLens` features
 
@@ -69,6 +72,10 @@ Open the commit graph using any of the following methods:
 1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
    `GitLens: Show Commit Graph`
 
+## Look at the commit graph
+
+See [Open the commit graph](#open-the-commit-graph).
+
 ## Open commits on the current branch
 
 1. [Open the `GITLENS` view](#open-the-gitlens-view).
@@ -100,6 +107,13 @@ Open the commit graph using any of the following methods:
 3. The commit will be undone.
 4. Changes from the commit will be added to `Staged Changes`.
 
+## Inspect the current branch
+
+Inspect the current branch using these sections:
+
+1. [Open commits on the current branch](#open-commits-on-the-current-branch).
+2. [View changes in a commit on the current branch](#view-changes-in-a-commit-on-the-current-branch).
+
 ## Inspect remotes
 
 1. [Open the `GITLENS` view](#open-the-gitlens-view).
@@ -110,3 +124,7 @@ Open the commit graph using any of the following methods:
 4. Make sure `origin` points to your repo URL:
    1. Hover over `origin`.
    2. Look at URLs.
+
+## Inspect the remotes
+
+See [Inspect remotes](#inspect-remotes).

@@ -1,11 +1,13 @@
 # `SSH`
 
 - [`SSH` and shells](#ssh-and-shells)
-- [Create a new `SSH` key (custom location)](#create-a-new-ssh-key-custom-location)
+- [Create a new `SSH` key](#create-a-new-ssh-key)
 - [Find the `SSH` key files](#find-the-ssh-key-files)
 - [Add host to the `SSH` config](#add-host-to-the-ssh-config)
 - [Start the `ssh-agent`](#start-the-ssh-agent)
+- [Verify the `SSH` setup](#verify-the-ssh-setup)
 - [Connect to the VM](#connect-to-the-vm)
+- [Common errors](#common-errors)
 
 ## `SSH` and shells
 
@@ -15,9 +17,9 @@ You can use it to connect to [your virtual machine](./vm.md#your-vm).
 
 Since you are using `Git Bash` (`Windows`), `WSL` (`Windows`), `Zsh` (`macOS`), or `Bash` (`Linux`), the commands below will work in your terminal without requiring `PowerShell` or GUI tools like `PuTTY`.
 
-## Create a new `SSH` key (custom location)
+## Create a new `SSH` key
 
-We need to generate a pair of keys: a **public key** and a **private key**.
+Generate a key pair: a **private key** (secret) and a **public key** (safe to share).
 
 We'll use the `ed25519` algorithm, which is the modern standard for security and performance.
 
@@ -27,13 +29,13 @@ We'll use the `ed25519` algorithm, which is the modern standard for security and
    ssh-keygen -t ed25519 -C "se-toolkit-student" -f ~/.ssh/se_toolkit_key
    ```
 
-   *Note:* you can replace the comment inside quotes (`"se-toolkit-student"`) with your own email, or leave it as is.
+   *Note:* You can replace `"se-toolkit-student"` with your email or another label.
 
-   *Note:* The `-f ~/.ssh/se_toolkit_key` part tells the computer exactly where to save the file and names it `se_toolkit_key`. The `~` symbol is a universal shortcut for your user's home folder on `Windows` (`Git Bash`/`WSL`), `macOS`, and `Linux`.
+   *Note:* `-f ~/.ssh/se_toolkit_key` sets a custom file path and name.
 
 2. **Passphrase:** When asked `Enter passphrase`, you may type a secure password or press `Enter` for no passphrase.
   
-  *Note:* If you set a passphrase, you will need to type it whenever you use the key unless you use the `ssh-agent`.
+   *Note:* If you set a passphrase, use `ssh-agent` to avoid retyping it on every connection.
 
 ## Find the `SSH` key files
 
@@ -45,7 +47,7 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 
    [Run using the `Terminal`](./vs-code.md#run-a-command-using-the-terminal):
 
-   ```bash
+   ```terminal
    ls ~/.ssh/se_toolkit_key*
    ```
 
@@ -61,75 +63,126 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 
 ## Add host to the `SSH` config
 
-1. Open the `SSH` config file:
-
-   [Open using the `Command Palette` the file](./vs-code.md#open-a-file-using-the-command-palette):
+1. [Open using the `Command Palette` the file](./vs-code.md#open-a-file-using-the-command-palette):
    `~/.ssh/config`
 
-2. Add the entry:
+2. Add one of the following config entries.
 
-    ```text
-    Host se-toolkit-vm
-        HostName <your-vm-ip-address>
-        User root
-        IdentityFile ~/.ssh/se_toolkit_key
-        AddKeysToAgent yes
-        UseKeychain yes
-    ```
+Linux / `WSL` / `Git Bash`:
 
-    *Note:* Replace `<your-vm-ip-address>` with the [IP address of your VM](./vm.md#get-the-ip-address-of-the-vm).
+```text
+Host se-toolkit-vm
+    HostName <your-vm-ip-address>
+    User root
+    IdentityFile ~/.ssh/se_toolkit_key
+    AddKeysToAgent yes
+```
 
-    *Note:* `IdentityFile` line says to use the key that you created.
+`macOS` (`zsh`/`bash`):
+
+```text
+Host se-toolkit-vm
+    HostName <your-vm-ip-address>
+    User root
+    IdentityFile ~/.ssh/se_toolkit_key
+    AddKeysToAgent yes
+    UseKeychain yes
+```
+
+`Windows PowerShell` (`OpenSSH`):
+
+```text
+Host se-toolkit-vm
+    HostName <your-vm-ip-address>
+    User root
+    IdentityFile C:/Users/<your-user>/.ssh/se_toolkit_key
+```
+
+3. Replace `<your-vm-ip-address>` with the [IP address of your VM](./vm.md#get-the-ip-address-of-the-vm).
 
 ## Start the `ssh-agent`
 
-1. [Open using the `Command Palette` the file](./vs-code.md#open-a-file-using-the-command-palette):
-   - `~/.bashrc` if you use `bash`
-   - `~/.zshrc` if you use `zsh`
+Use the method that matches your platform.
 
-2. Paste this code at the bottom of the file:
+Linux / `macOS` / `WSL` / `Git Bash`:
 
-    ```text
-    # Define environment file location
-    SSH_ENV="$HOME/.ssh/agent.env"
+1. [Run using the `Terminal`](./vs-code.md#run-a-command-using-the-terminal):
 
-    function start_agent {
-        echo "Initialising new SSH agent..."
-        # Start ssh-agent and pipe output (SSH_AUTH_SOCK/PID) to the environment file
-        /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
-        chmod 600 "${SSH_ENV}"
-        . "${SSH_ENV}" > /dev/null
-        # Load your default keys (optional, remove if you prefer manual adding)
-        ssh-add
-    }
+   ```terminal
+   eval "$(ssh-agent -s)"
+   ssh-add ~/.ssh/se_toolkit_key
+   ```
 
-    # Check if the environment file exists
-    if [ -f "${SSH_ENV}" ]; then
-        . "${SSH_ENV}" > /dev/null
-        # Check if the agent process is actually running using the PID
-        # ps -p works on Linux/macOS. MinGW (Git Bash) might need specific handling but usually works.
-        ps -p "${SSH_AGENT_PID}" > /dev/null 2>&1 || {
-            start_agent;
-        }
-    else
-        start_agent;
-    fi
-    ```
+`Windows PowerShell`:
 
-<!-- TODO check this code works -->
-<!-- TODO how to check whether everything is OK? -->
+1. Run:
+
+   ```powershell
+   Get-Service ssh-agent | Set-Service -StartupType Automatic
+   Start-Service ssh-agent
+   ssh-add $env:USERPROFILE\.ssh\se_toolkit_key
+   ```
+
+## Verify the `SSH` setup
+
+1. Check that your key is loaded:
+
+   Linux / `macOS` / `WSL` / `Git Bash`:
+
+   ```terminal
+   ssh-add -l
+   ```
+
+   `Windows PowerShell`:
+
+   ```powershell
+   ssh-add -l
+   ```
+
+2. You should see your key fingerprint in the output.
+
+3. If you see `The agent has no identities`, run the [start `ssh-agent` step](#start-the-ssh-agent) again.
 
 ## Connect to the VM
 
 Now that the configuration is saved, you can connect using the alias you [defined before](#add-host-to-the-ssh-config).
 
-1. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `Terminal`](./vs-code.md#run-a-command-using-the-terminal):
 
-    ```bash
-    ssh se-toolkit-vm
-    ```
+   ```terminal
+   ssh se-toolkit-vm
+   ```
 
 2. If this is your first time connecting, you will see a message:
    `The authenticity of host ... can't be established.`
 
-   Type `yes` and press **Enter**.
+3. Type `yes` and press `Enter`.
+4. After successful login, you should see a shell prompt on the remote machine.
+
+## Common errors
+
+`Permission denied (publickey)`:
+
+1. Check `IdentityFile` in `~/.ssh/config`.
+2. Ensure the public key was added to the remote host.
+3. Ensure your key is loaded: `ssh-add -l`.
+
+`Bad owner or permissions` (Linux / `macOS` / `WSL`):
+
+1. [Run using the `Terminal`](./vs-code.md#run-a-command-using-the-terminal):
+
+   ```terminal
+   chmod 700 ~/.ssh
+   chmod 600 ~/.ssh/se_toolkit_key
+   chmod 644 ~/.ssh/se_toolkit_key.pub
+   ```
+
+`Connection timed out`:
+
+1. Verify host IP and network connectivity.
+2. Verify the VM is running.
+3. Use verbose logs to debug:
+
+   ```terminal
+   ssh -v se-toolkit-vm
+   ```

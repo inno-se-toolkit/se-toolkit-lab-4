@@ -18,10 +18,12 @@
   - [Open the `Terminal`](#open-the-terminal)
   - [Close the `Terminal`](#close-the-terminal)
   - [Open a new `Terminal`](#open-a-new-terminal)
+  - [Switch to another `Terminal`](#switch-to-another-terminal)
   - [Copy text inside the `Terminal`](#copy-text-inside-the-terminal)
   - [Paste text inside the `Terminal`](#paste-text-inside-the-terminal)
   - [Run a command using the `Terminal`](#run-a-command-using-the-terminal)
 - [`Folders`](#folders)
+  - [Open folders](#open-folders)
   - [Open the `Folders`](#open-the-folders)
 - [`Source Control`](#source-control)
   - [Open the `Source Control`](#open-the-source-control)
@@ -168,6 +170,7 @@ Actions:
 - [Open the `Terminal`](#open-the-terminal)
 - [Close the `Terminal`](#close-the-terminal)
 - [Open a new `Terminal`](#open-a-new-terminal)
+- [Switch to another `Terminal`](#switch-to-another-terminal)
 - [Copy text inside the `Terminal`](#copy-text-inside-the-terminal)
 - [Paste text inside the `Terminal`](#paste-text-inside-the-terminal)
 - [Run a command using the `Terminal`](#run-a-command-using-the-terminal)
@@ -183,6 +186,23 @@ Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 ### Open a new `Terminal`
 
 Press ```Ctrl+Shift+` ```
+
+### Switch to another `Terminal`
+
+Use any of the following methods:
+
+Method 1:
+
+1. Click a terminal tab in the terminal panel.
+
+Method 2:
+
+1. Press `Ctrl+PageDown` / `Ctrl+PageUp` (`Cmd+Shift+]` / `Cmd+Shift+[` on `macOS`).
+
+Method 3:
+
+1. [Run using the `Command Palette`](#run-a-command-using-the-command-palette):
+   `Terminal: Focus Next Terminal`
 
 ### Copy text inside the `Terminal`
 
@@ -207,7 +227,12 @@ View the file tree.
 
 Actions:
 
+- [Open folders](#open-folders)
 - [Open the `Folders`](#open-the-folders)
+
+### Open folders
+
+See [Open the `Folders`](#open-the-folders).
 
 ### Open the `Folders`
 

@@ -83,13 +83,30 @@ Complete these steps to create a VM:
 1. [Add host to the `SSH` config](./ssh.md#add-host-to-the-ssh-config).
 2. Connect your computer to the `Wi-Fi` network `UniversityStudent`.
 3. Open `VS Code`.
-4. [Connect to the VM](./ssh.md#connect-to-the-new-host)
-
-<!-- TODO what should you see? -->
+4. [Connect to the VM](./ssh.md#connect-to-the-vm).
+5. After successful connection, you should see:
+   1. The host fingerprint prompt (first connection only).
+   2. A remote shell prompt on the VM (for example, `root@<your-vm-name>:~#`).
+   3. If you use `Remote - SSH` in `VS Code`, the status bar should show that you are connected to a remote host.
 
 ## Troubleshooting
 
 If you can't connect:
 
 1. [Go to the VM page](#go-to-the-vm-page).
-2. Ask the TA to help and show them the VM page and your [`Terminal`](./vs-code.md#terminal).
+2. Verify the VM is in `Running` status.
+3. Verify the VM `IP address` has not changed.
+4. In your local terminal, test the SSH connection in verbose mode:
+
+   ```terminal
+   ssh -v se-toolkit-vm
+   ```
+
+5. If you get `Permission denied (publickey)`, check:
+   1. Your public key was added to the VM configuration.
+   2. `IdentityFile` in your SSH config points to the correct private key.
+   3. Your private key file permissions are correct (`chmod 600 ~/.ssh/se_toolkit_key` on Linux/macOS/WSL).
+6. Ask the TA to help and show them:
+   1. The VM page.
+   2. The output of `ssh -v se-toolkit-vm`.
+   3. Your [`Terminal`](./vs-code.md#terminal).
