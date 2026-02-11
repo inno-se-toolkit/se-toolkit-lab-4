@@ -321,7 +321,7 @@ Keyboard shortcuts for various commands.
 
 #### Shortcut: Search in all files
 
-`Ctrl+Shift+F` (`Cmd+Shift+F` on `macOS`) - search in all files.
+`Ctrl+Shift+F` (`Cmd+Shift+F` on `macOS`)
 
 #### Shortcut: Toggle line comment
 
