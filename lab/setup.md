@@ -27,6 +27,11 @@
   - [22. Open `README.md`](#22-open-readmemd)
   - [23. Open `Markdown` preview](#23-open-markdown-preview)
   - [24. Continue creating a VM](#24-continue-creating-a-vm)
+  - [25. Create a virtual environment](#25-create-a-virtual-environment)
+  - [26. Check that the `.venv` directory was created](#26-check-that-the-venv-directory-was-created)
+  - [27. Install the dependencies to the virtual environment](#27-install-the-dependencies-to-the-virtual-environment)
+  - [28. Select the `Python` interpreter](#28-select-the-python-interpreter)
+  - [29. Check that `Python` works](#29-check-that-python-works)
 - [Optional steps](#optional-steps)
   - [1. Change the workspace settings](#1-change-the-workspace-settings)
   - [2. Set up a coding agent](#2-set-up-a-coding-agent)
@@ -302,6 +307,82 @@ Method 2:
 ### 24. Continue creating a VM
 
 [Create a VM using the subscription](./appendix/vm.md#create-a-vm-using-the-subscription).
+
+### 25. Create a virtual environment
+
+1. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+
+   ```terminal
+   uv venv
+   ```
+
+2. The output should be similar this:
+
+   ```terminal
+   Using CPython 3.14.2
+   Creating virtual environment at: .venv
+   ```
+
+> [!NOTE]
+> The `.venv` directory contains the virtual environment.
+> That is, files and dependencies that are necessary to run the web server and other tools.
+>
+> This directory is managed by `uv`. You don't need to edit files in this directory manually.
+
+### 26. Check that the `.venv` directory was created
+
+1. Check that the `.venv` directory with all `Python` dependencies was created:
+
+   [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+
+   ```terminal
+   ls .venv
+   ```
+
+2. The output should be similar to this:
+
+   ```terminal
+   bin  CACHEDIR.TAG  lib  lib64  pyvenv.cfg
+   ```
+
+### 27. Install the dependencies to the virtual environment
+
+1. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+
+   ```terminal
+   uv sync
+   ```
+
+2. The output should be similar to this:
+
+   ```terminal
+   Resolved 38 packages in 0.77ms
+   Audited 36 packages in 0.31ms
+   ```
+
+### 28. Select the `Python` interpreter
+
+1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
+   `Python: Select Interpreter`.
+2. Click `Recommended` to select the interpreter in `./.venv/bin/python`.
+
+### 29. Check that `Python` works
+
+1. [Open a new `Terminal`](./appendix/vs-code.md#open-a-new-terminal).
+2. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+
+   ```terminal
+   uv run python --version
+   ```
+
+3. The output should be similar to this:
+
+   ```terminal
+   Python 3.14.2
+   ```
+
+> [!NOTE]
+> The `Python` version for this project is specified in the [`pyproject.toml`](../pyproject.toml) file using the `requires-python` setting.
 
 ---
 
