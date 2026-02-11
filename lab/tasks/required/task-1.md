@@ -17,8 +17,8 @@ Then, you can check whether the web server works before the web server is deploy
 
 - [1. Create an issue](#1-create-an-issue)
 - [2. Learn about environments](#2-learn-about-environments)
-- [View the file `.env.no-docker.example`](#view-the-file-envno-dockerexample)
-  - [Create the file `.env.secret`](#create-the-file-envsecret)
+- [3. View the file `.env.no-docker.example`](#3-view-the-file-envno-dockerexample)
+- [4. Create the file `.env.secret`](#4-create-the-file-envsecret)
   - [View the file `.env.secret`](#view-the-file-envsecret)
   - [Run the web server using `uv` and `poe`](#run-the-web-server-using-uv-and-poe)
 - [Check `/status`](#check-status)
@@ -40,11 +40,11 @@ Read the following sections:
 1. [Environment variables](../../appendix/environments.md#environment-variables)
 2. [`.env` file](../../appendix/environments.md#env-file)
 
-## View the file `.env.no-docker.example`
+## 3. View the file `.env.no-docker.example`
 
 1. [Open the file using the `Command Palette`](../../appendix/vs-code.md#open-a-file-using-the-command-palette): [`.env.no-docker.example`](../../../.env.no-docker.example).
 
-### Create the file `.env.secret`
+## 4. Create the file `.env.secret`
 
 1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
 
