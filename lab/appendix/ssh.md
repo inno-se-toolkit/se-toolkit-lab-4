@@ -153,8 +153,9 @@ You can connect using the alias that you [added to your `SSH` config](#add-the-h
    ssh se-toolkit-vm
    ```
 
-2. If this is your first time connecting, you will see a message:
-   `The authenticity of host ... can't be established.`
+2. If this is your first time connecting:
+   1. You will see a message:
+      `The authenticity of host ... can't be established.`
 
 3. Type `yes` and press `Enter`.
 4. After successful login, you should see a shell prompt on the remote machine.
