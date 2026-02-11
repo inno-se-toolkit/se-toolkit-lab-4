@@ -171,6 +171,8 @@ Complete these steps:
 
    <img alt="Terminal Bash" src="./images/appendix/vs-code/terminal-bash.png" style="width:400px"></img>
 
+<!-- TODO check how it looks like on windows -->
+
 ### 15. Configure `Git`
 
 > [!IMPORTANT]
