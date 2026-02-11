@@ -128,7 +128,7 @@ Quick actions buttons located above the [`Editor`](#editor).
 
 ## `Command Palette`
 
-Run editor commands.
+Run editor commands in `VS Code`.
 
 - [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)
 - [docs 2](https://code.visualstudio.com/docs/getstarted/getting-started#_access-commands-with-the-command-palette)
