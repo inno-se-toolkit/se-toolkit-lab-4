@@ -18,3 +18,7 @@
 Follow the [`Git workflow`](../git-workflow.md) to complete this task.
 
 ## Acceptance Criteria
+
+- [ ] Issue has the correct title
+- [ ] PR approved
+- [ ] PR merged
