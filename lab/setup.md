@@ -324,7 +324,7 @@ Method 2:
 1. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
 
    ```terminal
-   uv python install 3.14.2
+   uv python install
    ```
 
 2. The output should be similar to this:
