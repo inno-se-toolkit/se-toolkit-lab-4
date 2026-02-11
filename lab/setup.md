@@ -184,15 +184,14 @@ Complete these steps:
 ### 15. Open `VS Code` in the `software-engineering-toolkit` directory
 
 1. On your computer, create somewhere a directory `software-engineering-toolkit` (e.g., on your `Desktop`).
-2. Open `VS Code`.
-3. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
+2. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
    `File: Open Folder...`
-4. Find the `software-engineering-toolkit` directory that you created.
-5. Open this directory.
-6. `VS Code` should now open in that directory.
-7. [Open `Folders`](./appendix/vs-code.md#open-folders).
-8. Look at `FOLDERS`.
-9. You should see `SOFTWARE-ENGINEERING-TOOLKIT` there.
+3. Find the `software-engineering-toolkit` directory that you created.
+4. Open this directory.
+5. `VS Code` should now open in that directory.
+6. [Open `Folders`](./appendix/vs-code.md#open-folders).
+7. Look at `FOLDERS`.
+8. You should see `SOFTWARE-ENGINEERING-TOOLKIT` there.
 
 ### 16. Copy your fork URL
 
