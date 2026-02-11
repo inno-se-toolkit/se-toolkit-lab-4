@@ -302,10 +302,10 @@ Keyboard shortcuts for various commands.
 
 ### Frequently used shortcuts
 
-- [Shortcut: Go back](#shortcut-go-back)
-- [Shortcut: Switch to the previous editor](#shortcut-switch-to-the-previous-editor)
-- [Shortcut: Search in the current editor](#shortcut-search-in-the-current-editor)
-- [Shortcut: Search in all files](#shortcut-search-in-all-files)
+- [Go back](#shortcut-go-back)
+- [Switch to the previous editor](#shortcut-switch-to-the-previous-editor)
+- [Search in the current editor](#shortcut-search-in-the-current-editor)
+- [Search in all files](#shortcut-search-in-all-files)
 
 #### Shortcut: Go back
 
