@@ -80,15 +80,10 @@ Complete these steps to create a VM:
 
 ## Connect to the VM
 
-1. Connect your computer to the `Wi-Fi` network `UniversityStudent`.
-2. Open `VS Code`.
-3. [Run using the `Terminal`](./vs-code.md#run-a-command-using-the-terminal):
-
-    ```terminal
-    ssh -i path/to/the/key root@<your-vm-ip-address>
-    
-    # example: ssh -i path/to/the/key root@10.93.24.98
-    ```
+1. [Add host to the `SSH` config](./ssh.md#add-host-to-the-ssh-config).
+2. Connect your computer to the `Wi-Fi` network `UniversityStudent`.
+3. Open `VS Code`.
+4. [Connect to the VM](./ssh.md#connect-to-the-new-host)
 
 <!-- TODO what should you see? -->
 
