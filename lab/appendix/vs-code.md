@@ -328,6 +328,12 @@ Keyboard shortcuts for various commands.
 
 `Ctrl+/` (`Cmd+/` on `macOS`)
 
+> [!TIP]
+> This shortcut also works for a sequence of lines:
+>
+> 1. Select lines.
+> 2. Press the shortcut.
+
 ## Workspace settings
 
 `VS Code` settings for the workspace.
