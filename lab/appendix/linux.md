@@ -48,28 +48,28 @@ For Ubuntu/Debian systems:
 
 1. Create a new user:
 
-```terminal
-sudo adduser <username>
-```
+   ```terminal
+   sudo adduser <username>
+   ```
 
 2. Allow the user to run administrative commands:
 
-```terminal
-sudo usermod -aG sudo <username>
-```
+   ```terminal
+   sudo usermod -aG sudo <username>
+   ```
 
 3. Switch to that user:
 
-```terminal
-su - <username>
-```
+    ```terminal
+    su - <username>
+    ```
 
 4. Verify:
 
-```terminal
-whoami
-id
-```
+    ```terminal
+    whoami
+    id
+    ```
 
 If you plan to log in via `SSH` as that user, copy `authorized_keys` to the new user's home and fix permissions before logging out from `root`.
 
