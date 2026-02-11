@@ -116,7 +116,7 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 
 Now that the configuration is saved, you can connect using the alias you [defined](#add-host-to-the-ssh-config).
 
-1. [Run using the `Terminal`](../lab/lab-1/lab/appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
 
     ```bash
     ssh se-toolkit-vm
