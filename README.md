@@ -6,6 +6,7 @@
 - [Learning advice](#learning-advice)
 - [Learning outcomes](#learning-outcomes)
 - [Tasks](#tasks)
+  - [Prerequisites](#prerequisites)
   - [Required](#required)
   - [Optional](#optional)
 
@@ -73,13 +74,16 @@ By the end of this lab, you should be able to:
 
 ## Tasks
 
-### Required
+### Prerequisites
 
 1. [Lab setup](./lab/setup.md).
-2. [Run the web server](./lab/tasks/required/task-1.md)
-3. [Identify, report, and fix a bug](./lab/tasks/required/task-2.md)
-4. [Run the web server using `Docker Compose`](./lab/tasks/required/task-3.md)
-5. [Deploy the web server to the VM](./lab/tasks/required/task-4.md)
+
+### Required
+
+1. [Run the web server](./lab/tasks/required/task-1.md)
+2. [Identify, report, and fix a bug](./lab/tasks/required/task-2.md)
+3. [Run the web server using `Docker Compose`](./lab/tasks/required/task-3.md)
+4. [Deploy the web server to the VM](./lab/tasks/required/task-4.md)
 
 ### Optional
 
