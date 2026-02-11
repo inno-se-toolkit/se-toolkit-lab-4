@@ -12,16 +12,6 @@
   },
   "markdown.extension.toc.levels": "2..6",
 
-  // Uncomment to set Git Bash as the default shell.
-  
-  // "terminal.integrated.defaultProfile.windows": "Git Bash",
-  // "terminal.integrated.profiles.windows": {
-  //   "Git Bash": {
-  //     "path": "C:\\Program Files\\Git\\bin\\git-bash.exe",
-  //     "icon": "terminal-bash"
-  //   }
-  // },
-
   // Move sidebar to the right so that
   // it doesn't move the code whenever it opens.
   // Change this setting if necessary.
