@@ -1,4 +1,4 @@
-# Identify, report, and fix a bug
+# Run the web server using `Docker Compose`
 
 <h4>Time</h4>
 
