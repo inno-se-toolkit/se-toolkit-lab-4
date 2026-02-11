@@ -17,6 +17,7 @@
 - [`Terminal`](#terminal)
   - [Open the `Terminal`](#open-the-terminal)
   - [Close the `Terminal`](#close-the-terminal)
+  - [Open a new `Terminal`](#open-a-new-terminal)
   - [Copy text inside the `Terminal`](#copy-text-inside-the-terminal)
   - [Paste text inside the `Terminal`](#paste-text-inside-the-terminal)
   - [Run a command using the `Terminal`](#run-a-command-using-the-terminal)
@@ -31,6 +32,11 @@
   - [Install recommended `Extensions`](#install-recommended-extensions)
 - [Keyboard shortcuts](#keyboard-shortcuts)
   - [Frequently used shortcuts](#frequently-used-shortcuts)
+    - [Shortcut: Go back](#shortcut-go-back)
+    - [Shortcut: Switch to the previous editor](#shortcut-switch-to-the-previous-editor)
+    - [Shortcut: Search in the current editor](#shortcut-search-in-the-current-editor)
+    - [Shortcut: Search in all files](#shortcut-search-in-all-files)
+    - [Shortcut: Toggle line comment](#shortcut-toggle-line-comment)
 - [Workspace settings](#workspace-settings)
   - [Change the workspace settings](#change-the-workspace-settings)
 
@@ -122,7 +128,7 @@ Quick actions buttons located above the [`Editor`](#editor).
 
 ## `Command Palette`
 
-Run editor commands.
+Run editor commands in `VS Code`.
 
 - [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)
 - [docs 2](https://code.visualstudio.com/docs/getstarted/getting-started#_access-commands-with-the-command-palette)
@@ -161,6 +167,7 @@ Actions:
 
 - [Open the `Terminal`](#open-the-terminal)
 - [Close the `Terminal`](#close-the-terminal)
+- [Open a new `Terminal`](#open-a-new-terminal)
 - [Copy text inside the `Terminal`](#copy-text-inside-the-terminal)
 - [Paste text inside the `Terminal`](#paste-text-inside-the-terminal)
 - [Run a command using the `Terminal`](#run-a-command-using-the-terminal)
@@ -172,6 +179,10 @@ Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 ### Close the `Terminal`
 
 Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
+
+### Open a new `Terminal`
+
+Press ```Ctrl+Shift+` ```
 
 ### Copy text inside the `Terminal`
 
@@ -216,25 +227,25 @@ Actions:
 
 ### Open the `Source Control`
 
-Approach 1:
+Method 1:
 
 1. Go to the [`Activity Bar`](#activity-bar).
 2. Click `Source Control`.
 3. Click `CHANGES` to uncollapse the view.
   
-Approach 2:
+Method 2:
 
 1. Press `Ctrl+Shift+G G` (`Ctrl+Shift+G` on `macOS`)
 2. Click `CHANGES` to uncollapse the view.
 
 ### Close the `Source Control`
 
-Approach 1:
+Method 1:
 
 1. Go to the [`Activity Bar`](#activity-bar)
 2. Click `Source Control`.
 
-Approach 2:
+Method 2:
 
 1. Press `Ctrl+B` (`Cmd+B` on `macOS`)
 
@@ -252,12 +263,12 @@ Actions:
 
 ### Open the `Extensions`
 
-Approach 1:
+Method 1:
 
 1. Go to the [`Activity Bar`](#activity-bar).
 2. Click the icon `Extensions`.
 
-Approach 2:
+Method 2:
 
 1. Press `Ctrl+Shift+X` (`Cmd+Shift+X` on `macOS`).
 
@@ -291,10 +302,37 @@ Keyboard shortcuts for various commands.
 
 ### Frequently used shortcuts
 
-- `Alt+-` (`Ctrl+-` on `macOS`) - go back.
-- `Ctrl+Tab` - switch to the previous editor.
-- `Ctrl+F` (`Cmd+F` on `macOS`) - search in the current editor.
-- `Ctrl+Shift+F` (`Cmd+Shift+F` on `macOS`) - search in all files.
+- [Go back](#shortcut-go-back)
+- [Switch to the previous editor](#shortcut-switch-to-the-previous-editor)
+- [Search in the current editor](#shortcut-search-in-the-current-editor)
+- [Search in all files](#shortcut-search-in-all-files)
+- [Toggle line comment](#shortcut-toggle-line-comment)
+
+#### Shortcut: Go back
+
+`Alt+-` (`Ctrl+-` on `macOS`)
+
+#### Shortcut: Switch to the previous editor
+
+`Ctrl+Tab`
+
+#### Shortcut: Search in the current editor
+
+`Ctrl+F` (`Cmd+F` on `macOS`)
+
+#### Shortcut: Search in all files
+
+`Ctrl+Shift+F` (`Cmd+Shift+F` on `macOS`)
+
+#### Shortcut: Toggle line comment
+
+`Ctrl+/` (`Cmd+/` on `macOS`)
+
+> [!TIP]
+> This shortcut also works for a sequence of lines:
+>
+> 1. Select lines.
+> 2. Press the shortcut.
 
 ## Workspace settings
 

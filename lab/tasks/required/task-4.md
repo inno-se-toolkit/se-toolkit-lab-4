@@ -1,4 +1,4 @@
-# Make your VM a proxy to your partner's web server
+# Deploy the web server to the VM
 
 <h4>Time</h4>
 
@@ -8,16 +8,19 @@
 
 <h4>Context</h4>
 
-Practice using `Caddy`.
-
 <h4>Table of contents</h4>
 
 - [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
+- [1. Check the VM](#1-check-the-vm)
 - [Acceptance Criteria](#acceptance-criteria)
 
 ## 0. Follow the `Git workflow`
 
 Follow the [`Git workflow`](../git-workflow.md) to complete this task.
+
+## 1. Check the VM
+
+<!-- TODO -->
 
 ## Acceptance Criteria
 

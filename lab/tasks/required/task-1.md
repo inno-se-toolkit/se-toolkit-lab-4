@@ -1,165 +1,194 @@
-# Choose a product and study its architecture
+# Run the web server
 
-**Time:** ~30-40 min
+<h4>Time</h4>
 
-**Purpose:** Understand how a real software product may be structured by examining its components, data flow, and deployment.
+~30-40 min
 
-**Context:** Imagine you have joined one of these product teams. On your first days, you need to understand what the product does and how it is structured.
+<h4>Purpose</h4>
 
-- [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
-- [1. Create an issue](#1-create-an-issue)
-- [2. Choose a product](#2-choose-a-product)
-- [3. Find the diagrams](#3-find-the-diagrams)
-- [4. Create `docs/architecture.md`](#4-create-docsarchitecturemd)
-  - [`## Product Choice`](#-product-choice)
-  - [`## Main components`](#-main-components)
-    - [Embed the product's `Component Diagram.svg`](#embed-the-products-component-diagramsvg)
-    - [Add link to `PlantUML` code](#add-link-to-plantuml-code)
-    - [Explain the components](#explain-the-components)
-  - [`## Data flow`](#-data-flow)
-  - [`## Deployment`](#-deployment)
-  - [`## Assumptions`](#-assumptions)
-  - [`## Open questions`](#-open-questions)
+Learn to run the web server written in `Python`.
+
+<h4>Context</h4>
+
+You should be able to run the web server on your computer.
+Then, you can check whether the web server works before the web server is deployed.
+
+<h4>Table of contents</h4>
+
+- [Steps](#steps)
+  - [1. Create an issue](#1-create-an-issue)
+  - [2. Learn about environments](#2-learn-about-environments)
+  - [3. View the file `.env.example`](#3-view-the-file-envexample)
+  - [4. Create the file `.env.secret`](#4-create-the-file-envsecret)
+  - [5. View the file `.env.secret`](#5-view-the-file-envsecret)
+  - [6. Use a free `$PORT`](#6-use-a-free-port)
+  - [7. Run the web server using `uv` and `poe`](#7-run-the-web-server-using-uv-and-poe)
+  - [8. Check `/status`](#8-check-status)
+    - [Check `/status` using a browser](#check-status-using-a-browser)
+    - [Check `/status` using `curl`](#check-status-using-curl)
+  - [9. Stop the web server](#9-stop-the-web-server)
+  - [10. Force stop the web server](#10-force-stop-the-web-server)
+  - [11. Check `/status` again](#11-check-status-again)
+  - [12. Write a comment for the issue](#12-write-a-comment-for-the-issue)
 - [Acceptance criteria](#acceptance-criteria)
 
-## 0. Follow the `Git workflow`
+## Steps
 
-Follow the [`Git workflow`](../git-workflow.md) to complete this task.
+### 1. Create an issue
 
-## 1. Create an issue
+Title: `[Task] Run the web server`
 
-Title: `[Task] Product & architecture description`
+### 2. Learn about environments
 
-## 2. Choose a product
+Read the following sections:
 
-> [!IMPORTANT]
-> You and your partner must pick **different products**. This way, during PR reviews, you'll learn about each other's products.
+1. [Environment variables](../../appendix/environments.md#environment-variables)
+2. [`.env` file](../../appendix/environments.md#env-file)
 
-Available products:
+### 3. View the file `.env.example`
 
-- Yandex Go
-- Telegram
-- Wildberries.ru
+1. [Open the file using the `Command Palette`](../../appendix/vs-code.md#open-a-file-using-the-command-palette): [`.env.example`](../../../.env.example).
 
-Alternatively, choose another full-stack product with at least a million users. In that case, you'll have to [visualize the architecture](../../appendix/visualize-architecture.md) on your own.
+### 4. Create the file `.env.secret`
 
-## 3. Find the diagrams
+1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
 
-> [!IMPORTANT]
-> System architecture diagrams represent the system architecture but they are not the [system architecture](https://github.com/inno-se/the-guide?tab=readme-ov-file#architecture).
->
-> The provided architecture diagrams are based on educated guesses since the products in the list are mostly closed-source.
-> All diagrams were generated via Gemini 3 Pro (free web version) and edited by the course instructors.
+   ```terminal
+   cp .env.example .env.secret
+   ```
 
-1. Find the directory with the product's architecture diagrams in two formats:
-    - `PlantUML` code is in [`docs/diagrams/src/<product-name>`](../../../docs/diagrams/src/).
-    - Rendered architecture diagrams are in [`docs/diagrams/out/<product-name>`](../../../docs/diagrams/out/).
-
-2. If you chose another project, provide component, deployment, sequence diagrams in two formats in corresponding directories.
-
-## 4. Create `docs/architecture.md`
-
-Create the file and add the following sections:
-
-### `## Product Choice`
-
-Provide:
-
-- Product name;
-- Link to the product's website;
-- Short description of the product (1-2 sentences).
-
-### `## Main components`
+### 5. View the file `.env.secret`
 
 > [!NOTE]
+> The `.env.secret` file was added to [`.gitignore`](../../../.gitignore) because you may specify there
+> [secrets](../../appendix/environments.md#secrets) such as the address of your VM.
+
+View the file using one of the following methods.
+
+Method 1:
+
+1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+
+   ```terminal
+   cat .env.secret
+   ```
+
+Method 2:
+
+1. [Open the file using the `Command Palette`](../../appendix/vs-code.md#open-a-file-using-the-command-palette): [`.env.secret`](../../../.env.example).
+
+### 6. Use a free `$PORT`
+
+> [!NOTE]
+> `$PORT` here will be substituted with the value of the `PORT` environment variable from the `.env.secret` file.
 >
-> According to the [`C4 model`](https://c4model.com/abstractions/component), a *component* is a grouping of related functionality encapsulated behind a well-defined interface.
+> The `kport inspect $PORT` command will be run in the [`bash`](../../appendix/linux.md#bash) shell.
 
-> [!IMPORTANT]
-> Use paths relative to the `docs/architecture.md` file when embedding images and providing links.
->
-> Quick intro:
->
-> - `.` - the current directory.
-> - `..` - parent directory.
-> - `./file` - file in the current directory.
-> - `../file` - file in the parent directory.
+1. Inspect what's running on `$PORT`:
 
-> [!TIP]
-> Use auto-completion for paths.
->
-> 1. [Open `docs/architecture.md`](../../appendix/vs-code.md#open-a-file).
-> 2. Write `![Telegram Component Diagram]()`.
-> 3. Inside parentheses `()`, start typing `./`.
-> 4. Use suggestions to continue the path.
+   [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
 
-> [!IMPORTANT]
->
-> Replace space in the path with `%20` (see [URL encoding](https://en.wikipedia.org/wiki/Percent-encoding)).
+   ```terminal
+   uv run --env-file .env.secret bash -c 'kport inspect $PORT'
+   ```
 
-#### Embed the product's `Component Diagram.svg`
+2. You should see something like `Port 42000 is free`.
+3. If you see `Process: python3`:
+   1. It's probably the web server running if you tried running it before.
+   2. You can safely [force stop it](#10-force-stop-the-web-server).
+4. Otherwise:
+   1. [Open the file using the `Command Palette`](../../appendix/vs-code.md#open-a-file-using-the-command-palette):
+      `.env.secret`
+   2. Write another value for `PORT`, e.g., `41000`.
+   3. Inspect what's running on the new `$PORT` (`41000`) as explained above.
 
-Example (path provided relative to this file): `![Telegram Component Diagram](../../../docs/diagrams/out/telegram/component-diagram/Component%20Diagram.svg)`
+### 7. Run the web server using `uv` and `poe`
 
-<details><summary>Embedded image example (click to open)</summary>
+> [!NOTE]
+> [`poe`](https://poethepoet.natn.io/) can run tasks
+> specified in the [`pyproject.toml`](../../../pyproject.toml) in the `[tool.poe.tasks]` section.
 
-![Telegram Component Diagram](../../../docs/diagrams/out/telegram/component-diagram/Component%20Diagram.svg)
+1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
 
-</details>
+   ```terminal
+   uv run poe dev
+   ```
 
-#### Add link to `PlantUML` code
+2. The web server will automatically read the [environment variables](../../appendix/environments.md#environment-variables) from the `.env.secret` file.
 
-Provide a link to the `PlantUML` code for that [component diagram](../../appendix/architectural-views.md#component-diagram).
-  
-Example: [Telegram Component Diagram Code](../../../docs/diagrams/src/telegram/component-diagram.puml)
+> [!NOTE]
+> You will see in the output a key shortcut to stop the server such as `Ctrl+C`.
 
-#### Explain the components
+### 8. Check `/status`
 
-1. Select at least 5 components of the product from the component diagram.
+> [!NOTE]
+> `/status` is an [endpoint](../../appendix/web-development.md#endpoint) of the web server.
 
-2. For each selected component, explain in 1-2 sentences what it does (as you think).
+#### Check `/status` using a browser
 
-### `## Data flow`
+1. Open in a browser: `http://127.0.0.1:42000/status`
+2. You should see the response from the web server like:
 
-1. Embed the product's `Sequence Diagram.svg`.
-2. Provide a link to the `PlantUML` code for that [sequence diagram](../../appendix/architectural-views.md#sequence-diagram).
-3. Choose a group of actions (a box in the diagram, `group` or `Flow` in the `PlantUML` code).
-4. Describe what happens in that group of steps.
-5. Mention which components talk to each other and what data they exchange.
+    ```text
+    status: "ok"
+    service: "course-material"
+    ```
 
-### `## Deployment`
+<!-- TODO view JSON -->
 
-1. Embed the product's `Deployment Diagram.svg`.
-2. Provide a link to the `PlantUML` code for that [deployment diagram](../../appendix/architectural-views.md#deployment-diagram).
-3. Briefly describe where the components are deployed.
+#### Check `/status` using `curl`
 
-### `## Assumptions`
+1. [Open a new `Terminal`](../../appendix/vs-code.md#open-a-new-terminal).
+2. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
 
-List two or more assumptions you made while describing the architecture. Examples:
+    ```text
+    curl http://127.0.0.1:42000/status
+    ```
 
-- Yandex Go: *"I assume the pricing service handles surge pricing calculations based on demand and supply in real-time."*
-- Telegram: *"I assume the cloud storage system implements deduplication to optimize storage costs for shared media files."*
-- Wildberries: *"I assume the Logistics & Routing service integrates with multiple delivery partners to optimize shipping costs and delivery times"*
+3. You should see the `JSON` response from the web server:
 
-### `## Open questions`
+    ```json
+    {"status":"ok","service":"course-material"}
+    ```
 
-List two or more questions that you couldn't answer based on the openly available information. Examples:
+<!-- TODO add check status using the /docs -->
 
-- Yandex Go: *"How does the actual load balancing mechanism work between the microservices in production?"*
-- Telegram: *"How does the data flow look like in secret chats?"*
-- Wildberries: *"What specific caching strategies are used to handle high traffic during sales events?"*
+### 9. Stop the web server
+
+1. [Switch to the old `Terminal`](../../appendix/vs-code.md#switch-to-another-terminal) where the web server runs.
+2. Press the key shortcut that you saw when running the server to stop the server.
+3. You should see `INFO:     Waiting for application shutdown.`
+
+### 10. Force stop the web server
+
+1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+
+   ```terminal
+   uv run --env-file .env.secret bash -c 'kport kill $PORT'
+   ```
+
+2. Confirm suggested actions.
+3. Rerun using the `Terminal` the command provided above until you see something like `Port 42000 is free`.
+
+### 11. Check `/status` again
+
+The server has stopped. Therefore, it should not respond to requests.
+
+[Check `/status`](#8-check-status) again to ensure that.
+
+You shouldn't see the response that you got before.
+
+### 12. Write a comment for the issue
+
+1. Go to the issue that you created for this task.
+2. Scroll down.
+3. Go to `Add a comment`.
+4. Write one of the responses that you got when the web server was running.
+5. Click `Close with comment`.
+
+---
 
 ## Acceptance criteria
 
-- [ ] Issue created
-- [ ] `docs/architecture.md` created with all required sections
-- [ ] Product name, link, and description are present
-- [ ] Component diagram is visible
-- [ ] At least 5 components are described (1-2 sentences each)
-- [ ] Sequence diagram is visible
-- [ ] Data flow description explains which components interact and what data they exchange during a user action
-- [ ] Deployment diagram is visible
-- [ ] Deployment is briefly described
-- [ ] At least 2 assumptions and 2 open questions listed
-- [ ] Partner reviewed and approved
-- [ ] PR merged
+- [ ] Issue has the correct title
+- [ ] The comment with the `JSON` response of the `/status` endpoint exists.

@@ -1,0 +1,5 @@
+# https://caddyserver.com/docs/caddyfile/concepts#environment-variables
+
+:{$CADDY_CONTAINER_PORT} {
+    reverse_proxy http://app:{$APP_CONTAINER_PORT}
+}

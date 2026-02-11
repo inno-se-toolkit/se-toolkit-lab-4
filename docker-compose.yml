@@ -1,0 +1,25 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    ports:
+      - ${APP_HOST_ADDRESS}:${APP_HOST_PORT}:${APP_CONTAINER_PORT}
+    expose:
+      - ${APP_CONTAINER_PORT}
+    environment:
+      - NAME=${APP_NAME:-'Course Materials Service'}
+      - DEBUG=${APP_DEBUG:-false}
+      - ADDRESS=${APP_CONTAINER_ADDRESS:?'APP_CONTAINER_ADDRESS is a required environment variable'}
+      - PORT=${APP_CONTAINER_PORT:?'APP_CONTAINER_PORT is a required environment variable'}
+
+  caddy:
+    image: caddy:2.11-alpine
+    depends_on:
+      - app
+    environment:
+      - CADDY_CONTAINER_PORT=${CADDY_CONTAINER_PORT:?'CADDY_CONTAINER_PORT is a required environment variable'}
+      - APP_CONTAINER_PORT=${APP_CONTAINER_PORT:?'APP_CONTAINER_PORT is a required environment variable'}
+    ports:
+      - ${CADDY_HOST_ADDRESS}:${CADDY_HOST_PORT}:${CADDY_CONTAINER_PORT}
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile

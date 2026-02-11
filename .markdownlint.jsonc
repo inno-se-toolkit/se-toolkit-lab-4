@@ -3,4 +3,5 @@
   "line-length": false,
   "first-line-heading": false,
   "no-blanks-blockquote": false,
+  "code-fence-style": false
 }

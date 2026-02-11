@@ -1,127 +1,182 @@
-# Compare your tech skills with the market needs
+# Run the web server using `Docker Compose`
 
-**Time:** ~30-40 min
+<h4>Time</h4>
 
-**Purpose:** Understand the current market demand for technical roles and assess your skills against industry requirements.
+~30-40 min
 
-**Context:** As you begin your journey in software engineering, it's important to understand what skills are valued in the market and how your current abilities align with industry expectations.
+<h4>Purpose</h4>
 
-- [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
-- [1. Create an issue](#1-create-an-issue)
-- [2. Choose a role](#2-choose-a-role)
-- [3. Explore `roadmap.sh`](#3-explore-roadmapsh)
-- [4. Create `docs/me-and-market.md`](#4-create-docsme-and-marketmd)
-  - [# My role and skills](#-my-role-and-skills)
-  - [## My role](#-my-role)
-  - [## Skills I already have](#-skills-i-already-have)
-  - [## Skills I clearly lack](#-skills-i-clearly-lack)
-  - [## Market snapshot](#-market-snapshot)
-  - [## Skills that appear in several postings](#-skills-that-appear-in-several-postings)
-  - [## Skills specific to a single posting](#-skills-specific-to-a-single-posting)
-  - [## My skills and market demands](#-my-skills-and-market-demands)
-  - [## Skills that I can improve](#-skills-that-i-can-improve)
-- [Acceptance Criteria](#acceptance-criteria)
+Learn to run the web server using `Docker Compose`.
 
-## 0. Follow the `Git workflow`
+<h4>Context</h4>
 
-Follow the [`Git workflow`](../git-workflow.md) to complete this task.
+You should be able to run the web server using `Docker Compose` on your computer.
+Then, you can check whether the web server works before the web server is deployed.
 
-## 1. Create an issue
+<h4>Table of contents</h4>
 
-Title: `[Task] Tech skills assessment and market analysis`
+- [Steps](#steps)
+  - [1. Create an issue](#1-create-an-issue)
+  - [2. Revise environments](#2-revise-environments)
+  - [3. View the file `.env.docker.example`](#3-view-the-file-envdockerexample)
+  - [4. Create the file `.env.docker.secret`](#4-create-the-file-envdockersecret)
+  - [5. View the file `.env.docker.secret`](#5-view-the-file-envdockersecret)
+  - [Edit the file `.env.docker.secret`](#edit-the-file-envdockersecret)
+  - [6. Run the web server using `Docker Compose`](#6-run-the-web-server-using-docker-compose)
+  - [7. Check `/status`](#7-check-status)
+    - [Check `/status` using a browser](#check-status-using-a-browser)
+    - [Check `/status` using `curl`](#check-status-using-curl)
+    - [Check `/status` using another address](#check-status-using-another-address)
+  - [8. Stop the web server](#8-stop-the-web-server)
+  - [9. Check `/status` again](#9-check-status-again)
+  - [10. Write a comment for the issue](#10-write-a-comment-for-the-issue)
+- [Acceptance criteria](#acceptance-criteria)
 
-## 2. Choose a role
+## Steps
 
-Choose *one* role that seems most interesting to you now.
+### 1. Create an issue
 
-## 3. Explore `roadmap.sh`
+Title: `[Task] Run the web server using Docker Compose`
 
-1. Go to [`roadmap.sh`](https://roadmap.sh/)
-2. Sign up there.
-3. Find the roadmap relevant for the role you chose.
-4. In that roadmap, mark the items you already know to some extent.
+### 2. Revise environments
 
-## 4. Create `docs/me-and-market.md`
+You have already learned about environments in [Task 1](./task-1.md#2-learn-about-environments).
 
-Create the file `docs/me-and-market.md` and add the following sections:
+Now you will configure environment variables specific to the deployment when using `Docker Compose`.
 
-<!-- no toc -->
-- [# My role and skills](#-my-role-and-skills)
-- [## My role](#-my-role)
-- [## Skills I already have](#-skills-i-already-have)
-- [## Skills I clearly lack](#-skills-i-clearly-lack)
-- [## Market snapshot](#-market-snapshot)
-- [## Skills that appear in several postings](#-skills-that-appear-in-several-postings)
-- [## Skills specific to a single posting](#-skills-specific-to-a-single-posting)
-- [## My skills and market demands](#-my-skills-and-market-demands)
-- [## Skills that I can improve](#-skills-that-i-can-improve)
+### 3. View the file `.env.docker.example`
 
-### # My role and skills
+1. [Open the file using the `Command Palette`](../../appendix/vs-code.md#open-a-file-using-the-command-palette): [`.env.docker.example`](../../../.env.docker.example).
 
-This is the file title.
+### 4. Create the file `.env.docker.secret`
 
-### ## My role
+> [!NOTE]
+> The `.env.docker.secret` file contains environment variables for the Docker containers.
+>
+> It was added to [`.gitignore`](../../../.gitignore) because you may specify there
+> [secrets](../../appendix/environments.md#secrets) such as the address of your VM.
 
-1. Clearly write your role name.
-2. Explain why you chose it (1-3 reasons).
+1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
 
-### ## Skills I already have
+   ```terminal
+   cp .env.docker.example .env.docker.secret
+   ```
 
-1. List 3-5 skills that you have experience with from the `roadmap.sh`.
-2. Briefly mention your level of experience with each skill (beginner, intermediate, advanced).
+### 5. View the file `.env.docker.secret`
 
-### ## Skills I clearly lack
+View the file using one of the following methods.
 
-1. List 4-5 skills from `roadmap.sh` that seem important to have for your chosen role.
-2. Explain briefly why each skill is important for the role.
-3. Indicate which skills you think would be most challenging to acquire.
+Method 1:
 
-### ## Market snapshot
+1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
 
-1. Find **5-7 job postings** for your chosen role on [`HH.ru`](https://hh.ru) or a similar job site (like `LinkedIn`, `Indeed`, etc.).
-2. For each posting, document the following information:
-    - Role title exactly as listed in the posting;
-    - Direct link to the job posting;
-    - 3–5 key skills/requirements mentioned in the posting.
+   ```terminal
+   cat .env.docker.secret
+   ```
 
-### ## Skills that appear in several postings
+Method 2:
 
-1. Identify 3-5 skills that appeared in multiple job postings (at least 3 different postings).
-2. For each skill, note how many postings mentioned it.
-3. Rank these skills by frequency (most mentioned to least mentioned).
+1. [Open the file using the `Command Palette`](../../appendix/vs-code.md#open-a-file-using-the-command-palette): [`.env.secret`](../../../.env.secret).
 
-### ## Skills specific to a single posting
+### Edit the file `.env.docker.secret`
 
-1. List 2-5 skills that appeared in only one job posting.
-2. Note which position required each unique skill.
-3. Consider whether these skills represent niche requirements or emerging trends.
+### 6. Run the web server using `Docker Compose`
 
-### ## My skills and market demands
+> [!NOTE]
+> [`Docker Compose`](../../appendix/docker.md#docker-compose) can run multi-container `Docker` applications
+> defined in the [`docker-compose.yml`](../../../docker-compose.yml) file.
 
-> [!IMPORTANT]
-> Write this section **without** an LLM.
-> This is your opportunity to think and arrive at useful conclusions.
+1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
 
-Analyze the gap between your current skillset and market demands based on your research.
+   ```terminal
+   docker compose --env-file .env.docker.secret up --build
+   ```
 
-### ## Skills that I can improve
+> [!NOTE]
+> `Docker Compose` will provide use environment variables from the `.env.docker.secret` file and map them to variables that as specified in the `docker-compose.yml`.
+>
+> `Docker Compose` will then make these constructed environment variables available to the applications running in [containers](../../appendix/docker.md#container).
 
-1. Identify one or two key skills you want to develop this semester.
-2. Explain why these are priorities.
-3. Consider what resources or learning strategies might help you acquire these skills
+### 7. Check `/status`
 
-> [!TIP]
-> Try completing the optional [Task 4](../optional/task-4.md) if you want a more actionable plan.
+> [!NOTE]
+> `/status` is an [endpoint](../../appendix/web-development.md#endpoint) of the web server.
 
-## Acceptance Criteria
+#### Check `/status` using a browser
 
-- [ ] Issue created
-- [ ] Role is clearly stated with a reason for choosing it
-- [ ] Skills from `roadmap.sh` are listed (both existing and lacking)
-- [ ] 5-7 real job postings analyzed
-- [ ] Common and unique skills identified
-- [ ] Personal reflection written (5-10 sentences, no LLM)
-- [ ] Personal reflection appears genuine and thoughtful
-- [ ] The development goals look realistic for one semester
-- [ ] Partner reviewed and approved
-- [ ] PR merged
+1. Open in a browser: `http://127.0.0.1:42001/status`
+2. You should see the response from the web server like:
+
+    ```text
+    status: "ok"
+    service: "course-material"
+    ```
+
+<!-- TODO view JSON -->
+
+#### Check `/status` using `curl`
+
+1. [Open a new `Terminal`](../../appendix/vs-code.md#open-a-new-terminal).
+2. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+
+    ```text
+    curl http://127.0.0.1:42001/status
+    ```
+
+3. You should see the `JSON` response from the web server:
+
+    ```json
+    {"status":"ok","service":"course-material"}
+    ```
+
+#### Check `/status` using another address
+
+1. Go to [`docker-compose.yml`](../../docker-compose.yml).
+2. Find the service `caddy`.
+
+   **Note:** this service is running `Caddy` in a container at the port `CADDY_HOST_PORT` specified in the file `.env.docker.secret`.
+3. Open the file `.env.docker.secret`.
+4. Find there the value of `CADDY_HOST_PORT`.
+5. By default it's `42002`.
+6. Open in a browser: `http://127.0.0.1:42002/status`
+7. You should see the same response as you got [before](#check-status-using-a-browser).
+8. `Caddy` redirected your request from this new address to the web server and returned the response from the web server back to you.
+
+### 8. Stop the web server
+
+Method 1:
+
+1. [Switch to the old `Terminal`](../../appendix/vs-code.md#switch-to-another-terminal) where the web server runs.
+2. Press `Ctrl+C` to stop the `Docker Compose` services.
+3. You should see logs indicating that the containers are stopping.
+
+Method 2:
+
+1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+
+   ```terminal
+   docker compose down
+   ```
+
+### 9. Check `/status` again
+
+The server has stopped. Therefore, it should not respond to requests.
+
+[Check `/status`](#7-check-status) again to ensure that.
+
+You shouldn't see the response that you got before.
+
+### 10. Write a comment for the issue
+
+1. Go to the issue that you created for this task.
+2. Scroll down.
+3. Go to `Add a comment`.
+4. Write one of the responses that you got when the web server was running.
+5. Click `Close with comment`.
+
+---
+
+## Acceptance criteria
+
+- [ ] Issue has the correct title
+- [ ] The comment with the `JSON` response of the `/status` endpoint exists.

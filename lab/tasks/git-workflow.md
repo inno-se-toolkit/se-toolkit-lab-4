@@ -74,7 +74,7 @@ Outline:
 
 Go to `VS Code`.
 
-Switch to the `main` branch using any of these approaches:
+Switch to the `main` branch using any of the following methods:
 
 - [Switch to the `main` branch using the `Terminal`](#switch-to-the-main-branch-using-the-terminal)
 - [Switch to the `main` branch using `GitLens`](#switch-to-the-main-branch-using-gitlens)
@@ -89,7 +89,8 @@ Switch to the `main` branch using any of these approaches:
 
 ### Switch to the `main` branch using `GitLens`
 
-1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Git Switch to...`.
+1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
+   `GitLens: Git Switch to..`.
 2. Select the `main` branch (e.g., using `UpArrow` and `DownArrow` on your keyboard).
 3. Press `Enter` to confirm.
 
@@ -136,7 +137,8 @@ In this case, you should rebase your local branch and resolve conflicts:
 
 When you rebase, your local commits are placed on top of the commits from `origin/main`.
 
-1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Pull`.
+1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
+   `GitLens: Pull`
 2. Select `Pull with Rebase` (e.g., using `UpArrow` and `DownArrow` on your keyboard).
 3. Press `Enter` to confirm.
 4. You're done if `GitLens` doesn't show any error.
@@ -163,7 +165,7 @@ Continue resolving conflicts if you see an error like this:
 
 ## Switch to a new branch
 
-Create a new branch and switch to it using any of these approaches:
+Create a new branch and switch to it using any of the following methods:
 
 <!-- no toc -->
 - [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
@@ -196,7 +198,8 @@ Create a new branch and switch to it using any of these approaches:
 
 ### Switch to a new branch using `GitLens`
 
-1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Git Create Branch...`.
+1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
+   `GitLens: Git Create Branch..`.
 2. Select `main` as the base branch (e.g., using `UpArrow` and `DownArrow` on your keyboard).
 3. Press `Enter` to confirm.
 4. Write `<branch-name>` to provide the new branch name.
@@ -221,7 +224,7 @@ Commit changes to the `<branch-name>` to complete the task.
 > - `feat:` — additions (e.g., new feature)
 > - `docs:` — documentation changes
 
-Commit using any of these approaches:
+Commit using any of the following methods:
 
 - [Commit using the `Terminal`](#commit-using-the-terminal)
 - [Commit using `Source Control`](#commit-using-source-control)
@@ -287,7 +290,7 @@ Complete these steps:
 > [!NOTE]
 > There can appear a conflict when you try to undo.
 
-Undo commits using any of these approaches:
+Undo commits using any of the following methods:
 
 - [Undo commits using the `Terminal`](#undo-commits-using-the-terminal)
 - [Undo commits using `GitLens`](#undo-commits-using-gitlens)
@@ -367,7 +370,7 @@ Complete these steps:
 
 ### Open the PR editor using `GitHub`
 
-Open the PR editor using any of these approaches:
+Open the PR editor using any of the following methods:
 
 - [Open the PR editor using a button](#open-the-pr-editor-using-a-button)
 - [Open the PR editor using `Pull requests`](#open-the-pr-editor-using-pull-requests)
@@ -384,8 +387,8 @@ If you see the `Compare & pull request` button, click it.
 1. Go to your fork on `GitHub`.
 2. Click `Pull requests`.
 3. Click `New pull request`.
-4. Click `base repository: <your-username>/lab-01-market-product-and-git`.
-5. Click `<your-username>/lab-01-market-product-and-git` to select the base repo.
+4. Click `base repository: <your-username>/se-toolkit-lab-2`.
+5. Click `<your-username>/se-toolkit-lab-2` to select the base repo.
 6. The PR will be created in your repo with `main` as the base branch.
 7. Click `compare: main` to choose a branch to compare with the base.
 8. Click `<branch-name>`.

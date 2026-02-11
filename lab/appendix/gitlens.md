@@ -27,7 +27,7 @@ See [`GitLens` features](https://help.gitkraken.com/gitlens/gitlens-features/).
 
 ## See all branches
 
-See all branches using any of these approaches:
+See all branches using any of the following methods:
 
 <!-- no toc -->
 - [See all branches using the `Status Bar`](#see-all-branches-using-the-status-bar)
@@ -51,7 +51,7 @@ See all branches using any of these approaches:
 
 ## Open the commit graph
 
-Open the commit graph using any of these approaches:
+Open the commit graph using any of the following methods:
 
 <!-- no toc -->
 - [Open the commit graph using the `Status Bar`](#open-the-commit-graph-using-the-status-bar)
@@ -66,7 +66,8 @@ Open the commit graph using any of these approaches:
 
 ### Open the commit graph using the `Command Palette`
 
-1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette): `GitLens: Show Commit Graph`.
+1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
+   `GitLens: Show Commit Graph`
 
 ## Open commits on the current branch
 

@@ -1,5 +1,9 @@
 # Architectural views
 
+- [Component diagram](#component-diagram)
+- [Sequence diagram](#sequence-diagram)
+- [Deployment diagram](#deployment-diagram)
+
 ## Component diagram
 
 This is a *static view* of the architecture. It doesn't show how the system works, but rather what components it has and how they are connected.

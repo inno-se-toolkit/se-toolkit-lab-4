@@ -1,37 +1,52 @@
 # Lab setup
 
-- [Find a partner](#find-a-partner)
-- [Fork the course instructors' repo](#fork-the-course-instructors-repo)
-- [Enable issues](#enable-issues)
-- [Add a classmate as a collaborator](#add-a-classmate-as-a-collaborator)
-- [Protect your `main` branch](#protect-your-main-branch)
-- [Install `Git`](#install-git)
-- [Install `VS Code`](#install-vs-code)
-- [Open the `Terminal`](#open-the-terminal)
-- [Configure `Git`](#configure-git)
-- [Open `VS Code` in the `software-engineering-toolkit` directory](#open-vs-code-in-the-software-engineering-toolkit-directory)
-- [Copy your fork URL](#copy-your-fork-url)
-- [Clone the fork on your computer](#clone-the-fork-on-your-computer)
-  - [Clone the fork using the `Terminal`](#clone-the-fork-using-the-terminal)
-  - [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
-- [Open the repo in `VS Code`](#open-the-repo-in-vs-code)
-- [Set up `VS Code` extensions](#set-up-vs-code-extensions)
-- [Reload `VS Code`](#reload-vs-code)
-- [Explore `VS Code` layout](#explore-vs-code-layout)
-- [Open `README.md`](#open-readmemd)
-- [Open `Markdown` preview](#open-markdown-preview)
-- [Change workspace settings](#change-workspace-settings)
-- [Optional enhancements](#optional-enhancements)
-  - [Set up a coding agent](#set-up-a-coding-agent)
-  - [Set up the shell prompt](#set-up-the-shell-prompt)
-- [Customize the `Source Control`](#customize-the-source-control)
-  - [Get familiar with `GitLens`](#get-familiar-with-gitlens)
-  - [Create a label for tasks](#create-a-label-for-tasks)
+- [Steps](#steps)
+  - [1. Find a partner](#1-find-a-partner)
+  - [2. Start creating a VM](#2-start-creating-a-vm)
+  - [3. Sign in on `GitHub`](#3-sign-in-on-github)
+  - [4. Fork the course instructors' repo](#4-fork-the-course-instructors-repo)
+  - [5. Go to your fork](#5-go-to-your-fork)
+  - [6. Make your fork public](#6-make-your-fork-public)
+  - [7. Enable issues](#7-enable-issues)
+  - [8. Add a classmate as a collaborator](#8-add-a-classmate-as-a-collaborator)
+  - [9. Protect your `main` branch](#9-protect-your-main-branch)
+  - [10. Install `Git`](#10-install-git)
+  - [11. Install `VS Code`](#11-install-vs-code)
+  - [12. (Optional, `Windows` only) Install WSL](#12-optional-windows-only-install-wsl)
+  - [13. Open `VS Code` in the `software-engineering-toolkit` directory](#13-open-vs-code-in-the-software-engineering-toolkit-directory)
+  - [14. (Windows only) Set the default shell](#14-windows-only-set-the-default-shell)
+  - [15. Install `uv`](#15-install-uv)
+  - [15. Configure `Git`](#15-configure-git)
+  - [16. Copy your fork URL](#16-copy-your-fork-url)
+  - [17. Clone the fork on your computer](#17-clone-the-fork-on-your-computer)
+    - [Clone the fork using the `Terminal`](#clone-the-fork-using-the-terminal)
+    - [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
+  - [18. Open `VS Code` in the cloned repo directory](#18-open-vs-code-in-the-cloned-repo-directory)
+  - [19. Set up `VS Code` extensions](#19-set-up-vs-code-extensions)
+  - [20. Reload `VS Code`](#20-reload-vs-code)
+  - [21. Explore `VS Code` layout](#21-explore-vs-code-layout)
+  - [22. Open `README.md`](#22-open-readmemd)
+  - [23. Open `Markdown` preview](#23-open-markdown-preview)
+  - [24. Continue creating a VM](#24-continue-creating-a-vm)
+  - [25. Create a virtual environment](#25-create-a-virtual-environment)
+  - [26. Check that the `.venv` directory was created](#26-check-that-the-venv-directory-was-created)
+  - [27. Install the dependencies to the virtual environment](#27-install-the-dependencies-to-the-virtual-environment)
+  - [28. Select the `Python` interpreter](#28-select-the-python-interpreter)
+  - [29. Check that `Python` works](#29-check-that-python-works)
+- [Optional steps](#optional-steps)
+  - [1. Change the workspace settings](#1-change-the-workspace-settings)
+  - [2. Set up a coding agent](#2-set-up-a-coding-agent)
+  - [3. Set up the shell prompt](#3-set-up-the-shell-prompt)
+  - [4. Customize the `Source Control`](#4-customize-the-source-control)
+  - [5. Get familiar with `GitLens`](#5-get-familiar-with-gitlens)
+  - [6. Create a label for tasks](#6-create-a-label-for-tasks)
     - [Create the `task` label](#create-the-task-label)
     - [Add the label to issues](#add-the-label-to-issues)
     - [See all issues with the label](#see-all-issues-with-the-label)
 
-## Find a partner
+## Steps
+
+### 1. Find a partner
 
 1. Find a partner for this lab.
 2. Sit next to them.
@@ -41,24 +56,47 @@
 >
 > You and your partner work together when reviewing each other's work.
 
-## Fork the course instructors' repo
+### 2. Start creating a VM
 
-1. Create a `GitHub` account.
-2. Go to the course instructors' [repo](https://github.com/inno-se-toolkit/lab-01-market-product-and-git) (repository).
-3. Fork this repo: follow the [instructions on forking](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository).
-4. Go to your fork (a partial copy of the instructors' repo stored on `GitHub`).
-5. The URL of your fork should be like `https://github.com/<your-username>/lab-01-market-product-and-git`.
-6. If you don't see `Public` near your fork name, [make your fork public](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#changing-a-repositorys-visibility).
+[Create a subscription](./appendix/vm.md#create-a-subscription) to be able to create a VM.
+
+### 3. Sign in on `GitHub`
+
+1. Sign in on [`GitHub`](https://github.com/).
 
 > [!NOTE]
-> Continue working in your fork.
+> We'll refer to your `GitHub` username as `<your-username>`.
+>
+> Example of a username: `johndoe`.
+>
+> Note that this username doesn't include `@`.
+>
+> `<your-username>` also doesn't include `@`.
 
-## Enable issues
+### 4. Fork the course instructors' repo
+
+1. Go to the course instructors' [repo](https://github.com/inno-se-toolkit/se-toolkit-lab-2).
+2. Fork the course instructors' repo:
+   1. Click `Fork`.
+   2. Click `Choose an owner`.
+   3. Click `<your-username>` to make you the repo owner.
+   4. Click `Create fork`.
+
+### 5. Go to your fork
+
+1. Go to your fork (a partial copy of the instructors' repo stored on `GitHub`).
+2. The URL of your fork should be like `https://github.com/<your-username>/se-toolkit-lab-2`.
+
+### 6. Make your fork public
+
+1. If you don't see `Public` near your fork name, [make your fork public](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#changing-a-repositorys-visibility).
+
+### 7. Enable issues
 
 1. Go to `Settings` -> `General` -> `Features`.
 2. Check the box near `Issues`.
 
-## Add a classmate as a collaborator
+### 8. Add a classmate as a collaborator
 
 1. Go to `Settings` -> `Collaborators` -> `Add people`.
 2. Add your partner as a collaborator.
@@ -66,7 +104,7 @@
 4. Make sure your collaborator has accepted the invitation sent to their email.
 5. It's OK if your collaborator can't change `Settings` in your repo.
 
-## Protect your `main` branch
+### 9. Protect your `main` branch
 
 > [!NOTE]
 > Branch protection prevents accidental pushes directly to `main`.
@@ -74,7 +112,7 @@
 
 Complete these steps:
 
-1. Go to your fork on `GitHub`.
+1. [Go to your fork](#5-go-to-your-fork).
 2. Go to `Settings`.
 3. Go to `Code and automation`.
 4. Go to `Rules`.
@@ -94,11 +132,11 @@ Complete these steps:
          - `Allowed merge methods`: `Merge`.
       - [x] Block force pushes
 
-## Install `Git`
+### 10. Install `Git`
 
 [Install `Git`](https://git-scm.com/install/).
 
-## Install `VS Code`
+### 11. Install `VS Code`
 
 1. Install [`VS Code`](https://code.visualstudio.com/).
 
@@ -106,12 +144,43 @@ Complete these steps:
 
 2. (Optional) [Learn more](../lab/appendix/vs-code.md) about `VS Code`.
 
-## Open the `Terminal`
+### 12. (Optional, `Windows` only) Install WSL
 
-1. Open `VS Code`.
-2. [Open the Terminal](./appendix/vs-code.md#open-the-terminal).
+[Install WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 
-## Configure `Git`
+### 13. Open `VS Code` in the `software-engineering-toolkit` directory
+
+1. On your computer, create somewhere a directory `software-engineering-toolkit` (e.g., on your `Desktop`).
+2. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
+   `File: Open Folder...`
+3. Find the `software-engineering-toolkit` directory that you created.
+4. Open this directory.
+5. `VS Code` should now open in that directory.
+6. [Open `Folders`](./appendix/vs-code.md#open-folders).
+7. Look at `FOLDERS`.
+8. You should see `SOFTWARE-ENGINEERING-TOOLKIT` there.
+
+### 14. (Windows only) Set the default shell
+
+1. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
+   `Terminal: Select Default Profile`
+2. Select `WSL Bash` if available.
+3. Otherwise, select `Git Bash` if available.
+4. If none of them are available, ask the TA to help you.
+5. Otherwise, [open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
+6. You should see `bash` there:
+
+   <img alt="Terminal Bash" src="./images/appendix/vs-code/terminal-bash.png" style="width:400px"></img>
+
+<!-- TODO check how it looks like on windows -->
+
+### 15. Install `uv`
+
+Follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/) for your platform (`Windows`, `Linux`, `macOS`).
+
+[Run the command using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal).
+
+### 15. Configure `Git`
 
 > [!IMPORTANT]
 > Replace `<your-name>` with a name and `<your-email>` with an email that you want to see in the commits.
@@ -133,35 +202,23 @@ Complete these steps:
 
      Example: `git config --global user.name 'johndoe@gmail.com'`
 
-## Open `VS Code` in the `software-engineering-toolkit` directory
-
-1. On your computer, create somewhere a directory `software-engineering-toolkit` (e.g., on your `Desktop`).
-2. Open `VS Code`.
-3. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette): `File: Open Folder...`.
-4. Find the `software-engineering-toolkit` directory that you created.
-5. Open this directory.
-6. `VS Code` should now open in that directory.
-7. [Open `Folders`](./appendix/vs-code.md#open-folders).
-8. Look at `FOLDERS`.
-9. You should see `SOFTWARE-ENGINEERING-TOOLKIT` there.
-
-## Copy your fork URL
+### 16. Copy your fork URL
 
 1. Go to your fork on `Gitub`.
 2. Copy its [URL](https://en.wikipedia.org/wiki/URL).
-3. It should look like `https://github.com/<your-username>/lab-01-market-product-and-git`.
+3. It should look like `https://github.com/<your-username>/se-toolkit-lab-2`.
 
-## Clone the fork on your computer
+### 17. Clone the fork on your computer
 
-Clone the fork using any of these approaches:
+Clone the fork using any of the following methods:
 
 - [Clone the fork using the `Terminal`](#clone-the-fork-using-the-terminal)
 - [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
 
-### Clone the fork using the `Terminal`
+#### Clone the fork using the `Terminal`
 
 1. [Open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
-2. You should see `software-engineering-toolkit` as your current directory.
+2. You should see `software-engineering-toolkit` as your [current working directory](./appendix/shell.md#current-working-directory).
 3. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
 
    ```terminal
@@ -175,32 +232,34 @@ Clone the fork using any of these approaches:
    ls
    ```
 
-5. You should see `lab-01-market-product-and-git` - the output of the command. This is the directory that contains the cloned repo.
+5. You should see `se-toolkit-lab-2` - the output of the command. This is the directory that contains the cloned repo.
 
-### Clone the fork using the `Command Palette`
+#### Clone the fork using the `Command Palette`
 
-1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette): `Git: Clone`.
+1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette):
+   `Git: Clone`.
 2. Click `Clone from GitHub`.
 3. Allow the extension to sign in.
 4. Find your fork in the list.
-5. It should look like `<your-username>/lab-01-market-product-and-git`.
+5. It should look like `<your-username>/se-toolkit-lab-2`.
 6. Click it.
 7. Choose a directory where to clone the repo.
 8. You should choose `software-engineering-toolkit` that you created before.
 9. Confirm the choice.
 
-## Open the repo in `VS Code`
+### 18. Open `VS Code` in the cloned repo directory
 
-1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette): `File: Open Folder...`.
-2. Choose the directory `lab-01-market-product-and-git` that is a clone of your fork.
+1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette):
+   `File: Open Folder...`.
+2. Choose the directory `se-toolkit-lab-2` that is a clone of your fork.
 3. Make sure there is `README.md` inside that directory.
 4. `VS Code` should open in that directory.
 5. [Open `Folders`](./appendix/vs-code.md#open-folders).
 6. Look at `FOLDERS`.
-7. You should see `LAB-01-MARKET-PRODUCT-AND-GIT` there.
-8. You can close the `VS Code` that you [opened in the `software-engineering-toolkit` directory](#open-vs-code-in-the-software-engineering-toolkit-directory).
+7. You should see `SE-TOOLKIT-LAB-2` there.
+8. You can close the `VS Code` that you [opened in the `software-engineering-toolkit` directory](#13-open-vs-code-in-the-software-engineering-toolkit-directory).
 
-## Set up `VS Code` extensions
+### 19. Set up `VS Code` extensions
 
 1. [Install recommended `VS Code` extensions](./appendix/vs-code.md#install-recommended-extensions).
 2. Sign in to accounts.
@@ -209,70 +268,170 @@ Clone the fork using any of these approaches:
     3. Click `Sign in with GitHub ...`.
     4. Repeat for the remaining extensions if there are any.
 
-## Reload `VS Code`
+### 20. Reload `VS Code`
 
-[Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette): `Developer: Reload Window`.
+[Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
+`Developer: Reload Window`.
 
-## Explore `VS Code` layout
+### 21. Explore `VS Code` layout
 
 Look at the [`Basic Layout`](./appendix/vs-code.md#basic-layout).
 
-## Open `README.md`
+### 22. Open `README.md`
 
 > [!NOTE]
 > This file (`lab/setup.md`), `README.md`, and other files in this repository that have the extension `.md` are written in [`Markdown`](https://en.wikipedia.org/wiki/Markdown) (more precisely, in [`GitHub-flavored Markdown`](https://github.github.com/gfm/)).
 
-Open [`README.md`](../README.md) using any of the following approaches.
+Open [`README.md`](../README.md) using any of the following methods.
 
-Approach 1:
+Method 1:
 
-1. [Open the file using the `Command Palette`](./appendix/vs-code.md#open-a-file).
+1. [Open the file using the `Command Palette`](./appendix/vs-code.md#open-a-file-using-the-command-palette).
 
-Approach 2:
+Method 2:
 
-1. [Open `Folders`](./appendix/vs-code.md#open-folders).
+1. [Open `Folders`](./appendix/vs-code.md#open-the-folders).
 2. Click `README.md`.
 
-## Open `Markdown` preview
+### 23. Open `Markdown` preview
 
 > [!NOTE]
+> `Markdown` is a [markup language](https://en.wikipedia.org/wiki/Markup_language).
+>
 > `Markdown` gets translated into [`HTML`](https://en.wikipedia.org/wiki/HTML).
+>
 > You see the rendered `HTML` when you open a preview in `VS Code` or on `GitHub`.
 
-Open the [`Markdown` preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) using any of the following approaches.
+Open the [`Markdown` preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) using any of the following methods.
 
-Approach 1:
+Method 1:
 
 1. Go to the [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar).
 2. Click `Open Preview to the Side`.
 
-Approach 2:
+Method 2:
 
-1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette): `Markdown: Open Preview to the Side`.
+1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
 
-## Change workspace settings
+   `Markdown: Open Preview to the Side`
 
-Look at the [workspace settings](./appendix/vs-code.md#workspace-settings) and change them as necessary.
+### 24. Continue creating a VM
+
+[Create a VM using the subscription](./appendix/vm.md#create-a-vm-using-the-subscription).
+
+### 25. Create a virtual environment
+
+1. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+
+   ```terminal
+   uv python install 3.12.12
+   ```
+
+2. The output should be similar to this:
+
+   ```terminal
+   Installed Python 3.12.12 in 44.55s
+   ```
+
+3. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+
+   ```terminal
+   uv venv
+   ```
+
+4. The output should be similar this:
+
+   ```terminal
+   Using CPython 3.12.12
+   Creating virtual environment at: .venv
+   ```
+
+> [!NOTE]
+> The `.venv` directory contains the virtual environment.
+> That is, files and dependencies that are necessary to run the web server and other tools.
+>
+> This directory is managed by `uv`. You don't need to edit files in this directory manually.
+
+### 26. Check that the `.venv` directory was created
+
+1. Check that the `.venv` directory with all `Python` dependencies was created:
+
+   [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+
+   ```terminal
+   ls .venv
+   ```
+
+2. The output should be similar to this:
+
+   ```terminal
+   bin  CACHEDIR.TAG  lib  lib64  pyvenv.cfg
+   ```
+
+### 27. Install the dependencies to the virtual environment
+
+1. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+
+   ```terminal
+   uv sync
+   ```
+
+2. The output should be similar to this:
+
+   ```terminal
+   Resolved 38 packages in 0.77ms
+   Audited 36 packages in 0.31ms
+   ```
+
+### 28. Select the `Python` interpreter
+
+1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
+   `Python: Select Interpreter`.
+2. Click `Recommended` to select the interpreter in `./.venv/bin/python`.
+
+### 29. Check that `Python` works
+
+1. [Open a new `Terminal`](./appendix/vs-code.md#open-a-new-terminal).
+2. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+
+   ```terminal
+   uv run python --version
+   ```
+
+3. The output should be similar to this:
+
+   ```terminal
+   Python 3.12.12
+   ```
+
+> [!NOTE]
+> The `Python` version for this project is specified in the [`pyproject.toml`](../pyproject.toml) file using the `requires-python` setting.
 
 ---
 
-## Optional enhancements
+## Optional steps
 
 These enhancements can make your life easier:
 
-- [Set up a coding agent](#set-up-a-coding-agent)
-- [Set up the shell prompt](#set-up-the-shell-prompt)
-- [Customize the `Source Control`](#customize-the-source-control)
-- [Get familiar with `GitLens`](#get-familiar-with-gitlens)
-- [Create a label for tasks](#create-a-label-for-tasks)
+- [1. Change the workspace settings](#1-change-the-workspace-settings)
+- [2. Set up a coding agent](#2-set-up-a-coding-agent)
+- [3. Set up the shell prompt](#3-set-up-the-shell-prompt)
+- [4. Customize the `Source Control`](#4-customize-the-source-control)
+- [5. Get familiar with `GitLens`](#5-get-familiar-with-gitlens)
+- [6. Create a label for tasks](#6-create-a-label-for-tasks)
 
-### Set up a coding agent
+### 1. Change the workspace settings
+
+1. Go to the [workspace settings](./appendix/vs-code.md#workspace-settings).
+2. Change them as necessary.
+
+### 2. Set up a coding agent
 
 A coding agent can help you write code, explain concepts, and debug issues.
 
 See [Coding agents](./appendix/coding-agents.md).
 
-### Set up the shell prompt
+### 3. Set up the shell prompt
 
 `Starship` shows your current `Git` branch, status, and other useful info directly in your [shell prompt](https://en.wikibooks.org/wiki/Guide_to_Unix/Explanations/Shell_Prompt) in almost any terminal, including the [`Terminal`](./appendix/vs-code.md#terminal).
 
@@ -280,9 +439,9 @@ Complete these steps:
 
 1. Install [`Starship`](https://github.com/starship/starship#-installation).
 2. [Open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
-3. You should see something like `lab-01-market-product-and-git on main`.
+3. You should see something similar to `se-toolkit-lab-2 on main`.
 
-## Customize the `Source Control`
+### 4. Customize the `Source Control`
 
 1. [Open the `Source Control`](./appendix/vs-code.md#open-the-source-control).
 2. Click three dots to the right of `SOURCE CONTROL`.
@@ -290,7 +449,7 @@ Complete these steps:
 
    <img alt="Changes and GitLens" src="./images/appendix/vs-code/source-control-allowed-views.png" style="width:400px"></img>
 
-### Get familiar with `GitLens`
+### 5. Get familiar with `GitLens`
 
 [`GitLens`](./appendix/gitlens.md) helps you work with `Git` in `VS Code`.
 
@@ -301,7 +460,7 @@ Complete these steps:
 3. [Inspect the current branch](./appendix/gitlens.md#inspect-the-current-branch)
 4. [Inspect the remotes](./appendix/gitlens.md#inspect-the-remotes)
 
-### Create a label for tasks
+### 6. Create a label for tasks
 
 [Labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) help you filter and organize issues.
 
