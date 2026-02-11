@@ -45,7 +45,10 @@
 >
 > You and your partner work together when reviewing each other's work.
 
-## Sign in on `GitHub`
+### 2. Start creating a VM
+
+[Create a subscription](./appendix/vm.md#create-a-subscription) to be able to create a VM.
+
 
 1. Sign in on [`GitHub`](https://github.com/).
 
@@ -294,6 +297,10 @@ Method 2:
 
 1. Go to the [workspace settings](./appendix/vs-code.md#workspace-settings).
 2. Change them as necessary.
+
+### 25. Continue creating a VM
+
+[Create a VM using the subscription](./appendix/vm.md#create-a-vm-using-the-subscription).
 
 ---
 
