@@ -306,6 +306,7 @@ Keyboard shortcuts for various commands.
 - [Switch to the previous editor](#shortcut-switch-to-the-previous-editor)
 - [Search in the current editor](#shortcut-search-in-the-current-editor)
 - [Search in all files](#shortcut-search-in-all-files)
+- [Toggle line comment](#shortcut-toggle-line-comment)
 
 #### Shortcut: Go back
 
