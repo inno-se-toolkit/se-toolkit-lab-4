@@ -248,7 +248,7 @@ Clone the fork using any of the following methods:
 5. [Open `Folders`](./appendix/vs-code.md#open-folders).
 6. Look at `FOLDERS`.
 7. You should see `SE-TOOLKIT-LAB-2` there.
-8. You can close the `VS Code` that you [opened in the `software-engineering-toolkit` directory](#15-open-vs-code-in-the-software-engineering-toolkit-directory).
+8. You can close the `VS Code` that you [opened in the `software-engineering-toolkit` directory](#13-open-vs-code-in-the-software-engineering-toolkit-directory).
 
 ### 19. Set up `VS Code` extensions
 
