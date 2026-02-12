@@ -4,9 +4,7 @@
 > This procedure is based on the [`GitHub flow`](../appendix/github.md#github-flow).
 
 ```text
-┌───────┐    ┌────────┐    ┌─────────┐    ┌────┐    ┌────────┐    ┌───────┐
-│ Issue │ →  │ Branch │ →  │ Commits │ →  │ PR │ →  │ Review │ →  │ Merge │
-└───────┘    └────────┘    └─────────┘    └────┘    └────────┘    └───────┘
+Issue ➜ Branch ➜ Commits ➜ PR ➜ Review ➜ Merge
 ```
 
 Here's this workflow in the context of repos:
