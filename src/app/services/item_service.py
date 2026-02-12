@@ -16,10 +16,10 @@ from app.models.item import Item, Course, Lab, Task, Step
 # This module demonstrates the basics of functional programming.
 #
 # Approaches used here help:
-# - make the code testable and DRY;
 # - improve [static analysis](https://en.wikipedia.org/wiki/Static_program_analysis) such as:
 #   - [static type checking](https://en.wikipedia.org/wiki/Type_system#Type_checking);
 #   - [type inference](https://en.wikipedia.org/wiki/Type_inference).
+# - make the code testable and DRY;
 # - improve auto-completion based on the information about types.
 #
 # Approach 1:
