@@ -103,15 +103,6 @@ Examples of issue forms:
 7. Fill out other input fields.
 8. Click `Create`.
 
-## Issue form
-
-A repository owner can provide [issue forms](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms) so that users can create issues in a given format.
-
-Examples:
-
-- `Lab Task` - [`.github/ISSUE_TEMPLATE/01-task.yml`](../../.github/ISSUE_TEMPLATE/01-task.yml)
-- `Bug Report` - [`.github/ISSUE_TEMPLATE/01-task.yml`](../../.github/ISSUE_TEMPLATE/01-task.yml)
-
 ## Pull request
 
 ### Base repo
