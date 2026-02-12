@@ -66,37 +66,17 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 1. [Open using the `Command Palette` the file](./vs-code.md#open-a-file-using-the-command-palette):
    `~/.ssh/config`
 
-2. Add one of the following config entries.
+2. Add this text at the end of the file.
 
-Linux / `WSL` / `Git Bash`:
+   ```text
 
-```text
-Host se-toolkit-vm
-    HostName <your-vm-ip-address>
-    User root
-    IdentityFile ~/.ssh/se_toolkit_key
-    AddKeysToAgent yes
-```
-
-`macOS` (`zsh`/`bash`):
-
-```text
-Host se-toolkit-vm
-    HostName <your-vm-ip-address>
-    User root
-    IdentityFile ~/.ssh/se_toolkit_key
-    AddKeysToAgent yes
-    UseKeychain yes
-```
-
-`Windows PowerShell` (`OpenSSH`):
-
-```text
-Host se-toolkit-vm
-    HostName <your-vm-ip-address>
-    User root
-    IdentityFile C:/Users/<your-user>/.ssh/se_toolkit_key
-```
+   Host se-toolkit-vm
+      HostName <your-vm-ip-address>
+      User root
+      IdentityFile ~/.ssh/se_toolkit_key
+      AddKeysToAgent yes
+      UseKeychain yes
+   ```
 
 3. Replace `<your-vm-ip-address>` with the [IP address of your VM](./vm.md#get-the-ip-address-of-the-vm).
 
