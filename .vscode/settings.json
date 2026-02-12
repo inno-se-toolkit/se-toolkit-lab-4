@@ -13,6 +13,9 @@
   "markdown.extension.toc.levels": "2..6",
   
   "python.languageServer": "Pylance",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
 
   // Move sidebar to the right so that
   // it doesn't move the code whenever it opens.
