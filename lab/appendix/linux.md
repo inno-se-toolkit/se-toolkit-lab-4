@@ -1,7 +1,6 @@
 # `Linux`
 
-`Linux` is a family of operating systems commonly used for servers and virtual machines.
-
+- [What is `Linux`](#what-is-linux)
 - [`bash`](#bash)
 - [Users and permissions](#users-and-permissions)
 - [Create a non-root user](#create-a-non-root-user)
@@ -9,6 +8,10 @@
   - [See listening TCP ports](#see-listening-tcp-ports)
   - [Inspect a specific port](#inspect-a-specific-port)
   - [Troubleshooting](#troubleshooting)
+
+## What is `Linux`
+
+`Linux` is a family of operating systems commonly used for servers and virtual machines.
 
 ## `bash`
 
