@@ -12,6 +12,12 @@
 - [Undo commits](#undo-commits)
   - [Undo commits using the `VS Code Terminal`](#undo-commits-using-the-vs-code-terminal)
   - [Undo commits using `GitLens`](#undo-commits-using-gitlens)
+- [Publish the branch](#publish-the-branch)
+  - [Publish using the `VS Code Terminal`](#publish-using-the-vs-code-terminal)
+  - [Publish using `GitLens`](#publish-using-gitlens)
+- [Push more commits](#push-more-commits)
+  - [Push using the `VS Code Terminal`](#push-using-the-vs-code-terminal)
+  - [Push using `GitLens`](#push-using-gitlens)
 
 ## Stage using the `Source Control`
 
@@ -126,3 +132,38 @@ git commit -C ORIG_HEAD
 ### Undo commits using `GitLens`
 
 See [Undo commit on the current branch](../appendix/gitlens.md#undo-a-commit-on-the-current-branch).
+
+## Publish the branch
+
+### Publish using the `VS Code Terminal`
+
+1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   git push -u origin <branch-name>
+   ```
+
+### Publish using `GitLens`
+
+1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
+2. Click `GITLENS` to open the `GitLens` panel.
+3. Click the `Commits` icon.
+4. Click the `Publish Branch` icon to the right of `Publish <branch-name> to GitHub`.
+5. Press `Enter` to confirm.
+
+## Push more commits
+
+### Push using the `VS Code Terminal`
+
+1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   git push
+   ```
+
+### Push using `GitLens`
+
+1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
+2. Click `GITLENS`.
+3. Click the `Commits` icon.
+4. Click the `Push` icon to the right of `COMMITS`.

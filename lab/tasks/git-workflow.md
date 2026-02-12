@@ -33,17 +33,8 @@ Outline:
 - [Commit](#commit)
 - [(Optional) Undo commits](#optional-undo-commits)
 - [Publish the branch](#publish-the-branch)
-  - [Publish using the `VS Code Terminal`](#publish-using-the-vs-code-terminal)
-  - [Publish using `GitLens`](#publish-using-gitlens)
 - [Push more commits](#push-more-commits)
-  - [Push using the `VS Code Terminal`](#push-using-the-vs-code-terminal)
-  - [Push using `GitLens`](#push-using-gitlens)
-- [Create a PR](#create-a-pr)
-  - [Open the PR editor using `GitHub`](#open-the-pr-editor-using-github)
-    - [Open the PR editor using a button](#open-the-pr-editor-using-a-button)
-    - [Open the PR editor using `Pull requests`](#open-the-pr-editor-using-pull-requests)
-    - [Open the PR editor using the branch list](#open-the-pr-editor-using-the-branch-list)
-  - [Finish creating a PR](#finish-creating-a-pr)
+- [Create a PR to `main` in your fork](#create-a-pr-to-main-in-your-fork)
 - [Get a PR review](#get-a-pr-review)
   - [PR review rules](#pr-review-rules)
     - [As a PR reviewer](#as-a-pr-reviewer)
@@ -206,92 +197,20 @@ Edit files in the [`Editor`](../appendix/vs-code.md#editor) to produce changes.
 
 ## Publish the branch
 
-### Publish using the `VS Code Terminal`
-
-1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   git push -u origin <branch-name>
-   ```
-
-### Publish using `GitLens`
-
-1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
-2. Click `GITLENS` to open the `GitLens` panel.
-3. Click the `Commits` icon.
-4. Click the `Publish Branch` icon to the right of `Publish <branch-name> to GitHub`.
-5. Press `Enter` to confirm.
+[Publish the branch](../appendix/git-vscode.md#publish-the-branch) with your changes.
 
 ## Push more commits
 
-### Push using the `VS Code Terminal`
+[Push more commits](../appendix/git-vscode.md#push-more-commits) to the published branch if necessary.
 
-1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+## Create a PR to `main` in your fork
 
-   ```terminal
-   git push
-   ```
+[Create a PR](../appendix/github.md#create-a-pr) replacing:
 
-### Push using `GitLens`
-
-1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
-2. Click `GITLENS`.
-3. Click the `Commits` icon.
-4. Click the `Push` icon to the right of `COMMITS`.
-
-## Create a PR
-
-Create a PR to the `main` branch **of your fork**.
-
-Complete these steps:
-
-- [Open the PR editor using `GitHub`](#open-the-pr-editor-using-github)
-- [Finish creating a PR](#finish-creating-a-pr)
-
-> [!TIP]
-> You can also [create a PR using  `GitHub Pull Requests` extension](https://code.visualstudio.com/docs/sourcecontrol/github#_creating-pull-requests).
-
-### Open the PR editor using `GitHub`
-
-Open the PR editor using any of the following methods:
-
-- [Open the PR editor using a button](#open-the-pr-editor-using-a-button)
-- [Open the PR editor using `Pull requests`](#open-the-pr-editor-using-pull-requests)
-- [Open the PR editor using the branch list](#open-the-pr-editor-using-the-branch-list)
-
-#### Open the PR editor using a button
-
-Go to your fork on `GitHub`.
-
-If you see the `Compare & pull request` button, click it.
-
-#### Open the PR editor using `Pull requests`
-
-1. Go to your fork on `GitHub`.
-2. Click `Pull requests`.
-3. Click `New pull request`.
-4. Click `base repository: <your-username>/se-toolkit-lab-2`.
-5. Click `<your-username>/se-toolkit-lab-2` to select the base repo.
-6. The PR will be created in your repo with `main` as the base branch.
-7. Click `compare: main` to choose a branch to compare with the base.
-8. Click `<branch-name>`.
-9. Click `Create pull request`.
-
-#### Open the PR editor using the branch list
-
-1. Go to your fork on `GitHub`.
-2. Click `main` under the `forked from ...` text.
-3. Click `<branch-name>`.
-4. Click `Contribute`.
-5. Click `Open pull request`.
-
-### Finish creating a PR
-
-1. Write the PR title.
-2. Write the PR description.
-3. [Link the PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) to the issue, e.g. `Closes #<issue number>`.
-4. Check the boxes.
-5. Click `Create pull request`.
+- `<repo-owner-username>` with `inno-se-toolkit`;
+- `<repo-name>` with `se-toolkit-lab-2`;
+- `<your-username>` with your `GitHub` username;
+- `<branch-name>` with the name of the branch that you want to merge in the PR.
 
 ## Get a PR review
 
