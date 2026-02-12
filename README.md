@@ -30,6 +30,8 @@ A senior engineer explains your first assignment:
 > 2. Verify that it’s working: query the `/status` endpoint.
 > 3. Investigate and fix a bug in the `/items` endpoint.
 > 4. Deploy the web server to a remote `Linux` [virtual machine](./lab/appendix/vm.md).
+
+> [!IMPORTANT]
 > Communicate through issues and PRs and deliver a working deployment.
 
 ## Learning advice
