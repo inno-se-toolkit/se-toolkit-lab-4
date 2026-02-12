@@ -151,7 +151,7 @@ Create a PR to the `<repo-name>/<branch-name>`:
 7. Click `base: main`.
 8. Click a branch to select the [base branch](#base-branch).
 9. Click `compare: <branch-name>` to view all available branches.
-10. Click `<branch-name>` to select the [PR branch](#pr-branch).
+10. Click `<branch-name>` to select the [PR branch](#pull-request-branch).
 
 #### Open the PR editor using the branch list
 
