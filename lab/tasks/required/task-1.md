@@ -24,8 +24,6 @@ Then, you can check whether the web server works before the web server is deploy
   - [6. Use a free `$PORT`](#6-use-a-free-port)
   - [7. Run the web server](#7-run-the-web-server)
   - [8. Check `/status`](#8-check-status)
-    - [Check `/status` using a browser](#check-status-using-a-browser)
-    - [Check `/status` using `curl`](#check-status-using-curl)
   - [9. Stop the web server](#9-stop-the-web-server)
   - [10. Force stop the web server](#10-force-stop-the-web-server)
   - [11. Check `/status` again](#11-check-status-again)
@@ -124,32 +122,9 @@ Method 2:
 > [!NOTE]
 > `/status` is an [endpoint](../../appendix/web-development.md#endpoint) of the web server.
 
-#### Check `/status` using a browser
-
-1. Open in a browser: `http://127.0.0.1:42000/status`
-2. You should see the response from the web server like:
-
-    ```text
-    status: "ok"
-    service: "course-materials"
-    ```
-
-<!-- TODO view JSON -->
-
-#### Check `/status` using `curl`
-
-1. [Open a new `VS Code Terminal`](../../appendix/vs-code.md#open-a-new-terminal).
-2. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-    ```text
-    curl http://127.0.0.1:42000/status
-    ```
-
-3. You should see the `JSON` response from the web server:
-
-    ```json
-    {"status":"ok","service":"course-materials"}
-    ```
+1. [Send a `GET` query](../../appendix/web-development.md#send-a-get-query)
+   to `http://127.0.0.1:42000/status`.
+2. [Pretty-print the `JSON` response](../../appendix/web-development.md#pretty-print-the-json-response).
 
 <!-- TODO add check status using the /docs -->
 
