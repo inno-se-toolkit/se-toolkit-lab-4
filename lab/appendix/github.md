@@ -16,8 +16,8 @@
   - [Base repo](#base-repo)
   - [Head repo](#head-repo)
   - [Base branch](#base-branch)
-  - [PR branch](#pr-branch)
-- [Create a PR](#create-a-pr)
+  - [Pull request branch](#pull-request-branch)
+  - [Create a pull request](#create-a-pull-request)
   - [Open the PR editor using `GitHub`](#open-the-pr-editor-using-github)
     - [Open the PR editor using a button](#open-the-pr-editor-using-a-button)
     - [Open the PR editor using `Pull requests`](#open-the-pr-editor-using-pull-requests)
@@ -111,9 +111,9 @@ Examples of issue forms:
 
 ### Base branch
 
-### PR branch
+### Pull request branch
 
-## Create a PR
+### Create a pull request
 
 Create a PR to the `<repo-name>/<branch-name>`.
 
