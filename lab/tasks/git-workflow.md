@@ -1,7 +1,7 @@
 # `Git workflow` for tasks
 
 > [!NOTE]
-> This procedure is based on the [`GitHub flow`](https://docs.github.com/en/get-started/using-github/github-flow).
+> This procedure is based on the [`GitHub flow`](../appendix/github.md#github-flow).
 
 ```text
 ┌───────┐    ┌────────┐    ┌─────────┐    ┌────┐    ┌────────┐    ┌───────┐
