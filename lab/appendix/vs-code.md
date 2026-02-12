@@ -199,11 +199,6 @@ Method 2:
 
 1. Press `Ctrl+PageDown` / `Ctrl+PageUp` (`Cmd+Shift+]` / `Cmd+Shift+[` on `macOS`).
 
-Method 3:
-
-1. [Run using the `Command Palette`](#run-a-command-using-the-command-palette):
-   `Terminal: Focus Next Terminal`
-
 ### Copy text inside the `VS Code Terminal`
 
 1. Select text.
