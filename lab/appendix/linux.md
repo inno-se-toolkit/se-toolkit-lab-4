@@ -2,6 +2,7 @@
 
 - [What is `Linux`](#what-is-linux)
 - [Shell](#shell)
+  - [Login shell](#login-shell)
   - [Check what shell is running](#check-what-shell-is-running)
 - [`Bash`](#bash)
   - [`Bash` syntax basics](#bash-syntax-basics)
@@ -35,6 +36,10 @@
 
 An operating system shell is a computer program that provides relatively broad and direct access to the system on which it runs.
 [[source](https://en.wikipedia.org/wiki/Shell_(computing))]
+
+### Login shell
+
+<!-- TODO -->
 
 ### Check what shell is running
 

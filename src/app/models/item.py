@@ -24,23 +24,16 @@ class BaseItem(BaseModel):
     Attributes:
         id: Unique identifier for this item.
         type: The type of item (e.g., 'course', 'lab', 'task', 'step').
+        icon: An icon of the item.
         titles: Localized titles (e.g., {'en': 'Lab 01'}).
         descriptions: Localized descriptions.
-        items: Nested child items forming a tree structure.
     """
-
-    # TODO document the remaining attributes
 
     id: str
     type: str
-    knowledge: Optional[Dict[str, str]] = None
     icon: Optional[str] = None
-    date: Optional[datetime] = None
     titles: Optional[Dict[str, str]] = None
     descriptions: Optional[Dict[str, str]] = None
-    commentaries: Optional[Dict[str, str]] = None
-    values: Optional[Dict[str, str]] = None
-    shows: Optional[Dict[str, int]] = None
 
 
 # It should be possible to use (objects) of the child class
@@ -87,6 +80,8 @@ class Lab(BaseItem):
 @final
 class Course(BaseItem):
     instructors: Optional[List[str]] = None
+    start: Optional[datetime] = None
+    finish: Optional[datetime] = None
     labs: List[Lab] = []
 
 
