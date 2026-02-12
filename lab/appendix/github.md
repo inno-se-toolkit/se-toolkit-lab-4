@@ -44,7 +44,7 @@ A `GitHub` repository contains not only your project files but also additional c
 
 ### Fork
 
-A fork is a copy of an original project repository that allows you to freely experiment with changes without affecting the original project repository.
+A fork is a copy of an original project repository on `GitHub` that allows you to freely experiment with changes without affecting the original project repository.
 
 When you fork a repository on `GitHub`, you create a personal copy under your `GitHub` account where you can make modifications, test features, and propose changes back to the original repository through [pull requests](#pull-request-pr).
 
