@@ -23,6 +23,23 @@ from app.models.item import Item, Course, Lab, Task, Step
 # - improve auto-completion based on the information about types.
 #
 # Approach 1:
+# 
+# We heavily rely on static typing.
+# 
+# We provide types almost everywhere to ensure each variable and function 
+# has a known type other than `Any` or `Unknown`.
+# 
+# One can sometimes understand what a function does just by looking at 
+# its name, argument names and their types, and the result type.
+# 
+# Unlike comments that can get obsolete, the documentation based on types 
+# is usually always up to date.
+# Running a type checker helps ensure that the program is well-typed.
+# 
+# Running a type checker before running an extensively typed program 
+# helps eliminate entire classes of problems that can happen at runtime.
+# 
+# Approach 2:
 #
 # This module follows the principles described in the article
 # [Functional Core, Imperative Shell](https://testing.googleblog.com/2025/10/simplify-your-code-functional-core.html).
@@ -34,7 +51,7 @@ from app.models.item import Item, Course, Lab, Task, Step
 # After that, we define impure functions that construct arguments for the pure
 # functions and cause side effects such as reading a file.
 #
-# Approach 2:
+# Approach 3:
 #
 # We use Python [generics](https://typing.python.org/en/latest/reference/generics.html)
 # a.k.a. [Parametric polymorphism](https://en.wikipedia.org/wiki/Parametric_polymorphism)
@@ -44,7 +61,7 @@ from app.models.item import Item, Course, Lab, Task, Step
 # We also use generics to tell other developers where a function can
 # and where it can't be used with the help of the type checker.
 #
-# Approach 3:
+# Approach 4:
 #
 # We use the algebraic data type `Item` (see `src/app/models/item.py` for details)
 # to constrain which types a variable of type `Item` can have.
@@ -67,7 +84,7 @@ from app.models.item import Item, Course, Lab, Task, Step
 # code where this functions takes as argument `items` with type `List[int]`.
 # People will see an error before running the code.
 #
-# That's how you can communicate constraints using types.
+# That's how one can communicate constraints using types.
 # 
 # ===
 
