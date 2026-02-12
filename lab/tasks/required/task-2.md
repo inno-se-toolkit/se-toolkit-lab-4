@@ -51,7 +51,7 @@ Title: `[Task] Identify, report, and fix a bug`.
 
 1. [Run the web server](./task-1.md#7-run-the-web-server).
 2. [Send a `GET` query](../../appendix/web-development.md#send-a-get-query)
-   to `http://127.0.0.1:42000/item/lab-02-run-local-venv`.
+   to [`http://127.0.0.1:42000/items/item/lab-02-run-local-venv`](http://127.0.0.1:42000/items/item/lab-02-run-local-venv).
 3. [Pretty-print the `JSON` response](../../appendix/web-development.md#pretty-print-a-json-response).
 
 ### 3. Run the tests
