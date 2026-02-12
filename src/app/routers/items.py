@@ -4,7 +4,7 @@ from typing import List
 from fastapi import APIRouter, HTTPException
 
 from app.models.item import Course, Lab, Step
-from app.models.order import PreOrder, OrderShortName, parse_order_default
+from app.models.order import PreOrder, parse_order_default
 from app.services.item_service import (
     FoundItem,
     get_course_by_path,
@@ -84,7 +84,7 @@ def get_step(course_id: str, lab_id: str, task_id: str, step_id: str):
 
 
 @router.get("/item/{item_id}", response_model=FoundItem)
-def get_item(item_id: str, order: OrderShortName = OrderShortName.pre_order):
+def get_item(item_id: str, order: str = PreOrder.short_name):
     """Get a specific item by its id.
 
     Searches through all courses and their nested items to find

@@ -1,41 +1,41 @@
 from dataclasses import dataclass
-from enum import Enum
-from typing import Optional
+from typing import Optional, final
 
-
-@dataclass
-class PreOrder:
-    pass
-
-
-@dataclass
-class PostOrder:
-    pass
-
-
-# Each of these other types is technically a product type. However, since none of them
-# contains any fields, there's at most one value of each of these three types.
+# We define the ADT `Order`` similar to `Item` (defined in src/app/models/item.py)
 #
-# We use this 'Order' ADT in the function below as a type of an argument.
-# This way, we tell the type checker that the argument must be an object
-# of one of these three classes. In other words, the value of the argument
-# must be of one of these three types.
+# ====
+# 
+# We want the value of the `short_name` attribute 
+# to never change in objects of these types.
+# 
+# Therefore, we disallow modifying objects of these types 
+# using the `@dataclass(frozen=True)` annotation.
+# 
+# ===
+# 
+# Each of these types is a product type.
+# There's at most one unique value of each of these types
+# From the point of view of the data that we want to store
+# in these objects.
 
-# to specify the two ways (orders) of [Tree traversal](https://en.wikipedia.org/wiki/Tree_traversal)
-# we have not a binary tree
+class OrderBase():
+    short_name: str
+
+@final
+@dataclass(frozen=True)
+class PreOrder(OrderBase):
+    short_name = "pre"
+
+
+@final
+@dataclass(frozen=True)
+class PostOrder(OrderBase):
+    short_name = "post"
 
 type Order = PreOrder | PostOrder
 
 
-class OrderShortName(str, Enum):
-    pre_order = "pre"
-    post_order = "post"
-
-
 # ==
-
-# Pure functions that parse Order from a str
-
 
 def parse_order(order: str) -> Optional[Order]:
     """
@@ -43,9 +43,9 @@ def parse_order(order: str) -> Optional[Order]:
     """
 
     match order:
-        case OrderShortName.pre_order:
+        case PreOrder.short_name:
             return PreOrder()
-        case OrderShortName.post_order:
+        case PostOrder.short_name:
             return PostOrder()
         case _:
             return None
@@ -54,7 +54,8 @@ def parse_order(order: str) -> Optional[Order]:
 def parse_order_default(order: str, default: Order) -> Order:
     """
     Parse `Order` from a `str`.
-    Use the `default` value if couldn't parse.
+    
+    Return the `default` value if couldn't parse.
     """
     if (parsed := parse_order(order)) is not None:
         return parsed
