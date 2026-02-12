@@ -7,8 +7,11 @@
 - [Repository](#repository)
 - [Fork](#fork)
 - [Fork a repo](#fork-a-repo)
-- [Create an issue](#create-an-issue)
-- [Issue form](#issue-form)
+- [Issue](#issue)
+  - [Issue elements](#issue-elements)
+  - [Who can create issues](#who-can-create-issues)
+  - [Issue form](#issue-form)
+  - [Create an issue](#create-an-issue)
 - [Pull request](#pull-request)
   - [Base repo](#base-repo)
   - [Head repo](#head-repo)
@@ -54,7 +57,40 @@ When you fork a repository on `GitHub`, you create a personal copy under your `G
    2. Click `<your-username>` to make you the repo owner.
    3. Click `Create fork`.
 
-## Create an issue
+## Issue
+
+A `GitHub` issue is a unit of work or discussion related to a `GitHub` [repository](#repository).
+
+Issues are used to track tasks, bugs, enhancements, feature requests, and other activities related to a project.
+
+They serve as a centralized place for collaboration and communication around specific topics or work items.
+
+### Issue elements
+
+- A descriptive title that summarizes the topic
+- A detailed description explaining the problem, task, or idea
+- Labels to categorize and prioritize the issue
+- Assignees who are responsible for addressing the issue
+- Comments for ongoing discussion and updates
+- Milestones to group related issues together
+- Reactions (like 👍, 👎) to gauge community sentiment
+
+### Who can create issues
+
+Issues can be created by repository collaborators or by anyone with access to the repository (if the repository allows public issues).
+
+They are an essential part of the [`GitHub flow`](#github-flow), allowing teams to plan, discuss, and track work effectively.
+
+### Issue form
+
+A repository owner can [provide issue forms](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms) so that users are forced to create issues in a given format.
+
+Examples of issue forms:
+
+- `Lab Task` defined in [`.github/ISSUE_TEMPLATE/01-task.yml`](../../.github/ISSUE_TEMPLATE/01-task.yml)
+- `Bug Report` defined in [`.github/ISSUE_TEMPLATE/01-task.yml`](../../.github/ISSUE_TEMPLATE/01-task.yml)
+
+### Create an issue
 
 1. Go to [`GitHub`](#the-github-site).
 2. Go to the repo where you want to create an issue.
