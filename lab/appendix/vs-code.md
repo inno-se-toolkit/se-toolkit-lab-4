@@ -71,8 +71,10 @@ Schema that we use in docs:
 
 Custom UI appearance.
 
-- [docs 1](https://www.youtube.com/watch?v=nORT3-kONgA)
-- [docs 2](https://code.visualstudio.com/docs/configure/custom-layout)
+Docs:
+
+- [Customizing VS Code's UI for Productivity](https://www.youtube.com/watch?v=nORT3-kONgA)
+- [Custom Layout](https://code.visualstudio.com/docs/configure/custom-layout)
 
 Actions:
 
@@ -88,19 +90,23 @@ Actions:
 
 Space where you can edit files. See [`Basic Layout`](#basic-layout).
 
-- [docs](https://code.visualstudio.com/docs/editing/codebasics)
+Docs:
+
+- [Basic editing](https://code.visualstudio.com/docs/editing/codebasics)
 
 ## `Activity Bar`
 
-Menus of extensions on a side of the [`Editor`](#editor). See [`Basic Layout`](#basic-layout).
+Menus of extensions on a side of the [`Editor`](#editor).
 
-- [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
+See [`Basic Layout`](#basic-layout).
 
 ## `Primary Sidebar`
 
 Views on a side of the [`Editor`](#editor). See [`Basic Layout`](#basic-layout).
 
-- [docs](https://code.visualstudio.com/docs/configure/custom-layout#_primary-side-bar)
+Docs:
+
+- [Primary Side Bar](https://code.visualstudio.com/docs/configure/custom-layout#_primary-side-bar)
 
 Actions:
 
@@ -137,8 +143,10 @@ Quick actions buttons located above the [`Editor`](#editor).
 
 Run editor commands in `VS Code`.
 
-- [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)
-- [docs 2](https://code.visualstudio.com/docs/getstarted/getting-started#_access-commands-with-the-command-palette)
+Docs:
+
+- [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)
+- [Access commands with the Command Palette](https://code.visualstudio.com/docs/getstarted/getting-started#_access-commands-with-the-command-palette)
 
 Actions:
 
@@ -168,7 +176,9 @@ Actions:
 
 Run terminal commands inside `VS Code`.
 
-- [docs](https://code.visualstudio.com/docs/terminal/getting-started)
+Docs:
+
+- [Getting started with the terminal](https://code.visualstudio.com/docs/terminal/getting-started)
 
 Actions:
 
@@ -238,7 +248,11 @@ Method 2:
 
 View the file tree.
 
-- [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_explorer-view)
+See the [`Activity Bar`](#activity-bar).
+
+Docs:
+
+- [Explorer view](https://code.visualstudio.com/docs/getstarted/userinterface#_explorer-view)
 
 Actions:
 
@@ -258,7 +272,9 @@ See [Open the `Folders`](#open-the-folders).
 
 Interact with `Git` via `VS Code` UI.
 
-- [docs](https://code.visualstudio.com/docs/sourcecontrol/overview)
+Docs:
+
+- [Source Control in VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview)
 
 Actions:
 
@@ -293,7 +309,9 @@ Method 2:
 
 Install extensions for `VS Code` from [`VS Code Marketplace`](https://marketplace.visualstudio.com/vscode) to enable new functionality.
 
-- [docs](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace)
+Docs:
+
+- [Extension Marketplace](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace)
 
 Actions:
 
@@ -337,8 +355,10 @@ Method 2:
 
 Keyboard shortcuts for various commands.
 
-- [docs 1](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-reference)
-- [docs 2](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-editor)
+Docs:
+
+- [Keyboard Shortcuts reference](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-reference)
+- [Keyboard Shortcuts editor](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-editor)
 
 ### Frequently used shortcuts
 
@@ -378,9 +398,11 @@ Keyboard shortcuts for various commands.
 
 `VS Code` settings for the workspace.
 
-- [docs](https://code.visualstudio.com/docs/editing/workspaces/workspaces)
-- [docs 1](https://code.visualstudio.com/docs/configure/settings#_workspace-settings)
-- [docs 2](https://code.visualstudio.com/docs/configure/settings#_settings-json-file)
+Docs:
+
+- [What is a VS Code workspace?](https://code.visualstudio.com/docs/editing/workspaces/workspaces)
+- [Workspace settings](https://code.visualstudio.com/docs/configure/settings#_workspace-settings)
+- [Settings JSON file](https://code.visualstudio.com/docs/configure/settings#_settings-json-file)
 
 Settings for this workspace are in [`.vscode/settings.json`](../../.vscode/settings.json).
 
