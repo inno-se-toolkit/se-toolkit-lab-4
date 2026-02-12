@@ -57,15 +57,15 @@
 
 Default user interface (UI).
 
-- [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
-- [docs 2](https://code.visualstudio.com/docs/getstarted/tips-and-tricks)
-
-Slightly modified `Basic Layout` schema:
-
-![Basic Layout Schema](../images/vs-code-ui.drawio.svg)
+Docs:
 
 - [Basic layout](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
+- [Visual Studio Code tips and tricks](https://code.visualstudio.com/docs/getstarted/tips-and-tricks)
 - [UX Guidelines](https://code.visualstudio.com/api/ux-guidelines/overview)
+
+Schema that we use in docs:
+
+![Basic Layout Schema](../images/vs-code-ui.drawio.svg)
 
 ## `Custom Layout`
 
