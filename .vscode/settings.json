@@ -1,8 +1,4 @@
 {
-  "plantuml.server": "http://localhost:48080/",
-  "plantuml.render": "PlantUMLServer",
-  "plantuml.diagramsRoot": "docs/diagrams/src",
-  "plantuml.exportOutDir": "docs/diagrams/out",
   "git.autofetch": true,
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 500,
