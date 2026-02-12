@@ -185,7 +185,18 @@ Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 
 ### Open a new `VS Code Terminal`
 
-Press ```Ctrl+Shift+` ```
+Use any of the following methods.
+
+Method 1:
+
+1. Press ```Ctrl+Shift+` ``` (```Cmd+Shift+` ``` on `macOS`).
+
+Method 2:
+
+1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
+2. Click the `+` icon.
+
+   <img alt="New Terminal" src="../images/appendix/vs-code/terminal-new-plus.png" style="width:400px"></img>
 
 ### Switch to another `VS Code Terminal`
 
@@ -193,10 +204,14 @@ Use any of the following methods:
 
 Method 1:
 
-1. Click a terminal tab in the terminal panel.
+1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
+2. Click a terminal tab in the terminal panel.
+
+    <img alt="Switch Terminal" src="../images/appendix/vs-code/terminal-panel-switch.png" style="width:400px"></img>
 
 Method 2:
 
+1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
 1. Press `Ctrl+PageDown` / `Ctrl+PageUp` (`Cmd+Shift+]` / `Cmd+Shift+[` on `macOS`).
 
 ### Copy text inside the `VS Code Terminal`
