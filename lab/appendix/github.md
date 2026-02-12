@@ -40,13 +40,13 @@ The `GitHub` site has this [URL](./web-development.md#url): <https://github.com>
 
 A repository (or "repo") is a storage location for files that are version-controlled using [`Git`](./git.md#what-is-git).
 
-A `GitHub` repository contains not only your project files but also additional collaborative features such as [issues](#issue) for tracking bugs and tasks, [pull requests](#pull-request-pr) for code review and merging changes, and [Projects](#github-projects) for organizing work.
+A `GitHub` repository contains not only your project files but also additional collaborative features such as [issues](#issue) for tracking bugs and tasks, [pull requests](#pull-request) for code review and merging changes, and [Projects](#github-projects) for organizing work.
 
 ### Fork
 
 A fork is a copy of an original project repository on `GitHub` that allows you to freely experiment with changes without affecting the original project repository.
 
-When you fork a repository on `GitHub`, you create a personal copy under your `GitHub` account where you can make modifications, test features, and propose changes back to the original repository through [pull requests](#pull-request-pr).
+When you fork a repository on `GitHub`, you create a personal copy under your `GitHub` account where you can make modifications, test features, and propose changes back to the original repository through [pull requests](#pull-request).
 
 ### Fork a repo
 
@@ -183,7 +183,7 @@ If you see the `Compare & pull request` button, click it.
 
 <!-- TODO structure better and simplify -->
 
-`GitHub Projects` is a project management tool integrated directly into `GitHub` that helps you plan, track, and manage your work. With `GitHub Projects`, you can create boards to organize [issues](#issue), [pull requests](#pull-request-pr), and notes in a customizable workflow.
+`GitHub Projects` is a project management tool integrated directly into `GitHub` that helps you plan, track, and manage your work. With `GitHub Projects`, you can create boards to organize [issues](#issue), [pull requests](#pull-request), and notes in a customizable workflow.
 
 Key features of `GitHub Projects` include:
 
