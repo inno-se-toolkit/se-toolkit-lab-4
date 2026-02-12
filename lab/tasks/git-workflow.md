@@ -65,8 +65,7 @@ Switch to the `main` branch using any of the following methods:
 
 1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
    `GitLens: Git Switch to..`.
-2. Select the `main` branch (e.g., using `UpArrow` and `DownArrow` on your keyboard).
-3. Press `Enter` to confirm.
+2. [Select](../appendix/vs-code.md#select-an-option-from-a-list) the `main` branch.
 
 ## Pull changes from `origin/main`
 
@@ -113,9 +112,8 @@ When you rebase, your local commits are placed on top of the commits from `origi
 
 1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
    `GitLens: Pull`
-2. Select `Pull with Rebase` (e.g., using `UpArrow` and `DownArrow` on your keyboard).
-3. Press `Enter` to confirm.
-4. You're done if `GitLens` doesn't show any error.
+2. [Select](../appendix/vs-code.md#select-an-option-from-a-list) `Pull with Rebase` (e.g., using `UpArrow` and `DownArrow` on your keyboard).
+3. You're done if `GitLens` doesn't show any error.
 
 ### Resolve conflicts using `GitLens`
 
@@ -174,12 +172,10 @@ Create a new branch and switch to it using any of the following methods:
 
 1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
    `GitLens: Git Create Branch..`.
-2. Select `main` as the base branch (e.g., using `UpArrow` and `DownArrow` on your keyboard).
-3. Press `Enter` to confirm.
-4. Write `<branch-name>` to provide the new branch name.
-5. Press `Enter` to confirm.
-6. `Select Create & Switch to Branch` (e.g., using `UpArrow` and `DownArrow` on your keyboard).
-7. Press `Enter` to confirm.
+2. [Select](../appendix/vs-code.md#select-an-option-from-a-list) `main` as the base branch.
+3. Write `<branch-name>` to provide the new branch name.
+4. Press `Enter` to confirm.
+5. [Select](../appendix/vs-code.md#select-an-option-from-a-list) `Create & Switch to Branch`.
 
 ## Edit files
 
