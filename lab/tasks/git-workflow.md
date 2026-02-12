@@ -137,12 +137,12 @@ Continue resolving conflicts if you see an error like this:
 
 ## Switch to a new branch
 
-Create a new branch and switch to it using any of the following methods:
+Create a new branch and switch to it:
 
 <!-- no toc -->
-- [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
-- [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
-- [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
+- Method 1: [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
+- Method 2: [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
+- Method 3: [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
 
 > [!IMPORTANT]
 > Replace the `<branch-name>` with the actual branch name.
