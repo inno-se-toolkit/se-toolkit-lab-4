@@ -2,6 +2,7 @@
 
 - [How `Git` works - text](#how-git-works---text)
 - [How `Git` works - videos](#how-git-works---videos)
+- [Merge conflict](#merge-conflict)
 - [Practice `Git`](#practice-git)
 - [`.gitignore`](#gitignore)
 - [`GitHub flow`](#github-flow)
@@ -44,6 +45,10 @@ When confused, start with `git status` and read it carefully before running the 
   - [A brief introduction to Git for beginners](https://www.youtube.com/watch?v=r8jQ9hVA2qs)
   - [How Git Works: Explained in 4 Minutes](https://www.youtube.com/watch?v=e9lnsKot_SQ)
   - [Git MERGE vs REBASE: Everything You Need to Know](https://www.youtube.com/watch?v=0chZFIZLR_0)
+
+## Merge conflict
+
+<!-- TODO -->
 
 ## Practice `Git`
 
