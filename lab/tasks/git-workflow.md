@@ -149,7 +149,7 @@ Create a new branch and switch to it:
 
 ### Switch to a new branch using `GitHub`
 
-1. Go to your fork on `GitHub`.
+1. Go to your [fork](../appendix/github.md#fork-url).
 2. [Create a branch](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue).
 3. Copy the command provided by `GitHub`. It's something like:
 

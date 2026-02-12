@@ -137,7 +137,7 @@ Create a PR to the `<repo-name>/<branch-name>`:
 
 #### Open the PR editor using `Pull requests`
 
-1. Go to your fork on `GitHub`.
+1. Go to your [fork](#fork-url).
 2. Click `Pull requests`.
 3. Click `New pull request`.
 4. Click `base repository: <repo-owner-username>/<repo-name>`.
@@ -150,7 +150,7 @@ Create a PR to the `<repo-name>/<branch-name>`:
 
 #### Open the PR editor using the branch list
 
-1. Go to your repo on `GitHub`.
+1. Go to your [fork](#fork-url).
 2. Click `main` under the repo name to view all branches.
 3. Click `<branch-name>` that you want to use for PR.
 4. You'll see the `Contribute` button if the branch has commits that aren't yet in the `main` branch.
