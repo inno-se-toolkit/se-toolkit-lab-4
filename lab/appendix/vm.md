@@ -109,4 +109,4 @@ If you can't connect:
 6. Ask the TA to help and show them:
    1. The VM page.
    2. The output of `ssh -v se-toolkit-vm`.
-   3. Your [`Terminal`](./vs-code.md#terminal).
+   3. Your [`VS Code Terminal`](./vs-code.md#terminal).

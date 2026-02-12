@@ -34,7 +34,7 @@ Your job is to run the tests, understand the failure, find the root cause in the
 >
 > The tests are in the [`tests/`](../../../tests/) directory.
 
-1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    uv run poe test
@@ -44,7 +44,7 @@ Your job is to run the tests, understand the failure, find the root cause in the
 
 ### 2. Read the test output
 
-1. Look at the test output in the `Terminal`.
+1. Look at the test output in the `VS Code Terminal`.
 2. Find the name of the failing test.
 3. Find the line that says `assert ... == 200`.
 4. Notice that the test expected a `200` response but got a `404`.
@@ -91,7 +91,7 @@ Follow the [`Git workflow`](../git-workflow.md) to complete this step:
 4. Fix the bug in the source code.
 5. Run the tests again to verify the fix:
 
-   [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+   [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    uv run poe test

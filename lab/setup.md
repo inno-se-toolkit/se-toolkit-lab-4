@@ -19,7 +19,7 @@
   - [15. Configure `Git`](#15-configure-git)
   - [16. Copy your fork URL](#16-copy-your-fork-url)
   - [17. Clone the fork on your computer](#17-clone-the-fork-on-your-computer)
-    - [Clone the fork using the `Terminal`](#clone-the-fork-using-the-terminal)
+    - [Clone the fork using the `VS Code Terminal`](#clone-the-fork-using-the-vs-code-terminal)
     - [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
   - [18. Open `VS Code` in the cloned repo directory](#18-open-vs-code-in-the-cloned-repo-directory)
   - [19. Set up `VS Code` extensions](#19-set-up-vs-code-extensions)
@@ -167,7 +167,7 @@ Complete these steps:
 2. Select `WSL Bash` if available.
 3. Otherwise, select `Git Bash` if available.
 4. If none of them are available, ask the TA to help you.
-5. Otherwise, [open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
+5. Otherwise, [open the `VS Code Terminal`](./appendix/vs-code.md#open-the-vs-code-terminal).
 6. You should see `bash` there:
 
    <img alt="Terminal Bash" src="./images/appendix/vs-code/terminal-bash.png" style="width:400px"></img>
@@ -178,7 +178,7 @@ Complete these steps:
 
 Follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/) for your platform (`Windows`, `Linux`, `macOS`).
 
-[Run the command using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal).
+[Run the command using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal).
 
 ### 15. Configure `Git`
 
@@ -186,7 +186,7 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 > Replace `<your-name>` with a name and `<your-email>` with an email that you want to see in the commits.
 
 1. (Optional) See [docs](https://git-scm.com/docs/git-config#Documentation/git-config.txt-username) for an explanation of what these commands do.
-2. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+2. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
     ```terminal
     git config --global user.name '<your-name>'
@@ -194,7 +194,7 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 
     Example: `git config --global user.name 'John Doe'`
 
-3. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+3. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
      ```terminal
      git config --global user.email '<your-email>'
@@ -212,21 +212,21 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 
 Clone the fork using any of the following methods:
 
-- [Clone the fork using the `Terminal`](#clone-the-fork-using-the-terminal)
+- [Clone the fork using the `VS Code Terminal`](#clone-the-fork-using-the-vs-code-terminal)
 - [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
 
-#### Clone the fork using the `Terminal`
+#### Clone the fork using the `VS Code Terminal`
 
-1. [Open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
+1. [Open the `VS Code Terminal`](./appendix/vs-code.md#open-the-vs-code-terminal).
 2. You should see `software-engineering-toolkit` as your [current working directory](./appendix/shell.md#current-working-directory).
-3. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+3. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
     git clone <fork-url>
     ```
 
     Note: replace `<fork-url>` with the copied fork URL.
-4. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+4. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    ls
@@ -321,7 +321,7 @@ Method 2:
 
 ### 25. Create a virtual environment
 
-1. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    uv python install 3.12.12
@@ -333,7 +333,7 @@ Method 2:
    Installed Python 3.12.12 in 44.55s
    ```
 
-3. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+3. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    uv venv
@@ -356,7 +356,7 @@ Method 2:
 
 1. Check that the `.venv` directory with all `Python` dependencies was created:
 
-   [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+   [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    ls .venv
@@ -370,7 +370,7 @@ Method 2:
 
 ### 27. Install the dependencies to the virtual environment
 
-1. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    uv sync
@@ -391,8 +391,8 @@ Method 2:
 
 ### 29. Check that `Python` works
 
-1. [Open a new `Terminal`](./appendix/vs-code.md#open-a-new-terminal).
-2. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Open a new `VS Code Terminal`](./appendix/vs-code.md#open-a-new-terminal).
+2. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    uv run python --version
@@ -433,12 +433,12 @@ See [Coding agents](./appendix/coding-agents.md).
 
 ### 3. Set up the shell prompt
 
-`Starship` shows your current `Git` branch, status, and other useful info directly in your [shell prompt](https://en.wikibooks.org/wiki/Guide_to_Unix/Explanations/Shell_Prompt) in almost any terminal, including the [`Terminal`](./appendix/vs-code.md#terminal).
+`Starship` shows your current `Git` branch, status, and other useful info directly in your [shell prompt](https://en.wikibooks.org/wiki/Guide_to_Unix/Explanations/Shell_Prompt) in almost any terminal, including the [`VS Code Terminal`](./appendix/vs-code.md#terminal).
 
 Complete these steps:
 
 1. Install [`Starship`](https://github.com/starship/starship#-installation).
-2. [Open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
+2. [Open the `VS Code Terminal`](./appendix/vs-code.md#open-the-vs-code-terminal).
 3. You should see something similar to `se-toolkit-lab-2 on main`.
 
 ### 4. Customize the `Source Control`

@@ -13,9 +13,9 @@
 
 Environment variables are named values that are available to a program running in a particular [deployment environment](#deployment-environments).
 
-Look at the environment variables available to the `Terminal`:
+Look at the environment variables available to the `VS Code Terminal`:
 
-1. [Run using the `Terminal`](./vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    env

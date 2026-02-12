@@ -56,7 +56,7 @@ Now you will configure environment variables specific to the deployment when usi
 > It was added to [`.gitignore`](../../../.gitignore) because you may specify there
 > [secrets](../../appendix/environments.md#secrets) such as the address of your VM.
 
-1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    cp .env.docker.example .env.docker.secret
@@ -68,7 +68,7 @@ View the file using one of the following methods.
 
 Method 1:
 
-1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    cat .env.docker.secret
@@ -86,7 +86,7 @@ Method 2:
 > [`Docker Compose`](../../appendix/docker.md#docker-compose) can run multi-container `Docker` applications
 > defined in the [`docker-compose.yml`](../../../docker-compose.yml) file.
 
-1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret up --build
@@ -116,8 +116,8 @@ Method 2:
 
 #### Check `/status` using `curl`
 
-1. [Open a new `Terminal`](../../appendix/vs-code.md#open-a-new-terminal).
-2. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Open a new `VS Code Terminal`](../../appendix/vs-code.md#open-a-new-terminal).
+2. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
     ```text
     curl http://127.0.0.1:42001/status
@@ -146,13 +146,13 @@ Method 2:
 
 Method 1:
 
-1. [Switch to the old `Terminal`](../../appendix/vs-code.md#switch-to-another-terminal) where the web server runs.
+1. [Switch to the old `VS Code Terminal`](../../appendix/vs-code.md#switch-to-another-terminal) where the web server runs.
 2. Press `Ctrl+C` to stop the `Docker Compose` services.
 3. You should see logs indicating that the containers are stopping.
 
 Method 2:
 
-1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    docker compose down

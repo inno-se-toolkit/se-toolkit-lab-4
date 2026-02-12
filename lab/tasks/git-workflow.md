@@ -17,34 +17,34 @@ Outline:
 
 - [Create a `Lab Task` issue](#create-a-lab-task-issue)
 - [Switch to the `main` branch](#switch-to-the-main-branch)
-  - [Switch to the `main` branch using the `Terminal`](#switch-to-the-main-branch-using-the-terminal)
+  - [Switch to the `main` branch using the `VS Code Terminal`](#switch-to-the-main-branch-using-the-vs-code-terminal)
   - [Switch to the `main` branch using `GitLens`](#switch-to-the-main-branch-using-gitlens)
 - [Pull changes from `origin/main`](#pull-changes-from-originmain)
-  - [Pull changes from `origin/main` using the `Terminal`](#pull-changes-from-originmain-using-the-terminal)
+  - [Pull changes from `origin/main` using the `VS Code Terminal`](#pull-changes-from-originmain-using-the-vs-code-terminal)
   - [Pull changes from `origin/main` using `GitLens`](#pull-changes-from-originmain-using-gitlens)
 - [Resolve conflicts](#resolve-conflicts)
   - [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
   - [Resolve conflicts using `GitLens`](#resolve-conflicts-using-gitlens)
 - [Switch to a new branch](#switch-to-a-new-branch)
   - [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
-  - [Switch to a new branch using the `Terminal`](#switch-to-a-new-branch-using-the-terminal)
+  - [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
   - [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
 - [Edit files](#edit-files)
 - [Commit](#commit)
-  - [Commit using the `Terminal`](#commit-using-the-terminal)
+  - [Commit using the `VS Code Terminal`](#commit-using-the-vs-code-terminal)
   - [Commit using `Source Control`](#commit-using-source-control)
   - [Commit using `Source Control` (specific changes)](#commit-using-source-control-specific-changes)
     - [Stage specific changes](#stage-specific-changes)
     - [(Optional) Unstage specific changes](#optional-unstage-specific-changes)
     - [Commit staged changes](#commit-staged-changes)
 - [(Optional) Undo commits](#optional-undo-commits)
-  - [Undo commits using the `Terminal`](#undo-commits-using-the-terminal)
+  - [Undo commits using the `VS Code Terminal`](#undo-commits-using-the-vs-code-terminal)
   - [Undo commits using `GitLens`](#undo-commits-using-gitlens)
 - [Publish the branch](#publish-the-branch)
-  - [Publish using the `Terminal`](#publish-using-the-terminal)
+  - [Publish using the `VS Code Terminal`](#publish-using-the-vs-code-terminal)
   - [Publish using `GitLens`](#publish-using-gitlens)
 - [Push more commits](#push-more-commits)
-  - [Push using the `Terminal`](#push-using-the-terminal)
+  - [Push using the `VS Code Terminal`](#push-using-the-vs-code-terminal)
   - [Push using `GitLens`](#push-using-gitlens)
 - [Create a PR](#create-a-pr)
   - [Open the PR editor using `GitHub`](#open-the-pr-editor-using-github)
@@ -76,12 +76,12 @@ Go to `VS Code`.
 
 Switch to the `main` branch using any of the following methods:
 
-- [Switch to the `main` branch using the `Terminal`](#switch-to-the-main-branch-using-the-terminal)
+- [Switch to the `main` branch using the `VS Code Terminal`](#switch-to-the-main-branch-using-the-vs-code-terminal)
 - [Switch to the `main` branch using `GitLens`](#switch-to-the-main-branch-using-gitlens)
 
-### Switch to the `main` branch using the `Terminal`
+### Switch to the `main` branch using the `VS Code Terminal`
 
-1. [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    git switch main
@@ -100,9 +100,9 @@ Pull changes from the `main` branch in your fork on `GitHub`.
 
 We call that branch `origin/main`.
 
-### Pull changes from `origin/main` using the `Terminal`
+### Pull changes from `origin/main` using the `VS Code Terminal`
 
-1. [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    git pull origin main
@@ -169,7 +169,7 @@ Create a new branch and switch to it using any of the following methods:
 
 <!-- no toc -->
 - [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
-- [Switch to a new branch using the `Terminal`](#switch-to-a-new-branch-using-the-terminal)
+- [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
 - [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
 
 > [!IMPORTANT]
@@ -186,11 +186,11 @@ Create a new branch and switch to it using any of the following methods:
    git checkout <branch-name>
    ```
 
-4. [Run the copied command using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal).
+4. [Run the copied command using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal).
 
-### Switch to a new branch using the `Terminal`
+### Switch to a new branch using the `VS Code Terminal`
 
-1. [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
     ```terminal
     git checkout -b <branch-name>
@@ -226,13 +226,13 @@ Commit changes to the `<branch-name>` to complete the task.
 
 Commit using any of the following methods:
 
-- [Commit using the `Terminal`](#commit-using-the-terminal)
+- [Commit using the `VS Code Terminal`](#commit-using-the-vs-code-terminal)
 - [Commit using `Source Control`](#commit-using-source-control)
 - [Commit using `Source Control` (specific changes)](#commit-using-source-control-specific-changes)
 
-### Commit using the `Terminal`
+### Commit using the `VS Code Terminal`
 
-1. Open the [`Terminal`](../appendix/vs-code.md#open-the-terminal).
+1. Open the [`VS Code Terminal`](../appendix/vs-code.md#open-the-vs-code-terminal).
 2. Run:
 
    ```terminal
@@ -292,12 +292,12 @@ Complete these steps:
 
 Undo commits using any of the following methods:
 
-- [Undo commits using the `Terminal`](#undo-commits-using-the-terminal)
+- [Undo commits using the `VS Code Terminal`](#undo-commits-using-the-vs-code-terminal)
 - [Undo commits using `GitLens`](#undo-commits-using-gitlens)
 
-### Undo commits using the `Terminal`
+### Undo commits using the `VS Code Terminal`
 
-[Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
+[Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
 ```terminal
 git reset --soft HEAD~1
@@ -323,9 +323,9 @@ See [Undo commit on the current branch](../appendix/gitlens.md#undo-a-commit-on-
 
 ## Publish the branch
 
-### Publish using the `Terminal`
+### Publish using the `VS Code Terminal`
 
-1. [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    git push -u origin <branch-name>
@@ -341,9 +341,9 @@ See [Undo commit on the current branch](../appendix/gitlens.md#undo-a-commit-on-
 
 ## Push more commits
 
-### Push using the `Terminal`
+### Push using the `VS Code Terminal`
 
-1. [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    git push

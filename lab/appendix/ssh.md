@@ -23,7 +23,7 @@ Generate a key pair: a **private key** (secret) and a **public key** (safe to sh
 
 We'll use the `ed25519` algorithm, which is the modern standard for security and performance.
 
-1. [Run using the `Terminal`](./vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    ssh-keygen -t ed25519 -C "se-toolkit-student" -f ~/.ssh/se_toolkit_key
@@ -45,7 +45,7 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 
 1. Verify they were created:
 
-   [Run using the `Terminal`](./vs-code.md#run-a-command-using-the-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    ls ~/.ssh/se_toolkit_key*
@@ -106,7 +106,7 @@ Use the method that matches your platform.
 
 Linux / `macOS` / `WSL` / `Git Bash`:
 
-1. [Run using the `Terminal`](./vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    eval "$(ssh-agent -s)"
@@ -147,7 +147,7 @@ Linux / `macOS` / `WSL` / `Git Bash`:
 
 You can connect using the alias that you [added to your `SSH` config](#add-the-host-to-the-ssh-config).
 
-1. [Run using the `Terminal`](./vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    ssh se-toolkit-vm
@@ -170,7 +170,7 @@ You can connect using the alias that you [added to your `SSH` config](#add-the-h
 
 `Bad owner or permissions` (Linux / `macOS` / `WSL`):
 
-1. [Run using the `Terminal`](./vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    chmod 700 ~/.ssh

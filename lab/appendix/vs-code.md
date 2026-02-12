@@ -14,14 +14,14 @@
   - [Open the `Command Palette`](#open-the-command-palette)
   - [Run a command using the `Command Palette`](#run-a-command-using-the-command-palette)
   - [Open a file using the `Command Palette`](#open-a-file-using-the-command-palette)
-- [`Terminal`](#terminal)
-  - [Open the `Terminal`](#open-the-terminal)
-  - [Close the `Terminal`](#close-the-terminal)
-  - [Open a new `Terminal`](#open-a-new-terminal)
-  - [Switch to another `Terminal`](#switch-to-another-terminal)
-  - [Copy text inside the `Terminal`](#copy-text-inside-the-terminal)
-  - [Paste text inside the `Terminal`](#paste-text-inside-the-terminal)
-  - [Run a command using the `Terminal`](#run-a-command-using-the-terminal)
+- [`VS Code Terminal`](#vs-code-terminal)
+  - [Open the `VS Code Terminal`](#open-the-vs-code-terminal)
+  - [Close the `VS Code Terminal`](#close-the-vs-code-terminal)
+  - [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal)
+  - [Switch to another `VS Code Terminal`](#switch-to-another-vs-code-terminal)
+  - [Copy text inside the `VS Code Terminal`](#copy-text-inside-the-vs-code-terminal)
+  - [Paste text inside the `VS Code Terminal`](#paste-text-inside-the-vs-code-terminal)
+  - [Run a command using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal)
 - [`Folders`](#folders)
   - [Open folders](#open-folders)
   - [Open the `Folders`](#open-the-folders)
@@ -159,7 +159,7 @@ Actions:
 3. Select a file (move the cursor via `UpArrow` and `DownArrow` on your keyboard).
 4. Press `Enter`.
 
-## `Terminal`
+## `VS Code Terminal`
 
 Run terminal commands inside `VS Code`.
 
@@ -167,27 +167,27 @@ Run terminal commands inside `VS Code`.
 
 Actions:
 
-- [Open the `Terminal`](#open-the-terminal)
-- [Close the `Terminal`](#close-the-terminal)
-- [Open a new `Terminal`](#open-a-new-terminal)
-- [Switch to another `Terminal`](#switch-to-another-terminal)
-- [Copy text inside the `Terminal`](#copy-text-inside-the-terminal)
-- [Paste text inside the `Terminal`](#paste-text-inside-the-terminal)
-- [Run a command using the `Terminal`](#run-a-command-using-the-terminal)
+- [Open the `VS Code Terminal`](#open-the-vs-code-terminal)
+- [Close the `VS Code Terminal`](#close-the-vs-code-terminal)
+- [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal)
+- [Switch to another `VS Code Terminal`](#switch-to-another-vs-code-terminal)
+- [Copy text inside the `VS Code Terminal`](#copy-text-inside-the-vs-code-terminal)
+- [Paste text inside the `VS Code Terminal`](#paste-text-inside-the-vs-code-terminal)
+- [Run a command using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal)
 
-### Open the `Terminal`
-
-Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
-
-### Close the `Terminal`
+### Open the `VS Code Terminal`
 
 Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 
-### Open a new `Terminal`
+### Close the `VS Code Terminal`
+
+Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
+
+### Open a new `VS Code Terminal`
 
 Press ```Ctrl+Shift+` ```
 
-### Switch to another `Terminal`
+### Switch to another `VS Code Terminal`
 
 Use any of the following methods:
 
@@ -204,19 +204,19 @@ Method 3:
 1. [Run using the `Command Palette`](#run-a-command-using-the-command-palette):
    `Terminal: Focus Next Terminal`
 
-### Copy text inside the `Terminal`
+### Copy text inside the `VS Code Terminal`
 
 1. Select text.
 2. Press `Ctrl+Shift+C` (`Cmd+C` on `macOS`).
 
-### Paste text inside the `Terminal`
+### Paste text inside the `VS Code Terminal`
 
 `Ctrl+Shift+V` (`Cmd+V` on `macOS`, `Ctrl+V` on `Windows`)
 
-### Run a command using the `Terminal`
+### Run a command using the `VS Code Terminal`
 
-1. [Open the `Terminal`](#open-the-terminal).
-2. Write or [paste](#paste-text-inside-the-terminal) a command.
+1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
+2. Write or [paste](#paste-text-inside-the-vs-code-terminal) a command.
 3. Press `Enter`.
 
 ## `Folders`

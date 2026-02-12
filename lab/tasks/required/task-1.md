@@ -51,7 +51,7 @@ Read the following sections:
 
 ### 4. Create the file `.env.secret`
 
-1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    cp .env.example .env.secret
@@ -67,7 +67,7 @@ View the file using one of the following methods.
 
 Method 1:
 
-1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    cat .env.secret
@@ -86,7 +86,7 @@ Method 2:
 
 1. Inspect what's running on `$PORT`:
 
-   [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+   [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    uv run --env-file .env.secret bash -c 'kport inspect $PORT'
@@ -108,7 +108,7 @@ Method 2:
 > [`poe`](https://poethepoet.natn.io/) can run tasks
 > specified in the [`pyproject.toml`](../../../pyproject.toml) in the `[tool.poe.tasks]` section.
 
-1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    uv run poe dev
@@ -138,8 +138,8 @@ Method 2:
 
 #### Check `/status` using `curl`
 
-1. [Open a new `Terminal`](../../appendix/vs-code.md#open-a-new-terminal).
-2. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Open a new `VS Code Terminal`](../../appendix/vs-code.md#open-a-new-terminal).
+2. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
     ```text
     curl http://127.0.0.1:42000/status
@@ -155,20 +155,20 @@ Method 2:
 
 ### 9. Stop the web server
 
-1. [Switch to the old `Terminal`](../../appendix/vs-code.md#switch-to-another-terminal) where the web server runs.
+1. [Switch to the old `VS Code Terminal`](../../appendix/vs-code.md#switch-to-another-terminal) where the web server runs.
 2. Press the key shortcut that you saw when running the server to stop the server.
 3. You should see `INFO:     Waiting for application shutdown.`
 
 ### 10. Force stop the web server
 
-1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    uv run --env-file .env.secret bash -c 'kport kill $PORT'
    ```
 
 2. Confirm suggested actions.
-3. Rerun using the `Terminal` the command provided above until you see something like `Port 42000 is free`.
+3. Rerun using the `VS Code Terminal` the command provided above until you see something like `Port 42000 is free`.
 
 ### 11. Check `/status` again
 
