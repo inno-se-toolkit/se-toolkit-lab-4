@@ -18,6 +18,10 @@
 - [Push more commits](#push-more-commits)
   - [Push using the `VS Code Terminal`](#push-using-the-vs-code-terminal)
   - [Push using `GitLens`](#push-using-gitlens)
+- [Switch to a new branch](#switch-to-a-new-branch)
+  - [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
+  - [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
+  - [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
 
 ## Stage using the `Source Control`
 
@@ -167,3 +171,49 @@ See [Undo commit on the current branch](./gitlens.md#undo-a-commit-on-the-curren
 2. Click `GITLENS`.
 3. Click the `Commits` icon.
 4. Click the `Push` icon to the right of `COMMITS`.
+
+## Switch to a new branch
+
+Create a new branch and switch to it:
+
+<!-- no toc -->
+- Method 1: [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
+- Method 2: [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
+- Method 3: [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
+
+> [!IMPORTANT]
+> Replace the `<branch-name>` with the actual branch name.
+
+### Switch to a new branch using `GitHub`
+
+1. [Go to your fork](./github.md#go-to-your-fork).
+2. [Create a branch](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue).
+3. Copy the command provided by `GitHub`.
+
+   It's looks like this:
+
+   ```terminal
+   git fetch origin
+   git checkout <branch-name>
+   ```
+
+4. [Run the copied command using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal).
+
+### Switch to a new branch using the `VS Code Terminal`
+
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+    ```terminal
+    git checkout -b <branch-name>
+    ```
+
+### Switch to a new branch using `GitLens`
+
+1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
+   `GitLens: Git Create Branch...`.
+2. [Select](./vs-code.md#select-an-option-from-a-list)
+   `main` as the base branch.
+3. Write `<branch-name>` to provide the new branch name.
+4. Press `Enter` to confirm.
+5. [Select](./vs-code.md#select-an-option-from-a-list)
+   `Create & Switch to Branch`.

@@ -24,9 +24,6 @@ Outline:
   - [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
   - [Resolve conflicts using `GitLens`](#resolve-conflicts-using-gitlens)
 - [Switch to a new branch](#switch-to-a-new-branch)
-  - [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
-  - [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
-  - [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
 - [Edit files](#edit-files)
 - [Commit](#commit)
 - [(Optional) Undo commits](#optional-undo-commits)
@@ -137,45 +134,9 @@ Continue resolving conflicts if you see an error like this:
 
 ## Switch to a new branch
 
-Create a new branch and switch to it:
+[Create a new branch and switch to it](../appendix/git-vscode.md#switch-to-a-new-branch).
 
-<!-- no toc -->
-- Method 1: [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
-- Method 2: [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
-- Method 3: [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
-
-> [!IMPORTANT]
-> Replace the `<branch-name>` with the actual branch name.
-
-### Switch to a new branch using `GitHub`
-
-1. Go to your [fork](../appendix/github.md#fork-url).
-2. [Create a branch](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue).
-3. Copy the command provided by `GitHub`. It's something like:
-
-   ```terminal
-   git fetch origin
-   git checkout <branch-name>
-   ```
-
-4. [Run the copied command using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal).
-
-### Switch to a new branch using the `VS Code Terminal`
-
-1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-    ```terminal
-    git checkout -b <branch-name>
-    ```
-
-### Switch to a new branch using `GitLens`
-
-1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
-   `GitLens: Git Create Branch..`.
-2. [Select](../appendix/vs-code.md#select-an-option-from-a-list) `main` as the base branch.
-3. Write `<branch-name>` to provide the new branch name.
-4. Press `Enter` to confirm.
-5. [Select](../appendix/vs-code.md#select-an-option-from-a-list) `Create & Switch to Branch`.
+We'll refer to the name of this branch as `<branch-name>`.
 
 ## Edit files
 
