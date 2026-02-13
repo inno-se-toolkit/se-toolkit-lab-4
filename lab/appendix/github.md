@@ -75,7 +75,7 @@ We use `<repo-url>` to refer to a repository [URL](./web-development.md#url).
 
 A repository URL is typically `https://github.com/<repo-owner-username>/<repo-name>` where:
 
-- `<repo-owner-username>` is the `GitHub` username of the [repo owner](#repository-owner);
+- `<repo-owner-username>` is the [repo owner](#repository-owner) `GitHub` username;
 - `<repo-name>` is the name of the repository.
 
 ## Repository owner
