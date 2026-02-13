@@ -18,7 +18,7 @@
   - [15. Install `uv`](#15-install-uv)
   - [15. Configure `Git`](#15-configure-git)
   - [16. Copy your fork URL](#16-copy-your-fork-url)
-  - [17. Clone the fork on your computer](#17-clone-the-fork-on-your-computer)
+  - [17. Clone the fork](#17-clone-the-fork)
     - [Clone the fork using the `VS Code Terminal`](#clone-the-fork-using-the-vs-code-terminal)
     - [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
   - [18. Open `VS Code` in the cloned repo directory](#18-open-vs-code-in-the-cloned-repo-directory)
@@ -192,7 +192,7 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 2. Copy [`<your-fork-url>`](./appendix/github.md#your-fork-url).
 3. It should look like `https://github.com/<your-username>/se-toolkit-lab-2`.
 
-### 17. Clone the fork on your computer
+### 17. Clone the fork
 
 Clone the fork using any of the following methods:
 
