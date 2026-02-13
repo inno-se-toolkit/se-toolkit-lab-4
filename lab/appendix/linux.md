@@ -191,10 +191,16 @@ sudo <command>
 
 ## Port
 
-A [*network port*](https://en.wikipedia.org/wiki/Port_(computer_networking)) (or simply *port*) is a numbered communication endpoint on a [host](#host).
+A [*network port*](https://en.wikipedia.org/wiki/Port_(computer_networking)) (or simply *port*) is a [numbered](#port-number) communication endpoint on a [host](#host).
 
 > [!NOTE]
 > `Windows` and `macOS` also have ports.
+
+### Port number
+
+A port number is a numerical identifier used in networking to distinguish between different [processes](#process) running on a single [host](#host).
+
+Only one process can bind to a specific port number on a given network interface.
 
 ### System port
 
