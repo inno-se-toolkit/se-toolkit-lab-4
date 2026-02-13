@@ -4,12 +4,17 @@
 
 Coding agents let you use LLMs to help you complete your tasks.
 
+- [What is a coding agent](#what-is-a-coding-agent)
 - [Choose a coding agent](#choose-a-coding-agent)
 - [Set up `Qwen Code`-based agent](#set-up-qwen-code-based-agent)
   - [Set up `Qwen Code`](#set-up-qwen-code)
   - [Set up a coding agent in `VS Code`](#set-up-a-coding-agent-in-vs-code)
     - [Set up `Qwen Code Companion` with `Qwen3-Coder`](#set-up-qwen-code-companion-with-qwen3-coder)
     - [Set up `GitHub Copilot Chat` with `Qwen3-Coder`](#set-up-github-copilot-chat-with-qwen3-coder)
+
+## What is a coding agent
+
+A coding agent lets you use LLMs to help you complete your tasks.
 
 ## Choose a coding agent
 
