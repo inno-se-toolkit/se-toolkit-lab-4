@@ -140,10 +140,11 @@ Complete these steps:
 ### 14. (Windows only) Set the default shell
 
 1. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
+   `WSL: Reopen Folder in WSL`
+2. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
    `Terminal: Select Default Profile`
-2. Select `WSL Bash` if available.
-3. Otherwise, select `Git Bash` if available.
-4. If none of them are available, ask the TA to help you.
+3. Select `WSL Bash` if available.
+4. If not available, check that you have [installed WSL](#12-optional-windows-only-install-wsl).
 5. Otherwise, [open the `VS Code Terminal`](./appendix/vs-code.md#open-the-vs-code-terminal).
 6. You should see `bash` there:
 
