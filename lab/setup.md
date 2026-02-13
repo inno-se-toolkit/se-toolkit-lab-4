@@ -18,9 +18,7 @@
   - [15. Install `uv`](#15-install-uv)
   - [15. Configure `Git`](#15-configure-git)
   - [16. Copy your fork URL](#16-copy-your-fork-url)
-  - [17. Clone the fork](#17-clone-the-fork)
-    - [Clone the fork using the `VS Code Terminal`](#clone-the-fork-using-the-vs-code-terminal)
-    - [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
+  - [17. Clone your fork](#17-clone-your-fork)
   - [18. Open `VS Code` in the cloned repo directory](#18-open-vs-code-in-the-cloned-repo-directory)
   - [19. Continue creating a VM](#19-continue-creating-a-vm)
   - [20. Install `Python` and dependencies](#20-install-python-and-dependencies)
@@ -184,42 +182,11 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 2. Copy [`<your-fork-url>`](./appendix/github.md#your-fork-url).
 3. It should look like `https://github.com/<your-username>/se-toolkit-lab-2`.
 
-### 17. Clone the fork
+### 17. Clone your fork
 
-- Method 1: [Clone the fork using the `VS Code Terminal`](#clone-the-fork-using-the-vs-code-terminal)
-- Method 2: [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
+[Clone your fork](./appendix/git-vscode.md#clone-your-fork):
 
-#### Clone the fork using the `VS Code Terminal`
-
-1. [Open the `VS Code Terminal`](./appendix/vs-code.md#open-the-vs-code-terminal).
-2. You should see `software-engineering-toolkit` as your [current working directory](./appendix/shell.md#current-working-directory).
-3. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-    git clone <fork-url>
-    ```
-
-    Note: replace `<fork-url>` with the copied fork URL.
-4. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   ls
-   ```
-
-5. You should see `se-toolkit-lab-2` - the output of the command. This is the directory that contains the cloned repo.
-
-#### Clone the fork using the `Command Palette`
-
-1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette):
-   `Git: Clone`.
-2. Click `Clone from GitHub`.
-3. Allow the extension to sign in.
-4. Find your fork in the list.
-5. It should look like `<your-username>/se-toolkit-lab-2`.
-6. Click it.
-7. Choose a directory where to clone the repo.
-8. You should choose `software-engineering-toolkit` that you created before.
-9. Confirm the choice.
+- Replace `<repo-url>` with [`<your-fork-url>`](./appendix/github.md#your-fork-url).
 
 ### 18. Open `VS Code` in the cloned repo directory
 

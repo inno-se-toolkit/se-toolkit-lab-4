@@ -1,6 +1,9 @@
 # `Git` in `VS Code`
 
 - [Open `VS Code` in the directory](#open-vs-code-in-the-directory)
+- [Clone the repo](#clone-the-repo)
+  - [Clone the repo using the `VS Code Terminal`](#clone-the-repo-using-the-vs-code-terminal)
+  - [Clone the repo using the `Command Palette`](#clone-the-repo-using-the-command-palette)
 - [Switch to the `<branch-name>` branch](#switch-to-the-branch-name-branch)
   - [Switch to the `<branch-name>` branch using the `VS Code Terminal`](#switch-to-the-branch-name-branch-using-the-vs-code-terminal)
   - [Switch to the `<branch-name>` branch using `GitLens`](#switch-to-the-branch-name-branch-using-gitlens)
@@ -50,6 +53,56 @@
 7. You should see `<DIRECTORY-NAME>` there.
 
    Example: `SOFTWARE-ENGINEERING-TOOLKIT`
+
+## Clone the repo
+
+> [!NOTE]
+> Assume `<repo-url>` is the repo [URL](./web-development.md#url).
+>
+> Assume `<repo-name>` is the repo name.
+
+- Method 1: [Clone the repo using the `VS Code Terminal`](#clone-the-repo-using-the-vs-code-terminal)
+- Method 2: [Clone the repo using the `Command Palette`](#clone-the-repo-using-the-command-palette)
+
+### Clone the repo using the `VS Code Terminal`
+
+1. Open `VS Code` in the `software-engineering-toolkit`.
+1. [Open the `VS Code Terminal`](./appendix/vs-code.md#open-the-vs-code-terminal).
+   You should see `software-engineering-toolkit` as your [current working directory](./shell.md#current-working-directory).
+1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+    ```terminal
+    git clone <repo-url>
+    ```
+
+    Example:
+
+    ```terminal
+    git clone <repo-url>
+    ```
+
+1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   ls
+   ```
+
+   You should see `<repo-name>` - the output of the command.
+   This is the directory that contains the cloned repo.
+
+### Clone the repo using the `Command Palette`
+
+1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette):
+   `Git: Clone`.
+2. Click `Clone from GitHub`.
+3. Allow the extension to sign in.
+4. Find your repo in the list.
+
+   It should look like `<your-username>/<repo-name>`.
+5. Click it.
+6. Choose a directory where to clone the repo.
+7. You should choose `software-engineering-toolkit` that you created before.
+8. Confirm the choice.
 
 ## Switch to the `<branch-name>` branch
 
