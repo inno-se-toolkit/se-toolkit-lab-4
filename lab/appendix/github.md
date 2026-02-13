@@ -8,7 +8,7 @@
   - [Find `<your-username>`](#find-your-username)
 - [Repository](#repository)
   - [`<repo-name>`](#repo-name)
-  - [Repository URL](#repository-url)
+  - [`<repo-url>`](#repo-url)
 - [Repository owner](#repository-owner)
 - [Fork](#fork)
   - [Fork a repo](#fork-a-repo)
@@ -69,7 +69,7 @@ A repository name.
 
 The name must be unique among repositories of the repository owner.
 
-### Repository URL
+### `<repo-url>`
 
 A repository URL is typically `https://github.com/<repo-owner-username>/<repo-name>` where:
 
