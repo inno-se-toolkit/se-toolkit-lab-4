@@ -17,7 +17,10 @@
 
 You can use it to connect to [your virtual machine](./vm.md#your-vm).
 
-Since you are using `Git Bash` (`Windows`), `WSL` (`Windows`), `Zsh` (`macOS`), or `Bash` (`Linux`), the commands below will work in your terminal without requiring `PowerShell` or GUI tools like `PuTTY`.
+All commands below assume a Unix shell: `Bash` (`Linux`, `WSL`) or `Zsh` (`macOS`).
+
+> [!IMPORTANT]
+> **Windows users:** Use `WSL` (Windows Subsystem for Linux). Do not use `PowerShell`, `cmd.exe`, or `Git Bash` — the commands below are not guaranteed to work there.
 
 ## SSH daemon
 
@@ -102,40 +105,18 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 
 ## Start the `ssh-agent`
 
-Use the method that matches your platform.
+[Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
-Linux / `macOS` / `WSL` / `Git Bash`:
-
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   eval "$(ssh-agent -s)"
-   ssh-add ~/.ssh/se_toolkit_key
-   ```
-
-`Windows PowerShell`:
-
-1. Run:
-
-   ```powershell
-   Get-Service ssh-agent | Set-Service -StartupType Automatic
-   Start-Service ssh-agent
-   ssh-add $env:USERPROFILE\.ssh\se_toolkit_key
-   ```
+```terminal
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/se_toolkit_key
+```
 
 ## Verify the `SSH` setup
 
 1. Check that your key is loaded:
 
-   Linux / `macOS` / `WSL` / `Git Bash`:
-
    ```terminal
-   ssh-add -l
-   ```
-
-   `Windows PowerShell`:
-
-   ```powershell
    ssh-add -l
    ```
 
@@ -168,7 +149,7 @@ You can connect using the alias that you [added to your `SSH` config](#add-the-h
 2. Ensure the public key was added to the remote host.
 3. Ensure your key is loaded: `ssh-add -l`.
 
-`Bad owner or permissions` (Linux / `macOS` / `WSL`):
+`Bad owner or permissions`:
 
 1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
