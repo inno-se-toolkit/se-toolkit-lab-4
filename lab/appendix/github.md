@@ -57,6 +57,8 @@ Assume the original repo [URL](./web-development.md#url) is `https://github.com/
 
 Then, your fork URL should look like `https://github.com/<your-username>/<repo-name>`.
 
+We'll refer to this URL as `<your-fork-url>`.
+
 ## Issue
 
 A `GitHub` issue is a unit of work or discussion related to a `GitHub` [repository](#repository).
