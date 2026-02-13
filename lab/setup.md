@@ -188,8 +188,8 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 
 ### 16. Copy your fork URL
 
-1. Go to your fork on `Gitub`.
-2. Copy its [URL](https://en.wikipedia.org/wiki/URL).
+1. [Go to your fork](#5-go-to-your-fork).
+2. Copy [`<your-fork-url>`](./appendix/github.md#your-fork-url).
 3. It should look like `https://github.com/<your-username>/se-toolkit-lab-2`.
 
 ### 17. Clone the fork on your computer
