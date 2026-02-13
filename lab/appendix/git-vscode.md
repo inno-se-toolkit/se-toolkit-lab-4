@@ -70,6 +70,9 @@ Check whether you have such conflicts:
 
 ## Pull changes from `origin/<branch-name>`
 
+> [!NOTE]
+> `origin` is an alias for your fork on `GitHub` (see [Inspect remotes](./gitlens.md#inspect-remotes)).
+
 Pull changes from the `<branch-name>` branch in your fork on `GitHub`.
 
 We call that branch `origin/<branch-name>`.
