@@ -16,8 +16,6 @@ Outline:
 - [Create a `Lab Task` issue](#create-a-lab-task-issue)
 - [Switch to the `main` branch](#switch-to-the-main-branch)
 - [Pull changes from `origin/main`](#pull-changes-from-originmain)
-  - [Pull changes from `origin/main` using the `VS Code Terminal`](#pull-changes-from-originmain-using-the-vs-code-terminal)
-  - [Pull changes from `origin/main` using `GitLens`](#pull-changes-from-originmain-using-gitlens)
 - [Resolve conflicts](#resolve-conflicts)
   - [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
   - [Resolve conflicts using `GitLens`](#resolve-conflicts-using-gitlens)
@@ -45,21 +43,7 @@ Outline:
 
 ## Pull changes from `origin/main`
 
-Pull changes from the `main` branch in your fork on `GitHub`.
-
-We call that branch `origin/main`.
-
-### Pull changes from `origin/main` using the `VS Code Terminal`
-
-1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   git pull origin main
-   ```
-
-### Pull changes from `origin/main` using `GitLens`
-
-1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Pull`
+[Pull changes from the `main` branch in your fork on `GitHub`](../appendix/git-vscode.md#pull-changes-from-originmain).
 
 ## Resolve conflicts
 

@@ -3,6 +3,9 @@
 - [Switch to the `main` branch](#switch-to-the-main-branch)
   - [Switch to the `main` branch using the `VS Code Terminal`](#switch-to-the-main-branch-using-the-vs-code-terminal)
   - [Switch to the `main` branch using `GitLens`](#switch-to-the-main-branch-using-gitlens)
+- [Pull changes from `origin/main`](#pull-changes-from-originmain)
+  - [Pull changes from `origin/main` using the `VS Code Terminal`](#pull-changes-from-originmain-using-the-vs-code-terminal)
+  - [Pull changes from `origin/main` using `GitLens`](#pull-changes-from-originmain-using-gitlens)
 - [Stage using the `Source Control`](#stage-using-the-source-control)
   - [Stage all changes in a specific file](#stage-all-changes-in-a-specific-file)
   - [Stage all changes in specific files](#stage-all-changes-in-specific-files)
@@ -44,6 +47,27 @@
 1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
    `GitLens: Git Switch to..`.
 2. [Select](./vs-code.md#select-an-option-from-a-list) the `main` branch.
+
+## Pull changes from `origin/main`
+
+Pull changes from the `main` branch in your fork on `GitHub`.
+
+We call that branch `origin/main`.
+
+- Method 1: [Pull changes from `origin/main` using the `VS Code Terminal`](#pull-changes-from-originmain-using-the-vs-code-terminal)
+- Method 2: [Pull changes from `origin/main` using `GitLens`](#pull-changes-from-originmain-using-gitlens)
+
+### Pull changes from `origin/main` using the `VS Code Terminal`
+
+1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   git pull origin main
+   ```
+
+### Pull changes from `origin/main` using `GitLens`
+
+1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Pull`
 
 ## Stage using the `Source Control`
 
