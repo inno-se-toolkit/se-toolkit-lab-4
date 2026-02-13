@@ -54,6 +54,11 @@ Set up a coding agent in `VS Code` using any of the following methods:
 
 #### Set up `GitHub Copilot Chat` with `Qwen3-Coder`
 
+> [!NOTE]
+> `Copilot Chat` is not officially available for users in Russia (see [this discussion](https://github.com/orgs/community/discussions/182386)).
+>
+> If you want to use `Copilot Chat`, you may need to try some ways to bypass this restriction.
+
 1. [Install](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace#_browse-for-extensions) the `github.copilot-chat` and `denizhandaklr.vscode-qwen-copilot` extensions.
 2. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
    `Qwen Copilot: Authenticate`
