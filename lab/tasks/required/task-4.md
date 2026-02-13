@@ -10,9 +10,9 @@ Learn to deploy the web server to a remote [VM](../../appendix/vm.md#your-vm) us
 
 <h4>Context</h4>
 
-You have already run the web server [locally](./task-1.md) and using [`Docker Compose` on your computer](./task-3.md).
+You have already run the web server [locally](./task-1.md) and used [`Docker Compose` on your computer](./task-3.md).
 
-Now you will deploy it to the university VM so that it is accessible over the network.
+Now you will deploy it to [your university VM](../../appendix/vm.md#your-vm) so that the web server is accessible over the network.
 
 <h4>Table of contents</h4>
 
