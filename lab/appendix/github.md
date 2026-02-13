@@ -3,7 +3,7 @@
 <h2>Table of contents</h2>
 
 - [The `GitHub` site](#the-github-site)
-- [Your `GitHub` username](#your-github-username)
+- [`<your-username>`](#your-username)
   - [Find `<your-username>`](#find-your-username)
 - [Repository](#repository)
 - [Fork](#fork)
@@ -32,7 +32,7 @@
 
 The `GitHub` site has this [URL](./web-development.md#url): <https://github.com>.
 
-## Your `GitHub` username
+## `<your-username>`
 
 We'll refer to your `GitHub` username as `<your-username>`.
 
