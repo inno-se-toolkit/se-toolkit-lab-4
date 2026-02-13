@@ -1,11 +1,11 @@
 # `Git` in `VS Code`
 
-- [Switch to the `main` branch](#switch-to-the-main-branch)
-  - [Switch to the `main` branch using the `VS Code Terminal`](#switch-to-the-main-branch-using-the-vs-code-terminal)
-  - [Switch to the `main` branch using `GitLens`](#switch-to-the-main-branch-using-gitlens)
-- [Pull changes from `origin/main`](#pull-changes-from-originmain)
-  - [Pull changes from `origin/main` using the `VS Code Terminal`](#pull-changes-from-originmain-using-the-vs-code-terminal)
-  - [Pull changes from `origin/main` using `GitLens`](#pull-changes-from-originmain-using-gitlens)
+- [Switch to the `<branch-name>` branch](#switch-to-the-branch-name-branch)
+  - [Switch to the `<branch-name>` branch using the `VS Code Terminal`](#switch-to-the-branch-name-branch-using-the-vs-code-terminal)
+  - [Switch to the `<branch-name>` branch using `GitLens`](#switch-to-the-branch-name-branch-using-gitlens)
+- [Pull changes from `origin/<branch-name>`](#pull-changes-from-originbranch-name)
+  - [Pull changes from `origin/<branch-name>` using the `VS Code Terminal`](#pull-changes-from-originbranch-name-using-the-vs-code-terminal)
+  - [Pull changes from `origin/<branch-name>` using `GitLens`](#pull-changes-from-originbranch-name-using-gitlens)
 - [Stage using the `Source Control`](#stage-using-the-source-control)
   - [Stage all changes in a specific file](#stage-all-changes-in-a-specific-file)
   - [Stage all changes in specific files](#stage-all-changes-in-specific-files)
@@ -29,43 +29,55 @@
   - [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
   - [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
 
-## Switch to the `main` branch
+## Switch to the `<branch-name>` branch
 
-- Method 1: [Switch to the `main` branch using the `VS Code Terminal`](#switch-to-the-main-branch-using-the-vs-code-terminal)
-- Method 2: [Switch to the `main` branch using `GitLens`](#switch-to-the-main-branch-using-gitlens)
+- Method 1: [Switch to the `<branch-name>` branch using the `VS Code Terminal`](#switch-to-the-branch-name-branch-using-the-vs-code-terminal)
+- Method 2: [Switch to the `<branch-name>` branch using `GitLens`](#switch-to-the-branch-name-branch-using-gitlens)
 
-### Switch to the `main` branch using the `VS Code Terminal`
+### Switch to the `<branch-name>` branch using the `VS Code Terminal`
 
 1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   git switch <branch name>
+   ```
+
+   Example:
 
    ```terminal
    git switch main
    ```
 
-### Switch to the `main` branch using `GitLens`
+### Switch to the `<branch-name>` branch using `GitLens`
 
 1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
    `GitLens: Git Switch to..`.
-2. [Select](./vs-code.md#select-an-option-from-a-list) the `main` branch.
+2. [Select](./vs-code.md#select-an-option-from-a-list) the `<branch-name>` branch.
 
-## Pull changes from `origin/main`
+## Pull changes from `origin/<branch-name>`
 
-Pull changes from the `main` branch in your fork on `GitHub`.
+Pull changes from the `<branch-name>` branch in your fork on `GitHub`.
 
-We call that branch `origin/main`.
+We call that branch `origin/<branch-name>`.
 
-- Method 1: [Pull changes from `origin/main` using the `VS Code Terminal`](#pull-changes-from-originmain-using-the-vs-code-terminal)
-- Method 2: [Pull changes from `origin/main` using `GitLens`](#pull-changes-from-originmain-using-gitlens)
+- Method 1: [Pull changes from `origin/<branch-name>` using the `VS Code Terminal`](#pull-changes-from-originbranch-name-using-the-vs-code-terminal)
+- Method 2: [Pull changes from `origin/<branch-name>` using `GitLens`](#pull-changes-from-originbranch-name-using-gitlens)
 
-### Pull changes from `origin/main` using the `VS Code Terminal`
+### Pull changes from `origin/<branch-name>` using the `VS Code Terminal`
 
 1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   git pull origin <branch-name>
+   ```
+
+   Example:
 
    ```terminal
    git pull origin main
    ```
 
-### Pull changes from `origin/main` using `GitLens`
+### Pull changes from `origin/<branch-name>` using `GitLens`
 
 1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Pull`
 
