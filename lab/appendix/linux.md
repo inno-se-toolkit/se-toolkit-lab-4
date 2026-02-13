@@ -23,6 +23,7 @@
   - [The `sudo` command](#the-sudo-command)
 - [Host](#host)
 - [Port](#port)
+  - [Port number](#port-number)
   - [System port](#system-port)
   - [User port](#user-port)
   - [Listen on a port](#listen-on-a-port)
@@ -117,7 +118,7 @@ They form the basis of multitasking in the operating system.
 
 ### PID
 
-A PID (Process ID) is a unique numerical identifier assigned by the `Linux` operating system to each running process. PIDs help the operating system to track and manage individual processes.
+A PID (Process ID) is a unique numerical identifier assigned by the operating system to each running process. PIDs help the operating system to track and manage individual processes.
 
 PIDs are used by various system commands to interact with specific processes, such as terminating them, checking their status, or monitoring their resource usage.
 
@@ -145,7 +146,7 @@ Servers and VMs usually run multiple users.
 
 `root` is useful for initial setup, but daily work should be done with a regular user.
 
-For `Ubuntu`/Debian systems:
+For `Ubuntu`/`Debian` systems:
 
 1. Create a new user:
 
