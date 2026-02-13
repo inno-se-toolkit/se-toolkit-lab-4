@@ -28,11 +28,11 @@
 
 ## Protocol
 
-A protocol is a set of rules that define how data is transmitted and received over a network. In web development, protocols govern communication between [servers and clients](#server-and-client).
+A protocol is a set of rules that define how data is transmitted and received over a network. In web development, protocols govern communication between [web servers and web clients](#web-server-and-web-client).
 
 ## `HTTP`
 
-`HTTP` (`HyperText Transfer Protocol`) is the foundation of data communication on the web. This [protocol](#protocol) defines how messages are formatted and transmitted between [servers and clients](#server-and-client).
+`HTTP` (`HyperText Transfer Protocol`) is the foundation of data communication on the web. This [protocol](#protocol) defines how messages are formatted and transmitted between [web servers and web clients](#web-server-and-web-client).
 
 ### `HTTP` request
 
@@ -83,7 +83,7 @@ Web clients include browsers (`Chrome`, `Firefox`) and command-line tools ([`cur
 
 `JSON` (`JavaScript Object Notation`) is a lightweight, text-based data interchange format that is easy for humans to read and write, and easy for machines to parse and generate.
 
-It is language-independent but derived from `JavaScript` and commonly used in web applications to transmit data between a [server and a client](#server-and-client).
+It is language-independent but derived from `JavaScript` and commonly used in web applications to transmit data between a [server and a client](#web-server-and-web-client).
 
 See [Learn `JSON` in Y minutes](https://learnxinyminutes.com/json/).
 
