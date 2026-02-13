@@ -13,10 +13,10 @@
   - [Open the commit graph using the `Command Palette`](#open-the-commit-graph-using-the-command-palette)
 - [Look at the commit graph](#look-at-the-commit-graph)
 - [Open commits on the current branch](#open-commits-on-the-current-branch)
-- [Inspect the current branch](#inspect-the-current-branch)
 - [View changes in a commit on the current branch](#view-changes-in-a-commit-on-the-current-branch)
 - [Open a commit menu on the current branch](#open-a-commit-menu-on-the-current-branch)
 - [Undo a commit on the current branch](#undo-a-commit-on-the-current-branch)
+- [Inspect the current branch](#inspect-the-current-branch)
 - [Inspect remotes](#inspect-remotes)
 - [Inspect the remotes](#inspect-the-remotes)
 
