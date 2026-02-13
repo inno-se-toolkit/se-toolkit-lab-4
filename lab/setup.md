@@ -198,15 +198,8 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 
 ### 18. Open `VS Code` in the cloned repo directory
 
-1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette):
-   `File: Open Folder...`.
-2. Choose the directory `se-toolkit-lab-2` that is a clone of your fork.
-3. Make sure there is `README.md` inside that directory.
-4. `VS Code` should open in that directory.
-5. [Open `Folders`](./appendix/vs-code.md#open-folders).
-6. Look at `FOLDERS`.
-7. You should see `SE-TOOLKIT-LAB-2` there.
-8. You can close the `VS Code` that you [opened in the `software-engineering-toolkit` directory](#13-open-vs-code-in-the-software-engineering-toolkit-directory).
+1. [Open `VS Code` in the `se-toolkit-lab-2` directory](./appendix/git-vscode.md#open-vs-code-in-the-directory).
+2. Close the `VS Code` that you [opened in the `software-engineering-toolkit` directory](#13-open-vs-code-in-the-software-engineering-toolkit-directory).
 
 ### 19. Continue creating a VM
 
