@@ -25,9 +25,9 @@
   - [System port](#system-port)
   - [User port](#user-port)
   - [Listen on a port](#listen-on-a-port)
-- [Inspect ports](#inspect-ports)
-  - [See listening TCP ports](#see-listening-tcp-ports)
-  - [Inspect a specific port](#inspect-a-specific-port)
+  - [Inspect ports](#inspect-ports)
+    - [See listening TCP ports](#see-listening-tcp-ports)
+    - [Inspect a specific port](#inspect-a-specific-port)
 - [Troubleshooting](#troubleshooting)
   - [Service is running but a request fails](#service-is-running-but-a-request-fails)
 
@@ -204,18 +204,18 @@ The [operating system](./operating-system.md) allocates the port to that process
 
 This is how [services](#service) like [web servers](./web-development.md), [SSH daemons](./ssh.md#ssh-daemon), or [databases](./database.md) accept connections from clients. A port can only be listened to by one process at a time.
 
-## Inspect ports
+### Inspect ports
 
 - [See listening TCP ports](#see-listening-tcp-ports)
 - [Inspect a specific port](#inspect-a-specific-port)
 
-### See listening TCP ports
+#### See listening TCP ports
 
 ```terminal
 ss -ltn
 ```
 
-### Inspect a specific port
+#### Inspect a specific port
 
 ```terminal
 ss -ltn 'sport = :42000'
