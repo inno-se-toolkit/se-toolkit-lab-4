@@ -72,7 +72,7 @@ When you fork a repository on `GitHub`, you create a personal copy under your `G
 
 ### `<your-fork-url>`
 
-Assume the original repo [URL](./web-development.md#url) is `https://github.com/<repo-owner-username>/<repo-name>`.
+Assume the [URL](./web-development.md#url) of the [repo that you forked](#fork-a-repo) is `https://github.com/<repo-owner-username>/<repo-name>`.
 
 Then, your fork URL should look like `https://github.com/<your-username>/<repo-name>`.
 
