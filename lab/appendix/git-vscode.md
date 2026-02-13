@@ -3,6 +3,7 @@
 - [Switch to the `<branch-name>` branch](#switch-to-the-branch-name-branch)
   - [Switch to the `<branch-name>` branch using the `VS Code Terminal`](#switch-to-the-branch-name-branch-using-the-vs-code-terminal)
   - [Switch to the `<branch-name>` branch using `GitLens`](#switch-to-the-branch-name-branch-using-gitlens)
+- [Detect conflicts](#detect-conflicts)
 - [Pull changes from `origin/<branch-name>`](#pull-changes-from-originbranch-name)
   - [Pull changes from `origin/<branch-name>` using the `VS Code Terminal`](#pull-changes-from-originbranch-name-using-the-vs-code-terminal)
   - [Pull changes from `origin/<branch-name>` using `GitLens`](#pull-changes-from-originbranch-name-using-gitlens)
@@ -53,6 +54,19 @@
 1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
    `GitLens: Git Switch to..`.
 2. [Select](./vs-code.md#select-an-option-from-a-list) the `<branch-name>` branch.
+
+## Detect conflicts
+
+It can happen that commits on your `origin/<branch-name>` are different from commits
+on the `<branch-name>` branch in your cloned repo on your computer.
+
+Check whether you have such conflicts:
+
+1. Look at the [`Status Bar`](../appendix/vs-code.md#status-bar).
+
+   <img alt="Commit Conflict" src="../images/appendix/vs-code/status-bar-commit-conflict.png" style="width:400px"></img>
+
+   You should see that there is a non-zero number of commits to pull from `origin/<branch-name>`.
 
 ## Pull changes from `origin/<branch-name>`
 

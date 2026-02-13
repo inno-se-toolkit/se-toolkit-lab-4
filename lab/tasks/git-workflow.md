@@ -15,6 +15,7 @@ Outline:
 
 - [Create a `Lab Task` issue](#create-a-lab-task-issue)
 - [Switch to the `main` branch](#switch-to-the-main-branch)
+- [Detect conflicts](#detect-conflicts)
 - [Pull changes from `origin/main`](#pull-changes-from-originmain)
 - [Resolve conflicts](#resolve-conflicts)
   - [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
@@ -40,6 +41,10 @@ Outline:
 ## Switch to the `main` branch
 
 [Switch to the `main` branch](../appendix/git-vscode.md#switch-to-the-main-branch) in `VS Code`.
+
+## Detect conflicts
+
+[Detect conflicts with the `origin/main`](../appendix/git-vscode.md#detect-conflicts).
 
 ## Pull changes from `origin/main`
 
