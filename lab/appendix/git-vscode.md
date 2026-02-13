@@ -41,16 +41,15 @@
 >
 > Example: `software-engineering-toolkit`
 
-1. On your computer, create somewhere a directory `<directory name>` (e.g., on your `Desktop`).
-2. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
+1. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
    `File: Open Folder...`
-3. Find the directory `<directory-name>` that you created.
-4. Open this directory.
+2. Find the directory `<directory-name>` that you created.
+3. Open this directory.
 
    `VS Code` should now open in that directory.
-5. [Open `Folders`](./appendix/vs-code.md#open-folders).
-6. Look at `FOLDERS`.
-7. You should see `<DIRECTORY-NAME>` there.
+4. [Open `Folders`](./appendix/vs-code.md#open-folders).
+5. Look at `FOLDERS`.
+6. You should see `<DIRECTORY-NAME>` there.
 
    Example: `SOFTWARE-ENGINEERING-TOOLKIT`
 
