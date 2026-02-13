@@ -1,7 +1,6 @@
 # `GitLens`
 
-`GitLens` is a [`VS Code`](vs-code.md) extension that simplifies the work with `Git` inside `VS Code`.
-
+- [What is `GitLens`](#what-is-gitlens)
 - [`GitLens` features](#gitlens-features)
 - [Open the `GITLENS` view](#open-the-gitlens-view)
 - [See all branches](#see-all-branches)
@@ -18,6 +17,10 @@
 - [Undo a commit on the current branch](#undo-a-commit-on-the-current-branch)
 - [Inspect remotes](#inspect-remotes)
 - [Inspect the remotes](#inspect-the-remotes)
+
+## What is `GitLens`
+
+`GitLens` is a [`VS Code`](vs-code.md) extension that simplifies the work with `Git` inside `VS Code`.
 
 ## `GitLens` features
 
