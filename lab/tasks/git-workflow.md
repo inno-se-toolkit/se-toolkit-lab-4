@@ -140,7 +140,7 @@ We'll refer to the name of this branch as `<branch-name>`.
 
 ## Edit files
 
-Edit files in the [`Editor`](../appendix/vs-code.md#editor) to produce changes.
+[Edit files](../appendix/vs-code.md#editor) using `VS Code` to produce changes.
 
 ## Commit
 
