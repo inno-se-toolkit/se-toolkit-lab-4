@@ -25,6 +25,9 @@
   - [Pretty-print the `JSON` response using `jq`](#pretty-print-the-json-response-using-jq)
   - [Pretty-print the `JSON` response using a browser](#pretty-print-the-json-response-using-a-browser)
 - [URL](#url)
+  - [Purpose](#purpose)
+  - [Components of a URL](#components-of-a-url)
+  - [URL example](#url-example)
 - [Service](#service)
 
 ## Web server and web client
@@ -185,6 +188,38 @@ curl -s https://jsonplaceholder.typicode.com/todos/1 | jq .
 <!-- TODO other browsers -->
 
 ## URL
+
+A URL (`Uniform Resource Locator`) is a reference or address used to identify and locate resources on the Internet. It's commonly known as a "web address" and specifies the location of a resource on a web server as well as the protocol used to access it.
+
+### Purpose
+
+URLs are used by web browsers and other applications to retrieve resources like web pages, images, videos, and API endpoints. They provide a standardized way to locate and access resources across the Internet.
+
+### Components of a URL
+
+A typical URL consists of several components:
+
+- **Scheme/Protocol**: Specifies how to access the resource (e.g., `http`, `https`, `ftp`).
+- **Host/Domain**: The server where the resource is located (e.g., `www.example.com`).
+- **Port** (optional): The specific port number on the server (e.g., `:8080`).
+- **Path**: The location of the specific resource on the server (e.g., `/folder/page.html`).
+- **Query parameters** (optional): Additional data passed to the server (e.g., `?param1=value1&param2=value2`).
+- **Fragment** (optional): Points to a specific section within the resource (e.g., `#section1`).
+
+### URL example
+
+```text
+https://www.example.com:8080/search?q=cats&page=1#results
+```
+
+Where:
+
+- Scheme: `https`
+- Host: `www.example.com`
+- Port: `8080`
+- Path: `/search`
+- Query: `?q=cats&page=1`
+- Fragment: `#results`
 
 ## Service
 
