@@ -2,6 +2,7 @@
 
 - [Docs design principles](#docs-design-principles)
   - [Instructions](#instructions)
+    - [High-level instructions vs low-level instructions](#high-level-instructions-vs-low-level-instructions)
     - [Vendor instructions](#vendor-instructions)
     - [Provide fallback instructions](#provide-fallback-instructions)
     - [Localize the instructions](#localize-the-instructions)
@@ -27,6 +28,14 @@
 ## Docs design principles
 
 ### Instructions
+
+#### High-level instructions vs low-level instructions
+
+We want that most people can follow our instructions.
+
+We can provide high-level instructions as long as we explain how to decompose them into lower-level instructions.
+
+This way, people who don't understand how to perform the high-level instructions can follow more detailed lower-level step-by-step instructions.
 
 #### Vendor instructions
 

@@ -1,23 +1,27 @@
 {
-  "plantuml.server": "http://localhost:48080/",
-  "plantuml.render": "PlantUMLServer",
-  "plantuml.diagramsRoot": "docs/diagrams/src",
-  "plantuml.exportOutDir": "docs/diagrams/out",
+  // Git settings
   "git.autofetch": true,
+
+  // Editor settings
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 500,
   "editor.formatOnSave": true,
+
+  // Markdown settings
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
   "markdown.extension.toc.levels": "2..6",
-  
-  "python.languageServer": "Pylance",
 
-  // Move sidebar to the right so that
-  // it doesn't move the code whenever it opens.
-  // Change this setting if necessary.
+  // Python settings
+  "python.languageServer": "Pylance",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+
   "workbench.sideBar.location": "right",
+
+  // Markdown settings
 
   // Set these settings to "true" if you want
   // Markdown and preview to scroll synchronously.

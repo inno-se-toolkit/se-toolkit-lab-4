@@ -75,8 +75,8 @@
 
 ### 4. Fork the course instructors' repo
 
-1. Go to the course instructors' [repo](https://github.com/inno-se-toolkit/se-toolkit-lab-2).
-2. Fork the course instructors' repo:
+1. Go to the course instructors' repo: <https://github.com/inno-se-toolkit/se-toolkit-lab-2>.
+2. [Fork] the course instructors' repo:
    1. Click `Fork`.
    2. Click `Choose an owner`.
    3. Click `<your-username>` to make you the repo owner.

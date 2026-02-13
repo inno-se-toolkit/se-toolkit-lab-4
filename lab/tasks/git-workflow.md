@@ -1,12 +1,10 @@
 # `Git workflow` for tasks
 
 > [!NOTE]
-> This procedure is based on the [`GitHub flow`](https://docs.github.com/en/get-started/using-github/github-flow).
+> This procedure is based on the [`GitHub flow`](../appendix/github.md#github-flow).
 
 ```text
-┌───────┐    ┌────────┐    ┌─────────┐    ┌────┐    ┌────────┐    ┌───────┐
-│ Issue │ →  │ Branch │ →  │ Commits │ →  │ PR │ →  │ Review │ →  │ Merge │
-└───────┘    └────────┘    └─────────┘    └────┘    └────────┘    └───────┘
+Issue ➜ Branch ➜ Commits ➜ PR ➜ Review ➜ Merge
 ```
 
 Here's this workflow in the context of repos:
@@ -67,8 +65,7 @@ Switch to the `main` branch using any of the following methods:
 
 1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
    `GitLens: Git Switch to..`.
-2. Select the `main` branch (e.g., using `UpArrow` and `DownArrow` on your keyboard).
-3. Press `Enter` to confirm.
+2. [Select](../appendix/vs-code.md#select-an-option-from-a-list) the `main` branch.
 
 ## Pull changes from `origin/main`
 
@@ -115,9 +112,8 @@ When you rebase, your local commits are placed on top of the commits from `origi
 
 1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
    `GitLens: Pull`
-2. Select `Pull with Rebase` (e.g., using `UpArrow` and `DownArrow` on your keyboard).
-3. Press `Enter` to confirm.
-4. You're done if `GitLens` doesn't show any error.
+2. [Select](../appendix/vs-code.md#select-an-option-from-a-list) `Pull with Rebase` (e.g., using `UpArrow` and `DownArrow` on your keyboard).
+3. You're done if `GitLens` doesn't show any error.
 
 ### Resolve conflicts using `GitLens`
 
@@ -141,19 +137,19 @@ Continue resolving conflicts if you see an error like this:
 
 ## Switch to a new branch
 
-Create a new branch and switch to it using any of the following methods:
+Create a new branch and switch to it:
 
 <!-- no toc -->
-- [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
-- [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
-- [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
+- Method 1: [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
+- Method 2: [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
+- Method 3: [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
 
 > [!IMPORTANT]
 > Replace the `<branch-name>` with the actual branch name.
 
 ### Switch to a new branch using `GitHub`
 
-1. Go to your fork on `GitHub`.
+1. Go to your [fork](../appendix/github.md#fork-url).
 2. [Create a branch](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue).
 3. Copy the command provided by `GitHub`. It's something like:
 
@@ -176,12 +172,10 @@ Create a new branch and switch to it using any of the following methods:
 
 1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
    `GitLens: Git Create Branch..`.
-2. Select `main` as the base branch (e.g., using `UpArrow` and `DownArrow` on your keyboard).
-3. Press `Enter` to confirm.
-4. Write `<branch-name>` to provide the new branch name.
-5. Press `Enter` to confirm.
-6. `Select Create & Switch to Branch` (e.g., using `UpArrow` and `DownArrow` on your keyboard).
-7. Press `Enter` to confirm.
+2. [Select](../appendix/vs-code.md#select-an-option-from-a-list) `main` as the base branch.
+3. Write `<branch-name>` to provide the new branch name.
+4. Press `Enter` to confirm.
+5. [Select](../appendix/vs-code.md#select-an-option-from-a-list) `Create & Switch to Branch`.
 
 ## Edit files
 

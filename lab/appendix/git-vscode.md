@@ -31,7 +31,7 @@
 
 ### Stage specific changes in a specific file
 
-1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
+1. [Open the `Source Control`](./vs-code.md#open-the-source-control).
 2. Go to `Changes`.
 3. Click a file to open it.
 4. Select changed lines in the editor (red-green).
@@ -40,7 +40,7 @@
 
 ## Unstage specific changes
 
-1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
+1. [Open the `Source Control`](./vs-code.md#open-the-source-control).
 2. Go to `Staged Changes`.
 3. Click a file.
 4. Select changed lines in the editor (red-green).
@@ -68,7 +68,7 @@ Use any of the following methods:
 
 ### Commit using the `VS Code Terminal`
 
-1. Open the [`VS Code Terminal`](../appendix/vs-code.md#open-the-vs-code-terminal).
+1. Open the [`VS Code Terminal`](./vs-code.md#open-the-vs-code-terminal).
 2. Run:
 
    ```terminal
@@ -82,7 +82,7 @@ Use any of the following methods:
 
 ### Commit using `Source Control`
 
-1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
+1. [Open the `Source Control`](./vs-code.md#open-the-source-control).
 2. Go to `Changes`.
 3. Hover over a file name.
 4. Click `+` to stage the file.
@@ -91,7 +91,7 @@ Use any of the following methods:
 
 #### Commit staged changes
 
-1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
+1. [Open the `Source Control`](./vs-code.md#open-the-source-control).
 2. Write a commit message.
 3. Click `Commit`.
 
@@ -109,7 +109,7 @@ Undo commits using any of the following methods:
 
 ### Undo commits using the `VS Code Terminal`
 
-[Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+[Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
 ```terminal
 git reset --soft HEAD~1
@@ -131,13 +131,13 @@ git commit -C ORIG_HEAD
 
 ### Undo commits using `GitLens`
 
-See [Undo commit on the current branch](../appendix/gitlens.md#undo-a-commit-on-the-current-branch).
+See [Undo commit on the current branch](./gitlens.md#undo-a-commit-on-the-current-branch).
 
 ## Publish the branch
 
 ### Publish using the `VS Code Terminal`
 
-1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    git push -u origin <branch-name>
@@ -145,7 +145,7 @@ See [Undo commit on the current branch](../appendix/gitlens.md#undo-a-commit-on-
 
 ### Publish using `GitLens`
 
-1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
+1. [Open the `Source Control`](./vs-code.md#open-the-source-control).
 2. Click `GITLENS` to open the `GitLens` panel.
 3. Click the `Commits` icon.
 4. Click the `Publish Branch` icon to the right of `Publish <branch-name> to GitHub`.
@@ -155,7 +155,7 @@ See [Undo commit on the current branch](../appendix/gitlens.md#undo-a-commit-on-
 
 ### Push using the `VS Code Terminal`
 
-1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    git push
@@ -163,7 +163,7 @@ See [Undo commit on the current branch](../appendix/gitlens.md#undo-a-commit-on-
 
 ### Push using `GitLens`
 
-1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
+1. [Open the `Source Control`](./vs-code.md#open-the-source-control).
 2. Click `GITLENS`.
 3. Click the `Commits` icon.
 4. Click the `Push` icon to the right of `COMMITS`.
