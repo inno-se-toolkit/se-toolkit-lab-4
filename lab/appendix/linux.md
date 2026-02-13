@@ -8,7 +8,7 @@
   - [`Bash` syntax basics](#bash-syntax-basics)
     - [Run a command](#run-a-command)
     - [Pipe the `stdout`](#pipe-the-stdout)
-- [Programs](#programs)
+- [Program](#program)
   - [`jq`](#jq)
 - [Useful commands](#useful-commands)
 - [Process](#process)
@@ -81,7 +81,13 @@ ls .
 <command 1> | <command 2>
 ```
 
-## Programs
+## Program
+
+A program is an executable file containing instructions that can be run by the operating system.
+
+It's a static entity stored on disk that becomes a [process](#process) when executed.
+
+Programs can be compiled binaries, scripts, or other executable files that perform specific tasks when run by a user or system.
 
 ### `jq`
 
