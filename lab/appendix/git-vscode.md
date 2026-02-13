@@ -93,7 +93,8 @@ We call that branch `origin/<branch-name>`.
 
 ### Pull changes from `origin/<branch-name>` using `GitLens`
 
-1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Pull`
+1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
+   `GitLens: Pull`
 
 ## Stage using the `Source Control`
 
