@@ -7,6 +7,9 @@
 - [`<your-username>`](#your-username)
   - [Find `<your-username>`](#find-your-username)
 - [Repository](#repository)
+  - [`<repo-name>`](#repo-name)
+  - [Repository URL](#repository-url)
+- [Repository owner](#repository-owner)
 - [Fork](#fork)
   - [Fork a repo](#fork-a-repo)
   - [`<your-fork-url>`](#your-fork-url)
@@ -60,6 +63,24 @@ A repository (or "repo") is a storage location for files that are version-contro
 
 A `GitHub` repository contains not only project files but also additional collaborative features such as [issues](#issue) for tracking bugs and tasks, [pull requests](#pull-request) for code review and merging changes, and [Projects](#github-projects) for organizing work.
 
+### `<repo-name>`
+
+A repository name.
+
+The name must be unique among repositories of the repository owner.
+
+### Repository URL
+
+A repository URL is typically `https://github.com/<repo-owner-username>/<repo-name>` where:
+
+- `<repo-owner-username>` is the `GitHub` username of the [repo owner](#repository-owner);
+- `<repo-name>` is the name of the repository.
+
+## Repository owner
+
+Repository owner is an account where the repo is currently stored.
+
+We use `<repo-owner-username>` to refer to the [`GitHub` username](#github-username) of the repository owner.
 
 ## Fork
 
