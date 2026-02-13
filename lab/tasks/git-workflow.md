@@ -48,7 +48,7 @@ Outline:
 
 ## Pull changes from `origin/main`
 
-[Pull changes from the `main` branch in your fork on `GitHub`](../appendix/git-vscode.md#pull-changes-from-originmain).
+[Pull changes from the `main` branch in your fork on `GitHub`](../appendix/git-vscode.md#pull-changes-from-originbranch-name).
 
 ## Resolve conflicts
 
