@@ -21,7 +21,7 @@
   - [Send a `GET` query using a browser](#send-a-get-query-using-a-browser)
   - [Send a `GET` query using curl](#send-a-get-query-using-curl)
 - [Pretty-print the `JSON` response](#pretty-print-the-json-response)
-- [Pretty-print the `JSON` response using `jq`](#pretty-print-the-json-response-using-jq)
+  - [Pretty-print the `JSON` response using `jq`](#pretty-print-the-json-response-using-jq)
   - [Pretty-print the `JSON` response using a browser](#pretty-print-the-json-response-using-a-browser)
 - [URL](#url)
 - [Service](#service)
@@ -136,7 +136,7 @@ curl http://127.0.0.1:42000/status
 
 ## Pretty-print the `JSON` response
 
-## Pretty-print the `JSON` response using `jq`
+### Pretty-print the `JSON` response using `jq`
 
 1. [Install `jq`](./linux.md#install-jq) if not installed.
 2. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
