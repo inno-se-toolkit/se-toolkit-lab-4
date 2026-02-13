@@ -18,9 +18,7 @@
   - [15. Install `uv`](#15-install-uv)
   - [15. Configure `Git`](#15-configure-git)
   - [16. Copy your fork URL](#16-copy-your-fork-url)
-  - [17. Clone the fork](#17-clone-the-fork)
-    - [Clone the fork using the `VS Code Terminal`](#clone-the-fork-using-the-vs-code-terminal)
-    - [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
+  - [17. Clone your fork](#17-clone-your-fork)
   - [18. Open `VS Code` in the cloned repo directory](#18-open-vs-code-in-the-cloned-repo-directory)
   - [19. Continue creating a VM](#19-continue-creating-a-vm)
   - [20. Install `Python` and dependencies](#20-install-python-and-dependencies)
@@ -134,15 +132,10 @@ Complete these steps:
 
 ### 13. Open `VS Code` in the `software-engineering-toolkit` directory
 
-1. On your computer, create somewhere a directory `software-engineering-toolkit` (e.g., on your `Desktop`).
-2. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
-   `File: Open Folder...`
-3. Find the `software-engineering-toolkit` directory that you created.
-4. Open this directory.
-5. `VS Code` should now open in that directory.
-6. [Open `Folders`](./appendix/vs-code.md#open-folders).
-7. Look at `FOLDERS`.
-8. You should see `SOFTWARE-ENGINEERING-TOOLKIT` there.
+1. Create somewhere on your computer a directory `software-engineering-toolkit` (e.g., on your `Desktop`).
+
+   Skip this step if the directory exists.
+2. [Open `VS Code` in the `software-engineering-toolkit` directory](./appendix/git-vscode.md#open-vs-code-in-the-directory).
 
 ### 14. (Windows only) Set the default shell
 
@@ -190,56 +183,23 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 
 1. [Go to your fork](#5-go-to-your-fork).
 2. Copy [`<your-fork-url>`](./appendix/github.md#your-fork-url).
-3. It should look like `https://github.com/<your-username>/se-toolkit-lab-2`.
 
-### 17. Clone the fork
+   It should look like `https://github.com/<your-username>/se-toolkit-lab-2`.
 
-- Method 1: [Clone the fork using the `VS Code Terminal`](#clone-the-fork-using-the-vs-code-terminal)
-- Method 2: [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
+> [!NOTE]
+> Here, the `<repo-name>` is `se-toolkit-lab-2`.
 
-#### Clone the fork using the `VS Code Terminal`
+### 17. Clone your fork
 
-1. [Open the `VS Code Terminal`](./appendix/vs-code.md#open-the-vs-code-terminal).
-2. You should see `software-engineering-toolkit` as your [current working directory](./appendix/shell.md#current-working-directory).
-3. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+[Clone your fork](./appendix/git-vscode.md#clone-the-repo):
 
-   ```terminal
-    git clone <fork-url>
-    ```
-
-    Note: replace `<fork-url>` with the copied fork URL.
-4. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   ls
-   ```
-
-5. You should see `se-toolkit-lab-2` - the output of the command. This is the directory that contains the cloned repo.
-
-#### Clone the fork using the `Command Palette`
-
-1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette):
-   `Git: Clone`.
-2. Click `Clone from GitHub`.
-3. Allow the extension to sign in.
-4. Find your fork in the list.
-5. It should look like `<your-username>/se-toolkit-lab-2`.
-6. Click it.
-7. Choose a directory where to clone the repo.
-8. You should choose `software-engineering-toolkit` that you created before.
-9. Confirm the choice.
+- Replace `<repo-url>` with [`<your-fork-url>`](./appendix/github.md#your-fork-url).
+- Replace `<repo-name>` with `se-toolkit-lab-2`.
 
 ### 18. Open `VS Code` in the cloned repo directory
 
-1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette):
-   `File: Open Folder...`.
-2. Choose the directory `se-toolkit-lab-2` that is a clone of your fork.
-3. Make sure there is `README.md` inside that directory.
-4. `VS Code` should open in that directory.
-5. [Open `Folders`](./appendix/vs-code.md#open-folders).
-6. Look at `FOLDERS`.
-7. You should see `SE-TOOLKIT-LAB-2` there.
-8. You can close the `VS Code` that you [opened in the `software-engineering-toolkit` directory](#13-open-vs-code-in-the-software-engineering-toolkit-directory).
+1. [Open `VS Code` in the `se-toolkit-lab-2` directory](./appendix/git-vscode.md#open-vs-code-in-the-directory).
+2. Close the `VS Code` that you [opened in the `software-engineering-toolkit` directory](#13-open-vs-code-in-the-software-engineering-toolkit-directory).
 
 ### 19. Continue creating a VM
 

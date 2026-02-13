@@ -3,9 +3,13 @@
 <h2>Table of contents</h2>
 
 - [The `GitHub` site](#the-github-site)
+- [`GitHub` username](#github-username)
 - [`<your-username>`](#your-username)
   - [Find `<your-username>`](#find-your-username)
 - [Repository](#repository)
+  - [`<repo-name>`](#repo-name)
+  - [`<repo-url>`](#repo-url)
+- [Repository owner](#repository-owner)
 - [Fork](#fork)
   - [Fork a repo](#fork-a-repo)
   - [`<your-fork-url>`](#your-fork-url)
@@ -33,15 +37,19 @@
 
 The `GitHub` site has this [URL](./web-development.md#url): <https://github.com>.
 
-## `<your-username>`
+## `GitHub` username
 
-We'll refer to your `GitHub` username as `<your-username>`.
+A `GitHub` username is a unique identifier of a user or an organization on [the `GitHub` site](#the-github-site).
 
 Example of a username: `johndoe`.
 
 Note that this username doesn't include `@`.
 
-`<your-username>` also doesn't include `@`.
+## `<your-username>`
+
+Assume `<your-username>` is your [`GitHub` username](#github-username).
+
+`<your-username>` doesn't include `@`.
 
 ### Find `<your-username>`
 
@@ -53,7 +61,28 @@ Note that this username doesn't include `@`.
 
 A repository (or "repo") is a storage location for files that are version-controlled using [`Git`](./git.md#what-is-git).
 
-A `GitHub` repository contains not only your project files but also additional collaborative features such as [issues](#issue) for tracking bugs and tasks, [pull requests](#pull-request) for code review and merging changes, and [Projects](#github-projects) for organizing work.
+A `GitHub` repository contains not only project files but also additional collaborative features such as [issues](#issue) for tracking bugs and tasks, [pull requests](#pull-request) for code review and merging changes, and [Projects](#github-projects) for organizing work.
+
+### `<repo-name>`
+
+A repository name.
+
+The name must be unique among repositories of the repository owner.
+
+### `<repo-url>`
+
+We use `<repo-url>` to refer to a repository [URL](./web-development.md#url).
+
+A repository URL is typically `https://github.com/<repo-owner-username>/<repo-name>` where:
+
+- `<repo-owner-username>` is the [repo owner](#repository-owner) `GitHub` username;
+- `<repo-name>` is the name of the repository.
+
+## Repository owner
+
+Repository owner is an account where the repo is currently stored.
+
+We use `<repo-owner-username>` to refer to the [`GitHub` username](#github-username) of the repository owner.
 
 ## Fork
 

@@ -19,7 +19,7 @@ Now you will deploy it to [your university VM](../../appendix/vm.md#your-vm) so 
 - [Steps](#steps)
   - [1. Create an issue](#1-create-an-issue)
   - [2. Connect to the VM](#2-connect-to-the-vm)
-  - [3. Clone the fork on the VM](#3-clone-the-fork-on-the-vm)
+  - [3. Clone your fork on the VM](#3-clone-your-fork-on-the-vm)
   - [4. Create the file `.env.docker.secret`](#4-create-the-file-envdockersecret)
   - [5. View the file `.env.docker.secret`](#5-view-the-file-envdockersecret)
   - [6. Run the web server using `Docker Compose`](#6-run-the-web-server-using-docker-compose)
@@ -47,17 +47,17 @@ Title: `[Task] Deploy the web server to the VM`
 
 2. You should see the remote shell prompt (e.g., `root@<your-vm-name>:~#`).
 
-### 3. Clone the fork on the VM
+> [!IMPORTANT]
+> Run all subsequent commands  (unless specified otherwise) in the shell where you see this prompt.
+>
+> This way, you'll run commands on the VM.
 
-1. Run on the VM:
+### 3. Clone your fork on the VM
 
-   ```terminal
-   git clone <fork-url>
-   ```
+1. [Clone the repo using the `VS Code Terminal`](../../appendix/git-vscode.md#clone-the-repo-using-the-vs-code-terminal).
 
-   Note: replace `<fork-url>` with the URL of your fork (e.g., `https://github.com/<your-username>/se-toolkit-lab-2`).
-
-2. Run on the VM:
+   Replace `<repo-url>` with [`<your-fork-url>`](../../appendix/github.md#your-fork-url).
+2. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    cd se-toolkit-lab-2
@@ -95,9 +95,8 @@ Title: `[Task] Deploy the web server to the VM`
    docker compose --env-file .env.docker.secret up --build -d
    ```
 
-> [!NOTE]
-> The `-d` flag runs the containers in the background (detached mode).
-> This is useful on a remote server because the containers keep running after you close the terminal.
+   **Note:** The `-d` flag runs the containers in the background (detached mode).
+   This is useful on a remote server because the containers keep running after you close the terminal.
 
 2. Check that the containers are running:
 

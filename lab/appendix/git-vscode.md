@@ -1,5 +1,9 @@
 # `Git` in `VS Code`
 
+- [Open `VS Code` in the directory](#open-vs-code-in-the-directory)
+- [Clone the repo](#clone-the-repo)
+  - [Clone the repo using the `VS Code Terminal`](#clone-the-repo-using-the-vs-code-terminal)
+  - [Clone the repo using the `Command Palette`](#clone-the-repo-using-the-command-palette)
 - [Switch to the `<branch-name>` branch](#switch-to-the-branch-name-branch)
   - [Switch to the `<branch-name>` branch using the `VS Code Terminal`](#switch-to-the-branch-name-branch-using-the-vs-code-terminal)
   - [Switch to the `<branch-name>` branch using `GitLens`](#switch-to-the-branch-name-branch-using-gitlens)
@@ -29,6 +33,74 @@
   - [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
   - [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
   - [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
+
+## Open `VS Code` in the directory
+
+> [!NOTE]
+> The `<directory-name>` is the name of a directory.
+>
+> Example: `software-engineering-toolkit`
+
+1. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
+   `File: Open Folder...`
+2. Find the directory `<directory-name>` that you created.
+3. Open this directory.
+
+   `VS Code` should now open in that directory.
+4. [Open `Folders`](./appendix/vs-code.md#open-folders).
+5. Look at `FOLDERS`.
+6. You should see `<DIRECTORY-NAME>` there.
+
+   Example: `SOFTWARE-ENGINEERING-TOOLKIT`
+
+## Clone the repo
+
+> [!NOTE]
+> The [`<repo-url>`](./github.md#repo-url) is the repo [URL](./web-development.md#url).
+>
+> The [`<repo-name>`](./github.md#repo-name) is the repo name.
+
+- Method 1: [Clone the repo using the `VS Code Terminal`](#clone-the-repo-using-the-vs-code-terminal)
+- Method 2: [Clone the repo using the `Command Palette`](#clone-the-repo-using-the-command-palette)
+
+### Clone the repo using the `VS Code Terminal`
+
+1. Open `VS Code` in the `software-engineering-toolkit`.
+1. [Open the `VS Code Terminal`](./appendix/vs-code.md#open-the-vs-code-terminal).
+   You should see `software-engineering-toolkit` as your [current working directory](./shell.md#current-working-directory).
+1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+    ```terminal
+    git clone <repo-url>
+    ```
+
+    Example:
+
+    ```terminal
+    git clone <repo-url>
+    ```
+
+1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   ls
+   ```
+
+   You should see `<repo-name>` - the output of the command.
+   This is the directory that contains the cloned repo.
+
+### Clone the repo using the `Command Palette`
+
+1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette):
+   `Git: Clone`.
+2. Click `Clone from GitHub`.
+3. Allow the extension to sign in.
+4. Paste the [`<repo-url>`](./github.md#repo-url).
+5. [Select](./vs-code.md#select-an-option-from-a-list) the repo.
+6. Choose a directory where to clone the repo.
+
+   You should choose `software-engineering-toolkit` that you created before.
+7. Confirm the choice.
 
 ## Switch to the `<branch-name>` branch
 
@@ -262,7 +334,7 @@ Create a new branch and switch to it:
 
 ### Switch to a new branch using `GitHub`
 
-1. [Go to your fork](./github.md#go-to-your-fork).
+1. [Go to the repo](./github.md#go-to-your-fork).
 2. [Create a branch](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue).
 3. Copy the command provided by `GitHub`.
 
