@@ -17,7 +17,7 @@ Outline:
 - [Switch to the `main` branch](#switch-to-the-main-branch)
 - [Detect conflicts](#detect-conflicts)
 - [Pull changes from `origin/main`](#pull-changes-from-originmain)
-- [Resolve conflicts](#resolve-conflicts)
+- [Pull changes from `origin/main` and rebase](#pull-changes-from-originmain-and-rebase)
   - [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
   - [Resolve conflicts using `GitLens`](#resolve-conflicts-using-gitlens)
 - [Switch to a new branch](#switch-to-a-new-branch)
@@ -50,26 +50,20 @@ Outline:
 
 [Pull changes from the `main` branch in your fork on `GitHub`](../appendix/git-vscode.md#pull-changes-from-originbranch-name).
 
-## Resolve conflicts
+## Pull changes from `origin/main` and rebase
 
 You may see some errors and messages about conflicts after pulling.
 
-It may happen that commits on your `origin/main` are different from commits on your local `main` branch in your cloned repo on your computer.
+You need to rebase your local commits in your local `<branch-name>` onto the commits from `origin/<branch-name>`.
 
-You can see that in the [`Status Bar`](../appendix/vs-code.md#status-bar).
+However, you can get conflicts if commits from `origin/<branch-name>` modified the same lines of text in files as your local commits but in a different way.
 
-<img alt="Commit Conflict" src="../images/appendix/vs-code/status-bar-commit-conflict.png" style="width:400px"></img>
+In this case, you should resolve conflicts.
 
-You need to pull commits from `origin/main` into your local `main`.
+Steps:
 
-These commits from `origin/main` will find a place somewhere among the commits on your local `main`.
-
-However, you can get conflicts if commits from `origin/main` modified the same lines of text in files as your local commits but in a different way.
-
-In this case, you should rebase your local branch and resolve conflicts:
-
-- [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
-- [Resolve conflicts using `GitLens`](#resolve-conflicts-using-gitlens)
+1. [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
+2. [Resolve conflicts using `GitLens`](#resolve-conflicts-using-gitlens)
 
 ### Pull and rebase using `GitLens`
 
