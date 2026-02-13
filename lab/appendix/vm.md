@@ -47,14 +47,15 @@ Complete these steps to create a VM:
 
 ### Create a VM using the subscription
 
-1. Go to [`https://vm.innopolis.university`](https://vm.innopolis.university/).
-2. Click `+ NEW`.
-3. Click `STANDALONE VIRTUAL MACHINE`.
-4. Click `FROM GALLERY`.
-5. Click `ALL`.
-6. Click `Linux Ubuntu 24.04 Software Engineering Toolkit`.
-7. Click `->` to go to the page 2.
-8. Fill in the fields:
+1. [Create a new `SSH` key](./ssh.md#create-a-new-ssh-key) if not created.
+2. Go to [`https://vm.innopolis.university`](https://vm.innopolis.university/).
+3. Click `+ NEW`.
+4. Click `STANDALONE VIRTUAL MACHINE`.
+5. Click `FROM GALLERY`.
+6. Click `ALL`.
+7. Click `Linux Ubuntu 24.04 Software Engineering Toolkit`.
+8. Click `->` to go to the page 2.
+9. Fill in the fields:
     `NAME`: Write the name of your VM (we'll refer to it as `<your-vm-name>` in the instructions).
     `NEW PASSWORD`: Write the password.
     `CONFIRM`: Write the same password.
@@ -62,13 +63,13 @@ Complete these steps to create a VM:
        1. [Find the `SSH` key files](./ssh.md#find-the-ssh-key-files).
        2. Copy the **full content** of the public key file.
        3. Paste the content into the input field.
-9. Note that the user's name on the VM is `root`.
-10. Click `->` to go to the page 3.
-11. Go to `NETWORK ADAPTER 1`.
-12. Click `Not Connected`.
-13. In the drop-down list, click `StudentsCourses01;10.93.24.0/22`.
-14. Click checkmark to complete the setup.
-15. The VM will become available in approximately 20 minutes.
+10. Note that the user's name on the VM is `root`.
+11. Click `->` to go to the page 3.
+12. Go to `NETWORK ADAPTER 1`.
+13. Click `Not Connected`.
+14. In the drop-down list, click `StudentsCourses01;10.93.24.0/22`.
+15. Click checkmark to complete the setup.
+16. The VM will become available in approximately 20 minutes.
 
 ## Go to the VM page
 
