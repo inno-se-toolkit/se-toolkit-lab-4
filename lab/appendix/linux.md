@@ -34,11 +34,11 @@
 
 ## What is `Linux`
 
-`Linux` is a family of operating systems commonly used for servers and virtual machines.
+`Linux` is a family of [operating systems](./operating-system.md) commonly used for servers and [virtual machines](./vm.md).
 
 ## Shell
 
-An operating system shell is a computer program that provides relatively broad and direct access to the system on which it runs.
+An [operating system](./operating-system.md) shell is a computer program that provides relatively broad and direct access to the system on which it runs.
 [[source](https://en.wikipedia.org/wiki/Shell_(computing))]
 
 ### Login shell
