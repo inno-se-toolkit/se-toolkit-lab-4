@@ -134,7 +134,9 @@ Method 2:
    to `http://127.0.0.1:42000/status`.
 2. [Pretty-print the `JSON` response](../../appendix/web-development.md#pretty-print-the-json-response).
 
-<!-- TODO add check status using the /docs -->
+> [!TIP]
+> You can also check the `/status` endpoint using the auto-generated API documentation
+> at <http://127.0.0.1:42000/docs>.
 
 ### 10. Stop the web server
 

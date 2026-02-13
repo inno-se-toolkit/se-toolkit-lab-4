@@ -153,7 +153,21 @@ curl http://127.0.0.1:42000/status
 
 ### Send a `GET` query using a browser
 
+1. Open the link in a browser: <http://127.0.0.1:42000/status>.
+
+> [!TIP]
+> [`FastAPI`](https://fastapi.tiangolo.com/) auto-generates interactive API documentation.
+> Open <http://127.0.0.1:42000/docs> to explore all available endpoints.
+
 ### Send a `GET` query using curl
+
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   curl http://127.0.0.1:42000/status
+   ```
+
+2. You should see the response from the web server in the terminal.
 
 ## Pretty-print the `JSON` response
 
