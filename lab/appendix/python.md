@@ -1,5 +1,7 @@
 # `Python`
 
+<h2>Table of contents</h2>
+
 ## Syntax
 
 ## Documentation

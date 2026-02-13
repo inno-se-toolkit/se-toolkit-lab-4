@@ -1,5 +1,7 @@
 # Your VM image
 
+<h2>Table of contents</h2>
+
 - [Base image](#base-image)
 - [Programs](#programs)
   - [`starship`](#starship)

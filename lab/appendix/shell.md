@@ -1,5 +1,7 @@
 # Shell
 
+<h2>Table of contents</h2>
+
 The `shell` is a program that reads your commands and runs them.
 
 ## Shell variants

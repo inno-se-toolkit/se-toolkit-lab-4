@@ -1,5 +1,7 @@
 # VM
 
+<h2>Table of contents</h2>
+
 - [What is a VM](#what-is-a-vm)
 - [Your VM](#your-vm)
 - [Create a VM](#create-a-vm)

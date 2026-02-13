@@ -1,5 +1,7 @@
 # `Git`
 
+<h2>Table of contents</h2>
+
 - [What is `Git`](#what-is-git)
 - [How `Git` works - text](#how-git-works---text)
 - [How `Git` works - videos](#how-git-works---videos)

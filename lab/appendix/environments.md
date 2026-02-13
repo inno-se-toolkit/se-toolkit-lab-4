@@ -1,5 +1,7 @@
 # Environments
 
+<h2>Table of contents</h2>
+
 - [Environment variables](#environment-variables)
 - [`.env` file](#env-file)
 - [Secrets](#secrets)

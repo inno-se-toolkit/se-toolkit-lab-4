@@ -1,5 +1,7 @@
 # Coding agents
 
+<h2>Table of contents</h2>
+
 Coding agents let you use LLMs to help you complete your tasks.
 
 - [Choose a coding agent](#choose-a-coding-agent)

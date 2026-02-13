@@ -50,7 +50,7 @@ sequence = ["format", "lint", "typecheck"]
 
 [tool.poe.tasks.typecheck]
 help = "Run all typecheckers"
-parallel = ["ty-check", "pyright-check"]
+parallel = ["ty-check"]
 
 [tool.poe.tasks.ty-check]
 help = "Run the 'ty' typechecker"

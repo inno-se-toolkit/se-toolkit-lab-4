@@ -1,5 +1,7 @@
 # `Linux`
 
+<h2>Table of contents</h2>
+
 - [What is `Linux`](#what-is-linux)
 - [Shell](#shell)
   - [Login shell](#login-shell)

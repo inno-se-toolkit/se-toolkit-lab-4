@@ -1,5 +1,7 @@
 # `VS Code`
 
+<h2>Table of contents</h2>
+
 - [`Basic Layout`](#basic-layout)
 - [`Custom Layout`](#custom-layout)
   - [Move the `Primary Sidebar` to the right](#move-the-primary-sidebar-to-the-right)

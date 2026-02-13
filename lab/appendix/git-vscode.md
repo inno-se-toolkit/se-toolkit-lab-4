@@ -1,5 +1,7 @@
 # `Git` in `VS Code`
 
+<h2>Table of contents</h2>
+
 - [Open `VS Code` in the directory](#open-vs-code-in-the-directory)
 - [Clone the repo](#clone-the-repo)
   - [Clone the repo using the `VS Code Terminal`](#clone-the-repo-using-the-vs-code-terminal)

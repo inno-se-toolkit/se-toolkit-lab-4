@@ -1,5 +1,7 @@
 # Architectural views
 
+<h2>Table of contents</h2>
+
 - [Component diagram](#component-diagram)
 - [Sequence diagram](#sequence-diagram)
 - [Deployment diagram](#deployment-diagram)

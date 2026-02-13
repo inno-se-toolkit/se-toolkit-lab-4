@@ -1,5 +1,7 @@
 # Web development
 
+<h2>Table of contents</h2>
+
 - [Web server and web client](#web-server-and-web-client)
   - [Web server](#web-server)
   - [Web client](#web-client)

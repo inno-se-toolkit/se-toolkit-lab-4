@@ -1,4 +1,6 @@
-<h1><code>Docker</code></h1>
+# `Docker`
+
+<h2>Table of contents</h2>
 
 - [Image](#image)
 - [Container](#container)

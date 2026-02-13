@@ -1,5 +1,7 @@
 # Visualize the architecture
 
+<h2>Table of contents</h2>
+
 - [`Draw.io`](#drawio)
 - [`PlantUML`](#plantuml)
 - [`Mermaid`](#mermaid)
