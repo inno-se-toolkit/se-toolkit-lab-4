@@ -134,15 +134,7 @@ Complete these steps:
 
 ### 13. Open `VS Code` in the `software-engineering-toolkit` directory
 
-1. On your computer, create somewhere a directory `software-engineering-toolkit` (e.g., on your `Desktop`).
-2. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
-   `File: Open Folder...`
-3. Find the `software-engineering-toolkit` directory that you created.
-4. Open this directory.
-5. `VS Code` should now open in that directory.
-6. [Open `Folders`](./appendix/vs-code.md#open-folders).
-7. Look at `FOLDERS`.
-8. You should see `SOFTWARE-ENGINEERING-TOOLKIT` there.
+[Open `VS Code` in the `software-engineering-toolkit` directory](./appendix/git-vscode.md#open-vs-code-in-the-directory).
 
 ### 14. (Windows only) Set the default shell
 

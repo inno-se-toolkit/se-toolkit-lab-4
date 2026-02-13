@@ -1,5 +1,6 @@
 # `Git` in `VS Code`
 
+- [Open `VS Code` in the directory](#open-vs-code-in-the-directory)
 - [Switch to the `<branch-name>` branch](#switch-to-the-branch-name-branch)
   - [Switch to the `<branch-name>` branch using the `VS Code Terminal`](#switch-to-the-branch-name-branch-using-the-vs-code-terminal)
   - [Switch to the `<branch-name>` branch using `GitLens`](#switch-to-the-branch-name-branch-using-gitlens)
@@ -29,6 +30,26 @@
   - [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
   - [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
   - [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
+
+## Open `VS Code` in the directory
+
+> [!NOTE]
+> The `<directory-name>` is the name of a directory.
+>
+> Example: `software-engineering-toolkit`
+
+1. On your computer, create somewhere a directory `<directory name>` (e.g., on your `Desktop`).
+2. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
+   `File: Open Folder...`
+3. Find the directory `<directory-name>` that you created.
+4. Open this directory.
+
+   `VS Code` should now open in that directory.
+5. [Open `Folders`](./appendix/vs-code.md#open-folders).
+6. Look at `FOLDERS`.
+7. You should see `<DIRECTORY-NAME>` there.
+
+   Example: `SOFTWARE-ENGINEERING-TOOLKIT`
 
 ## Switch to the `<branch-name>` branch
 
