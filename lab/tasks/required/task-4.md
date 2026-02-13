@@ -47,17 +47,12 @@ Title: `[Task] Deploy the web server to the VM`
 
 2. You should see the remote shell prompt (e.g., `root@<your-vm-name>:~#`).
 
-### 3. Clone the fork on the VM
+### 3. Clone your fork on the VM
 
-1. Run on the VM:
+1. [Clone the repo using the `VS Code Terminal`](../../appendix/git-vscode.md#clone-the-repo-using-the-vs-code-terminal).
 
-   ```terminal
-   git clone <fork-url>
-   ```
-
-   Note: replace `<fork-url>` with the URL of your fork (e.g., `https://github.com/<your-username>/se-toolkit-lab-2`).
-
-2. Run on the VM:
+   Replace `<repo-url>` with [`<your-fork-url>`](../../appendix/github.md#your-fork-url).
+2. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    cd se-toolkit-lab-2
