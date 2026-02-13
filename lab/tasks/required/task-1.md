@@ -78,20 +78,19 @@ Method 2:
 ### 6. Use a free `$PORT`
 
 > [!NOTE]
-> `$PORT` here will be substituted with the value of the `PORT` environment variable from the `.env.secret` file.
->
-> The `kport inspect $PORT` command will be run in the [`bash`](../../appendix/linux.md#bash) shell.
+> `$PORT` will be substituted with the value of the `PORT` environment variable
+> loaded from the `.env.secret` file via `source`.
 
 1. Inspect what's running on `$PORT`:
 
    [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
-   uv run --env-file .env.secret bash -c 'kport inspect $PORT'
+   source .env.secret && lsof -i :$PORT
    ```
 
-2. You should see something like `Port 42000 is free`.
-3. If you see `Process: python3`:
+2. If the command produces **no output**, the port is free — proceed to the next step.
+3. If you see output with `python` or `uvicorn`:
    1. It's probably the web server running if you tried running it before.
    2. You can safely [force stop it](#10-force-stop-the-web-server).
 4. Otherwise:
@@ -142,11 +141,10 @@ Method 2:
 1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
-   uv run --env-file .env.secret bash -c 'kport kill $PORT'
+   source .env.secret && kill $(lsof -ti :$PORT)
    ```
 
-2. Confirm suggested actions.
-3. Rerun the command provided above until you see something like `Port 42000 is free`.
+2. Verify the port is free by [inspecting it again](#6-use-a-free-port).
 
 ### 11. Check `/status` again
 
