@@ -90,7 +90,7 @@ Method 2:
    ```
 
 2. If the command produces **no output**, the port is free — proceed to the next step.
-3. If you see output with `python` or `uvicorn`:
+3. If you see output with `python`:
    1. It's probably the web server running if you tried running it before.
    2. You can safely [force stop it](#10-force-stop-the-web-server).
 4. Otherwise:
