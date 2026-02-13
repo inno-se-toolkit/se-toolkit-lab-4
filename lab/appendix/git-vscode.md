@@ -1,5 +1,8 @@
 # `Git` in `VS Code`
 
+- [Switch to the `main` branch](#switch-to-the-main-branch)
+  - [Switch to the `main` branch using the `VS Code Terminal`](#switch-to-the-main-branch-using-the-vs-code-terminal)
+  - [Switch to the `main` branch using `GitLens`](#switch-to-the-main-branch-using-gitlens)
 - [Stage using the `Source Control`](#stage-using-the-source-control)
   - [Stage all changes in a specific file](#stage-all-changes-in-a-specific-file)
   - [Stage all changes in specific files](#stage-all-changes-in-specific-files)
@@ -22,6 +25,25 @@
   - [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
   - [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
   - [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
+
+## Switch to the `main` branch
+
+- Method 1: [Switch to the `main` branch using the `VS Code Terminal`](#switch-to-the-main-branch-using-the-vs-code-terminal)
+- Method 2: [Switch to the `main` branch using `GitLens`](#switch-to-the-main-branch-using-gitlens)
+
+### Switch to the `main` branch using the `VS Code Terminal`
+
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   git switch main
+   ```
+
+### Switch to the `main` branch using `GitLens`
+
+1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
+   `GitLens: Git Switch to..`.
+2. [Select](./vs-code.md#select-an-option-from-a-list) the `main` branch.
 
 ## Stage using the `Source Control`
 
