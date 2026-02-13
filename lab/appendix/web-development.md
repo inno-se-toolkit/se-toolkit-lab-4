@@ -1,6 +1,5 @@
 # Web development
 
-- [Client-server architecture](#client-server-architecture)
 - [Protocol](#protocol)
 - [`HTTP`](#http)
   - [`HTTP` request](#http-request)
@@ -9,6 +8,7 @@
   - [`HTTP` response status code](#http-response-status-code)
   - [Common `HTTP` response status codes](#common-http-response-status-codes)
     - [`404` response status code](#404-response-status-code)
+- [Client-server architecture](#client-server-architecture)
 - [API](#api)
 - [Endpoint](#endpoint)
 - [Send a `GET` query](#send-a-get-query)
@@ -19,6 +19,22 @@
   - [Pretty-print the `JSON` response using a browser](#pretty-print-the-json-response-using-a-browser)
 - [URL](#url)
 - [Service](#service)
+
+## Protocol
+
+## `HTTP`
+
+### `HTTP` request
+
+#### Query parameter
+
+### `HTTP` response
+
+### `HTTP` response status code
+
+### Common `HTTP` response status codes
+
+#### `404` response status code
 
 ## Client-server architecture
 
@@ -44,22 +60,6 @@ Common response parts:
 - Status code (`200`, `404`, `500`, etc.).
 - Headers (metadata).
 - Body (often `JSON` in APIs).
-
-## Protocol
-
-## `HTTP`
-
-### `HTTP` request
-
-#### Query parameter
-
-### `HTTP` response
-
-### `HTTP` response status code
-
-### Common `HTTP` response status codes
-
-#### `404` response status code
 
 ## API
 
