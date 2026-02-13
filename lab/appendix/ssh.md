@@ -63,6 +63,20 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 
    Another file contains the private key.
 
+3. View the content of the public key file:
+
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   cat ~/.ssh/se_toolkit_key.pub
+   ```
+
+   You should see something similar to this:
+
+   ```terminal
+   ssh-ed25519 AKdk38D3faWJnlFfalFJSKEFGG/vmLQ62Z+vpWCe5e/c2n37cnNc39N3c8qb7cBS+e3d se-toolkit-student
+   ```
+
 > [!IMPORTANT]
 > Never share the private key.
 > This is your secret identity.
