@@ -22,17 +22,10 @@
     - [Clone the fork using the `VS Code Terminal`](#clone-the-fork-using-the-vs-code-terminal)
     - [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
   - [18. Open `VS Code` in the cloned repo directory](#18-open-vs-code-in-the-cloned-repo-directory)
-  - [19. Set up `VS Code` extensions](#19-set-up-vs-code-extensions)
-  - [20. Reload `VS Code`](#20-reload-vs-code)
-  - [21. Explore `VS Code` layout](#21-explore-vs-code-layout)
-  - [22. Open `README.md`](#22-open-readmemd)
-  - [23. Open `Markdown` preview](#23-open-markdown-preview)
-  - [24. Continue creating a VM](#24-continue-creating-a-vm)
-  - [25. Create a virtual environment](#25-create-a-virtual-environment)
-  - [26. Check that the `.venv` directory was created](#26-check-that-the-venv-directory-was-created)
-  - [27. Install the dependencies to the virtual environment](#27-install-the-dependencies-to-the-virtual-environment)
-  - [28. Select the `Python` interpreter](#28-select-the-python-interpreter)
-  - [29. Check that `Python` works](#29-check-that-python-works)
+  - [19. Continue creating a VM](#19-continue-creating-a-vm)
+  - [20. Install `Python` and dependencies](#20-install-python-and-dependencies)
+  - [21. Select the `Python` interpreter](#21-select-the-python-interpreter)
+  - [22. Check that `Python` works](#22-check-that-python-works)
 - [Optional steps](#optional-steps)
   - [1. Change the workspace settings](#1-change-the-workspace-settings)
   - [2. Set up a coding agent](#2-set-up-a-coding-agent)
@@ -43,6 +36,7 @@
     - [Create the `task` label](#create-the-task-label)
     - [Add the label to issues](#add-the-label-to-issues)
     - [See all issues with the label](#see-all-issues-with-the-label)
+  - [7. View `README.md` in `VS Code`](#7-view-readmemd-in-vs-code)
 
 ## Steps
 
@@ -259,91 +253,27 @@ Clone the fork using any of the following methods:
 7. You should see `SE-TOOLKIT-LAB-2` there.
 8. You can close the `VS Code` that you [opened in the `software-engineering-toolkit` directory](#13-open-vs-code-in-the-software-engineering-toolkit-directory).
 
-### 19. Set up `VS Code` extensions
-
-1. [Install recommended `VS Code` extensions](./appendix/vs-code.md#install-recommended-extensions).
-2. Sign in to accounts.
-    1. Go to the [`Activity Bar`](./appendix/vs-code.md#activity-bar).
-    2. Click the icon `Accounts`.
-    3. Click `Sign in with GitHub ...`.
-    4. Repeat for the remaining extensions if there are any.
-
-### 20. Reload `VS Code`
-
-[Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
-`Developer: Reload Window`.
-
-### 21. Explore `VS Code` layout
-
-Look at the [`Basic Layout`](./appendix/vs-code.md#basic-layout).
-
-### 22. Open `README.md`
-
-> [!NOTE]
-> This file (`lab/setup.md`), `README.md`, and other files in this repository that have the extension `.md` are written in [`Markdown`](https://en.wikipedia.org/wiki/Markdown) (more precisely, in [`GitHub-flavored Markdown`](https://github.github.com/gfm/)).
-
-Open [`README.md`](../README.md) using any of the following methods.
-
-Method 1:
-
-1. [Open the file using the `Command Palette`](./appendix/vs-code.md#open-a-file-using-the-command-palette).
-
-Method 2:
-
-1. [Open `Folders`](./appendix/vs-code.md#open-the-folders).
-2. Click `README.md`.
-
-### 23. Open `Markdown` preview
-
-> [!NOTE]
-> `Markdown` is a [markup language](https://en.wikipedia.org/wiki/Markup_language).
->
-> `Markdown` gets translated into [`HTML`](https://en.wikipedia.org/wiki/HTML).
->
-> You see the rendered `HTML` when you open a preview in `VS Code` or on `GitHub`.
-
-Open the [`Markdown` preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) using any of the following methods.
-
-Method 1:
-
-1. Go to the [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar).
-2. Click `Open Preview to the Side`.
-
-Method 2:
-
-1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
-
-   `Markdown: Open Preview to the Side`
-
-### 24. Continue creating a VM
+### 19. Continue creating a VM
 
 [Create a VM using the subscription](./appendix/vm.md#create-a-vm-using-the-subscription).
 
-### 25. Create a virtual environment
+### 20. Install `Python` and dependencies
 
 1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
-   uv python install 3.12.12
+   uv sync
    ```
+
+   This command automatically downloads the correct `Python` version, creates the `.venv` virtual environment, and installs all dependencies.
 
 2. The output should be similar to this:
 
    ```terminal
-   Installed Python 3.12.12 in 44.55s
-   ```
-
-3. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   uv venv
-   ```
-
-4. The output should be similar this:
-
-   ```terminal
-   Using CPython 3.12.12
+   Using CPython 3.14.2
    Creating virtual environment at: .venv
+   Resolved 36 packages in 0.77ms
+   Installed 36 packages in 217ms
    ```
 
 > [!NOTE]
@@ -352,44 +282,13 @@ Method 2:
 >
 > This directory is managed by `uv`. You don't need to edit files in this directory manually.
 
-### 26. Check that the `.venv` directory was created
-
-1. Check that the `.venv` directory with all `Python` dependencies was created:
-
-   [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   ls .venv
-   ```
-
-2. The output should be similar to this:
-
-   ```terminal
-   bin  CACHEDIR.TAG  lib  lib64  pyvenv.cfg
-   ```
-
-### 27. Install the dependencies to the virtual environment
-
-1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   uv sync
-   ```
-
-2. The output should be similar to this:
-
-   ```terminal
-   Resolved 38 packages in 0.77ms
-   Audited 36 packages in 0.31ms
-   ```
-
-### 28. Select the `Python` interpreter
+### 21. Select the `Python` interpreter
 
 1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
    `Python: Select Interpreter`.
 2. Click `Recommended` to select the interpreter in `./.venv/bin/python`.
 
-### 29. Check that `Python` works
+### 22. Check that `Python` works
 
 1. [Open a new `VS Code Terminal`](./appendix/vs-code.md#open-a-new-terminal).
 2. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
@@ -499,3 +398,47 @@ Complete these steps:
    2. In the `Filter labels` input area, write `task`.
    3. Click the suggested label.
 5. You should see all issues that have the `task` label.
+
+### 7. View `README.md` in `VS Code`
+
+If you want to view `README.md` in `VS Code` instead of on `GitHub`:
+
+1. [Install recommended `VS Code` extensions](./appendix/vs-code.md#install-recommended-extensions).
+2. Sign in to accounts.
+    1. Go to the [`Activity Bar`](./appendix/vs-code.md#activity-bar).
+    2. Click the icon `Accounts`.
+    3. Click `Sign in with GitHub ...`.
+    4. Repeat for the remaining extensions if there are any.
+3. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
+   `Developer: Reload Window`.
+4. Look at the [`Basic Layout`](./appendix/vs-code.md#basic-layout).
+5. Open [`README.md`](../README.md) using any of the following methods.
+
+   Method 1:
+
+   1. [Open the file using the `Command Palette`](./appendix/vs-code.md#open-a-file-using-the-command-palette).
+
+   Method 2:
+
+   1. [Open `Folders`](./appendix/vs-code.md#open-the-folders).
+   2. Click `README.md`.
+
+6. Open the [`Markdown` preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) using any of the following methods.
+
+   > [!NOTE]
+   > `Markdown` is a [markup language](https://en.wikipedia.org/wiki/Markup_language).
+   >
+   > `Markdown` gets translated into [`HTML`](https://en.wikipedia.org/wiki/HTML).
+   >
+   > You see the rendered `HTML` when you open a preview in `VS Code` or on `GitHub`.
+
+   Method 1:
+
+   1. Go to the [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar).
+   2. Click `Open Preview to the Side`.
+
+   Method 2:
+
+   1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
+
+      `Markdown: Open Preview to the Side`
