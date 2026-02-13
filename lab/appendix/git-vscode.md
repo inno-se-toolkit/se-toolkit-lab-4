@@ -95,13 +95,12 @@
    `Git: Clone`.
 2. Click `Clone from GitHub`.
 3. Allow the extension to sign in.
-4. Find your repo in the list.
-
-   It should look like `<your-username>/<repo-name>`.
-5. Click it.
+4. Paste the [`<repo-url>`](./github.md#repo-url).
+5. [Select](./vs-code.md#select-an-option-from-a-list) the repo.
 6. Choose a directory where to clone the repo.
-7. You should choose `software-engineering-toolkit` that you created before.
-8. Confirm the choice.
+
+   You should choose `software-engineering-toolkit` that you created before.
+7. Confirm the choice.
 
 ## Switch to the `<branch-name>` branch
 
