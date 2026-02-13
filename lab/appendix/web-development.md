@@ -7,7 +7,7 @@
   - [`HTTP` response](#http-response)
   - [`HTTP` response status code](#http-response-status-code)
   - [Common `HTTP` response status codes](#common-http-response-status-codes)
-- [Server and client](#server-and-client)
+- [Web server and web client](#web-server-and-web-client)
   - [Web server](#web-server)
   - [Web client](#web-client)
 - [Data format](#data-format)
@@ -58,7 +58,7 @@ Standard status codes include:
 - [`404` (Not Found)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/404)
 - [`500` (Internal Server Error)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/500)
 
-## Server and client
+## Web server and web client
 
 ### Web server
 
