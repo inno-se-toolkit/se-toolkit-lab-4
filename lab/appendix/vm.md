@@ -20,9 +20,7 @@
 
 The university provides you a virtual machine (VM) for labs and home experiments.
 
-The VM is based on the `Ubuntu 24.04.4 LTS` distribution of [`Linux`](./linux.md).
-
-See [VM image](./vm-image.md) for more information about your VM.
+See [VM image](./vm-info.md) for the information about your VM.
 
 ## Create a VM
 
