@@ -48,11 +48,16 @@ Complete these steps to create a VM:
 5. Click checkmark.
 6. Go to the [`SUBSCRIPTIONS`](https://vm.innopolis.university/#Workspaces/MyAccountExtension/subscriptions) tab.
 7. Look at the `SUBSCRIPTION` column.
-8. You should see there `Software Engineering Toolkit`.
-9. The `Status` of this subscription may be `Syncing` or `Active`.
-10. It can be `Syncing` for a long time.
-11. You'll be able to [create a VM using this subscription](#create-a-vm-using-the-subscription) in approximately 15 minutes.
-    Don't just sit and wait. Go do something else.
+
+   You should see there `Software Engineering Toolkit`.
+
+   The `Status` of this subscription can be `Syncing` or `Active`.
+
+   It can be `Syncing` for a long time.
+
+   Nevertheless, you'll be able to [create a VM using this subscription](#create-a-vm-using-the-subscription) in approximately 15 minutes.
+
+   Don't just sit and wait. Complete other steps.
 
 ### Create a VM using the subscription
 
