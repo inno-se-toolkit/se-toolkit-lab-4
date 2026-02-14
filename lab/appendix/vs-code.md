@@ -17,6 +17,7 @@
   - [Run a command using the `Command Palette`](#run-a-command-using-the-command-palette)
   - [Open a file using `Quick Open`](#open-a-file-using-quick-open)
   - [Select an option from a list](#select-an-option-from-a-list)
+- [`Panel Toolbar`](#panel-toolbar)
 - [`VS Code Terminal`](#vs-code-terminal)
   - [Open the `VS Code Terminal`](#open-the-vs-code-terminal)
   - [Close the `VS Code Terminal`](#close-the-vs-code-terminal)
@@ -184,6 +185,20 @@ Method 2:
 
 1. Change the highlighted option using `UpArrow` and `DownArrow` on your keyboard.
 2. Press `Enter` to confirm the option.
+
+## `Panel Toolbar`
+
+Switch between panels.
+
+Location: see [`Basic Layout`](#basic-layout).
+
+Left side with tabs:
+
+<img alt="Panel Toolbar Left" src="../images/appendix/vs-code/panel-toolbar-left.png" style="width:400px"></img>
+
+Right side (depends on the current tab; this one is for the `VS Code Terminal`):
+
+<img alt="Panel Toolbar Right" src="../images/appendix/vs-code/panel-toolbar-left.png" style="width:400px"></img>
 
 ## `VS Code Terminal`
 
