@@ -300,6 +300,34 @@ Method 2:
    4. [Run `VS Code` in `WSL`](https://code.visualstudio.com/docs/remote/wsl-tutorial#_run-in-wsl).
    5. [End your `WSL` connection](https://code.visualstudio.com/docs/remote/wsl-tutorial#_ending-your-wsl-connection).
 
+### (`Windows` only) Set the default shell for the `VS Code Terminal`
+
+1. Make sure you can [run `VS Code` in WSL](#windows-only-set-up-running-vs-code-in-wsl).
+2. [Run using the `Command Palette`](#run-a-command-using-the-command-palette):
+   `Terminal: Select Default Profile`.
+3. There can be the following cases.
+
+   - Case 1 (bad): You don't have the recommended extensions installed.
+
+     <img alt="Terminal Default Profile Bad Options" src="../images/appendix/vs-code/command-palette-default-terminal-profile-bad-options.png" style="width:400px"></img>
+
+     Return to the first step and make sure you can [run `VS Code` in WSL](#windows-only-set-up-running-vs-code-in-wsl).
+   - Case 2 (good): You're running `VS Code` outside `WSL`.
+
+     <img alt="Terminal Default Profile Outside WSL" src="../images/appendix/vs-code/command-palette-default-terminal-profile-outside-wsl-wsl.png" style="width:400px"></img>
+
+     [Select](#select-an-option-from-a-list) `Ubuntu (WSL)` or another option with `WSL` in the name.
+
+     **Note:** [`Ubuntu`](./linux.md#ubuntu) is a [`Linux` distro](./linux.md#ubuntu).
+
+   - Case 3 (the best): You're running `VS Code` inside `WSL`. You've probably [opened the directory inside `WSL`](#open-the-directory-in-wsl). This is the best case.
+
+     <img alt="Terminal Default Profile Outside WSL" src="../images/appendix/vs-code/command-palette-default-terminal-profile-inside-wsl-bash.png" style="width:400px"></img>
+
+     [Select](#select-an-option-from-a-list) `bash`.
+4. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
+5. Close all tabs in the `VS Code Terminal`.
+6. [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal).
 
 ### Run a command using the `VS Code Terminal`
 
