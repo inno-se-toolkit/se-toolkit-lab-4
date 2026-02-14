@@ -380,33 +380,6 @@ If you want to view `README.md` in `VS Code` instead of on `GitHub`:
 3. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
    `Developer: Reload Window`.
 4. Look at the [`Basic Layout`](./appendix/vs-code.md#basic-layout).
-5. Open [`README.md`](../README.md) using any of the following methods.
-
-   Method 1:
-
-   1. [Open the file using the `Command Palette`](./appendix/vs-code.md#open-a-file-using-the-command-palette).
-
-   Method 2:
-
-   1. [Open `Folders`](./appendix/vs-code.md#open-the-folders).
-   2. Click `README.md`.
-
-6. Open the [`Markdown` preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) using any of the following methods.
-
-   > [!NOTE]
-   > `Markdown` is a [markup language](https://en.wikipedia.org/wiki/Markup_language).
-   >
-   > `Markdown` gets translated into [`HTML`](https://en.wikipedia.org/wiki/HTML).
-   >
-   > You see the rendered `HTML` when you open a preview in `VS Code` or on `GitHub`.
-
-   Method 1:
-
-   1. Go to the [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar).
-   2. Click `Open Preview to the Side`.
-
-   Method 2:
-
-   1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
-
-      `Markdown: Open Preview to the Side`
+5. [Open the file](./appendix/vs-code.md#open-the-file):
+   `README.md`.
+6. [Open the `Markdown` preview](./appendix/vs-code.md#open-the-markdown-preview).
