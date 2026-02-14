@@ -49,6 +49,7 @@
 - [Workspace settings](#workspace-settings)
   - [Change the workspace settings](#change-the-workspace-settings)
 - [Common actions](#common-actions)
+  - [Open the `Markdown` preview](#open-the-markdown-preview)
 - [Language server](#language-server)
   - [Type on hover](#type-on-hover)
   - [Docs on hover](#docs-on-hover)
@@ -518,6 +519,22 @@ Here are some [workspace settings](#workspace-settings) that you can change:
 - `Markdown` editor and preview [synchronization settings](https://code.visualstudio.com/docs/languages/markdown#_editor-and-preview-synchronization) - Disabled for smoother scrolling of the editor and the preview.
 
 ## Common actions
+### Open the `Markdown` preview
+
+> [!NOTE]
+> See [`Markdown`](./file-formats.md#markdown).
+
+Method 1:
+
+1. Go to the [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar).
+2. Click `Open Preview to the Side`.
+
+Method 2:
+
+1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
+
+  `Markdown: Open Preview to the Side`
+
 ## Language server
 
 ### Type on hover
