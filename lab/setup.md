@@ -145,7 +145,7 @@ Complete these steps:
 ### 15. Install `uv`
 
 > [!NOTE]
-> [`uv`](./appendix/python.md#uv) is a package manager for `Python`.
+> [`uv`](./appendix/python.md#uv) is a package manager for [`Python`](./appendix/python.md).
 
 Follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/) for your platform (`Windows`, `Linux`, `macOS`).
 
