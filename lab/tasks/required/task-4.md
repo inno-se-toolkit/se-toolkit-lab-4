@@ -36,16 +36,14 @@ Title: `[Task] Deploy the web server to the VM`
 
 ### 2. Connect to the VM
 
-> [!NOTE]
-> If you haven't set up `SSH` yet, follow the steps in the [`SSH` appendix](../../appendix/ssh.md).
-
-1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. Make sure you have [set up SSH](../../appendix/ssh.md#set-up-ssh).
+2. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    ssh se-toolkit-vm
    ```
 
-2. You should see the remote shell prompt (e.g., `root@<your-vm-name>:~#`).
+3. You should see the remote shell prompt (e.g., `root@<your-vm-name>:~#`).
 
 > [!IMPORTANT]
 > Run all subsequent commands  (unless specified otherwise) in the shell where you see this prompt.
