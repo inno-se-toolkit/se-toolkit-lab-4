@@ -354,7 +354,7 @@ Docs:
 Actions:
 
 - [Open the `Explorer`](#open-the-explorer)
-- [Open the file using the `Explorer`](#open-the-file-using-the-explorer)
+- [Open the local file using the `Explorer`](#open-the-local-file-using-the-explorer)
 
 ### Open the `Explorer`
 
