@@ -24,6 +24,7 @@
   - [Switch to another `VS Code Terminal`](#switch-to-another-vs-code-terminal)
   - [Copy text inside the `VS Code Terminal`](#copy-text-inside-the-vs-code-terminal)
   - [Paste text inside the `VS Code Terminal`](#paste-text-inside-the-vs-code-terminal)
+  - [Check the current shell in the `VS Code Terminal`](#check-the-current-shell-in-the-vs-code-terminal)
   - [Run a command using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal)
 - [`Explorer`](#explorer)
   - [Open the `Explorer`](#open-the-explorer)
@@ -249,6 +250,19 @@ Method 2:
 ### Paste text inside the `VS Code Terminal`
 
 `Ctrl+Shift+V` (`Cmd+V` on `macOS`, `Ctrl+V` on `Windows`)
+
+### Check the current shell in the `VS Code Terminal`
+
+1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal)
+2. Look at the [`Panel Toolbar`](#panel-toolbar).
+
+   <img alt="Current Terminal Shell" src="../images/appendix/vs-code/terminal-single-current-shell-bash.png" style="width:400px"></img>
+
+   You should see on:
+   - `Windows`: `bash` or `WSL`;
+   - `macOS`: `zsh` or `bash`;
+   - `Linux`: `bash`, `fish`, `zsh`, or another shell name.
+
 
 ### Run a command using the `VS Code Terminal`
 
