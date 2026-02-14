@@ -18,7 +18,9 @@
 
 ## Your VM
 
-The university provides you a virtual machine (VM) for labs and home experiments.
+The university provides you a virtual machine (VM) for labs and home experiments for the duration of the `Software Engineering Toolkit` course.
+
+You probably won't have access to the VMs after the course finishes.
 
 See [VM image](./vm-info.md) for the information about your VM.
 
