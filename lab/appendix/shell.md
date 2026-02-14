@@ -11,10 +11,7 @@ The `shell` is a program that reads your commands and runs them.
 `bash` is the most common shell in learning materials and server docs.
 
 > [!NOTE]
-> On `Windows`, you can run `bash` commands using one of the following options:
->
-> - Using the `Git Bash`.
-> - Using the `WSL`.
+> On `Windows`, you must to [open a directory in `WSL`](./vs-code.md#windows-only-open-the-directory-in-wsl) to run `bash`.
 
 ### `Git Bash` (`Windows`)
 
