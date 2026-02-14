@@ -28,30 +28,68 @@ Most `bash` commands in this course work in `zsh` as well.
 
 ## Path
 
-A `path` points to a location in the filesystem.
+A path points to a location in the filesystem.
 
-- Absolute path: starts from root, for example `/home/user/project`.
-- Relative path: starts from current directory, for example `src/app`.
-- Home shortcut: `~` means your home directory.
+### Absolute path
 
-### Current working directory
+Starts from [root](#root-) or [home](#home-).
+
+Examples:
+
+1. `/home`
+2. `/nix/store`
+
+### Relative path
+
+Starts from the current directory.
+
+Examples:
+
+- `src/app`
+- `./docs`
+
+### Root (`/`)
+
+[Absolute path](#absolute-path) for the root of the file system.
+
+### Home (`~`)
+
+Shortcut for the [absolute path](#absolute-path) for the [user](./linux.md#users) home directory.
+
+### Parent directory (`..`)
+
+[Relative path](#relative-path) for the parent of the file or a directory.
+
+Examples:
+
+- For the file `parent/child/file.md`, the parent directory is `parent/child`.
+- For the directory `parent/child`, the parent directory is `parent`.
+
+## `<file-path>`
+
+A [path](#path) to a file.
+
+## Current working directory
 
 The current working directory is the directory where commands run by default.
 
-Show the current working directory:
+### Show the current working directory
 
-```terminal
-pwd
-```
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
-Navigate directories:
+   ```terminal
+   pwd
+   ```
 
-```terminal
-cd /absolute/path
-cd relative/path
-cd ~
-cd ..
-```
+### Navigate directories
+
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+    ```terminal
+    cd /
+    cd ~
+    cd ..
+    ```
 
 List files in the current working directory:
 
