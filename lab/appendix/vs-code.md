@@ -37,6 +37,7 @@
   - [Close the `Source Control`](#close-the-source-control)
 - [`Extensions`](#extensions)
   - [Open the `Extensions`](#open-the-extensions)
+  - [Install the extension](#install-the-extension)
   - [Filter the `Extensions`](#filter-the-extensions)
   - [Install recommended `Extensions`](#install-recommended-extensions)
 - [Keyboard shortcuts](#keyboard-shortcuts)
@@ -49,7 +50,7 @@
 - [Workspace settings](#workspace-settings)
   - [Change the workspace settings](#change-the-workspace-settings)
 - [Common actions](#common-actions)
-  - [(Windows only) Open the directory in `WSL`](#windows-only-open-the-directory-in-wsl)
+  - [(`Windows` only) Open the directory in `WSL`](#windows-only-open-the-directory-in-wsl)
   - [Open the file](#open-the-file)
   - [Open the `Markdown` preview](#open-the-markdown-preview)
 - [Language server](#language-server)
@@ -290,10 +291,10 @@ Method 2:
 
 ### (`Windows` only) Set up running `VS Code` in `WSL`
 
-1. [Install recommended extensions](#install-recommended-extensions).
+1. [Install the extension](./vs-code.md#extensions) [`ms-vscode-remote.remote-wsl`](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl).
 
-   They include the [`ms-vscode-remote.remote-wsl`](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) extension that lets you use `WSL` in `VS Code`.
-1. Complete these steps of the [tutorial](https://code.visualstudio.com/docs/remote/wsl-tutorial):
+   It lets you use `WSL` in `VS Code`.
+2. Complete these steps of the [tutorial](https://code.visualstudio.com/docs/remote/wsl-tutorial):
    1. [Enable `WSL`](https://code.visualstudio.com/docs/remote/wsl-tutorial#_enable-wsl).
    2. [Install a `Linux` distro](https://code.visualstudio.com/docs/remote/wsl-tutorial#_install-a-linux-distro).
    3. Run using the current `WSL` terminal:
@@ -438,6 +439,19 @@ Method 2:
 
 1. Press `Ctrl+Shift+X` (`Cmd+Shift+X` on `macOS`).
 
+### Install the extension
+
+1. Open the `Extensions`.
+2. Write the extension:
+   - name
+   - or, identifier
+
+      Format: `<extension-publisher>.<extension-name>`
+
+      Example: `ms-vscode-remote.remote-wsl`).
+3. Click the extension.
+4. Click install.
+
 ### Filter the `Extensions`
 
 1. [Open the `Extensions`](#open-the-extensions).
@@ -524,7 +538,7 @@ Here are some [workspace settings](#workspace-settings) that you can change:
 
 ## Common actions
 
-### (Windows only) Open the directory in `WSL`
+### (`Windows` only) Open the directory in `WSL`
 
 1. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
    `WSL: Open Folder in WSL...`
@@ -534,9 +548,17 @@ Here are some [workspace settings](#workspace-settings) that you can change:
 
 ### Open the file
 
-Method 1: [Open the file using `Quick Open`](#open-the-file-using-quick-open)
+Method 1: [Open the local file using the `Explorer`](#open-the-local-file-using-the-explorer)
 
-Method 2: [Open the file using the `Explorer`](#open-the-file-using-the-explorer)
+Method 2: [Open the file using `Quick Open`](#open-the-file-using-quick-open)
+
+Method 3: Open the file using `VS Code`:
+
+1. [Run using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal):
+
+  ```terminal
+  code <file>
+  ```
 
 ### Open the `Markdown` preview
 
@@ -545,12 +567,12 @@ Method 2: [Open the file using the `Explorer`](#open-the-file-using-the-explorer
 
 Method 1:
 
-1. Go to the [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar).
+1. Go to the [`Editor Toolbar`](#editor-toolbar).
 2. Click `Open Preview to the Side`.
 
 Method 2:
 
-1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
+1. [Run using the `Command Palette`](#run-a-command-using-the-command-palette):
 
   `Markdown: Open Preview to the Side`
 
