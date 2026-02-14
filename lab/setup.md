@@ -225,7 +225,7 @@ Configure `Git` if you want to change the values that you saw while [checking yo
 ### 8. Continue creating a VM
 
 1. [Set up `SSH`](./appendix/ssh.md#set-up-ssh).
-1. [Create a VM using the subscription](./appendix/vm.md#create-a-vm-using-the-subscription).
+2. [Create a VM using the subscription](./appendix/vm.md#create-a-vm-using-the-subscription).
 
 ### 9. Set up `Python` in `VS Code`
 
