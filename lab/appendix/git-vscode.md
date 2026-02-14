@@ -2,7 +2,7 @@
 
 <h2>Table of contents</h2>
 
-- [Open `VS Code` in the directory](#open-vs-code-in-the-directory)
+- [Open in `VS Code` the directory](#open-in-vs-code-the-directory)
 - [Clone the repo](#clone-the-repo)
   - [Clone the repo using the `VS Code Terminal`](#clone-the-repo-using-the-vs-code-terminal)
   - [Clone the repo using the `Command Palette`](#clone-the-repo-using-the-command-palette)
@@ -36,7 +36,7 @@
   - [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
   - [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
 
-## Open `VS Code` in the directory
+## Open in `VS Code` the directory
 
 > [!NOTE]
 > The `<directory-name>` is the name of a directory.

@@ -46,6 +46,7 @@ Complete these steps to create a VM:
 9. The `Status` of this subscription may be `Syncing` or `Active`.
 10. It can be `Syncing` for a long time.
 11. You'll be able to [create a VM using this subscription](#create-a-vm-using-the-subscription) in approximately 15 minutes.
+    Don't just sit and wait. Go do something else.
 
 ### Create a VM using the subscription
 

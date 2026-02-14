@@ -9,6 +9,7 @@
 - [Repository](#repository)
   - [`<repo-name>`](#repo-name)
   - [`<repo-url>`](#repo-url)
+  - [Make your repository public](#make-your-repository-public)
 - [Repository owner](#repository-owner)
 - [Fork](#fork)
   - [Fork a repo](#fork-a-repo)
@@ -77,6 +78,10 @@ A repository URL is typically `https://github.com/<repo-owner-username>/<repo-na
 
 - `<repo-owner-username>` is the [repo owner](#repository-owner) `GitHub` username;
 - `<repo-name>` is the name of the repository.
+
+### Make your repository public
+
+1. If you don't see `Public` near your repo name, [make your repo public](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#changing-a-repositorys-visibility).
 
 ## Repository owner
 

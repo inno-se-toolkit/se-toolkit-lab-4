@@ -3,35 +3,38 @@
 - [Steps](#steps)
   - [1. Find a partner](#1-find-a-partner)
   - [2. Start creating a VM](#2-start-creating-a-vm)
-  - [3. Sign in on `GitHub`](#3-sign-in-on-github)
-  - [4. Fork the course instructors' repo](#4-fork-the-course-instructors-repo)
-  - [5. Go to your fork](#5-go-to-your-fork)
-  - [6. Make your fork public](#6-make-your-fork-public)
-  - [7. Enable issues](#7-enable-issues)
-  - [8. Add a classmate as a collaborator](#8-add-a-classmate-as-a-collaborator)
-  - [9. Protect your `main` branch](#9-protect-your-main-branch)
-  - [10. Install `Git`](#10-install-git)
-  - [11. Install `VS Code`](#11-install-vs-code)
-  - [12. (Optional, `Windows` only) Install WSL](#12-optional-windows-only-install-wsl)
-  - [13. Open `VS Code` in the `software-engineering-toolkit` directory](#13-open-vs-code-in-the-software-engineering-toolkit-directory)
-  - [14. (Windows only) Set the default shell](#14-windows-only-set-the-default-shell)
-  - [15. Install `uv`](#15-install-uv)
-  - [15. Configure `Git`](#15-configure-git)
-  - [16. Copy your fork URL](#16-copy-your-fork-url)
-  - [17. Clone your fork](#17-clone-your-fork)
-  - [18. Open `VS Code` in the cloned repo directory](#18-open-vs-code-in-the-cloned-repo-directory)
-  - [19. Set up `SSH`](#19-set-up-ssh)
-  - [20. Continue creating a VM](#20-continue-creating-a-vm)
-  - [21. Install `Python` and dependencies](#21-install-python-and-dependencies)
-  - [22. Select the `Python` interpreter](#22-select-the-python-interpreter)
-  - [23. Check that `Python` works](#23-check-that-python-works)
+  - [3. Set up your fork](#3-set-up-your-fork)
+    - [3.1. Sign in on `GitHub`](#31-sign-in-on-github)
+    - [3.2. Fork the course instructors' repo](#32-fork-the-course-instructors-repo)
+    - [3.3. Go to your fork](#33-go-to-your-fork)
+    - [3.4. Enable issues](#34-enable-issues)
+    - [3.5. Add a classmate as a collaborator](#35-add-a-classmate-as-a-collaborator)
+    - [3.6. Protect your `main` branch](#36-protect-your-main-branch)
+  - [4. Install programs](#4-install-programs)
+    - [4.1. Install `VS Code`](#41-install-vs-code)
+    - [4.2. Install `Git`](#42-install-git)
+    - [4.3. Install `uv`](#43-install-uv)
+    - [4.5. (Optional, `Windows` only) Install `Ubuntu` using WSL](#45-optional-windows-only-install-ubuntu-using-wsl)
+  - [5. Open `VS Code` in the `software-engineering-toolkit` directory](#5-open-vs-code-in-the-software-engineering-toolkit-directory)
+  - [6. Set up `Git`](#6-set-up-git)
+    - [6.1 Check your `Git` config](#61-check-your-git-config)
+    - [6.2 Configure `Git`](#62-configure-git)
+  - [6. Open your cloned fork in `VS Code`](#6-open-your-cloned-fork-in-vs-code)
+    - [6.1. Copy your fork `URL`](#61-copy-your-fork-url)
+    - [6.2. Clone your fork](#62-clone-your-fork)
+    - [6.3. Open the cloned repo in `VS Code`](#63-open-the-cloned-repo-in-vs-code)
+  - [7. (`Windows` only) Set the default shell](#7-windows-only-set-the-default-shell)
+  - [8. Continue creating a VM](#8-continue-creating-a-vm)
+  - [9. Set up `Python` in `VS Code`](#9-set-up-python-in-vs-code)
+    - [9.1. Install `Python` and dependencies](#91-install-python-and-dependencies)
+    - [9.2. Select the `Python` interpreter](#92-select-the-python-interpreter)
+    - [9.3. Check that `Python` works](#93-check-that-python-works)
 - [Optional steps](#optional-steps)
-  - [1. Change the workspace settings](#1-change-the-workspace-settings)
-  - [2. Set up a coding agent](#2-set-up-a-coding-agent)
-  - [3. Set up the shell prompt](#3-set-up-the-shell-prompt)
-  - [4. Customize the `Source Control`](#4-customize-the-source-control)
-  - [5. Get familiar with `GitLens`](#5-get-familiar-with-gitlens)
-  - [6. Create a label for tasks](#6-create-a-label-for-tasks)
+  - [1. Set up a coding agent](#1-set-up-a-coding-agent)
+  - [2. Set up the shell prompt](#2-set-up-the-shell-prompt)
+  - [3. Customize the `Source Control`](#3-customize-the-source-control)
+  - [4. Get familiar with `GitLens`](#4-get-familiar-with-gitlens)
+  - [5. Create a label for tasks](#5-create-a-label-for-tasks)
     - [Create the `task` label](#create-the-task-label)
     - [Add the label to issues](#add-the-label-to-issues)
     - [See all issues with the label](#see-all-issues-with-the-label)
@@ -53,33 +56,31 @@
 
 [Create a subscription](./appendix/vm.md#create-a-subscription) to be able to create a VM.
 
-### 3. Sign in on `GitHub`
+### 3. Set up your fork
+
+#### 3.1. Sign in on `GitHub`
 
 1. Sign in on [`GitHub`](https://github.com/).
 2. [Find `<your-username>`](./appendix/github.md#find-your-username).
 
-### 4. Fork the course instructors' repo
+#### 3.2. Fork the course instructors' repo
 
 1. [Fork](./appendix/github.md#fork-a-repo) the course instructors' repo.
 
    The course instructors' repo [URL](./appendix/web-development.md#url) is <https://github.com/inno-se-toolkit/se-toolkit-lab-2>
 
-### 5. Go to your fork
+#### 3.3. Go to your fork
 
 1. [Go to your fork](./appendix/github.md#go-to-your-fork).
 
    The [URL](./appendix/web-development.md#url) of your fork should look like `https://github.com/<your-username>/se-toolkit-lab-2`.
 
-### 6. Make your fork public
-
-1. If you don't see `Public` near your fork name, [make your fork public](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#changing-a-repositorys-visibility).
-
-### 7. Enable issues
+#### 3.4. Enable issues
 
 1. Go to `Settings` -> `General` -> `Features`.
 2. Check the box near `Issues`.
 
-### 8. Add a classmate as a collaborator
+#### 3.5. Add a classmate as a collaborator
 
 1. Go to `Settings` -> `Collaborators` -> `Add people`.
 2. Add your partner as a collaborator.
@@ -87,7 +88,7 @@
 4. Make sure your collaborator has accepted the invitation sent to their email.
 5. It's OK if your collaborator can't change `Settings` in your repo.
 
-### 9. Protect your `main` branch
+#### 3.6. Protect your `main` branch
 
 > [!NOTE]
 > Branch protection prevents accidental pushes directly to `main`.
@@ -95,7 +96,7 @@
 
 Complete these steps:
 
-1. [Go to your fork](#5-go-to-your-fork).
+1. [Go to your fork](#33-go-to-your-fork).
 2. Go to `Settings`.
 3. Go to `Code and automation`.
 4. Go to `Rules`.
@@ -115,34 +116,21 @@ Complete these steps:
          - `Allowed merge methods`: `Merge`.
       - [x] Block force pushes
 
-### 10. Install `Git`
+### 4. Install programs
 
-[Install `Git`](https://git-scm.com/install/).
+#### 4.1. Install `VS Code`
 
-### 11. Install `VS Code`
-
-1. Install [`VS Code`](https://code.visualstudio.com/).
-
-   We chose this editor because it has built-in AI features and many useful [extensions](./appendix/vs-code.md#extensions).
+1. Install [`VS Code`](https://code.visualstudio.com/) if not installed.
 
 2. (Optional) [Learn more](../lab/appendix/vs-code.md) about `VS Code`.
 
-### 12. (Optional, `Windows` only) Install WSL
+#### 4.2. Install `Git`
 
-[Install WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
+1. [Install `Git`](https://git-scm.com/install/) if not installed.
 
-### 13. Open `VS Code` in the `software-engineering-toolkit` directory
+2. (Optional) [Learn more](../lab/appendix/git.md) about `Git`.
 
-1. Create somewhere on your computer a directory `software-engineering-toolkit` (e.g., on your `Desktop`).
-
-   Skip this step if the directory exists.
-2. [Open `VS Code` in the `software-engineering-toolkit` directory](./appendix/git-vscode.md#open-vs-code-in-the-directory).
-
-### 14. (Windows only) Set the default shell
-
-1. [Set the default shell](./appendix/vs-code.md#windows-only-set-the-default-shell-for-the-vs-code-terminal).
-
-### 15. Install `uv`
+#### 4.3. Install `uv`
 
 > [!NOTE]
 > [`uv`](./appendix/python.md#uv) is a package manager for [`Python`](./appendix/python.md).
@@ -151,7 +139,38 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 
 [Run the command using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal).
 
-### 15. Configure `Git`
+#### 4.5. (Optional, `Windows` only) Install `Ubuntu` using WSL
+
+1. Follow the [instructions](https://learn.microsoft.com/en-us/windows/wsl/install).
+
+### 5. Open `VS Code` in the `software-engineering-toolkit` directory
+
+1. Create somewhere on your computer a directory `software-engineering-toolkit` (e.g., on your `Desktop`).
+
+   Skip this step if the directory exists.
+2. [Open in `VS Code` the directory](./appendix/git-vscode.md#open-in-vs-code-the-directory):
+   `software-engineering-toolkit`.
+
+### 6. Set up `Git`
+
+#### 6.1 Check your `Git` config
+
+1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   git config --global --list
+   ```
+
+   The output should look like this (but with your values):
+
+   ```terminal
+   user.name=John Doe
+   user.email=johndoe@gmail.com
+   ```
+
+#### 6.2 Configure `Git`
+
+Configure `Git` if you want to change the values that you saw while [checking your `Git` config](#61-check-your-git-config).
 
 > [!IMPORTANT]
 > Replace `<your-name>` with a name and `<your-email>` with an email that you want to see in the commits.
@@ -173,9 +192,11 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 
      Example: `git config --global user.name 'johndoe@gmail.com'`
 
-### 16. Copy your fork URL
+### 6. Open your cloned fork in `VS Code`
 
-1. [Go to your fork](#5-go-to-your-fork).
+#### 6.1. Copy your fork `URL`
+
+1. [Go to your fork](#33-go-to-your-fork).
 2. Copy [`<your-fork-url>`](./appendix/github.md#your-fork-url).
 
    It should look like `https://github.com/<your-username>/se-toolkit-lab-2`.
@@ -183,27 +204,32 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 > [!NOTE]
 > Here, the `<repo-name>` is `se-toolkit-lab-2`.
 
-### 17. Clone your fork
+#### 6.2. Clone your fork
 
-[Clone your fork](./appendix/git-vscode.md#clone-the-repo):
+1. [Clone your fork](./appendix/git-vscode.md#clone-the-repo):
 
-- Replace `<repo-url>` with [`<your-fork-url>`](./appendix/github.md#your-fork-url).
-- Replace `<repo-name>` with `se-toolkit-lab-2`.
+   - Replace `<repo-url>` with [`<your-fork-url>`](./appendix/github.md#your-fork-url).
+   - Replace `<repo-name>` with `se-toolkit-lab-2`.
 
-### 18. Open `VS Code` in the cloned repo directory
+#### 6.3. Open the cloned repo in `VS Code`
 
-1. [Open `VS Code` in the `se-toolkit-lab-2` directory](./appendix/git-vscode.md#open-vs-code-in-the-directory).
-2. Close the `VS Code` that you [opened in the `software-engineering-toolkit` directory](#13-open-vs-code-in-the-software-engineering-toolkit-directory).
+1. [Open in `VS Code` the directory](./appendix/git-vscode.md#open-in-vs-code-the-directory):
+   `se-toolkit-lab-2`.
+2. [Install recommended extensions](./appendix/vs-code.md#install-recommended-extensions).
+3. Close the `VS Code` where you [opened the `software-engineering-toolkit` directory](#5-open-vs-code-in-the-software-engineering-toolkit-directory).
 
-### 19. Set up `SSH`
+### 7. (`Windows` only) Set the default shell
+
+1. [Set the default shell](./appendix/vs-code.md#windows-only-set-the-default-shell-for-the-vs-code-terminal).
+
+### 8. Continue creating a VM
 
 1. [Set up `SSH`](./appendix/ssh.md#set-up-ssh).
+1. [Create a VM using the subscription](./appendix/vm.md#create-a-vm-using-the-subscription).
 
-### 20. Continue creating a VM
+### 9. Set up `Python` in `VS Code`
 
-[Create a VM using the subscription](./appendix/vm.md#create-a-vm-using-the-subscription).
-
-### 21. Install `Python` and dependencies
+#### 9.1. Install `Python` and dependencies
 
 1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -228,13 +254,13 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 >
 > This directory is managed by `uv`. You don't need to edit files in this directory manually.
 
-### 22. Select the `Python` interpreter
+#### 9.2. Select the `Python` interpreter
 
 1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
    `Python: Select Interpreter`.
 2. Click `Recommended` to select the interpreter in `./.venv/bin/python`.
 
-### 23. Check that `Python` works
+#### 9.3. Check that `Python` works
 
 1. [Open a new `VS Code Terminal`](./appendix/vs-code.md#open-a-new-terminal).
 2. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
@@ -258,25 +284,19 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 
 These enhancements can make your life easier:
 
-- [1. Change the workspace settings](#1-change-the-workspace-settings)
-- [2. Set up a coding agent](#2-set-up-a-coding-agent)
-- [3. Set up the shell prompt](#3-set-up-the-shell-prompt)
-- [4. Customize the `Source Control`](#4-customize-the-source-control)
-- [5. Get familiar with `GitLens`](#5-get-familiar-with-gitlens)
-- [6. Create a label for tasks](#6-create-a-label-for-tasks)
+- [1. Set up a coding agent](#1-set-up-a-coding-agent)
+- [2. Set up the shell prompt](#2-set-up-the-shell-prompt)
+- [3. Customize the `Source Control`](#3-customize-the-source-control)
+- [4. Get familiar with `GitLens`](#4-get-familiar-with-gitlens)
+- [5. Create a label for tasks](#5-create-a-label-for-tasks)
 
-### 1. Change the workspace settings
-
-1. Go to the [workspace settings](./appendix/vs-code.md#workspace-settings).
-2. Change them as necessary.
-
-### 2. Set up a coding agent
+### 1. Set up a coding agent
 
 A coding agent can help you write code, explain concepts, and debug issues.
 
 See [Coding agents](./appendix/coding-agents.md).
 
-### 3. Set up the shell prompt
+### 2. Set up the shell prompt
 
 `Starship` shows your current `Git` branch, status, and other useful info directly in your [shell prompt](https://en.wikibooks.org/wiki/Guide_to_Unix/Explanations/Shell_Prompt) in almost any terminal, including the [`VS Code Terminal`](./appendix/vs-code.md#terminal).
 
@@ -286,7 +306,7 @@ Complete these steps:
 2. [Open the `VS Code Terminal`](./appendix/vs-code.md#open-the-vs-code-terminal).
 3. You should see something similar to `se-toolkit-lab-2 on main`.
 
-### 4. Customize the `Source Control`
+### 3. Customize the `Source Control`
 
 1. [Open the `Source Control`](./appendix/vs-code.md#open-the-source-control).
 2. Click three dots to the right of `SOURCE CONTROL`.
@@ -294,7 +314,7 @@ Complete these steps:
 
    <img alt="Changes and GitLens" src="./images/appendix/vs-code/source-control-allowed-views.png" style="width:400px"></img>
 
-### 5. Get familiar with `GitLens`
+### 4. Get familiar with `GitLens`
 
 [`GitLens`](./appendix/gitlens.md) helps you work with `Git` in `VS Code`.
 
@@ -305,7 +325,7 @@ Complete these steps:
 3. [Inspect the current branch](./appendix/gitlens.md#inspect-the-current-branch)
 4. [Inspect the remotes](./appendix/gitlens.md#inspect-the-remotes)
 
-### 6. Create a label for tasks
+### 5. Create a label for tasks
 
 [Labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) help you filter and organize issues.
 
@@ -322,7 +342,7 @@ Complete these steps:
 
 #### Create the `task` label
 
-1. [Go to your fork](#5-go-to-your-fork).
+1. [Go to your fork](#33-go-to-your-fork).
 2. Go to `Issues` -> `Labels`.
 3. Create a new label:
    1. Click `New label`.
@@ -331,12 +351,12 @@ Complete these steps:
 
 #### Add the label to issues
 
-1. [Go to your fork](#5-go-to-your-fork).
+1. [Go to your fork](#33-go-to-your-fork).
 2. [Add](https://github.com/orgs/community/discussions/53473#discussioncomment-5697478) the `task` label to some of your issues.
 
 #### See all issues with the label
 
-1. [Go to your fork](#5-go-to-your-fork).
+1. [Go to your fork](#33-go-to-your-fork).
 2. Go to `Issues`.
 3. If you don't see any `Open` issues, click `Closed`.
 4. Filter issues by the label:
