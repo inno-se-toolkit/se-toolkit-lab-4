@@ -283,6 +283,8 @@ Method 2:
 
    You should see on:
    - `Windows`: `bash` or `WSL`;
+
+     If you see something else, [set the default shell](#windows-only-set-the-default-shell-for-the-vs-code-terminal).
    - `macOS`: `zsh` or `bash`;
    - `Linux`: `bash`, `fish`, `zsh`, or another shell name.
 
