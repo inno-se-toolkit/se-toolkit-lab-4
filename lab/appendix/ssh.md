@@ -189,8 +189,30 @@ You can connect using the alias that you [added to your `SSH` config](#add-the-h
 
 1. Verify host IP and network connectivity.
 2. Verify the VM is running.
-3. Use verbose logs to debug:
+3. Try to ping the VM:
+
+   Run using the `VS Code Terminal`:
+
+   ```terminal
+   ping <your-vm-ip-address>
+   ```
+
+   You should see logs like these:
+
+   ```terminal
+   PING 10.93.24.112 (10.93.24.112) 56(84) bytes of data.
+
+   64 bytes from 10.93.24.112: icmp_seq=1 ttl=61 time=2.15 ms
+   64 bytes from 10.93.24.112: icmp_seq=2 ttl=61 time=0.996 ms
+   64 bytes from 10.93.24.112: icmp_seq=3 ttl=61 time=1.08 ms
+   
+   ...
+   ```
+
+4. Use verbose logs to debug:
 
    ```terminal
    ssh -v se-toolkit-vm
    ```
+
+5. Try to stop, delete, and create a new VM if there are still problems.
