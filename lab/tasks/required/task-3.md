@@ -46,7 +46,7 @@ Now you will configure environment variables specific to the deployment when usi
 
 ### 3. View the file `.env.docker.example`
 
-1. [Open the file using `Quick Open`](../../appendix/vs-code.md#open-a-file-using-the-command-palette):
+1. [Open the file](../../appendix/vs-code.md#open-the-file):
    [`.env.docker.example`](../../../.env.docker.example).
 
 ### 4. Create the file `.env.docker.secret`
@@ -77,7 +77,8 @@ Method 1:
 
 Method 2:
 
-1. [Open the file using `Quick Open`](../../appendix/vs-code.md#open-a-file-using-the-command-palette): [`.env.secret`](../../../.env.secret).
+1. [Open the file](../../appendix/vs-code.md#open-the-file):
+   [`.env.secret`](../../../.env.secret).
 
 ### Edit the file `.env.docker.secret`
 
@@ -136,7 +137,8 @@ Method 2:
 2. Find the service `caddy`.
 
    **Note:** this service is running `Caddy` in a container at the port `CADDY_HOST_PORT` specified in the file `.env.docker.secret`.
-3. Open the file `.env.docker.secret`.
+3. [Open the file](../../appendix/vs-code.md#open-the-file):
+   `.env.docker.secret`.
 4. Find there the value of `CADDY_HOST_PORT`.
 5. By default it's `42002`.
 6. Open in a browser: `http://127.0.0.1:42002/status`

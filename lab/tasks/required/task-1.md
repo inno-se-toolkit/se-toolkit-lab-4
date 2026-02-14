@@ -46,7 +46,7 @@ Read the following sections:
 
 ### 3. View the file `.env.example`
 
-1. [Open the file using `Quick Open`](../../appendix/vs-code.md#open-a-file-using-the-command-palette):
+1. [Open the file](../../appendix/vs-code.md#open-the-file):
    [`.env.example`](../../../.env.example).
 
 ### 4. Create the file `.env.secret`
@@ -75,7 +75,7 @@ Method 1:
 
 Method 2:
 
-1. [Open the file using `Quick Open`](../../appendix/vs-code.md#open-a-file-using-the-command-palette):
+1. [Open the file](../../appendix/vs-code.md#open-the-file):
    `.env.secret`.
 
 ### 6. Check that the port `$PORT` is free
@@ -104,7 +104,7 @@ Method 2:
    1. It's probably the web server running if you tried running it before.
    2. You can safely [force stop it](#11-force-stop-the-web-server).
 2. Otherwise:
-   1. [Open the file using `Quick Open`](../../appendix/vs-code.md#open-a-file-using-the-command-palette):
+   1. [Open the file](../../appendix/vs-code.md#open-the-file):
       `.env.secret`
    2. Write another value for `PORT`, e.g., `41000`.
    3. [Check](#6-check-that-the-port-port-is-free) that the new `$PORT` (`41000`) is free.
