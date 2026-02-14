@@ -121,7 +121,7 @@ These commands run programs:
 - `pwd` - show current directory.
 - `ls` - list files.
 - `cd <dir>` - go to a directory.
-- `cat <file>` - print file content.
+- `cat <file-path>` - print the content of a file at the [`<file-path>`](./shell.md#file-path).
 
 ## Process
 

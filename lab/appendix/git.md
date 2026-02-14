@@ -40,6 +40,8 @@ git commit -m "docs: update appendix"
 git log --oneline --decorate --graph -n 15
 ```
 
+See [`<file-path>`](./shell.md#file-path).
+
 When confused, start with `git status` and read it carefully before running the next command.
 
 ## How `Git` works - videos

@@ -228,13 +228,15 @@ Use any of the following methods:
 2. Run:
 
    ```terminal
-   git add <file>
+   git add <file-path>
    # example: git add README.md
    # example (path with spaces): git add 'path/some image.svg'
    
    git commit -m '<type>: <short description>'
    # example: git commit -m 'docs: add architecture diagram'
    ```
+
+   See [`<file-path>`](./shell.md#file-path).
 
 ### Commit using `Source Control`
 

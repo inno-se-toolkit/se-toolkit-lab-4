@@ -554,8 +554,10 @@ Method 3: Open the file using `VS Code`:
 1. [Run using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal):
 
   ```terminal
-  code <file>
+  code <file-path>
   ```
+  
+  See [`<file-path>`](./shell.md#file-path).
 
 ### Open the `Markdown` preview
 
