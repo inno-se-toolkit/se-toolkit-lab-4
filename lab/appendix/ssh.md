@@ -13,6 +13,9 @@
   - [Verify the `SSH` setup](#verify-the-ssh-setup)
 - [Connect to the VM](#connect-to-the-vm)
 - [Common errors](#common-errors)
+  - [`Permission denied (publickey)`](#permission-denied-publickey)
+  - [`Bad owner or permissions`](#bad-owner-or-permissions)
+  - [`Connection timed out`](#connection-timed-out)
 
 ## `SSH` and shells
 
@@ -166,13 +169,13 @@ You can connect using the alias that you [added to your `SSH` config](#add-the-h
 
 ## Common errors
 
-`Permission denied (publickey)`:
+### `Permission denied (publickey)`
 
 1. Check `IdentityFile` in `~/.ssh/config`.
 2. Ensure the public key was added to the remote host.
 3. Ensure your key is loaded: `ssh-add -l`.
 
-`Bad owner or permissions` (Linux / `macOS` / `WSL`):
+### `Bad owner or permissions`
 
 1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -182,7 +185,7 @@ You can connect using the alias that you [added to your `SSH` config](#add-the-h
    chmod 644 ~/.ssh/se_toolkit_key.pub
    ```
 
-`Connection timed out`:
+### `Connection timed out`
 
 1. Verify host IP and network connectivity.
 2. Verify the VM is running.
