@@ -25,9 +25,9 @@
   - [Copy text inside the `VS Code Terminal`](#copy-text-inside-the-vs-code-terminal)
   - [Paste text inside the `VS Code Terminal`](#paste-text-inside-the-vs-code-terminal)
   - [Run a command using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal)
-- [`Folders`](#folders)
-  - [Open folders](#open-folders)
-  - [Open the `Folders`](#open-the-folders)
+- [`Explorer`](#explorer)
+  - [Open the `Explorer`](#open-the-explorer)
+  - [Open a file using the `Explorer`](#open-a-file-using-the-explorer)
 - [`Source Control`](#source-control)
   - [Open the `Source Control`](#open-the-source-control)
   - [Close the `Source Control`](#close-the-source-control)
@@ -256,7 +256,7 @@ Method 2:
 2. Write or [paste](#paste-text-inside-the-vs-code-terminal) a command.
 3. Press `Enter`.
 
-## `Folders`
+## `Explorer`
 
 View the file tree.
 
@@ -268,17 +268,21 @@ Docs:
 
 Actions:
 
-- [Open folders](#open-folders)
-- [Open the `Folders`](#open-the-folders)
+- [Open the `Explorer`](#open-the-explorer)
+- [Open a file using the `Explorer`](#open-a-file-using-the-explorer)
 
-### Open folders
-
-See [Open the `Folders`](#open-the-folders).
-
-### Open the `Folders`
+### Open the `Explorer`
 
 1. Go to the [`Activity Bar`](#activity-bar).
-2. Click `Folders`.
+2. Click the `Explorer` icon.
+
+   <img alt="Explorer" src="../images/appendix/vs-code/activity-bar-explorer.png" style="width:100px"></img>
+
+### Open a file using the `Explorer`
+
+1. [Open the `Explorer`](#open-the-explorer).
+2. Search for the file in the file tree.
+3. Click it.
 
 ## `Source Control`
 
