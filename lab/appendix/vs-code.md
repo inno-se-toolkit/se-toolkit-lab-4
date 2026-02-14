@@ -26,6 +26,8 @@
   - [Copy text inside the `VS Code Terminal`](#copy-text-inside-the-vs-code-terminal)
   - [Paste text inside the `VS Code Terminal`](#paste-text-inside-the-vs-code-terminal)
   - [Check the current shell in the `VS Code Terminal`](#check-the-current-shell-in-the-vs-code-terminal)
+  - [(`Windows` only) Set up running `VS Code` in `WSL`](#windows-only-set-up-running-vs-code-in-wsl)
+  - [(`Windows` only) Set the default shell for the `VS Code Terminal`](#windows-only-set-the-default-shell-for-the-vs-code-terminal)
   - [Run a command using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal)
 - [`Explorer`](#explorer)
   - [Open the `Explorer`](#open-the-explorer)
@@ -279,6 +281,24 @@ Method 2:
    - `Windows`: `bash` or `WSL`;
    - `macOS`: `zsh` or `bash`;
    - `Linux`: `bash`, `fish`, `zsh`, or another shell name.
+
+### (`Windows` only) Set up running `VS Code` in `WSL`
+
+1. [Install recommended extensions](#install-recommended-extensions).
+
+   They include the [`ms-vscode-remote.remote-wsl`](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) extension that lets you use `WSL` in `VS Code`.
+1. Complete these steps of the [tutorial](https://code.visualstudio.com/docs/remote/wsl-tutorial):
+   1. [Enable `WSL`](https://code.visualstudio.com/docs/remote/wsl-tutorial#_enable-wsl).
+   2. [Install a `Linux` distro](https://code.visualstudio.com/docs/remote/wsl-tutorial#_install-a-linux-distro).
+   3. Run using the current `WSL` terminal:
+
+      ```terminal
+      mkdir helloWorld
+      cd helloWorld
+      ```
+
+   4. [Run `VS Code` in `WSL`](https://code.visualstudio.com/docs/remote/wsl-tutorial#_run-in-wsl).
+   5. [End your `WSL` connection](https://code.visualstudio.com/docs/remote/wsl-tutorial#_ending-your-wsl-connection).
 
 
 ### Run a command using the `VS Code Terminal`
