@@ -35,7 +35,7 @@ Useful commands:
 
 ```terminal
 git status
-git add <file>
+git add <file-path>
 git commit -m "docs: update appendix"
 git log --oneline --decorate --graph -n 15
 ```

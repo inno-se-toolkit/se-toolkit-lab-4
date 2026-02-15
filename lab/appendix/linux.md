@@ -8,17 +8,8 @@
   - [`ArchLinux`](#archlinux)
   - [`NixOS`](#nixos)
   - [`CachyOS`](#cachyos)
-- [Shell](#shell)
-  - [Login shell](#login-shell)
-  - [Check what shell is running](#check-what-shell-is-running)
-- [`Bash`](#bash)
-  - [`Bash` syntax basics](#bash-syntax-basics)
-    - [Run a command](#run-a-command)
-    - [Pipe the `stdout`](#pipe-the-stdout)
 - [Program](#program)
   - [Useful programs](#useful-programs)
-- [Command](#command)
-  - [Useful commands](#useful-commands)
 - [Process](#process)
   - [PID](#pid)
 - [Groups](#groups)
@@ -55,51 +46,6 @@
 
 ### `CachyOS`
 
-## Shell
-
-An [operating system](./operating-system.md) shell is a computer program that provides relatively broad and direct access to the system on which it runs.
-[[source](https://en.wikipedia.org/wiki/Shell_(computing))]
-
-### Login shell
-
-<!-- TODO -->
-
-### Check what shell is running
-
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-    ```terminal
-    echo "$SHELL"
-    ```
-
-## `Bash`
-
-`Bash` (short for "Bourne Again SHell") is an interactive command interpreter and scripting language developed for `Unix`-like operating systems (e.g., [`Linux`](#linux)).
-[[source]]
-
-> [!NOTE]
-> `Bash` is the default login shell for `Ubuntu`.
-
-### `Bash` syntax basics
-
-#### Run a command
-
-```terminal
-<command> <arguments>
-```
-
-Example:
-
-```terminal
-ls .
-```
-
-#### Pipe the `stdout`
-
-```terminal
-<command 1> | <command 2>
-```
-
 ## Program
 
 A program is an executable file containing instructions that can be run by the operating system.
@@ -112,24 +58,13 @@ Programs can be compiled binaries, scripts, or other executable files that perfo
 
 See [Useful programs](./useful-programs.md).
 
-## Command
-
-### Useful commands
-
-These commands run programs:
-
-- `pwd` - show current directory.
-- `ls` - list files.
-- `cd <dir>` - go to a directory.
-- `cat <file-path>` - print the content of a file at the [`<file-path>`](./shell.md#file-path).
-
 ## Process
 
 A process is an instance of a running [program](#program).
 
 When you execute a program, the [operating system](./operating-system.md) creates a process that contains the program's code, memory space, variables, and system resources. Each process has a unique process ID (PID) and runs independently of other processes.
 
-Processes can be created, managed, and terminated using various [commands](#command).
+Processes can be created, managed, and terminated using various [shell commands](./shell.md#shell-command).
 
 They form the basis of multitasking in the operating system.
 

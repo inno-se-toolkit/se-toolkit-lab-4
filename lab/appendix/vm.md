@@ -4,15 +4,19 @@
 
 - [What is a VM](#what-is-a-vm)
 - [Your VM](#your-vm)
+- [`<your-vm-name>`](#your-vm-name)
+- [`<your-vm-ip-address>`](#your-vm-ip-address)
+- [Prepare the connection](#prepare-the-connection)
 - [Go to the VMs site](#go-to-the-vms-site)
 - [Create a VM](#create-a-vm)
   - [Create a subscription](#create-a-subscription)
   - [Create a VM using the subscription](#create-a-vm-using-the-subscription)
 - [Go to the VM page](#go-to-the-vm-page)
 - [Get the `IP address` of the VM](#get-the-ip-address-of-the-vm)
-- [Ping the VM](#ping-the-vm)
 - [Connect to the VM](#connect-to-the-vm)
+- [Delete VM](#delete-vm)
 - [Troubleshooting](#troubleshooting)
+  - [`ping` times out](#ping-times-out)
 
 ## What is a VM
 
@@ -25,6 +29,24 @@ The university provides you a virtual machine (VM) for labs and home experiments
 You probably won't have access to the VMs after the course finishes.
 
 See [VM image](./vm-info.md) for the information about your VM.
+
+## `<your-vm-name>`
+
+## `<your-vm-ip-address>`
+
+The [IP address](./networks.md)
+
+## Prepare the connection
+
+1. Disable `VPN`.
+2. Connect your computer to the `Wi-Fi` network `UniversityStudent`.
+3. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   ping <your-vm-ip-address>
+   ```
+
+   See [`<your-vm-ip-address>`](#your-vm-ip-address).
 
 ## Go to the VMs site
 
@@ -106,18 +128,6 @@ Complete these steps to create a VM:
 5. The `10.93.24.98` string is the `IP address` of the VM in a university network.
 6. We'll refer to this string as `<your-vm-ip-address>`.
 
-## Ping the VM
-
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   ping <your-vm-ip-address>
-   ```
-
-2. If it times out, try to recreate the VM.
-
-   Use the same public key as before.
-
 ## Connect to the VM
 
 1. [Add host to the `SSH` config](./ssh.md#add-the-host-to-the-ssh-config).
@@ -125,12 +135,22 @@ Complete these steps to create a VM:
 3. Connect your computer to the `Wi-Fi` network `UniversityStudent`.
 4. Open `VS Code`.
 5. [Connect to the VM](./ssh.md#connect-to-the-vm).
-6. After successful connection, you should see:
+6. If the connection is successful, you should see:
    1. The host fingerprint prompt (first connection only).
    2. A remote shell prompt on the VM (for example, `root@<your-vm-name>:~#`).
-   3. If you use `Remote - SSH` in `VS Code`, the status bar should show that you are connected to a remote host.
+   3. If you use the `ms-vscode-remote.remote-ssh` exntension in `VS Code`, the status bar should show that you are connected to a remote host.
+7. Otherwise, see [troubleshooting](#troubleshooting).
+
+## Delete VM
 
 ## Troubleshooting
+
+### `ping` times out
+
+1. Connect to the Wi `UniversityStudent`
+2. recreate the VM.
+
+   Use the same public key as before.
 
 If you can't connect:
 

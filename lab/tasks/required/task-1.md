@@ -92,7 +92,7 @@ Method 2:
    [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
-   source .env.secret && lsof -i :$PORT
+   source .env.secret && sudo lsof -i :$PORT
    ```
 
 2. If the command produces **no output**, the port is free.
@@ -153,7 +153,7 @@ Method 2:
 1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
-   source .env.secret && kill $(lsof -ti :$PORT)
+   source .env.secret && kill $(sudo lsof -ti :$PORT)
    ```
 
 2. [Check that the port is free](#6-check-that-the-port-port-is-free).

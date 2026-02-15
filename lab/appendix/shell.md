@@ -2,11 +2,24 @@
 
 <h2>Table of contents</h2>
 
-The `shell` is a program that reads your commands and runs them.
+## What is shell
+
+An [operating system](./operating-system.md) shell is a computer program that provides relatively broad and direct access to the system on which it runs.
+[[source](https://en.wikipedia.org/wiki/Shell_(computing))]
+
+### Login shell
+
+<!-- TODO -->
 
 ## Shell variants
 
 ### `bash`
+
+`Bash` (short for "Bourne Again SHell") is an interactive command interpreter and scripting language developed for `Unix`-like operating systems (e.g., [`Linux`](./linux.md#what-is-linux)).
+[[source]]
+
+> [!NOTE]
+> `Bash` is the default login shell for `Ubuntu`.
 
 `bash` is the most common shell in learning materials and server docs.
 
@@ -23,48 +36,9 @@ It provides a Unix-like shell environment on Windows.
 `zsh` is the default shell on modern `macOS` and is also common on Linux.
 Most `bash` commands in this course work in `zsh` as well.
 
-## Path
+## Shell prompt
 
-A path points to a location in the filesystem.
-
-### Absolute path
-
-Starts from [root](#root-) or [home](#home-).
-
-Examples:
-
-1. `/home`
-2. `/nix/store`
-
-### Relative path
-
-Starts from the current directory.
-
-Examples:
-
-- `src/app`
-- `./docs`
-
-### Root (`/`)
-
-[Absolute path](#absolute-path) for the root of the file system.
-
-### Home (`~`)
-
-Shortcut for the [absolute path](#absolute-path) for the [user](./linux.md#users) home directory.
-
-### Parent directory (`..`)
-
-[Relative path](#relative-path) for the parent of the file or a directory.
-
-Examples:
-
-- For the file `parent/child/file.md`, the parent directory is `parent/child`.
-- For the directory `parent/child`, the parent directory is `parent`.
-
-## `<file-path>`
-
-A [path](#path) to a file.
+## Shell command
 
 ## Current working directory
 
@@ -95,3 +69,42 @@ ls
 ```
 
 When a command fails with "No such file or directory", verify your current directory first using `pwd`.
+
+## Useful commands
+
+These commands run programs:
+
+- `pwd` - show current directory.
+- `ls` - list files.
+- `cd <dir>` - go to a directory.
+- `cat <file-path>` - print the content of a file at the [`<file-path>`](./shell.md#file-path).
+
+### Check what shell is running
+
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+    ```terminal
+    echo "$SHELL"
+    ```
+
+## `Bash`
+
+### `Bash` syntax basics
+
+#### Run a command
+
+```terminal
+<command> <arguments>
+```
+
+Example:
+
+```terminal
+ls .
+```
+
+#### Pipe the `stdout`
+
+```terminal
+<command 1> | <command 2>
+```

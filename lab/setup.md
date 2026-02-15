@@ -14,7 +14,7 @@
     - [4.1. Install `VS Code`](#41-install-vs-code)
     - [4.2. Install `Git`](#42-install-git)
     - [4.3. (Optional, `Windows` only) Install `Ubuntu 24.04` using WSL](#43-optional-windows-only-install-ubuntu-2404-using-wsl)
-  - [5. Open `VS Code` in the `software-engineering-toolkit` directory](#5-open-vs-code-in-the-software-engineering-toolkit-directory)
+  - [5. Open in `VS Code` the `software-engineering-toolkit` directory](#5-open-in-vs-code-the-software-engineering-toolkit-directory)
   - [6. Set up `Git`](#6-set-up-git)
     - [6.1 Check your `Git` config](#61-check-your-git-config)
     - [6.2 Configure `Git`](#62-configure-git)
@@ -134,13 +134,17 @@ Complete these steps:
 
 1. [Set up running `VS Code` using `WSL`](./appendix/vs-code.md#windows-only-set-up-running-vs-code-in-wsl).
 
-### 5. Open `VS Code` in the `software-engineering-toolkit` directory
+### 5. Open in `VS Code` the `software-engineering-toolkit` directory
 
-1. Create somewhere on your computer a directory `software-engineering-toolkit` (e.g., on your `Desktop`).
+1. Inside the `Desktop` [directory](./appendix/file-system.md#directory),
+   create the directory `software-engineering-toolkit`.
 
-   Skip this step if the directory exists.
+   Skip this step if this directory exists.
+
 2. [Open in `VS Code` the directory](./appendix/git-vscode.md#open-in-vs-code-the-directory):
    `software-engineering-toolkit`.
+
+3. [Check the current shell in the `VS Code Terminal`](./appendix/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 
 ### 6. Set up `Git`
 
