@@ -67,13 +67,13 @@
 
 1. [Fork](./appendix/github.md#fork-a-repo) the course instructors' repo.
 
-   The course instructors' repo [URL](./appendix/web-development.md#url) is <https://github.com/inno-se-toolkit/se-toolkit-lab-2>
+   The course instructors' repo [URL](./appendix/web-development.md#url) is <https://github.com/inno-se-toolkit/se-toolkit-lab-3>
 
 #### 3.3. Go to your fork
 
 1. [Go to your fork](./appendix/github.md#go-to-your-fork).
 
-   The [URL](./appendix/web-development.md#url) of your fork should look like `https://github.com/<your-github-username>/se-toolkit-lab-2`.
+   The [URL](./appendix/web-development.md#url) of your fork should look like `https://github.com/<your-github-username>/se-toolkit-lab-3`.
 
 #### 3.4. Enable issues
 
@@ -194,22 +194,22 @@ Configure `Git` if you want to change the values that you saw while [checking yo
 1. [Go to your fork](#33-go-to-your-fork).
 2. Copy [`<your-fork-url>`](./appendix/github.md#your-fork-url).
 
-   It should look like `https://github.com/<your-github-username>/se-toolkit-lab-2`.
+   It should look like `https://github.com/<your-github-username>/se-toolkit-lab-3`.
 
 > [!NOTE]
-> Here, the `<repo-name>` is `se-toolkit-lab-2`.
+> Here, the `<repo-name>` is `se-toolkit-lab-3`.
 
 #### 6.2. Clone your fork
 
 1. [Clone your fork](./appendix/git-vscode.md#clone-the-repo):
 
    - Replace `<repo-url>` with [`<your-fork-url>`](./appendix/github.md#your-fork-url).
-   - Replace `<repo-name>` with `se-toolkit-lab-2`.
+   - Replace `<repo-name>` with `se-toolkit-lab-3`.
 
 #### 6.3. Open the cloned repo in `VS Code`
 
 1. [Open in `VS Code` the directory](./appendix/git-vscode.md#open-in-vs-code-the-directory):
-   `se-toolkit-lab-2`.
+   `se-toolkit-lab-3`.
 2. [Install recommended extensions](./appendix/vs-code.md#install-recommended-extensions).
 3. Close the `VS Code` where you [opened the `software-engineering-toolkit` directory](#5-open-in-vs-code-the-software-engineering-toolkit-directory).
 
@@ -310,7 +310,7 @@ Complete these steps:
 
 1. Install [`Starship`](https://github.com/starship/starship#-installation).
 2. [Open the `VS Code Terminal`](./appendix/vs-code.md#open-the-vs-code-terminal).
-3. You should see something similar to `se-toolkit-lab-2 on main`.
+3. You should see something similar to `se-toolkit-lab-3 on main`.
 
 ### 3. Customize the `Source Control`
 

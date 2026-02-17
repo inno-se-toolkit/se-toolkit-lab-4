@@ -58,7 +58,7 @@ Title: `[Task] Deploy the web server to the VM`
 2. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
-   cd se-toolkit-lab-2
+   cd se-toolkit-lab-3
    ```
 
 ### 4. Create the file `.env.docker.secret`
