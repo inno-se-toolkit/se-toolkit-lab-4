@@ -290,7 +290,7 @@ Configure `Git` if you want to change the values that you saw while [checking yo
 > [secrets](./appendix/environments.md#secrets) such as the API key or the address of your VM.
 
 > [!TIP]
-> No edits are needed for local development. The default values in `.env.docker.example` work out of the box.
+> No edits are needed for local development. The default values in [`.env.docker.example`](../.env.docker.example) work out of the box.
 
 ### 11. Start the services
 
@@ -303,7 +303,7 @@ Configure `Git` if you want to change the values that you saw while [checking yo
 2. Wait for the services to start. You should see log output from the `app`, `postgres`, `pgadmin`, and `caddy` containers.
 
 > [!TIP]
-> The database is initialized from `src/app/data/init.sql` only on the **first** start of the `PostgreSQL` container.
+> The database is initialized from [`src/app/data/init.sql`](../src/app/data/init.sql) only on the **first** start of the `PostgreSQL` container.
 > If you need to re-initialize the database (e.g., after pulling upstream changes to `init.sql`), see [Resetting the database](./appendix/database.md#resetting-the-database).
 
 3. Verify that the API is running by opening in a browser: <http://127.0.0.1:42001/docs>.
@@ -423,5 +423,5 @@ If you want to view `README.md` in `VS Code` instead of on `GitHub`:
    `Developer: Reload Window`.
 4. Look at the [`Basic Layout`](./appendix/vs-code.md#basic-layout).
 5. [Open the file](./appendix/vs-code.md#open-the-file):
-   `README.md`.
+   [`README.md`](../README.md).
 6. [Open the `Markdown` preview](./appendix/vs-code.md#open-the-markdown-preview).
