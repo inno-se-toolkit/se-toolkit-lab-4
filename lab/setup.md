@@ -305,6 +305,10 @@ Configure `Git` if you want to change the values that you saw while [checking yo
 
 2. Wait for the services to start. You should see log output from the `app`, `postgres`, `pgadmin`, and `caddy` containers.
 
+> [!TIP]
+> The database is initialized from `src/app/data/init.sql` only on the **first** start of the `PostgreSQL` container.
+> If you need to re-initialize the database (e.g., after pulling upstream changes to `init.sql`), see [Resetting the database](./appendix/database.md#resetting-the-database).
+
 3. Verify that the API is running by opening in a browser: <http://127.0.0.1:42001/docs>.
 
 4. You should see the `Swagger UI` page with the API documentation.
