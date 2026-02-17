@@ -414,14 +414,6 @@ Complete these steps:
 If you want to view `README.md` in `VS Code` instead of on `GitHub`:
 
 1. [Install recommended `VS Code` extensions](./appendix/vs-code.md#install-recommended-extensions).
-2. Sign in to accounts.
-    1. Go to the [`Activity Bar`](./appendix/vs-code.md#activity-bar).
-    2. Click the icon `Accounts`.
-    3. Click `Sign in with GitHub ...`.
-    4. Repeat for the remaining extensions if there are any.
-3. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
-   `Developer: Reload Window`.
-4. Look at the [`Basic Layout`](./appendix/vs-code.md#basic-layout).
-5. [Open the file](./appendix/vs-code.md#open-the-file):
+2. [Open the file](./appendix/vs-code.md#open-the-file):
    [`README.md`](../README.md).
-6. [Open the `Markdown` preview](./appendix/vs-code.md#open-the-markdown-preview).
+3. [Open the `Markdown` preview](./appendix/vs-code.md#open-the-markdown-preview).
