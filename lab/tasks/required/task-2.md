@@ -108,11 +108,11 @@ Title: `[Task] Enable and debug the interactions endpoint`
 
 ### 5. Restart the services
 
-[Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
-```terminal
-docker compose --env-file .env.docker.secret up --build
-```
+   ```terminal
+   docker compose --env-file .env.docker.secret up --build
+   ```
 
 > [!TIP]
 > If the services are still running, press `Ctrl+C` first to stop them, then run the command above.
