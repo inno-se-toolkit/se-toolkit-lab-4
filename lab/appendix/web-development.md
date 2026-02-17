@@ -36,7 +36,7 @@
 
 ### Web server
 
-A web server is software that delivers content or services to [web clients](#web-client) over the [Internet](./networks.md#internet) using a [protocol](#protocol).
+A web server is software that delivers content or services to [web clients](#web-client) over the [Internet](./computer-networks.md#internet) using a [protocol](#protocol).
 
 > [!NOTE]
 > We refer to a web server as software only.

@@ -211,7 +211,7 @@ Configure `Git` if you want to change the values that you saw while [checking yo
 1. [Open in `VS Code` the directory](./appendix/git-vscode.md#open-in-vs-code-the-directory):
    `se-toolkit-lab-2`.
 2. [Install recommended extensions](./appendix/vs-code.md#install-recommended-extensions).
-3. Close the `VS Code` where you [opened the `software-engineering-toolkit` directory](#5-open-vs-code-in-the-software-engineering-toolkit-directory).
+3. Close the `VS Code` where you [opened the `software-engineering-toolkit` directory](#5-open-in-vs-code-the-software-engineering-toolkit-directory).
 
 ### 7. (`Windows` only) Set the default shell
 
