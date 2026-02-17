@@ -1,111 +1,44 @@
-"""Router for course items endpoints."""
+"""Router for item endpoints — reference implementation."""
 
-from typing import List
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
+from sqlmodel.ext.asyncio.session import AsyncSession
 
-from app.models.item import Course, Lab, Step
-from app.models.order import PreOrder, parse_order_default
-from app.services.item_service import (
-    FoundItem,
-    get_course_by_path,
-    get_lab_by_path,
-    get_item_by_id,
-    read_courses,
-    get_step_by_path,
-    get_task_by_path,
-)
+from app.database import get_session
+from app.db.items import create_item, read_item, read_items, update_item
+from app.models.item import ItemCreate, ItemRecord, ItemUpdate
 
 router = APIRouter()
 
 
-@router.get("/courses", response_model=List[Course])
-def get_all_courses():
-    """Get all courses.
-
-    Returns:
-        A list of all courses.
-    """
-    return read_courses()
+@router.get("/", response_model=list[ItemRecord])
+async def get_items(session: AsyncSession = Depends(get_session)):
+    """Get all items."""
+    return await read_items(session)
 
 
-@router.get("/course/{course_id}", response_model=Course)
-def get_course(course_id: str):
-    courses = read_courses()
-    course = get_course_by_path(courses=courses, course_id=course_id)
-
-    if course is not None:
-        return course
-
-    raise HTTPException(status_code=404, detail="Course not found")
+@router.get("/{item_id}", response_model=ItemRecord)
+async def get_item(item_id: int, session: AsyncSession = Depends(get_session)):
+    """Get a specific item by its id."""
+    item = await read_item(session, item_id)
+    if item is None:
+        raise HTTPException(status_code=404, detail="Item not found")
+    return item
 
 
-@router.get("/course/{course_id}/lab/{lab_id}", response_model=Lab)
-def get_lab(course_id: str, lab_id: str):
-    courses = read_courses()
-    lab = get_lab_by_path(courses=courses, course_id=course_id, lab_id=lab_id)
-
-    if lab is not None:
-        return lab
-
-    raise HTTPException(status_code=404, detail="Lab not found")
+@router.post("/", response_model=ItemRecord, status_code=201)
+async def post_item(body: ItemCreate, session: AsyncSession = Depends(get_session)):
+    """Create a new item."""
+    return await create_item(session, title=body.title, description=body.description)
 
 
-@router.get("/course/{course_id}/lab/{lab_id}/task/{task_id}", response_model=Step)
-def get_task(course_id: str, lab_id: str, task_id: str):
-    courses = read_courses()
-    task = get_task_by_path(
-        courses=courses, course_id=course_id, lab_id=lab_id, task_id=task_id
+@router.put("/{item_id}", response_model=ItemRecord)
+async def put_item(
+    item_id: int, body: ItemUpdate, session: AsyncSession = Depends(get_session)
+):
+    """Update an existing item."""
+    item = await update_item(
+        session, item_id=item_id, title=body.title, description=body.description
     )
-
-    if task is not None:
-        return task
-
-    raise HTTPException(status_code=404, detail="Task not found")
-
-
-@router.get(
-    "/course/{course_id}/lab/{lab_id}/task/{task_id}/step/{step_id}",
-    response_model=Step,
-)
-def get_step(course_id: str, lab_id: str, task_id: str, step_id: str):
-    courses = read_courses()
-    step = get_step_by_path(
-        courses=courses,
-        course_id=course_id,
-        lab_id=lab_id,
-        task_id=task_id,
-        step_id=step_id,
-    )
-
-    if step is not None:
-        return step
-
-    raise HTTPException(status_code=404, detail="Step not found")
-
-
-@router.get("/item/{item_id}", response_model=FoundItem)
-def get_item(item_id: str, order: str = PreOrder.short_name):
-    """Get a specific item by its id.
-
-    Searches through all courses and their nested items to find
-    the item with the matching id.
-    Traverses the course tree in a specified order.
-
-    Args:
-        item_id: The unique identifier of the item.
-
-    Returns:
-        The matching item.
-
-    Raises:
-        HTTPException: 404 if the item is not found.
-    """
-
-    order_parsed = parse_order_default(order=order, default=PreOrder())
-
-    item = get_item_by_id(item_id, order=order_parsed)
-
-    if item is not None:
-        return item
-
-    raise HTTPException(status_code=404, detail="Item not found")
+    if item is None:
+        raise HTTPException(status_code=404, detail="Item not found")
+    return item

@@ -1,4 +1,4 @@
-# Lab 2 — Backend - run locally, fix a bug, deploy on a server
+# Lab 3 — REST API, Database, and Security
 
 <h2>Table of contents</h2>
 
@@ -16,20 +16,18 @@ You were hired by a company that develops a novel e-learning system.
 
 The system recommends educational resources to students.
 
-You joined a [back end](https://roadmap.sh/backend) team working on a web server for the **Course Materials Service**.
+You joined a [back end](https://roadmap.sh/backend) team working on a web server for the **Learning Management Service**.
 
-The web server is implemented using the [`FastAPI`](https://fastapi.tiangolo.com/) framework in [`Python`](https://www.python.org/).
+The web server is implemented using the [`FastAPI`](https://fastapi.tiangolo.com/) framework in [`Python`](https://www.python.org/) and uses a [`PostgreSQL`](https://www.postgresql.org/) database.
 
-Currently, it serves courses-related items (courses, labs, tasks, steps).
+The prototype works and is deployed. Now the team needs to make it production-ready: understand the API contract, expose interaction logs, add a new endpoint for learners, secure the service, and deploy it on a hardened VM.
 
-For simplicity, the web server uses data stored is [`JSON`](https://en.wikipedia.org/wiki/JSON) files (`JSON resources`) in [`src/app/data/course_items.json`](./src/app/data/course_items.json).
+A senior engineer explains your next assignment:
 
-A senior engineer explains your first assignment:
-
-> 1. Run our web server on your machine.
-> 2. Verify that it’s working: query the `/status` endpoint.
-> 3. Investigate and fix a bug in the `/items` endpoint.
-> 4. Deploy the web server to a remote `Linux` [virtual machine](./lab/appendix/vm.md).
+> 1. Explore the API documentation and learn how to authenticate.
+> 2. Enable and debug the broken `/interactions` endpoint.
+> 3. Implement the `/learners` endpoint using the existing pattern.
+> 4. Deploy the secured service to a hardened VM.
 
 > [!IMPORTANT]
 > Communicate through issues and PRs and deliver a working deployment.
@@ -54,24 +52,20 @@ Evaluate LLM answers critically, and verify them against credible sources such a
 
 By the end of this lab, you should be able to:
 
-- Follow the [`Git workflow`](./lab/tasks/git-workflow.md).
-- Check your work against specified acceptance criteria.
-- Explore the code of an existing web server written in `Python`.
-- Run the web server on your computer.
-- Query the web server.
-- Inspect the responses of the web server.
-- Test the web server.
-- Identify a bug (problem) in the web server.
-- Document the bug using a `GitHub` issue.
-- Submit a fix of the bug as a PR.
-- Deploy the fixed web server to a remote `Linux` virtual machine (VM).
-- Test the deployed web server.
+- Explore a REST API using `Swagger UI`.
+- Authenticate API requests using an API key.
+- Examine a database using `PgAdmin`.
+- Debug a broken endpoint by tracing code and comparing to the database schema.
+- Implement a new endpoint by following an existing reference implementation.
+- Deploy a service with API key authentication.
+- Harden a Linux server (firewall, `fail2ban`, SSH restrictions).
 
 In simple words, you should be able to say:
 >
-> 1. I ran a web server locally on my computer and it worked!
-> 2. I found and fixed a bug and the tests passed!
-> 3. I deployed the web server on a remote VM and made it available to others!
+> 1. I explored an API using Swagger and authenticated with an API key!
+> 2. I debugged a broken endpoint by comparing the code to the database!
+> 3. I implemented a new endpoint by following an existing pattern!
+> 4. I deployed a secured service on a hardened VM!
 
 ## Tasks
 
@@ -81,13 +75,12 @@ In simple words, you should be able to say:
 
 ### Required
 
-1. [Run the web server](./lab/tasks/required/task-1.md)
-2. [Identify, report, and fix a bug](./lab/tasks/required/task-2.md)
-3. [Run the web server using `Docker Compose`](./lab/tasks/required/task-3.md)
-4. [Deploy the web server to the VM](./lab/tasks/required/task-4.md)
+1. [Explore the API](./lab/tasks/required/task-1.md)
+2. [Enable and debug the interactions endpoint](./lab/tasks/required/task-2.md)
+3. [Implement the learners endpoint](./lab/tasks/required/task-3.md)
+4. [Deploy to a hardened VM](./lab/tasks/required/task-4.md)
 
 ### Optional
 
 1. [Implement the `/outcomes` endpoint](./lab/tasks/optional/task-1.md)
-2. [Make your VM a proxy to your partner's web server](./lab/tasks/optional/task-2.md)
-3. [Implement the post-order traversal](./lab/tasks/optional/task-3.md)
+2. [Set up CI with `GitHub Actions`](./lab/tasks/optional/task-2.md)

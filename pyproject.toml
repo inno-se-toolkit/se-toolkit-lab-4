@@ -1,14 +1,16 @@
 [project]
-name = "course-materials-service"
+name = "learning-management-service"
 version = "0.1.0"
-description = "Course Materials Service"
+description = "Learning Management Service"
 readme = "README.md"
 requires-python = "==3.14.2"
 dependencies = [
+  "asyncpg>=0.30.0",
   "fastapi==0.128.7",
   "httpx==0.28.1",
   "pydantic==2.12.5",
   "pydantic-settings==2.12.0",
+  "sqlmodel>=0.0.22",
   "uvicorn[standard]==0.40.0",
 ]
 
@@ -50,7 +52,7 @@ sequence = ["format", "lint", "typecheck"]
 
 [tool.poe.tasks.typecheck]
 help = "Run all typecheckers"
-parallel = ["ty-check"]
+parallel = ["ty-check", "pyright-check"]
 
 [tool.poe.tasks.ty-check]
 help = "Run the 'ty' typechecker"
@@ -83,7 +85,9 @@ cmd = "pytest"
 [tool.pyright]
 include = ["src", "tests"]
 exclude = ["**/__pycache__"]
-strict = ["src", "tests"]
+typeCheckingMode = "strict"
+reportAssignmentType = "none"
+reportIncompatibleVariableOverride = "none"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -125,9 +125,9 @@ We'll refer to the name of this branch as `<branch-name>`.
 
 [Create a PR](../appendix/github.md#create-a-pr) replacing:
 
-- `<repo-owner-username>` with `inno-se-toolkit`;
-- `<repo-name>` with `se-toolkit-lab-2`;
-- `<your-username>` with your `GitHub` username;
+- `<repo-owner-github-username>` with `inno-se-toolkit`;
+- `<repo-name>` with `se-toolkit-lab-3`;
+- `<your-github-username>` with your `GitHub` username;
 - `<branch-name>` with the name of the branch that you want to merge in the PR.
 
 ## Get a PR review

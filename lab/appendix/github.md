@@ -4,8 +4,8 @@
 
 - [The `GitHub` site](#the-github-site)
 - [`GitHub` username](#github-username)
-- [`<your-username>`](#your-username)
-  - [Find `<your-username>`](#find-your-username)
+- [`<your-github-username>`](#your-github-username)
+  - [Find `<your-github-username>`](#find-your-github-username)
 - [Repository](#repository)
   - [`<repo-name>`](#repo-name)
   - [`<repo-url>`](#repo-url)
@@ -31,6 +31,14 @@
     - [Open the PR editor using `Pull requests`](#open-the-pr-editor-using-pull-requests)
     - [Open the PR editor using the branch list](#open-the-pr-editor-using-the-branch-list)
   - [Finish creating a PR](#finish-creating-a-pr)
+- [Label](#label)
+  - [Create a label](#create-a-label)
+  - [Add a label to issues](#add-a-label-to-issues)
+  - [See all issues with a label](#see-all-issues-with-a-label)
+- [Settings](#settings)
+  - [Enable issues](#enable-issues)
+  - [Add a collaborator](#add-a-collaborator)
+  - [Protect a branch](#protect-a-branch)
 - [`GitHub flow`](#github-flow)
 - [`GitHub Projects`](#github-projects)
 
@@ -42,17 +50,17 @@ The `GitHub` site has this [URL](./web-development.md#url): <https://github.com>
 
 A `GitHub` username is a unique identifier of a user or an organization on [the `GitHub` site](#the-github-site).
 
-Example of a username: `johndoe`.
+Example of a username: `inno-se-toolkit`.
 
 Note that this username doesn't include `@`.
 
-## `<your-username>`
+## `<your-github-username>`
 
-Assume `<your-username>` is your [`GitHub` username](#github-username).
+Assume `<your-github-username>` is your [`GitHub` username](#github-username).
 
-`<your-username>` doesn't include `@`.
+`<your-github-username>` doesn't include `@`.
 
-### Find `<your-username>`
+### Find `<your-github-username>`
 
 1. Go to the [`GitHub` site](#the-github-site).
 2. Sign in if necessary.
@@ -74,9 +82,9 @@ The name must be unique among repositories of the repository owner.
 
 We use `<repo-url>` to refer to a repository [URL](./web-development.md#url).
 
-A repository URL is typically `https://github.com/<repo-owner-username>/<repo-name>` where:
+A repository URL is typically `https://github.com/<repo-owner-github-username>/<repo-name>` where:
 
-- `<repo-owner-username>` is the [repo owner](#repository-owner) `GitHub` username;
+- `<repo-owner-github-username>` is the [repo owner](#repository-owner) `GitHub` username;
 - `<repo-name>` is the name of the repository.
 
 ### Make your repository public
@@ -87,7 +95,7 @@ A repository URL is typically `https://github.com/<repo-owner-username>/<repo-na
 
 Repository owner is an account where the repo is currently stored.
 
-We use `<repo-owner-username>` to refer to the [`GitHub` username](#github-username) of the repository owner.
+We use `<repo-owner-github-username>` to refer to the [`GitHub` username](#github-username) of the repository owner.
 
 ## Fork
 
@@ -101,18 +109,18 @@ When you fork a repository on `GitHub`, you create a personal copy under your `G
 2. Go to the repo that you want to fork.
 3. Click `Fork`.
    1. Click `Choose an owner`.
-   2. Click `<your-username>` to make you the repo owner.
+   2. Click `<your-github-username>` to make you the repo owner.
    3. Click `Create fork`.
 
 ### `<your-fork-url>`
 
-Assume the [URL](./web-development.md#url) of the [repo that you forked](#fork-a-repo) is `https://github.com/<repo-owner-username>/<repo-name>`.
+Assume the [URL](./web-development.md#url) of the [repo that you forked](#fork-a-repo) is `https://github.com/<repo-owner-github-username>/<repo-name>`.
 
-Then, your fork URL should look like `https://github.com/<your-username>/<repo-name>`.
+Then, your fork URL should look like `https://github.com/<your-github-username>/<repo-name>`.
 
 We'll refer to this URL as `<your-fork-url>`.
 
-Find [`<your-username>`](#your-username) if you don't know it.
+Find [`<your-github-username>`](#your-github-username) if you don't know it.
 
 ### Go to your fork
 
@@ -201,8 +209,8 @@ Create a PR to the `<repo-name>/<branch-name>`:
 1. [Go to your fork](#go-to-your-fork).
 2. Click `Pull requests`.
 3. Click `New pull request`.
-4. Click `base repository: <repo-owner-username>/<repo-name>`.
-5. Click `<your-username>/<repo-name>` to select the [base repo](#base-repo).
+4. Click `base repository: <repo-owner-github-username>/<repo-name>`.
+5. Click `<your-github-username>/<repo-name>` to select the [base repo](#base-repo).
 6. The PR will be created in your repo.
 7. Click `base: main`.
 8. Click a branch to select the [base branch](#base-branch).
@@ -227,6 +235,72 @@ Create a PR to the `<repo-name>/<branch-name>`:
 5. Click `Create pull request`.
 
 <!-- TODO Click Markdown code block to copy -->
+
+## Label
+
+A [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) helps you filter and organize [issues](#issue).
+
+### Create a label
+
+1. [Go to your fork](#go-to-your-fork).
+2. Go to `Issues` -> `Labels`.
+3. Create a new label:
+   1. Click `New label`.
+   2. Name: `<label-name>`.
+   3. Click `Create label`.
+
+### Add a label to issues
+
+1. [Go to your fork](#go-to-your-fork).
+2. [Add](https://github.com/orgs/community/discussions/53473#discussioncomment-5697478) the `<label-name>` label to some of your issues.
+
+### See all issues with a label
+
+1. [Go to your fork](#go-to-your-fork).
+2. Go to `Issues`.
+3. If you don't see any `Open` issues, click `Closed`.
+4. Filter issues by the label:
+   1. Click `Labels`.
+   2. In the `Filter labels` input area, write `<label-name>`.
+   3. Click the suggested label.
+5. You should see all issues that have the `<label-name>` label.
+
+## Settings
+
+### Enable issues
+
+1. [Go to your fork](#go-to-your-fork).
+2. Go to `Settings` -> `General` -> `Features`.
+3. Check the box near `Issues`.
+
+### Add a collaborator
+
+1. [Go to your fork](#go-to-your-fork).
+2. Go to `Settings` -> `Collaborators` -> `Add people`.
+3. Add the person as a collaborator.
+4. Make sure the collaborator has accepted the invitation sent to their email.
+
+### Protect a branch
+
+1. [Go to your fork](#go-to-your-fork).
+2. Go to `Settings`.
+3. Go to `Code and automation`.
+4. Go to `Rules`.
+5. Go to `Rulesets`.
+6. Go to `New ruleset`.
+7. Go to `Add branch ruleset`.
+8. Set:
+
+   1. `Ruleset Name`: `push`
+   2. `Enforcement status`: `Active`
+   3. `Target branches` -> `Add target` -> `Include default branch`
+   4. Rules:
+      - [x] `Restrict deletions`
+      - [x] `Require a pull request before merging`:
+         - `Required approvals`: `1`
+         - `Require conversation resolution before merging`
+         - `Allowed merge methods`: `Merge`.
+      - [x] Block force pushes
 
 ## `GitHub flow`
 

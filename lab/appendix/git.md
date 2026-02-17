@@ -9,6 +9,9 @@
 - [Practice `Git`](#practice-git)
 - [`.gitignore`](#gitignore)
 - [`GitHub flow`](#github-flow)
+- [Configuration](#configuration)
+  - [Check your Git config](#check-your-git-config)
+  - [Configure Git](#configure-git)
 - [`Conventional Commits`](#conventional-commits)
 
 ## What is `Git`
@@ -84,6 +87,45 @@ Typical sequence:
 3. Commit changes to the branch.
 4. Push branch and open a PR.
 5. Get review and merge.
+
+## Configuration
+
+### Check your Git config
+
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   git config --global --list
+   ```
+
+   The output should look like this (but with your values):
+
+   ```terminal
+   user.name=John Doe
+   user.email=inno-se-toolkit@gmail.com
+   ```
+
+### Configure Git
+
+> [!IMPORTANT]
+> Replace `<your-name>` with a name and `<your-email>` with an email that you want to see in the commits.
+
+1. (Optional) See [docs](https://git-scm.com/docs/git-config#Documentation/git-config.txt-username) for an explanation of what these commands do.
+2. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+    ```terminal
+    git config --global user.name '<your-name>'
+    ```
+
+    Example: `git config --global user.name 'John Doe'`
+
+3. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+     ```terminal
+     git config --global user.email '<your-email>'
+     ```
+
+     Example: `git config --global user.email 'inno-se-toolkit@gmail.com'`
 
 ## `Conventional Commits`
 

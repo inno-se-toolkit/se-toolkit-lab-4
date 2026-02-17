@@ -7,13 +7,70 @@ services:
     expose:
       - ${APP_CONTAINER_PORT}
     environment:
-      - NAME=${APP_NAME:-'Course Materials Service'}
+      - NAME=${APP_NAME:-'Learning Management Service'}
       - DEBUG=${APP_DEBUG:-false}
       - ADDRESS=${APP_CONTAINER_ADDRESS:?'APP_CONTAINER_ADDRESS is a required environment variable'}
       - PORT=${APP_CONTAINER_PORT:?'APP_CONTAINER_PORT is a required environment variable'}
+      - API_TOKEN=${API_TOKEN:?'API_TOKEN is a required environment variable'}
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=${POSTGRES_DB:-lab3}
+      - DB_USER=${POSTGRES_USER:-postgres}
+      - DB_PASSWORD=${POSTGRES_PASSWORD:-postgres}
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    # A portable solution: download image from Docker Hub.
+    # image: postgres:17-alpine
+
+    # A less portable solution: download image through a cache proxy provided by the University.
+    # This solution is necessary to avoid "Too many requests" errors.
+    # This solution won't work outside the University network.
+    image: harbor.pg.innopolis.university/docker-hub-cache/postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB:-lab3}
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres}
+    ports:
+      - ${POSTGRES_HOST_ADDRESS:-127.0.0.1}:${POSTGRES_HOST_PORT:-5432}:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./src/app/data/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-lab3}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    # A portable solution: download image from Docker Hub.
+    # image: dpage/pgadmin4:latest
+
+    # A less portable solution: download image through a cache proxy provided by the University.
+    # This solution is necessary to avoid "Too many requests" errors.
+    # This solution won't work outside the University network.
+    image: harbor.pg.innopolis.university/docker-hub-cache/dpage/pgadmin4:latest
+    restart: unless-stopped
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_EMAIL:-admin@example.com}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_PASSWORD:-admin}
+    ports:
+      - ${PGADMIN_HOST_ADDRESS:-127.0.0.1}:${PGADMIN_HOST_PORT:-5050}:80
+    depends_on:
+      postgres:
+        condition: service_healthy
 
   caddy:
-    image: caddy:2.11-alpine
+    # A portable solution: download image from Docker Hub.
+    # image: caddy:2.11-alpine
+
+    # A less portable solution: download image through a cache proxy provided by the University.
+    # This solution is necessary to avoid "Too many requests" errors.
+    # This solution won't work outside the University network.
+    image: harbor.pg.innopolis.university/docker-hub-cache/caddy:2.11-alpine
     depends_on:
       - app
     environment:
@@ -23,3 +80,6 @@ services:
       - ${CADDY_HOST_ADDRESS}:${CADDY_HOST_PORT}:${CADDY_CONTAINER_PORT}
     volumes:
       - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+
+volumes:
+  postgres_data:

@@ -1,10 +1,76 @@
 """Models for course items."""
 
 from datetime import datetime
-from typing import Dict, List, Optional, final
+from typing import Any, final
 
 from pydantic import BaseModel
+from sqlalchemy import Column
+from sqlalchemy.dialects.postgresql import JSONB
+from sqlmodel import Field, SQLModel
 
+
+# ===
+# Database models
+# ===
+#
+# These [`SQLModel`](https://sqlmodel.tiangolo.com/) classes map to the `items`
+# PostgreSQL table. `SQLModel` combines SQLAlchemy (database ORM) with
+# Pydantic (data validation) in a single class hierarchy.
+#
+# Items form a tree: course → labs → tasks → steps.
+# The tree structure is stored using the
+# [adjacency list](https://en.wikipedia.org/wiki/Adjacency_list) pattern (`parent_id`).
+# Type-specific attributes are stored in a
+# [`JSONB`](https://www.postgresql.org/docs/current/datatype-json.html) column.
+
+
+class ItemRecord(SQLModel, table=True):
+    """A row in the items table."""
+
+    __tablename__ = "items"
+
+    id: int | None = Field(default=None, primary_key=True)
+    type: str = "step"
+    parent_id: int | None = Field(default=None, foreign_key="items.id")
+    title: str
+    description: str = ""
+    attributes: dict[str, Any] = Field(
+        default_factory=dict, sa_column=Column(JSONB, nullable=False)
+    )
+    created_at: datetime | None = Field(default=None)
+
+
+class ItemCreate(SQLModel):
+    """Schema for creating an item."""
+
+    type: str = "step"
+    parent_id: int | None = None
+    title: str
+    description: str = ""
+
+
+class ItemUpdate(SQLModel):
+    """Schema for updating an item."""
+
+    title: str
+    description: str = ""
+
+
+# ===
+# Domain hierarchy
+# ===
+#
+# The classes below model the same items as the database table above,
+# but as a **domain model** — a rich Python class hierarchy.
+#
+# The database stores all items in one flat table (with a `type` discriminator
+# and a `parent_id` foreign key). The domain model expresses the same structure
+# using inheritance, where each item kind is its own class with kind-specific fields.
+#
+# This separation is common in real applications and is known as the
+# [object-relational impedance mismatch](https://en.wikipedia.org/wiki/Object%E2%80%93relational_impedance_mismatch).
+
+# ===
 
 # This is an example of [inheritance](https://docs.python.org/3/tutorial/classes.html#inheritance).
 # Inheritance is a [mechanism in object-oriented programming](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))
@@ -23,17 +89,19 @@ class BaseItem(BaseModel):
 
     Attributes:
         id: Unique identifier for this item.
-        type: The type of item (e.g., 'course', 'lab', 'task', 'step').
-        icon: An icon of the item.
-        titles: Localized titles (e.g., {'en': 'Lab 01'}).
-        descriptions: Localized descriptions.
+        type: The kind of item (e.g., 'course', 'lab', 'task', 'step').
+        parent_id: The id of the parent item, or None for root items.
+        title: Title of the item.
+        description: A longer description of the item.
+        created_at: When the item was created.
     """
 
-    id: str
+    id: int
     type: str
-    icon: Optional[str] = None
-    titles: Optional[Dict[str, str]] = None
-    descriptions: Optional[Dict[str, str]] = None
+    parent_id: int | None = None
+    title: str
+    description: str = ""
+    created_at: datetime | None = None
 
 
 # It should be possible to use (objects) of the child class
@@ -53,7 +121,7 @@ class BaseItem(BaseModel):
 # Here is another example of inheritance.
 #
 # Here, we inherit from the `BaseItem` class.
-# We keep the common fields of the `BaseItem` class such as `id` and `date`.
+# We keep the common fields of the `BaseItem` class such as `id` and `type`.
 # We also add new fields such as `steps` in the `Task`.
 #
 # We can add different fields in different classes
@@ -67,22 +135,22 @@ class Step(BaseItem):
 
 @final
 class Task(BaseItem):
-    steps: List[Step] = []
+    steps: list[Step] = []
 
 
 @final
 class Lab(BaseItem):
-    start: Optional[datetime] = None
-    finish: Optional[datetime] = None
-    tasks: List[Task] = []
+    start: datetime | None = None
+    finish: datetime | None = None
+    tasks: list[Task] = []
 
 
 @final
 class Course(BaseItem):
-    instructors: Optional[List[str]] = None
-    start: Optional[datetime] = None
-    finish: Optional[datetime] = None
-    labs: List[Lab] = []
+    instructors: list[str] | None = None
+    start: datetime | None = None
+    finish: datetime | None = None
+    labs: list[Lab] = []
 
 
 # ===
@@ -98,7 +166,7 @@ class Course(BaseItem):
 #
 # ```python
 # class SmallerStep(Step): pass
-# item: Item = SmallerStep(id="some-id", type="smaller-step")
+# item: Item = SmallerStep(id=0, type="smaller-step", title="...")
 # ```
 #
 # However, since these classes are marked as `@final`, no other classes

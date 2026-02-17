@@ -12,6 +12,9 @@
   - [`docker compose down`](#docker-compose-down)
   - [`docker compose -f`](#docker-compose--f)
   - [`docker compose --env-file`](#docker-compose---env-file)
+  - [`docker compose down -v`](#docker-compose-down--v)
+- [Volumes](#volumes)
+- [Health checks](#health-checks)
 
 ## Image
 
@@ -124,3 +127,56 @@ docker compose --env-file .env.docker.secret up --build
 ```
 
 This is useful when you need different settings for local/dev/test/prod environments.
+
+### `docker compose down -v`
+
+Stop services and remove volumes (including database data):
+
+```terminal
+docker compose --env-file .env.docker.secret down -v
+```
+
+> [!IMPORTANT]
+> The `-v` flag removes named volumes. This deletes all data stored in the database.
+> Use this when you want to reset the database to its initial state.
+
+## Volumes
+
+A volume is persistent storage managed by `Docker`. Data in a volume survives container restarts.
+
+Volumes are defined in `docker-compose.yml`:
+
+```yaml
+volumes:
+  postgres_data:
+```
+
+A service can mount a volume to store data:
+
+```yaml
+services:
+  postgres:
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+```
+
+## Health checks
+
+A health check is a command that `Docker` runs periodically to check if a container is healthy.
+
+Other services can wait for a container to be healthy before starting:
+
+```yaml
+services:
+  app:
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+```

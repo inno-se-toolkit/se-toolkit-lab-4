@@ -1,182 +1,194 @@
-# Run the web server
+# Explore the API
 
 <h4>Time</h4>
 
-~30-40 min
+~30 min
 
 <h4>Purpose</h4>
 
-Learn to run the web server written in `Python`.
+Learn to explore an API using `Swagger UI` and authenticate with an API key.
 
 <h4>Context</h4>
 
-You should be able to run the web server on your computer.
-Then, you can check whether the web server works before the web server is deployed.
+The service is running. Only `items` endpoints are active — `/interactions` and `/learners` don't exist yet.
+You will explore the API using `Swagger UI`, discover the API key mechanism, and observe how the service responds to different requests.
 
 <h4>Table of contents</h4>
 
 - [Steps](#steps)
-  - [1. Create an issue](#1-create-an-issue)
-  - [2. Learn about environments](#2-learn-about-environments)
-  - [3. View the file `.env.example`](#3-view-the-file-envexample)
-  - [4. Create the file `.env.secret`](#4-create-the-file-envsecret)
-  - [5. View the file `.env.secret`](#5-view-the-file-envsecret)
-  - [6. Check that the port `$PORT` is free](#6-check-that-the-port-port-is-free)
-  - [7. Use a free port](#7-use-a-free-port)
-  - [8. Run the web server](#8-run-the-web-server)
-  - [9. Check `/status`](#9-check-status)
-  - [10. Stop the web server](#10-stop-the-web-server)
-  - [11. Force stop the web server](#11-force-stop-the-web-server)
-  - [12. Check `/status` again](#12-check-status-again)
-  - [13. Write a comment for the issue](#13-write-a-comment-for-the-issue)
+  - [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
+  - [1. Create a `Lab Task` issue](#1-create-a-lab-task-issue)
+  - [2. Start the services](#2-start-the-services)
+  - [3. Open `Swagger UI`](#3-open-swagger-ui)
+  - [4. Try `GET /items` without authentication](#4-try-get-items-without-authentication)
+  - [5. Find the `API_TOKEN` value](#5-find-the-api_token-value)
+  - [6. Authorize in `Swagger UI`](#6-authorize-in-swagger-ui)
+  - [7. Try `GET /items` with authentication](#7-try-get-items-with-authentication)
+  - [8. Try `GET /items/{item_id}`](#8-try-get-itemsitem_id)
+  - [9. Try `POST /items`](#9-try-post-items)
+  - [10. Try `PUT /items/{item_id}`](#10-try-put-itemsitem_id)
+  - [11. Change the `API_TOKEN`](#11-change-the-api_token)
+  - [12. Fill in the questionnaire](#12-fill-in-the-questionnaire)
+  - [13. Commit the questionnaire](#13-commit-the-questionnaire)
+  - [14. Finish the task](#14-finish-the-task)
 - [Acceptance criteria](#acceptance-criteria)
 
 ## Steps
 
-### 1. Create an issue
+### 0. Follow the `Git workflow`
 
-Title: `[Task] Run the web server`
+Follow the [`Git workflow`](../git-workflow.md) to complete this task.
 
-### 2. Learn about environments
+### 1. Create a `Lab Task` issue
 
-Read the following sections:
+Title: `[Task] Explore the API`
 
-1. [Environment variables](../../appendix/environments.md#environment-variables)
-2. [`.env` file](../../appendix/environments.md#env-file)
+### 2. Start the services
 
-### 3. View the file `.env.example`
-
-1. [Open the file](../../appendix/vs-code.md#open-the-file):
-   [`.env.example`](../../../.env.example).
-
-### 4. Create the file `.env.secret`
+> [!NOTE]
+> If you already started the services during the setup, they should still be running.
+> You can skip this step.
 
 1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
-   cp .env.example .env.secret
+   docker compose --env-file .env.docker.secret up --build
    ```
 
-### 5. View the file `.env.secret`
+### 3. Open `Swagger UI`
+
+1. Open in a browser: `http://127.0.0.1:42001/docs`.
+2. You should see the auto-generated API documentation with the available endpoints.
+
+### 4. Try `GET /items` without authentication
+
+1. In `Swagger UI`, expand the `GET /items` endpoint.
+2. Click `Try it out`.
+3. Click `Execute`.
+4. Observe the response: you should see a `403` Forbidden error.
 
 > [!NOTE]
-> The `.env.secret` file was added to [`.gitignore`](../../../.gitignore) because you may specify there
-> [secrets](../../appendix/environments.md#secrets) such as the address of your VM.
+> The `403` response means the server rejected your request because you did not provide an API key.
+> The service uses the `Authorization: Bearer <token>` header for authentication.
 
-View the file using one of the following methods.
-
-Method 1:
-
-1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   cat .env.secret
-   ```
-
-Method 2:
+### 5. Find the `API_TOKEN` value
 
 1. [Open the file](../../appendix/vs-code.md#open-the-file):
-   `.env.secret`.
+   `.env.docker.secret`.
+2. Find the `API_TOKEN` variable.
+3. The default value is `my-secret-api-key`.
 
-### 6. Check that the port `$PORT` is free
+### 6. Authorize in `Swagger UI`
 
-> [!NOTE]
-> The `PORT` variable from the `.env.secret` is the [port number](../../appendix/linux.md#port)
-> at which the web server will run.
->
-> The expression `$PORT` in the command below will be substituted with the value
-> of the `PORT` environment variable loaded from the `.env.secret` file via [`source`](../../appendix/useful-programs.md#source).
+1. In `Swagger UI`, click the `Authorize` button (the lock icon at the top).
+2. In the `Value` field, enter: `my-secret-api-key`.
+3. Click `Authorize`.
+4. Click `Close`.
 
-1. Inspect what's [listening](../../appendix/linux.md#listen-on-port) on the port `$PORT`:
+### 7. Try `GET /items` with authentication
+
+1. In `Swagger UI`, expand the `GET /items` endpoint.
+2. Click `Try it out`.
+3. Click `Execute`.
+4. Observe the response: you should see a `200` status code with a list of items.
+
+### 8. Try `GET /items/{item_id}`
+
+1. In `Swagger UI`, expand the `GET /items/{item_id}` endpoint.
+2. Click `Try it out`.
+3. Enter `1` as the `item_id`.
+4. Click `Execute`.
+5. Observe the response: you should see a `200` status code with the item data.
+6. Try entering `999` as the `item_id`.
+7. Click `Execute`.
+8. Observe the response: you should see a `404` Not Found error.
+
+### 9. Try `POST /items`
+
+1. In `Swagger UI`, expand the `POST /items` endpoint.
+2. Click `Try it out`.
+3. Enter a request body, for example:
+
+   ```json
+   {
+     "title": "My New Item",
+     "description": "A test item."
+   }
+   ```
+
+4. Click `Execute`.
+5. Observe the response: you should see a `201` Created status code with the newly created item.
+
+### 10. Try `PUT /items/{item_id}`
+
+1. In `Swagger UI`, expand the `PUT /items/{item_id}` endpoint.
+2. Click `Try it out`.
+3. Enter the `item_id` of the item you just created.
+4. Enter a request body with updated values, for example:
+
+   ```json
+   {
+     "title": "Updated Item",
+     "description": "An updated description."
+   }
+   ```
+
+5. Click `Execute`.
+6. Observe the response: you should see a `200` status code with the updated item data.
+
+### 11. Change the `API_TOKEN`
+
+1. [Open the file](../../appendix/vs-code.md#open-the-file):
+   `.env.docker.secret`.
+2. Change the `API_TOKEN` value to something different, for example: `my-new-secret-key`.
+3. Restart the services:
 
    [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
-   source .env.secret && sudo lsof -i :$PORT
+   docker compose --env-file .env.docker.secret up --build
    ```
 
-2. If the command produces **no output**, the port is free.
-3. Otherwise, you need to use a [free port](#7-use-a-free-port).
+   > [!TIP]
+   > If the services are still running, press `Ctrl+C` first to stop them, then run the command above.
 
-### 7. Use a free port
+4. Go back to `Swagger UI`.
+5. Try `GET /items`.
+6. Observe: the old key no longer works (you get a `401` Unauthorized error).
+7. Click `Authorize` again.
+8. Enter the new key (`my-new-secret-key`).
+9. Try `GET /items`.
+10. Observe: the new key works (you get a `200` response).
 
-1. If you see output with `python`:
-   1. It's probably the web server running if you tried running it before.
-   2. You can safely [force stop it](#11-force-stop-the-web-server).
-2. Otherwise:
-   1. [Open the file](../../appendix/vs-code.md#open-the-file):
-      `.env.secret`
-   2. Write another value for `PORT`, e.g., `41000`.
-   3. [Check](#6-check-that-the-port-port-is-free) that the new `$PORT` (`41000`) is free.
+> [!IMPORTANT]
+> After you are done, change the `API_TOKEN` back to `my-secret-api-key` so that subsequent tasks work with the default value.
 
-### 8. Run the web server
+### 12. Fill in the questionnaire
 
-> [!NOTE]
-> [`poe`](https://poethepoet.natn.io/) can run tasks
-> specified in the [`pyproject.toml`](../../../pyproject.toml) in the `[tool.poe.tasks]` section.
+1. [Open the file](../../appendix/vs-code.md#open-the-file):
+   [`lab/tasks/required/questionnaire.md`](./questionnaire.md).
+2. Fill in each answer based on what you observed.
 
-1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+### 13. Commit the questionnaire
 
-   ```terminal
-   uv run poe dev
+1. [Commit](../git-workflow.md#commit) your changes.
+
+   Use the following commit message:
+
+   ```text
+   docs: fill in the API exploration questionnaire
    ```
 
-2. The web server will automatically read the [environment variables](../../appendix/environments.md#environment-variables) from the `.env.secret` file.
+### 14. Finish the task
 
-> [!NOTE]
-> You will see in the output a key shortcut to stop the server such as `Ctrl+C`.
-
-### 9. Check `/status`
-
-> [!NOTE]
-> `/status` is an [endpoint](../../appendix/web-development.md#endpoint) of the web server.
-
-1. [Send a `GET` query](../../appendix/web-development.md#send-a-get-query)
-   to `http://127.0.0.1:42000/status`.
-2. [Pretty-print the `JSON` response](../../appendix/web-development.md#pretty-print-the-json-response).
-
-> [!TIP]
-> You can also check the `/status` endpoint using the auto-generated API documentation
-> at <http://127.0.0.1:42000/docs>.
-
-### 10. Stop the web server
-
-1. [Switch to the old `VS Code Terminal`](../../appendix/vs-code.md#switch-to-another-terminal) where the web server runs.
-2. Press the key shortcut (`Ctrl+C`) to stop the server.
-3. You should see `INFO:     Waiting for application shutdown.`
-
-### 11. Force stop the web server
-
-> [!NOTE]
-> Run if you see the `Address already in use` error after trying to run the web server.
-
-1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   source .env.secret && kill $(sudo lsof -ti :$PORT)
-   ```
-
-2. [Check that the port is free](#6-check-that-the-port-port-is-free).
-
-### 12. Check `/status` again
-
-The server has stopped. Therefore, it should not respond to requests.
-
-[Check `/status`](#9-check-status) again to ensure that.
-
-You shouldn't see the response that you got before.
-
-### 13. Write a comment for the issue
-
-1. Go to the issue that you created for this task.
-2. Scroll down.
-3. Go to `Add a comment`.
-4. Write one of the responses that you got when the web server was running.
-5. Click `Close with comment`.
+1. [Create a PR](../git-workflow.md#create-a-pr-to-main-in-your-fork) with your questionnaire.
+2. [Get a PR review](../git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
 
 ---
 
 ## Acceptance criteria
 
 - [ ] Issue has the correct title.
-- [ ] The comment with the `JSON` response of the `/status` endpoint exists.
+- [ ] The questionnaire file is filled in with correct answers.
+- [ ] PR is approved.
+- [ ] PR is merged.

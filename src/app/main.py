@@ -1,19 +1,40 @@
-"""Course Materials Service - FastAPI application.
+"""Learning Management Service — FastAPI application."""
 
-A read-only service that serves course-related items (courses, labs, tasks, steps)
-from JSON data files.
-"""
+from fastapi import Depends, FastAPI
 
-from fastapi import FastAPI
+from app.auth import verify_api_key
+from app.routers import items
 from app.settings import settings
-from app.routers import items, status
+
+# from app.routers import interactions
+# from app.routers import learners
 
 app = FastAPI(
     title=settings.app_name,
     debug=settings.debug,
-    description="A read-only API for accessing course structure and learning materials.",
+    description="A learning management service API.",
     version="0.1.0",
 )
 
-app.include_router(status.router, tags=["status"])
-app.include_router(items.router, prefix="/items", tags=["items"])
+app.include_router(
+    items.router,
+    prefix="/items",
+    tags=["items"],
+    dependencies=[Depends(verify_api_key)],
+)
+
+# UNCOMMENT to enable the interactions endpoint
+# app.include_router(
+#     interactions.router,
+#     prefix="/interactions",
+#     tags=["interactions"],
+#     dependencies=[Depends(verify_api_key)],
+# )
+
+# UNCOMMENT to enable the learners endpoint
+# app.include_router(
+#     learners.router,
+#     prefix="/learners",
+#     tags=["learners"],
+#     dependencies=[Depends(verify_api_key)],
+# )

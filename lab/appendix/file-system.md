@@ -18,7 +18,7 @@ Starts from the [root directory](#root-directory-) or the [home directory](#home
 
 Examples:
 
-1. `/home/johndoe/Desktop`
+1. `/home/inno-se-toolkit/Desktop`
 2. `/nix/store`
 
 ### Relative path

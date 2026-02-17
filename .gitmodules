@@ -1,0 +1,3 @@
+[submodule "lab/design"]
+	path = lab/design
+	url = https://github.com/inno-se-toolkit/se-toolkit-lab-3-design.git

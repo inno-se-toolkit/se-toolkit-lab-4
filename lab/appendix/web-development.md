@@ -18,7 +18,12 @@
     - [`JSON` data types](#json-data-types)
     - [Example of `JSON` data](#example-of-json-data)
   - [`Protobuf`](#protobuf)
+- [REST API](#rest-api)
 - [API](#api)
+- [`Swagger UI`](#swagger-ui)
+  - [Open `Swagger UI`](#open-swagger-ui)
+  - [Authorize in `Swagger UI`](#authorize-in-swagger-ui)
+  - [Try an endpoint in `Swagger UI`](#try-an-endpoint-in-swagger-ui)
 - [Endpoint](#endpoint)
 - [Send a `GET` query](#send-a-get-query)
   - [Send a `GET` query using a browser](#send-a-get-query-using-a-browser)
@@ -36,7 +41,7 @@
 
 ### Web server
 
-A web server is software that delivers content or services to [web clients](#web-client) over the [Internet](./networks.md#internet) using a [protocol](#protocol).
+A web server is software that delivers content or services to [web clients](#web-client) over the [Internet](./computer-networks.md#internet) using a [protocol](#protocol).
 
 > [!NOTE]
 > We refer to a web server as software only.
@@ -96,9 +101,14 @@ Status codes are three-digit numbers returned by servers indicating the result o
 
 Standard status codes include:
 
-- [`200` (OK)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/200)
-- [`404` (Not Found)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/404)
-- [`500` (Internal Server Error)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/500)
+- [`200` (OK)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/200) — the request succeeded.
+- [`201` (Created)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/201) — a new resource was created (typically after `POST`).
+- [`400` (Bad Request)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/400) — the request was malformed.
+- [`401` (Unauthorized)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/401) — authentication is required or the credentials are invalid.
+- [`403` (Forbidden)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/403) — the server understood the request but refuses to authorize it.
+- [`404` (Not Found)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/404) — the requested resource does not exist.
+- [`422` (Unprocessable Entity)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/422) — the request was well-formed but had invalid data.
+- [`500` (Internal Server Error)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/500) — an unexpected server error occurred.
 
 ## Data format
 
@@ -131,7 +141,71 @@ See [Learn `JSON` in Y minutes](https://learnxinyminutes.com/json/).
 
 `Protobuf` uses `.proto` files to define data structures, which are then compiled into language-specific classes for various programming languages. It's commonly used in microservices architectures and API communications where efficiency and schema evolution are important.
 
+## REST API
+
+A REST API (`Representational State Transfer`) is a style of API design that uses `HTTP` methods and noun-based resource paths.
+
+Key principles:
+
+- **Resources** are identified by paths: `/items`, `/learners`, `/interactions`.
+- **`HTTP` methods** define the action:
+  - `GET` — read a resource.
+  - `POST` — create a new resource.
+  - `PUT` — update an existing resource.
+  - `DELETE` — remove a resource.
+- **Status codes** indicate the result: `200`, `201`, `404`, etc.
+
+Example:
+
+| Action               | Method | Path           | Status code |
+| -------------------- | ------ | -------------- | ----------- |
+| List all items       | `GET`  | `/items`       | `200`       |
+| Get one item         | `GET`  | `/items/{id}`  | `200`/`404` |
+| Create an item       | `POST` | `/items`       | `201`       |
+| Update an item       | `PUT`  | `/items/{id}`  | `200`/`404` |
+
 ## API
+
+An API (`Application Programming Interface`) is a set of rules that lets programs communicate with each other.
+
+A web API exposes [endpoints](#endpoint) that clients can call over `HTTP`.
+
+## `Swagger UI`
+
+`Swagger UI` is an interactive web page that lets you explore and test a REST API.
+
+`FastAPI` auto-generates `Swagger UI` at the `/docs` path.
+
+Actions:
+
+- [Open `Swagger UI`](#open-swagger-ui)
+- [Authorize in `Swagger UI`](#authorize-in-swagger-ui)
+- [Try an endpoint in `Swagger UI`](#try-an-endpoint-in-swagger-ui)
+
+### Open `Swagger UI`
+
+1. Open <http://127.0.0.1:42001/docs> in a browser.
+
+### Authorize in `Swagger UI`
+
+If the API requires authentication:
+
+1. [Open `Swagger UI`](#open-swagger-ui).
+2. Click the `Authorize` button (lock icon at the top right).
+3. In the `Value` field, enter the API key.
+4. Click `Authorize`.
+5. Click `Close`.
+
+All subsequent requests will include the API key in the `Authorization` header.
+
+### Try an endpoint in `Swagger UI`
+
+1. [Open `Swagger UI`](#open-swagger-ui).
+2. Click on an endpoint (e.g., `GET /items`).
+3. Click `Try it out`.
+4. Fill in parameters if needed.
+5. Click `Execute`.
+6. See the response below: status code, response body, headers.
 
 ## Endpoint
 

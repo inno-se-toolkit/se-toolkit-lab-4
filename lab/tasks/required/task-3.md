@@ -1,185 +1,243 @@
-# Run the web server using `Docker Compose`
+# Implement the learners endpoint
 
 <h4>Time</h4>
 
-~30-40 min
+~40-50 min
 
 <h4>Purpose</h4>
 
-Learn to run the web server using `Docker Compose`.
+Learn to implement a new endpoint using an existing one as a reference.
 
 <h4>Context</h4>
 
-You should be able to run the web server using `Docker Compose` on your computer.
-Then, you can check whether the web server works before the web server is deployed.
+The `/learners` endpoint doesn't exist yet. Placeholder templates are provided in the code.
+The database functions for learners (`read_learners`, `create_learner`) are already implemented.
+You will implement the endpoint layer by studying the `items` reference implementation and filling in the placeholders.
 
 <h4>Table of contents</h4>
 
 - [Steps](#steps)
-  - [1. Create an issue](#1-create-an-issue)
-  - [2. Revise environments](#2-revise-environments)
-  - [3. View the file `.env.docker.example`](#3-view-the-file-envdockerexample)
-  - [4. Create the file `.env.docker.secret`](#4-create-the-file-envdockersecret)
-  - [5. View the file `.env.docker.secret`](#5-view-the-file-envdockersecret)
-  - [Edit the file `.env.docker.secret`](#edit-the-file-envdockersecret)
-  - [6. Run the web server using `Docker Compose`](#6-run-the-web-server-using-docker-compose)
-  - [7. Check `/status`](#7-check-status)
-    - [Check `/status` using a browser](#check-status-using-a-browser)
-    - [Check `/status` using `curl`](#check-status-using-curl)
-    - [Check `/status` using another address](#check-status-using-another-address)
-  - [8. Stop the web server](#8-stop-the-web-server)
-  - [9. Check `/status` again](#9-check-status-again)
-  - [10. Write a comment for the issue](#10-write-a-comment-for-the-issue)
+  - [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
+  - [1. Create a `Lab Task` issue](#1-create-a-lab-task-issue)
+  - [2. Study the reference implementation](#2-study-the-reference-implementation)
+  - [3. Part A: Implement the `GET` endpoint](#3-part-a-implement-the-get-endpoint)
+    - [3.1. Uncomment the router registration](#31-uncomment-the-router-registration)
+    - [3.2. Uncomment the imports](#32-uncomment-the-imports)
+    - [3.3. Uncomment and fill in the `GET` placeholder](#33-uncomment-and-fill-in-the-get-placeholder)
+    - [3.4. Restart and verify](#34-restart-and-verify)
+    - [3.5. Verify the query parameter](#35-verify-the-query-parameter)
+    - [3.6. Commit Part A](#36-commit-part-a)
+  - [4. Part B: Implement the `POST` endpoint](#4-part-b-implement-the-post-endpoint)
+    - [4.1. Uncomment and fill in the `POST` placeholder](#41-uncomment-and-fill-in-the-post-placeholder)
+    - [4.2. Restart and verify](#42-restart-and-verify)
+    - [4.3. Commit Part B](#43-commit-part-b)
+  - [5. Finish the task](#5-finish-the-task)
 - [Acceptance criteria](#acceptance-criteria)
 
 ## Steps
 
-### 1. Create an issue
+### 0. Follow the `Git workflow`
 
-Title: `[Task] Run the web server using Docker Compose`
+Follow the [`Git workflow`](../git-workflow.md) to complete this task.
 
-### 2. Revise environments
+### 1. Create a `Lab Task` issue
 
-You have already learned about environments in [Task 1](./task-1.md#2-learn-about-environments).
+Title: `[Task] Implement the learners endpoint`
 
-Now you will configure environment variables specific to the deployment when using `Docker Compose`.
+### 2. Study the reference implementation
 
-### 3. View the file `.env.docker.example`
+Before writing any code, study the existing `items` implementation to understand the pattern.
 
 1. [Open the file](../../appendix/vs-code.md#open-the-file):
-   [`.env.docker.example`](../../../.env.docker.example).
+   [`src/app/routers/items.py`](../../../src/app/routers/items.py).
+2. Study the `GET /` endpoint:
+   - What decorator is used? (`@router.get`)
+   - What is the `response_model`?
+   - What parameters does the function accept?
+   - What database function does it call?
+3. Study the `POST /` endpoint:
+   - What decorator is used? (`@router.post`)
+   - What is the `status_code`?
+   - What is the request body schema?
+   - What database function does it call?
+4. [Open the file](../../appendix/vs-code.md#open-the-file):
+   [`src/app/db/items.py`](../../../src/app/db/items.py).
+5. Study the `read_items` and `create_item` functions.
+6. [Open the file](../../appendix/vs-code.md#open-the-file):
+   [`src/app/db/learners.py`](../../../src/app/db/learners.py).
+7. Study the `read_learners` and `create_learner` functions.
+8. Notice that `read_learners` accepts an optional `enrolled_after` parameter for filtering.
 
-### 4. Create the file `.env.docker.secret`
+### 3. Part A: Implement the `GET` endpoint
 
-> [!NOTE]
-> The `.env.docker.secret` file contains environment variables for the Docker containers.
+#### 3.1. Uncomment the router registration
+
+1. [Open the file](../../appendix/vs-code.md#open-the-file):
+   [`src/app/main.py`](../../../src/app/main.py).
+2. Uncomment the import line:
+
+   ```python
+   from app.routers import learners
+   ```
+
+3. Uncomment the router registration block:
+
+   ```python
+   app.include_router(
+       learners.router,
+       prefix="/learners",
+       tags=["learners"],
+       dependencies=[Depends(verify_api_key)],
+   )
+   ```
+
+#### 3.2. Uncomment the imports
+
+1. [Open the file](../../appendix/vs-code.md#open-the-file):
+   [`src/app/routers/learners.py`](../../../src/app/routers/learners.py).
+2. Uncomment the import lines at the top of the file:
+
+   ```python
+   from datetime import datetime
+
+   from fastapi import Depends
+   from sqlmodel.ext.asyncio.session import AsyncSession
+
+   from app.database import get_session
+   from app.db.learners import read_learners, create_learner
+   from app.models.learner import Learner, LearnerCreate
+   ```
+
+#### 3.3. Uncomment and fill in the `GET` placeholder
+
+1. In [`src/app/routers/learners.py`](../../../src/app/routers/learners.py), find the `PART A: GET endpoint` section.
+2. Uncomment the placeholder code.
+3. Replace each `<placeholder>` with the correct value.
+
+> [!TIP]
+> Use the `items` `GET` endpoint as a reference. The learners `GET` endpoint follows the same pattern but:
 >
-> It was added to [`.gitignore`](../../../.gitignore) because you may specify there
-> [secrets](../../appendix/environments.md#secrets) such as the address of your VM.
+> - Uses `Learner` instead of `Item`.
+> - Uses `read_learners` instead of `read_items`.
+> - Has an `enrolled_after` query parameter of type `datetime | None` instead of no query parameter.
 
-1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+<details><summary>Hint: what the completed code looks like</summary>
 
-   ```terminal
-   cp .env.docker.example .env.docker.secret
-   ```
+```python
+@router.get("/", response_model=list[Learner])
+async def get_learners(
+    enrolled_after: datetime | None = None,
+    session: AsyncSession = Depends(get_session),
+):
+    """Get all learners, optionally filtered by enrollment date."""
+    return await read_learners(session, enrolled_after)
+```
 
-### 5. View the file `.env.docker.secret`
+</details>
 
-View the file using one of the following methods.
+#### 3.4. Restart and verify
 
-Method 1:
+1. Restart the services:
 
-1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   cat .env.docker.secret
-   ```
-
-Method 2:
-
-1. [Open the file](../../appendix/vs-code.md#open-the-file):
-   [`.env.secret`](../../../.env.secret).
-
-### Edit the file `.env.docker.secret`
-
-### 6. Run the web server using `Docker Compose`
-
-> [!NOTE]
-> [`Docker Compose`](../../appendix/docker.md#docker-compose) can run multi-container `Docker` applications
-> defined in the [`docker-compose.yml`](../../../docker-compose.yml) file.
-
-1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret up --build
    ```
 
-> [!NOTE]
-> `Docker Compose` will provide use environment variables from the `.env.docker.secret` file and map them to variables that as specified in the `docker-compose.yml`.
->
-> `Docker Compose` will then make these constructed environment variables available to the applications running in [containers](../../appendix/docker.md#container).
+2. Open `Swagger UI` at `http://127.0.0.1:42001/docs`.
+3. [Authorize](./task-1.md#6-authorize-in-swagger-ui) with the API key.
+4. Try `GET /learners`.
+5. Observe: you should see a `200` status code with a list of all learners.
 
-### 7. Check `/status`
+#### 3.5. Verify the query parameter
 
-> [!NOTE]
-> `/status` is an [endpoint](../../appendix/web-development.md#endpoint) of the web server.
+1. In `Swagger UI`, expand the `GET /learners` endpoint.
+2. Click `Try it out`.
+3. Enter `2025-10-01` in the `enrolled_after` field.
+4. Click `Execute`.
+5. Observe: the response should contain only Diana and Eve (learners enrolled on or after `2025-10-01`).
 
-#### Check `/status` using a browser
+#### 3.6. Commit Part A
 
-1. Open in a browser: `http://127.0.0.1:42001/status`
-2. You should see the response from the web server like:
+1. [Commit your change using the `Source Control`](../git-workflow.md#commit).
 
-    ```text
-    status: "ok"
-    service: "course-materials"
-    ```
+   Use the following commit message:
 
-<!-- TODO view JSON -->
-
-#### Check `/status` using `curl`
-
-1. [Open a new `VS Code Terminal`](../../appendix/vs-code.md#open-a-new-terminal).
-2. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-    ```text
-    curl http://127.0.0.1:42001/status
-    ```
-
-3. You should see the `JSON` response from the web server:
-
-    ```json
-    {"status":"ok","service":"course-materials"}
-    ```
-
-#### Check `/status` using another address
-
-1. Go to [`docker-compose.yml`](../../../docker-compose.yml).
-2. Find the service `caddy`.
-
-   **Note:** this service is running `Caddy` in a container at the port `CADDY_HOST_PORT` specified in the file `.env.docker.secret`.
-3. [Open the file](../../appendix/vs-code.md#open-the-file):
-   `.env.docker.secret`.
-4. Find there the value of `CADDY_HOST_PORT`.
-5. By default it's `42002`.
-6. Open in a browser: `http://127.0.0.1:42002/status`
-7. You should see the same response as you got [before](#check-status-using-a-browser).
-8. `Caddy` redirected your request from this new address to the web server and returned the response from the web server back to you.
-
-### 8. Stop the web server
-
-Method 1:
-
-1. [Switch to the old `VS Code Terminal`](../../appendix/vs-code.md#switch-to-another-terminal) where the web server runs.
-2. Press `Ctrl+C` to stop the `Docker Compose` services.
-3. You should see logs indicating that the containers are stopping.
-
-Method 2:
-
-1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   docker compose down
+   ```text
+   feat: implement GET /learners endpoint
    ```
 
-### 9. Check `/status` again
+### 4. Part B: Implement the `POST` endpoint
 
-The server has stopped. Therefore, it should not respond to requests.
+#### 4.1. Uncomment and fill in the `POST` placeholder
 
-[Check `/status`](#7-check-status) again to ensure that.
+1. In [`src/app/routers/learners.py`](../../../src/app/routers/learners.py), find the `PART B: POST endpoint` section.
+2. Uncomment the placeholder code.
+3. Replace each `<placeholder>` with the correct value.
 
-You shouldn't see the response that you got before.
+> [!TIP]
+> Use the `items` `POST` endpoint as a reference. The learners `POST` endpoint follows the same pattern but:
+>
+> - Uses `Learner` and `LearnerCreate` instead of `Item` and `ItemCreate`.
+> - Uses `create_learner` instead of `create_item`.
+> - Passes `name` and `email` instead of `title` and `description`.
 
-### 10. Write a comment for the issue
+<details><summary>Hint: what the completed code looks like</summary>
 
-1. Go to the issue that you created for this task.
-2. Scroll down.
-3. Go to `Add a comment`.
-4. Write one of the responses that you got when the web server was running.
-5. Click `Close with comment`.
+```python
+@router.post("/", response_model=Learner, status_code=201)
+async def post_learner(
+    body: LearnerCreate,
+    session: AsyncSession = Depends(get_session),
+):
+    """Create a new learner."""
+    return await create_learner(session, name=body.name, email=body.email)
+```
+
+</details>
+
+#### 4.2. Restart and verify
+
+1. Restart the services ([Step 3.4](#34-restart-and-verify)).
+2. Open `Swagger UI` and [authorize](./task-1.md#6-authorize-in-swagger-ui).
+3. Try `POST /learners` with a request body:
+
+   ```json
+   {
+     "name": "Frank Castle",
+     "email": "frank@example.com"
+   }
+   ```
+
+4. Observe: you should see a `201` Created status code with the newly created learner.
+
+#### 4.3. Commit Part B
+
+1. [Commit your change using the `Source Control`](../git-workflow.md#commit).
+
+   Use the following commit message:
+
+   ```text
+   feat: implement POST /learners endpoint
+   ```
+
+> [!IMPORTANT]
+> Part A and Part B must be **separate commits**. Do not combine them into one.
+
+### 5. Finish the task
+
+1. [Create a PR](../git-workflow.md#create-a-pr-to-main-in-your-fork) with your implementation.
+2. [Get a PR review](../git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
 
 ---
 
 ## Acceptance criteria
 
-- [ ] Issue has the correct title
-- [ ] The comment with the `JSON` response of the `/status` endpoint exists.
+- [ ] Issue has the correct title.
+- [ ] `GET /learners` returns learner data.
+- [ ] `GET /learners?enrolled_after=2025-10-01` returns only learners enrolled after that date.
+- [ ] `POST /learners` creates a new learner and returns `201`.
+- [ ] Part A and Part B are separate commits.
+- [ ] PR is approved.
+- [ ] PR is merged.

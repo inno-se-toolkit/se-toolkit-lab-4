@@ -34,7 +34,7 @@ See [VM image](./vm-info.md) for the information about your VM.
 
 ## `<your-vm-ip-address>`
 
-The [IP address](./networks.md)
+The [IP address](./computer-networks.md)
 
 ## Prepare the connection
 
