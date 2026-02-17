@@ -64,17 +64,29 @@ Title: `[Task] Deploy to a hardened VM`
 
 ### 3. Clone your fork on the VM
 
-1. If you have already cloned the repo on the VM, pull the latest changes:
+Use any of the following methods:
+
+**Already cloned the repo on the VM:**
+
+1. Navigate to the project directory:
 
    ```terminal
-   cd se-toolkit-lab-3 && git pull
+   cd se-toolkit-lab-3
    ```
 
-2. If you have not cloned the repo yet, [clone it](../../appendix/git-vscode.md#clone-the-repo-using-the-vs-code-terminal):
+2. Pull the latest changes:
+
+   ```terminal
+   git pull
+   ```
+
+**Not yet cloned:**
+
+1. [Clone the repo](../../appendix/git-vscode.md#clone-the-repo-using-the-vs-code-terminal).
 
    Replace `<repo-url>` with [`<your-fork-url>`](../../appendix/github.md#your-fork-url).
 
-3. Navigate to the project directory:
+2. Navigate to the project directory:
 
    ```terminal
    cd se-toolkit-lab-3
