@@ -47,23 +47,10 @@ Title: `[Task] Enable and debug the interactions endpoint`
 
 ### 2. Examine the database using `PgAdmin`
 
-1. Open `PgAdmin` in a browser: `http://127.0.0.1:5050`.
-2. Log in with:
-   - Email: `admin@example.com`
-   - Password: `admin`
-3. Add a new server connection:
-   1. Right-click `Servers` -> `Register` -> `Server...`
-   2. In the `General` tab, set `Name` to `lab3`.
-   3. In the `Connection` tab, set:
-      - `Host name/address`: `postgres`
-      - `Port`: `5432`
-      - `Username`: the value of `POSTGRES_USER` from `.env.docker.secret` (default: `postgres`).
-      - `Password`: the value of `POSTGRES_PASSWORD` from `.env.docker.secret` (default: `postgres`).
-   4. Click `Save`.
-4. Navigate to `Servers` -> `lab3` -> `Databases` -> `lab3` -> `Schemas` -> `public` -> `Tables`.
-5. Find the `interaction_logs` table.
-6. Right-click `interaction_logs` -> `Properties` -> `Columns`.
-7. Note the column names: `id`, `learner_id`, `item_id`, `kind`, `created_at`.
+1. [Open `PgAdmin`](../../appendix/pgadmin.md#open-pgadmin).
+2. [Add a server in `PgAdmin`](../../appendix/pgadmin.md#add-a-server-in-pgadmin).
+3. [Inspect columns](../../appendix/pgadmin.md#inspect-columns) of the `interaction_logs` table.
+4. Note the column names: `id`, `learner_id`, `item_id`, `kind`, `created_at`.
 
 > [!NOTE]
 > Pay attention to the column name `created_at`. You will need it later.
@@ -206,17 +193,15 @@ The field name in the response schema (`InteractionModel`) must match the field 
 
 ### 12. Compare with the database
 
-1. Open `PgAdmin` at `http://127.0.0.1:5050`.
-2. Navigate to the `interaction_logs` table.
-3. Open the query tool: right-click the `lab3` database -> `Query Tool`.
-4. Run the following query:
+1. [Open `PgAdmin`](../../appendix/pgadmin.md#open-pgadmin).
+2. [Run a query](../../appendix/pgadmin.md#run-a-query) on the `interaction_logs` table:
 
    ```sql
    SELECT * FROM interaction_logs WHERE item_id = 2;
    ```
 
-5. Compare the query results with the response from `Swagger UI`.
-6. Notice that the results don't match — the API returns different interactions than what the database query shows.
+3. Compare the query results with the response from `Swagger UI`.
+4. Notice that the results don't match — the API returns different interactions than what the database query shows.
 
 ### 13. Find Bug 2 in the code
 

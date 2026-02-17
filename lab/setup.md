@@ -302,44 +302,28 @@ Configure `Git` if you want to change the values that you saw while [checking yo
 
 2. Wait for the services to start. You should see log output from the `app`, `postgres`, `pgadmin`, and `caddy` containers.
 
-> [!TIP]
-> The database is initialized from [`src/app/data/init.sql`](../src/app/data/init.sql) only on the **first** start of the `PostgreSQL` container.
-> If you need to re-initialize the database (e.g., after pulling upstream changes to `init.sql`), see [Resetting the database](./appendix/database.md#resetting-the-database).
+   > [!TIP]
+   > The database is initialized from [`src/app/data/init.sql`](../src/app/data/init.sql) only on the **first** start of the `PostgreSQL` container.
+   > If you need to re-initialize the database (e.g., after pulling upstream changes to `init.sql`), see [Resetting the database](./appendix/database.md#resetting-the-database).
 
 3. Verify that the API is running by opening in a browser: <http://127.0.0.1:42001/docs>.
 
 4. You should see the `Swagger UI` page with the API documentation.
 
-> [!NOTE]
-> [`Docker Compose`](./appendix/docker.md#docker-compose) reads environment variables from `.env.docker.secret`
-> and uses them to configure the containers defined in [`docker-compose.yml`](../docker-compose.yml).
+   > [!NOTE]
+   > [`Docker Compose`](./appendix/docker.md#docker-compose) reads environment variables from `.env.docker.secret`
+   > and uses them to configure the containers defined in [`docker-compose.yml`](../docker-compose.yml).
 
-> [!TIP]
-> To stop the services, press `Ctrl+C` in the terminal where they are running.
-> Alternatively, run `docker compose down` in a new terminal.
+   > [!TIP]
+   > To stop the services, press `Ctrl+C` in the terminal where they are running.
+   > Alternatively, run `docker compose down` in a new terminal.
 
 ### 12. Open `PgAdmin`
 
-1. Open in a browser: <http://127.0.0.1:5050>.
-
-2. Log in with:
-   - Email: `admin@example.com`
-   - Password: `admin`
-
-3. Add a new server connection:
-   1. Right-click `Servers` -> `Register` -> `Server...`.
-   2. In the `General` tab:
-      - `Name`: `lab3`
-   3. In the `Connection` tab:
-      - `Host name/address`: `postgres`
-      - `Port`: `5432`
-      - `Username`: `postgres`
-      - `Password`: `postgres`
-   4. Click `Save`.
-
-4. Navigate to `Servers` -> `lab3` -> `Databases` -> `lab3` -> `Schemas` -> `public` -> `Tables`.
-
-5. Verify that the following tables exist and contain data:
+1. [Open `PgAdmin`](./appendix/pgadmin.md#open-pgadmin).
+2. [Add a server in `PgAdmin`](./appendix/pgadmin.md#add-a-server-in-pgadmin).
+3. [Browse tables](./appendix/pgadmin.md#browse-tables).
+4. Verify that the following tables exist and contain data:
    - `items`
    - `learners`
    - `interaction_logs`
