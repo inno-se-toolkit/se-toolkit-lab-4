@@ -91,27 +91,7 @@
 > Branch protection prevents accidental pushes directly to `main`.
 > This enforces the PR workflow and ensures all changes are reviewed.
 
-Complete these steps:
-
-1. [Go to your fork](#33-go-to-your-fork).
-2. Go to `Settings`.
-3. Go to `Code and automation`.
-4. Go to `Rules`.
-5. Go to `Rulesets`.
-6. Go to `New ruleset`.
-7. Go to `Add branch ruleset`.
-8. Set:
-
-   1. `Ruleset Name`: `push`
-   2. `Enforcement status`: `Active`
-   3. `Target branches` -> `Add target` -> `Include default branch`
-   4. Rules:
-      - [x] `Restrict deletions`
-      - [x] `Require a pull request before merging`:
-         - `Required approvals`: `1`
-         - `Require conversation resolution before merging`
-         - `Allowed merge methods`: `Merge`.
-      - [x] Block force pushes
+1. [Protect a branch](./appendix/github.md#protect-a-branch).
 
 ### 4. Install programs
 
@@ -141,42 +121,11 @@ Complete these steps:
 
 #### 5.1. Check your `Git` config
 
-1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   git config --global --list
-   ```
-
-   The output should look like this (but with your values):
-
-   ```terminal
-   user.name=John Doe
-   user.email=inno-se-toolkit@gmail.com
-   ```
+1. [Check your Git config](./appendix/git.md#check-your-git-config).
 
 #### 5.2. Configure `Git`
 
-Configure `Git` if you want to change the values that you saw while [checking your `Git` config](#51-check-your-git-config).
-
-> [!IMPORTANT]
-> Replace `<your-name>` with a name and `<your-email>` with an email that you want to see in the commits.
-
-1. (Optional) See [docs](https://git-scm.com/docs/git-config#Documentation/git-config.txt-username) for an explanation of what these commands do.
-2. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-    ```terminal
-    git config --global user.name '<your-name>'
-    ```
-
-    Example: `git config --global user.name 'John Doe'`
-
-3. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-     ```terminal
-     git config --global user.email '<your-email>'
-     ```
-
-     Example: `git config --global user.email 'inno-se-toolkit@gmail.com'`
+[Configure Git](./appendix/git.md#configure-git) if you want to change the values that you saw while [checking your `Git` config](#51-check-your-git-config).
 
 ### 6. Open your cloned fork in `VS Code`
 
