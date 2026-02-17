@@ -33,6 +33,7 @@ Docs:
 5. In the `Connection` tab:
    - Host name/address: `postgres`.
    - Port: `5432`.
+   - Maintenance database: the value of `POSTGRES_DB` (default: `lab3`).
    - Username: the value of `POSTGRES_USER` (default: `postgres`).
    - Password: the value of `POSTGRES_PASSWORD` (default: `postgres`).
 6. Click `Save`.
@@ -57,12 +58,12 @@ Docs:
 ## Run a query
 
 1. [Add a server](#add-a-server-in-pgadmin) if you haven't already.
-2. Click on the `lab3` database.
-3. Click `Tools` -> `Query Tool`.
+2. Right-click the `lab3` database.
+3. Click `Query Tool`.
 4. Write your SQL query, e.g.:
 
    ```sql
    SELECT * FROM interaction_logs WHERE item_id = 2;
    ```
 
-5. Click the `Execute` button (or press `F5`).
+5. Click `Execute Script` (or press `F5`).
