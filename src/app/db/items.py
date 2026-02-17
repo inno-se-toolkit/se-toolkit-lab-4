@@ -3,23 +3,25 @@
 from sqlmodel import select
 from sqlmodel.ext.asyncio.session import AsyncSession
 
-from app.models.item import Item
+from app.models.item import ItemRecord
 
 
-async def read_items(session: AsyncSession) -> list[Item]:
+async def read_items(session: AsyncSession) -> list[ItemRecord]:
     """Read all items from the database."""
-    result = await session.exec(select(Item))
+    result = await session.exec(select(ItemRecord))
     return list(result.all())
 
 
-async def read_item(session: AsyncSession, item_id: int) -> Item | None:
+async def read_item(session: AsyncSession, item_id: int) -> ItemRecord | None:
     """Read a single item by id."""
-    return await session.get(Item, item_id)
+    return await session.get(ItemRecord, item_id)
 
 
-async def create_item(session: AsyncSession, title: str, description: str) -> Item:
+async def create_item(
+    session: AsyncSession, title: str, description: str
+) -> ItemRecord:
     """Create a new item in the database."""
-    item = Item(title=title, description=description)
+    item = ItemRecord(title=title, description=description)
     session.add(item)
     await session.commit()
     await session.refresh(item)
@@ -28,9 +30,9 @@ async def create_item(session: AsyncSession, title: str, description: str) -> It
 
 async def update_item(
     session: AsyncSession, item_id: int, title: str, description: str
-) -> Item | None:
+) -> ItemRecord | None:
     """Update an existing item in the database."""
-    item = await session.get(Item, item_id)
+    item = await session.get(ItemRecord, item_id)
     if item is None:
         return None
     item.title = title

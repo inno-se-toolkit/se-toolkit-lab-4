@@ -1,11 +1,16 @@
 -- Learning Management Service — Database Initialization
 -- This script runs automatically on the first start of the PostgreSQL container.
 
--- Items: learning materials
+-- Items: learning materials organized as a tree (course → labs → tasks → steps).
+-- The tree structure uses the adjacency list pattern (parent_id).
+-- Type-specific attributes are stored in a JSONB column.
 CREATE TABLE IF NOT EXISTS items (
     id SERIAL PRIMARY KEY,
+    type VARCHAR(50) NOT NULL DEFAULT 'step',
+    parent_id INTEGER REFERENCES items(id),
     title VARCHAR(255) NOT NULL,
     description TEXT NOT NULL DEFAULT '',
+    attributes JSONB NOT NULL DEFAULT '{}',
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -26,16 +31,20 @@ CREATE TABLE IF NOT EXISTS interaction_logs (
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
--- Seed data: items
-INSERT INTO items (title, description) VALUES
-    ('Introduction to Software Engineering', 'Overview of SE principles and practices.'),
-    ('Version Control with Git', 'Learn Git basics: commits, branches, merging.'),
-    ('REST API Design', 'Design RESTful APIs using HTTP methods and status codes.'),
-    ('Docker Fundamentals', 'Containerize applications using Docker and Docker Compose.'),
-    ('Database Integration', 'Connect a web application to a PostgreSQL database.'),
-    ('Testing with pytest', 'Write and run automated tests for Python applications.'),
-    ('Linux Server Administration', 'Basic server management and security hardening.'),
-    ('CI/CD Pipelines', 'Automate testing and deployment with GitHub Actions.');
+-- Seed data: items (a course with labs, tasks, and steps)
+INSERT INTO items (type, title, description, attributes) VALUES
+    ('course', 'Software Engineering', 'A course on SE principles and practices.', '{"instructors": ["Alice Johnson"]}');
+
+INSERT INTO items (type, parent_id, title, description, attributes) VALUES
+    ('lab', 1, 'Version Control with Git', 'Learn Git basics: commits, branches, merging.', '{"start": "2025-09-08T09:00:00", "finish": "2025-09-14T23:59:00"}'),
+    ('lab', 1, 'REST API Design', 'Design RESTful APIs using HTTP methods and status codes.', '{"start": "2025-09-15T09:00:00", "finish": "2025-09-21T23:59:00"}'),
+    ('lab', 1, 'Docker Fundamentals', 'Containerize applications using Docker and Docker Compose.', '{"start": "2025-09-22T09:00:00", "finish": "2025-09-28T23:59:00"}'),
+    ('lab', 1, 'Database Integration', 'Connect a web application to a PostgreSQL database.', '{"start": "2025-09-29T09:00:00", "finish": "2025-10-05T23:59:00"}');
+
+INSERT INTO items (type, parent_id, title, description) VALUES
+    ('task', 5, 'Testing with pytest', 'Write and run automated tests for Python applications.'),
+    ('task', 4, 'Linux Server Administration', 'Basic server management and security hardening.'),
+    ('step', 6, 'CI/CD Pipelines', 'Automate testing and deployment with GitHub Actions.');
 
 -- Seed data: learners
 INSERT INTO learners (name, email, enrolled_at) VALUES

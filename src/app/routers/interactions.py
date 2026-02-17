@@ -18,5 +18,7 @@ async def get_interactions(
     """Get all interactions, optionally filtered by item."""
     interactions = await read_interactions(session)
     if item_id is not None:
-        interactions = [i for i in interactions if i.learner_id == item_id]  # BUG: should filter by i.item_id
+        interactions = [
+            i for i in interactions if i.learner_id == item_id
+        ]  # BUG: should filter by i.item_id
     return interactions
