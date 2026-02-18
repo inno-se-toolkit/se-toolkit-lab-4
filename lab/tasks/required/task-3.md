@@ -21,7 +21,7 @@ You will implement the endpoint layer by studying the `items` reference implemen
   - [1. Create a `Lab Task` issue](#1-create-a-lab-task-issue)
   - [2. Study the reference implementation](#2-study-the-reference-implementation)
   - [3. Part A: Implement the `GET` endpoint](#3-part-a-implement-the-get-endpoint)
-    - [3.1. Uncomment the router registration](#31-uncomment-the-router-registration)
+    - [3.1. Enable the learners endpoint](#31-enable-the-learners-endpoint)
     - [3.2. Uncomment the imports](#32-uncomment-the-imports)
     - [3.3. Uncomment and fill in the `GET` placeholder](#33-uncomment-and-fill-in-the-get-placeholder)
     - [3.4. Restart and verify](#34-restart-and-verify)
@@ -70,26 +70,26 @@ Before writing any code, study the existing `items` implementation to understand
 
 ### 3. Part A: Implement the `GET` endpoint
 
-#### 3.1. Uncomment the router registration
+#### 3.1. Enable the learners endpoint
 
 1. [Open the file](../../appendix/vs-code.md#open-the-file):
-   [`src/app/main.py`](../../../src/app/main.py).
-2. Uncomment the import line:
+   `.env.docker.secret`.
+2. Change:
 
-   ```python
-   from app.routers import learners
+   ```text
+   ENABLE_LEARNERS=false
    ```
 
-3. Uncomment the router registration block:
+   to:
 
-   ```python
-   app.include_router(
-       learners.router,
-       prefix="/learners",
-       tags=["learners"],
-       dependencies=[Depends(verify_api_key)],
-   )
+   ```text
+   ENABLE_LEARNERS=true
    ```
+
+3. Save the file.
+
+> **Note:** `.env.docker.secret` is listed in `.gitignore` and will not be committed.
+> The flag tells the application to register the `/learners` route at startup.
 
 #### 3.2. Uncomment the imports
 

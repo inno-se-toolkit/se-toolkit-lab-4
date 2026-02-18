@@ -154,6 +154,10 @@ Title: `[Task] Explore the API`
 4. Go back to `Swagger UI`.
 5. Try `GET /items`.
 6. Observe: the old key no longer works (you get a `401` Unauthorized error).
+
+   > **Note:** This is `401`, not `403`. In step 4 you sent no `Authorization` header at all, so the server returned `403`.
+   > Here, `Swagger UI` is still sending the old key as `Authorization: Bearer <old-key>` — the header is present, but the token is wrong, so the server returns `401` instead.
+
 7. Click `Authorize` again.
 8. Enter the new key (`my-new-secret-key`).
 9. Try `GET /items`.
