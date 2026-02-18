@@ -4,6 +4,7 @@
 
 - [Image](#image)
 - [Container](#container)
+- [Install `Docker`](#install-docker)
 - [What is `Docker`](#what-is-docker)
   - [`docker run`](#docker-run)
   - [`docker ps`](#docker-ps)
@@ -31,6 +32,10 @@ Why containers are useful:
 - The app runs consistently across machines.
 - Dependencies are packaged with the app.
 - Multiple services can run side-by-side with explicit ports and networks.
+
+## Install `Docker`
+
+1. Follow the [installation instructions](https://docs.docker.com/get-started/get-docker/).
 
 ## What is `Docker`
 
