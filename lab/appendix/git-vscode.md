@@ -69,9 +69,9 @@
 
 ### Clone the repo using the `VS Code Terminal`
 
-1. Open `VS Code` in the `software-engineering-toolkit`.
+1. Open `VS Code`.
 1. [Open the `VS Code Terminal`](./vs-code.md#open-the-vs-code-terminal).
-   You should see `software-engineering-toolkit` as your [current working directory](./shell.md#current-working-directory).
+   Navigate to the directory where you want to clone the repo.
 1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
     ```terminal
@@ -102,8 +102,6 @@
 4. Paste the [`<repo-url>`](./github.md#repo-url).
 5. [Select](./vs-code.md#select-an-option-from-a-list) the repo.
 6. Choose a directory where to clone the repo.
-
-   You should choose `software-engineering-toolkit` that you created before.
 7. Confirm the choice.
 
 ## Switch to the `<branch-name>` branch
