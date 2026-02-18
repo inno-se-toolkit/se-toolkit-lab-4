@@ -120,7 +120,7 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 ### Verify the `SSH` setup
 
 1. [Open a new `VS Code Terminal`](./vs-code.md#open-a-new-vs-code-terminal).
-2. [Check the current shell in the `VS Code Terminal`](./vs-code.md#).
+2. [Check the current shell in the `VS Code Terminal`](./vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 3. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
