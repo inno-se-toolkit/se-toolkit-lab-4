@@ -39,13 +39,13 @@
 ## Open in `VS Code` the directory
 
 > [!NOTE]
-> The `<directory-name>` is the name of a directory.
+> The `<directory-name>` is the name of a directory that you want to open.
 >
 > Example: `software-engineering-toolkit`
 
 1. [Run using the `Command Palette`](./vs-code.md#command-palette):
    `File: Open Folder...`
-2. Find the directory `<directory-name>` that you created.
+2. Find the directory `<directory-name>`.
 3. Open this directory.
 
    `VS Code` should now open in that directory.
