@@ -7,12 +7,13 @@
 Issue ➜ Branch ➜ Commits ➜ PR ➜ Review ➜ Merge
 ```
 
-Here's this workflow in the context of repos:
+The following diagram shows this workflow in the context of repositories:
 
 ![Git workflow](../images/git-workflow.drawio.svg)
 
 Outline:
 
+<!-- no toc -->
 - [Create a `Lab Task` issue](#create-a-lab-task-issue)
 - [Switch to the `main` branch](#switch-to-the-main-branch)
 - [Detect conflicts](#detect-conflicts)
@@ -52,54 +53,49 @@ Outline:
 
 ## Pull changes from `origin/main` and rebase
 
-You may see some errors and messages about conflicts after pulling.
+You may see errors and messages about conflicts after pulling.
 
-You need to rebase your local commits in your local `<branch-name>` onto the commits from `origin/<branch-name>`.
+Rebasing places your local commits on top of the commits from `origin/main`. Conflicts occur when commits from `origin/main` modified the same lines in the same files as your local commits.
 
-However, you can get conflicts if commits from `origin/<branch-name>` modified the same lines of text in files as your local commits but in a different way.
+Complete the following steps:
 
-In this case, you should resolve conflicts.
-
-Steps:
-
-1. [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
-2. [Resolve conflicts using `GitLens`](#resolve-conflicts-using-gitlens)
+1. [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens).
+2. [Resolve conflicts using `GitLens`](#resolve-conflicts-using-gitlens) (only if conflicts occur).
 
 ### Pull and rebase using `GitLens`
-
-When you rebase, your local commits are placed on top of the commits from `origin/main`.
 
 1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
    `GitLens: Pull`
 2. [Select](../appendix/vs-code.md#select-an-option-from-a-list)
    `Pull with Rebase`.
-3. You're done if `GitLens` doesn't show any error.
+3. If `GitLens` does not show any error, the rebase is complete.
 
 ### Resolve conflicts using `GitLens`
 
-Continue resolving conflicts if you see an error like this:
+If you see an error like the one below, resolve the conflicts:
 
 <img alt="Pull Error" src="../images/appendix/gitlens/pull-error.png" style="width:400px"></img>
 
+For each conflicting file, complete the following steps:
+
 1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
 2. Go to `Merge Changes`.
-3. Click a file.
+3. Click a conflicting file.
 4. Click `Resolve in Merge Editor`.
-5. Accept changes that you like more.
+5. Accept the changes that you want to keep.
 6. Click `Complete Merge`.
 7. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
 8. Click `Continue`.
-9. This should be resolved.
-10. There may be other conflicts.
-11. `VS Code` can show something like `Rebasing (1/3)` and `Cancel`.
-12. Click that `Cancel`.
-13. Repeat steps.
+
+> **Note:** If there are more conflicts, `VS Code` shows `Rebasing (1/3)` (or similar). Repeat the steps above for each remaining conflict.
+
+<!-- TODO what does VS Code show actually -->
 
 ## Switch to a new branch
 
 [Create a new branch and switch to it](../appendix/git-vscode.md#switch-to-a-new-branch).
 
-We'll refer to the name of this branch as `<branch-name>`.
+The name of this branch is referred to as `<branch-name>` throughout the docs.
 
 ## Edit files
 
