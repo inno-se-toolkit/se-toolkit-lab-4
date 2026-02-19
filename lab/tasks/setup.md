@@ -233,7 +233,7 @@
 
 3. Open in a browser: <http://127.0.0.1:42001/docs>.
 
-4. You should see the `Swagger UI` page with the API documentation.
+4. You should see the [`Swagger UI`](../appendix/swagger.md#swagger-ui) page with the [API](../appendix/web-development.md#api) documentation.
 
    > [!NOTE]
    > [`Docker Compose`](../appendix/docker.md#docker-compose) reads environment variables from `.env.docker.secret`
