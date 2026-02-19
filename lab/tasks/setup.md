@@ -39,7 +39,7 @@
   - [2.3. Customize the `Source Control`](#23-customize-the-source-control)
   - [2.4. Get familiar with `GitLens`](#24-get-familiar-with-gitlens)
   - [2.5. Create a label for tasks](#25-create-a-label-for-tasks)
-  - [2.6. View `README.md` in `VS Code`](#26-view-readmemd-in-vs-code)
+  - [2.6. View `Markdown` files in `VS Code`](#26-view-markdown-files-in-vs-code)
 
 ## 1. Required steps
 
@@ -316,9 +316,9 @@ Complete these steps:
 2. [Add the label to issues](./appendix/github.md#add-a-label-to-issues).
 3. [See all issues with the label](./appendix/github.md#see-all-issues-with-a-label).
 
-### 2.6. View `README.md` in `VS Code`
+### 2.6. View `Markdown` files in `VS Code`
 
-If you want to view `README.md` in `VS Code` instead of on `GitHub`:
+If you want to view `README.md` and other `Markdown` files in `VS Code` instead of on `GitHub`:
 
 1. [Install recommended `VS Code` extensions](./appendix/vs-code.md#install-recommended-extensions).
 2. [Open the file](./appendix/vs-code.md#open-the-file):
