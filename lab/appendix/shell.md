@@ -2,6 +2,25 @@
 
 <h2>Table of contents</h2>
 
+- [What is shell](#what-is-shell)
+  - [Login shell](#login-shell)
+- [Shell variants](#shell-variants)
+  - [`bash`](#bash)
+  - [`Git Bash` (`Windows`)](#git-bash-windows)
+  - [`zsh`](#zsh)
+- [Shell prompt](#shell-prompt)
+- [Shell command](#shell-command)
+- [Current working directory](#current-working-directory)
+  - [Show the current working directory (full path)](#show-the-current-working-directory-full-path)
+  - [Check the current directory is `<directory-name>`](#check-the-current-directory-is-directory-name)
+  - [Navigate directories](#navigate-directories)
+- [Useful commands](#useful-commands)
+  - [Check what shell is running](#check-what-shell-is-running)
+- [`Bash`](#bash-1)
+  - [`Bash` syntax basics](#bash-syntax-basics)
+    - [Run a command](#run-a-command)
+    - [Pipe the `stdout`](#pipe-the-stdout)
+
 ## What is shell
 
 An [operating system](./operating-system.md) shell is a computer program that provides relatively broad and direct access to the system on which it runs.
