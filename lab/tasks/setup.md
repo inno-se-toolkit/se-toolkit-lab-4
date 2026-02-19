@@ -255,7 +255,7 @@
 ### 1.14 (NEW) (Optional) Stop the services
 
 1. [Open a new `VS Code Terminal`](../appendix/vs-code.md#open-a-new-vs-code-terminal).
-2. [Check that the current directory is `se-toolkit-lab-3`](../appendix/shell.md#show-the-current-working-directory-full-path).
+2. [Check that the current directory is `se-toolkit-lab-3`](../appendix/shell.md#check-the-current-directory-is-directory-name).
 3. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal

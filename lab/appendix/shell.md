@@ -44,13 +44,18 @@ Most `bash` commands in this course work in `zsh` as well.
 
 The current working directory is the directory where commands run by default.
 
-### Show the current working directory
+### Show the current working directory (full path)
 
 1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    pwd
    ```
+
+### Check the current directory is `<directory-name>`
+
+1. [Show the current working directory](#show-the-current-working-directory-full-path).
+2. It should end in `<directory-name>`.
 
 ### Navigate directories
 
