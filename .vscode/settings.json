@@ -19,12 +19,15 @@
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
 
+  // Change the Primary Sidebar location
+
   "workbench.sideBar.location": "right",
 
   // Markdown settings
 
-  // Set these settings to "true" if you want
-  // Markdown and preview to scroll synchronously.
-  "markdown.preview.scrollEditorWithPreview": false,
-  "markdown.preview.scrollPreviewWithEditor": false
+  // Set these settings to false if you don't want
+  // Markdown doc in the editor and preview to scroll synchronously.
+
+  "markdown.preview.scrollEditorWithPreview": true,
+  "markdown.preview.scrollPreviewWithEditor": true
 }

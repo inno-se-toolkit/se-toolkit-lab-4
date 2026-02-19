@@ -47,6 +47,7 @@
     - [Shortcut: Search in the current editor](#shortcut-search-in-the-current-editor)
     - [Shortcut: Search in all files](#shortcut-search-in-all-files)
     - [Shortcut: Toggle line comment](#shortcut-toggle-line-comment)
+  - [Set a shortcut](#set-a-shortcut)
 - [Workspace settings](#workspace-settings)
   - [Change the workspace settings](#change-the-workspace-settings)
 - [Common actions](#common-actions)
@@ -514,6 +515,17 @@ Docs:
 >
 > 1. Select lines.
 > 2. Press the shortcut.
+
+### Set a shortcut
+
+1. [Run using the `Command Palette`](#run-a-command-using-the-command-palette):
+   `Preferences: Open Keyboard Shortcuts`.
+2. Write the keybinding name.
+3. In the `Command column`, find the necessary command.
+4. Double-click the row with that command.
+5. Type the shortcut.
+6. (Optional) Press `Esc` to reset the input.
+7. Press `Enter` to save the shortcut.
 
 ## Workspace settings
 

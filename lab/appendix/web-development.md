@@ -170,6 +170,10 @@ An API (`Application Programming Interface`) is a set of rules that lets program
 
 A web API exposes [endpoints](#endpoint) that clients can call over `HTTP`.
 
+Docs:
+
+- [An introduction to APIs: A comprehensive guide](https://zapier.com/blog/api/)
+
 ## `Swagger UI`
 
 `Swagger UI` is an interactive web page that lets you explore and test a REST API.
