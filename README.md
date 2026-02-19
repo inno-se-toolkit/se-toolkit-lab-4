@@ -71,7 +71,8 @@ In simple words, you should be able to say:
 
 ### Prerequisites
 
-1. [Lab setup](./lab/setup.md).
+1. Check [Theory](./lab/appendix/theory.md).
+2. [Lab setup](./lab/tasks/setup.md).
 
 ### Required
 

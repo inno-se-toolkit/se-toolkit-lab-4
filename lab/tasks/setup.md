@@ -318,7 +318,7 @@ Complete these steps:
 
    You should see something similar to this:
 
-   <img alt="Starship in the VS Code Terminal" src="./images/appendix/vs-code/starship-terminal.png" style="width:400px"></img>
+   <img alt="Starship in the VS Code Terminal" src="../images/appendix/starship/terminal-prompt.png" style="width:400px"></img>
 
 ### 2.3. Customize the `Source Control`
 
@@ -326,7 +326,7 @@ Complete these steps:
 2. Click three dots to the right of `SOURCE CONTROL`.
 3. Put checkmarks only near `Changes` and `GitLens` to see only these views.
 
-   <img alt="Changes and GitLens" src="./images/appendix/vs-code/source-control-allowed-views.png" style="width:400px"></img>
+   <img alt="Changes and GitLens" src="../images/appendix/vs-code/source-control-allowed-views.png" style="width:400px"></img>
 
 ### 2.4. Get familiar with `GitLens`
 
