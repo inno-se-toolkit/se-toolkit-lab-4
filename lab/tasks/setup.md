@@ -213,7 +213,8 @@
 > [secrets](../appendix/environments.md#secrets) such as the API key or the address of your VM.
 
 > [!TIP]
-> No edits are needed for local development. The default values in [`.env.docker.example`](../.env.docker.example) work out of the box.
+> No edits are needed for local development.
+> The default values in [`.env.docker.example`](../.env.docker.example) work out of the box.
 
 ### 1.12. (NEW) Start the services
 
