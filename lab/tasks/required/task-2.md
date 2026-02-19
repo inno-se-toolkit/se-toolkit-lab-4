@@ -6,7 +6,7 @@
 
 <h4>Purpose</h4>
 
-Learn to debug a broken endpoint by tracing code and examining the database using `PgAdmin`.
+Learn to debug a broken endpoint by tracing code and examining the database using `pgAdmin`.
 
 <h4>Context</h4>
 
@@ -18,7 +18,7 @@ Your job is to enable the endpoint, discover the bugs, and fix them.
 - [Steps](#steps)
   - [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
   - [1. Create a `Lab Task` issue](#1-create-a-lab-task-issue)
-  - [2. Examine the database using `PgAdmin`](#2-examine-the-database-using-pgadmin)
+  - [2. Examine the database using `pgAdmin`](#2-examine-the-database-using-pgadmin)
   - [3. Enable the interactions endpoint](#3-enable-the-interactions-endpoint)
   - [4. Restart the services](#4-restart-the-services)
   - [5. Try `GET /interactions`](#5-try-get-interactions)
@@ -45,10 +45,10 @@ Follow the [`Git workflow`](../git-workflow.md) to complete this task.
 
 Title: `[Task] Enable and debug the interactions endpoint`
 
-### 2. Examine the database using `PgAdmin`
+### 2. Examine the database using `pgAdmin`
 
-1. [Open `PgAdmin`](../../appendix/pgadmin.md#open-pgadmin).
-2. [Add a server in `PgAdmin`](../../appendix/pgadmin.md#add-a-server-in-pgadmin).
+1. [Open `pgAdmin`](../../appendix/pgadmin.md#open-pgadmin).
+2. [Add a server in `pgAdmin`](../../appendix/pgadmin.md#add-a-server-in-pgadmin).
 3. [Inspect columns](../../appendix/pgadmin.md#inspect-columns) of the `interaction_logs` table.
 4. Note the column names: `id`, `learner_id`, `item_id`, `kind`, `created_at`.
 
@@ -173,7 +173,7 @@ The field name in the response schema (`InteractionModel`) must match the field 
 
 ### 12. Compare with the database
 
-1. [Open `PgAdmin`](../../appendix/pgadmin.md#open-pgadmin).
+1. [Open `pgAdmin`](../../appendix/pgadmin.md#open-pgadmin).
 2. [Run a query](../../appendix/pgadmin.md#run-a-query) on the `interaction_logs` table:
 
    ```sql
