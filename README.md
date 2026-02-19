@@ -54,7 +54,7 @@ By the end of this lab, you should be able to:
 
 - Explore a REST API using `Swagger UI`.
 - Authenticate API requests using an API key.
-- Examine a database using `PgAdmin`.
+- Examine a database using `pgAdmin`.
 - Debug a broken endpoint by tracing code and comparing to the database schema.
 - Implement a new endpoint by following an existing reference implementation.
 - Deploy a service with API key authentication.
