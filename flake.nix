@@ -28,6 +28,7 @@
                       --exclude-path '.venv' \
                       --exclude-path '.direnv' \
                       --root-dir . \
+                      --cache \
                       '**/*.md'
                   '';
                   help = "Find all broken links in all Markdown files";
