@@ -506,7 +506,8 @@ Docs:
 
 #### Shortcut: Toggle line comment
 
-`Ctrl+/` (`Cmd+/` on `macOS`)
+1. Select a line or place cursor at that line.
+2. Press `Ctrl+/` (`Cmd+/` on `macOS`)
 
 > [!TIP]
 > This shortcut also works for a sequence of lines:
