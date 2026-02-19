@@ -303,6 +303,10 @@ A coding agent can help you write code, explain concepts, and debug issues.
 
 See [Coding agents](../appendix/coding-agents.md).
 
+<img alt="Qwen request" src="../images/tasks/setup/qwen-request.png" style="width:300px"></img>
+
+<img alt="Qwen response" src="../images/tasks/setup/qwen-response.png" style="width:300px"></img>
+
 ### 2.2. Set up the shell prompt
 
 `Starship` shows your current `Git` branch, status, and other useful info directly in your [shell prompt](../appendix/shell.md#shell-prompt) in almost any terminal, including the [`VS Code Terminal`](../appendix/vs-code.md#terminal).
