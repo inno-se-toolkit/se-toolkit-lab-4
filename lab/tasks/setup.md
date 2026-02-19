@@ -140,13 +140,13 @@
 
 #### 1.6.2. Configure `Git`
 
-[Configure Git](./appendix/git.md#configure-git) if you want to change the values that you saw while [checking your `Git` config](#61-check-your-git-config).
+[Configure Git](./appendix/git.md#configure-git) if you want to change the values that you saw while [checking your `Git` config](#161-check-your-git-config).
 
 ### 1.7. Clone your fork and open it in `VS Code`
 
 #### 1.7.1. (NEW) Copy your fork `URL`
 
-1. [Go to your fork](#33-go-to-your-fork).
+1. [Go to your fork](#133-new-go-to-your-fork).
 2. Copy [`<your-fork-url>`](./appendix/github.md#your-fork-url).
 
    It should look like `https://github.com/<your-github-username>/se-toolkit-lab-3`.
