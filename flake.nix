@@ -18,7 +18,7 @@
         {
           devshells.default = {
             commandGroups = {
-              docs = [
+              lint = [
                 {
                   name = "find-broken-links";
                   command = ''
