@@ -23,7 +23,7 @@
     - [1.7.1. (NEW) Copy your fork `URL`](#171-new-copy-your-fork-url)
     - [1.7.2. (NEW) Clone your fork](#172-new-clone-your-fork)
     - [1.7.3. (NEW) Open the cloned repo in `VS Code`](#173-new-open-the-cloned-repo-in-vs-code)
-  - [1.8. (`Windows` only) Set the default shell](#18-windows-only-set-the-default-shell)
+  - [1.8. (NEW) (`Windows` only) Set the default shell](#18-new-windows-only-set-the-default-shell)
   - [1.9. Continue creating a VM](#19-continue-creating-a-vm)
   - [1.10. Set up `Python` in `VS Code`](#110-set-up-python-in-vs-code)
     - [1.10.1. Install `uv`](#1101-install-uv)
@@ -104,7 +104,6 @@
 #### 1.4.1. Install `VS Code`
 
 1. Install [`VS Code`](https://code.visualstudio.com/) if not installed.
-
 2. (Optional) [Learn more](../appendix/vs-code.md) about `VS Code`.
 
 #### 1.4.2. Install `Git`
@@ -169,10 +168,9 @@
    `se-toolkit-lab-3`.
 2. [Install recommended extensions](../appendix/vs-code.md#install-recommended-extensions).
 
-### 1.8. (`Windows` only) Set the default shell
+### 1.8. (NEW) (`Windows` only) Set the default shell
 
-1. [Check the current shell in the `VS Code Terminal`](../appendix/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
-2. [Set the default shell](../appendix/vs-code.md#windows-only-set-the-default-shell-for-the-vs-code-terminal) if the shell is not `bash` or `zsh`.
+1. [Check and set the current shell in the `VS Code Terminal`](../appendix/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 
 ### 1.9. Continue creating a VM
 
