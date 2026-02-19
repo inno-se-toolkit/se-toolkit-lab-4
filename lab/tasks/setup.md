@@ -278,9 +278,12 @@ See [Coding agents](./appendix/coding-agents.md).
 
 Complete these steps:
 
-1. Install [`Starship`](https://github.com/starship/starship#-installation).
+1. [Install `Starship`](https://github.com/starship/starship#-installation).
 2. [Open the `VS Code Terminal`](./appendix/vs-code.md#open-the-vs-code-terminal).
-3. You should see something similar to `se-toolkit-lab-3 on main`.
+
+   You should see something similar to this:
+
+   <img alt="Starship in the VS Code Terminal" src="./images/appendix/vs-code/starship-terminal.png" style="width:400px"></img>
 
 ### 2.3. Customize the `Source Control`
 
