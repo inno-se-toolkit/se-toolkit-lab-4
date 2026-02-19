@@ -4,7 +4,7 @@
 
 - [The `GitHub` site](#the-github-site)
 - [`GitHub` username](#github-username)
-- [`<your-github-username>`](#your-github-username)
+  - [`<your-github-username>`](#your-github-username)
   - [Find `<your-github-username>`](#find-your-github-username)
 - [Repository](#repository)
   - [`<repo-name>`](#repo-name)
@@ -54,7 +54,7 @@ Example of a username: `inno-se-toolkit`.
 
 Note that this username doesn't include `@`.
 
-## `<your-github-username>`
+### `<your-github-username>`
 
 Assume `<your-github-username>` is your [`GitHub` username](#github-username).
 
