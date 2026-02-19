@@ -4,7 +4,7 @@
 
 - [The `GitHub` site](#the-github-site)
 - [`GitHub` username](#github-username)
-- [`<your-github-username>`](#your-github-username)
+  - [`<your-github-username>`](#your-github-username)
   - [Find `<your-github-username>`](#find-your-github-username)
 - [Repository](#repository)
   - [`<repo-name>`](#repo-name)
@@ -39,6 +39,8 @@
   - [Enable issues](#enable-issues)
   - [Add a collaborator](#add-a-collaborator)
   - [Protect a branch](#protect-a-branch)
+- [Personal access token (PAT)](#personal-access-token-pat)
+  - [Create a PAT (classic)](#create-a-pat-classic)
 - [`GitHub flow`](#github-flow)
 - [`GitHub Projects`](#github-projects)
 
@@ -54,7 +56,7 @@ Example of a username: `inno-se-toolkit`.
 
 Note that this username doesn't include `@`.
 
-## `<your-github-username>`
+### `<your-github-username>`
 
 Assume `<your-github-username>` is your [`GitHub` username](#github-username).
 
@@ -301,6 +303,32 @@ A [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track
          - `Require conversation resolution before merging`
          - `Allowed merge methods`: `Merge`.
       - [x] Block force pushes
+
+## Personal access token (PAT)
+
+<!-- TODO explain -->
+
+### Create a PAT (classic)
+
+1. Open in a browser <https://github.com/>.
+2. Click your profile icon in the top right corner.
+3. Click `Settings`.
+4. Scroll down until `Developer settings` in the left sidebar.
+5. Click `Developer settings`.
+6. Click `Personal access tokens`.
+7. Click `Tokens (classic)`.
+8. Click `Generate new token`.
+9. Click `Generate new token (classic)`.
+10. Write a note.
+11. Go to `Select scopes`.
+12. Check the marks near:
+    - `repo`
+    - `workflow`
+
+    <img alt="GitHub Issues" src="../images/appendix/github/pat-classic-permissions.png" style="width:400px"></img>
+
+13. Scroll to the bottom of the page.
+14. Click `Generate token`.
 
 ## `GitHub flow`
 

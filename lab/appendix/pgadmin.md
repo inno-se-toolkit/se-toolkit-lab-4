@@ -1,14 +1,17 @@
-# `PgAdmin`
+# `pgAdmin`
 
 <h2>Table of contents</h2>
 
-- [Open `PgAdmin`](#open-pgadmin)
-- [Add a server in `PgAdmin`](#add-a-server-in-pgadmin)
+- [What is `pgAdmin`](#what-is-pgadmin)
+- [Open `pgAdmin`](#open-pgadmin)
+- [Add a server in `pgAdmin`](#add-a-server-in-pgadmin)
 - [Browse tables](#browse-tables)
 - [Inspect columns](#inspect-columns)
 - [Run a query](#run-a-query)
 
-`PgAdmin` is a web-based graphical tool for managing `PostgreSQL` databases.
+## What is `pgAdmin`
+
+`pgAdmin` is a web-based graphical tool for managing `PostgreSQL` databases.
 
 It lets you browse tables, run SQL queries, and inspect the database schema.
 
@@ -16,16 +19,16 @@ Docs:
 
 - [Official PgAdmin docs](https://www.pgadmin.org/docs/)
 
-## Open `PgAdmin`
+## Open `pgAdmin`
 
 1. Open <http://127.0.0.1:5050> in a browser.
 2. Log in with the credentials from `.env.docker.secret`:
    - Email: the value of `PGADMIN_EMAIL` (default: `admin@example.com`).
    - Password: the value of `PGADMIN_PASSWORD` (default: `admin`).
 
-## Add a server in `PgAdmin`
+## Add a server in `pgAdmin`
 
-1. [Open `PgAdmin`](#open-pgadmin).
+1. [Open `pgAdmin`](#open-pgadmin).
 2. Right-click `Servers` in the left panel.
 3. Click `Register` -> `Server...`.
 4. In the `General` tab:
@@ -40,7 +43,7 @@ Docs:
 
 > [!IMPORTANT]
 > The host name is `postgres`, not `localhost`.
-> This is because `PgAdmin` and `PostgreSQL` run in separate `Docker` containers.
+> This is because `pgAdmin` and `PostgreSQL` run in separate `Docker` containers.
 > `Docker Compose` creates a network where services can reach each other by their service name.
 
 ## Browse tables

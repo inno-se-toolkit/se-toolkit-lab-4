@@ -32,7 +32,7 @@
     - [10.4. Check that `Python` works](#104-check-that-python-works)
   - [11. Set up the `Docker` environment](#11-set-up-the-docker-environment)
   - [12. Start the services](#12-start-the-services)
-  - [13. Open `PgAdmin`](#13-open-pgadmin)
+  - [13. Open `pgAdmin`](#13-open-pgadmin)
 - [Optional steps](#optional-steps)
   - [1. Set up a coding agent](#1-set-up-a-coding-agent)
   - [2. Set up the shell prompt](#2-set-up-the-shell-prompt)
@@ -238,10 +238,10 @@
    > To stop the services, press `Ctrl+C` in the terminal where they are running.
    > Alternatively, run `docker compose down` in a new terminal.
 
-### 13. Open `PgAdmin`
+### 13. Open `pgAdmin`
 
-1. [Open `PgAdmin`](./appendix/pgadmin.md#open-pgadmin).
-2. [Add a server in `PgAdmin`](./appendix/pgadmin.md#add-a-server-in-pgadmin).
+1. [Open `pgAdmin`](./appendix/pgadmin.md#open-pgadmin).
+2. [Add a server in `pgAdmin`](./appendix/pgadmin.md#add-a-server-in-pgadmin).
 3. [Browse tables](./appendix/pgadmin.md#browse-tables).
 4. Verify that the following tables exist and contain data:
    - `items`

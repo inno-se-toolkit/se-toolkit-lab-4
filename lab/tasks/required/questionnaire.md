@@ -13,20 +13,20 @@ Fill in each answer below. Replace `___` with the correct value.
 
 ### GET /items/{item_id}
 
-5. Status code (item found): ___
-6. Status code (item not found): ___
+1. Status code (item found): ___
+2. Status code (item not found): ___
 
 ### POST /items
 
-7. HTTP method: ___
-8. Status code (created successfully): ___
+1. HTTP method: ___
+2. Status code (created successfully): ___
 
 ### PUT /items/{item_id}
 
-9. HTTP method: ___
-10. Status code (updated successfully): ___
+1. HTTP method: ___
+2. Status code (updated successfully): ___
 
 ## Authentication
 
-11. What happens when you call an endpoint without the API key? (status code): ___
-12. Where do you set the API key value for Docker Compose? (file name): ___
+1. What happens when you call an endpoint without the API key? (status code): ___
+2. Where do you set the API key value for Docker Compose? (file name): ___

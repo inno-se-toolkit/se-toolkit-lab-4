@@ -13,6 +13,9 @@ class Settings(BaseSettings):
 
     api_token: str = Field(alias="API_TOKEN")
 
+    enable_interactions: bool = Field(default=False, alias="ENABLE_INTERACTIONS")
+    enable_learners: bool = Field(default=False, alias="ENABLE_LEARNERS")
+
     db_host: str = Field(default="localhost", alias="DB_HOST")
     db_port: int = Field(default=5432, alias="DB_PORT")
     db_name: str = Field(default="lab3", alias="DB_NAME")
