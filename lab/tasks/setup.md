@@ -45,6 +45,18 @@
 
 ## 1. Required steps
 
+> [!NOTE]
+> We provide all of the hardest steps in the lab setup
+> so that TAs can help you get the right setup during the lab.
+>
+> Tasks are more or less easy when you have the right setup.
+
+> [!NOTE]
+> Some steps have the `(NEW)` label.
+>
+> These steps must be completed to get the right setup for this lab,
+> even if you have completed similar steps in the previous lab.
+
 ### 1.1. (NEW) Find a partner
 
 1. Find a partner for this lab.
