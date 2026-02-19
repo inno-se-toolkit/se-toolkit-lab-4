@@ -33,6 +33,7 @@
   - [1.11. (NEW) Set up the `Docker` environment](#111-new-set-up-the-docker-environment)
   - [1.12. (NEW) Start the services](#112-new-start-the-services)
   - [1.13. (NEW) Open `pgAdmin`](#113-new-open-pgadmin)
+  - [1.14 (NEW) (Optional) Stop the services](#114-new-optional-stop-the-services)
 - [2. Optional steps](#2-optional-steps)
   - [2.1. Set up a coding agent](#21-set-up-a-coding-agent)
   - [2.2. Set up the shell prompt](#22-set-up-the-shell-prompt)
@@ -238,10 +239,6 @@
    > [`Docker Compose`](../appendix/docker.md#docker-compose) reads environment variables from `.env.docker.secret`
    > and uses them to configure the containers defined in [`docker-compose.yml`](../docker-compose.yml).
 
-   > [!TIP]
-   > To stop the services, press `Ctrl+C` in the terminal where they are running.
-   > Alternatively, run `docker compose down` in a new terminal.
-
 ### 1.13. (NEW) Open `pgAdmin`
 
 1. [Open `pgAdmin`](../appendix/pgadmin.md#open-pgadmin).
@@ -254,6 +251,16 @@
 
 > [!TIP]
 > To view the data in a table, right-click the table and select `View/Edit Data` -> `All Rows`.
+
+### 1.14 (NEW) (Optional) Stop the services
+
+1. [Open a new `VS Code Terminal`](../appendix/vs-code.md#open-a-new-vs-code-terminal).
+2. [Check that the current directory is `se-toolkit-lab-3`](../appendix/shell.md#show-the-current-working-directory-full-path).
+3. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   docker compose --env-file .env.docker.secret down
+   ```
 
 ---
 
