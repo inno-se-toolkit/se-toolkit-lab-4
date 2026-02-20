@@ -2,6 +2,9 @@
 
 <h2>Table of contents</h2>
 
+- [Syntax](#syntax)
+- [Documentation](#documentation)
+  - [Docstring](#docstring)
 - [Package managers](#package-managers)
   - [`uv`](#uv)
     - [Install `uv`](#install-uv)
@@ -9,6 +12,11 @@
 - [Select the `Python` interpreter](#select-the-python-interpreter)
 - [Check that `Python` works](#check-that-python-works)
 - [Testing](#testing)
+  - [`pytest`](#pytest)
+  - [The `assert` statement](#the-assert-statement)
+- [Dynamic analysis](#dynamic-analysis)
+- [Static analysis](#static-analysis)
+- [`Pylance`](#pylance)
 
 ## Syntax
 
