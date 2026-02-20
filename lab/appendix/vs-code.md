@@ -574,13 +574,14 @@ Method 2: [Open the file using `Quick Open`](#open-the-file-using-quick-open)
 
 Method 3: Open the file using `VS Code`:
 
-1. [Run using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal):
+1. [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal) if something is running in your current `VS Code Terminal`.
+2. [Run using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal):
 
   ```terminal
   code <file-path>
   ```
   
-  See [`<file-path>`](./shell.md#file-path).
+  See [`<file-path>`](./file-system.md#file-path).
 
 ### Open the `Markdown` preview
 
