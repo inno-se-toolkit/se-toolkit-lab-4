@@ -6,13 +6,7 @@
   - [Web server](#web-server)
   - [Web client](#web-client)
 - [Protocol](#protocol)
-- [`HTTP`](#http)
-  - [Communication using `HTTP`](#communication-using-http)
-  - [`HTTP` request](#http-request)
-    - [Query parameter](#query-parameter)
-  - [`HTTP` response](#http-response)
-  - [`HTTP` response status code](#http-response-status-code)
-  - [Common `HTTP` response status codes](#common-http-response-status-codes)
+- [`HTTP`](./http.md)
 - [Data format](#data-format)
   - [`JSON`](#json)
     - [`JSON` data types](#json-data-types)
@@ -36,6 +30,7 @@
   - [Components of a URL](#components-of-a-url)
   - [URL example](#url-example)
 - [Service](#service)
+- [Feature flag](#feature-flag)
 
 ## Web server and web client
 
@@ -59,56 +54,6 @@ Web clients include browsers (`Chrome`, `Firefox`) and command-line tools ([`cur
 ## Protocol
 
 A protocol is a set of rules that define how data is transmitted and received over a network. In web development, protocols govern communication between [web servers and web clients](#web-server-and-web-client).
-
-## `HTTP`
-
-`HTTP` (`HyperText Transfer Protocol`) is the foundation of data communication on the web. This [protocol](#protocol) defines how messages are formatted and transmitted between [web servers and web clients](#web-server-and-web-client).
-
-### Communication using `HTTP`
-
-The following diagram illustrates the communication between a [web client](#web-client) and [web server](#web-server) using the `HTTP` protocol:
-
-```mermaid
-sequenceDiagram
-    participant Client as Web Client (Browser/Curl)
-    participant Server as Web Server
-    
-    Client->>Server: HTTP Request (GET, POST, etc.)
-    activate Server
-    Server-->>Client: HTTP Response (200 OK, 404, etc.)
-    deactivate Server
-    
-    Note over Client,Server: Communication happens via HTTP protocol
-```
-
-### `HTTP` request
-
-An `HTTP` request is a message sent by a client to a server asking for resources or to perform actions. It includes a method, headers, and optional body.
-
-#### Query parameter
-
-Query parameters are key-value pairs appended to a [URL](#url) after a `?` character, used to send data to the server with a request.
-
-### `HTTP` response
-
-An `HTTP` response is the server's answer to an `HTTP` request, containing status information and requested content.
-
-### `HTTP` response status code
-
-Status codes are three-digit numbers returned by servers indicating the result of a request (success, error, redirect, etc.).
-
-### Common `HTTP` response status codes
-
-Standard status codes include:
-
-- [`200` (OK)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/200) — the request succeeded.
-- [`201` (Created)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/201) — a new resource was created (typically after `POST`).
-- [`400` (Bad Request)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/400) — the request was malformed.
-- [`401` (Unauthorized)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/401) — authentication is required or the credentials are invalid.
-- [`403` (Forbidden)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/403) — the server understood the request but refuses to authorize it.
-- [`404` (Not Found)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/404) — the requested resource does not exist.
-- [`422` (Unprocessable Entity)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/422) — the request was well-formed but had invalid data.
-- [`500` (Internal Server Error)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/500) — an unexpected server error occurred.
 
 ## Data format
 
@@ -326,3 +271,5 @@ Examples:
 - Recommendation service.
 
 A service can call other services over the network, but to the client it still appears as endpoints that return responses.
+
+## Feature flag
