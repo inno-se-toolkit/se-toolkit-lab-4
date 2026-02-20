@@ -6,7 +6,6 @@
   - [Web server](#web-server)
   - [Web client](#web-client)
 - [Protocol](#protocol)
-- [`HTTP`](./http.md)
 - [Data format](#data-format)
   - [`JSON`](#json)
     - [`JSON` data types](#json-data-types)
