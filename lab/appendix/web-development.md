@@ -49,7 +49,7 @@ A web server is software that delivers content or services to [web clients](#web
 
 A web client is software that requests content from a [web server](#web-server) and displays the received content.
 
-Web clients include browsers (`Chrome`, `Firefox`) and command-line tools ([`curl`](#send-a-get-query-using-curl)).
+Web clients include browsers (`Chrome`, `Firefox`) and command-line tools ([`curl`](#send-a-get-request-using-curl)).
 
 ## Protocol
 
