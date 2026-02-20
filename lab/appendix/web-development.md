@@ -182,24 +182,7 @@ Example:
 
 ### Send a `GET` request using `curl`
 
-> [!NOTE]
-> See [`curl`](./useful-programs.md#curl).
-
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   curl <url>
-   ```
-
-   Example:
-
-   ```terminal
-   curl http://127.0.0.1:8080/status
-   ```
-
-2. You should see the response from the web server in the terminal.
-
-   It may be success or error.
+See [`curl`](./useful-programs.md#send-a-get-request-with-curl).
 
 ## Pretty-print the `JSON` response
 
