@@ -49,12 +49,11 @@
 3. Open this directory.
 
    `VS Code` should now open in that directory.
-4. [Open `Folders`](./vs-code.md#open-folders).
-5. Look at `FOLDERS`.
-6. You should see `<DIRECTORY-NAME>` there.
+4. [Open the `Explorer`](./vs-code.md#open-the-explorer).
+5. You should see `<DIRECTORY-NAME>` there.
 
    Example: `SOFTWARE-ENGINEERING-TOOLKIT`
-7. (`Windows` only) [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
+6. (`Windows` only) [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
    `WSL: Reopen Folder in WSL`
 
 ## Clone the repo
@@ -234,7 +233,7 @@ Use any of the following methods:
    # example: git commit -m 'docs: add architecture diagram'
    ```
 
-   See [`<file-path>`](./shell.md#file-path).
+   See [`<file-path>`](./file-system.md#file-path).
 
 ### Commit using `Source Control`
 
