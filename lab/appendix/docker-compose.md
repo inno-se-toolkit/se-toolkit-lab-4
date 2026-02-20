@@ -3,16 +3,17 @@
 <h2>Table of contents</h2>
 
 - [What is `Docker Compose`](#what-is-docker-compose)
-- [`docker compose up`](#docker-compose-up)
-- [`docker compose up` a specific service](#docker-compose-up-a-specific-service)
-- [`docker compose down`](#docker-compose-down)
-- [`docker compose down` a specific service](#docker-compose-down-a-specific-service)
-- [`docker compose ps`](#docker-compose-ps)
-- [`docker compose logs`](#docker-compose-logs)
-- [`docker compose logs` for a specific service](#docker-compose-logs-for-a-specific-service)
-- [`docker compose -f`](#docker-compose--f)
-- [`docker compose --env-file`](#docker-compose---env-file)
-- [`docker compose down -v`](#docker-compose-down--v)
+- [Commands](#commands)
+  - [`docker compose up`](#docker-compose-up)
+  - [`docker compose up` a specific service](#docker-compose-up-a-specific-service)
+  - [`docker compose down`](#docker-compose-down)
+  - [`docker compose down` a specific service](#docker-compose-down-a-specific-service)
+  - [`docker compose ps`](#docker-compose-ps)
+  - [`docker compose logs`](#docker-compose-logs)
+  - [`docker compose logs` for a specific service](#docker-compose-logs-for-a-specific-service)
+  - [`docker compose -f`](#docker-compose--f)
+  - [`docker compose --env-file`](#docker-compose---env-file)
+  - [`docker compose down -v`](#docker-compose-down--v)
 
 ## What is `Docker Compose`
 
@@ -25,6 +26,8 @@ See also:
 - [`Docker`](./docker.md) for general `Docker` concepts ([images](./docker.md#image), [containers](./docker.md#container), [volumes](./docker.md#volumes), [health checks](./docker.md#health-checks), etc.).
 
 <!-- TODO add installation instructions -->
+
+## Commands
 
 ## `docker compose up`
 
