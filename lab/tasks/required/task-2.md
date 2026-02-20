@@ -11,51 +11,64 @@ Learn to debug a broken endpoint by tracing code and examining the database usin
 <h4>Context</h4>
 
 The `/interactions` endpoint code exists but is disabled by a feature flag. It contains two bugs: a schema-database mismatch and a logic error.
+
 Your job is to enable the endpoint, discover the bugs, and fix them.
 
 <h4>Table of contents</h4>
 
-- [Steps](#steps)
-  - [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
-  - [1. Create a `Lab Task` issue](#1-create-a-lab-task-issue)
-  - [2. Examine the database using `pgAdmin`](#2-examine-the-database-using-pgadmin)
-  - [3. Enable the interactions endpoint](#3-enable-the-interactions-endpoint)
-  - [4. Restart the services](#4-restart-the-services)
-  - [5. Try `GET /interactions`](#5-try-get-interactions)
-  - [6. Read the error](#6-read-the-error)
-  - [7. Trace the bug](#7-trace-the-bug)
-  - [8. Fix Bug 1: rename `timestamp` to `created_at`](#8-fix-bug-1-rename-timestamp-to-created_at)
-  - [9. Verify `GET /interactions` works](#9-verify-get-interactions-works)
-  - [10. Commit Bug 1 fix](#10-commit-bug-1-fix)
-  - [11. Try `GET /interactions?item_id=2`](#11-try-get-interactionsitem_id2)
-  - [12. Compare with the database](#12-compare-with-the-database)
-  - [13. Find Bug 2 in the code](#13-find-bug-2-in-the-code)
-  - [14. Fix Bug 2: filter by `item_id`](#14-fix-bug-2-filter-by-item_id)
-  - [15. Commit Bug 2 fix](#15-commit-bug-2-fix)
-  - [16. Finish the task](#16-finish-the-task)
-- [Acceptance criteria](#acceptance-criteria)
+- [1. Steps](#1-steps)
+  - [1.1. Follow the `Git workflow`](#11-follow-the-git-workflow)
+  - [1.2. Create a `Lab Task` issue](#12-create-a-lab-task-issue)
+  - [1.3. Restart the services](#13-restart-the-services)
+  - [1.4. Examine the database using `pgAdmin`](#14-examine-the-database-using-pgadmin)
+  - [1.5. Enable the interactions endpoint](#15-enable-the-interactions-endpoint)
+  - [1.6. Restart the services](#16-restart-the-services)
+  - [1.7. Try `GET /interactions`](#17-try-get-interactions)
+  - [1.8. Read the error](#18-read-the-error)
+  - [1.9. Trace the bug](#19-trace-the-bug)
+  - [1.10. Fix Bug 1: rename `timestamp` to `created_at`](#110-fix-bug-1-rename-timestamp-to-created_at)
+  - [1.11. Verify `GET /interactions` works](#111-verify-get-interactions-works)
+  - [1.12. Commit Bug 1 fix](#112-commit-bug-1-fix)
+  - [1.13. Try `GET /interactions?item_id=2`](#113-try-get-interactionsitem_id2)
+  - [1.14. Compare with the database](#114-compare-with-the-database)
+  - [1.15. Find Bug 2 in the code](#115-find-bug-2-in-the-code)
+  - [1.16. Fix Bug 2: filter by `item_id`](#116-fix-bug-2-filter-by-item_id)
+  - [1.17. Commit Bug 2 fix](#117-commit-bug-2-fix)
+  - [1.18. Finish the task](#118-finish-the-task)
+- [2. Acceptance criteria](#2-acceptance-criteria)
 
-## Steps
+## 1. Steps
 
-### 0. Follow the `Git workflow`
+### 1.1. Follow the `Git workflow`
 
 Follow the [`Git workflow`](../git-workflow.md) to complete this task.
 
-### 1. Create a `Lab Task` issue
+### 1.2. Create a `Lab Task` issue
 
 Title: `[Task] Enable and debug the interactions endpoint`
 
-### 2. Examine the database using `pgAdmin`
+### 1.3. Restart the services
 
-1. [Open `pgAdmin`](../../appendix/pgadmin.md#open-pgadmin).
-2. [Add a server in `pgAdmin`](../../appendix/pgadmin.md#add-a-server-in-pgadmin).
-3. [Inspect columns](../../appendix/pgadmin.md#inspect-columns) of the `interaction_logs` table.
-4. Note the column names: `id`, `learner_id`, `item_id`, `kind`, `created_at`.
+1. [Stop the running services](../setup.md#114-new-stop-the-services).
+2. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   docker compose --env-file .env.docker.secret up --build
+   ```
+
+3. Wait until the services are ready (2-3 minutes). You should see log output from the application and database containers.
+4. [Open a new `VS Code Terminal`](../../appendix/vs-code.md#open-a-new-vs-code-terminal) to run commands while the services are running.
+
+### 1.4. Examine the database using `pgAdmin`
+
+1. Make sure you have [set up `pgAdmin`](../setup.md#1132-new-set-up-pgadmin).
+2. [Inspect columns](../../appendix/pgadmin.md#inspect-columns) of the `interaction_logs` table.
+3. Note the column names: `id`, `learner_id`, `item_id`, `kind`, `created_at`.
 
 > [!NOTE]
 > Pay attention to the column name `created_at`. You will need it later.
 
-### 3. Enable the interactions endpoint
+### 1.5. Enable the interactions endpoint
 
 1. [Open the file](../../appendix/vs-code.md#open-the-file):
    `.env.docker.secret`.
@@ -77,32 +90,40 @@ Title: `[Task] Enable and debug the interactions endpoint`
 > `.env.docker.secret` is listed in `.gitignore` and will not be committed.
 > The flag tells the application to register the `/interactions` route at startup.
 
-### 4. Restart the services
+### 1.6. Restart the services
 
-1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. Stop the `app` service:
+
+   [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
-   docker compose --env-file .env.docker.secret up --build
+   docker compose --env-file .env.docker.secret down app
    ```
 
-> **Tip:** If the services are still running, press `Ctrl+C` first to stop them, then run the command above.
+2. Start the `app` service:
 
-### 5. Try `GET /interactions`
+   [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
-1. Open `Swagger UI` at `http://127.0.0.1:42001/docs`.
+   ```terminal
+   docker compose --env-file .env.docker.secret up app --build
+   ```
+
+### 1.7. Try `GET /interactions`
+
+1. Open in a browser: <http://127.0.0.1:42001/docs>.
 2. [Authorize](./task-1.md#6-authorize-in-swagger-ui) with the API key.
 3. Expand the `GET /interactions` endpoint.
 4. Click `Try it out`.
 5. Click `Execute`.
 6. Observe the response: you should see a `500` Internal Server Error.
 
-### 6. Read the error
+### 1.8. Read the error
 
 1. Look at the error response in `Swagger UI`.
 2. Look at the application logs in the terminal where `Docker Compose` is running.
 3. The error mentions a missing or mismatched field: `timestamp`.
 
-### 7. Trace the bug
+### 1.9. Trace the bug
 
 1. [Open the file](../../appendix/vs-code.md#open-the-file):
    [`src/app/models/interaction.py`](../../../src/app/models/interaction.py).
@@ -118,11 +139,11 @@ Title: `[Task] Enable and debug the interactions endpoint`
    ```
 
 3. The response schema has a field called `timestamp`.
-4. Recall from [Step 2](#2-examine-the-database-using-pgadmin): the database table `interaction_logs` has a column called `created_at`, not `timestamp`.
+4. Recall from [Step 2](#14-examine-the-database-using-pgadmin): the database table `interaction_logs` has a column called `created_at`, not `timestamp`.
 5. The `InteractionLog` class (the database model) has `created_at`, but the `InteractionModel` class (the response schema) has `timestamp`.
 6. This mismatch causes the error.
 
-### 8. Fix Bug 1: rename `timestamp` to `created_at`
+### 1.10. Fix Bug 1: rename `timestamp` to `created_at`
 
 1. In [`src/app/models/interaction.py`](../../../src/app/models/interaction.py), change the `InteractionModel` class:
 
@@ -146,14 +167,14 @@ The field name in the response schema (`InteractionModel`) must match the field 
 
 </details>
 
-### 9. Verify `GET /interactions` works
+### 1.11. Verify `GET /interactions` works
 
-1. Restart the services ([Step 4](#4-restart-the-services)).
+1. Restart the services ([Step 4](#13-restart-the-services)).
 2. Open `Swagger UI` and [authorize](./task-1.md#6-authorize-in-swagger-ui).
 3. Try `GET /interactions`.
 4. Observe: you should see a `200` status code with interaction data.
 
-### 10. Commit Bug 1 fix
+### 1.12. Commit Bug 1 fix
 
 1. [Commit](../git-workflow.md#commit) your changes.
 
@@ -163,7 +184,7 @@ The field name in the response schema (`InteractionModel`) must match the field 
    fix: rename timestamp to created_at in InteractionModel
    ```
 
-### 11. Try `GET /interactions?item_id=2`
+### 1.13. Try `GET /interactions?item_id=2`
 
 1. In `Swagger UI`, expand the `GET /interactions` endpoint.
 2. Click `Try it out`.
@@ -171,7 +192,7 @@ The field name in the response schema (`InteractionModel`) must match the field 
 4. Click `Execute`.
 5. Note the results that are returned.
 
-### 12. Compare with the database
+### 1.14. Compare with the database
 
 1. [Open `pgAdmin`](../../appendix/pgadmin.md#open-pgadmin).
 2. [Run a query](../../appendix/pgadmin.md#run-a-query) on the `interaction_logs` table:
@@ -183,7 +204,7 @@ The field name in the response schema (`InteractionModel`) must match the field 
 3. Compare the query results with the response from `Swagger UI`.
 4. Notice that the results don't match — the API returns different interactions than what the database query shows.
 
-### 13. Find Bug 2 in the code
+### 1.15. Find Bug 2 in the code
 
 1. [Open the file](../../appendix/vs-code.md#open-the-file):
    [`src/app/routers/interactions.py`](../../../src/app/routers/interactions.py).
@@ -202,7 +223,7 @@ The query parameter is called `item_id`, so the filter should compare `i.item_id
 
 </details>
 
-### 14. Fix Bug 2: filter by `item_id`
+### 1.16. Fix Bug 2: filter by `item_id`
 
 1. In [`src/app/routers/interactions.py`](../../../src/app/routers/interactions.py), change the filtering line:
 
@@ -219,10 +240,10 @@ The query parameter is called `item_id`, so the filter should compare `i.item_id
    ```
 
 2. Save the file.
-3. Restart the services ([Step 4](#4-restart-the-services)).
+3. Restart the services ([Step 4](#13-restart-the-services)).
 4. Verify in `Swagger UI` that `GET /interactions?item_id=2` now returns the correct results matching the database query.
 
-### 15. Commit Bug 2 fix
+### 1.17. Commit Bug 2 fix
 
 1. [Commit](../git-workflow.md#commit) your changes.
 
@@ -235,14 +256,14 @@ The query parameter is called `item_id`, so the filter should compare `i.item_id
 > [!IMPORTANT]
 > Each fix must be a **separate commit**. Do not combine them into one.
 
-### 16. Finish the task
+### 1.18. Finish the task
 
 1. [Create a PR](../git-workflow.md#create-a-pr-to-main-in-your-fork) with your fixes.
 2. [Get a PR review](../git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
 
 ---
 
-## Acceptance criteria
+## 2. Acceptance criteria
 
 - [ ] Issue has the correct title.
 - [ ] `GET /interactions` returns interaction data.

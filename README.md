@@ -75,8 +75,8 @@ In simple words, you should be able to say:
 
 ### Prerequisites
 
-1. Check [Theory](./lab/appendix/theory.md).
-2. [Lab setup](./lab/tasks/setup.md).
+1. [Lab setup](./lab/tasks/setup.md).
+2. (Optional) Check the [repo index](./index.md).
 
 ### Required
 
