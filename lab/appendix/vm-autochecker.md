@@ -32,7 +32,12 @@ The `autochecker` user is a restricted account for the autochecker bot. It has n
    nano /home/autochecker/.ssh/authorized_keys
    ```
 
-2. Paste the SSH public key.
+2. Paste the SSH public key:
+
+   ```text
+   ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKiL0DDQZw7L0Uf1c9cNlREY7IS6ZkIbGVWNsClqGNCZ se-toolkit-autochecker
+   ```
+
 3. Save the file and exit (`Ctrl+O`, `Enter`, `Ctrl+X`).
 4. Set the correct permissions:
 
