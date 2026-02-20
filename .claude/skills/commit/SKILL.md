@@ -23,6 +23,7 @@ Co-Authored-By: <your current model name> <noreply@anthropic.com>
 - Keep the subject line concise (under 72 characters)
 - Always include the `Co-Authored-By` trailer with your current model name (e.g. `Claude Opus 4.6`, `Claude Sonnet 4.6`)
 - If the user specifies files via $ARGUMENTS, stage only those files
+- If changes are unrelated, make **separate commits** — one per logical group. Never bundle unrelated changes into a single commit
 
 ## Examples from this project
 
