@@ -285,11 +285,10 @@ Method 2:
    <img alt="Current Terminal Shell" src="../images/appendix/vs-code/terminal-single-current-shell-bash.png" style="width:400px"></img>
 
    You should see on:
-   - `Windows`: `bash` or `WSL`;
+   - `Windows`: `bash`;
 
      If you see something else, [set the default shell](#windows-only-set-the-default-shell-for-the-vs-code-terminal).
-   - `macOS`: `zsh` or `bash`;
-   - `Linux`: `bash`, `fish`, `zsh`, or another shell name.
+   - `macOS`, `Linux`: `zsh`, `bash`, or another [shell](./shell.md#shell-variants) name;
 
 ### (`Windows` only) Set up running `VS Code` in `WSL`
 
