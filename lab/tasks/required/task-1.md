@@ -184,30 +184,33 @@ Title: `[Task] Explore the API`
 1. [Open the file](../../appendix/vs-code.md#open-the-file):
    `.env.docker.secret`.
 2. Change the `API_TOKEN` value to something different, for example: `my-new-secret-key`.
-3. Restart the services:
+3. Stop the `app` service:
 
    [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
-   docker compose --env-file .env.docker.secret up --build
+   docker compose --env-file .env.docker.secret down app
    ```
 
-   > **Tip:** If the services are still running, press `Ctrl+C` first to stop them, then run the command above.
+4. Start the `app` service:
 
-4. Go back to `Swagger UI`.
-5. Try `GET /items`.
-6. Observe: the old key no longer works (you get a `401` Unauthorized error).
+   [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   docker compose --env-file .env.docker.secret up app --build
+   ```
+
+5. Go back to `Swagger UI`.
+6. Try `GET /items`.
+7. Observe: the old key no longer works (you get a `401` Unauthorized error).
 
    > **Note:** This is `401`, not `403`. In step 4 you sent no `Authorization` header at all, so the server returned `403`.
    > Here, `Swagger UI` is still sending the old key as `Authorization: Bearer <old-key>` — the header is present, but the token is wrong, so the server returns `401` instead.
 
-7. Click `Authorize` again.
-8. Enter the new key (`my-new-secret-key`).
-9. Try `GET /items`.
-10. Observe: the new key works (you get a `200` response).
-
-> [!IMPORTANT]
-> After you are done, change the `API_TOKEN` back to `my-secret-api-key` so that subsequent tasks work with the default value.
+8. Click `Authorize` again.
+9. Enter the new key (`my-new-secret-key`).
+10. Try `GET /items`.
+11. Observe: the new key works (you get a `200` response).
 
 ### 12. Fill in the questionnaire
 
