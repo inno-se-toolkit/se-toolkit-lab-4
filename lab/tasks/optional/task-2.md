@@ -58,7 +58,8 @@ Title: `[Task] Set up CI with GitHub Actions`
    3. Installs dependencies using `uv sync`.
    4. Runs the linter (`uv run poe lint`).
    5. Runs the type checker (`uv run poe typecheck`).
-   6. Runs the tests (`uv run poe test`).
+   6. Starts the server in one [process](../../appendix/linux.md#process) (`uv run poe dev`).
+   7. Runs the tests in another process (`uv run poe test`).
 
 > [!TIP]
 > Use the `astral-sh/setup-uv` action to install `uv` in the CI environment.

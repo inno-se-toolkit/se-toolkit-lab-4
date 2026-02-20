@@ -49,7 +49,7 @@ A web server is software that delivers content or services to [web clients](#web
 
 A web client is software that requests content from a [web server](#web-server) and displays the received content.
 
-Web clients include browsers (`Chrome`, `Firefox`) and command-line tools ([`curl`](#send-a-get-query-using-curl)).
+Web clients include browsers (`Chrome`, `Firefox`) and command-line tools ([`curl`](#send-a-get-request-using-curl)).
 
 ## Protocol
 
@@ -182,24 +182,7 @@ Example:
 
 ### Send a `GET` request using `curl`
 
-> [!NOTE]
-> See [`curl`](./useful-programs.md#curl).
-
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   curl <url>
-   ```
-
-   Example:
-
-   ```terminal
-   curl http://127.0.0.1:8080/status
-   ```
-
-2. You should see the response from the web server in the terminal.
-
-   It may be success or error.
+See [`curl`](./useful-programs.md#send-a-get-request-with-curl).
 
 ## Pretty-print the `JSON` response
 

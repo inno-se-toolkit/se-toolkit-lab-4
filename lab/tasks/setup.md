@@ -41,6 +41,7 @@
     - [1.14.1. (NEW) Open `Swagger UI`](#1141-new-open-swagger-ui)
     - [1.14.2. (NEW) Set up `pgAdmin`](#1142-new-set-up-pgadmin)
   - [1.15. (NEW) Stop the services](#115-new-stop-the-services)
+  - [1.16. (NEW) Add SSH key for the autochecker](#116-new-add-ssh-key-for-the-autochecker)
 - [2. Optional steps](#2-optional-steps)
   - [2.1. (NEW) Learn to go back after clicking a link](#21-new-learn-to-go-back-after-clicking-a-link)
   - [2.2. Set up a coding agent](#22-set-up-a-coding-agent)
@@ -328,6 +329,12 @@
    ```terminal
    docker compose --env-file .env.docker.secret down
    ```
+
+### 1.16. (NEW) Add SSH key for the autochecker
+
+1. [Connect to your VM](../appendix/vm.md#connect-to-the-vm).
+2. [Create the `autochecker` user](../appendix/vm-autochecker.md#create-the-autochecker-user).
+3. [Add the instructor's SSH public key to the `autochecker` user](../appendix/vm-autochecker.md#add-an-ssh-public-key-to-the-autochecker-user):
 
 ---
 

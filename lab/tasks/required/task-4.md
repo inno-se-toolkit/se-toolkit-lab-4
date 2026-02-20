@@ -32,7 +32,7 @@ You will deploy the learning management service on your VM, configure the API ke
     - [13. Install and configure `fail2ban`](#13-install-and-configure-fail2ban)
     - [14. Disable root SSH login](#14-disable-root-ssh-login)
     - [15. Disable password authentication](#15-disable-password-authentication)
-    - [16. Create a `checkbot` SSH user](#16-create-a-checkbot-ssh-user)
+    - [16. Create a `autochecker` SSH user](#16-create-a-autochecker-ssh-user)
     - [17. Add the instructor's SSH public key](#17-add-the-instructors-ssh-public-key)
     - [18. Restart `sshd`](#18-restart-sshd)
   - [19. Write a comment for the issue](#19-write-a-comment-for-the-issue)
@@ -207,15 +207,9 @@ Use any of the following methods:
    usermod -aG sudo operator
    ```
 
-5. Copy your SSH key to the new user so you can log in without a password:
+5. [Copy SSH authorized keys to the `operator` user](../../appendix/vm-autochecker.md#copy-ssh-authorized-keys-to-a-user).
 
-   ```terminal
-   mkdir -p /home/operator/.ssh
-   cp ~/.ssh/authorized_keys /home/operator/.ssh/authorized_keys
-   chown -R operator:operator /home/operator/.ssh
-   chmod 700 /home/operator/.ssh
-   chmod 600 /home/operator/.ssh/authorized_keys
-   ```
+   Replace `<username>` with `operator`.
 
 ### 12. Configure the firewall
 
@@ -311,38 +305,15 @@ Use any of the following methods:
 
 3. Save the file and exit (`Ctrl+O`, `Enter`, `Ctrl+X`).
 
-### 16. Create a `checkbot` SSH user
+### 16. Create a `autochecker` SSH user
 
-1. Create the `checkbot` user as a normal user with no `sudo` access:
-
-   ```terminal
-   adduser --disabled-password --gecos "" checkbot
-   ```
-
-2. Create the `.ssh` directory for `checkbot`:
-
-   ```terminal
-   mkdir -p /home/checkbot/.ssh
-   chmod 700 /home/checkbot/.ssh
-   chown checkbot:checkbot /home/checkbot/.ssh
-   ```
+1. [Create the `autochecker` user](../../appendix/vm-autochecker.md#create-the-autochecker-user).
 
 ### 17. Add the instructor's SSH public key
 
-1. Create the `authorized_keys` file for `checkbot`:
+1. [Add the instructor's SSH public key to the `autochecker` user](../../appendix/vm-autochecker.md#add-an-ssh-public-key-to-the-autochecker-user).
 
-   ```terminal
-   nano /home/checkbot/.ssh/authorized_keys
-   ```
-
-2. Paste the instructor's SSH public key (provided by the instructor).
-3. Save the file and exit (`Ctrl+O`, `Enter`, `Ctrl+X`).
-4. Set the correct permissions:
-
-   ```terminal
-   chmod 600 /home/checkbot/.ssh/authorized_keys
-   chown checkbot:checkbot /home/checkbot/.ssh/authorized_keys
-   ```
+   Replace step 2 ("Paste the SSH public key") with: paste the instructor's SSH public key (provided by the instructor).
 
 ### 18. Restart `sshd`
 
@@ -383,8 +354,8 @@ Use any of the following methods:
 - [ ] Issue has the correct title.
 - [ ] The service is accessible at `http://<vm-ip>:42002/items` with the correct API key.
 - [ ] The service returns `403` without an API key.
-- [ ] `checkbot` user exists and can SSH with a key.
-- [ ] `checkbot` has no `sudo` access.
+- [ ] `autochecker` user exists and can SSH with a key.
+- [ ] `autochecker` has no `sudo` access.
 - [ ] `fail2ban` is active.
 - [ ] `PermitRootLogin no` is set.
 - [ ] `PasswordAuthentication no` is set.

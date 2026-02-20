@@ -4,6 +4,8 @@
 
 - [Image](#image)
 - [Container](#container)
+  - [Why containers are useful](#why-containers-are-useful)
+  - [Containers and host](#containers-and-host)
 - [Install `Docker`](#install-docker)
 - [What is `Docker`](#what-is-docker)
   - [`docker run`](#docker-run)
@@ -15,42 +17,43 @@
 
 ## Image
 
-<!-- TODO -->
+An image is a packaged, read-only snapshot of an application and everything needed to run it — the OS files, runtime, libraries, and application code. The same image runs identically on any machine with `Docker` installed.
+
+Running an image creates a [container](#container). One image can produce many containers.
 
 ## Container
 
-<!-- TODO define dependencies -->
-<!-- TODO define runtime -->
-<!-- TODO define isolated -->
-<!-- TODO provide link to definitions web page -->
-
 A container is an isolated runtime for an application and its dependencies.
 
-Why containers are useful:
+- A **runtime** is the software environment that executes the app: OS files, interpreter, system libraries.
+- **Dependencies** are other software the app needs, such as a specific language version or a database driver.
+- **Isolated** means each container has its own filesystem, processes, and network — it cannot affect other containers or the host machine.
+
+### Why containers are useful
 
 - The app runs consistently across machines.
 - Dependencies are packaged with the app.
 - Multiple services can run side-by-side with explicit ports and networks.
 
-Example of how containers fit together:
+### Containers and host
+
+<img alt="Containers and host" src="../images/appendix/docker/hierarchy.png" style="width:400px"></img> ([source](https://rest-apis-flask.teclado.com/docs/docker_intro/what_is_docker_container/))
 
 ```text
--------------------- Docker host --------------------
-|                                                     |
-|  ------------ container ------------               |
-|  | Linux userspace runtime         |               |
-|  | app/service process             |               |
-|  ----------------------------------               |
-|                                                     |
-|  ------------ container ------------               |
-|  | Linux userspace runtime         |               |
-|  | another app/service process     |               |
-|  ----------------------------------               |
-|                                                     |
--------------------------------------------------------
+┌─────────────────────────────────────────────────────────────────┐
+│  Docker host                                                    │
+│                                                                 │
+│  ┌──────────────────────────┐  ┌──────────────────────────┐     │
+│  │ container                │  │ container                │     │
+│  │                          │  │                          │     │
+│  │  web app                 │  │  database                │     │
+│  │  Python 3.11, libraries  │  │  Postgres, libraries     │     │
+│  │  OS files                │  │  OS files                │     │
+│  └──────────────────────────┘  └──────────────────────────┘     │
+│                                                                 │
+│ ┄┄┄┄┄┄┄┄┄┄┄┄┄┄ Linux kernel (shared) ┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄ │
+└─────────────────────────────────────────────────────────────────┘
 ```
-
-<!-- TODO image -->
 
 ## Install `Docker`
 

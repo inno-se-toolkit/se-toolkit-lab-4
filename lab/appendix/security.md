@@ -9,7 +9,7 @@
   - [Configure `fail2ban`](#configure-fail2ban)
   - [Disable root SSH login](#disable-root-ssh-login)
   - [Disable password authentication](#disable-password-authentication)
-  - [Create a `checkbot` user](#create-a-checkbot-user)
+  - [Create a `autochecker` user](#create-a-autochecker-user)
   - [Restart `sshd`](#restart-sshd)
 
 ## API key authentication
@@ -158,34 +158,34 @@ VM hardening is the process of securing a server by reducing its attack surface.
 > [!IMPORTANT]
 > Make sure your SSH key is set up before disabling password authentication.
 
-### Create a `checkbot` user
+### Create a `autochecker` user
 
-The `checkbot` user is a restricted user for the instructor to verify VM hardening.
+The `autochecker` user is a restricted user for the instructor to verify VM hardening.
 
 1. Create the user (no sudo):
 
    ```terminal
-   sudo adduser --disabled-password --gecos "" checkbot
+   sudo adduser --disabled-password --gecos "" autochecker
    ```
 
 2. Create the `.ssh` directory:
 
    ```terminal
-   sudo mkdir -p /home/checkbot/.ssh
-   sudo chmod 700 /home/checkbot/.ssh
+   sudo mkdir -p /home/autochecker/.ssh
+   sudo chmod 700 /home/autochecker/.ssh
    ```
 
 3. Add the instructor's SSH public key:
 
    ```terminal
-   echo "<instructor-public-key>" | sudo tee /home/checkbot/.ssh/authorized_keys
+   echo "<instructor-public-key>" | sudo tee /home/autochecker/.ssh/authorized_keys
    ```
 
 4. Set permissions:
 
    ```terminal
-   sudo chown -R checkbot:checkbot /home/checkbot/.ssh
-   sudo chmod 600 /home/checkbot/.ssh/authorized_keys
+   sudo chown -R autochecker:autochecker /home/autochecker/.ssh
+   sudo chmod 600 /home/autochecker/.ssh/authorized_keys
    ```
 
 > [!NOTE]
