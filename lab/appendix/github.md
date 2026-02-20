@@ -274,6 +274,12 @@ A [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track
 1. [Go to your fork](#go-to-your-fork).
 2. Go to `Settings` -> `General` -> `Features`.
 3. Check the box near `Issues`.
+4. [Go to your fork](#go-to-your-fork).
+
+   You should see the `Issues` tab.
+   Example:
+
+   <img alt="GitHub Issues" src="../images/appendix/github/issues-tab.png" style="width:400px"></img>
 
 ### Add a collaborator
 
