@@ -165,12 +165,12 @@ Title: `[Task] Explore the API`
 1. In `Swagger UI`, expand the `PUT /items/{item_id}` endpoint.
 2. Click `Try it out`.
 3. Enter the `item_id` of the item you just created.
-4. Enter a request body with updated values, for example:
+4. Enter a request body with updated values in `JSON` format, for example:
 
    ```json
    {
-     "title": "Updated Item",
-     "description": "An updated description."
+     "title": "Execute `POST /items` using Swagger",
+     "description": "1. Open Swagger in a browser.\n2. Execute POST /items."
    }
    ```
 
