@@ -9,6 +9,7 @@
   - [`docker run`](#docker-run)
   - [`docker ps`](#docker-ps)
 - [`Docker Compose`](#docker-compose)
+  - [Service](#service)
   - [`docker compose up`](#docker-compose-up)
   - [`docker compose down`](#docker-compose-down)
   - [`docker compose -f`](#docker-compose--f)
@@ -23,7 +24,10 @@
 
 ## Container
 
-<!-- TODO reference image -->
+<!-- TODO define dependencies -->
+<!-- TODO define runtime -->
+<!-- TODO define isolated -->
+<!-- TODO provide link to definitions web page -->
 
 A container is an isolated runtime for an application and its dependencies.
 
@@ -32,6 +36,26 @@ Why containers are useful:
 - The app runs consistently across machines.
 - Dependencies are packaged with the app.
 - Multiple services can run side-by-side with explicit ports and networks.
+
+Example of how containers fit together:
+
+```text
+-------------------- Docker host --------------------
+|                                                     |
+|  ------------ container ------------               |
+|  | Linux userspace runtime         |               |
+|  | app/service process             |               |
+|  ----------------------------------               |
+|                                                     |
+|  ------------ container ------------               |
+|  | Linux userspace runtime         |               |
+|  | another app/service process     |               |
+|  ----------------------------------               |
+|                                                     |
+-------------------------------------------------------
+```
+
+<!-- TODO image -->
 
 ## Install `Docker`
 
@@ -75,23 +99,11 @@ docker ps -a
 
 `Docker Compose` runs multi-container apps from a `docker-compose.yml` file.
 
-Example of how containers fit together:
+### Service
 
-```text
--------------------- Docker host --------------------
-|                                                     |
-|  ------------ container ------------               |
-|  | Linux userspace runtime         |               |
-|  | app/service process             |               |
-|  ----------------------------------               |
-|                                                     |
-|  ------------ container ------------               |
-|  | Linux userspace runtime         |               |
-|  | another app/service process     |               |
-|  ----------------------------------               |
-|                                                     |
--------------------------------------------------------
-```
+A service is a named entry under the `services:` key in `docker-compose.yml`. It defines how to build or pull an [image](#image) and run it as a [container](#container).
+
+For example, this project defines four services in [`docker-compose.yml`](../../docker-compose.yml): `app`, `postgres`, `pgadmin`, and `caddy`.
 
 ### `docker compose up`
 
