@@ -1,6 +1,7 @@
 """Router for item endpoints — reference implementation."""
 
 from fastapi import APIRouter, Depends, HTTPException, status
+from sqlalchemy.exc import IntegrityError
 from sqlmodel.ext.asyncio.session import AsyncSession
 
 from app.database import get_session
@@ -30,7 +31,19 @@ async def get_item(item_id: int, session: AsyncSession = Depends(get_session)):
 @router.post("/", response_model=ItemRecord, status_code=201)
 async def post_item(body: ItemCreate, session: AsyncSession = Depends(get_session)):
     """Create a new item."""
-    return await create_item(session, title=body.title, description=body.description)
+    try:
+        return await create_item(
+            session,
+            type=body.type,
+            parent_id=body.parent_id,
+            title=body.title,
+            description=body.description,
+        )
+    except IntegrityError:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_CONTENT,
+            detail="parent_id does not reference an existing item",
+        )
 
 
 @router.put("/{item_id}", response_model=ItemRecord)

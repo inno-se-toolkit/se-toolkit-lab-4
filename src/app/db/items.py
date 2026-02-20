@@ -18,10 +18,16 @@ async def read_item(session: AsyncSession, item_id: int) -> ItemRecord | None:
 
 
 async def create_item(
-    session: AsyncSession, title: str, description: str
+    session: AsyncSession,
+    type: str,
+    parent_id: int | None,
+    title: str,
+    description: str,
 ) -> ItemRecord:
     """Create a new item in the database."""
-    item = ItemRecord(title=title, description=description)
+    item = ItemRecord(
+        type=type, parent_id=parent_id, title=title, description=description
+    )
     session.add(item)
     await session.commit()
     await session.refresh(item)
