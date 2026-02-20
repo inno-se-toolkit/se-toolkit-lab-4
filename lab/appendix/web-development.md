@@ -19,9 +19,9 @@
   - [Authorize in `Swagger UI`](#authorize-in-swagger-ui)
   - [Try an endpoint in `Swagger UI`](#try-an-endpoint-in-swagger-ui)
 - [Endpoint](#endpoint)
-- [Send a `GET` query](#send-a-get-query)
-  - [Send a `GET` query using a browser](#send-a-get-query-using-a-browser)
-  - [Send a `GET` query using curl](#send-a-get-query-using-curl)
+- [Send a `GET` request](#send-a-get-request)
+  - [Send a `GET` request using a browser](#send-a-get-request-using-a-browser)
+  - [Send a `GET` request using `curl`](#send-a-get-request-using-curl)
 - [Pretty-print the `JSON` response](#pretty-print-the-json-response)
   - [Pretty-print the `JSON` response using `jq`](#pretty-print-the-json-response-using-jq)
   - [Pretty-print the `JSON` response using a browser](#pretty-print-the-json-response-using-a-browser)
@@ -172,31 +172,34 @@ Example:
 - `GET /status` is one endpoint.
 - `POST /status` is a different endpoint.
 
-Quick check with `curl`:
+## Send a `GET` request
 
-```terminal
-curl http://127.0.0.1:42000/status
-```
+### Send a `GET` request using a browser
 
-## Send a `GET` query
+1. Open the URL in a browser.
 
-### Send a `GET` query using a browser
+   The browser will send the `GET` query by default.
 
-1. Open the link in a browser: <http://127.0.0.1:42000/status>.
+### Send a `GET` request using `curl`
 
-> [!TIP]
-> [`FastAPI`](https://fastapi.tiangolo.com/) auto-generates interactive API documentation.
-> Open <http://127.0.0.1:42000/docs> to explore all available endpoints.
-
-### Send a `GET` query using curl
+> [!NOTE]
+> See [`curl`](./useful-programs.md#curl).
 
 1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
-   curl http://127.0.0.1:42000/status
+   curl <url>
+   ```
+
+   Example:
+
+   ```terminal
+   curl http://127.0.0.1:8080/status
    ```
 
 2. You should see the response from the web server in the terminal.
+
+   It may be success or error.
 
 ## Pretty-print the `JSON` response
 
