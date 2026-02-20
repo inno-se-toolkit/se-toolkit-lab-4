@@ -112,7 +112,9 @@ Title: `[Task] Explore the API`
 2. Click `Try it out`.
 3. Enter `1` as the `item_id`.
 4. Click `Execute`.
-5. Observe the response: you should see a `200` status code with the item data.
+5. Observe the response:
+   - The [`200` (OK)](../../appendix/http.md#200-ok) status code
+   - The item data in the `Response body` field.
 
    <img alt="Get item by id - 200" src="../../images/tasks/required/task-1/get-item-by-id-200.png" style="width:400px">
 6. Try entering `999` as the `item_id`.
