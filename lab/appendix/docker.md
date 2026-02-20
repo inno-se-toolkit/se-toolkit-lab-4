@@ -6,8 +6,8 @@
 - [Container](#container)
   - [Why containers are useful](#why-containers-are-useful)
   - [Containers and host](#containers-and-host)
-- [Install `Docker`](#install-docker)
 - [What is `Docker`](#what-is-docker)
+  - [Install `Docker`](#install-docker)
   - [`docker run`](#docker-run)
   - [`docker ps`](#docker-ps)
 - [`Docker Compose`](#docker-compose)
@@ -55,13 +55,17 @@ A container is an isolated runtime for an application and its dependencies.
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-## Install `Docker`
-
-1. Follow the [installation instructions](https://docs.docker.com/get-started/get-docker/).
-
 ## What is `Docker`
 
 `Docker` is a platform for building and running [containers](#container).
+
+Docs:
+
+- [What is Docker?](https://docs.docker.com/get-started/docker-overview/)
+
+### Install `Docker`
+
+Follow the [installation instructions](https://docs.docker.com/get-started/get-docker/).
 
 ### `docker run`
 
