@@ -20,7 +20,12 @@
 
 ## What is a VM
 
-<!-- TODO -->
+A virtual machine (`VM`) is a software-emulated computer that runs on a physical host machine, with its own [operating system](./operating-system.md) and isolated environment.
+In this lab, you use a `VM` provided by the university to deploy and run the application remotely over [SSH](./ssh.md).
+
+Docs:
+
+- [What is a virtual machine?](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-virtual-machine)
 
 ## Your VM
 
@@ -137,7 +142,7 @@ Complete these steps to create a VM:
 5. [Connect to the VM](./ssh.md#connect-to-the-vm).
 6. If the connection is successful, you should see:
    1. The host fingerprint prompt (first connection only).
-   2. A remote shell prompt on the VM (for example, `root@<your-vm-name>:~#`).
+   2. A remote [shell prompt](./shell.md#shell-prompt) on the VM (for example, `root@<your-vm-name>:~#`).
    3. If you use the `ms-vscode-remote.remote-ssh` exntension in `VS Code`, the status bar should show that you are connected to a remote host.
 7. Otherwise, see [troubleshooting](#troubleshooting).
 
