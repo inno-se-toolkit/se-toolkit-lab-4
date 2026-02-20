@@ -162,7 +162,7 @@ All subsequent requests will include the API key in the `Authorization` header.
 
 ## Endpoint
 
-An endpoint is a specific API entry point identified by:
+An endpoint is a specific [API](#api) entry point identified by:
 
 - HTTP method (`GET`, `POST`, `PUT`, `DELETE`, ...).
 - Path (`/status`, `/items`, ...).
