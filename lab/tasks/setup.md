@@ -27,9 +27,9 @@
   - [1.9. Continue creating a VM](#19-continue-creating-a-vm)
   - [1.10. Set up `Python` in `VS Code`](#110-set-up-python-in-vs-code)
     - [1.10.1. Install `uv`](#1101-install-uv)
-    - [1.10.2. Install `Python` and dependencies](#1102-install-python-and-dependencies)
-    - [1.10.3. Select the `Python` interpreter](#1103-select-the-python-interpreter)
-    - [1.10.4. Check that `Python` works](#1104-check-that-python-works)
+    - [1.10.2. (NEW) Install `Python` and dependencies](#1102-new-install-python-and-dependencies)
+    - [1.10.3. (NEW) Select the `Python` interpreter](#1103-new-select-the-python-interpreter)
+    - [1.10.4. (NEW) Check that `Python` works](#1104-new-check-that-python-works)
   - [1.11. (NEW) Start the services](#111-new-start-the-services)
     - [1.11.1. (NEW) Set up the `Docker` environment](#1111-new-set-up-the-docker-environment)
     - [1.11.2. (NEW) Start the services using `Docker Compose`](#1112-new-start-the-services-using-docker-compose)
@@ -211,11 +211,11 @@
 
 1. [Install `Python` and dependencies](../appendix/python.md#install-python-and-dependencies).
 
-#### 1.10.3. Select the `Python` interpreter
+#### 1.10.3. (NEW) Select the `Python` interpreter
 
 1. [Select the `Python` interpreter](../appendix/python.md#select-the-python-interpreter).
 
-#### 1.10.4. Check that `Python` works
+#### 1.10.4. (NEW) Check that `Python` works
 
 1. [Check that `Python` works](../appendix/python.md#check-that-python-works).
 
