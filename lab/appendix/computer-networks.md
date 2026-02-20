@@ -3,6 +3,7 @@
 <h2>Table of contents</h2>
 
 - [What is a network](#what-is-a-network)
+- [Machine](#machine)
 - [Internet](#internet)
 - [IP address](#ip-address)
   - [IPv4](#ipv4)
@@ -14,11 +15,17 @@
 
 ## What is a network
 
-A computer network is a group of interconnected devices that can communicate and share resources over wired or wireless connections.
+A computer network is a group of interconnected [machines](#machine) that can communicate and share resources over wired or wireless connections.
+
+## Machine
+
+A machine is a physical or virtual computer.
+
+Examples: a personal laptop, a university server, a [virtual machine](./vm.md#what-is-a-vm).
 
 ## Internet
 
-The Internet is a global [network](#what-is-a-network) of interconnected computer networks.
+The Internet is a global [network](#what-is-a-network) of interconnected [computer networks](#networks).
 
 It uses standardized communication protocols (such as `TCP/IP`) to link billions of devices worldwide, enabling communication and access to information across the globe.
 
@@ -48,7 +55,7 @@ It was introduced to address the exhaustion of [IPv4](#ipv4) addresses and suppo
 
 ## Host
 
-A host is any device connected to a [network](#what-is-a-network) that has an [IP address](#ip-address).
+A host is any [machine](#machine) connected to a [network](#what-is-a-network) that has an [IP address](#ip-address).
 
 Hosts can send and receive data over the [network](#what-is-a-network).
 
