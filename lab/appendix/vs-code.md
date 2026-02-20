@@ -494,11 +494,10 @@ Docs:
 
 `Ctrl+Alt+-` (`Ctrl+-` on `macOS`)
 
-You can customize this shortcut:
+You can [set another shortcut](#set-a-shortcut):
 
-1. [Set another shortcut](#set-a-shortcut):
-    - `<command-name>` is `Go Back`;
-    - Example: type `Alt`, then `-` to get the `Alt+-` shortcut.
+- `<command-name>` is `Go Back`;
+- Get the `Alt+-` shortcut by typing `Alt`, then `-`.
 
 #### Shortcut: Switch to the previous editor
 
