@@ -58,7 +58,7 @@ Most `bash` commands in this course work in `zsh` as well.
 ## Shell prompt
 
 The shell prompt is the text the shell displays before each command, indicating it is ready to accept input.
-It typically shows the current user, machine name, and working directory.
+It typically shows the current [user](./linux.md#users), machine name, and [working directory](#current-working-directory).
 
 A typical `bash` prompt looks like:
 
@@ -68,7 +68,7 @@ username@hostname:~/directory$
 
 > [!NOTE]
 > The `$` at the end indicates a regular user.
-> A `#` indicates the root (admin) user.
+> A `#` indicates the [root](./linux.md#the-root-user) (admin) user.
 
 ## Shell command
 
@@ -85,7 +85,7 @@ Example:
 ls -a .
 ```
 
-Here `ls` is the command, `-a` is a flag (include hidden files), and `.` is the argument (the current directory).
+Here `ls` is the command, `-a` is a flag (include hidden files), and `.` is the argument (the [current directory](#current-working-directory)).
 
 ## Current working directory
 
