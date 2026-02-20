@@ -28,8 +28,8 @@ Docs:
 
 1. Open <http://127.0.0.1:42003> in a browser.
 2. Log in with the credentials from `.env.docker.secret`:
-   - Email: the value of `PGADMIN_EMAIL` (default: `admin@example.com`).
-   - Password: the value of `PGADMIN_PASSWORD` (default: `admin`).
+   - `Email`: the value of `PGADMIN_EMAIL` (default: `admin@example.com`).
+   - `Password`: the value of `PGADMIN_PASSWORD` (default: `admin`).
 
 ## Add a server in `pgAdmin`
 
