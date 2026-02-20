@@ -1,6 +1,6 @@
 """Router for item endpoints — reference implementation."""
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, status
 from sqlmodel.ext.asyncio.session import AsyncSession
 
 from app.database import get_session
@@ -21,7 +21,9 @@ async def get_item(item_id: int, session: AsyncSession = Depends(get_session)):
     """Get a specific item by its id."""
     item = await read_item(session, item_id)
     if item is None:
-        raise HTTPException(status_code=404, detail="Item not found")
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="Item not found"
+        )
     return item
 
 
@@ -40,5 +42,7 @@ async def put_item(
         session, item_id=item_id, title=body.title, description=body.description
     )
     if item is None:
-        raise HTTPException(status_code=404, detail="Item not found")
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="Item not found"
+        )
     return item
