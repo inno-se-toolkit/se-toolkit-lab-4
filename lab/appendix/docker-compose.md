@@ -2,6 +2,7 @@
 
 <h2>Table of contents</h2>
 
+- [What is `Docker Compose`](#what-is-docker-compose)
 - [`docker compose up`](#docker-compose-up)
 - [`docker compose up` a specific service](#docker-compose-up-a-specific-service)
 - [`docker compose down`](#docker-compose-down)
@@ -13,9 +14,17 @@
 - [`docker compose --env-file`](#docker-compose---env-file)
 - [`docker compose down -v`](#docker-compose-down--v)
 
+## What is `Docker Compose`
+
 `Docker Compose` runs multi-container apps from a `docker-compose.yml` file.
 
-See also: [`Docker`](./docker.md) for general `Docker` concepts (images, containers, volumes, health checks).
+Example of the file: [`docker-compose.yml`](../../docker-compose.yml).
+
+See also:
+
+- [`Docker`](./docker.md) for general `Docker` concepts ([images](./docker.md#image), [containers](./docker.md#container), [volumes](./docker.md#volumes), [health checks](./docker.md#health-checks), etc.).
+
+<!-- TODO add installation instructions -->
 
 ## `docker compose up`
 
