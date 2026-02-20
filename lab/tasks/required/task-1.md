@@ -124,20 +124,25 @@ Title: `[Task] Explore the API`
 ### 9. Try `POST /items`
 
 1. In `Swagger UI`, expand the `POST /items` endpoint.
-2. Click `Try it out`.
-3. Enter a request body, for example:
+2. Click `Try it out` to make a request with the default body.
+3. Observe the response: the [`422` (Unprocessable Content)](../../appendix/http.md#422-unprocessable-entity) error.
+4. Enter another request body as [`JSON`](../../appendix/file-formats.md#json), for example:
 
    ```json
    {
      "type": "step",
      "parent_id": 5,
      "title": "Try POST /items using Swagger",
-     "description": "Open Swagger in browser and execute POST /items",
+     "description": "Open Swagger in browser and execute POST /items"
    }
    ```
 
-4. Click `Execute`.
-5. Observe the response: you should see a `201` Created status code with the newly created item.
+   **NOTE:** `"parent_id": 5` means that the parent item of this step is the task with the `"id"` equal to `5` (created in the [`init.sql`](../../../src/app/data/init.sql)).
+
+5. Click `Execute`.
+6. Observe the response:
+   - The [`201` (Created)](../../appendix/http.md#201-created) status code;
+   - The newly created item in the `Response body` field.
 
 ### 10. Try `PUT /items/{item_id}`
 
