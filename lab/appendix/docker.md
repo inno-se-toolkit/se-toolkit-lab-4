@@ -37,6 +37,8 @@ A container is an isolated runtime for an application and its dependencies.
 
 ### Containers and host
 
+<img alt="Containers and host" src="../images/appendix/docker/hierarchy.png" style="width:400px"></img> ([source](https://rest-apis-flask.teclado.com/docs/docker_intro/what_is_docker_container/))
+
 ```text
 ┌─────────────────────────────────────────────────────────────────┐
 │  Docker host                                                    │
