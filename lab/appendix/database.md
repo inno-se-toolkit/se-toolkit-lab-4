@@ -6,10 +6,7 @@
 - [Database server](#database-server)
 - [`PostgreSQL`](#postgresql)
 - [`pgAdmin`](#pgadmin)
-- [SQL basics](#sql-basics)
-  - [`SELECT`](#select)
-  - [`INSERT`](#insert)
-  - [`WHERE`](#where)
+- [`SQL`](#sql)
 - [Database schema](#database-schema)
 - [Resetting the database](#resetting-the-database)
 
@@ -37,37 +34,9 @@ Docs:
 
 See [`pgAdmin`](./pgadmin.md).
 
-## SQL basics
+## `SQL`
 
-### `SELECT`
-
-Retrieve data from a table:
-
-```sql
-SELECT * FROM items;
-```
-
-Retrieve specific columns:
-
-```sql
-SELECT title, description FROM items;
-```
-
-### `INSERT`
-
-Add a new row to a table:
-
-```sql
-INSERT INTO items (title, description) VALUES ('New Item', 'A description.');
-```
-
-### `WHERE`
-
-Filter rows by a condition:
-
-```sql
-SELECT * FROM learners WHERE enrolled_at >= '2025-10-01';
-```
+See [`SQL`](./sql.md).
 
 ## Database schema
 
