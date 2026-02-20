@@ -30,13 +30,17 @@
     - [1.10.2. Install `Python` and dependencies](#1102-install-python-and-dependencies)
     - [1.10.3. Select the `Python` interpreter](#1103-select-the-python-interpreter)
     - [1.10.4. Check that `Python` works](#1104-check-that-python-works)
-  - [1.11. Run and check services](#111-run-and-check-services)
+  - [1.11. (NEW) Start the services](#111-new-start-the-services)
     - [1.11.1. (NEW) Set up the `Docker` environment](#1111-new-set-up-the-docker-environment)
-    - [1.11.2. (NEW) Start the services](#1112-new-start-the-services)
-    - [1.11.3. 1.13 (NEW) Open the `Swagger UI`](#1113-113-new-open-the-swagger-ui)
-    - [1.11.4. (NEW) Open `pgAdmin`](#1114-new-open-pgadmin)
+    - [1.11.2. (NEW) Start the services using `Docker Compose`](#1112-new-start-the-services-using-docker-compose)
   - [1.12. (NEW) Open a new terminal](#112-new-open-a-new-terminal)
-  - [1.13. (NEW) (Optional) Stop the services](#113-new-optional-stop-the-services)
+  - [1.13. (NEW) Observe containers and services](#113-new-observe-containers-and-services)
+    - [1.13.1. (NEW) List running containers](#1131-new-list-running-containers)
+    - [1.13.2. (NEW) See logs of the running services](#1132-new-see-logs-of-the-running-services)
+  - [1.13. (NEW) Set up the services](#113-new-set-up-the-services)
+    - [1.13.1. (NEW) Open `Swagger UI`](#1131-new-open-swagger-ui)
+    - [1.13.2. (NEW) Set up `pgAdmin`](#1132-new-set-up-pgadmin)
+  - [1.14. (NEW) (Optional) Stop the services](#114-new-optional-stop-the-services)
 - [2. Optional steps](#2-optional-steps)
   - [2.1. Set up a coding agent](#21-set-up-a-coding-agent)
   - [2.2. Set up the shell prompt](#22-set-up-the-shell-prompt)
@@ -212,7 +216,10 @@
 
 1. [Check that `Python` works](../appendix/python.md#check-that-python-works).
 
-### 1.11. Run and check services
+### 1.11. (NEW) Start the services
+
+> [!NOTE]
+> TODO: briefly explain what services and containers are, provide links to appendix
 
 #### 1.11.1. (NEW) Set up the `Docker` environment
 
@@ -232,7 +239,7 @@
 > No edits are needed for local development.
 > The default values in [`.env.docker.example`](../../.env.docker.example) work out of the box.
 
-#### 1.11.2. (NEW) Start the services
+#### 1.11.2. (NEW) Start the services using `Docker Compose`
 
 1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -253,13 +260,48 @@
    >
    > If you need to re-initialize the database (e.g., after pulling upstream changes to `init.sql`), see [Resetting the database](../appendix/database.md#resetting-the-database).
 
-#### 1.11.3. 1.13 (NEW) Open the `Swagger UI`
+### 1.12. (NEW) Open a new terminal
+
+1. [Open a new `VS Code Terminal`](../appendix/vs-code.md#open-a-new-vs-code-terminal).
+
+### 1.13. (NEW) Observe containers and services
+
+#### 1.13.1. (NEW) List running containers
+
+1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   docker compose --env-file .env.docker.secret ps
+   ```
+
+#### 1.13.2. (NEW) See logs of the running services
+
+1. See logs for all services:
+
+   [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   docker compose --env-file .env.docker.secret logs
+   ```
+
+2. [See logs for a specific service](TODO link to the appendix):
+
+   ```terminal
+   docker compose --env-file .env.docker.secret logs postgres
+   ```
+
+### 1.13. (NEW) Set up the services
+
+#### 1.13.1. (NEW) Open `Swagger UI`
 
 1. Open in a browser: <http://127.0.0.1:42001/docs>.
 
    You should see the [`Swagger UI`](../appendix/swagger.md#swagger-ui) page with the [API](../appendix/web-development.md#api) documentation.
 
-#### 1.11.4. (NEW) Open `pgAdmin`
+#### 1.13.2. (NEW) Set up `pgAdmin`
+
+> [!NOTE]
+> [`pgAdmin`](../appendix/pgadmin.md#what-is-pgadmin) takes 2-3 minutes to start after you have [started the services](#111-new-start-the-services).
 
 1. [Open `pgAdmin`](../appendix/pgadmin.md#open-pgadmin).
 2. [Add a server in `pgAdmin`](../appendix/pgadmin.md#add-a-server-in-pgadmin).
@@ -272,11 +314,7 @@
 > [!TIP]
 > To view the data in a table, right-click the table and select `View/Edit Data` -> `All Rows`.
 
-### 1.12. (NEW) Open a new terminal
-
-1. [Open a new `VS Code Terminal`](../appendix/vs-code.md#open-a-new-vs-code-terminal).
-
-### 1.13. (NEW) (Optional) Stop the services
+### 1.14. (NEW) (Optional) Stop the services
 
 1. [Check that the current directory is `se-toolkit-lab-3`](../appendix/shell.md#check-the-current-directory-is-directory-name).
 2. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
