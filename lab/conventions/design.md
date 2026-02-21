@@ -715,39 +715,12 @@ body:
 
 #### `02-bug-report.yml` — Bug Report
 
-```yaml
-name: Bug Report
-description: Create a report to help us improve
-title: "[Bug]: <short title>"
-labels: bug
-body:
-  - type: textarea
-    id: description
-    attributes:
-      label: Brief problem description
-      description: A clear and concise description of what the bug is.
-    validations:
-      required: true
-  - type: textarea
-    id: steps
-    attributes:
-      label: Steps to Reproduce
-      description: List the steps that led to the bug
-    validations:
-      required: true
-  - type: textarea
-    id: expected
-    attributes:
-      label: Expected Result
-    validations:
-      required: true
-  - type: textarea
-    id: actual
-    attributes:
-      label: Actual Result
-    validations:
-      required: true
-```
+Same structure as `01-task.yml`. Required fields:
+
+- `Brief problem description`
+- `Steps to Reproduce`
+- `Expected Result`
+- `Actual Result`
 
 #### `config.yml`
 
@@ -809,33 +782,23 @@ Provide a curated list of recommended extensions so students can install them al
 ```json
 {
   "recommendations": [
-    // Language support (adjust per lab — examples below)
-    // Python:  "ms-python.python", "ms-python.vscode-pylance", "charliermarsh.ruff"
-    // Node.js: "dbaeumer.vscode-eslint", "esbenp.prettier-vscode"
-    // Go:      "golang.go"
-    // Rust:    "rust-lang.rust-analyzer"
+    // Language support (adjust per lab): Python, Node.js, Go, Rust, etc.
 
     // Git
     "eamodio.gitlens",
 
-    // Remote development (include if lab uses SSH/VMs/containers)
+    // Remote development (if lab uses SSH/VMs/containers)
     "ms-vscode-remote.remote-ssh",
-    "ms-vscode-remote.remote-wsl",
-    "ms-vscode-remote.remote-containers",
 
     // Markdown authoring and preview
     "DavidAnson.vscode-markdownlint",
     "yzhang.markdown-all-in-one",
-    "bierner.markdown-preview-github-styles",
-    "saeris.markdown-github-alerts",
-    "bierner.markdown-checkbox",
 
     // GitHub integration
     "github.vscode-pull-request-github",
 
     // File format support (include what the lab uses)
     "tamasfe.even-better-toml",
-    "redhat.vscode-yaml",
 
     // Useful utilities
     "usernamehw.errorlens",
@@ -866,19 +829,9 @@ Choose a task runner appropriate for the lab's ecosystem:
 Example with `pyproject.toml` + `poethepoet`:
 
 ```toml
-[tool.poe.tasks]
-
 [tool.poe.tasks.dev]
 help = "Run server after static analysis"
-sequence = ["check", "dev-unsafe"]
-
-[tool.poe.tasks.dev-unsafe]
-help = "Run server without static analysis"
-cmd = "python src/app/run.py"
-
-[tool.poe.tasks.check]
-help = "Format, lint, typecheck"
-sequence = ["format", "lint", "typecheck"]
+sequence = ["check", "start"]
 
 [tool.poe.tasks.test]
 help = "Run pytest"
