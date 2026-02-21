@@ -6,10 +6,7 @@
 - [Database server](#database-server)
 - [`PostgreSQL`](#postgresql)
 - [`pgAdmin`](#pgadmin)
-- [SQL basics](#sql-basics)
-  - [`SELECT`](#select)
-  - [`INSERT`](#insert)
-  - [`WHERE`](#where)
+- [`SQL`](#sql)
 - [Database schema](#database-schema)
 - [Resetting the database](#resetting-the-database)
 
@@ -37,37 +34,9 @@ Docs:
 
 See [`pgAdmin`](./pgadmin.md).
 
-## SQL basics
+## `SQL`
 
-### `SELECT`
-
-Retrieve data from a table:
-
-```sql
-SELECT * FROM items;
-```
-
-Retrieve specific columns:
-
-```sql
-SELECT title, description FROM items;
-```
-
-### `INSERT`
-
-Add a new row to a table:
-
-```sql
-INSERT INTO items (title, description) VALUES ('New Item', 'A description.');
-```
-
-### `WHERE`
-
-Filter rows by a condition:
-
-```sql
-SELECT * FROM learners WHERE enrolled_at >= '2025-10-01';
-```
+See [`SQL`](./sql.md).
 
 ## Database schema
 
@@ -81,20 +50,4 @@ You can [inspect columns](./pgadmin.md#inspect-columns) of a table in [`pgAdmin`
 
 ## Resetting the database
 
-The database is initialized from the file [`src/app/data/init.sql`](../../src/app/data/init.sql) on the first start of the container with `PostgreSQL` (see the [service](./docker.md#service) `postgres` in [`docker-compose.yml`](../../docker-compose.yml)).
-
-To reset the database to its initial state:
-
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   docker compose --env-file .env.docker.secret down postgres -v
-   ```
-
-2. This removes the database [volume](./docker.md#volumes). The next `docker compose up` will re-create the database from [`init.sql`](../../src/app/data/init.sql).
-
-3. Start the services again:
-
-   ```terminal
-   docker compose --env-file .env.docker.secret up postgres --build
-   ```
+See [`Resetting the database`](./docker-postgres.md#resetting-the-database).

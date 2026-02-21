@@ -1,6 +1,6 @@
 # Lab authoring conventions (condensed)
 
-Source of truth: `lab/design/create-lab.md`
+Source of truth: `lab/design/conventions.md`
 
 ## Task document structure (§3)
 
@@ -32,7 +32,7 @@ Source of truth: `lab/design/create-lab.md`
 - **Commit messages:** conventional commits (`fix:`, `feat:`, `docs:`) in a `text` code block.
 - **Technical terms in backticks:** `VS Code`, `Git`, `Docker`, `Python`, `SQL`, `WSL`, `SSH`.
 - **Placeholders:** `<angle_brackets>` — never hardcode env-specific values (URLs, ports).
-- **Links:** relative paths; link to appendix on first mention per section.
+- **Links:** relative paths; link to appendix on first mention per section. Compound phrases (e.g., `` `GitHub` pull request ``): one link to the concept's section, not two adjacent links.
 - **Alerts:** never indent GFM alerts; use bold **Note:** as fallback inside lists.
 - **ToC:** `<h2>Table of contents</h2>` (HTML) so heading is excluded from auto-generated ToC.
 - **`<!-- no toc -->`** before lists you don't want in the ToC.

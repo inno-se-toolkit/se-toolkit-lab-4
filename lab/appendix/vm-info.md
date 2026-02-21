@@ -112,7 +112,7 @@ nano --version
 ### `bash`
 
 > [!NOTE]
-> This is the [login shell](./linux.md#login-shell).
+> This is the [login shell](./shell.md#login-shell).
 
 Version:
 

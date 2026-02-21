@@ -41,7 +41,7 @@ Outline:
 
 ## Switch to the `main` branch
 
-[Switch to the `main` branch](../appendix/git-vscode.md#switch-to-the-main-branch) in `VS Code`.
+[Switch to the `main` branch](../appendix/git-vscode.md#switch-to-the-branch-name-branch) in `VS Code`.
 
 ## Detect conflicts
 

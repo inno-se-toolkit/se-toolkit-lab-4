@@ -135,7 +135,7 @@ Complete these steps to create a VM:
 
 ## Connect to the VM
 
-1. [Add host to the `SSH` config](./ssh.md#add-the-host-to-the-ssh-config).
+1. [Add host to the `SSH` config](./ssh.md#add-the-host-to-ssh).
 2. Disable `VPN`.
 3. Connect your computer to the `Wi-Fi` network `UniversityStudent`.
 4. Open [`VS Code`](./vs-code.md).
@@ -175,4 +175,4 @@ If you can't connect:
 6. Ask the TA to help and show them:
    1. The VM page.
    2. The output of `ssh -v se-toolkit-vm`.
-   3. Your [`VS Code Terminal`](./vs-code.md#terminal).
+   3. Your [`VS Code Terminal`](./vs-code.md#vs-code-terminal).

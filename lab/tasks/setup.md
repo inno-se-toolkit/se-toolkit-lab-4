@@ -265,7 +265,7 @@
    >
    > The database is initialized from [`src/app/data/init.sql`](../../src/app/data/init.sql) only on the **first** start of the `PostgreSQL` container.
    >
-   > If you need to re-initialize the database (e.g., after pulling upstream changes to `init.sql`), see [Resetting the database](../appendix/database.md#resetting-the-database).
+   > If you need to re-initialize the database (e.g., after pulling upstream changes to `init.sql`), see [Resetting the database](../appendix/docker-postgres.md#resetting-the-database).
 
 ### 1.12. (NEW) Open a new terminal
 

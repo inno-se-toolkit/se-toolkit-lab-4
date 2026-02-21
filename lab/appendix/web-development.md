@@ -188,14 +188,14 @@ See [`curl`](./useful-programs.md#send-a-get-request-with-curl).
 
 ### Pretty-print the `JSON` response using `jq`
 
-1. [Install `jq`](./linux.md#install-jq) if not installed.
+1. [Install `jq`](./useful-programs.md#jq) if not installed.
 2. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    <command-that-produces-json-response> | jq .
    ```
 
-   [Pipe the output](./linux.md#pipe) to `jq`.
+   [Pipe the output](./bash.md#pipe-the-stdout) to `jq`.
 
 Example:
 
