@@ -679,6 +679,8 @@ Depending on the lab, consider creating appendix files for:
 
 ## 8. GitHub templates
 
+> The templates below are the canonical starting point. The actual files in `.github/` may include lab-specific additions.
+
 ### Issue templates
 
 #### `01-task.yml` — Lab Task
@@ -776,6 +778,8 @@ blank_issues_enabled: false
 
 ## 9. VS Code settings (`.vscode/settings.json`)
 
+> The template below is the canonical starting point. The actual file in `.vscode/` may include lab-specific additions.
+
 ```json
 {
   "git.autofetch": true,
@@ -797,6 +801,8 @@ Add language-specific formatter settings as needed (e.g., Python with Ruff, JS w
 ----
 
 ## 10. VS Code recommended extensions (`.vscode/extensions.json`)
+
+> The template below is the canonical starting point. The actual file in `.vscode/` may include lab-specific additions.
 
 Provide a curated list of recommended extensions so students can install them all at once:
 
