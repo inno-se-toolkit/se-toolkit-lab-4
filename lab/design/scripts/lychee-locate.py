@@ -42,7 +42,7 @@ def _display_url(url: str) -> str:
     return url
 
 
-def find_location(filepath: str, url: str) -> tuple[int, int, str] | None:
+def find_locations(filepath: str, url: str) -> list[tuple[int, int, str]]:
     # lychee normalizes relative file links to absolute file:// URLs.
     # Reconstruct a searchable pattern from just the basename + fragment.
     if url.startswith("file://"):
@@ -52,6 +52,7 @@ def find_location(filepath: str, url: str) -> tuple[int, int, str] | None:
     else:
         pattern = re.compile(re.escape(url.rstrip("/")))
 
+    results: list[tuple[int, int, str]] = []
     try:
         with open(filepath) as f:
             for i, line in enumerate(f, 1):
@@ -64,10 +65,10 @@ def find_location(filepath: str, url: str) -> tuple[int, int, str] | None:
                     if prefix_match:
                         start = prefix_match.start()
                     raw_link = line[start:m.end()].rstrip()
-                    return i, start + 1, raw_link
+                    results.append((i, start + 1, raw_link))
     except (OSError, UnicodeDecodeError):
         pass
-    return None
+    return results
 
 
 raw = sys.stdin.read()
@@ -79,7 +80,7 @@ if not data.error_map:
     print("No broken links found.")
     sys.exit(0)
 
-total = sum(len(v) for v in data.error_map.values())
+total = 0
 
 for filepath, errors in data.error_map.items():
     try:
@@ -87,16 +88,23 @@ for filepath, errors in data.error_map.items():
     except ValueError:
         relpath = Path(filepath)
     for error in errors:
-        loc = find_location(filepath, error.url)
-        location = f"{relpath}:{loc[0]}:{loc[1]}" if loc else str(relpath)
-        if loc and error.url.startswith("file://"):
-            display_link = loc[2]
+        locs = find_locations(filepath, error.url)
+        display_link = _display_url(error.url)
+        if locs:
+            total += len(locs)
+            for loc in locs:
+                location = f"{relpath}:{loc[0]}:{loc[1]}"
+                link = loc[2] if error.url.startswith("file://") else display_link
+                print(
+                    f"{_c('1', location)}: {_c('1;31', '[ERROR]')} {_c('36', link)}"
+                )
+                print(f"  {_c('2', error.status.text)}")
         else:
-            display_link = _display_url(error.url)
-        print(
-            f"{_c('1', location)}: {_c('1;31', '[ERROR]')} {_c('36', display_link)}"
-        )
-        print(f"  {_c('2', error.status.text)}")
+            total += 1
+            print(
+                f"{_c('1', str(relpath))}: {_c('1;31', '[ERROR]')} {_c('36', display_link)}"
+            )
+            print(f"  {_c('2', error.status.text)}")
 
 print(f"\n{_c('1;31', f'Found {total} broken link(s) in {len(data.error_map)} file(s).')}")
 sys.exit(1)
