@@ -140,7 +140,7 @@ Use any of the following methods:
 2. Check that the containers are running:
 
    ```terminal
-   docker compose ps
+   docker compose --env-file .env.docker.secret ps
    ```
 
 3. You should see the containers with the status `Up`.
