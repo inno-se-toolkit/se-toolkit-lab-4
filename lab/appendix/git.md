@@ -90,6 +90,11 @@ Typical sequence:
 
 ## Configuration
 
+Complete the following steps:
+
+- [Check your Git config](#check-your-git-config)
+- [Configure Git](#configure-git)
+
 ### Check your Git config
 
 1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
