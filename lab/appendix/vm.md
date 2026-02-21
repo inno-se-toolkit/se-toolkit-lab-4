@@ -97,7 +97,7 @@ Complete these steps to create a VM:
 7. Click `Linux Ubuntu 24.04 Software Engineering Toolkit`.
 8. Click `->` to go to the page 2.
 9. Fill in the fields:
-    - `NAME`: Write the name of your VM (we'll refer to it as `<your-vm-name>` in the instructions).
+    - `NAME`: Write the name of your VM (we'll refer to it as [`<your-vm-name>`](#your-vm-name) in the instructions).
     - `NEW PASSWORD`: Write the password.
     - `CONFIRM`: Write the same password.
     - `ADMINISTRATOR SSH KEY`:
