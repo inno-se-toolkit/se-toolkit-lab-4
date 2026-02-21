@@ -146,7 +146,7 @@ async def get_learners(
    ```
 
 2. Open `Swagger UI` at `http://127.0.0.1:42001/docs`.
-3. [Authorize](./task-1.md#6-authorize-in-swagger-ui) with the API key.
+3. [Authorize in `Swagger UI`](./task-1.md#143-authorize-in-swagger-ui) using the API key.
 4. Try `GET /learners`.
 5. Observe: you should see a `200` status code with a list of all learners.
 
@@ -200,7 +200,7 @@ async def post_learner(
 #### 4.2. Restart and verify
 
 1. Restart the services ([Step 3.4](#34-restart-and-verify)).
-2. Open `Swagger UI` and [authorize](./task-1.md#6-authorize-in-swagger-ui).
+2. Open `Swagger UI` and [authorize](./task-1.md#143-authorize-in-swagger-ui).
 3. Try `POST /learners` with a request body:
 
    ```json

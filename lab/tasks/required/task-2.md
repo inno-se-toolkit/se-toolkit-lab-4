@@ -111,7 +111,7 @@ Title: `[Task] Enable and debug the interactions endpoint`
 ### 1.7. Try `GET /interactions`
 
 1. Open in a browser: <http://127.0.0.1:42001/docs>.
-2. [Authorize](./task-1.md#6-authorize-in-swagger-ui) with the API key.
+2. [Authorize](./task-1.md#143-authorize-in-swagger-ui) with the API key.
 3. Expand the `GET /interactions` endpoint.
 4. Click `Try it out`.
 5. Click `Execute`.
@@ -175,7 +175,7 @@ The field name in the response schema (`InteractionModel`) must match the field 
 ### 1.11. Verify `GET /interactions` works
 
 1. [Restart the services](#16-restart-the-services).
-2. Open `Swagger UI` and [authorize](./task-1.md#6-authorize-in-swagger-ui).
+2. Open `Swagger UI` and [authorize](./task-1.md#143-authorize-in-swagger-ui).
 3. Try `GET /interactions`.
 4. Observe: you should see a `200` status code with interaction data.
 
