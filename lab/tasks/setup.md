@@ -235,7 +235,9 @@ Complete these steps if you can't [connect to your VM](../appendix/vm.md#connect
 
 #### 1.11.1. (NEW) Set up the `Docker` environment
 
-1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. Copy the [`.env.docker.example`](../../.env.docker.example) file to the `.env.docker.secret` file:
+
+   [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    cp .env.docker.example .env.docker.secret
