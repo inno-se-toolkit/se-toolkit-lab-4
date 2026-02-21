@@ -123,6 +123,37 @@ Docs:
 
 The value that you use to authenticate in the API.
 
+## Authentication
+
+Authentication is the process of verifying the identity of a client making a request to an [API](#api).
+
+In `HTTP` APIs, a common mechanism is an **API key** — a secret value the client sends with each request. The server checks the key and rejects unknown keys with `401 Unauthorized`.
+
+The API key is sent in the `Authorization` header:
+
+```http
+Authorization: Bearer <api-token>
+```
+
+See [`<api-token>`](#api-token) for the value used in this lab.
+
+Docs:
+
+- [HTTP authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication)
+
+## Authorization
+
+Authorization is the process of determining whether an authenticated client has permission to access a specific [endpoint](#endpoint) or resource.
+
+A client can be authenticated (identity verified) but still lack permission for certain resources.
+
+Common `HTTP` status codes related to auth:
+
+| Code  | Name            | Meaning                                                                  |
+| ----- | --------------- | ------------------------------------------------------------------------ |
+| `401` | `Unauthorized`  | The client is not authenticated (missing or invalid API key).            |
+| `403` | `Forbidden`     | The client is authenticated but not allowed to access this resource.     |
+
 ## `Swagger UI`
 
 `Swagger UI` is an interactive web page that lets you explore and test a REST API.
