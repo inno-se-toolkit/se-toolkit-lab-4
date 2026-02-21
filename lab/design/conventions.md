@@ -236,37 +236,45 @@ Every task file (`task-N.md`) must follow this structure:
 
 <h4>Table of contents</h4>
 
-- [Steps](#steps)
-  - [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
-  - [1. Create an issue](#1-create-an-issue)
-  - [2. <Step title>](#2-step-title)
+- [1. Steps](#1-steps)
+  - [1.1. Follow the `Git workflow`](#11-follow-the-git-workflow)
+  - [1.2. Create an issue](#12-create-an-issue)
+  - [1.3. <Step title>](#13-step-title)
+    - [1.3.1. <Sub-step title>](#131-sub-step-title)
+    - [1.3.2. <Sub-step title>](#132-sub-step-title)
   - ...
-- [Acceptance criteria](#acceptance-criteria)
+- [2. Acceptance criteria](#2-acceptance-criteria)
 
-## Steps
+## 1. Steps
 
-### 0. Follow the `Git workflow`
+### 1.1. Follow the `Git workflow`
 
 Follow the [`Git workflow`](../git-workflow.md) to complete this task.
 
-### 1. Create a `Lab Task` issue
+### 1.2. Create a `Lab Task` issue
 
 Title: `[Task] <Task title>`
 
-### 2. <Step title>
+### 1.3. <Step title>
+
+#### 1.3.1. <Sub-step title>
+
+<Step-by-step instructions>
+
+#### 1.3.2. <Sub-step title>
 
 <Step-by-step instructions>
 
 ### ...
 
-### N. Finish the task
+### 1.N. Finish the task
 
 1. [Create a PR](../git-workflow.md#create-a-pr) with your changes.
 2. [Get a PR review](../git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
 
 ----
 
-## Acceptance criteria
+## 2. Acceptance criteria
 
 - [ ] <Criterion 1>
 - [ ] <Criterion 2>
@@ -276,8 +284,10 @@ Title: `[Task] <Task title>`
 ### Key rules for task documents
 
 - **Time, Purpose, Context, Table of contents** use `<h4>` HTML tags so they don't appear in the document's auto-generated ToC.
-- **Step 0** ("Follow the Git workflow") is present in tasks that require a branch + PR. Omit for tasks that don't produce commits (e.g., "Run the web server").
-- **Step 1** is always "Create an issue" (either a `Lab Task` or specific issue type).
+- **Top-level sections are numbered:** `## 1. Steps` and `## 2. Acceptance criteria`. Steps are numbered as `### 1.1.`, `### 1.2.`, etc. This matches the pattern used in `setup.md` and makes anchor links unambiguous.
+- When a `###` step covers multiple distinct sub-goals, split it into `####` sub-sections with a deeper number (`#### 1.3.1.`, `#### 1.3.2.`, etc.) and a descriptive title for each. Reflect the hierarchy in the ToC with indented entries. Use a flat numbered list only when all actions serve a single, unified goal within the same sub-section.
+- **Step 1.1** ("Follow the Git workflow") is present in tasks that require a branch + PR. Omit for tasks that don't produce commits (e.g., "Run the web server").
+- **Step 1.2** is always "Create an issue" (either a `Lab Task` or specific issue type). When step 1.1 is omitted, "Create an issue" becomes step 1.1.
 - The **last step** is either "Finish the task" (create PR, get review) or "Write a comment for the issue" (close with evidence).
 - **Acceptance criteria** use `- [ ]` checkboxes. Reviewers check them during PR review.
 - Acceptance criteria are concrete and verifiable: issue titles, passing tests, merged PRs, specific comments.
