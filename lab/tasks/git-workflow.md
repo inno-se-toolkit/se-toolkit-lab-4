@@ -72,24 +72,7 @@ Complete the following steps:
 
 ### Resolve conflicts using `GitLens`
 
-If you see an error like the one below, resolve the conflicts:
-
-<img alt="Pull Error" src="../images/appendix/gitlens/pull-error.png" style="width:400px"></img>
-
-For each conflicting file, complete the following steps:
-
-1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
-2. Go to `Merge Changes`.
-3. Click a conflicting file.
-4. Click `Resolve in Merge Editor`.
-5. Accept the changes that you want to keep.
-6. Click `Complete Merge`.
-7. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
-8. Click `Continue`.
-
-> **Note:** If there are more conflicts, `VS Code` shows `Rebasing (1/3)` (or similar). Repeat the steps above for each remaining conflict.
-
-<!-- TODO what does VS Code show actually -->
+[Resolve a merge conflict using `GitLens`](../appendix/git-vscode.md#resolve-a-merge-conflict-using-gitlens).
 
 ## Switch to a new branch
 

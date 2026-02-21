@@ -15,6 +15,9 @@
       systems = import inputs.systems;
       perSystem =
         { pkgs, ... }:
+        let
+          python = pkgs.python3.withPackages (ps: [ ps.pydantic ]);
+        in
         {
           devshells.default = {
             commandGroups = {
@@ -30,9 +33,11 @@
                       --exclude-path '.direnv' \
                       --root-dir . \
                       --cache \
-                      '**/*.md'
+                      --format json \
+                      '**/*.md' \
+                      | ${pkgs.lib.getExe python} lab/design/scripts/lychee-locate.py
                   '';
-                  help = "Find all broken links in all Markdown files";
+                  help = "Find all broken links in all Markdown files (with file:line locations)";
                 }
                 {
                   name = "lint-docs";

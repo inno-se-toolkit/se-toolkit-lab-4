@@ -14,10 +14,6 @@
 - [REST API](#rest-api)
 - [API](#api)
   - [`<api-token>`](#api-token)
-- [`Swagger UI`](#swagger-ui)
-  - [Open `Swagger UI`](#open-swagger-ui)
-  - [Authorize in `Swagger UI`](#authorize-in-swagger-ui)
-  - [Try an endpoint in `Swagger UI`](#try-an-endpoint-in-swagger-ui)
 - [Endpoint](#endpoint)
 - [Send a `GET` request](#send-a-get-request)
   - [Send a `GET` request using a browser](#send-a-get-request-using-a-browser)
@@ -122,43 +118,6 @@ Docs:
 ### `<api-token>`
 
 The value that you use to authenticate in the API.
-
-## `Swagger UI`
-
-`Swagger UI` is an interactive web page that lets you explore and test a REST API.
-
-`FastAPI` auto-generates `Swagger UI` at the `/docs` path.
-
-Actions:
-
-- [Open `Swagger UI`](#open-swagger-ui)
-- [Authorize in `Swagger UI`](#authorize-in-swagger-ui)
-- [Try an endpoint in `Swagger UI`](#try-an-endpoint-in-swagger-ui)
-
-### Open `Swagger UI`
-
-1. Open <http://127.0.0.1:42001/docs> in a browser.
-
-### Authorize in `Swagger UI`
-
-If the API requires authentication:
-
-1. [Open `Swagger UI`](#open-swagger-ui).
-2. Click the `Authorize` button (lock icon at the top right).
-3. In the `Value` field, enter the [`<api-token>`](#api-token).
-4. Click `Authorize`.
-5. Click `Close`.
-
-All subsequent requests will include the API key in the `Authorization` header.
-
-### Try an endpoint in `Swagger UI`
-
-1. [Open `Swagger UI`](#open-swagger-ui).
-2. Click on an endpoint (e.g., `GET /items`).
-3. Click `Try it out`.
-4. Fill in parameters if needed.
-5. Click `Execute`.
-6. See the response below: status code, response body, headers.
 
 ## Endpoint
 

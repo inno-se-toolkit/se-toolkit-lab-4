@@ -15,38 +15,43 @@ You will explore the API using `Swagger UI`, discover the API key mechanism, and
 
 <h4>Table of contents</h4>
 
-- [Steps](#steps)
-  - [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
-  - [1. Create a `Lab Task` issue](#1-create-a-lab-task-issue)
-  - [2. Start the services](#2-start-the-services)
-  - [3. Open `Swagger UI`](#3-open-swagger-ui)
-  - [4. Try `GET /items` without authentication](#4-try-get-items-without-authentication)
-  - [5. Find the `API_TOKEN` value](#5-find-the-api_token-value)
-  - [6. Authorize in `Swagger UI`](#6-authorize-in-swagger-ui)
-  - [7. Try `GET /items` with authorization](#7-try-get-items-with-authorization)
-  - [8. Try `GET /items/{item_id}`](#8-try-get-itemsitem_id)
-  - [9. Try `POST /items`](#9-try-post-items)
-  - [10. Try `PUT /items/{item_id}`](#10-try-put-itemsitem_id)
-  - [11. Change the `API_TOKEN`](#11-change-the-api_token)
-  - [12. Fill in the questionnaire](#12-fill-in-the-questionnaire)
-  - [13. Commit the questionnaire](#13-commit-the-questionnaire)
-  - [14. Finish the task](#14-finish-the-task)
-- [Acceptance criteria](#acceptance-criteria)
+- [1. Steps](#1-steps)
+  - [1.1. Follow the `Git workflow`](#11-follow-the-git-workflow)
+  - [1.2. Create a `Lab Task` issue](#12-create-a-lab-task-issue)
+  - [1.3. Set up](#13-set-up)
+    - [1.3.1. Start the services](#131-start-the-services)
+    - [1.3.2. Open `Swagger UI`](#132-open-swagger-ui)
+  - [1.4. Discover authentication](#14-discover-authentication)
+    - [1.4.1. Try `GET /items` without authentication](#141-try-get-items-without-authentication)
+    - [1.4.2. Find the `API_TOKEN` value](#142-find-the-api_token-value)
+    - [1.4.3. Authorize in `Swagger UI`](#143-authorize-in-swagger-ui)
+    - [1.4.4. Try `GET /items` with authorization](#144-try-get-items-with-authorization)
+  - [1.5. Try the endpoints](#15-try-the-endpoints)
+    - [1.5.1. Try `GET /items/{item_id}`](#151-try-get-itemsitem_id)
+    - [1.5.2. Try `POST /items`](#152-try-post-items)
+    - [1.5.3. Try `PUT /items/{item_id}`](#153-try-put-itemsitem_id)
+  - [1.6. Experiment with the token](#16-experiment-with-the-token)
+  - [1.7. Fill in the questionnaire](#17-fill-in-the-questionnaire)
+  - [1.8. Commit the questionnaire](#18-commit-the-questionnaire)
+  - [1.9. Finish the task](#19-finish-the-task)
+- [2. Acceptance criteria](#2-acceptance-criteria)
 
-## Steps
+## 1. Steps
 
-### 0. Follow the `Git workflow`
+### 1.1. Follow the `Git workflow`
 
 Follow the [`Git workflow`](../git-workflow.md) to complete this task.
 
-### 1. Create a `Lab Task` issue
+### 1.2. Create a `Lab Task` issue
 
 Title: `[Task] Explore the API`
 
-### 2. Start the services
+### 1.3. Set up
+
+#### 1.3.1. Start the services
 
 1. [Stop the services](../setup.md#115-new-stop-the-services).
-2. [Open a new `VS Code Terminal`](../setup.md#112-new-open-a-new-terminal).
+2. [Open a new `VS Code Terminal`](../../appendix/vs-code.md#open-a-new-vs-code-terminal).
 3. Start the `postgres` service:
 
    [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
@@ -55,7 +60,7 @@ Title: `[Task] Explore the API`
    docker compose --env-file .env.docker.secret up postgres --build
    ```
 
-4. [Open a new `VS Code Terminal`](../setup.md#112-new-open-a-new-terminal).
+4. [Open a new `VS Code Terminal`](../../appendix/vs-code.md#open-a-new-vs-code-terminal).
 5. Start the `app` service:
 
    [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
@@ -64,24 +69,24 @@ Title: `[Task] Explore the API`
    docker compose --env-file .env.docker.secret up app --build
    ```
 
-6. [Open a new `VS Code Terminal`](../setup.md#112-new-open-a-new-terminal).
+6. [Open a new `VS Code Terminal`](../../appendix/vs-code.md#open-a-new-vs-code-terminal).
 
-### 3. Open `Swagger UI`
+#### 1.3.2. Open `Swagger UI`
 
 1. Open in a browser: <http://127.0.0.1:42001/docs>.
 2. You should see the auto-generated API documentation with the available [endpoints](../../appendix/web-development.md#endpoint).
 
    <img alt="Swagger UI" src="../../images/tasks/required/task-1/swagger-ui.png" style="width:400px">
 
-### 4. Try `GET /items` without authentication
+### 1.4. Discover authentication
+
+#### 1.4.1. Try `GET /items` without authentication
 
 1. In the `Swagger UI`, expand (click) the `GET /items` endpoint.
 
    <img alt="Swagger UI" src="../../images/tasks/required/task-1/swagger-ui-items.png" style="width:400px">
 
-   > **Note:**
-   >
-   > The `Responses` section contains the description of possible responses of the endpoint.
+   **Note:** The `Responses` section contains the description of possible responses of the endpoint.
 2. Click `Try it out`.
 3. Click `Execute`.
 4. Observe the `Server response`:
@@ -90,11 +95,11 @@ Title: `[Task] Explore the API`
    - The `Details` should be `Error: Unauthorized`.
 
 > [!NOTE]
-> The `401` response means the server rejected your request because you haven't [authorized](../../appendix/web-development.md#authorize-in-swagger-ui) using an API key.
+> The `401` response means the server rejected your request because you haven't [authenticated](../../appendix/swagger.md#authorize-in-swagger-ui) using an API key.
 >
 > The service uses the `Authorization: Bearer <token>` [header](../../appendix/http.md) for authentication.
 
-### 5. Find the `API_TOKEN` value
+#### 1.4.2. Find the `API_TOKEN` value
 
 1. [Open the file](../../appendix/vs-code.md#open-the-file):
    `.env.docker.secret`.
@@ -104,14 +109,14 @@ Title: `[Task] Explore the API`
 
    The default value is `my-secret-api-key`.
 
-### 6. Authorize in `Swagger UI`
+#### 1.4.3. Authorize in `Swagger UI`
 
 1. In `Swagger UI`, click the `Authorize` button (the lock icon at the top).
-2. In the `Value` field, enter the [`<api-token>`](../../appendix/web-development.md#api-token) that you [found](#5-find-the-api_token-value).
+2. In the `Value` field, enter the [`<api-token>`](../../appendix/web-development.md#api-token) that you [found](#142-find-the-api_token-value).
 3. Click `Authorize`.
 4. Click `Close`.
 
-### 7. Try `GET /items` with authorization
+#### 1.4.4. Try `GET /items` with authorization
 
 1. In `Swagger UI`, expand the `GET /items` endpoint.
 2. Click `Try it out`.
@@ -120,7 +125,9 @@ Title: `[Task] Explore the API`
    - The [`200`](../../appendix/http.md#200-ok) status code;
    - The `Response body` with a list of items.
 
-### 8. Try `GET /items/{item_id}`
+### 1.5. Try the endpoints
+
+#### 1.5.1. Try `GET /items/{item_id}`
 
 1. In `Swagger UI`, expand the `GET /items/{item_id}` endpoint.
 2. Click `Try it out`.
@@ -136,7 +143,7 @@ Title: `[Task] Explore the API`
 8. Observe the `Server response`:
    - you should see the [`404` (Not Found)](../../appendix/http.md#404-not-found) error.
 
-### 9. Try `POST /items`
+#### 1.5.2. Try `POST /items`
 
 1. In `Swagger UI`, expand the `POST /items` endpoint.
 2. Click `Try it out` to make a request with the default body.
@@ -153,14 +160,14 @@ Title: `[Task] Explore the API`
    }
    ```
 
-   **NOTE:** `"parent_id": 5` means that the parent item of this step is the task with the `"id"` equal to `5` (created in the [`init.sql`](../../../src/app/data/init.sql)).
+   **Note:** `"parent_id": 5` means that the parent item of this step is the task with the `"id"` equal to `5` (created in the [`init.sql`](../../../src/app/data/init.sql)).
 
 5. Click `Execute`.
 6. Observe the `Server response`:
    - The [`201` (Created)](../../appendix/http.md#201-created) response status code;
    - The `Response body` with the newly created item data in `JSON` format.
 
-### 10. Try `PUT /items/{item_id}`
+#### 1.5.3. Try `PUT /items/{item_id}`
 
 1. In `Swagger UI`, expand the `PUT /items/{item_id}` endpoint.
 2. Click `Try it out`.
@@ -179,7 +186,7 @@ Title: `[Task] Explore the API`
    - The [`200`](../../appendix/http.md#200-ok) status code.
    - The `Response body` with the updated item data.
 
-### 11. Change the `API_TOKEN`
+### 1.6. Experiment with the token
 
 1. [Open the file](../../appendix/vs-code.md#open-the-file):
    `.env.docker.secret`.
@@ -204,21 +211,20 @@ Title: `[Task] Explore the API`
 6. Try `GET /items`.
 7. Observe: the old key no longer works (you get a `401` Unauthorized error).
 
-   > **Note:** This is `401`, not `403`. In step 4 you sent no `Authorization` header at all, so the server returned `403`.
-   > Here, `Swagger UI` is still sending the old key as `Authorization: Bearer <old-key>` — the header is present, but the token is wrong, so the server returns `401` instead.
+   **Note:** This is `401`, not `403`. In step [1.4.1](#141-try-get-items-without-authentication) you sent no `Authorization` header at all, so the server returned `401`. Here, `Swagger UI` is still sending the old key as `Authorization: Bearer <old-key>` — the header is present, but the token is wrong, so the server returns `401` instead.
 
 8. Click `Authorize` again.
 9. Enter the new key (`my-new-secret-key`).
 10. Try `GET /items`.
 11. Observe: the new key works (you get a `200` response).
 
-### 12. Fill in the questionnaire
+### 1.7. Fill in the questionnaire
 
 1. [Open the file](../../appendix/vs-code.md#open-the-file):
    [`lab/tasks/required/questionnaire.md`](./questionnaire.md).
 2. Fill in each answer based on what you observed.
 
-### 13. Commit the questionnaire
+### 1.8. Commit the questionnaire
 
 1. [Commit](../git-workflow.md#commit) your changes.
 
@@ -228,14 +234,14 @@ Title: `[Task] Explore the API`
    docs: fill in the API exploration questionnaire
    ```
 
-### 14. Finish the task
+### 1.9. Finish the task
 
 1. [Create a PR](../git-workflow.md#create-a-pr-to-main-in-your-fork) with your questionnaire.
 2. [Get a PR review](../git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
 
 ---
 
-## Acceptance criteria
+## 2. Acceptance criteria
 
 - [ ] Issue has the correct title.
 - [ ] The questionnaire file is filled in with correct answers.
