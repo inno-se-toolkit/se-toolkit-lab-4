@@ -28,6 +28,7 @@ Co-Authored-By: <your current model name> <noreply@anthropic.com>
 - Add a body when the subject alone doesn't fully explain the change — e.g. non-obvious decisions, side effects, or grouped changes. Separate from the subject with a blank line. Write in imperative mood; use a bullet list when the body covers multiple points
 - Always include the `Co-Authored-By` trailer with your current model name (e.g. `Claude Opus 4.6`, `Claude Sonnet 4.6`)
 - If the user specifies files via $ARGUMENTS, stage only those files
+- If a file lives inside a **git submodule**, `cd` into that submodule's directory before running `git add` / `git commit`. Detect by running `git rev-parse --show-toplevel` from the file's directory — if it differs from the parent repo root, the file is in a submodule
 - If changes are unrelated, make **separate commits** — one per logical group. Never bundle unrelated changes into a single commit
 
 ## Examples from this project
