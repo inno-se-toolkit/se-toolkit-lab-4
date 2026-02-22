@@ -3,6 +3,9 @@
 <h2>Table of contents</h2>
 
 - [What is `Git`](#what-is-git)
+- [Commit](#commit)
+  - [Commit message](#commit-message)
+    - [`Conventional Commits`](#conventional-commits)
 - [How `Git` works - text](#how-git-works---text)
 - [How `Git` works - videos](#how-git-works---videos)
 - [Merge conflict](#merge-conflict)
@@ -12,9 +15,23 @@
 - [Configuration](#configuration)
   - [Check your Git config](#check-your-git-config)
   - [Configure Git](#configure-git)
-- [`Conventional Commits`](#conventional-commits)
 
 ## What is `Git`
+
+## Commit
+
+### Commit message
+
+#### `Conventional Commits`
+
+- Learn about [`Conventional Commits`](https://www.conventionalcommits.org/en/v1.0.0/) for commit message formatting.
+
+Common prefixes:
+
+- `feat:` for new functionality.
+- `fix:` for bug fixes.
+- `docs:` for documentation changes.
+- `refactor:` for code changes without behavior changes.
 
 ## How `Git` works - text
 
@@ -146,14 +163,3 @@ Complete the following steps:
      ```
 
      Example: `git config --global user.email 'inno-se-toolkit@gmail.com'`
-
-## `Conventional Commits`
-
-- Learn about [`Conventional Commits`](https://www.conventionalcommits.org/en/v1.0.0/) for commit message formatting.
-
-Common prefixes:
-
-- `feat:` for new functionality.
-- `fix:` for bug fixes.
-- `docs:` for documentation changes.
-- `refactor:` for code changes without behavior changes.
