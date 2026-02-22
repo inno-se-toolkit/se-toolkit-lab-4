@@ -326,13 +326,12 @@ Use any of the following methods:
 2. Go to `Changes`.
 3. Hover over a file name.
 4. Click `+` to stage the file.
-5. Write a commit message, e.g., `docs: add architecture diagram`.
-6. Click `Commit`.
+5. [Commit staged changes](#commit-staged-changes)
 
 #### Commit staged changes
 
 1. [Open the `Source Control`](./vs-code.md#open-the-source-control).
-2. Write a commit message.
+2. Write a [commit message](./git.md#commit-message).
 3. Click `Commit`.
 
 ## Undo commits
