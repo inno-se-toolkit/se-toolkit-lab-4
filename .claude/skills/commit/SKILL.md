@@ -29,7 +29,7 @@ Co-Authored-By: <your current model name> <noreply@anthropic.com>
 - Always include the `Co-Authored-By` trailer with your current model name (e.g. `Claude Opus 4.6`, `Claude Sonnet 4.6`)
 - If the user specifies files via $ARGUMENTS, stage only those files. If `$ARGUMENTS` is literally `staged`, skip staging and commit whatever is already in the index
 - If a file lives inside a **git submodule**, `cd` into that submodule's directory before running `git add` / `git commit`. Detect by running `git rev-parse --show-toplevel` from the file's directory — if it differs from the parent repo root, the file is in a submodule
-- If changes are unrelated, make **separate commits** — one per logical group. Never bundle unrelated changes into a single commit
+- Make exactly **one commit** per invocation. If the user passes specific files, commit only those. If changes span unrelated areas, the user will invoke the skill multiple times
 
 ## Examples from this project
 
