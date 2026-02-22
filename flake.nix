@@ -20,6 +20,9 @@
         in
         {
           devshells.default = {
+            bash.extra = ''
+              export ROOT_DIR="$(pwd)"
+            '';
             commandGroups = {
               lint = [
                 {
@@ -34,8 +37,8 @@
                       --root-dir . \
                       --cache \
                       --format json \
-                      '**/*.md' \
-                      | ${pkgs.lib.getExe python} lab/design/scripts/lychee-locate.py
+                      "$ROOT_DIR"/'**/*.md' \
+                      | ${pkgs.lib.getExe python} ${./lab/design/scripts/lychee-locate.py}
                   '';
                   help = "Find all broken links in all Markdown files (with file:line locations)";
                 }
