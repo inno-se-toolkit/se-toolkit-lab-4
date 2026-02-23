@@ -232,7 +232,7 @@ Create a PR to the `<repo-name>/<branch-name>`:
 
 1. Write the PR title.
 2. Write the PR description.
-3. [Link the PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) to the issue, e.g. `Closes #<issue number>`.
+3. [Link the PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) to the issue, e.g. `Closes #<issue-number>`.
 4. Check the boxes under the PR description.
 5. Click `Create pull request`.
 
