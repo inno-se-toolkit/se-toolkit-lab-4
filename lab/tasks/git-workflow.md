@@ -25,7 +25,7 @@ Outline:
 - [(Optional) Undo commits](#optional-undo-commits)
 - [Publish the branch](#publish-the-branch)
 - [Push more commits](#push-more-commits)
-- [Create a PR to `main` in your fork](#create-a-pr-to-main-in-your-fork)
+- [Create a PR to the `main` branch in your fork](#create-a-pr-to-the-main-branch-in-your-fork)
 - [Get a PR review](#get-a-pr-review)
   - [PR review rules](#pr-review-rules)
     - [As a PR reviewer](#as-a-pr-reviewer)
@@ -86,7 +86,7 @@ The name of this branch is referred to as `<branch-name>` throughout the docs.
 
 [Push more commits](../appendix/git-vscode.md#push-more-commits) to the published branch if necessary.
 
-## Create a PR to `main` in your fork
+## Create a PR to the `main` branch in your fork
 
 [Create a PR](../appendix/github.md#create-a-pull-request) replacing:
 
