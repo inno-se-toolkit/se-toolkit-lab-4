@@ -1,5 +1,24 @@
 # Writing conventions — applies to both tasks and wiki
 
+- [4.1 Instructions wording](#41-instructions-wording)
+- [4.2 Terminal commands](#42-terminal-commands)
+- [4.3 Command Palette commands](#43-command-palette-commands)
+- [4.4 Options vs steps](#44-options-vs-steps)
+- [4.5 Ordered lists](#45-ordered-lists)
+- [4.6 Little ToC](#46-little-toc)
+- [4.7 Table of contents](#47-table-of-contents)
+- [4.8 Links and cross-references](#48-links-and-cross-references)
+- [4.9 Notes, tips, warnings](#49-notes-tips-warnings)
+- [4.10 Images](#410-images)
+- [4.11 Collapsible hints/solutions](#411-collapsible-hintssolutions)
+- [4.13 Diagrams](#413-diagrams)
+- [4.14 `<!-- TODO -->` comments](#414----todo----comments)
+- [4.15 `<!-- no toc -->` comments](#415----no-toc----comments)
+- [4.16 Code snippets in explanations](#416-code-snippets-in-explanations)
+- [4.17 Heading levels in section titles](#417-heading-levels-in-section-titles)
+- [4.18 Inline formatting of technical terms](#418-inline-formatting-of-technical-terms)
+- [4.20 Placeholders in docs](#420-placeholders-in-docs)
+
 Full source: `instructors/context/lab-conventions/lab-conventions.md` §4
 
 ## 4.1 Instructions wording

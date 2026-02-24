@@ -1,5 +1,12 @@
 # Task conventions — applies to `lab/tasks/` only
 
+- [3. Task document template](#3-task-document-template)
+- [4.12 Commit message format (tasks only)](#412-commit-message-format-tasks-only)
+- [4.19 Steps with sub-steps (tasks)](#419-steps-with-sub-steps-tasks)
+- [12. Task design principles](#12-task-design-principles)
+- [15. Testing pattern](#15-testing-pattern)
+- [Pre-publish checklist](#pre-publish-checklist)
+
 Full source: `instructors/context/lab-conventions/lab-conventions.md` §3, §12, §15
 
 Also read: `instructors/context/lab-conventions/conventions-common.md`

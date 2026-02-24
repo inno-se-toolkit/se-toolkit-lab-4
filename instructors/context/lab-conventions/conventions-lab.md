@@ -1,5 +1,23 @@
 # Lab creation conventions
 
+- [1. Repository structure](#1-repository-structure)
+- [2. `README.md`](#2-readmemd)
+- [5. `lab/setup.md`](#5-labsetupmd)
+- [6. `lab/tasks/git-workflow.md`](#6-labtasksgit-workflowmd)
+- [8. GitHub templates](#8-github-templates)
+  - [`01-task.yml` — Lab Task](#01-taskyml--lab-task)
+  - [`02-bug-report.yml` — Bug Report](#02-bug-reportyml--bug-report)
+  - [`config.yml`](#configyml)
+  - [`pull_request_template.md`](#pull_request_templatemd)
+- [9. `.vscode/settings.json`](#9-vscodesettingsjson)
+- [10. `.vscode/extensions.json`](#10-vscodeextensionsjson)
+- [11. Task runner config](#11-task-runner-config)
+- [13. Lab story and narrative](#13-lab-story-and-narrative)
+- [14. Docker and deployment pattern](#14-docker-and-deployment-pattern)
+- [16. `CONTRIBUTORS.md`](#16-contributorsmd)
+- [17. Checklist before publishing](#17-checklist-before-publishing)
+- [18. Security integration pattern](#18-security-integration-pattern)
+
 Full source: `instructors/context/lab-conventions/lab-conventions.md` §1, §2, §5, §6, §8–11, §13–14, §16–18
 
 Use this file when creating or restructuring a lab repository.
