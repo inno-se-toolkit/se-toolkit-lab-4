@@ -31,7 +31,7 @@ You will create a `GitHub Actions` workflow that runs tests and static checks (`
 
 ### 0. Follow the `Git workflow`
 
-Follow the [`Git workflow`](../git-workflow.md) to complete this task.
+Follow the [`Git workflow`](../../../wiki/git-workflow.md) to complete this task.
 
 ### 1. Create a `Lab Task` issue
 
@@ -58,7 +58,7 @@ Title: `[Task] Set up CI with GitHub Actions`
    3. Installs dependencies using `uv sync`.
    4. Runs the linter (`uv run poe lint`).
    5. Runs the type checker (`uv run poe typecheck`).
-   6. Starts the server in one [process](../../appendix/linux.md#process) (`uv run poe dev`).
+   6. Starts the server in one [process](../../../wiki/linux.md#process) (`uv run poe dev`).
    7. Runs the tests in another process (`uv run poe test`).
 
 > [!TIP]
@@ -76,7 +76,7 @@ Title: `[Task] Set up CI with GitHub Actions`
 
 ### 6. Add branch protection
 
-1. [Go to your fork](../../appendix/github.md#go-to-your-fork).
+1. [Go to your fork](../../../wiki/github.md#go-to-your-fork).
 2. Go to `Settings` -> `Rules` -> `Rulesets`.
 3. Edit the existing `push` ruleset.
 4. Add the rule:
@@ -85,7 +85,7 @@ Title: `[Task] Set up CI with GitHub Actions`
 
 ### 7. Finish the task
 
-1. [Get a PR review](../git-workflow.md#get-a-pr-review) on the PR you created in [Step 5](#5-push-and-verify) and complete the subsequent steps in the `Git workflow`.
+1. [Get a PR review](../../../wiki/git-workflow.md#get-a-pr-review) on the PR you created in [Step 5](#5-push-and-verify) and complete the subsequent steps in the `Git workflow`.
 
 ---
 

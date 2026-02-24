@@ -79,7 +79,7 @@ Docs:
 
 Schema that we use in docs:
 
-![Basic Layout Schema](../images/vs-code-ui.drawio.svg)
+![Basic Layout Schema](./images/vs-code/vs-code-ui.drawio.svg)
 
 ## `Custom Layout`
 
@@ -143,9 +143,9 @@ Statuses and menus of extensions at the bottom of the `VS Code` window.
 
 - [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 
-<img alt="Status Bar (left)" src="../images/appendix/vs-code/status-bar-left.png" style="width:400px"></img>
+<img alt="Status Bar (left)" src="./images/vs-code/status-bar-left.png" style="width:400px"></img>
 
-<img alt="Status Bar (right)" src="../images/appendix/vs-code/status-bar-right.png" style="width:400px"></img>
+<img alt="Status Bar (right)" src="./images/vs-code/status-bar-right.png" style="width:400px"></img>
 
 ## `Editor Toolbar`
 
@@ -153,7 +153,7 @@ Quick actions buttons located above the [`Editor`](#editor).
 
 - [docs](https://code.visualstudio.com/api/ux-guidelines/overview#editor-toolbar)
 
-<img alt="Editor Toolbar" src="../images/appendix/vs-code/editor-toolbar.png" style="width:400px"></img>
+<img alt="Editor Toolbar" src="./images/vs-code/editor-toolbar.png" style="width:400px"></img>
 
 ## `Command Palette`
 
@@ -205,11 +205,11 @@ Location: see [`Basic Layout`](#basic-layout).
 
 Left side with tabs:
 
-<img alt="Panel Toolbar Left" src="../images/appendix/vs-code/panel-toolbar-left.png" style="width:400px"></img>
+<img alt="Panel Toolbar Left" src="./images/vs-code/panel-toolbar-left.png" style="width:400px"></img>
 
 Right side (depends on the current tab; this one is for the `VS Code Terminal`):
 
-<img alt="Panel Toolbar Right" src="../images/appendix/vs-code/panel-toolbar-left.png" style="width:400px"></img>
+<img alt="Panel Toolbar Right" src="./images/vs-code/panel-toolbar-left.png" style="width:400px"></img>
 
 ## `VS Code Terminal`
 
@@ -250,7 +250,7 @@ Method 2:
 1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
 2. Click the `+` icon.
 
-   <img alt="New Terminal" src="../images/appendix/vs-code/terminal-new-plus.png" style="width:400px"></img>
+   <img alt="New Terminal" src="./images/vs-code/terminal-new-plus.png" style="width:400px"></img>
 
 ### Switch to another `VS Code Terminal`
 
@@ -261,7 +261,7 @@ Method 1:
 1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
 2. Click a terminal tab in the terminal panel.
 
-    <img alt="Switch Terminal" src="../images/appendix/vs-code/terminal-panel-switch.png" style="width:400px"></img>
+    <img alt="Switch Terminal" src="./images/vs-code/terminal-panel-switch.png" style="width:400px"></img>
 
 Method 2:
 
@@ -282,7 +282,7 @@ Method 2:
 1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal)
 2. Look at the [`Panel Toolbar`](#panel-toolbar).
 
-   <img alt="Current Terminal Shell" src="../images/appendix/vs-code/terminal-single-current-shell-bash.png" style="width:400px"></img>
+   <img alt="Current Terminal Shell" src="./images/vs-code/terminal-single-current-shell-bash.png" style="width:400px"></img>
 
    You should see on:
    - `Windows`: `bash`;
@@ -319,18 +319,18 @@ Method 2:
 
    - Case 1 (bad): You don't have the recommended extensions installed.
 
-     <img alt="Terminal Default Profile Bad Options" src="../images/appendix/vs-code/command-palette-default-terminal-profile-bad-options.png" style="width:400px"></img>
+     <img alt="Terminal Default Profile Bad Options" src="./images/vs-code/command-palette-default-terminal-profile-bad-options.png" style="width:400px"></img>
 
      Return to the first step and make sure you can [run `VS Code` in WSL](#windows-only-set-up-running-vs-code-in-wsl).
    - Case 2 (good): You're running `VS Code` outside `WSL`.
 
-     <img alt="Terminal Default Profile Outside WSL" src="../images/appendix/vs-code/command-palette-default-terminal-profile-outside-wsl-wsl.png" style="width:400px"></img>
+     <img alt="Terminal Default Profile Outside WSL" src="./images/vs-code/command-palette-default-terminal-profile-outside-wsl-wsl.png" style="width:400px"></img>
 
      Follow the instructions for [setting the default shell](#windows-only-set-the-default-shell-for-the-vs-code-terminal) again.
 
    - Case 3 (the best): You're running `VS Code` inside `WSL`. You've probably [opened the directory inside `WSL`](#windows-only-open-the-directory-in-wsl). This is the best case.
 
-     <img alt="Terminal Default Profile Outside WSL" src="../images/appendix/vs-code/command-palette-default-terminal-profile-bash.png" style="width:400px"></img>
+     <img alt="Terminal Default Profile Outside WSL" src="./images/vs-code/command-palette-default-terminal-profile-bash.png" style="width:400px"></img>
 
      [Select](#select-an-option-from-a-list) `bash`.
 5. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
@@ -363,7 +363,7 @@ Actions:
 1. Go to the [`Activity Bar`](#activity-bar).
 2. Click the `Explorer` icon.
 
-   <img alt="Explorer" src="../images/appendix/vs-code/activity-bar-explorer.png" style="width:100px"></img>
+   <img alt="Explorer" src="./images/vs-code/activity-bar-explorer.png" style="width:100px"></img>
 
 ### Open the local file using the `Explorer`
 
@@ -391,10 +391,10 @@ Method 1:
 1. Go to the [`Activity Bar`](#activity-bar).
 2. Click `Source Control`.
 
-   <img alt="Activity Bar - Source Control" src="../images/appendix/vs-code/activity-bar-source-control.png" style="width:100px"></img>
+   <img alt="Activity Bar - Source Control" src="./images/vs-code/activity-bar-source-control.png" style="width:100px"></img>
 3. Click `CHANGES` to uncollapse the view.
 
-   <img alt="Source Control - Changes" src="../images/appendix/vs-code/source-control-changes.png" style="width:100px"></img>
+   <img alt="Source Control - Changes" src="./images/vs-code/source-control-changes.png" style="width:100px"></img>
   
 Method 2:
 
@@ -408,7 +408,7 @@ Method 1:
 1. Go to the [`Activity Bar`](#activity-bar)
 2. Click `Source Control`.
 
-   <img alt="Explorer" src="../images/appendix/vs-code/activity-bar-source-control.png" style="width:100px"></img>
+   <img alt="Explorer" src="./images/vs-code/activity-bar-source-control.png" style="width:100px"></img>
 
 Method 2:
 
@@ -458,21 +458,21 @@ Method 2:
 1. [Open the `Extensions`](#open-the-extensions).
 2. Click the icon `Filter Extensions...`.
 
-   <img alt="Filter Extensions" src="../images/appendix/vs-code/extensions-filter.png" style="width:400px"></img>
+   <img alt="Filter Extensions" src="./images/vs-code/extensions-filter.png" style="width:400px"></img>
 3. A menu will open.
 4. Select a filter in the menu and click it to apply the filter.
 
 ### Install recommended `Extensions`
 
 > [!NOTE]
-> Recommended extensions are listed in [`.vscode/extensions.json`](../../.vscode/extensions.json).
+> Recommended extensions are listed in [`.vscode/extensions.json`](../.vscode/extensions.json).
 
 1. [Filter the extensions](#filter-the-extensions).
 2. Click `Recommended` in the menu.
 3. Click `WORKSPACE RECOMMENDATIONS` to uncollapse this view.
 4. Click the icon `Install Workspace Recommended extensions`.
 
-   <img alt="Install Workspace Recommended Extensions" src="../images/appendix/vs-code/extensions-install-workspace-recommended.png" style="width:400px"></img>
+   <img alt="Install Workspace Recommended Extensions" src="./images/vs-code/extensions-install-workspace-recommended.png" style="width:400px"></img>
 
 ## Keyboard shortcuts
 
@@ -544,7 +544,7 @@ Docs:
 - [Workspace settings](https://code.visualstudio.com/docs/configure/settings#_workspace-settings)
 - [Settings JSON file](https://code.visualstudio.com/docs/configure/settings#_settings-json-file)
 
-Settings for this workspace are in [`.vscode/settings.json`](../../.vscode/settings.json).
+Settings for this workspace are in [`.vscode/settings.json`](../.vscode/settings.json).
 
 ### Change the workspace settings
 

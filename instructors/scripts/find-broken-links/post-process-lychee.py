@@ -48,7 +48,11 @@ def find_locations(filepath: str, url: str) -> list[tuple[int, int, str]]:
     if url.startswith("file://"):
         path_part = re.sub(r"^file://", "", url)
         basename = path_part.split("/")[-1]  # e.g. "task-1.md#6-authorize-in-swagger-ui"
-        pattern = re.compile(re.escape(basename))
+        esc = re.escape(basename)
+        # Only match the basename when it appears inside the URL delimiters
+        # `(…)` or `"…"`, so we skip the display text of markdown links like
+        # [`docker-compose.yml`](../../docker-compose.yml) and land on the URL.
+        pattern = re.compile(r'(?<=\(|")(?:\.\.?/|[\w.-]+/)*' + esc)
     else:
         pattern = re.compile(re.escape(url.rstrip("/")))
 
@@ -59,11 +63,6 @@ def find_locations(filepath: str, url: str) -> list[tuple[int, int, str]]:
                 m = pattern.search(line)
                 if m:
                     start = m.start()
-                    # Adjust for a relative path prefix (e.g. "./foo/bar/") that
-                    # precedes the basename but was stripped when we split on "/".
-                    prefix_match = re.search(r'(?:\.\.?/|[\w.-]+/)+$', line[:start])
-                    if prefix_match:
-                        start = prefix_match.start()
                     raw_link = line[start:m.end()].rstrip()
                     results.append((i, start + 1, raw_link))
     except (OSError, UnicodeDecodeError):

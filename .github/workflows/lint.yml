@@ -35,7 +35,7 @@ jobs:
           gc-max-store-size: 2GB
 
       - name: Lint docs
-        run: nix develop --command lint-docs || echo "Done"
+        run: nix develop --command lint-docs
 
       - name: Find broken links
-        run: nix develop --command find-broken-links || echo Done
+        run: nix develop --command find-broken-links

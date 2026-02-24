@@ -50,9 +50,9 @@ You see the rendered `HTML` when you [open the `Markdown` preview](./vs-code.md#
 
 #### `Markdown` in this project
 
-- [`lab/appendix/file-formats.md`](./file-formats.md) — this file.
-- [`README.md`](../../README.md) — project overview.
-- [`.github/pull_request_template.md`](../../.github/pull_request_template.md) — [`GitHub` pull request](./github.md#pull-request) template.
+- [`./file-formats.md`](./file-formats.md) — this file.
+- [`README.md`](../README.md) — project overview.
+- [`.github/pull_request_template.md`](../.github/pull_request_template.md) — [`GitHub` pull request](./github.md#pull-request) template.
 
 ### `JSON`
 
@@ -75,7 +75,7 @@ You see the rendered `HTML` when you [open the `Markdown` preview](./vs-code.md#
 
 #### `JSON` in this project
 
-- [`.vscode/settings.json`](../../.vscode/settings.json) — `VS Code` editor settings.
+- [`.vscode/settings.json`](../.vscode/settings.json) — `VS Code` editor settings.
 - [`HTTP`](./http.md) request and response bodies when calling the `API`.
 
 ### `TOML`
@@ -101,7 +101,7 @@ port = 8080
 
 #### `TOML` in this project
 
-[`pyproject.toml`](../../pyproject.toml) — the [`Python`](./python.md) project configuration file.
+[`pyproject.toml`](../pyproject.toml) — the [`Python`](./python.md) project configuration file.
 
 ### `YAML`
 
@@ -125,8 +125,8 @@ server:
 
 #### `YAML` in this project
 
-- [`.github/workflows/`](../../.github/workflows/) — [`GitHub Actions`](./github.md) workflow files.
-- [`docker-compose.yml`](../../docker-compose.yml) — [`Docker Compose`](./docker-compose.md) service definitions.
+- [`.github/workflows/`](../.github/workflows/) — [`GitHub Actions`](./github.md) workflow files.
+- [`docker-compose.yml`](../docker-compose.yml) — [`Docker Compose`](./docker-compose.md) service definitions.
 
 ### `.env`
 

@@ -40,7 +40,7 @@ You will explore the API using `Swagger UI`, discover the API key mechanism, and
 
 ### 1.1. Follow the `Git workflow`
 
-Follow the [`Git workflow`](../git-workflow.md) to complete this task.
+Follow the [`Git workflow`](../../../wiki/git-workflow.md) to complete this task.
 
 ### 1.2. Create a `Lab Task` issue
 
@@ -51,30 +51,30 @@ Title: `[Task] Explore the API`
 #### 1.3.1. Start the services
 
 1. [Stop the services](../setup.md#115-new-stop-the-services).
-2. [Open a new `VS Code Terminal`](../../appendix/vs-code.md#open-a-new-vs-code-terminal).
+2. [Open a new `VS Code Terminal`](../../../wiki/vs-code.md#open-a-new-vs-code-terminal).
 3. Start the `postgres` service:
 
-   [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret up postgres --build
    ```
 
-4. [Open a new `VS Code Terminal`](../../appendix/vs-code.md#open-a-new-vs-code-terminal).
+4. [Open a new `VS Code Terminal`](../../../wiki/vs-code.md#open-a-new-vs-code-terminal).
 5. Start the `app` service:
 
-   [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret up app --build
    ```
 
-6. [Open a new `VS Code Terminal`](../../appendix/vs-code.md#open-a-new-vs-code-terminal).
+6. [Open a new `VS Code Terminal`](../../../wiki/vs-code.md#open-a-new-vs-code-terminal).
 
 #### 1.3.2. Open `Swagger UI`
 
 1. Open in a browser: <http://127.0.0.1:42001/docs>.
-2. You should see the auto-generated API documentation with the available [endpoints](../../appendix/web-development.md#endpoint).
+2. You should see the auto-generated API documentation with the available [endpoints](../../../wiki/web-development.md#endpoint).
 
    <img alt="Swagger UI" src="../../images/tasks/required/task-1/swagger-ui.png" style="width:400px">
 
@@ -91,28 +91,28 @@ Title: `[Task] Explore the API`
 3. Click `Execute`.
 4. Observe the `Server response`:
 
-   - The [`401`](../../appendix/http.md#401-unauthorized) status code.
+   - The [`401`](../../../wiki/http.md#401-unauthorized) status code.
    - The `Details` should be `Error: Unauthorized`.
 
 > [!NOTE]
-> The `401` response means the server rejected your request because you haven't [authenticated](../../appendix/swagger.md#authorize-in-swagger-ui) using an API key.
+> The `401` response means the server rejected your request because you haven't [authenticated](../../../wiki/swagger.md#authorize-in-swagger-ui) using an API key.
 >
-> The service uses the `Authorization: Bearer <token>` [header](../../appendix/http.md) for authentication.
+> The service uses the `Authorization: Bearer <token>` [header](../../../wiki/http.md) for authentication.
 
 #### 1.4.2. Find the `API_TOKEN` value
 
-1. [Open the file](../../appendix/vs-code.md#open-the-file):
+1. [Open the file](../../../wiki/vs-code.md#open-the-file):
    `.env.docker.secret`.
 2. Find the `API_TOKEN` variable.
 
-   We'll refer to its value as [`<api-token>`](../../appendix/web-development.md#api-token).
+   We'll refer to its value as [`<api-token>`](../../../wiki/web-development.md#api-token).
 
    The default value is `my-secret-api-key`.
 
 #### 1.4.3. Authorize in `Swagger UI`
 
 1. In `Swagger UI`, click the `Authorize` button (the lock icon at the top).
-2. In the `Value` field, enter the [`<api-token>`](../../appendix/web-development.md#api-token) that you [found](#142-find-the-api_token-value).
+2. In the `Value` field, enter the [`<api-token>`](../../../wiki/web-development.md#api-token) that you [found](#142-find-the-api_token-value).
 3. Click `Authorize`.
 4. Click `Close`.
 
@@ -122,7 +122,7 @@ Title: `[Task] Explore the API`
 2. Click `Try it out`.
 3. Click `Execute`.
 4. Observe the `Server response`:
-   - The [`200`](../../appendix/http.md#200-ok) status code;
+   - The [`200`](../../../wiki/http.md#200-ok) status code;
    - The `Response body` with a list of items.
 
 ### 1.5. Try the endpoints
@@ -134,22 +134,22 @@ Title: `[Task] Explore the API`
 3. Enter `1` as the `item_id`.
 4. Click `Execute`.
 5. Observe the `Server response`:
-   - The [`200`](../../appendix/http.md#200-ok) status code;
+   - The [`200`](../../../wiki/http.md#200-ok) status code;
    - The `Response body` with the item data.
 
    <img alt="Get item by id - 200" src="../../images/tasks/required/task-1/get-item-by-id-200.png" style="width:400px">
 6. Try entering `999` as the `item_id`.
 7. Click `Execute`.
 8. Observe the `Server response`:
-   - you should see the [`404` (Not Found)](../../appendix/http.md#404-not-found) error.
+   - you should see the [`404` (Not Found)](../../../wiki/http.md#404-not-found) error.
 
 #### 1.5.2. Try `POST /items`
 
 1. In `Swagger UI`, expand the `POST /items` endpoint.
 2. Click `Try it out` to make a request with the default body.
 3. Observe the `Server response`:
-   - The [`422` (Unprocessable Content)](../../appendix/http.md#422-unprocessable-entity) error.
-4. Enter another request body as [`JSON`](../../appendix/file-formats.md#json), for example:
+   - The [`422` (Unprocessable Content)](../../../wiki/http.md#422-unprocessable-entity) error.
+4. Enter another request body as [`JSON`](../../../wiki/file-formats.md#json), for example:
 
    ```json
    {
@@ -164,7 +164,7 @@ Title: `[Task] Explore the API`
 
 5. Click `Execute`.
 6. Observe the `Server response`:
-   - The [`201` (Created)](../../appendix/http.md#201-created) response status code;
+   - The [`201` (Created)](../../../wiki/http.md#201-created) response status code;
    - The `Response body` with the newly created item data in `JSON` format.
 
 #### 1.5.3. Try `PUT /items/{item_id}`
@@ -183,17 +183,17 @@ Title: `[Task] Explore the API`
 
 5. Click `Execute`.
 6. Observe the `Server response`:
-   - The [`200`](../../appendix/http.md#200-ok) status code.
+   - The [`200`](../../../wiki/http.md#200-ok) status code.
    - The `Response body` with the updated item data.
 
 ### 1.6. Experiment with the token
 
-1. [Open the file](../../appendix/vs-code.md#open-the-file):
+1. [Open the file](../../../wiki/vs-code.md#open-the-file):
    `.env.docker.secret`.
 2. Change the `API_TOKEN` value to something different, for example: `my-new-secret-key`.
 3. Stop the `app` service:
 
-   [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret down app
@@ -201,7 +201,7 @@ Title: `[Task] Explore the API`
 
 4. Start the `app` service:
 
-   [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret up app --build
@@ -220,13 +220,13 @@ Title: `[Task] Explore the API`
 
 ### 1.7. Fill in the questionnaire
 
-1. [Open the file](../../appendix/vs-code.md#open-the-file):
+1. [Open the file](../../../wiki/vs-code.md#open-the-file):
    [`lab/tasks/required/questionnaire.md`](./questionnaire.md).
 2. Fill in each answer based on what you observed.
 
 ### 1.8. Commit the questionnaire
 
-1. [Commit](../git-workflow.md#commit) your changes.
+1. [Commit](../../../wiki/git-workflow.md#commit) your changes.
 
    Use the following commit message:
 
@@ -236,8 +236,8 @@ Title: `[Task] Explore the API`
 
 ### 1.9. Finish the task
 
-1. [Create a PR](../git-workflow.md#create-a-pr-to-main-in-your-fork) with your questionnaire.
-2. [Get a PR review](../git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
+1. [Create a PR](../../../wiki/git-workflow.md#create-a-pr-to-the-main-branch-in-your-fork) with your questionnaire.
+2. [Get a PR review](../../../wiki/git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
 
 ---
 

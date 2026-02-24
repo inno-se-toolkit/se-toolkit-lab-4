@@ -56,7 +56,7 @@ Useful commands:
 ```terminal
 git status
 git add <file-path>
-git commit -m "docs: update appendix"
+git commit -m "docs: update wiki"
 git log --oneline --decorate --graph -n 15
 ```
 
@@ -100,7 +100,7 @@ See [Resolve a merge conflict](./git-vscode.md#resolve-a-merge-conflict).
 
 The `.gitignore` file allows you to specify which files shouldn't be added to the repo.
 
-Example: [`.gitignore`](../../.gitignore)
+Example: [`.gitignore`](../.gitignore)
 
 Common ignored files:
 

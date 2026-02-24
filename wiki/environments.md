@@ -31,8 +31,8 @@ We call `.env` file a file that contains a list of [environment variables](#envi
 
 Examples:
 
-- [.env.example](../../.env.example)
-- [.env.docker.example](../../.env.docker.example)
+- [.env.example](../.env.example)
+- [.env.docker.example](../.env.docker.example)
 
 Docs:
 

@@ -38,7 +38,7 @@ You will implement the endpoint layer by studying the `items` reference implemen
 
 ### 0. Follow the `Git workflow`
 
-Follow the [`Git workflow`](../git-workflow.md) to complete this task.
+Follow the [`Git workflow`](../../../wiki/git-workflow.md) to complete this task.
 
 ### 1. Create a `Lab Task` issue
 
@@ -48,7 +48,7 @@ Title: `[Task] Implement the learners endpoint`
 
 Before writing any code, study the existing `items` implementation to understand the pattern.
 
-1. [Open the file](../../appendix/vs-code.md#open-the-file):
+1. [Open the file](../../../wiki/vs-code.md#open-the-file):
    [`src/app/routers/items.py`](../../../src/app/routers/items.py).
 2. Study the `GET /` endpoint:
    - What decorator is used? (`@router.get`)
@@ -60,10 +60,10 @@ Before writing any code, study the existing `items` implementation to understand
    - What is the `status_code`?
    - What is the request body schema?
    - What database function does it call?
-4. [Open the file](../../appendix/vs-code.md#open-the-file):
+4. [Open the file](../../../wiki/vs-code.md#open-the-file):
    [`src/app/db/items.py`](../../../src/app/db/items.py).
 5. Study the `read_items` and `create_item` functions.
-6. [Open the file](../../appendix/vs-code.md#open-the-file):
+6. [Open the file](../../../wiki/vs-code.md#open-the-file):
    [`src/app/db/learners.py`](../../../src/app/db/learners.py).
 7. Study the `read_learners` and `create_learner` functions.
 8. Notice that `read_learners` accepts an optional `enrolled_after` parameter for filtering.
@@ -72,7 +72,7 @@ Before writing any code, study the existing `items` implementation to understand
 
 #### 3.1. Enable the learners endpoint
 
-1. [Open the file](../../appendix/vs-code.md#open-the-file):
+1. [Open the file](../../../wiki/vs-code.md#open-the-file):
    `.env.docker.secret`.
 2. Change:
 
@@ -93,7 +93,7 @@ Before writing any code, study the existing `items` implementation to understand
 
 #### 3.2. Uncomment the imports
 
-1. [Open the file](../../appendix/vs-code.md#open-the-file):
+1. [Open the file](../../../wiki/vs-code.md#open-the-file):
    [`src/app/routers/learners.py`](../../../src/app/routers/learners.py).
 2. Uncomment the import lines at the top of the file:
 
@@ -139,7 +139,7 @@ async def get_learners(
 
 1. Restart the services:
 
-   [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret up --build
@@ -160,7 +160,7 @@ async def get_learners(
 
 #### 3.6. Commit Part A
 
-1. [Commit your change using the `Source Control`](../git-workflow.md#commit).
+1. [Commit your change using the `Source Control`](../../../wiki/git-workflow.md#commit).
 
    Use the following commit message:
 
@@ -214,7 +214,7 @@ async def post_learner(
 
 #### 4.3. Commit Part B
 
-1. [Commit your change using the `Source Control`](../git-workflow.md#commit).
+1. [Commit your change using the `Source Control`](../../../wiki/git-workflow.md#commit).
 
    Use the following commit message:
 
@@ -227,8 +227,8 @@ async def post_learner(
 
 ### 5. Finish the task
 
-1. [Create a PR](../git-workflow.md#create-a-pr-to-main-in-your-fork) with your implementation.
-2. [Get a PR review](../git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
+1. [Create a PR](../../../wiki/git-workflow.md#create-a-pr-to-the-main-branch-in-your-fork) with your implementation.
+2. [Get a PR review](../../../wiki/git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
 
 ---
 

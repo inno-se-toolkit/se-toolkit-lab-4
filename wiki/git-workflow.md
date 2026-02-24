@@ -1,7 +1,7 @@
 # `Git workflow` for tasks
 
 > [!NOTE]
-> This procedure is based on the [`GitHub flow`](../appendix/github.md#github-flow).
+> This procedure is based on the [`GitHub flow`](./github.md#github-flow).
 
 ```text
 Issue ➜ Branch ➜ Commits ➜ PR ➜ Review ➜ Merge
@@ -9,7 +9,7 @@ Issue ➜ Branch ➜ Commits ➜ PR ➜ Review ➜ Merge
 
 The following diagram shows this workflow in the context of repositories:
 
-![Git workflow](../images/git-workflow.drawio.svg)
+![Git workflow](./images/git-workflow/git-workflow.drawio.svg)
 
 Outline:
 
@@ -35,19 +35,19 @@ Outline:
 
 ## Create a `Lab Task` issue
 
-[Create an issue](../appendix/github.md#create-an-issue) using the `Lab Task` [issue form](../appendix/github.md#issue-form).
+[Create an issue](./github.md#create-an-issue) using the `Lab Task` [issue form](./github.md#issue-form).
 
 ## Switch to the `main` branch
 
-[Switch to the `main` branch](../appendix/git-vscode.md#switch-to-the-branch-name-branch) in `VS Code`.
+[Switch to the `main` branch](./git-vscode.md#switch-to-the-branch-name-branch) in `VS Code`.
 
 ## Detect conflicts
 
-[Detect conflicts with the `origin/main`](../appendix/git-vscode.md#detect-conflicts).
+[Detect conflicts with the `origin/main`](./git-vscode.md#detect-conflicts).
 
 ## Pull changes from `origin/main`
 
-[Pull changes from the `main` branch in your fork on `GitHub`](../appendix/git-vscode.md#pull-changes-from-originbranch-name).
+[Pull changes from the `main` branch in your fork on `GitHub`](./git-vscode.md#pull-changes-from-originbranch-name).
 
 ## Pull changes from `origin/main` and rebase
 
@@ -57,12 +57,12 @@ Rebasing places your local commits on top of the commits from `origin/main`. Con
 
 Complete the following steps:
 
-1. [Pull and rebase from `origin/main`](../appendix/git-vscode.md#pull-and-rebase-from-originbranch-name).
-2. If conflicts occur, [resolve them](../appendix/git-vscode.md#resolve-a-merge-conflict).
+1. [Pull and rebase from `origin/main`](./git-vscode.md#pull-changes-from-originbranch-name-and-rebase).
+2. If conflicts occur, [resolve them](./git-vscode.md#resolve-a-merge-conflict).
 
 ## Switch to a new branch
 
-[Create a new branch and switch to it](../appendix/git-vscode.md#switch-to-a-new-branch).
+[Create a new branch and switch to it](./git-vscode.md#switch-to-a-new-branch).
 
 ### `<task-branch-name>`
 
@@ -70,33 +70,33 @@ We'll refer to the new branch as `<task-branch-name>`.
 
 ## Edit files
 
-[Edit files](../appendix/vs-code.md#editor) using `VS Code` to produce changes.
+[Edit files](./vs-code.md#editor) using `VS Code` to produce changes.
 
 ## Commit
 
-[Commit changes](../appendix/git-vscode.md#commit-changes) to the [`<task-branch-name>`](#task-branch-name) to complete the task.
+[Commit changes](./git-vscode.md#commit-changes) to the [`<task-branch-name>`](#task-branch-name) to complete the task.
 
 ## (Optional) Undo commits
 
-[Undo commits](../appendix/git-vscode.md#undo-commits) if necessary.
+[Undo commits](./git-vscode.md#undo-commits) if necessary.
 
 ## Publish the branch
 
-[Publish the branch](../appendix/git-vscode.md#publish-the-branch) with your changes.
+[Publish the branch](./git-vscode.md#publish-the-branch) with your changes.
 
 ## Push more commits
 
-[Push more commits](../appendix/git-vscode.md#push-more-commits) to the published branch if necessary.
+[Push more commits](./git-vscode.md#push-more-commits) to the published branch if necessary.
 
 ## Create a PR to the `main` branch in your fork
 
-[Create a PR](../appendix/github.md#create-a-pull-request) from the branch [`<task-branch-name>`](#task-branch-name) to the branch `<main>`.
+[Create a PR](./github.md#create-a-pull-request) from the branch [`<task-branch-name>`](#task-branch-name) to the branch `<main>`.
 Placeholder values:
 
 - `<repo-name>` is `se-toolkit-lab-3`.
 - `<branch-name>` is `<task-branch-name>`.
 - [`<repo-owner-github-username>`] is `inno-se-toolkit`.
-- [`<your-github-username>`](../appendix/github.md#your-github-username) is your `GitHub` username.
+- [`<your-github-username>`](./github.md#your-github-username) is your `GitHub` username.
 
 ## Get a PR review
 
@@ -122,6 +122,9 @@ Get the collaborator to approve the PR.
 ## Merge the PR
 
 Click `Merge pull request`.
+
+<!-- What should you see? -->
+<!-- make prs in your fork should be not ok -->
 
 ## Clean up
 

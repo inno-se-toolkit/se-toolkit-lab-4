@@ -50,7 +50,7 @@ Title: `[Task] Deploy to a hardened VM`
 
 ### 2. Connect to the VM
 
-1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    ssh se-toolkit-vm
@@ -82,9 +82,9 @@ Use any of the following methods:
 
 **Not yet cloned:**
 
-1. [Clone the repo](../../appendix/git-vscode.md#clone-the-repo-using-the-vs-code-terminal).
+1. [Clone the repo](../../../wiki/git-vscode.md#clone-the-repo-using-the-vs-code-terminal).
 
-   Replace `<repo-url>` with [`<your-fork-url>`](../../appendix/github.md#your-fork-url).
+   Replace `<repo-url>` with [`<your-fork-url>`](../../../wiki/github.md#your-fork-url).
 
 2. Navigate to the project directory:
 
@@ -160,7 +160,7 @@ Use any of the following methods:
 ### 9. Verify from your laptop
 
 > [!NOTE]
-> You can find the IP address of your VM on the [VM page](../../appendix/vm.md#get-the-ip-address-of-the-vm).
+> You can find the IP address of your VM on the [VM page](../../../wiki/vm.md#get-the-ip-address-of-the-vm).
 
 1. Open a new terminal **on your laptop** (not on the VM).
 2. Run:
@@ -207,7 +207,7 @@ Use any of the following methods:
    usermod -aG sudo operator
    ```
 
-5. [Copy SSH authorized keys to the `operator` user](../../appendix/vm-autochecker.md#copy-ssh-authorized-keys-to-a-user).
+5. [Copy SSH authorized keys to the `operator` user](../../../wiki/vm-autochecker.md#copy-ssh-authorized-keys-to-a-user).
 
    Replace `<username>` with `operator`.
 
@@ -307,11 +307,11 @@ Use any of the following methods:
 
 ### 16. Create a `autochecker` SSH user
 
-1. [Create the `autochecker` user](../../appendix/vm-autochecker.md#create-the-autochecker-user).
+1. [Create the `autochecker` user](../../../wiki/vm-autochecker.md#create-the-autochecker-user).
 
 ### 17. Add the instructor's SSH public key
 
-1. [Add the instructor's SSH public key to the `autochecker` user](../../appendix/vm-autochecker.md#add-an-ssh-public-key-to-the-autochecker-user).
+1. [Add the instructor's SSH public key to the `autochecker` user](../../../wiki/vm-autochecker.md#add-an-ssh-public-key-to-the-autochecker-user).
 
    Replace step 2 ("Paste the SSH public key") with: paste the instructor's SSH public key (provided by the instructor).
 

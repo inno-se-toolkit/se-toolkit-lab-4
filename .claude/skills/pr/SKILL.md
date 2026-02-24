@@ -11,7 +11,7 @@ Create a pull request following the project's PR template at `.github/pull_reque
 
 - Run `git fetch origin main` to update the remote ref, then run `git log origin/main..HEAD` and `git diff origin/main...HEAD` to understand what changes will be included.
 - Write a concise PR title summarizing the changes (under 72 characters).
-- Fill in the Summary section with a brief description of what the PR does.
+- Fill in the Summary section with a bullet list of the key changes in the PR, written in imperative voice (e.g. "Rename appendix to wiki").
 - If `$ARGUMENTS` contains an issue number, include `- Closes #<issue-number>` in the Summary section; otherwise omit that line entirely.
 - Use `gh pr create` with `--title` and `--body` to open the PR.
 - Target the `main` branch (`--base main`).

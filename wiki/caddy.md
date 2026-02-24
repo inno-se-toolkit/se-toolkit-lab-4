@@ -27,7 +27,7 @@ Docs:
 
 ### `Caddyfile` in this project
 
-In this project, the `Caddyfile` is at [`caddy/Caddyfile`](../../caddy/Caddyfile):
+In this project, the `Caddyfile` is at [`caddy/Caddyfile`](../caddy/Caddyfile):
 
 ```caddyfile
 :{$CADDY_CONTAINER_PORT} {

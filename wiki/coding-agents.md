@@ -51,10 +51,10 @@ Set up a coding agent in `VS Code` using any of the following methods:
 
 1. Open the `Chat` panel using one of these methods:
     1. Method 1:
-       1. Go to the [`Editor Toolbar`](../appendix/vs-code.md#editor-toolbar).
+       1. Go to the [`Editor Toolbar`](./vs-code.md#editor-toolbar).
        2. Click the `Qwen` icon.
     2. Method 2:
-       1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
+       1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
           `Qwen Code: Open`
 2. Write `/login` in the chat.
 3. Write `@<file-name>` to refer to the file `<file-name>`.
@@ -67,15 +67,15 @@ Set up a coding agent in `VS Code` using any of the following methods:
 > If you want to use `Copilot Chat`, you may need to try some ways to bypass this restriction.
 
 1. [Install](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace#_browse-for-extensions) the `github.copilot-chat` and `denizhandaklr.vscode-qwen-copilot` extensions.
-2. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
+2. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
    `Qwen Copilot: Authenticate`
 3. Complete the authentication procedure.
-4. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
+4. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
    `Chat: Manage Language Models`
 5. Click `Add Models`.
 6. Click `Qwen Code`.
 7. Double click `Qwen 3 Coder Plus` to make the model visible.
-8. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
+8. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
    `Chat: Open Chat`
 9. The `CHAT` panel will open.
 10. Go to `CHAT`.

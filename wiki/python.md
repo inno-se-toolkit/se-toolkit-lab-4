@@ -84,7 +84,7 @@
    ```
 
 > [!NOTE]
-> The `Python` version for this project is specified in the [`pyproject.toml`](../../pyproject.toml) file using the `requires-python` setting.
+> The `Python` version for this project is specified in the [`pyproject.toml`](../pyproject.toml) file using the `requires-python` setting.
 
 ## Testing
 

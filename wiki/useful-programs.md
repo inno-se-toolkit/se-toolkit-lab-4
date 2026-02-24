@@ -47,7 +47,7 @@ curl http://127.0.0.1:8080/status
 ## `git`
 
 `git` is a version control system for tracking changes in files and coordinating work across a team.
-See the [`git` appendix](./git.md) for detailed documentation.
+See the [`git` wiki](./git.md) for detailed documentation.
 
 ### Common `git` commands
 

@@ -19,7 +19,7 @@
 
 `Docker Compose` runs multi-container apps from a `docker-compose.yml` file.
 
-Example of the file: [`docker-compose.yml`](../../docker-compose.yml).
+Example of the file: [`docker-compose.yml`](../docker-compose.yml).
 
 See also:
 

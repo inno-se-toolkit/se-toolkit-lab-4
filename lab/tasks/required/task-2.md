@@ -41,7 +41,7 @@ Your job is to enable the endpoint, discover the bugs, and fix them.
 
 ### 1.1. Follow the `Git workflow`
 
-Follow the [`Git workflow`](../git-workflow.md) to complete this task.
+Follow the [`Git workflow`](../../../wiki/git-workflow.md) to complete this task.
 
 ### 1.2. Create a `Lab Task` issue
 
@@ -50,19 +50,19 @@ Title: `[Task] Enable and debug the interactions endpoint`
 ### 1.3. Restart the services
 
 1. [Stop the running services](../setup.md#115-new-stop-the-services).
-2. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+2. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret up --build
    ```
 
 3. Wait until the services are ready (2-3 minutes). You should see log output from the application and database containers.
-4. [Open a new `VS Code Terminal`](../../appendix/vs-code.md#open-a-new-vs-code-terminal) to run commands while the services are running.
+4. [Open a new `VS Code Terminal`](../../../wiki/vs-code.md#open-a-new-vs-code-terminal) to run commands while the services are running.
 
 ### 1.4. Examine the database using `pgAdmin`
 
 1. Make sure you have [set up `pgAdmin`](../setup.md#1142-new-set-up-pgadmin).
-2. [Inspect columns](../../appendix/pgadmin.md#inspect-columns) of the `interaction_logs` table.
+2. [Inspect columns](../../../wiki/pgadmin.md#inspect-columns) of the `interaction_logs` table.
 3. Note the column names: `id`, `learner_id`, `item_id`, `kind`, `created_at`.
 
 > [!NOTE]
@@ -70,7 +70,7 @@ Title: `[Task] Enable and debug the interactions endpoint`
 
 ### 1.5. Enable the `/interactions` endpoint
 
-1. [Open the file](../../appendix/vs-code.md#open-the-file):
+1. [Open the file](../../../wiki/vs-code.md#open-the-file):
    `.env.docker.secret`.
 2. Change:
 
@@ -94,7 +94,7 @@ Title: `[Task] Enable and debug the interactions endpoint`
 
 1. Stop the `app` service:
 
-   [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret down app
@@ -102,7 +102,7 @@ Title: `[Task] Enable and debug the interactions endpoint`
 
 2. Start the `app` service:
 
-   [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret up app --build
@@ -125,7 +125,7 @@ Title: `[Task] Enable and debug the interactions endpoint`
 
 ### 1.9. Trace the bug
 
-1. [Open the file](../../appendix/vs-code.md#open-the-file):
+1. [Open the file](../../../wiki/vs-code.md#open-the-file):
    [`src/app/routers/interactions.py`](../../../src/app/routers/interactions.py).
 2. Look at the endpoint definition:
 
@@ -139,7 +139,7 @@ Title: `[Task] Enable and debug the interactions endpoint`
    `FastAPI` combines it with the `prefix="/interactions"` set in [`src/app/main.py`](../../../src/app/main.py) to produce the full path `/interactions`.
 
    The `response_model` parameter tells `FastAPI` which schema to use when serializing the response. It is `InteractionModel`.
-3. [Open the file](../../appendix/vs-code.md#open-the-file):
+3. [Open the file](../../../wiki/vs-code.md#open-the-file):
    [`src/app/models/interaction.py`](../../../src/app/models/interaction.py).
 4. Look at the `InteractionModel` class (the response schema).
 5. The response schema has a field called `timestamp`.
@@ -181,7 +181,7 @@ The field name in the response schema (`InteractionModel`) must match the field 
 
 ### 1.12. Commit Bug 1 fix
 
-1. [Commit](../git-workflow.md#commit) your changes.
+1. [Commit](../../../wiki/git-workflow.md#commit) your changes.
 
    Use the following commit message:
 
@@ -199,8 +199,8 @@ The field name in the response schema (`InteractionModel`) must match the field 
 
 ### 1.14. Compare with the database
 
-1. [Open `pgAdmin`](../../appendix/pgadmin.md#open-pgadmin).
-2. [Run a query](../../appendix/pgadmin.md#run-a-query) on the `interaction_logs` table:
+1. [Open `pgAdmin`](../../../wiki/pgadmin.md#open-pgadmin).
+2. [Run a query](../../../wiki/pgadmin.md#run-a-query) on the `interaction_logs` table:
 
    ```sql
    SELECT * FROM interaction_logs WHERE item_id = 2;
@@ -211,7 +211,7 @@ The field name in the response schema (`InteractionModel`) must match the field 
 
 ### 1.15. Find Bug 2 in the code
 
-1. [Open the file](../../appendix/vs-code.md#open-the-file):
+1. [Open the file](../../../wiki/vs-code.md#open-the-file):
    [`src/app/routers/interactions.py`](../../../src/app/routers/interactions.py).
 2. Look at the filtering code:
 
@@ -250,7 +250,7 @@ The query parameter is called `item_id`, so the filter should compare `i.item_id
 
 ### 1.17. Commit Bug 2 fix
 
-1. [Commit](../git-workflow.md#commit) your changes.
+1. [Commit](../../../wiki/git-workflow.md#commit) your changes.
 
    Use the following commit message:
 
@@ -263,8 +263,8 @@ The query parameter is called `item_id`, so the filter should compare `i.item_id
 
 ### 1.18. Finish the task
 
-1. [Create a PR](../git-workflow.md#create-a-pr-to-main-in-your-fork) with your fixes.
-2. [Get a PR review](../git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
+1. [Create a PR](../../../wiki/git-workflow.md#create-a-pr-to-the-main-branch-in-your-fork) with your fixes.
+2. [Get a PR review](../../../wiki/git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
 
 ---
 
