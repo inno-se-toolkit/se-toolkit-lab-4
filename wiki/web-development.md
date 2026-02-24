@@ -188,8 +188,8 @@ URLs are used by web browsers and other applications to retrieve resources like 
 A typical URL consists of several components:
 
 - **Scheme/Protocol**: Specifies how to access the resource (e.g., `http`, `https`, `ftp`).
-- **Host/Domain**: The server where the resource is located (e.g., `www.example.com`).
-- **Port** (optional): The specific port number on the server (e.g., `:8080`).
+- **[Host](./computer-networks.md#host)/Domain**: The server where the resource is located (e.g., `www.example.com`).
+- **[Port](./linux.md#port)** (optional): The specific port number on the server (e.g., `:8080`).
 - **Path**: The location of the specific resource on the server (e.g., `/folder/page.html`).
 - **Query parameters** (optional): Additional data passed to the server (e.g., `?param1=value1&param2=value2`).
 - **Fragment** (optional): Points to a specific section within the resource (e.g., `#section1`).
@@ -222,3 +222,5 @@ Examples:
 A service can call other services over the network, but to the client it still appears as endpoints that return responses.
 
 ## Feature flag
+
+A feature flag (also called a feature toggle) is a mechanism that enables or disables a feature at runtime without deploying new code. Feature flags let teams decouple deployment from release, enabling gradual rollouts, `A/B` testing, and quick rollbacks.

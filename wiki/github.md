@@ -183,13 +183,29 @@ Examples of issue forms:
 
 ### Base repo
 
+The base repo is the [repository](#repository) into which the changes are merged.
+
+When creating a [pull request](#pull-request) from a [fork](#fork), the base repo is the original (upstream) repository that was forked.
+
 ### Head repo
+
+The head repo is the [repository](#repository) that contains the changes you want to merge.
+
+When creating a [pull request](#pull-request) from a [fork](#fork), the head repo is your fork.
 
 ### Default branch
 
+The default branch is the primary branch of a [repository](#repository), typically named `main`.
+
+New [pull requests](#pull-request) and code merges target the default branch by default.
+
 ### Base branch
 
+The base branch is the branch in the [base repo](#base-repo) that you want to merge your changes into.
+
 ### Pull request branch
+
+The pull request branch (also called the compare branch or head branch) is the branch that contains the changes you want to merge into the [base branch](#base-branch).
 
 ### Create a pull request
 
