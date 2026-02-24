@@ -186,7 +186,7 @@ Examples of issue forms:
 
 ### Create a pull request
 
-Create a PR to the `<repo-name>/<branch-name>`:
+Create a PR from the `<repo-name>/<branch-name>` to `<repo-name>/main`:
 
 1. [Open the PR editor using `GitHub`](#open-the-pr-editor-using-github)
 2. [Finish creating a PR](#finish-creating-a-pr)
