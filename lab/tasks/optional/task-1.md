@@ -100,7 +100,7 @@ Study how the `items` endpoint is implemented:
 
 ### 9. Run the tests
 
-1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    uv run poe test
@@ -118,7 +118,7 @@ Study how the `items` endpoint is implemented:
    feat: implement /outcomes endpoint
    ```
 
-2. [Create a PR](../git-workflow.md#create-a-pr-to-main-in-your-fork) with your implementation.
+2. [Create a PR](../../tasks/git-workflow.md#create-a-pr-to-the-main-branch-in-your-fork) with your implementation.
 3. [Get a PR review](../git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
 
 ---

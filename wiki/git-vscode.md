@@ -146,7 +146,7 @@ Check whether you have such conflicts:
 
 1. Look at the [`Status Bar`](./vs-code.md#status-bar).
 
-   <img alt="Commit Conflict" src="../images/appendix/vs-code/status-bar-commit-conflict.png" style="width:400px"></img>
+   <img alt="Commit Conflict" src="./images/vs-code/status-bar-commit-conflict.png" style="width:400px"></img>
 
    You should see that there is a non-zero number of commits to pull from `origin/<branch-name>`.
 
@@ -189,7 +189,7 @@ Docs:
 
 If you see a pull error like the one below, resolve the conflicts:
 
-<img alt="Pull Error" src="../images/appendix/gitlens/pull-error.png" style="width:400px"></img>
+<img alt="Pull Error" src="./images/gitlens/pull-error.png" style="width:400px"></img>
 
 For each conflicting file, complete the following steps:
 

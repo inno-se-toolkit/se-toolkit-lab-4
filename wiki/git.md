@@ -100,7 +100,7 @@ See [Resolve a merge conflict](./git-vscode.md#resolve-a-merge-conflict).
 
 The `.gitignore` file allows you to specify which files shouldn't be added to the repo.
 
-Example: [`.gitignore`](../../.gitignore)
+Example: [`.gitignore`](../.gitignore)
 
 Common ignored files:
 

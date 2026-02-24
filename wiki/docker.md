@@ -37,7 +37,7 @@ A container is an isolated runtime for an application and its dependencies.
 
 ### Containers and host
 
-<img alt="Containers and host" src="../images/appendix/docker/hierarchy.png" style="width:400px"></img> ([source](https://rest-apis-flask.teclado.com/docs/docker_intro/what_is_docker_container/))
+<img alt="Containers and host" src="./images/docker/hierarchy.png" style="width:400px"></img> ([source](https://rest-apis-flask.teclado.com/docs/docker_intro/what_is_docker_container/))
 
 ```text
 ┌─────────────────────────────────────────────────────────────────┐
@@ -107,7 +107,7 @@ See [`Docker Compose`](./docker-compose.md) for the full list of commands.
 
 A service is a named entry under the `services:` key in `docker-compose.yml`. It defines how to build or pull an [image](#image) and run it as a [container](#container).
 
-For example, this project defines four services in [`docker-compose.yml`](../../docker-compose.yml): `app`, `postgres`, `pgadmin`, and `caddy`.
+For example, this project defines four services in [`docker-compose.yml`](../docker-compose.yml): `app`, `postgres`, `pgadmin`, and `caddy`.
 
 ## Volumes
 

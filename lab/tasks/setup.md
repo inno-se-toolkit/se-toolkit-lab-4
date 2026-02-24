@@ -78,36 +78,36 @@
 ### 1.2. Start creating a VM
 
 > [!NOTE]
-> Skip this step if you can [connect to your VM](../appendix/vm.md#connect-to-the-vm).
+> Skip this step if you can [connect to your VM](../../wiki/vm.md#connect-to-the-vm).
 
-[Create a subscription](../appendix/vm.md#create-a-subscription) to be able to create a VM.
+[Create a subscription](../../wiki/vm.md#create-a-subscription) to be able to create a VM.
 
 ### 1.3. Set up your fork
 
 #### 1.3.1. Sign in on `GitHub`
 
 1. Sign in on [`GitHub`](https://github.com/).
-2. [Find `<your-github-username>`](../appendix/github.md#find-your-github-username).
+2. [Find `<your-github-username>`](../../wiki/github.md#find-your-github-username).
 
 #### 1.3.2. (NEW) Fork the course instructors' repo
 
-1. [Fork the course instructors' repo](../appendix/github.md#fork-a-repo).
+1. [Fork the course instructors' repo](../../wiki/github.md#fork-a-repo).
 
-   The course instructors' repo [URL](../appendix/web-development.md#url) is <https://github.com/inno-se-toolkit/se-toolkit-lab-3>
+   The course instructors' repo [URL](../../wiki/web-development.md#url) is <https://github.com/inno-se-toolkit/se-toolkit-lab-3>
 
 #### 1.3.3. (NEW) Go to your fork
 
-1. [Go to your fork](../appendix/github.md#go-to-your-fork).
+1. [Go to your fork](../../wiki/github.md#go-to-your-fork).
 
-   The [URL](../appendix/web-development.md#url) of your fork should look like `https://github.com/<your-github-username>/se-toolkit-lab-3`.
+   The [URL](../../wiki/web-development.md#url) of your fork should look like `https://github.com/<your-github-username>/se-toolkit-lab-3`.
 
 #### 1.3.4. (NEW) Enable issues
 
-1. [Enable issues](../appendix/github.md#enable-issues).
+1. [Enable issues](../../wiki/github.md#enable-issues).
 
 #### 1.3.5. (NEW) Add a classmate as a collaborator
 
-1. [Add a collaborator](../appendix/github.md#add-a-collaborator) — your partner.
+1. [Add a collaborator](../../wiki/github.md#add-a-collaborator) — your partner.
 2. Your partner should add you as a collaborator in their repo.
 3. It's OK if your collaborator can't change `Settings` in your repo.
 
@@ -117,58 +117,58 @@
 > Branch protection prevents accidental pushes directly to `main`.
 > This enforces the PR workflow and ensures all changes are reviewed.
 
-1. [Protect a branch](../appendix/github.md#protect-a-branch).
+1. [Protect a branch](../../wiki/github.md#protect-a-branch).
 
 ### 1.4. Install programs
 
 #### 1.4.1. Install `VS Code`
 
 1. Install [`VS Code`](https://code.visualstudio.com/) if not installed.
-2. (Optional) [Learn more](../appendix/vs-code.md) about `VS Code`.
+2. (Optional) [Learn more](../../wiki/vs-code.md) about `VS Code`.
 
 #### 1.4.2. Install `Git`
 
 1. [Install `Git`](https://git-scm.com/install/) if not installed.
 
-2. (Optional) [Learn more](../appendix/git.md) about `Git`.
+2. (Optional) [Learn more](../../wiki/git.md) about `Git`.
 
 #### 1.4.3. Install `Docker`
 
-1. [Install `Docker`](../appendix/docker.md#install-docker) if not installed.
+1. [Install `Docker`](../../wiki/docker.md#install-docker) if not installed.
 
-2. (Optional) [Learn more](../appendix/docker.md#what-is-docker) about `Docker`.
+2. (Optional) [Learn more](../../wiki/docker.md#what-is-docker) about `Docker`.
 
 #### 1.4.4. (`Windows` only) Install `Ubuntu 24.04` using WSL
 
-1. [Check the current shell in the `VS Code Terminal`](../appendix/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
-2. [Set up running `VS Code` using `WSL`](../appendix/vs-code.md#windows-only-set-up-running-vs-code-in-wsl) if the shell is not `bash` or `zsh`.
+1. [Check the current shell in the `VS Code Terminal`](../../wiki/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
+2. [Set up running `VS Code` using `WSL`](../../wiki/vs-code.md#windows-only-set-up-running-vs-code-in-wsl) if the shell is not `bash` or `zsh`.
 
 ### 1.5. (NEW) Open in `VS Code` the `software-engineering-toolkit` directory
 
-1. Inside the [`Desktop` directory](../appendix/file-system.md#desktop-directory),
+1. Inside the [`Desktop` directory](../../wiki/file-system.md#desktop-directory),
    create the directory `software-engineering-toolkit`.
 
    Skip this step if this directory exists.
 
-2. [Open in `VS Code` the directory](../appendix/git-vscode.md#open-in-vs-code-the-directory):
+2. [Open in `VS Code` the directory](../../wiki/git-vscode.md#open-in-vs-code-the-directory):
    `software-engineering-toolkit`.
 
 ### 1.6. Set up `Git`
 
 #### 1.6.1. Check your `Git` config
 
-1. [Check your Git config](../appendix/git.md#check-your-git-config).
+1. [Check your Git config](../../wiki/git.md#check-your-git-config).
 
 #### 1.6.2. Configure `Git`
 
-[Configure Git](../appendix/git.md#configure-git) if you want to change the values that you saw while [checking your `Git` config](#161-check-your-git-config).
+[Configure Git](../../wiki/git.md#configure-git) if you want to change the values that you saw while [checking your `Git` config](#161-check-your-git-config).
 
 ### 1.7. (NEW) Clone your fork and open it in `VS Code`
 
 #### 1.7.1. (NEW) Copy your fork `URL`
 
 1. [Go to your fork](#133-new-go-to-your-fork).
-2. Copy [`<your-fork-url>`](../appendix/github.md#your-fork-url).
+2. Copy [`<your-fork-url>`](../../wiki/github.md#your-fork-url).
 
    It should look like `https://github.com/<your-github-username>/se-toolkit-lab-3`.
 
@@ -177,59 +177,59 @@
 
 #### 1.7.2. (NEW) Clone your fork
 
-1. [Clone your fork](../appendix/git-vscode.md#clone-the-repo):
+1. [Clone your fork](../../wiki/git-vscode.md#clone-the-repo):
 
-   - Replace `<repo-url>` with [`<your-fork-url>`](../appendix/github.md#your-fork-url).
+   - Replace `<repo-url>` with [`<your-fork-url>`](../../wiki/github.md#your-fork-url).
    - Replace `<repo-name>` with `se-toolkit-lab-3`.
 
 #### 1.7.3. (NEW) Open the cloned repo in `VS Code`
 
-1. [Open in `VS Code` the directory](../appendix/git-vscode.md#open-in-vs-code-the-directory):
+1. [Open in `VS Code` the directory](../../wiki/git-vscode.md#open-in-vs-code-the-directory):
    `se-toolkit-lab-3`.
-2. [Install recommended extensions](../appendix/vs-code.md#install-recommended-extensions).
+2. [Install recommended extensions](../../wiki/vs-code.md#install-recommended-extensions).
 
 ### 1.8. (NEW) (`Windows` only) Set the default shell
 
-1. [Check and set the current shell in the `VS Code Terminal`](../appendix/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
+1. [Check and set the current shell in the `VS Code Terminal`](../../wiki/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 
 ### 1.9. Continue creating a VM
 
-Complete these steps if you can't [connect to your VM](../appendix/vm.md#connect-to-the-vm):
+Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-to-the-vm):
 
-1. [Set up `SSH`](../appendix/ssh.md#set-up-ssh).
+1. [Set up `SSH`](../../wiki/ssh.md#set-up-ssh).
 
    **Note:** Don't overwrite the key if it already exists.
    You can use the key that you created before for the new VM.
-2. [Create a VM using the subscription](../appendix/vm.md#create-a-vm-using-the-subscription).
+2. [Create a VM using the subscription](../../wiki/vm.md#create-a-vm-using-the-subscription).
 
 ### 1.10. Set up `Python` in `VS Code`
 
 #### 1.10.1. Install `uv`
 
 > [!NOTE]
-> [`uv`](../appendix/python.md#uv) is a package manager for [`Python`](../appendix/python.md).
+> [`uv`](../../wiki/python.md#uv) is a package manager for [`Python`](../../wiki/python.md).
 
-1. [Install `uv`](../appendix/python.md#install-uv).
+1. [Install `uv`](../../wiki/python.md#install-uv).
 
 #### 1.10.2. (NEW) Install `Python` and dependencies
 
 > [!NOTE]
 > The dependencies have been updated in this project version.
 
-1. [Install `Python` and dependencies](../appendix/python.md#install-python-and-dependencies).
+1. [Install `Python` and dependencies](../../wiki/python.md#install-python-and-dependencies).
 
 #### 1.10.3. (NEW) Select the `Python` interpreter
 
-1. [Select the `Python` interpreter](../appendix/python.md#select-the-python-interpreter).
+1. [Select the `Python` interpreter](../../wiki/python.md#select-the-python-interpreter).
 
 #### 1.10.4. (NEW) Check that `Python` works
 
-1. [Check that `Python` works](../appendix/python.md#check-that-python-works).
+1. [Check that `Python` works](../../wiki/python.md#check-that-python-works).
 
 ### 1.11. (NEW) Start the services
 
 > [!NOTE]
-> A [service](../appendix/docker.md#service) in [`Docker Compose`](../appendix/docker-compose.md) defines how to run a [container](../appendix/docker.md#container).
+> A [service](../../wiki/docker.md#service) in [`Docker Compose`](../../wiki/docker-compose.md) defines how to run a [container](../../wiki/docker.md#container).
 >
 > `Docker Compose` lets you start multiple containers at once.
 
@@ -237,7 +237,7 @@ Complete these steps if you can't [connect to your VM](../appendix/vm.md#connect
 
 1. Copy the [`.env.docker.example`](../../.env.docker.example) file to the `.env.docker.secret` file:
 
-   [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    cp .env.docker.example .env.docker.secret
@@ -247,7 +247,7 @@ Complete these steps if you can't [connect to your VM](../appendix/vm.md#connect
 > The `.env.docker.secret` file contains environment variables for the `Docker` containers.
 >
 > It was added to [`.gitignore`](../../.gitignore) because you may specify there
-> [secrets](../appendix/environments.md#secrets) such as the API key or the address of your VM.
+> [secrets](../../wiki/environments.md#secrets) such as the API key or the address of your VM.
 
 > [!TIP]
 > No edits are needed for local development.
@@ -255,11 +255,11 @@ Complete these steps if you can't [connect to your VM](../appendix/vm.md#connect
 
 #### 1.11.2. (NEW) Start the services using `Docker Compose`
 
-1. (`Windows` only) Open the `Docker Desktop` that you [installed](../appendix/docker.md#install-docker).
+1. (`Windows` only) Open the `Docker Desktop` that you [installed](../../wiki/docker.md#install-docker).
 
-2. Start services using the [`docker compose up` command](../appendix/docker-compose.md#docker-compose-up):
+2. Start services using the [`docker compose up` command](../../wiki/docker-compose.md#docker-compose-up):
 
-   [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret up --build
@@ -267,7 +267,7 @@ Complete these steps if you can't [connect to your VM](../appendix/vm.md#connect
 
    > **NOTE**
    >
-   > [`Docker Compose`](../appendix/docker-compose.md) reads environment variables from `.env.docker.secret`
+   > [`Docker Compose`](../../wiki/docker-compose.md) reads environment variables from `.env.docker.secret`
    > and uses them to configure the containers defined in [`docker-compose.yml`](../../docker-compose.yml).
 
 3. Wait for the services to start. You should see log output from the `app`, `postgres`, `pgadmin`, and `caddy` containers.
@@ -276,17 +276,17 @@ Complete these steps if you can't [connect to your VM](../appendix/vm.md#connect
    >
    > The database is initialized from [`src/app/data/init.sql`](../../src/app/data/init.sql) only on the **first** start of the `PostgreSQL` container.
    >
-   > If you need to re-initialize the database (e.g., after pulling upstream changes to `init.sql`), see [Resetting the database](../appendix/docker-postgres.md#resetting-the-database).
+   > If you need to re-initialize the database (e.g., after pulling upstream changes to `init.sql`), see [Resetting the database](../../wiki/docker-postgres.md#resetting-the-database).
 
 ### 1.12. (NEW) Open a new terminal
 
-1. [Open a new `VS Code Terminal`](../appendix/vs-code.md#open-a-new-vs-code-terminal).
+1. [Open a new `VS Code Terminal`](../../wiki/vs-code.md#open-a-new-vs-code-terminal).
 
 ### 1.13. (NEW) Observe containers and services
 
 #### 1.13.1. (NEW) List running containers
 
-1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret ps
@@ -296,13 +296,13 @@ Complete these steps if you can't [connect to your VM](../appendix/vm.md#connect
 
 1. See logs for all services:
 
-   [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret logs
    ```
 
-2. [See logs for a specific service](../appendix/docker-compose.md#docker-compose-logs-for-a-specific-service):
+2. [See logs for a specific service](../../wiki/docker-compose.md#docker-compose-logs-for-a-specific-service):
 
    ```terminal
    docker compose --env-file .env.docker.secret logs postgres
@@ -314,16 +314,16 @@ Complete these steps if you can't [connect to your VM](../appendix/vm.md#connect
 
 1. Open in a browser: <http://127.0.0.1:42001/docs>.
 
-   You should see the [`Swagger UI`](../appendix/swagger.md#swagger-ui) page with the [API](../appendix/web-development.md#api) documentation.
+   You should see the [`Swagger UI`](../../wiki/swagger.md#swagger-ui) page with the [API](../../wiki/web-development.md#api) documentation.
 
 #### 1.14.2. (NEW) Set up `pgAdmin`
 
 > [!NOTE]
-> [`pgAdmin`](../appendix/pgadmin.md#what-is-pgadmin) takes 2-3 minutes to start after you have [started the services](#111-new-start-the-services).
+> [`pgAdmin`](../../wiki/pgadmin.md#what-is-pgadmin) takes 2-3 minutes to start after you have [started the services](#111-new-start-the-services).
 
-1. [Open `pgAdmin`](../appendix/pgadmin.md#open-pgadmin).
-2. [Add a server in `pgAdmin`](../appendix/pgadmin.md#add-a-server-in-pgadmin).
-3. [Browse the `interaction_logs` table](../appendix/pgadmin.md#browse-tables)
+1. [Open `pgAdmin`](../../wiki/pgadmin.md#open-pgadmin).
+2. [Add a server in `pgAdmin`](../../wiki/pgadmin.md#add-a-server-in-pgadmin).
+3. [Browse the `interaction_logs` table](../../wiki/pgadmin.md#browse-tables)
 
    You should see rows of data stored in the database.
 
@@ -342,8 +342,8 @@ Complete these steps if you can't [connect to your VM](../appendix/vm.md#connect
 
 ### 1.15. (NEW) Stop the services
 
-1. [Check that the current directory is `se-toolkit-lab-3`](../appendix/shell.md#check-the-current-directory-is-directory-name).
-2. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Check that the current directory is `se-toolkit-lab-3`](../../wiki/shell.md#check-the-current-directory-is-directory-name).
+2. [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret down
@@ -351,9 +351,9 @@ Complete these steps if you can't [connect to your VM](../appendix/vm.md#connect
 
 ### 1.16. (NEW) Add SSH key for the autochecker
 
-1. [Connect to your VM](../appendix/vm.md#connect-to-the-vm).
-2. [Create the `autochecker` user](../appendix/vm-autochecker.md#create-the-autochecker-user).
-3. [Add the instructor's SSH public key to the `autochecker` user](../appendix/vm-autochecker.md#add-an-ssh-public-key-to-the-autochecker-user):
+1. [Connect to your VM](../../wiki/vm.md#connect-to-the-vm).
+2. [Create the `autochecker` user](../../wiki/vm-autochecker.md#create-the-autochecker-user).
+3. [Add the instructor's SSH public key to the `autochecker` user](../../wiki/vm-autochecker.md#add-an-ssh-public-key-to-the-autochecker-user):
 
 ---
 
@@ -372,7 +372,7 @@ These enhancements can make your life easier:
 
 > [!NOTE]
 
-- `VS Code` - see the [shortcut](../appendix/vs-code.md#shortcut-go-back)
+- `VS Code` - see the [shortcut](../../wiki/vs-code.md#shortcut-go-back)
 - Browsers:
   - `Firefox`: `Alt+ArrowLeft`
   - Other browsers: google
@@ -381,7 +381,7 @@ These enhancements can make your life easier:
 
 A coding agent can help you write code, explain concepts, and debug issues.
 
-See [Coding agents](../appendix/coding-agents.md).
+See [Coding agents](../../wiki/coding-agents.md).
 
 <div style="display:flex;flex-wrap:wrap;gap:10px">
   <img alt="Qwen request" src="../images/tasks/setup/qwen-request.png" style="width:300px">
@@ -390,39 +390,39 @@ See [Coding agents](../appendix/coding-agents.md).
 
 ### 2.3. Set up the shell prompt
 
-`Starship` shows your current `Git` branch, status, and other useful info directly in your [shell prompt](../appendix/shell.md#shell-prompt) in almost any terminal, including the [`VS Code Terminal`](../appendix/vs-code.md#vs-code-terminal).
+`Starship` shows your current `Git` branch, status, and other useful info directly in your [shell prompt](../../wiki/shell.md#shell-prompt) in almost any terminal, including the [`VS Code Terminal`](../../wiki/vs-code.md#vs-code-terminal).
 
 Complete these steps:
 
 1. [Install `Starship`](https://github.com/starship/starship#-installation).
-2. [Open the `VS Code Terminal`](../appendix/vs-code.md#open-the-vs-code-terminal).
+2. [Open the `VS Code Terminal`](../../wiki/vs-code.md#open-the-vs-code-terminal).
 
    You should see something similar to this:
 
-   <img alt="Starship in the VS Code Terminal" src="../images/appendix/starship/terminal-prompt.png" style="width:400px"></img>
+   <img alt="Starship in the VS Code Terminal" src="../../wiki/images/starship/terminal-prompt.png" style="width:400px"></img>
 
 ### 2.4. Customize the `Source Control`
 
-1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
+1. [Open the `Source Control`](../../wiki/vs-code.md#open-the-source-control).
 2. Click three dots to the right of `SOURCE CONTROL`.
 3. Put checkmarks only near `Changes` and `GitLens` to see only these views.
 
-   <img alt="Changes and GitLens" src="../images/appendix/vs-code/source-control-allowed-views.png" style="width:400px"></img>
+   <img alt="Changes and GitLens" src="../../wiki/images/vs-code/source-control-allowed-views.png" style="width:400px"></img>
 
 ### 2.5. Get familiar with `GitLens`
 
-[`GitLens`](../appendix/gitlens.md) helps you work with `Git` in `VS Code`.
+[`GitLens`](../../wiki/gitlens.md) helps you work with `Git` in `VS Code`.
 
 Complete these steps:
 
-1. [See all branches](../appendix/gitlens.md#see-all-branches)
-2. [Look at the commit graph](../appendix/gitlens.md#look-at-the-commit-graph)
-3. [Inspect the current branch](../appendix/gitlens.md#inspect-the-current-branch)
-4. [Inspect the remotes](../appendix/gitlens.md#inspect-the-remotes)
+1. [See all branches](../../wiki/gitlens.md#see-all-branches)
+2. [Look at the commit graph](../../wiki/gitlens.md#look-at-the-commit-graph)
+3. [Inspect the current branch](../../wiki/gitlens.md#inspect-the-current-branch)
+4. [Inspect the remotes](../../wiki/gitlens.md#inspect-the-remotes)
 
 ### 2.6. Create a label for tasks
 
-[Labels](../appendix/github.md#label) help you filter and organize issues.
+[Labels](../../wiki/github.md#label) help you filter and organize issues.
 
 With a `task` label, you can see in one view all issues created for lab tasks.
 
@@ -431,15 +431,15 @@ With a `task` label, you can see in one view all issues created for lab tasks.
 
 Complete these steps:
 
-1. [Create](../appendix/github.md#create-a-label) the `task` label.
-2. [Add the label to issues](../appendix/github.md#add-a-label-to-issues).
-3. [See all issues with the label](../appendix/github.md#see-all-issues-with-a-label).
+1. [Create](../../wiki/github.md#create-a-label) the `task` label.
+2. [Add the label to issues](../../wiki/github.md#add-a-label-to-issues).
+3. [See all issues with the label](../../wiki/github.md#see-all-issues-with-a-label).
 
 ### 2.7. View `Markdown` files in `VS Code`
 
 If you want to view [`README.md`](../../README.md) and other `Markdown` files in `VS Code` instead of on `GitHub`:
 
-1. [Install recommended `VS Code` extensions](../appendix/vs-code.md#install-recommended-extensions).
-2. [Open the file](../appendix/vs-code.md#open-the-file):
+1. [Install recommended `VS Code` extensions](../../wiki/vs-code.md#install-recommended-extensions).
+2. [Open the file](../../wiki/vs-code.md#open-the-file):
    [`README.md`](../../README.md).
-3. [Open the `Markdown` preview](../appendix/vs-code.md#open-the-markdown-preview).
+3. [Open the `Markdown` preview](../../wiki/vs-code.md#open-the-markdown-preview).

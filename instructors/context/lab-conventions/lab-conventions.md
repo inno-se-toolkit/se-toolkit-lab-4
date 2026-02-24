@@ -313,7 +313,7 @@ Title: `[Task] <Task title>`
 Write each command for the `VS Code Terminal` in a multi-line code block with the type `terminal`. Always precede with a link to the appendix:
 
 ~~~markdown
-1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    <command>
@@ -323,7 +323,7 @@ Write each command for the `VS Code Terminal` in a multi-line code block with th
 ### 4.3. Command Palette commands
 
 ~~~markdown
-1. [Run using the `Command Palette`](../../appendix/vs-code.md#run-a-command-using-the-command-palette):
+1. [Run using the `Command Palette`](../../../wiki/vs-code.md#run-a-command-using-the-command-palette):
    `<command>`
 ~~~
 
@@ -367,7 +367,7 @@ Don't provide a little ToC when all lists of items are short.
 - Appendix files can and should cross-reference other appendix files: `[concept name](./other-appendix.md#<section>)`.
 - Use relative paths for all links.
 - Provide a link to each file that exists in the repo.
-- Link format for appendix references from tasks: `[concept name](../../appendix/<file>.md#<section>)`.
+- Link format for appendix references from tasks: `[concept name](../../../wiki/<file>.md#<section>)`.
 - Tasks can reference steps in other tasks: `[Run the web server](./task-1.md#8-run-the-web-server)`.
 - **Compound phrases:** When a tool name and a concept naturally form a single phrase (e.g., `` `GitHub` pull request ``, `` `VS Code` Terminal ``), link the whole phrase to the concept's section rather than creating two adjacent links. Good: `` [`GitHub` pull request](./github.md#pull-request) ``. Bad: `` [`GitHub`](./github.md) [pull request](./github.md#pull-request) ``.
 
@@ -587,7 +587,7 @@ Structure:
 # `Git workflow` for tasks
 
 > [!NOTE]
-> This procedure is based on the [`GitHub flow`](../appendix/github.md#github-flow).
+> This procedure is based on the [`GitHub flow`](../../wiki/github.md#github-flow).
 
 Outline:
 

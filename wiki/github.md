@@ -163,8 +163,8 @@ A repository owner can [provide issue forms](https://docs.github.com/en/communit
 
 Examples of issue forms:
 
-- `Lab Task` defined in [`.github/ISSUE_TEMPLATE/01-task.yml`](../../.github/ISSUE_TEMPLATE/01-task.yml)
-- `Bug Report` defined in [`.github/ISSUE_TEMPLATE/01-task.yml`](../../.github/ISSUE_TEMPLATE/01-task.yml)
+- `Lab Task` defined in [`.github/ISSUE_TEMPLATE/01-task.yml`](../.github/ISSUE_TEMPLATE/01-task.yml)
+- `Bug Report` defined in [`.github/ISSUE_TEMPLATE/01-task.yml`](../.github/ISSUE_TEMPLATE/01-task.yml)
 
 ### Create an issue
 
@@ -172,7 +172,7 @@ Examples of issue forms:
 2. Go to the repo where you want to create an issue.
 3. Click `Issues`.
 
-   <img alt="GitHub Issues" src="../images/appendix/github/issues.png" style="width:400px"></img>
+   <img alt="GitHub Issues" src="./images/github/issues.png" style="width:400px"></img>
 4. Click `New Issue`.
 5. Click one of the suggested [issue forms](#issue-form).
 6. In the `Add a title` input field, edit the title.
@@ -288,7 +288,7 @@ A [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track
    You should see the `Issues` tab.
    Example:
 
-   <img alt="GitHub Issues" src="../images/appendix/github/issues-tab.png" style="width:400px"></img>
+   <img alt="GitHub Issues" src="./images/github/issues-tab.png" style="width:400px"></img>
 
 ### Add a collaborator
 
@@ -340,7 +340,7 @@ A [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track
     - `repo`
     - `workflow`
 
-    <img alt="GitHub Issues" src="../images/appendix/github/pat-classic-permissions.png" style="width:400px"></img>
+    <img alt="GitHub Issues" src="./images/github/pat-classic-permissions.png" style="width:400px"></img>
 
 13. Scroll to the bottom of the page.
 14. Click `Generate token`.
