@@ -7,6 +7,7 @@
 - [`<repo-url>`](#repo-url)
 - [`<repo-owner-github-username>`](#repo-owner-github-username)
 - [`<your-fork-url>`](#your-fork-url)
+- [`<db-name>`](#db-name)
 
 ## `<your-github-username>`
 
@@ -27,3 +28,7 @@ See [`Repository owner`](./github.md#repository-owner) in the [`GitHub` wiki](./
 ## `<your-fork-url>`
 
 See [`<your-fork-url>`](./github.md#your-fork-url) in the [`GitHub` wiki](./github.md).
+
+## `<db-name>`
+
+See [`<db-name>`](./database.md#db-name) in the [`Database` wiki](./database.md).

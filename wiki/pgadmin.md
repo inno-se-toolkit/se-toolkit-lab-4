@@ -44,11 +44,11 @@ Docs:
 2. Right-click `Servers` in the left panel.
 3. Click `Register` -> `Server...`.
 4. In the `General` tab:
-   - Name: `lab3`.
+   - Name: [`<db-name>`](./database.md#db-name).
 5. In the `Connection` tab:
    - Host name/address: `postgres` (the [service](./docker.md#service) name defined in [`docker-compose.yml`](../docker-compose.yml)).
    - Port: `5432`.
-   - Maintenance database: the value of `POSTGRES_DB` (default: `lab3`).
+   - Maintenance database: `<db-name>`.
    - Username: the value of `POSTGRES_USER` (default: `postgres`).
    - Password: the value of `POSTGRES_PASSWORD` (default: `postgres`).
 6. Click `Save`.
@@ -61,19 +61,19 @@ Docs:
 ## Browse tables
 
 1. [Add a server](#add-a-server-in-pgadmin) if you haven't already.
-2. Expand: `Servers` -> `lab3` -> `Databases` -> `lab3` -> `Schemas` -> `public` -> `Tables`.
+2. Expand: `Servers` -> [`<db-name>`](./database.md#db-name) -> `Databases` -> `<db-name>` -> `Schemas` -> `public` -> `Tables`.
 3. Right-click a table -> `View/Edit Data` -> `All Rows`.
 
 ## Inspect columns
 
 1. [Add a server](#add-a-server-in-pgadmin) if you haven't already.
-2. Expand: `Servers` -> `lab3` -> `Databases` -> `lab3` -> `Schemas` -> `public` -> `Tables`.
+2. Expand: `Servers` -> [`<db-name>`](./database.md#db-name) -> `Databases` -> `<db-name>` -> `Schemas` -> `public` -> `Tables`.
 3. Right-click a table -> `Properties` -> `Columns`.
 
 ## Run a query
 
 1. [Add a server](#add-a-server-in-pgadmin) if you haven't already.
-2. Right-click the `lab3` database.
+2. Right-click the [`<db-name>`](./database.md#db-name) database.
 3. Click `Query Tool`.
 4. Write your SQL query, e.g.:
 

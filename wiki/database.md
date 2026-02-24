@@ -9,6 +9,7 @@
 - [`SQL`](#sql)
 - [Database schema](#database-schema)
 - [Resetting the database](#resetting-the-database)
+- [`<db-name>`](#db-name)
 
 ## What is a database
 
@@ -51,3 +52,9 @@ You can [inspect columns](./pgadmin.md#inspect-columns) of a table in [`pgAdmin`
 ## Resetting the database
 
 See [`Resetting the database`](./docker-postgres.md#resetting-the-database).
+
+## `<db-name>`
+
+`<db-name>` is the name of the `PostgreSQL` database.
+
+It is set by the `POSTGRES_DB` variable in `.env.docker.secret` (default: `lab-4`).
