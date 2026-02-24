@@ -90,12 +90,13 @@ We'll refer to the new branch as `<task-branch-name>`.
 
 ## Create a PR to the `main` branch in your fork
 
-[Create a PR](../appendix/github.md#create-a-pull-request) replacing:
+[Create a PR](../appendix/github.md#create-a-pull-request) from the branch [`<task-branch-name>`](#task-branch-name) to the branch `<main>`.
+Placeholder values:
 
-- `<repo-owner-github-username>` with `inno-se-toolkit`;
-- `<repo-name>` with `se-toolkit-lab-3`;
-- `<your-github-username>` with your `GitHub` username;
-- `<branch-name>` with the name of the branch that you want to merge in the PR.
+- `<repo-name>` is `se-toolkit-lab-3`.
+- `<branch-name>` is `<task-branch-name>`.
+- [`<repo-owner-github-username>`] is `inno-se-toolkit`.
+- [`<your-github-username>`](../appendix/github.md#your-github-username) is your `GitHub` username.
 
 ## Get a PR review
 
