@@ -19,6 +19,7 @@ Outline:
 - [Pull changes from `origin/main`](#pull-changes-from-originmain)
 - [Pull changes from `origin/main` and rebase](#pull-changes-from-originmain-and-rebase)
 - [Switch to a new branch](#switch-to-a-new-branch)
+  - [`<task-branch-name>`](#task-branch-name)
 - [Edit files](#edit-files)
 - [Commit](#commit)
 - [(Optional) Undo commits](#optional-undo-commits)
@@ -63,7 +64,9 @@ Complete the following steps:
 
 [Create a new branch and switch to it](../appendix/git-vscode.md#switch-to-a-new-branch).
 
-The name of this branch is referred to as `<branch-name>` throughout the docs.
+### `<task-branch-name>`
+
+We'll refer to the new branch as `<task-branch-name>`.
 
 ## Edit files
 
@@ -71,7 +74,7 @@ The name of this branch is referred to as `<branch-name>` throughout the docs.
 
 ## Commit
 
-[Commit changes](../appendix/git-vscode.md#commit-changes) to the `<branch-name>` to complete the task.
+[Commit changes](../appendix/git-vscode.md#commit-changes) to the [`<task-branch-name>`](#task-branch-name) to complete the task.
 
 ## (Optional) Undo commits
 
