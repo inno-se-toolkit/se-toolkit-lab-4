@@ -34,7 +34,7 @@ Co-Authored-By: <your current model name> <noreply@anthropic.com>
 
 ## Examples from this project
 
-- `feat(docs): add Service section to Docker appendix and link from setup`
+- `feat(docs): add Service section to Docker wiki and link from setup`
 - `fix(docs): replace TODO with explanation of services and containers`
 - `fix(docs): display Qwen images side by side with responsive wrap`
 - `feat(docs): add screenshots`

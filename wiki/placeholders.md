@@ -10,20 +10,20 @@
 
 ## `<your-github-username>`
 
-See [`<your-github-username>`](./github.md#your-github-username) in the [`GitHub`](./github.md) appendix.
+See [`<your-github-username>`](./github.md#your-github-username) in the [`GitHub` wiki](./github.md).
 
 ## `<repo-name>`
 
-See [`<repo-name>`](./github.md#repo-name) in the [`GitHub`](./github.md) appendix.
+See [`<repo-name>`](./github.md#repo-name) in the [`GitHub` wiki](./github.md).
 
 ## `<repo-url>`
 
-See [`<repo-url>`](./github.md#repo-url) in the [`GitHub`](./github.md) appendix.
+See [`<repo-url>`](./github.md#repo-url) in the [`GitHub` wiki](./github.md).
 
 ## `<repo-owner-github-username>`
 
-See [`Repository owner`](./github.md#repository-owner) in the [`GitHub`](./github.md) appendix.
+See [`Repository owner`](./github.md#repository-owner) in the [`GitHub` wiki](./github.md).
 
 ## `<your-fork-url>`
 
-See [`<your-fork-url>`](./github.md#your-fork-url) in the [`GitHub`](./github.md) appendix.
+See [`<your-fork-url>`](./github.md#your-fork-url) in the [`GitHub` wiki](./github.md).

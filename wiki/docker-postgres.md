@@ -7,7 +7,7 @@
 
 ## What is `PostgreSQL` with `Docker`
 
-This appendix covers managing the `PostgreSQL` [container](./docker.md#container) in this project.
+This wiki covers managing the `PostgreSQL` [container](./docker.md#container) in this project.
 
 See also:
 

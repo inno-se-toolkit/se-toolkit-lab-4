@@ -30,12 +30,12 @@
   - [Key rules for setup](#key-rules-for-setup)
 - [6. `wiki/git-workflow.md` — Reusable Git workflow](#6-wikigit-workflowmd--reusable-git-workflow)
   - [Key rules for git workflow](#key-rules-for-git-workflow)
-- [7. Appendix documents (`lab/appendix/`)](#7-appendix-documents-labappendix)
+- [7. Wiki documents (`wiki/`)](#7-wiki-documents-wiki)
   - [Purpose](#purpose)
   - [Naming](#naming)
-  - [Structure of an appendix file](#structure-of-an-appendix-file)
+  - [Structure of an wiki file](#structure-of-an-wiki-file)
   - [Key rules](#key-rules)
-  - [Standard appendix topics to include](#standard-appendix-topics-to-include)
+  - [Standard wiki topics to include](#standard-wiki-topics-to-include)
 - [8. GitHub templates](#8-github-templates)
   - [Issue templates](#issue-templates)
     - [`01-task.yml` — Lab Task](#01-taskyml--lab-task)
@@ -60,7 +60,7 @@
   - [12.10. Notes explain "why"](#1210-notes-explain-why)
   - [12.11. Three kinds of task endings](#1211-three-kinds-of-task-endings)
   - [12.12. Cross-task references](#1212-cross-task-references)
-  - [12.13. Appendix section structure pattern](#1213-appendix-section-structure-pattern)
+  - [12.13. Wiki section structure pattern](#1213-wiki-section-structure-pattern)
   - [12.14. Placeholder-based implementation templates](#1214-placeholder-based-implementation-templates)
   - [12.15. Seed project design](#1215-seed-project-design)
   - [12.16. Holistic task design](#1216-holistic-task-design)
@@ -93,7 +93,7 @@ Create the following directory and file layout. Items marked *(conditional)* are
 │   │   └── optional/
 │   │       ├── task-1.md
 │   │       └── ...
-│   ├── appendix/                      # Reference docs for tools & concepts
+│   ├── wiki/                      # Reference docs for tools & concepts
 │   │   ├── vs-code.md
 │   │   ├── git.md
 │   │   ├── git-vscode.md
@@ -106,7 +106,7 @@ Create the following directory and file layout. Items marked *(conditional)* are
 │   │   ├── formatting.md
 │   │   └── todo.md
 │   └── images/                        # Screenshots and diagrams
-│       ├── appendix/
+│       ├── wiki/
 │       │   ├── vs-code/
 │       │   ├── gitlens/
 │       │   └── ...
@@ -310,7 +310,7 @@ Title: `[Task] <Task title>`
 
 ### 4.2. Terminal commands
 
-Write each command for the `VS Code Terminal` in a multi-line code block with the type `terminal`. Always precede with a link to the appendix:
+Write each command for the `VS Code Terminal` in a multi-line code block with the type `terminal`. Always precede with a link to the wiki:
 
 ~~~markdown
 1. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
@@ -363,11 +363,11 @@ Don't provide a little ToC when all lists of items are short.
 
 ### 4.8. Links and cross-references
 
-- Link to appendix sections whenever a concept or tool is mentioned for the first time in a section. Don't link when it's mentioned second time. This applies to both task docs and appendix docs. This ensures readers who jump to a specific section can still find relevant references.
-- Appendix files can and should cross-reference other appendix files: `[concept name](./other-appendix.md#<section>)`.
+- Link to wiki sections whenever a concept or tool is mentioned for the first time in a section. Don't link when it's mentioned second time. This applies to both task docs and wiki docs. This ensures readers who jump to a specific section can still find relevant references.
+- Wiki files can and should cross-reference other wiki files: `[concept name](./other-wiki.md#<section>)`.
 - Use relative paths for all links.
 - Provide a link to each file that exists in the repo.
-- Link format for appendix references from tasks: `[concept name](../../../wiki/<file>.md#<section>)`.
+- Link format for wiki references from tasks: `[concept name](../../../wiki/<file>.md#<section>)`.
 - Tasks can reference steps in other tasks: `[Run the web server](./task-1.md#8-run-the-web-server)`.
 - **Compound phrases:** When a tool name and a concept naturally form a single phrase (e.g., `` `GitHub` pull request ``, `` `VS Code` Terminal ``), link the whole phrase to the concept's section rather than creating two adjacent links. Good: `` [`GitHub` pull request](./github.md#pull-request) ``. Bad: `` [`GitHub`](./github.md) [pull request](./github.md#pull-request) ``.
 
@@ -393,7 +393,7 @@ Use GitHub-flavored Markdown alerts:
 Use HTML `<img>` tags with a `style` attribute for width control:
 
 ```markdown
-<img alt="Description" src="../../images/appendix/vs-code/example.png" style="width:400px"></img>
+<img alt="Description" src="../../images/wiki/vs-code/example.png" style="width:400px"></img>
 ```
 
 ### 4.11. Collapsible hints and solutions
@@ -519,7 +519,7 @@ Bad: `` Open <http://127.0.0.1:5050> in a browser. ``
 
 Good: `` Open <pgadmin-url> in a browser. ``
 
-Define every placeholder in `lab/appendix/placeholders.md`. Each placeholder gets its own section that links to its definition in the relevant appendix doc.
+Define every placeholder in `wiki/placeholders.md`. Each placeholder gets its own section that links to its definition in the relevant wiki doc.
 
 ----
 
@@ -569,7 +569,7 @@ These enhancements can make your life easier:
 - Includes: forking the repo, cloning, installing tools, configuring the environment.
 - Separate required steps from optional enhancements with `---`.
 - Partner setup is always step 1 (students review each other's PRs).
-- Each step links to appendix docs for detailed instructions.
+- Each step links to wiki docs for detailed instructions.
 
 ----
 
@@ -605,25 +605,25 @@ Outline:
 
 ### Key rules for git workflow
 
-- Every section links to the relevant appendix doc for the detailed how-to.
+- Every section links to the relevant wiki doc for the detailed how-to.
 - Task documents reference this file via `[`Git workflow`](../git-workflow.md)`.
 - The workflow is fork-based: students fork the course repo, work in branches, create PRs to their own fork's `main`.
 - PR review rules are included: reviewer checks acceptance criteria, leaves comments, approves.
 
 ----
 
-## 7. Appendix documents (`lab/appendix/`)
+## 7. Wiki documents (`wiki/`)
 
 ### Purpose
 
-Appendix files are **reference documents** — one file per tool or concept. They are linked from task docs whenever a concept or operation is first mentioned.
+Wiki files are **reference documents** — one file per tool or concept. They are linked from task docs whenever a concept or operation is first mentioned.
 
 ### Naming
 
 - One file per tool/concept: `vs-code.md`, `git.md`, `docker.md`, `python.md`, `shell.md`, etc.
 - Use lowercase with hyphens.
 
-### Structure of an appendix file
+### Structure of an wiki file
 
 ```markdown
 # <Tool or Concept Name>
@@ -651,18 +651,18 @@ Docs:
 
 ### Key rules
 
-- Each section is self-contained and linkable (task docs link to `appendix/<file>.md#<section>`).
-- Start every appendix file with a `## What is <Tool>` section that defines the tool/concept in 1–3 sentences and includes a link to official docs.
+- Each section is self-contained and linkable (task docs link to `wiki/<file>.md#<section>`).
+- Start every wiki file with a `## What is <Tool>` section that defines the tool/concept in 1–3 sentences and includes a link to official docs.
 - Provide both explanation and how-to instructions.
-- Link to other appendix sections whenever a concept appears for the first time in a section (see [4.8. Links and cross-references](#48-links-and-cross-references)).
+- Link to other wiki sections whenever a concept appears for the first time in a section (see [4.8. Links and cross-references](#48-links-and-cross-references)).
 - Use `<h2>Table of contents</h2>` (HTML) so the ToC heading itself doesn't appear in the auto-generated ToC.
 - When an operation can be done multiple ways, list them as options: "Use any of the following methods:"
 - Vendor instructions that aren't good enough anywhere else (e.g., rewrite unclear official docs).
 - Provide fallback methods when one method may not work for all students.
 
-### Standard appendix topics to include
+### Standard wiki topics to include
 
-Depending on the lab, consider creating appendix files for:
+Depending on the lab, consider creating wiki files for:
 
 - `vs-code.md` — VS Code basics: terminal, Command Palette, editor, extensions, layout.
 - `git.md` — Git concepts: commits, branches, merging, rebasing.
@@ -682,7 +682,7 @@ Depending on the lab, consider creating appendix files for:
 - `vm.md` — Virtual machines: creation, access, IP addresses.
 - `operating-system.md` — OS concepts.
 - `computer-networks.md` — Networking basics.
-- `placeholders.md` — Index of all placeholders used in the lab, each linking to its definition in the relevant appendix doc.
+- `placeholders.md` — Index of all placeholders used in the lab, each linking to its definition in the relevant wiki doc.
 
 ----
 
@@ -901,7 +901,7 @@ This prevents overlap and ensures each task has a unique learning objective.
 ### 12.3. High-level instructions with low-level fallbacks
 
 - Write high-level instructions in the task document.
-- Link to appendix sections for detailed, step-by-step breakdowns.
+- Link to wiki sections for detailed, step-by-step breakdowns.
 - This way, experienced students move fast while beginners can follow detailed guides.
 
 ### 12.4. Provide fallback methods
@@ -994,9 +994,9 @@ Later tasks can reference steps from earlier tasks instead of repeating them:
 1. [Run the web server](./task-1.md#8-run-the-web-server).
 ```
 
-### 12.13. Appendix section structure pattern
+### 12.13. Wiki section structure pattern
 
-Each appendix section for a VS Code feature or tool should follow this pattern:
+Each wiki section for a VS Code feature or tool should follow this pattern:
 
 ```markdown
 ## <Feature Name>
@@ -1204,7 +1204,7 @@ Replace @johndoe with @<your-username> where
 - [ ] Every terminal command has a `` [Run using the `VS Code Terminal`] `` link prefix.
 - [ ] Every Command Palette command has a `` [Run using the `Command Palette`] `` link prefix.
 - [ ] All cross-references use relative paths and are valid.
-- [ ] Appendix docs exist for every tool/concept linked from tasks.
+- [ ] Wiki docs exist for every tool/concept linked from tasks.
 - [ ] Issue templates (`01-task.yml`, `02-bug-report.yml`) are configured.
 - [ ] PR template has a checklist.
 - [ ] `.vscode/settings.json` and `.vscode/extensions.json` are configured.
