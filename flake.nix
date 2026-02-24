@@ -20,9 +20,22 @@
         in
         {
           devshells.default = {
+            commandGroups = {
+              front-tools = [
+                pkgs.nodejs_22
+              ];
+              back-tools = [
+                pkgs.uv
+              ];
+            };
+          };
+          devshells.instructors = {
             bash.extra = ''
               export ROOT_DIR="$(pwd)"
             '';
+            packages = [
+              pkgs.nodejs_22
+            ];
             commandGroups = {
               lint = [
                 {

@@ -56,15 +56,30 @@ Title: `[Task] Add Front-end`
 1. [Open a new `VS Code Terminal`](../../../wiki/vs-code.md#open-a-new-vs-code-terminal).
 2. Navigate to the front-end project directory.
 
-   <!-- TODO: add path to front-end directory once finalized -->
+   ```terminal
+   cd frontend
+   ```
 
-3. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+3. Configure the environment. Complete the following steps:
+
+   1. [Open the file](../../../wiki/vs-code.md#open-the-file) [`frontend/.env.example`](../../../frontend/.env.example).
+   2. Copy it to `frontend/.env`.
+   3. Fill in `VITE_API_URL` with your API URL, for example `http://<your-vm-ip-address>:<api-port>`.
+   4. Fill in `VITE_API_TOKEN` with your [`<api-token>`](../../../wiki/web-development.md#api-token).
+
+4. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   npm install
+   ```
+
+5. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    npm run dev
    ```
 
-4. Open the URL shown in the terminal output in a browser.
+6. Open the URL shown in the terminal output in a browser.
 
    The output should be similar to this:
 
@@ -72,11 +87,11 @@ Title: `[Task] Add Front-end`
    Local: http://localhost:5173/
    ```
 
-5. Verify that the front-end loads and displays data from the API.
+7. Verify that the front-end loads and displays data from the API.
 
 #### 1.3.2. Edit a source file and observe hot reload
 
-1. [Open the file](../../../wiki/vs-code.md#open-the-file) <!-- TODO: add path to a front-end source file once finalized -->.
+1. [Open the file](../../../wiki/vs-code.md#open-the-file) [`frontend/src/App.jsx`](../../../frontend/src/App.jsx).
 2. Make a small visible change, for example change a heading text.
 3. Save the file.
 4. Observe that the browser updates automatically without a page refresh.
@@ -120,8 +135,11 @@ Title: `[Task] Add Front-end`
 
    Add the following block to the `Caddyfile`:
 
-   ```text
-   <!-- TODO: provide a working Caddyfile snippet that serves dist/ as static files -->
+   ```caddyfile
+   :<frontend-port> {
+       root * /var/www/frontend/dist
+       file_server
+   }
    ```
 
 3. Reload `Caddy`:
@@ -146,7 +164,7 @@ Title: `[Task] Add Front-end`
 1. Open the AI agent in the front-end project directory.
 2. Give it this prompt:
 
-   > "Add a `<!-- TODO: <COLUMN_NAME> -->` column to the data table. The API already returns this field. Add it to the table header and display the value in each row."
+   > "Add a `description` column to the data table. The API already returns this field. Add it to the table header and display the value in each row."
 
 3. Wait for the agent to make the changes.
 
@@ -177,7 +195,7 @@ Title: `[Task] Add Front-end`
    Use the following commit message:
 
    ```text
-   feat: add <!-- TODO: <COLUMN_NAME> --> column to the front-end table
+   feat: add description column to the front-end table
    ```
 
 2. [Create a PR](../../../wiki/git-workflow.md#create-a-pr-to-the-main-branch-in-your-fork) with your changes.
@@ -190,6 +208,6 @@ Title: `[Task] Add Front-end`
 - [ ] Issue has the correct title.
 - [ ] The front-end runs locally with `npm run dev`.
 - [ ] The production build is deployed on the VM and served by `Caddy`.
-- [ ] The `<!-- TODO: <COLUMN_NAME> -->` column appears in the data table in both the dev and production builds.
+- [ ] The `description` column appears in the data table in both the dev and production builds.
 - [ ] PR is approved.
 - [ ] PR is merged.

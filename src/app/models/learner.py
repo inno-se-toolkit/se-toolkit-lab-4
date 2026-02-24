@@ -8,7 +8,7 @@ from sqlmodel import Field, SQLModel
 class Learner(SQLModel, table=True):
     """A learner in the learning management system."""
 
-    __tablename__ = "learners"
+    __tablename__ = "learner"
 
     id: int | None = Field(default=None, primary_key=True)
     name: str

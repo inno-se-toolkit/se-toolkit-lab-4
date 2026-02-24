@@ -17,8 +17,9 @@
 - [16. `CONTRIBUTORS.md`](#16-contributorsmd)
 - [17. Checklist before publishing](#17-checklist-before-publishing)
 - [18. Security integration pattern](#18-security-integration-pattern)
+- [19. Database naming conventions](#19-database-naming-conventions)
 
-Full source: `instructors/context/lab-conventions/lab-conventions.md` §1, §2, §5, §6, §8–11, §13–14, §16–18
+Full source: `instructors/context/lab-conventions/lab-conventions.md` §1, §2, §5, §6, §8–11, §13–14, §16–19
 
 Use this file when creating or restructuring a lab repository.
 
@@ -438,3 +439,17 @@ Only include when the lab involves API authentication or server hardening.
 2. **Natural discovery.** Place the API key requirement on endpoints students use in the exploration task. Auth is discovered organically, not announced upfront.
 3. **Environment-based configuration.** Key lives in `.env.secret` (local) and `.env.docker.secret` (Docker). Students learn to set different keys per environment.
 4. **Server hardening (optional advanced task).** For deployment labs: non-root SSH user, firewall (`ufw`), `fail2ban`, disable root login and password authentication.
+
+## 19. Database naming conventions
+
+Only include when the lab has a relational database layer.
+
+Name tables according to their role in the schema:
+
+- **Entity tables** — singular noun (e.g., `learner`, `item`).
+- **Relationship tables** — verb (e.g., `interacts`).
+
+| Role | Convention | Example |
+|------|-----------|---------|
+| Entity | singular noun | `learner`, `item` |
+| Relationship | verb | `interacts` |

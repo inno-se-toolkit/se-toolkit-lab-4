@@ -79,8 +79,12 @@ cmd = "ruff format"
 ## Run tests
 
 [tool.poe.tasks.test]
-help = "Run pytest"
-cmd = "pytest"
+help = "Run unit tests"
+cmd = "pytest tests/unit"
+
+[tool.poe.tasks.test-e2e]
+help = "Run end-to-end tests against the deployed API"
+cmd = "pytest tests/e2e"
 
 [tool.pyright]
 include = ["src", "tests"]

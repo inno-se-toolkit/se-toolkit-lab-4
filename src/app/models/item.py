@@ -1,9 +1,8 @@
 """Models for course items."""
 
 from datetime import datetime, timezone
-from typing import Any, final
+from typing import Any
 
-from pydantic import BaseModel
 from sqlalchemy import Column
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlmodel import Field, SQLModel
@@ -13,7 +12,7 @@ from sqlmodel import Field, SQLModel
 # Database models
 # ===
 #
-# These [`SQLModel`](https://sqlmodel.tiangolo.com/) classes map to the `items`
+# These [`SQLModel`](https://sqlmodel.tiangolo.com/) classes map to the `item`
 # PostgreSQL table. `SQLModel` combines SQLAlchemy (database ORM) with
 # Pydantic (data validation) in a single class hierarchy.
 #
@@ -27,17 +26,19 @@ from sqlmodel import Field, SQLModel
 class ItemRecord(SQLModel, table=True):
     """A row in the items table."""
 
-    __tablename__ = "items"
+    __tablename__ = "item"
 
     id: int | None = Field(default=None, primary_key=True)
     type: str = "step"
-    parent_id: int | None = Field(default=None, foreign_key="items.id")
+    parent_id: int | None = Field(default=None, foreign_key="item.id")
     title: str
     description: str = ""
     attributes: dict[str, Any] = Field(
         default_factory=dict, sa_column=Column(JSONB, nullable=False)
     )
-    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc).replace(tzinfo=None))
+    created_at: datetime = Field(
+        default_factory=lambda: datetime.now(timezone.utc).replace(tzinfo=None)
+    )
 
 
 class ItemCreate(SQLModel):
@@ -54,101 +55,3 @@ class ItemUpdate(SQLModel):
 
     title: str
     description: str = ""
-
-
-# ===
-# Domain hierarchy
-# ===
-#
-# The classes below model the same items as the database table above,
-# but as a **domain model** — a rich Python class hierarchy.
-#
-# The database stores all items in one flat table (with a `type` discriminator
-# and a `parent_id` foreign key). The domain model expresses the same structure
-# using inheritance, where each item kind is its own class with kind-specific fields.
-#
-# This separation is common in real applications and is known as the
-# [object-relational impedance mismatch](https://en.wikipedia.org/wiki/Object%E2%80%93relational_impedance_mismatch).
-
-# ===
-
-# This is an example of [inheritance](https://docs.python.org/3/tutorial/classes.html#inheritance).
-# Inheritance is a [mechanism in object-oriented programming](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))
-# that lets you create a class (child) based on another class (parent)
-# and modify some implementation details.
-#
-# Here, `BaseItem` inherits properties of `BaseModel`,
-# a fundamental class in [`pydantic`](https://docs.pydantic.dev/latest/concepts/models/)
-
-
-class BaseItem(BaseModel):
-    """A node in the course tree structure.
-
-    Nodes form a tree hierarchy representing course content:
-    course -> labs -> tasks -> steps.
-
-    Attributes:
-        id: Unique identifier for this item.
-        type: The kind of item (e.g., 'course', 'lab', 'task', 'step').
-        parent_id: The id of the parent item, or None for root items.
-        title: Title of the item.
-        description: A longer description of the item.
-        created_at: When the item was created.
-    """
-
-    id: int
-    type: str
-    parent_id: int | None = None
-    title: str
-    description: str = ""
-    created_at: datetime | None = None
-
-
-# It should be possible to use (objects) of the child class
-# where objects of its parent class can so that the properties
-# of the program that hold when using objects of the parent class
-# also hold when using the objects of the child class.
-#
-# This is called LSP or [Liskov Substitution Principle](https://yakhyo.github.io/solid-python/solid_python/lsp/).
-# It's one of the [SOLID](https://en.wikipedia.org/wiki/SOLID) principles.
-#
-# `pydantic`'s `BaseModel` provides multiple functions that work with objects
-# of the class `BaseModel`. `BaseItem` follows the LSP and therefore can be
-# used with all those functions and so that these functions work correctly.
-
-# ===
-
-# Here is another example of inheritance.
-#
-# Here, we inherit from the `BaseItem` class.
-# We keep the common fields of the `BaseItem` class such as `id` and `type`.
-# We also add new fields such as `steps` in the `Task`.
-#
-# We can add different fields in different classes
-# although they all inherit from the same `BaseItem`.
-
-
-@final
-class Step(BaseItem):
-    pass
-
-
-@final
-class Task(BaseItem):
-    steps: list[Step] = []
-
-
-@final
-class Lab(BaseItem):
-    start: datetime | None = None
-    finish: datetime | None = None
-    tasks: list[Task] = []
-
-
-@final
-class Course(BaseItem):
-    instructors: list[str] | None = None
-    start: datetime | None = None
-    finish: datetime | None = None
-    labs: list[Lab] = []
-

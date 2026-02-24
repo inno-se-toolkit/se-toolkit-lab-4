@@ -67,18 +67,18 @@ Title: `[Task] Back-end Testing`
    The output should be similar to this:
 
    ```terminal
-   ===================== N passed in X.XXs =====================
+   ===================== 3 passed in X.XXs =====================
    ```
 
 #### 1.3.2. Add a new unit test
 
-<!-- TODO: specify the exact boundary-value case and the test file path once the seed code is finalized -->
-
 1. [Open the file](../../../wiki/vs-code.md#open-the-file):
-   [`tests/unit/<test-file>.py`](../../../tests/).
+   [`tests/unit/test_interactions.py`](../../../tests/unit/test_interactions.py).
 2. Add a new unit test that targets the following boundary-value case:
 
-   `<!-- TODO: describe the boundary-value case -->`
+   An interaction where `item_id` and `learner_id` are different values — for example, `item_id=1` and `learner_id=2`. When filtering by `item_id=1`, this interaction should appear in the results.
+
+   Name the test `test_filter_excludes_interaction_with_different_learner_id`.
 
 3. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -91,31 +91,41 @@ Title: `[Task] Back-end Testing`
    The output should be similar to this:
 
    ```terminal
-   FAILED tests/unit/<test-file>.py::<test-name> - <assertion error>
+   FAILED tests/unit/test_interactions.py::test_filter_excludes_interaction_with_different_learner_id - AssertionError: assert 0 == 1
    ```
 
    This line means the following:
    - The test failed (`FAILED`).
-   - The test is in the file `tests/unit/<test-file>.py`.
-   - The name of the failing test is `<test-name>`.
-   - The failed assertion is `<assertion error>`.
+   - The test is in the file `tests/unit/test_interactions.py`.
+   - The name of the failing test is `test_filter_excludes_interaction_with_different_learner_id`.
+   - The failed assertion is `assert 0 == 1` — the filter returned 0 interactions, but 1 was expected.
 
 #### 1.3.3. Fix the bug
 
-<!-- TODO: describe the bug location and fix -->
-
-1. [Open the file](../../../wiki/vs-code.md#open-the-file) that contains the bug.
-2. Fix the bug.
+1. [Open the file](../../../wiki/vs-code.md#open-the-file):
+   [`src/app/routers/interactions.py`](../../../src/app/routers/interactions.py).
+2. Fix the bug in the `_filter_by_item_id` function.
 
 <details><summary>Click to open a hint</summary>
 
-<!-- TODO: hint — explain the bug in plain English without concrete examples -->
+The filter is applied in-memory after all interactions are fetched from the database.
+Look at the condition that decides which interactions to include — it compares the wrong field on the interaction object.
 
 </details>
 
 <details><summary>Click to open the solution</summary>
 
-<!-- TODO: solution — show the before/after code diff -->
+Find this line in `_filter_by_item_id`:
+
+```python
+return [i for i in interactions if i.learner_id == item_id]  # BUG
+```
+
+Change it to:
+
+```python
+return [i for i in interactions if i.item_id == item_id]
+```
 
 </details>
 
@@ -136,7 +146,7 @@ Title: `[Task] Back-end Testing`
    Use the following commit message:
 
    ```text
-   fix: <!-- TODO: describe what was fixed -->
+   fix: filter interactions by item_id instead of learner_id
    ```
 
 ### 1.4. Part B: Run end-to-end tests remotely
@@ -146,40 +156,70 @@ Title: `[Task] Back-end Testing`
 
 #### 1.4.1. Redeploy the fixed version
 
-<!-- TODO: add specific deployment steps referencing the Lab 3 deployment wiki page or process once finalized -->
-
-1. Redeploy the fixed version to your VM using the same process as in Lab 3.
+1. Deploy the fixed version to your VM. Follow the same deployment process as in Task 1 (see the [VM](../../../wiki/vm.md) wiki page for a reminder).
 
 #### 1.4.2. Run existing end-to-end tests
 
-1. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. Set the required environment variables in the terminal. Complete the following steps:
 
-   <!-- TODO: add e2e test command once finalized -->
+   1. Set the base URL of your deployed API:
+
+      ```terminal
+      export API_BASE_URL=https://<your-vm-hostname>
+      ```
+
+   2. Set the API token (use the same value as in your `.env.secret`):
+
+      ```terminal
+      export API_TOKEN=<your-api-token>
+      ```
+
+2. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
    ```terminal
    uv run poe test-e2e
    ```
 
-2. All existing end-to-end tests should pass.
+3. All existing end-to-end tests should pass.
+
+   The output should be similar to this:
+
+   ```terminal
+   ===================== 2 passed in X.XXs =====================
+   ```
 
 #### 1.4.3. Add two end-to-end tests
 
-<!-- TODO: specify the exact boundary-value cases and the test file path -->
-
 1. [Open the file](../../../wiki/vs-code.md#open-the-file):
-   [`tests/e2e/<test-file>.py`](../../../tests/).
+   [`tests/e2e/test_interactions.py`](../../../tests/e2e/test_interactions.py).
 2. Add two end-to-end tests that cover the following boundary-value cases:
 
-   `<!-- TODO: describe the boundary-value cases -->`
+   - Test 1: `GET /interactions/` returns [HTTP status code](../../../wiki/http.md#status-code) `200`.
+   - Test 2: `GET /interactions/` response body is a [JSON](../../../wiki/file-formats.md#json) array.
 
    <details><summary>Click to open a hint</summary>
 
-   <!-- TODO: hint — explain the cases in plain English without concrete examples -->
+   The response model for `GET /interactions/` defines the fields the API must return.
+   Compare the field names in the response model to the column names in the database.
+   A mismatch there causes the server to fail when building the response.
 
    </details>
 
    <details><summary>Click to open the solution</summary>
 
-   <!-- TODO: solution — show ready test cases -->
+   ```python
+   import httpx
+
+
+   def test_get_interactions_returns_200(client: httpx.Client) -> None:
+       response = client.get("/interactions/")
+       assert response.status_code == 200
+
+
+   def test_get_interactions_response_is_a_list(client: httpx.Client) -> None:
+       response = client.get("/interactions/")
+       assert isinstance(response.json(), list)
+   ```
 
    </details>
 
@@ -189,28 +229,49 @@ Title: `[Task] Back-end Testing`
    uv run poe test-e2e
    ```
 
-4. Observe that at least one new test fails.
+4. Observe that both new tests fail.
+
+   The output should be similar to this:
+
+   ```terminal
+   FAILED tests/e2e/test_interactions.py::test_get_interactions_returns_200 - AssertionError: assert 500 == 200
+   FAILED tests/e2e/test_interactions.py::test_get_interactions_response_is_a_list - ...
+   ```
+
+   The `500` status code means the server encountered an internal error while building the response.
 
 #### 1.4.4. Fix the bug
 
-1. [Open the file](../../../wiki/vs-code.md#open-the-file) that contains the bug.
-2. Fix the bug.
+1. [Open the file](../../../wiki/vs-code.md#open-the-file):
+   [`src/app/models/interaction.py`](../../../src/app/models/interaction.py).
+2. Fix the bug in `InteractionModel`.
 
    <details><summary>Click to open a hint</summary>
 
-   <!-- TODO: hint — explain the bug in plain English without concrete instructions -->
+   The response model has a field whose name does not match the corresponding column in the database.
+   When `FastAPI` tries to serialize the database row into the response model, it cannot find the expected field and returns a `500` error.
 
    </details>
 
    <details><summary>Click to open the solution</summary>
 
-   <!-- TODO: solution — show the before/after code fix -->
+   Find this line in `InteractionModel`:
+
+   ```python
+   timestamp: datetime  # BUG: should be 'created_at' to match the database column
+   ```
+
+   Change it to:
+
+   ```python
+   created_at: datetime
+   ```
 
    </details>
 
 #### 1.4.5. Redeploy and rerun
 
-1. Redeploy the fixed version to the VM.
+1. Deploy the fixed version to the VM.
 2. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
@@ -226,7 +287,7 @@ Title: `[Task] Back-end Testing`
    Use the following commit message:
 
    ```text
-   fix: <!-- TODO: describe what was fixed -->
+   fix: rename timestamp to created_at in InteractionModel
    ```
 
 > [!IMPORTANT]

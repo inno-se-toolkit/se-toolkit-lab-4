@@ -93,7 +93,7 @@ We'll refer to the new branch as `<task-branch-name>`.
 [Create a PR](./github.md#create-a-pull-request) from the branch [`<task-branch-name>`](#task-branch-name) to the branch `<main>`.
 Placeholder values:
 
-- `<repo-name>` is `se-toolkit-lab-3`.
+- `<repo-name>` is `se-toolkit-lab-<N>` where `<N>` is the number of the lab.
 - `<branch-name>` is `<task-branch-name>`.
 - [`<repo-owner-github-username>`] is `inno-se-toolkit`.
 - [`<your-github-username>`](./github.md#your-github-username) is your `GitHub` username.
