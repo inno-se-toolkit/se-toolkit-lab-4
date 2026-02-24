@@ -20,9 +20,25 @@
 
 ## Syntax
 
+Python uses indentation (spaces) to define code blocks instead of curly braces `{}`.
+
 ## Documentation
 
+`Python` supports writing inline documentation as [docstrings](#docstring) embedded directly in source code.
+
 ### Docstring
+
+A docstring is a string literal that appears as the first statement in a function, class, or module. It describes what the code does.
+
+```python
+def greet(name):
+    """Return a greeting message for the given name."""
+    return f"Hello, {name}!"
+```
+
+Docs:
+
+- [PEP 257 – Docstring Conventions](https://peps.python.org/pep-0257/)
 
 ## Package managers
 
@@ -90,7 +106,29 @@
 
 ### `pytest`
 
+`pytest` is a testing framework for `Python`. It discovers and runs test functions automatically.
+
+To run all tests, [run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+```terminal
+uv run pytest
+```
+
+Docs:
+
+- [`pytest` documentation](https://docs.pytest.org/)
+
 ### The `assert` statement
+
+The `assert` statement checks that a condition is true. If the condition is false, the test fails with an `AssertionError`.
+
+```python
+assert result == expected
+```
+
+Docs:
+
+- [`assert` statement](https://docs.python.org/3/reference/simple_stmts.html#the-assert-statement)
 
 ## Dynamic analysis
 
@@ -99,6 +137,12 @@ Examples:
 - [Testing](#testing)
 
 ## Static analysis
+
+Static analysis checks code for errors without running it. It can detect type errors, undefined variables, and style issues.
+
+Examples:
+
+- [`Pylance`](#pylance)
 
 ## `Pylance`
 
