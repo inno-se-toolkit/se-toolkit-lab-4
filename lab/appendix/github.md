@@ -24,6 +24,7 @@
 - [Pull request](#pull-request)
   - [Base repo](#base-repo)
   - [Head repo](#head-repo)
+  - [Default branch](#default-branch)
   - [Base branch](#base-branch)
   - [Pull request branch](#pull-request-branch)
   - [Create a pull request](#create-a-pull-request)
@@ -183,6 +184,8 @@ Examples of issue forms:
 ### Base repo
 
 ### Head repo
+
+### Default branch
 
 ### Base branch
 
