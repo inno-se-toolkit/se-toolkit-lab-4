@@ -11,6 +11,7 @@
   - [`<repo-url>`](#repo-url)
   - [Make your repository public](#make-your-repository-public)
 - [Repository owner](#repository-owner)
+  - [`<repo-owner-github-username>`](#repo-owner-github-username)
 - [Fork](#fork)
   - [Fork a repo](#fork-a-repo)
   - [`<your-fork-url>`](#your-fork-url)
@@ -97,7 +98,9 @@ A repository URL is typically `https://github.com/<repo-owner-github-username>/<
 
 Repository owner is an account where the repo is currently stored.
 
-We use `<repo-owner-github-username>` to refer to the [`GitHub` username](#github-username) of the repository owner.
+### `<repo-owner-github-username>`
+
+[`GitHub` username](#github-username) of the [repository owner](#repository-owner).
 
 ## Fork
 
