@@ -1,6 +1,6 @@
 # Task conventions — applies to `lab/tasks/` only
 
-Full source: `instructors/context/lab-conventions/lab-conventions.md` §3, §12
+Full source: `instructors/context/lab-conventions/lab-conventions.md` §3, §12, §15
 
 Also read: `instructors/context/lab-conventions/conventions-common.md`
 
@@ -137,3 +137,27 @@ Separate concerns into different tasks only when they produce fundamentally diff
 **12.17 LLM-independence** — Tasks must be completable without LLMs. Provide templates, examples, and fallback methods.
 
 **12.18 Multi-bug debugging tasks** — Include bugs at different layers (schema, DB, logic). Structure so first fix unblocks and reveals the next bug.
+
+## 15. Testing pattern
+
+- Include a `tests/` directory; use the project's test runner (`pytest`, `jest`, `go test`, etc.).
+- At least one test should **intentionally fail** so students practice debugging.
+- After the run command, show the expected failing output and guide students through reading it step-by-step. Break the failure message into its components:
+
+  ```markdown
+  1. Look at the test summary.
+  2. You should see `FAILED <test-file>::<test-name> - assert <actual> == <expected>`.
+
+     This line means the following:
+     - The test failed (`FAILED`).
+     - The test is in the file `<test-file>`.
+     - The name of the failing test is `<test-name>`.
+     - The assert that failed is `<actual> == <expected>`.
+  ```
+
+- Acceptance criteria must include "All tests pass."
+- **Vary bug types across the request path.** Place bugs at different layers (e.g., schema–database mismatch at the data layer, logic error at the processing layer). Teaches students to trace failures across the full stack, not just look for one kind of mistake.
+
+## Pre-publish checklist
+
+See `instructors/context/lab-conventions/conventions-lab.md` §17.

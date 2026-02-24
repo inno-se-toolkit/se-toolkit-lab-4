@@ -71,6 +71,10 @@ Actions:
 
 Provides: what it is, where to find it, official docs, and how to use it.
 
+## Pre-publish checklist
+
+See `instructors/context/lab-conventions/conventions-lab.md` §17.
+
 ## Standard wiki topics
 
 Consider including (depends on the lab):
