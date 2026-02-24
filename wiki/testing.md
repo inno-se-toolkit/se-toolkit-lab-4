@@ -4,8 +4,8 @@
 
 - [What is testing](#what-is-testing)
 - [Assertion](#assertion)
-
-<!-- TODO explain types of analysis - dynamic and static -->
+- [Dynamic analysis](#dynamic-analysis)
+- [Static analysis](#static-analysis)
 
 ## What is testing
 
@@ -26,3 +26,19 @@ An assertion is a statement that checks whether a given condition is true. If th
 Examples:
 
 - [The `assert` statement in `Python`](./python.md#the-assert-statement)
+
+## Dynamic analysis
+
+Dynamic analysis checks code behavior by executing it. Errors are only detected when the relevant code path actually runs.
+
+Examples:
+
+- [Testing in `Python`](./python.md#testing)
+
+## Static analysis
+
+Static analysis checks code for errors without running it. It can detect type errors, undefined variables, and style issues.
+
+Examples:
+
+- [`Pylance`](./python.md#pylance)

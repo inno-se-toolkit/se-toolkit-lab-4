@@ -14,8 +14,6 @@
 - [Testing](#testing)
   - [`pytest`](#pytest)
   - [The `assert` statement](#the-assert-statement)
-- [Dynamic analysis](#dynamic-analysis)
-- [Static analysis](#static-analysis)
 - [`Pylance`](#pylance)
 
 ## Syntax
@@ -130,20 +128,6 @@ Docs:
 
 - [`assert` statement](https://docs.python.org/3/reference/simple_stmts.html#the-assert-statement)
 
-## Dynamic analysis
-
-Examples:
-
-- [Testing](#testing)
-
-## Static analysis
-
-Static analysis checks code for errors without running it. It can detect type errors, undefined variables, and style issues.
-
-Examples:
-
-- [`Pylance`](#pylance)
-
 ## `Pylance`
 
-A [language server](./vs-code.md#language-server) for `Python`.
+A [language server](./vs-code.md#language-server) for `Python` that provides static analysis features such as type checking and detection of undefined variables.
