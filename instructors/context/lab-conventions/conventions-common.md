@@ -12,13 +12,13 @@ Full source: `instructors/context/lab-conventions/lab-conventions.md` §4
 
 Precede with a wiki link; use ` ```terminal ``` ` block:
 
-```markdown
+~~~markdown
 1. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
    ```terminal
    <command>
    ```
 
-```
+~~~
 
 ## 4.3 Command Palette commands
 
@@ -51,6 +51,8 @@ For long option/step lists, add a `<!-- no toc -->` mini-ToC with `Method N:` li
 - Link a concept/tool on its **first mention in each section**; not on subsequent mentions.
 - Wiki files cross-reference other wiki files: `[concept](./other-wiki.md#section)`.
 - Use relative paths for all links.
+- Provide a link to each file that exists in the repo.
+- Link format for wiki references from tasks: `[concept name](../../../wiki/<file>.md#<section>)`.
 - **Compound phrases:** link the whole phrase as one unit — good: `` [`GitHub` pull request](./github.md#pull-request) ``.
 
 ## 4.9 Notes, tips, warnings

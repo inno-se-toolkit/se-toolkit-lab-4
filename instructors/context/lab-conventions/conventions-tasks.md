@@ -91,12 +91,13 @@ When actions don't share a goal, flatten into separate top-level steps.
 
 **12.9 Expected output** — After commands that produce output, show what the student should expect:
 
-```markdown
+~~~markdown
 2. The output should be similar to this:
    ```terminal
    <expected output>
    ```
-```
+
+~~~
 
 **12.10 Notes explain "why"** — Use `> [!NOTE]` blocks inline to explain concepts without breaking step flow.
 
@@ -112,11 +113,26 @@ When actions don't share a goal, flatten into separate top-level steps.
 1. [Run the web server](./task-1.md#8-run-the-web-server).
 ```
 
-**12.14 Placeholder-based implementation templates** — Provide commented-out code templates in seed project. Students uncomment and replace `<placeholders>` using a reference implementation as a guide.
+**12.14 Placeholder-based implementation templates** — Provide commented-out placeholder templates in the seed project. Students uncomment the code and replace placeholders with correct values, using an existing reference implementation as a guide.
 
-**12.15 Seed project design** — Provide a working seed project so students start from a runnable state.
+Key rules:
 
-**12.16 Holistic task design** — Each task should feel like a real engineering workflow, not an isolated exercise.
+- Placeholders use `<angle_brackets>` to indicate values students must fill in.
+- Each placeholder template includes a `# Reference:` comment mapping the new resource to its reference counterpart.
+- The reference implementation (e.g., `items` endpoint) must be fully working so students can study it.
+- Each placeholder template should be a separate commit when implemented.
+
+**12.15 Seed project design** — Design the starting codebase with three tiers of completeness:
+
+1. **Fully implemented (reference):** One resource is complete and working. Students study it to understand the pattern. Example: `items` endpoints with all CRUD operations.
+2. **Commented out with bugs (debug):** Code exists but is disabled. Students uncomment it, discover it fails, and debug. Example: `interactions` endpoint with a schema–database mismatch.
+3. **Placeholder templates (implement):** Commented-out code with `<placeholders>` that students fill in by following the reference. Example: `learners` endpoint with `<method>`, `<resource_name>`, `<resource_schema>`.
+
+For each tier, both the route code and its router registration (e.g., `app.include_router(...)`) must be in the same state — commented out or active. Students uncomment both to enable the route.
+
+**12.16 Holistic task design** — Combine related concerns into a single task when they share the same learning objective. A debugging task should include everything needed to understand the failure: reading code, examining the database, and fixing the bug — not three separate tasks.
+
+Separate concerns into different tasks only when they produce fundamentally different artifacts or teach distinct skills. Example: API exploration via Swagger (produces a questionnaire) and database exploration via PgAdmin (produces a bug fix) belong in different tasks even though both involve the same system.
 
 **12.17 LLM-independence** — Tasks must be completable without LLMs. Provide templates, examples, and fallback methods.
 
