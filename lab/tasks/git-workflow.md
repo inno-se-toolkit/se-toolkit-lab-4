@@ -13,7 +13,6 @@ The following diagram shows this workflow in the context of repositories:
 
 Outline:
 
-<!-- no toc -->
 - [Create a `Lab Task` issue](#create-a-lab-task-issue)
 - [Switch to the `main` branch](#switch-to-the-main-branch)
 - [Detect conflicts](#detect-conflicts)
