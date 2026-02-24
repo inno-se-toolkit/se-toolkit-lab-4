@@ -95,13 +95,13 @@
 
 1. [Fork the course instructors' repo](../../wiki/github.md#fork-a-repo).
 
-   The course instructors' repo [URL](../../wiki/web-development.md#url) is <https://github.com/inno-se-toolkit/se-toolkit-lab-3>
+   The course instructors' repo [URL](../../wiki/web-development.md#url) is <https://github.com/inno-se-toolkit/se-toolkit-lab-4>
 
 #### 1.3.3. (NEW) Go to your fork
 
 1. [Go to your fork](../../wiki/github.md#go-to-your-fork).
 
-   The [URL](../../wiki/web-development.md#url) of your fork should look like `https://github.com/<your-github-username>/se-toolkit-lab-3`.
+   The [URL](../../wiki/web-development.md#url) of your fork should look like `https://github.com/<your-github-username>/se-toolkit-lab-4`.
 
 #### 1.3.4. (NEW) Enable issues
 
@@ -172,22 +172,22 @@
 1. [Go to your fork](#133-new-go-to-your-fork).
 2. Copy [`<your-fork-url>`](../../wiki/github.md#your-fork-url).
 
-   It should look like `https://github.com/<your-github-username>/se-toolkit-lab-3`.
+   It should look like `https://github.com/<your-github-username>/se-toolkit-lab-4`.
 
 > [!NOTE]
-> Here, the `<repo-name>` is `se-toolkit-lab-3`.
+> Here, the `<repo-name>` is `se-toolkit-lab-4`.
 
 #### 1.7.2. (NEW) Clone your fork
 
 1. [Clone your fork](../../wiki/git-vscode.md#clone-the-repo):
 
    - Replace `<repo-url>` with [`<your-fork-url>`](../../wiki/github.md#your-fork-url).
-   - Replace `<repo-name>` with `se-toolkit-lab-3`.
+   - Replace `<repo-name>` with `se-toolkit-lab-4`.
 
 #### 1.7.3. (NEW) Open the cloned repo in `VS Code`
 
 1. [Open in `VS Code` the directory](../../wiki/git-vscode.md#open-in-vs-code-the-directory):
-   `se-toolkit-lab-3`.
+   `se-toolkit-lab-4`.
 2. [Install recommended extensions](../../wiki/vs-code.md#install-recommended-extensions).
 
 ### 1.8. (NEW) (`Windows` only) Set the default shell
@@ -344,7 +344,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 ### 1.15. (NEW) Stop the services
 
-1. [Check that the current directory is `se-toolkit-lab-3`](../../wiki/shell.md#check-the-current-directory-is-directory-name).
+1. [Check that the current directory is `se-toolkit-lab-4`](../../wiki/shell.md#check-the-current-directory-is-directory-name).
 2. [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
