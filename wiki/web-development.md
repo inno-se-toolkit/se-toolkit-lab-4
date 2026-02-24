@@ -222,3 +222,5 @@ Examples:
 A service can call other services over the network, but to the client it still appears as endpoints that return responses.
 
 ## Feature flag
+
+A feature flag (also called a feature toggle) is a mechanism that enables or disables a feature at runtime without deploying new code. Feature flags let teams decouple deployment from release, enabling gradual rollouts, `A/B` testing, and quick rollbacks.
