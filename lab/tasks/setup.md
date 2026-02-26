@@ -15,7 +15,7 @@
     - [1.4.2. Set up `Git`](#142-set-up-git)
     - [1.4.3. (UPD) Set up `Docker`](#143-upd-set-up-docker)
     - [1.4.4. (UPD) (`Windows` only) Set the default shell for the `VS Code Terminal`](#144-upd-windows-only-set-the-default-shell-for-the-vs-code-terminal)
-    - [1.4.5. (UPD) Install `Nix`](#145-upd-install-nix)
+    - [1.4.5. (NEW) Set up `Nix`](#145-new-set-up-nix)
   - [1.5. (UPD) Open in `VS Code` the `software-engineering-toolkit` directory](#15-upd-open-in-vs-code-the-software-engineering-toolkit-directory)
   - [1.6. Set up `Git`](#16-set-up-git)
     - [1.6.1. Check your `Git` config](#161-check-your-git-config)
@@ -147,11 +147,10 @@
 1. [Check the current shell in the `VS Code Terminal`](../../wiki/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 2. If it's not `bash` or `zsh`, [set the default shell](../../wiki/vs-code.md#windows-only-set-the-default-shell-for-the-vs-code-terminal) and check again.
 
-#### 1.4.5. (UPD) Install `Nix`
+#### 1.4.5. (NEW) Set up `Nix`
 
-1. [Install `Nix`](../../wiki/nix.md#install-nix) if not installed.
-
-2. (Optional) [Learn more](../../wiki/nix.md#what-is-nix) about `Nix`.
+1. (Optional) [Read about `Nix`](../../wiki/nix.md#what-is-nix).
+2. [Install `Nix`](../../wiki/nix.md#install-nix) if it's not installed.
 
 ### 1.5. (UPD) Open in `VS Code` the `software-engineering-toolkit` directory
 
