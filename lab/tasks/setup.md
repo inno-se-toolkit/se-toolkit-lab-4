@@ -17,34 +17,31 @@
     - [1.4.4. Set up `Git`](#144-set-up-git)
     - [1.4.5. (NEW) Set up `Nix`](#145-new-set-up-nix)
   - [1.5. (UPD) Open in `VS Code` the `software-engineering-toolkit` directory](#15-upd-open-in-vs-code-the-software-engineering-toolkit-directory)
-  - [1.6. Set up `Git`](#16-set-up-git)
-    - [1.6.1. Check your `Git` config](#161-check-your-git-config)
-    - [1.6.2. Configure `Git`](#162-configure-git)
-  - [1.7. (UPD) Clone your fork and open it in `VS Code`](#17-upd-clone-your-fork-and-open-it-in-vs-code)
-    - [1.7.1. (UPD) Copy your fork `URL`](#171-upd-copy-your-fork-url)
-    - [1.7.2. (UPD) Clone your fork](#172-upd-clone-your-fork)
-    - [1.7.3. (UPD) Open the cloned repo in `VS Code`](#173-upd-open-the-cloned-repo-in-vs-code)
-  - [1.8. (UPD) (`Windows` only) Set the default shell](#18-upd-windows-only-set-the-default-shell)
-  - [1.9. Continue creating a VM](#19-continue-creating-a-vm)
-  - [1.10. Set up `Python` in `VS Code`](#110-set-up-python-in-vs-code)
-    - [1.10.1. Install `uv`](#1101-install-uv)
-    - [1.10.2. (UPD) Install `Python` and dependencies](#1102-upd-install-python-and-dependencies)
-    - [1.10.3. (UPD) Select the `Python` interpreter](#1103-upd-select-the-python-interpreter)
-    - [1.10.4. (UPD) Check that `Python` works](#1104-upd-check-that-python-works)
-  - [1.11. (UPD) Start the services](#111-upd-start-the-services)
-    - [1.11.1. (UPD) Set up the `Docker` environment](#1111-upd-set-up-the-docker-environment)
-    - [1.11.2. (UPD) Start the services using `Docker Compose`](#1112-upd-start-the-services-using-docker-compose)
-  - [1.12. (UPD) Open a new terminal](#112-upd-open-a-new-terminal)
-  - [1.13. (UPD) Observe containers and services](#113-upd-observe-containers-and-services)
-    - [1.13.1. (UPD) List running containers](#1131-upd-list-running-containers)
-    - [1.13.2. (UPD) See logs of the running services](#1132-upd-see-logs-of-the-running-services)
-  - [1.14. (UPD) Set up the services](#114-upd-set-up-the-services)
-    - [1.14.1. (UPD) Open `Swagger UI`](#1141-upd-open-swagger-ui)
-    - [1.14.2. (UPD) Set up `pgAdmin`](#1142-upd-set-up-pgadmin)
-  - [1.15. (UPD) Stop the services](#115-upd-stop-the-services)
-  - [1.16. (UPD) Add SSH key for the autochecker](#116-upd-add-ssh-key-for-the-autochecker)
-  - [1.17. (UPD) Set up a coding agent](#117-upd-set-up-a-coding-agent)
-  - [1.18. (UPD) Log in to the autochecker](#118-upd-log-in-to-the-autochecker)
+  - [1.6. (UPD) Clone your fork and open it in `VS Code`](#16-upd-clone-your-fork-and-open-it-in-vs-code)
+    - [1.6.1. (UPD) Copy your fork `URL`](#161-upd-copy-your-fork-url)
+    - [1.6.2. (UPD) Clone your fork](#162-upd-clone-your-fork)
+    - [1.6.3. (UPD) Open the cloned repo in `VS Code`](#163-upd-open-the-cloned-repo-in-vs-code)
+  - [1.7. (UPD) (`Windows` only) Set the default shell](#17-upd-windows-only-set-the-default-shell)
+  - [1.8. Continue creating a VM](#18-continue-creating-a-vm)
+  - [1.9. Set up `Python` in `VS Code`](#19-set-up-python-in-vs-code)
+    - [1.9.1. Install `uv`](#191-install-uv)
+    - [1.9.2. (UPD) Install `Python` and dependencies](#192-upd-install-python-and-dependencies)
+    - [1.9.3. (UPD) Select the `Python` interpreter](#193-upd-select-the-python-interpreter)
+    - [1.9.4. (UPD) Check that `Python` works](#194-upd-check-that-python-works)
+  - [1.10. (UPD) Start the services](#110-upd-start-the-services)
+    - [1.10.1. (UPD) Set up the `Docker` environment](#1101-upd-set-up-the-docker-environment)
+    - [1.10.2. (UPD) Start the services using `Docker Compose`](#1102-upd-start-the-services-using-docker-compose)
+  - [1.11. (UPD) Open a new terminal](#111-upd-open-a-new-terminal)
+  - [1.12. (UPD) Observe containers and services](#112-upd-observe-containers-and-services)
+    - [1.12.1. (UPD) List running containers](#1121-upd-list-running-containers)
+    - [1.12.2. (UPD) See logs of the running services](#1122-upd-see-logs-of-the-running-services)
+  - [1.13. (UPD) Set up the services](#113-upd-set-up-the-services)
+    - [1.13.1. (UPD) Open `Swagger UI`](#1131-upd-open-swagger-ui)
+    - [1.13.2. (UPD) Set up `pgAdmin`](#1132-upd-set-up-pgadmin)
+  - [1.14. (UPD) Stop the services](#114-upd-stop-the-services)
+  - [1.15. (UPD) Add SSH key for the autochecker](#115-upd-add-ssh-key-for-the-autochecker)
+  - [1.16. (UPD) Set up a coding agent](#116-upd-set-up-a-coding-agent)
+  - [1.17. (UPD) Log in to the autochecker](#117-upd-log-in-to-the-autochecker)
 - [2. Optional steps](#2-optional-steps)
   - [2.1. (UPD) Learn to go back after clicking a link](#21-upd-learn-to-go-back-after-clicking-a-link)
   - [2.2. Set up a coding agent](#22-set-up-a-coding-agent)
@@ -163,19 +160,9 @@
 2. [Open in `VS Code` the directory](../../wiki/vs-code.md#open-the-directory):
    `software-engineering-toolkit`.
 
-### 1.6. Set up `Git`
+### 1.6. (UPD) Clone your fork and open it in `VS Code`
 
-#### 1.6.1. Check your `Git` config
-
-1. [Check your Git config](../../wiki/git.md#check-your-git-config).
-
-#### 1.6.2. Configure `Git`
-
-[Configure Git](../../wiki/git.md#configure-git) if you want to change the values that you saw while [checking your `Git` config](#161-check-your-git-config).
-
-### 1.7. (UPD) Clone your fork and open it in `VS Code`
-
-#### 1.7.1. (UPD) Copy your fork `URL`
+#### 1.6.1. (UPD) Copy your fork `URL`
 
 1. [Go to your fork](#133-upd-go-to-your-fork).
 2. Copy [`<your-fork-url>`](../../wiki/github.md#your-fork-url).
@@ -185,24 +172,24 @@
 > [!NOTE]
 > Here, the `<repo-name>` is `se-toolkit-lab-4`.
 
-#### 1.7.2. (UPD) Clone your fork
+#### 1.6.2. (UPD) Clone your fork
 
 1. [Clone your fork](../../wiki/git-vscode.md#clone-the-repo):
 
    - Replace `<repo-url>` with [`<your-fork-url>`](../../wiki/github.md#your-fork-url).
    - Replace `<repo-name>` with `se-toolkit-lab-4`.
 
-#### 1.7.3. (UPD) Open the cloned repo in `VS Code`
+#### 1.6.3. (UPD) Open the cloned repo in `VS Code`
 
 1. [Open in `VS Code` the directory](../../wiki/vs-code.md#open-the-directory):
    `se-toolkit-lab-4`.
 2. [Install recommended extensions](../../wiki/vs-code.md#install-recommended-extensions).
 
-### 1.8. (UPD) (`Windows` only) Set the default shell
+### 1.7. (UPD) (`Windows` only) Set the default shell
 
 1. [Check and set the default shell in the `VS Code Terminal`](../../wiki/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 
-### 1.9. Continue creating a VM
+### 1.8. Continue creating a VM
 
 Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-to-the-vm):
 
@@ -212,38 +199,38 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
    You can use the key that you created before for the new VM.
 2. [Create a VM using the subscription](../../wiki/vm.md#create-a-vm-using-the-subscription).
 
-### 1.10. Set up `Python` in `VS Code`
+### 1.9. Set up `Python` in `VS Code`
 
-#### 1.10.1. Install `uv`
+#### 1.9.1. Install `uv`
 
 > [!NOTE]
 > [`uv`](../../wiki/python.md#uv) is a package manager for [`Python`](../../wiki/python.md).
 
 1. [Install `uv`](../../wiki/python.md#install-uv).
 
-#### 1.10.2. (UPD) Install `Python` and dependencies
+#### 1.9.2. (UPD) Install `Python` and dependencies
 
 > [!NOTE]
 > The dependencies have been updated in this project version.
 
 1. [Install `Python` and dependencies](../../wiki/python.md#install-python-and-dependencies).
 
-#### 1.10.3. (UPD) Select the `Python` interpreter
+#### 1.9.3. (UPD) Select the `Python` interpreter
 
 1. [Select the `Python` interpreter](../../wiki/python.md#select-the-python-interpreter).
 
-#### 1.10.4. (UPD) Check that `Python` works
+#### 1.9.4. (UPD) Check that `Python` works
 
 1. [Check that `Python` works](../../wiki/python.md#check-that-python-works).
 
-### 1.11. (UPD) Start the services
+### 1.10. (UPD) Start the services
 
 > [!NOTE]
 > A [service](../../wiki/docker.md#service) in [`Docker Compose`](../../wiki/docker-compose.md) defines how to run a [container](../../wiki/docker.md#container).
 >
 > `Docker Compose` lets you start multiple containers at once.
 
-#### 1.11.1. (UPD) Set up the `Docker` environment
+#### 1.10.1. (UPD) Set up the `Docker` environment
 
 1. Copy the [`.env.docker.example`](../../.env.docker.example) file to the `.env.docker.secret` file:
 
@@ -263,7 +250,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 > No edits are needed for local development.
 > The default values in [`.env.docker.example`](../../.env.docker.example) work out of the box.
 
-#### 1.11.2. (UPD) Start the services using `Docker Compose`
+#### 1.10.2. (UPD) Start the services using `Docker Compose`
 
 1. (`Windows` only) Open the `Docker Desktop` that you [installed](../../wiki/docker.md#install-docker).
 
@@ -288,13 +275,13 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
    >
    > If you need to re-initialize the database (e.g., after pulling upstream changes to `init.sql`), see [Resetting the database](../../wiki/docker-postgres.md#resetting-the-database).
 
-### 1.12. (UPD) Open a new terminal
+### 1.11. (UPD) Open a new terminal
 
 1. [Open a new `VS Code Terminal`](../../wiki/vs-code.md#open-a-new-vs-code-terminal).
 
-### 1.13. (UPD) Observe containers and services
+### 1.12. (UPD) Observe containers and services
 
-#### 1.13.1. (UPD) List running containers
+#### 1.12.1. (UPD) List running containers
 
 1. [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -302,7 +289,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
    docker compose --env-file .env.docker.secret ps
    ```
 
-#### 1.13.2. (UPD) See logs of the running services
+#### 1.12.2. (UPD) See logs of the running services
 
 1. See logs for all services:
 
@@ -318,18 +305,18 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
    docker compose --env-file .env.docker.secret logs postgres
    ```
 
-### 1.14. (UPD) Set up the services
+### 1.13. (UPD) Set up the services
 
-#### 1.14.1. (UPD) Open `Swagger UI`
+#### 1.13.1. (UPD) Open `Swagger UI`
 
 1. Open in a browser: <http://127.0.0.1:42001/docs>.
 
    You should see the [`Swagger UI`](../../wiki/swagger.md#swagger-ui) page with the [API](../../wiki/web-development.md#api) documentation.
 
-#### 1.14.2. (UPD) Set up `pgAdmin`
+#### 1.13.2. (UPD) Set up `pgAdmin`
 
 > [!NOTE]
-> [`pgAdmin`](../../wiki/pgadmin.md#what-is-pgadmin) takes 2-3 minutes to start after you have [started the services](#111-upd-start-the-services).
+> [`pgAdmin`](../../wiki/pgadmin.md#what-is-pgadmin) takes 2-3 minutes to start after you have [started the services](#110-upd-start-the-services).
 
 1. [Open `pgAdmin`](../../wiki/pgadmin.md#open-pgadmin).
 2. [Add a server in `pgAdmin`](../../wiki/pgadmin.md#add-a-server-in-pgadmin).
@@ -350,7 +337,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 > [!TIP]
 > To view the data in a table, right-click the table and select `View/Edit Data` -> `All Rows`.
 
-### 1.15. (UPD) Stop the services
+### 1.14. (UPD) Stop the services
 
 1. [Check that the current directory is `se-toolkit-lab-4`](../../wiki/shell.md#check-the-current-directory-is-directory-name).
 2. [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
@@ -359,17 +346,17 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
    docker compose --env-file .env.docker.secret down
    ```
 
-### 1.16. (UPD) Add SSH key for the autochecker
+### 1.15. (UPD) Add SSH key for the autochecker
 
 1. [Connect to your VM](../../wiki/vm.md#connect-to-the-vm).
 2. [Create the `autochecker` user](../../wiki/vm-autochecker.md#create-the-autochecker-user).
 3. [Add the instructor's SSH public key to the `autochecker` user](../../wiki/vm-autochecker.md#add-an-ssh-public-key-to-the-autochecker-user):
 
-### 1.17. (UPD) Set up a coding agent
+### 1.16. (UPD) Set up a coding agent
 
 Follow the [`Coding agents`](../../wiki/coding-agents.md) guide to set up a coding agent on your machine.
 
-### 1.18. (UPD) Log in to the autochecker
+### 1.17. (UPD) Log in to the autochecker
 
 <!-- TODO: add autochecker login steps and link to wiki once the autochecker web UI is available -->
 
