@@ -326,7 +326,7 @@ Method 2:
 
 ### Check the current shell in the `VS Code Terminal`
 
-1. [Look at the current `VS Code Terminal`s](#look-at-the-current-vs-code-terminal).
+1. [Look at the current `VS Code Terminal`](#look-at-the-current-vs-code-terminal).
 
    You should see on:
 
