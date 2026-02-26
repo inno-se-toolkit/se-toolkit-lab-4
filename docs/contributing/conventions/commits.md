@@ -30,7 +30,7 @@ area of change:
 
 `wiki` | `instructors` | `docs` | `readme` | `caddy` | `lab` |
 `frontend` | `backend` | `tests` | `vscode` | `git` | `github` |
-`claude` | `nix` | `docker` | `contributors` | `markdownlint`
+`claude` | `nix` | `docker` | `database` | `contributors` | `markdownlint`
 
 ### Scope mapping
 
@@ -51,6 +51,7 @@ area of change:
 | `claude` | `.claude/` (skills, settings) |
 | `nix` | `flake.nix`, `flake.lock`, Nix-related config |
 | `docker` | `Dockerfile`, `compose.yaml`, Docker-related config |
+| `database` | `.sql` files, migrations, schema |
 | `contributors` | `CONTRIBUTORS.md` |
 | `markdownlint` | `.markdownlint*` config |
 
