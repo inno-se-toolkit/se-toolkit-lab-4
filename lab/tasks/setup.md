@@ -14,7 +14,7 @@
     - [1.4.1. Set up `VS Code`](#141-set-up-vs-code)
     - [1.4.2. Set up `Git`](#142-set-up-git)
     - [1.4.3. Set up `Docker`](#143-set-up-docker)
-    - [1.4.4. (`Windows` only) Install `Ubuntu 24.04` using WSL](#144-windows-only-install-ubuntu-2404-using-wsl)
+    - [1.4.4. (`Windows` only) Set up running `VS Code` in `WSL`](#144-windows-only-set-up-running-vs-code-in-wsl)
     - [1.4.5. (UPD) Install `Nix`](#145-upd-install-nix)
   - [1.5. (UPD) Open in `VS Code` the `software-engineering-toolkit` directory](#15-upd-open-in-vs-code-the-software-engineering-toolkit-directory)
   - [1.6. Set up `Git`](#16-set-up-git)
@@ -142,7 +142,7 @@
 
    You should see `Engine running`.
 
-#### 1.4.4. (`Windows` only) Install `Ubuntu 24.04` using WSL
+#### 1.4.4. (`Windows` only) Set up running `VS Code` in `WSL`
 
 1. [Check the current shell in the `VS Code Terminal`](../../wiki/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 2. If it's not `bash` or `zsh`, [set up running `VS Code` in `WSL`](../../wiki/vs-code.md#windows-only-set-up-running-vs-code-in-wsl) and check again.
