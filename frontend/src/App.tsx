@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 
-const API_URL = import.meta.env.VITE_API_URL
 const API_TOKEN = import.meta.env.VITE_API_TOKEN
 
 interface Item {
@@ -17,7 +16,7 @@ function App() {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    fetch(`${API_URL}/items`, {
+    fetch('/items', {
       headers: { Authorization: `Bearer ${API_TOKEN}` },
     })
       .then((res) => {

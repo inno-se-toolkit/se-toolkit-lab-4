@@ -20,7 +20,7 @@
   - [6.3 Student Logs an Interaction](#63-student-logs-an-interaction)
 - [7. Design Decisions](#7-design-decisions)
   - [7.1 Architecture Pattern — Monolith with Layered Structure](#71-architecture-pattern--monolith-with-layered-structure)
-  - [7.2 Reverse Proxy — Caddy](#72-reverse-proxy--caddy)
+  - [7.2 Reverse Proxy + Static Server — Caddy](#72-reverse-proxy--static-server--caddy)
   - [7.3 ORM — SQLModel (SQLAlchemy + Pydantic)](#73-orm--sqlmodel-sqlalchemy--pydantic)
   - [7.4 Feature Flags for Optional Endpoints](#74-feature-flags-for-optional-endpoints)
   - [7.5 Async Database Access](#75-async-database-access)
@@ -123,7 +123,7 @@ classDiagram
 
 ## 4. Container Diagram
 
-The system is deployed as five Docker containers, orchestrated by Docker Compose.
+The system is deployed as four Docker containers, orchestrated by Docker Compose. The React frontend is compiled into static files and served by Caddy.
 
 ```mermaid
 graph TD
@@ -132,17 +132,16 @@ graph TD
     Developer([Developer])
 
     subgraph "Learning Management System — Docker Compose"
-        FE["React Frontend\n[TypeScript, Vite SPA]\nRuns in browser\nDev server: :5173"]
-        CADDY["Caddy\n[Reverse Proxy]\nRoutes HTTP traffic to API\nHost port :42002"]
+        CADDY["Caddy\n[Reverse Proxy + Static Server]\nServes frontend, proxies API\nHost port :42002"]
         API["FastAPI\n[Python, SQLModel, Uvicorn]\nREST API with Swagger UI\nContainer port :8000\nHost port :42001"]
         DB[("PostgreSQL\n[Relational Database]\nStores items, learners,\nand interactions\nHost port :42004")]
         PGA["pgAdmin\n[Web UI]\nDatabase management\nHost port :42003"]
     end
 
-    Student -->|"Opens app (browser)"| FE
-    FE -->|"HTTP GET /items\nAuthorization: Bearer"| CADDY
+    Student -->|"Opens app (browser)\nHTTP :42002"| CADDY
     Developer -->|"Swagger UI"| CADDY
-    CADDY -->|"Reverse proxy\nall requests"| API
+    CADDY -->|"Serves static files\n(React SPA)"| Student
+    CADDY -->|"Reverse proxy\nAPI requests"| API
     API -->|"Async SQL\n(SQLAlchemy)"| DB
     Admin -->|"HTTP :42003"| PGA
     PGA -->|SQL| DB
@@ -150,13 +149,12 @@ graph TD
 
 ### Container Responsibilities
 
-| Container      | Technology                         | Responsibility                                                                                                                                                                |
-| -------------- | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| React Frontend | TypeScript, Vite, React            | Browser SPA: fetches items from the API and renders them in a table. In development runs as a hot-reload dev server; in production built to static files.                     |
-| Caddy          | Go, Caddyfile                      | Reverse proxy: accepts external HTTP traffic and forwards it to the FastAPI application. Configured via environment variables (`CADDY_CONTAINER_PORT`, `APP_CONTAINER_PORT`). |
-| FastAPI        | Python, FastAPI, SQLModel, Uvicorn | REST API: handles all business logic, validates Bearer token on every request, and exposes auto-generated Swagger UI at `/docs`.                                              |
-| PostgreSQL     | PostgreSQL                         | Relational database: stores the `item`, `learner`, and `interacts` tables. Initialised with schema and seed data from `init.sql` on first startup.                            |
-| pgAdmin        | pgAdmin 4                          | Web-based database management UI: lets admins inspect tables, run SQL queries, and browse the data.                                                                           |
+| Container  | Technology                         | Responsibility                                                                                                                                                                                                                                             |
+| ---------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Caddy      | Go, Caddyfile, Node (build stage)  | Serves the React frontend as static files at `/` and reverse-proxies API paths (`/items`, `/learners`, `/interactions`, `/docs`) to FastAPI. Built via a multi-stage Dockerfile that compiles the TypeScript frontend and bundles it into the Caddy image. |
+| FastAPI    | Python, FastAPI, SQLModel, Uvicorn | REST API: handles all business logic, validates Bearer token on every request, and exposes auto-generated Swagger UI at `/docs`.                                                                                                                           |
+| PostgreSQL | PostgreSQL                         | Relational database: stores the `item`, `learner`, and `interacts` tables. Initialised with schema and seed data from `init.sql` on first startup.                                                                                                         |
+| pgAdmin    | pgAdmin 4                          | Web-based database management UI: lets admins inspect tables, run SQL queries, and browse the data.                                                                                                                                                        |
 
 ---
 
@@ -231,25 +229,25 @@ graph TD
 
 ### 6.1 Student Fetches Items via Frontend
 
-The most common interaction: a student opens the React app, which calls the API and displays the item list.
+The most common interaction: a student opens the browser, Caddy serves the React SPA as static files, and the SPA calls the API through Caddy.
 
 ```mermaid
 sequenceDiagram
     actor Student
-    participant FE as React Frontend
     participant Caddy
     participant API as FastAPI
     participant DB as PostgreSQL
 
-    Student->>FE: Opens app in browser
-    FE->>Caddy: GET /items (Authorization: Bearer <token>)
+    Student->>Caddy: GET / (opens app in browser)
+    Caddy-->>Student: index.html + JS bundle (static files)
+    Student->>Caddy: GET /items (Authorization: Bearer <token>)
     Caddy->>API: Proxy GET /items
     API->>API: verify_api_key()
     API->>DB: SELECT * FROM item ORDER BY id
     DB-->>API: list of item rows
     API-->>Caddy: 200 OK — JSON [{id, type, title, ...}]
-    Caddy-->>FE: 200 OK — JSON [{id, type, title, ...}]
-    FE-->>Student: Renders items table
+    Caddy-->>Student: 200 OK — JSON [{id, type, title, ...}]
+    Note over Student: React SPA renders items table
 ```
 
 ### 6.2 Developer Creates a Learning Item
@@ -310,11 +308,11 @@ sequenceDiagram
 
 ---
 
-### 7.2 Reverse Proxy — Caddy
+### 7.2 Reverse Proxy + Static Server — Caddy
 
-**Decision:** Caddy sits in front of the FastAPI application and proxies all traffic.
+**Decision:** Caddy serves the built React SPA as static files at `/` and reverse-proxies API paths (`/items`, `/learners`, `/interactions`, `/docs`) to FastAPI.
 
-**Rationale:** Caddy handles TLS termination, port forwarding, and can later serve static frontend files — all with a minimal Caddyfile. It decouples the application port from the externally-visible port.
+**Rationale:** A single-origin setup eliminates CORS configuration and simplifies the frontend — the SPA uses relative paths instead of an absolute API URL. Caddy also handles TLS termination and port decoupling. The frontend is compiled in a multi-stage Dockerfile (`frontend/Dockerfile`): Node builds the TypeScript bundle, then the output is copied into the Caddy image.
 
 **Configuration:** `CADDY_CONTAINER_PORT` (external) → `APP_CONTAINER_PORT` (FastAPI). Defaults: `42002` → `8000`.
 
