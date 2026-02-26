@@ -5,6 +5,8 @@
 - [What is `Git`](#what-is-git)
 - [Commit](#commit)
 - [Commit message](#commit-message)
+  - [`Conventional Commits`](#conventional-commits)
+    - [Common prefixes in `Conventional Commits`](#common-prefixes-in-conventional-commits)
 - [How `Git` works - text](#how-git-works---text)
 - [How `Git` works - videos](#how-git-works---videos)
 - [Merge conflict](#merge-conflict)
@@ -39,10 +41,15 @@ Guidelines:
 - Focus on why the change was made, not just what changed.
 - (Optional) follow the [`Conventional Commits`](#conventional-commits) specification.
 
+### `Conventional Commits`
 
-- Learn about [`Conventional Commits`](https://www.conventionalcommits.org/en/v1.0.0/) for commit message formatting.
+Rules for creating human- and machine-readable commit history.
 
-Common prefixes:
+Docs:
+
+- [`Conventional Commits`](https://www.conventionalcommits.org/en/v1.0.0/).
+
+#### Common prefixes in `Conventional Commits`
 
 - `feat:` for new functionality.
 - `fix:` for bug fixes.
