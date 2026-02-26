@@ -91,7 +91,7 @@ Title: `[Task] Add Front-end`
 
 #### 1.3.2. Edit a source file and observe hot reload
 
-1. [Open the file](../../../wiki/vs-code.md#open-the-file) [`frontend/src/App.jsx`](../../../frontend/src/App.jsx).
+1. [Open the file](../../../wiki/vs-code.md#open-the-file) [`frontend/src/App.tsx`](../../../frontend/src/App.tsx).
 2. Make a small visible change, for example change a heading text.
 3. Save the file.
 4. Observe that the browser updates automatically without a page refresh.

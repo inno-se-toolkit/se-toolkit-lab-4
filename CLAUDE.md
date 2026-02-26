@@ -9,7 +9,7 @@ Read before making changes:
 - [`instructors/context/lab-conventions/conventions-common.md`](instructors/context/lab-conventions/conventions-common.md) — writing conventions (formatting, links, alerts, etc.)
 - [`instructors/context/lab-conventions/conventions-tasks.md`](instructors/context/lab-conventions/conventions-tasks.md) — task structure and design principles
 
-## When editing `lab/wiki/`
+## When editing `wiki/`
 
 Read before making changes:
 
@@ -21,6 +21,13 @@ Read before making changes:
 Read before making changes:
 
 - [`instructors/context/lab-conventions/conventions-lab.md`](instructors/context/lab-conventions/conventions-lab.md) — repo structure, README, setup, git-workflow, GitHub templates, VS Code config, task runner, narrative, Docker, CONTRIBUTORS, checklist, security
+
+## When editing code (`src/`, `frontend/`, `tests/`)
+
+Read and follow:
+
+- [`docs/design/architecture.md`](docs/design/architecture.md) — C4 architecture, domain model, container layout, component structure, and design decisions
+- [`docs/contributing/conventions/code.md`](docs/contributing/conventions/code.md) — naming, comments, type safety, linting, shift-left testing, security
 
 ## Other files
 

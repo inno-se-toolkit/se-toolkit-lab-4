@@ -66,13 +66,7 @@ services:
         condition: service_healthy
 
   caddy:
-    # A portable solution: download image from Docker Hub.
-    # image: caddy:2.11-alpine
-
-    # A less portable solution: download image through a cache proxy provided by the University.
-    # This solution is necessary to avoid "Too many requests" errors.
-    # This solution won't work outside the University network.
-    image: harbor.pg.innopolis.university/docker-hub-cache/caddy:2.11-alpine
+    build: frontend/
     depends_on:
       - app
     environment:
