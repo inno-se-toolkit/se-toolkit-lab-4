@@ -26,6 +26,7 @@
   - [Delete a `VS Code Terminal`](#delete-a-vs-code-terminal)
   - [Copy text inside the `VS Code Terminal`](#copy-text-inside-the-vs-code-terminal)
   - [Paste text inside the `VS Code Terminal`](#paste-text-inside-the-vs-code-terminal)
+  - [Look at the open `VS Code Terminal`s](#look-at-the-open-vs-code-terminals)
   - [Look at the current `VS Code Terminal`](#look-at-the-current-vs-code-terminal)
   - [Check the current shell in the `VS Code Terminal`](#check-the-current-shell-in-the-vs-code-terminal)
   - [Expand the sidebar with open `VS Code Terminal`s](#expand-the-sidebar-with-open-vs-code-terminals)
@@ -289,6 +290,18 @@ Method 2:
 ### Paste text inside the `VS Code Terminal`
 
 `Ctrl+Shift+V` (`Cmd+V` on `macOS`, `Ctrl+V` on `Windows`)
+
+### Look at the open `VS Code Terminal`s
+
+1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
+2. Look at the sidebar with a list of `VS Code Terminal`s.
+
+   <img alt="Open Terminals" src="./images/vs-code/terminal-current-terminal.png" style="width:300px"></img>
+
+   <img alt="Open Terminals - Narrow" src="./images/vs-code/terminal-open-terminals-narrow.png" style="width:300px"></img>
+
+   If you don't see a list of `VS Code Terminal`s on the right, you have only one `VS Code Terminal` open.
+3. (Optional) [Expand the sidebar with open `VS Code Terminal`s](#expand-the-sidebar-with-open-vs-code-terminals).
 
 ### Look at the current `VS Code Terminal`
 
