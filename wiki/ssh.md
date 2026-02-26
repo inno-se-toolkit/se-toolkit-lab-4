@@ -144,6 +144,9 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 
 ## Add the host to `SSH`
 
+> [!NOTE]
+> See [host](./computer-networks.md#host).
+
 1. Make sure you have [set up `SSH`](#set-up-ssh).
 2. Get [`<your-vm-ip-address>`](./vm.md#your-vm-ip-address).
 3. [Open the file](./vs-code.md#open-the-file):
