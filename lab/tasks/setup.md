@@ -13,7 +13,7 @@
   - [1.4. Set up programs](#14-set-up-programs)
     - [1.4.1. Set up `VS Code`](#141-set-up-vs-code)
     - [1.4.2. Set up `Git`](#142-set-up-git)
-    - [1.4.3. Set up `Docker`](#143-set-up-docker)
+    - [1.4.3. (UPD) Set up `Docker`](#143-upd-set-up-docker)
     - [1.4.4. (UPD) (`Windows` only) Set the default shell for the `VS Code Terminal`](#144-upd-windows-only-set-the-default-shell-for-the-vs-code-terminal)
     - [1.4.5. (UPD) Install `Nix`](#145-upd-install-nix)
   - [1.5. (UPD) Open in `VS Code` the `software-engineering-toolkit` directory](#15-upd-open-in-vs-code-the-software-engineering-toolkit-directory)
@@ -134,7 +134,7 @@
 1. (Optional) [Read about `Git`](../../wiki/git.md#what-is-git).
 2. [Install `Git`](https://git-scm.com/install/) if it's not installed.
 
-#### 1.4.3. Set up `Docker`
+#### 1.4.3. (UPD) Set up `Docker`
 
 1. (Optional) [Read about `Docker`](../../wiki/docker.md#what-is-docker).
 2. [Install `Docker`](../../wiki/docker.md#install-docker) if it's not installed.
