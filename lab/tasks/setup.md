@@ -151,7 +151,7 @@
 #### 1.4.5. (NEW) Set up `Nix`
 
 1. (Optional) [Read about `Nix`](../../wiki/nix.md#what-is-nix).
-2. [Install `Nix`](../../wiki/nix.md#install-nix) if it's not installed.
+2. [Set up `Nix`](../../wiki/nix.md#set-up-nix) if it's not installed.
 
 ### 1.5. (UPD) Open in `VS Code` the `software-engineering-toolkit` directory
 
