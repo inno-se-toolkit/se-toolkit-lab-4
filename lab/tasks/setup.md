@@ -169,8 +169,7 @@
 
    It should look like `https://github.com/<your-github-username>/se-toolkit-lab-4`.
 
-> [!NOTE]
-> Here, the `<repo-name>` is `se-toolkit-lab-4`.
+   See [`<your-github-username>`](../../wiki/github.md#your-github-username).
 
 #### 1.6.2. (UPD) Clone your fork
 
