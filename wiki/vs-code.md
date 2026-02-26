@@ -438,15 +438,17 @@ Method 2:
 ### Install the extension
 
 1. Open the `Extensions`.
-2. Write the extension:
-   - name
-   - or, identifier
+2. Write:
+   - Option 1: extension name
+
+      Example: `GitHub Copilot Chat`
+   - Option 2: extension identifier
 
       Format: `<extension-publisher>.<extension-name>`
 
-      Example: `ms-vscode-remote.remote-wsl`).
+      Example: `github.copilot-chat`.
 3. Click the extension.
-4. Click install.
+4. Click `Install`.
 
 ### Filter the `Extensions`
 
