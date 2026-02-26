@@ -26,6 +26,7 @@
   - [Delete a `VS Code Terminal`](#delete-a-vs-code-terminal)
   - [Copy text inside the `VS Code Terminal`](#copy-text-inside-the-vs-code-terminal)
   - [Paste text inside the `VS Code Terminal`](#paste-text-inside-the-vs-code-terminal)
+  - [Look at the current `VS Code Terminal`](#look-at-the-current-vs-code-terminal)
   - [Check the current shell in the `VS Code Terminal`](#check-the-current-shell-in-the-vs-code-terminal)
   - [(`Windows` only) Set the default shell for the `VS Code Terminal`](#windows-only-set-the-default-shell-for-the-vs-code-terminal)
   - [Run a command using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal)
@@ -288,22 +289,27 @@ Method 2:
 
 `Ctrl+Shift+V` (`Cmd+V` on `macOS`, `Ctrl+V` on `Windows`)
 
-### Check the current shell in the `VS Code Terminal`
+### Look at the current `VS Code Terminal`
 
 1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
-2. Look at:
-   - the [`Panel Toolbar`](#panel-toolbar):
+2. Look at one of these:
+   - The [`Panel Toolbar`](#panel-toolbar):
 
       <img alt="Current Terminal Shell" src="./images/vs-code/terminal-single-current-shell-bash.png" style="width:300px"></img>
 
-   - or, at the current (highlighted) `VS Code Terminal`:
+   - Current (highlighted) `VS Code Terminal`:
 
       <img alt="Terminals" src="./images/vs-code/terminal-current-terminal.png" style="width:300px"></img>
 
+### Check the current shell in the `VS Code Terminal`
+
+1. [Look at the current `VS Code Terminal`s](#look-at-the-current-vs-code-terminal).
+
    You should see on:
+
    - `Windows`: `bash`;
 
-     If you see something else, [set the default shell](#windows-only-set-the-default-shell-for-the-vs-code-terminal).
+        If you see something else, [set the default shell](#windows-only-set-the-default-shell-for-the-vs-code-terminal).
    - `macOS`, `Linux`: `zsh`, `bash`, or another [shell](./shell.md#shell-variants) name;
 
 ### (`Windows` only) Set the default shell for the `VS Code Terminal`
