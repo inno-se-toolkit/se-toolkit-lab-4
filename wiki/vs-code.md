@@ -605,7 +605,20 @@ Method 2:
 ### Go to the definition
 
 ### Rename a symbol
+
 ## Set up `VS Code`
+
+1. [Install `VS Code`](#install-vs-code)
+2. [(`Windows` only) Set up running `VS Code` in `WSL`](#windows-only-set-up-running-vs-code-in-wsl).
+3. [(`macOS` only) Add `VS Code` to `PATH`](#macos-only-add-vs-code-to-path)
+
+### Install `VS Code`
+
+Follow the installation instructions for your platform:
+
+- [`Linux`](https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux)
+- [`macOS`](https://code.visualstudio.com/docs/setup/mac#_install-vs-code-on-macos)
+- [`Windows`](https://code.visualstudio.com/docs/setup/windows#_install-vs-code-on-windows)
 
 ### (`Windows` only) Set up running `VS Code` in `WSL`
 
