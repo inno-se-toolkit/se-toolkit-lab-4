@@ -45,6 +45,9 @@
   - [Create a PAT (classic)](#create-a-pat-classic)
 - [`GitHub flow`](#github-flow)
 - [`GitHub Projects`](#github-projects)
+- [`GitHub Actions`](#github-actions)
+- [Secrets](#secrets)
+  - [Add a secret](#add-a-secret)
 
 ## The `GitHub` site
 
@@ -127,7 +130,10 @@ Then, your fork URL should look like `https://github.com/<your-github-username>/
 
 We'll refer to this URL as `<your-fork-url>`.
 
-Find [`<your-github-username>`](#your-github-username) if you don't know it.
+See also:
+
+- [`<your-github-username>`](#your-github-username)
+- [`<repo-name>`](#repo-name).
 
 ### Go to your fork
 
@@ -386,3 +392,27 @@ Key features of `GitHub Projects` include:
 `GitHub Projects` can be scoped to a single repository or span multiple repositories, making it ideal for managing work across entire organizations or teams.
 
 You can use Projects to plan sprints, track bug fixes, manage feature development, or coordinate any other collaborative work.
+
+## `GitHub Actions`
+
+`GitHub Actions` is a `CI/CD` platform built into `GitHub` that runs automated workflows when events happen in a [repository](#repository) — for example, on every push to `main`.
+
+Workflows are defined as `YAML` files in `.github/workflows/`.
+
+Docs:
+
+- [`GitHub Actions`](https://docs.github.com/en/actions)
+
+## Secrets
+
+A `GitHub` secret is an encrypted environment variable stored in a [repository](#repository). Secrets are used to store sensitive values like API keys, passwords, and tokens so they are not exposed in workflow files.
+
+Secrets are accessed in workflow files as `${{ secrets.SECRET_NAME }}`.
+
+### Add a secret
+
+1. [Go to your fork](#go-to-your-fork).
+2. Go to `Settings` → `Secrets and variables` → `Actions`.
+3. Click `New repository secret`.
+4. Enter the secret name and value.
+5. Click `Add secret`.

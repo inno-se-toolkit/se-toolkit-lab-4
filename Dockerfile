@@ -23,7 +23,7 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
     uv sync --locked --no-install-project
 
-COPY src /app/src
+COPY backend /app/backend
 COPY pyproject.toml uv.lock /app/
 
 RUN --mount=type=cache,target=/root/.cache/uv \
@@ -59,4 +59,4 @@ USER nonroot
 WORKDIR /app
 
 # Run the FastAPI application
-CMD ["sh", "-c", "python src/app/run.py"]
+CMD ["sh", "-c", "python backend/app/run.py"]

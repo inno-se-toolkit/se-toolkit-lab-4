@@ -6,7 +6,7 @@ convention is mapped to an
 quality attribute so the reasoning behind every rule is explicit.
 
 - [Naming](#naming)
-  - [Python (`src/`, `tests/`)](#python-src-tests)
+  - [Python (`backend/`)](#python-backend)
   - [TypeScript / React (`frontend/`)](#typescript--react-frontend)
   - [Environment variables](#environment-variables)
   - [Markdown / config files](#markdown--config-files)
@@ -33,7 +33,7 @@ quality attribute so the reasoning behind every rule is explicit.
 > Consistent naming lets any contributor find and change code without
 > guessing at conventions.
 
-### Python (`src/`, `tests/`)
+### Python (`backend/`)
 
 | Element | Style | Example |
 | --- | --- | --- |

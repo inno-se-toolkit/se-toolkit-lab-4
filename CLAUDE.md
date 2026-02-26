@@ -22,7 +22,7 @@ Read before making changes:
 
 - [`instructors/context/lab-conventions/conventions-lab.md`](instructors/context/lab-conventions/conventions-lab.md) — repo structure, README, setup, git-workflow, GitHub templates, VS Code config, task runner, narrative, Docker, CONTRIBUTORS, checklist, security
 
-## When editing code (`src/`, `frontend/`, `tests/`)
+## When editing code (`backend/`, `frontend/`)
 
 Read and follow:
 

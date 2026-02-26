@@ -2,7 +2,6 @@
 
 <h2>Table of contents</h2>
 
-- [Open in `VS Code` the directory](#open-in-vs-code-the-directory)
 - [Clone the repo](#clone-the-repo)
   - [Clone the repo using the `VS Code Terminal`](#clone-the-repo-using-the-vs-code-terminal)
   - [Clone the repo using the `Command Palette`](#clone-the-repo-using-the-command-palette)
@@ -42,26 +41,6 @@
   - [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
   - [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
   - [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
-
-## Open in `VS Code` the directory
-
-> [!NOTE]
-> The `<directory-name>` is the name of a directory that you want to open.
->
-> Example: `software-engineering-toolkit`
-
-1. [Run using the `Command Palette`](./vs-code.md#command-palette):
-   `File: Open Folder...`
-2. Find the directory `<directory-name>`.
-3. Open this directory.
-
-   `VS Code` should now open in that directory.
-4. [Open the `Explorer`](./vs-code.md#open-the-explorer).
-5. You should see `<DIRECTORY-NAME>` there.
-
-   Example: `SOFTWARE-ENGINEERING-TOOLKIT`
-6. (`Windows` only) [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
-   `WSL: Reopen Folder in WSL`
 
 ## Clone the repo
 

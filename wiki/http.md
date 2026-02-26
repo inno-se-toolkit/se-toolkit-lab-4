@@ -5,6 +5,7 @@
 - [What is `HTTP`](#what-is-http)
 - [Communication using `HTTP`](#communication-using-http)
 - [`HTTP` request](#http-request)
+  - [`HTTP` method](#http-method)
   - [Query parameter](#query-parameter)
 - [`HTTP` response](#http-response)
 - [`HTTP` response status code](#http-response-status-code)
@@ -42,6 +43,17 @@ sequenceDiagram
 ## `HTTP` request
 
 An `HTTP` request is a message sent by a client to a server asking for resources or to perform actions. It includes a method, headers, and optional body.
+
+### `HTTP` method
+
+An `HTTP` method is a verb that tells the server what action to perform on a resource.
+
+Common methods:
+
+- `GET` — retrieve a resource.
+- `POST` — create a new resource.
+- `PUT` — update an existing resource.
+- `DELETE` — remove a resource.
 
 ### Query parameter
 

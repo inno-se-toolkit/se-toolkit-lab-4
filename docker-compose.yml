@@ -40,7 +40,7 @@ services:
       - ${POSTGRES_HOST_ADDRESS:-127.0.0.1}:${POSTGRES_HOST_PORT:-5432}:5432
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./src/app/data/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./backend/app/data/init.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-lab3}"]
       interval: 5s

@@ -1,5 +1,4 @@
-"""Post-process lychee --format json output to add file:line locations.
-"""
+"""Post-process lychee --format json output to add file:line locations."""
 
 import json
 import re
@@ -47,7 +46,9 @@ def find_locations(filepath: str, url: str) -> list[tuple[int, int, str]]:
     # Reconstruct a searchable pattern from just the basename + fragment.
     if url.startswith("file://"):
         path_part = re.sub(r"^file://", "", url)
-        basename = path_part.split("/")[-1]  # e.g. "task-1.md#6-authorize-in-swagger-ui"
+        basename = path_part.split("/")[
+            -1
+        ]  # e.g. "task-1.md#6-authorize-in-swagger-ui"
         esc = re.escape(basename)
         # Only match the basename when it appears inside the URL delimiters
         # `(…)` or `"…"`, so we skip the display text of markdown links like
@@ -63,7 +64,7 @@ def find_locations(filepath: str, url: str) -> list[tuple[int, int, str]]:
                 m = pattern.search(line)
                 if m:
                     start = m.start()
-                    raw_link = line[start:m.end()].rstrip()
+                    raw_link = line[start : m.end()].rstrip()
                     results.append((i, start + 1, raw_link))
     except (OSError, UnicodeDecodeError):
         pass
@@ -94,9 +95,7 @@ for filepath, errors in data.error_map.items():
             for loc in locs:
                 location = f"{relpath}:{loc[0]}:{loc[1]}"
                 link = loc[2] if error.url.startswith("file://") else display_link
-                print(
-                    f"{_c('1', location)}: {_c('1;31', '[ERROR]')} {_c('36', link)}"
-                )
+                print(f"{_c('1', location)}: {_c('1;31', '[ERROR]')} {_c('36', link)}")
                 print(f"  {_c('2', error.status.text)}")
         else:
             total += 1
@@ -105,5 +104,7 @@ for filepath, errors in data.error_map.items():
             )
             print(f"  {_c('2', error.status.text)}")
 
-print(f"\n{_c('1;31', f'Found {total} broken link(s) in {len(data.error_map)} file(s).')}")
+print(
+    f"\n{_c('1;31', f'Found {total} broken link(s) in {len(data.error_map)} file(s).')}"
+)
 sys.exit(1)

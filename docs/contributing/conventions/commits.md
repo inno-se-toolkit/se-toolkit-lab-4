@@ -43,8 +43,7 @@ area of change:
 | `caddy` | `caddy/` config and reverse-proxy setup |
 | `lab` | `lab/` (task sheets, setup guide) |
 | `frontend` | `frontend/` |
-| `backend` | `src/`, `pyproject.toml`, backend config |
-| `tests` | `tests/` |
+| `backend` | `backend/`, `pyproject.toml`, backend config |
 | `vscode` | `.vscode/` settings and extensions |
 | `git` | `.gitignore`, `.gitmodules`, git config |
 | `github` | `.github/` (workflows, issue templates, PR templates) |

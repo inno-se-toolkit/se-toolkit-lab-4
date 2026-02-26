@@ -79,7 +79,7 @@ Title: `[Task] Observe System Component Interaction`
 7. Observe the following:
    - The `Headers` tab: the [HTTP method](../../../wiki/http.md#http-method) and the request URL.
    - The `Payload` tab: the request body you sent.
-   - The `Response` tab: the [status code](../../../wiki/http.md#status-code) and response body.
+   - The `Response` tab: the [status code](../../../wiki/http.md#http-response-status-code) and response body.
 
 > [!NOTE]
 > The request travels from your browser to the API running on the VM, which stores the data in the `PostgreSQL` database.

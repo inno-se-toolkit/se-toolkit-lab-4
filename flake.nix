@@ -20,24 +20,17 @@
         in
         {
           devshells.default = {
-            commandGroups = {
-              front-tools = [
-                pkgs.nodejs_22
-              ];
-              back-tools = [
-                pkgs.uv
-              ];
-            };
-          };
-          devshells.instructors = {
             bash.extra = ''
               export ROOT_DIR="$(pwd)"
             '';
-            packages = [
-              pkgs.nodejs_22
-            ];
             commandGroups = {
-              lint = [
+              "1-front-tools" = [
+                pkgs.nodejs_22
+              ];
+              "2-back-tools" = [
+                pkgs.uv
+              ];
+              "3-lint-scripts" = [
                 {
                   name = "find-broken-links";
                   command = ''
@@ -47,6 +40,7 @@
                       --no-progress \
                       --exclude-path '.venv' \
                       --exclude-path '.direnv' \
+                      --exclude-path 'node_modules' \
                       --root-dir . \
                       --cache \
                       --format json \
@@ -59,12 +53,12 @@
                   name = "lint-docs";
                   command = ''
                     ${pkgs.lib.getExe pkgs.markdownlint-cli2} \
-                      '**/*.md' '#.direnv' '#.venv'
+                      '**/*.md' '#.direnv' '#.venv' '#node_modules'
                   '';
                   help = "Lint all Markdown files";
                 }
               ];
-              tools = [
+              "4-lint-tools" = [
                 pkgs.lychee
               ];
             };

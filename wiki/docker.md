@@ -14,6 +14,7 @@
   - [Service](#service)
 - [Volumes](#volumes)
 - [Health checks](#health-checks)
+- [`DockerHub`](#dockerhub)
 
 ## Image
 
@@ -149,3 +150,13 @@ services:
       timeout: 5s
       retries: 5
 ```
+
+## `DockerHub`
+
+`DockerHub` is a public container registry where you can store and pull [Docker images](#image).
+
+You can push a locally built image to `DockerHub` so that other machines (such as a VM) can pull and run it without building from source.
+
+Docs:
+
+- [`DockerHub`](https://hub.docker.com/)
