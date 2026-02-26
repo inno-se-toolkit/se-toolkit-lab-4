@@ -229,25 +229,28 @@ graph TD
 
 ### 6.1 Student Fetches Items via Frontend
 
-The most common interaction: a student opens the browser, Caddy serves the React SPA as static files, and the SPA calls the API through Caddy.
+The most common interaction: a student opens the browser, Caddy serves the React SPA as static files, and the SPA calls the API through Caddy. The API token is entered at runtime through the UI and persisted in `localStorage`.
 
 ```mermaid
 sequenceDiagram
     actor Student
+    participant Browser as React SPA
     participant Caddy
     participant API as FastAPI
     participant DB as PostgreSQL
 
     Student->>Caddy: GET / (opens app in browser)
-    Caddy-->>Student: index.html + JS bundle (static files)
-    Student->>Caddy: GET /items (Authorization: Bearer <token>)
+    Caddy-->>Browser: index.html + JS bundle (static files)
+    Note over Student,Browser: Student enters API token in the UI
+    Browser->>Browser: Save token to localStorage
+    Browser->>Caddy: GET /items (Authorization: Bearer <token>)
     Caddy->>API: Proxy GET /items
     API->>API: verify_api_key()
     API->>DB: SELECT * FROM item ORDER BY id
     DB-->>API: list of item rows
     API-->>Caddy: 200 OK — JSON [{id, type, title, ...}]
-    Caddy-->>Student: 200 OK — JSON [{id, type, title, ...}]
-    Note over Student: React SPA renders items table
+    Caddy-->>Browser: 200 OK — JSON [{id, type, title, ...}]
+    Note over Browser: Renders items table
 ```
 
 ### 6.2 Developer Creates a Learning Item
