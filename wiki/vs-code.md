@@ -23,6 +23,7 @@
   - [Close the `VS Code Terminal`](#close-the-vs-code-terminal)
   - [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal)
   - [Switch to another `VS Code Terminal`](#switch-to-another-vs-code-terminal)
+  - [Delete a `VS Code Terminal`](#delete-a-vs-code-terminal)
   - [Copy text inside the `VS Code Terminal`](#copy-text-inside-the-vs-code-terminal)
   - [Paste text inside the `VS Code Terminal`](#paste-text-inside-the-vs-code-terminal)
   - [Check the current shell in the `VS Code Terminal`](#check-the-current-shell-in-the-vs-code-terminal)
@@ -268,6 +269,17 @@ Method 2:
 
 1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
 1. Press `Ctrl+PageDown` / `Ctrl+PageUp` (`Cmd+Shift+]` / `Cmd+Shift+[` on `macOS`).
+
+### Delete a `VS Code Terminal`
+
+1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
+2. Look at open terminals.
+
+   <img alt="Terminal - Open Terminals" src="./images/vs-code/terminal-open-terminals.png" style="width:200px"></img>
+
+3. Delete the terminal.
+
+   <img alt="Terminal - Delete Terminal" src="./images/vs-code/terminal-delete-terminal.png" style="width:200px"></img>
 
 ### Copy text inside the `VS Code Terminal`
 
