@@ -2,25 +2,38 @@
 
 <h2>Table of contents</h2>
 
+- [What is `Python`](#what-is-python)
 - [Syntax](#syntax)
-- [Documentation](#documentation)
+  - [Code blocks](#code-blocks)
+  - [Documentation](#documentation)
   - [Docstring](#docstring)
-- [Package managers](#package-managers)
-  - [`uv`](#uv)
-    - [Install `uv`](#install-uv)
-    - [Install `Python` and dependencies](#install-python-and-dependencies)
-- [Select the `Python` interpreter](#select-the-python-interpreter)
-- [Check that `Python` works](#check-that-python-works)
+- [`uv`](#uv)
+  - [Install `uv`](#install-uv)
+- [Set up `Python` in `VS Code`](#set-up-python-in-vs-code)
+  - [Install `Python` and dependencies](#install-python-and-dependencies)
+  - [Select the `Python` interpreter](#select-the-python-interpreter)
+  - [Check that `Python` works](#check-that-python-works)
 - [Testing](#testing)
   - [`pytest`](#pytest)
   - [The `assert` statement](#the-assert-statement)
 - [`Pylance`](#pylance)
 
+## What is `Python`
+
+`Python` is a general-purpose programming language. In this project, it is used to build the backend web server with [`FastAPI`](https://fastapi.tiangolo.com/).
+
+Docs:
+
+- [Python documentation](https://docs.python.org/3/)
+- [Learn Python in Y minutes](https://learnxinyminutes.com/python/)
+
 ## Syntax
 
-Python uses indentation (spaces) to define code blocks instead of curly braces `{}`.
+### Code blocks
 
-## Documentation
+`Python` uses indentation (spaces) to define code blocks instead of curly braces `{}`.
+
+### Documentation
 
 `Python` supports writing inline documentation as [docstrings](#docstring) embedded directly in source code.
 
@@ -28,32 +41,41 @@ Python uses indentation (spaces) to define code blocks instead of curly braces `
 
 A docstring is a string literal that appears as the first statement in a function, class, or module. It describes what the code does.
 
+Docs:
+
+- [PEP 257 – Docstring Conventions](https://peps.python.org/pep-0257/)
+
+Example:
+
 ```python
 def greet(name):
     """Return a greeting message for the given name."""
     return f"Hello, {name}!"
 ```
 
-Docs:
-
-- [PEP 257 – Docstring Conventions](https://peps.python.org/pep-0257/)
-
-## Package managers
-
-### `uv`
+## `uv`
 
 `uv` is a modern package manager for `Python`.
 
-#### Install `uv`
+### Install `uv`
 
 1. [Check the current shell in the `VS Code Terminal`](./vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 1. Follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/).
 
    If you use `Windows`, follow the instructions for `macOS and Linux`.
 
-#### Install `Python` and dependencies
+## Set up `Python` in `VS Code`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+Complete these steps:
+
+1. [Install `Python` and dependencies](#install-python-and-dependencies).
+2. [Select the `Python` interpreter](#select-the-python-interpreter).
+3. [Check that `Python` works](#check-that-python-works).
+
+### Install `Python` and dependencies
+
+1. [Open in `VS Code` the project directory](./vs-code.md#open-the-directory).
+2. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    uv sync
@@ -61,7 +83,7 @@ Docs:
 
    This command automatically downloads the correct `Python` version, creates the `.venv` virtual environment, and installs all dependencies.
 
-2. The output should be similar to this:
+3. The output should be similar to this:
 
    ```terminal
    Using CPython 3.14.2
@@ -76,13 +98,13 @@ Docs:
 >
 > This directory is managed by `uv`. You don't need to edit files in this directory manually.
 
-## Select the `Python` interpreter
+### Select the `Python` interpreter
 
 1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
    `Python: Select Interpreter`.
 2. Click `Recommended` to select the interpreter in `./.venv/bin/python`.
 
-## Check that `Python` works
+### Check that `Python` works
 
 1. [Open a new `VS Code Terminal`](./vs-code.md#open-a-new-vs-code-terminal).
 2. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
