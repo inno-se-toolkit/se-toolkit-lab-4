@@ -639,13 +639,63 @@ Method 2:
 
 ## Language server
 
+A language server provides smart features for a programming language: type information, documentation, navigation, and refactoring.
+
+`VS Code` uses the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) to communicate with language servers.
+
+Docs:
+
+- [Language Server Protocol](https://code.visualstudio.com/api/language-extensions/language-server-extension-guide)
+
+Actions:
+
+- [Type on hover](#type-on-hover)
+- [Docs on hover](#docs-on-hover)
+- [Go to the definition](#go-to-the-definition)
+- [Rename a symbol](#rename-a-symbol)
+
 ### Type on hover
+
+1. Hover over a variable, function, or other symbol.
+2. A tooltip will show the type information.
 
 ### Docs on hover
 
+1. Hover over a variable, function, or other symbol.
+2. A tooltip will show the documentation (if available).
+
 ### Go to the definition
 
+Method 1:
+
+1. Hold `Ctrl`/`Alt` (`Cmd` on `macOS`).
+2. Click the symbol.
+
+Method 2:
+
+1. Right-click the symbol.
+2. Click `Go to Definition`.
+
+Method 3:
+
+1. Place the cursor on the symbol.
+2. Press `F12`.
+
 ### Rename a symbol
+
+Method 1:
+
+1. Right-click the symbol.
+2. Click `Rename Symbol`.
+3. Type the new name.
+4. Press `Enter`.
+
+Method 2:
+
+1. Place the cursor on the symbol.
+2. Press `F2`.
+3. Type the new name.
+4. Press `Enter`.
 
 ## Set up `VS Code`
 
