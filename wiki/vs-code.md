@@ -580,6 +580,8 @@ Here are some [workspace settings](#workspace-settings) that you can change:
 
   See [`<file-path>`](./file-system.md#file-path).
 
+1. (`macOS` only) If the `code <file-path>` command doesn't work, [add `VS Code` to `PATH`](#macos-only-add-vs-code-to-path).
+
 ### Open the `Markdown` preview
 
 > [!NOTE]
