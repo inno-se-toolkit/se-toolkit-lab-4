@@ -55,7 +55,10 @@ It was introduced to address the exhaustion of [IPv4](#ipv4) addresses and suppo
 
 ## Host
 
-A host is any [machine](#machine) connected to a [network](#what-is-a-network) that has an [IP address](#ip-address).
+A host is any [machine](#machine) that:
+
+- is connected to a [network](#what-is-a-network);
+- has an [IP address](#ip-address).
 
 Hosts can send and receive data over the [network](#what-is-a-network).
 
