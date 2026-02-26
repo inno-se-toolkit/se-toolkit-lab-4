@@ -284,11 +284,9 @@ Method 2:
 ### Delete a `VS Code Terminal`
 
 1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
-2. Look at open terminals.
-
-   <img alt="Terminal - Open Terminals" src="./images/vs-code/terminal-open-terminals.png" style="width:200px"></img>
-
-3. Delete the terminal.
+2. [Look at the open `VS Code Terminal`s](#look-at-the-open-vs-code-terminals).
+3. Go to the `VS Code Terminal` that should be deleted.
+4. Delete the terminal.
 
    <img alt="Terminal - Delete Terminal" src="./images/vs-code/terminal-delete-terminal.png" style="width:200px"></img>
 
