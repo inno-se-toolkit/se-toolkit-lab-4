@@ -3,6 +3,7 @@
 <h2>Table of contents</h2>
 
 - [What is `Nix`](#what-is-nix)
+- [`nixpkgs`](#nixpkgs)
 - [Install `Nix`](#install-nix)
 
 ## What is `Nix`
@@ -14,6 +15,20 @@ Docs:
 
 - [Nix documentation](https://nix.dev/)
 - [NixOS & Flakes Book](https://nixos-and-flakes.thiscute.world/introduction/)
+
+## `nixpkgs`
+
+`nixpkgs` is the official package collection for `Nix`, containing over 120,000 packages.
+It is the source from which `Nix` installs tools and dependencies.
+
+According to `Repology`, `nixpkgs` contains the largest number of the newest versions of packages among `Linux` repositories.
+
+Docs:
+
+- [`nixpkgs` repository on `GitHub`](https://github.com/nixos/nixpkgs)
+- [Nixpkgs Reference Manual](https://nixos.org/manual/nixpkgs/stable/)
+- [Search nixpkgs](https://search.nixos.org/packages)
+- [`nixpkgs` on `Repology`](https://repology.org/repositories/statistics/newest)
 
 ## Install `Nix`
 
