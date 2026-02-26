@@ -22,3 +22,40 @@ th {
 tr:nth-child(even) {
   background: #fafafa;
 }
+
+/* Token form */
+
+.token-form {
+  max-width: 360px;
+}
+
+.token-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.token-form button {
+  padding: 0.5rem 1.25rem;
+}
+
+/* Header with disconnect */
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.app-header h1 {
+  margin: 0;
+}
+
+.btn-disconnect {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+}
