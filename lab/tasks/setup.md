@@ -21,7 +21,6 @@
     - [1.6.1. (UPD) Copy your fork `URL`](#161-upd-copy-your-fork-url)
     - [1.6.2. (UPD) Clone your fork](#162-upd-clone-your-fork)
     - [1.6.3. (UPD) Open the cloned repo in `VS Code`](#163-upd-open-the-cloned-repo-in-vs-code)
-  - [1.7. (UPD) (`Windows` only) Set the default shell](#17-upd-windows-only-set-the-default-shell)
   - [1.8. Continue creating a VM](#18-continue-creating-a-vm)
   - [1.9. Set up `Python` in `VS Code`](#19-set-up-python-in-vs-code)
     - [1.9.1. Install `uv`](#191-install-uv)
@@ -183,10 +182,6 @@
 1. [Open in `VS Code` the directory](../../wiki/vs-code.md#open-the-directory):
    `se-toolkit-lab-4`.
 2. [Install recommended extensions](../../wiki/vs-code.md#install-recommended-extensions).
-
-### 1.7. (UPD) (`Windows` only) Set the default shell
-
-1. [Check and set the default shell in the `VS Code Terminal`](../../wiki/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 
 ### 1.8. Continue creating a VM
 
