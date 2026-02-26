@@ -315,18 +315,18 @@ Method 2:
 
    - Case 1 (bad): You don't have the recommended extensions installed.
 
-     <img alt="Terminal Default Profile Bad Options" src="./images/vs-code/command-palette-default-terminal-profile-bad-options.png" style="width:400px"></img>
+     <img alt="Terminal Default Profile - Bad Options" src="./images/vs-code/command-palette-default-terminal-profile-bad-options.png" style="width:400px"></img>
 
      Return to the first step and make sure you can [run `VS Code` in WSL](#windows-only-set-up-running-vs-code-in-wsl).
    - Case 2 (good): You're running `VS Code` outside `WSL`.
 
-     <img alt="Terminal Default Profile Outside WSL" src="./images/vs-code/command-palette-default-terminal-profile-outside-wsl-wsl.png" style="width:400px"></img>
+     <img alt="Terminal Default Profile - Outside WSL" src="./images/vs-code/command-palette-default-terminal-profile-outside-wsl-wsl.png" style="width:400px"></img>
 
      Follow the instructions for [setting the default shell](#windows-only-set-the-default-shell-for-the-vs-code-terminal) again.
 
    - Case 3 (the best): You're running `VS Code` inside `WSL`. You've probably [opened the directory inside `WSL`](#windows-only-open-the-directory-in-wsl). This is the best case.
 
-     <img alt="Terminal Default Profile Outside WSL" src="./images/vs-code/command-palette-default-terminal-profile-bash.png" style="width:400px"></img>
+     <img alt="Terminal Default Profile - Bash" src="./images/vs-code/command-palette-default-terminal-profile-bash.png" style="width:400px"></img>
 
      [Select](#select-an-option-from-a-list) `bash`.
 5. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
