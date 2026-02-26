@@ -609,7 +609,7 @@ Here are some [workspace settings](#workspace-settings) that you can change:
 5. You should see `<DIRECTORY-NAME>` there.
 
    Example: `SOFTWARE-ENGINEERING-TOOLKIT`
-6. (`Windows` only) [Open the directory in `WSL`](#windows-only-open-the-directory-in-wsl).
+6. (`Windows` only) [Reopen the directory in `WSL`](#windows-only-reopen-the-directory-in-wsl).
 
 #### (`Windows` only) Open the directory in `WSL`
 
