@@ -330,7 +330,7 @@ Method 2:
 
      [Select](#select-an-option-from-a-list) `bash`.
 5. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
-6. Close all tabs in the `VS Code Terminal`.
+6. [Delete all `VS Code Terminal`s](#delete-a-vs-code-terminal).
 7. [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal).
 
 ### Run a command using the `VS Code Terminal`
