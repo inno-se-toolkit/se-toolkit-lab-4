@@ -331,7 +331,7 @@ Method 2:
 
    - `Windows`: `bash`;
 
-        If you see something else, [set the default shell](#windows-only-set-the-default-shell-for-the-vs-code-terminal).
+      If you see something else, [set the default shell](#windows-only-set-the-default-shell-for-the-vs-code-terminal).
    - `macOS`, `Linux`: `zsh`, `bash`, or another [shell](./shell.md#shell-variants) name;
 
 ### Expand the sidebar with open `VS Code Terminal`s
