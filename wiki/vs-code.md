@@ -2,6 +2,7 @@
 
 <h2>Table of contents</h2>
 
+- [What is `VS Code`](#what-is-vs-code)
 - [`Basic Layout`](#basic-layout)
 - [`Custom Layout`](#custom-layout)
   - [Move the `Primary Sidebar` to the right](#move-the-primary-sidebar-to-the-right)
@@ -73,6 +74,14 @@
 > It usually coincides with the shortcut for `Windows`.
 >
 > You can check shortcuts for your platform in the [reference](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-reference).
+
+## What is `VS Code`
+
+`Visual Studio Code` (`VS Code`) is a free, open-source code editor made by `Microsoft`. It provides features like syntax highlighting, a built-in [terminal](#vs-code-terminal), [extensions](#extensions), and [`Git`](./git.md) integration.
+
+Docs:
+
+- [Visual Studio Code documentation](https://code.visualstudio.com/docs)
 
 ## `Basic Layout`
 
