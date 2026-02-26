@@ -10,10 +10,10 @@
     - [1.3.4. (UPD) Enable issues](#134-upd-enable-issues)
     - [1.3.5. (UPD) Add a classmate as a collaborator](#135-upd-add-a-classmate-as-a-collaborator)
     - [1.3.6. (UPD) Protect your `main` branch](#136-upd-protect-your-main-branch)
-  - [1.4. Install programs](#14-install-programs)
+  - [1.4. Set up programs](#14-set-up-programs)
     - [1.4.1. Set up `VS Code`](#141-set-up-vs-code)
-    - [1.4.2. Install `Git`](#142-install-git)
-    - [1.4.3. Install `Docker`](#143-install-docker)
+    - [1.4.2. Set up `Git`](#142-set-up-git)
+    - [1.4.3. Set up `Docker`](#143-set-up-docker)
     - [1.4.4. (`Windows` only) Install `Ubuntu 24.04` using WSL](#144-windows-only-install-ubuntu-2404-using-wsl)
     - [1.4.5. (UPD) Install `Nix`](#145-upd-install-nix)
   - [1.5. (UPD) Open in `VS Code` the `software-engineering-toolkit` directory](#15-upd-open-in-vs-code-the-software-engineering-toolkit-directory)
@@ -122,25 +122,25 @@
 
 1. [Protect a branch](../../wiki/github.md#protect-a-branch).
 
-### 1.4. Install programs
+### 1.4. Set up programs
 
 #### 1.4.1. Set up `VS Code`
 
-1. [Set up `VS Code`](../../wiki/vs-code.md#set-up-vs-code).
+1. (Optional) [Read about `VS Code`](../../wiki/vs-code.md#what-is-vs-code).
+2. [Set up `VS Code`](../../wiki/vs-code.md#set-up-vs-code).
 
-#### 1.4.2. Install `Git`
+#### 1.4.2. Set up `Git`
 
-1. [Install `Git`](https://git-scm.com/install/) if not installed.
+1. (Optional) [Read about `Git`](../../wiki/git.md#what-is-git).
+2. [Install `Git`](https://git-scm.com/install/) if not installed.
 
-2. (Optional) [Learn more](../../wiki/git.md) about `Git`.
+#### 1.4.3. Set up `Docker`
 
-#### 1.4.3. Install `Docker`
-
-1. [Install `Docker`](../../wiki/docker.md#install-docker) if not installed.
-2. If you use `Docker Desktop`, open it.
+1. (Optional) [Read about `Docker`](../../wiki/docker.md#what-is-docker).
+2. [Install `Docker`](../../wiki/docker.md#install-docker) if not installed.
+3. If you use `Docker Desktop`, open it.
 
    You should see `Engine running`.
-3. (Optional) [Learn more](../../wiki/docker.md#what-is-docker) about `Docker`.
 
 #### 1.4.4. (`Windows` only) Install `Ubuntu 24.04` using WSL
 
