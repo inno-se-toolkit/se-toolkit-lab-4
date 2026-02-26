@@ -243,8 +243,6 @@ Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 
 ### Open a new `VS Code Terminal`
 
-Use any of the following methods.
-
 Method 1:
 
 1. Press ```Ctrl+Shift+` ``` (```Cmd+Shift+` ``` on `macOS`).
@@ -257,8 +255,6 @@ Method 2:
    <img alt="New Terminal" src="./images/vs-code/terminal-new-plus.png" style="width:400px"></img>
 
 ### Switch to another `VS Code Terminal`
-
-Use any of the following methods:
 
 Method 1:
 
