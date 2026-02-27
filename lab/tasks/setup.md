@@ -29,6 +29,7 @@
   - [1.10. (NEW) Clean up `Docker`](#110-new-clean-up-docker)
   - [1.10. Start the services](#110-start-the-services)
     - [1.10.1. (UPD) Set up the `Docker` environment](#1101-upd-set-up-the-docker-environment)
+    - [1.10.2. (UPD) Prepare `Docker`](#1102-upd-prepare-docker)
     - [1.10.2. (UPD) Start the services using `Docker Compose`](#1102-upd-start-the-services-using-docker-compose)
   - [1.11. (UPD) Open a new terminal](#111-upd-open-a-new-terminal)
   - [1.12. (UPD) Observe containers and services](#112-upd-observe-containers-and-services)
@@ -253,11 +254,14 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 > No edits are needed for local development.
 > The default values in [`.env.docker.example`](../../.env.docker.example) work out of the box.
 
+#### 1.10.2. (UPD) Prepare `Docker`
+
+1. [Start `Docker`](../../wiki/docker.md#start-docker).
+2. [Clean up `Docker`](../../wiki/docker.md#clean-up-docker).
+
 #### 1.10.2. (UPD) Start the services using `Docker Compose`
 
-1. (`Windows` only) Open the `Docker Desktop` that you [installed](../../wiki/docker.md#install-docker).
-
-2. Start services using the [`docker compose up` command](../../wiki/docker-compose.md#docker-compose-up):
+1. Start services using the [`docker compose up` command](../../wiki/docker-compose.md#docker-compose-up):
 
    [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -270,7 +274,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
    > [`Docker Compose`](../../wiki/docker-compose.md) reads environment variables from `.env.docker.secret`
    > and uses them to configure the containers defined in [`docker-compose.yml`](../../docker-compose.yml).
 
-3. Wait for the services to start. You should see log output from the `app`, `postgres`, `pgadmin`, and `caddy` containers.
+2. Wait for the services to start. You should see log output from the `app`, `postgres`, `pgadmin`, and `caddy` containers.
 
    > **NOTE**
    >
