@@ -1,7 +1,7 @@
 # Lab 4 — Testing, Front-end, and AI Agents
 
 > [!NOTE]
-> The lab will be modified throught the course.
+> The lab will be modified throughout the course.
 
 [Sync your cloned repo with the upstream](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork#syncing-a-fork-branch-from-the-command-line) from time to time.
 
