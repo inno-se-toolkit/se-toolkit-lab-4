@@ -253,13 +253,19 @@ Create a PR from the `<repo-name>/<branch-name>` to `<repo-name>/main`:
 1. [Go to your fork](#go-to-your-fork).
 2. Click `Pull requests`.
 3. Click `New pull request`.
-4. Click `base repository: <repo-owner-github-username>/<repo-name>`.
-5. Click `<your-github-username>/<repo-name>` to select the [base repo](#base-repo).
-6. The PR will be created in your repo.
-7. Click `base: main`.
-8. Click a branch to select the [base branch](#base-branch).
-9. Click `compare: <branch-name>` to view all available branches.
-10. Click `<branch-name>` to select the [PR branch](#pull-request-branch).
+4. Select your fork as the [base repository](#base-repository):
+   1. Click `base repository: <repo-owner-github-username>/<repo-name>`.
+   2. In `Filter repos`, write `<your-github-username>`.
+   3. Click `<your-github-username>/<repo-name>` to select your fork.
+5. Select `main` as the [base branch](#base-branch):
+   1. Click `base: <branch-name>`.
+   2. In `Find a branch`, write `main`.
+   3. Click `main` in the list.
+6. Select `<compare-branch-name>` as the [compare branch](#compare-branch):
+   1. Click `compare: main`.
+   2. In `Find a branch`, write [`<compare-branch-name>`](#compare-branch-name).
+   3. Click the `<compare-branch-name>` in the list.
+7. Click `Create pull request`.
 
 #### Open the PR editor using the branch list
 
