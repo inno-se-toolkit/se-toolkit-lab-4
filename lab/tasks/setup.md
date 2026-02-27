@@ -128,7 +128,7 @@
 
 1. (Optional) [Read about `Docker`](../../wiki/docker.md#what-is-docker).
 2. [Install `Docker`](../../wiki/docker.md#install-docker) if it's not installed.
-3. If you use `Docker Desktop`, open it.
+3. (`Windows` only) Open `Docker Desktop`.
 
    You should see `Engine running`.
 
