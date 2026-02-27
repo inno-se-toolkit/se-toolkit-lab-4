@@ -38,6 +38,11 @@ Title: `[Task] Observe System Component Interaction`
 
 1. Deploy the back-end to your VM using the same process as in Lab 3.
 
+> [!Important]
+> Remember to expose your services to connections from other machines by setting relevant `HOST_ADDRESS`es to `0.0.0.0`.
+> `0.0.0.0` means the server listens on **all network interfaces**.
+> This makes the service accessible from outside the VM (e.g., from your laptop).
+
 > [!NOTE]
 > This is a recap of the Lab 3 deployment. If you need a reminder, see the [VM](../../../wiki/vm.md) wiki page.
 
