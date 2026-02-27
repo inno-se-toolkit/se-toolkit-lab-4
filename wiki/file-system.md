@@ -114,4 +114,4 @@ We use `<directory-path>` in docs to refer to the [path](#path) of a [directory]
 
 ### `<file-path>`
 
-We use `<file-path>` in docs to refer to the [path](#path) of a file.
+We use `<file-path>` in docs to refer to the [path](#path) of a [file](#file).
