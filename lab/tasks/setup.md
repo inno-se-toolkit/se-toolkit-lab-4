@@ -61,8 +61,8 @@
 > [!IMPORTANT]
 > Some steps have the `(NEW)` label.
 >
-> These steps introduce steps, that were not present in previous setups,
-> pay extra attention to those steps to ensure that you have the right setup for the labs.
+> These steps were not present in previous setups.
+> Pay extra attention to these steps to ensure that you have the right setup for this lab.
 
 > [!NOTE]
 > We provide all of the hardest steps in the lab setup
