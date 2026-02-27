@@ -29,5 +29,9 @@
   // Markdown doc in the editor and preview to scroll synchronously.
 
   "markdown.preview.scrollEditorWithPreview": true,
-  "markdown.preview.scrollPreviewWithEditor": true
+  "markdown.preview.scrollPreviewWithEditor": true,
+  
+  "nix.enableLanguageServer": true,
+  "nix.serverPath": "nil",
+  "nix.formatterPath": "nixfmt"
 }
