@@ -10,6 +10,8 @@
 - [Repository](#repository)
   - [`<repo-name>`](#repo-name)
   - [`<repo-url>`](#repo-url)
+  - [`upstream`](#upstream)
+  - [`origin`](#origin)
   - [Browse a repository revision](#browse-a-repository-revision)
   - [Make your repository public](#make-your-repository-public)
 - [Repository owner](#repository-owner)
@@ -99,6 +101,18 @@ Placeholder values:
 
 - See [`<repo-owner-github-username>`](#repo-owner-github-username).
 - `<repo-name>` is the name of the repository.
+
+### `upstream`
+
+In [`Git`](./git.md#what-is-git), `upstream` is the conventional name for the [remote](./git.md#remote) that points to the original [repository](#repository) that was [forked](#fork).
+
+### `origin`
+
+In [`Git`](./git.md#what-is-git), `origin` is the conventional name for the [remote](./git.md#remote) that points to your own copy of the [repository](#repository) — typically [your fork](#fork).
+
+For example, if your fork [URL](./web-development.md#url) is [`<your-fork-url>`](#your-fork-url), then `origin` points to that URL.
+
+You can verify which URLs `origin` and `upstream` point to by [inspecting remotes](./gitlens.md#inspect-remotes).
 
 ### Browse a repository revision
 
