@@ -8,6 +8,7 @@
   - [Commit message](#commit-message)
     - [`Conventional Commits`](#conventional-commits)
       - [Common prefixes in `Conventional Commits`](#common-prefixes-in-conventional-commits)
+- [Revision](#revision)
 - [How `Git` works - text](#how-git-works---text)
 - [How `Git` works - videos](#how-git-works---videos)
 - [Merge conflict](#merge-conflict)
@@ -66,6 +67,14 @@ Docs:
 - `fix:` for bug fixes.
 - `docs:` for documentation changes.
 - `refactor:` for code changes without behavior changes.
+
+## Revision
+
+Typically a [commit hash](#commit-hash) or the branch name.
+
+Docs:
+
+- [Revision selection](https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection).
 
 ## How `Git` works - text
 
