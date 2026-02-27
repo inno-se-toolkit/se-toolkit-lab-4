@@ -19,6 +19,7 @@ You will discover and fix them by writing tests, then use an AI agent to generat
   - [1.1. Follow the `Git workflow`](#11-follow-the-git-workflow)
   - [1.2. Create a `Lab Task` issue](#12-create-a-lab-task-issue)
   - [1.3. Part A: Run unit tests locally](#13-part-a-run-unit-tests-locally)
+    - [1.3.0. Create the `.env.secret` file](#130-create-the-envsecret-file)
     - [1.3.1. Run existing unit tests](#131-run-existing-unit-tests)
     - [1.3.2. Add a new unit test](#132-add-a-new-unit-test)
     - [1.3.3. Fix the bug](#133-fix-the-bug)
@@ -53,6 +54,20 @@ Title: `[Task] Back-end Testing`
 
 > [!NOTE]
 > Unit tests do not require a running server. They test individual functions in isolation.
+
+#### 1.3.0. Create the `.env.secret` file
+
+1. [Check that the current directory is `se-toolkit-lab-4`](../../../wiki/shell.md#check-the-current-directory-is-directory-name).
+2. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   cp .env.example .env.secret
+   ```
+
+> [!NOTE]
+> The `.env.secret` file contains environment variables for the back-end application.
+> The test runner needs it to configure the application settings.
+> The default values in [`.env.example`](../../../.env.example) work out of the box.
 
 #### 1.3.1. Run existing unit tests
 
