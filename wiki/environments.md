@@ -2,6 +2,7 @@
 
 <h2>Table of contents</h2>
 
+- [What is environment](#what-is-environment)
 - [Environment variables](#environment-variables)
 - [Common environment variables](#common-environment-variables)
   - [`PATH` environment variable](#path-environment-variable)
@@ -12,6 +13,12 @@
   - [Store encrypted secrets in the repo](#store-encrypted-secrets-in-the-repo)
   - [Add files containing secrets to `.gitignore`](#add-files-containing-secrets-to-gitignore)
 - [Deployment environments](#deployment-environments)
+  - [Development environment](#development-environment)
+  - [Integration environment](#integration-environment)
+  - [Staging environment](#staging-environment)
+  - [Production environment](#production-environment)
+
+## What is environment
 
 ## Environment variables
 
@@ -100,3 +107,11 @@ Match in [`.gitignore`](./git.md#gitignore) all files that can contain [unencryp
 A program can run in multiple [deployment environments](https://github.com/inno-se/the-guide?tab=readme-ov-file#environments).
 
 Each development environment may need a specific set of [environment variables](#environment-variables). This set can be different for each environment.
+
+### Development environment
+
+### Integration environment
+
+### Staging environment
+
+### Production environment
