@@ -4,9 +4,10 @@
 
 - [What is `Git`](#what-is-git)
 - [Commit](#commit)
-- [Commit message](#commit-message)
-  - [`Conventional Commits`](#conventional-commits)
-    - [Common prefixes in `Conventional Commits`](#common-prefixes-in-conventional-commits)
+  - [Commit hash](#commit-hash)
+  - [Commit message](#commit-message)
+    - [`Conventional Commits`](#conventional-commits)
+      - [Common prefixes in `Conventional Commits`](#common-prefixes-in-conventional-commits)
 - [How `Git` works - text](#how-git-works---text)
 - [How `Git` works - videos](#how-git-works---videos)
 - [Merge conflict](#merge-conflict)
@@ -31,7 +32,16 @@ Docs:
 
 A commit is a snapshot of your project at a specific point in time. Each commit records what changed since the previous commit, who made the change, and a [commit message](#commit-message) describing why. Commits form a history that you can browse, revert, or branch from.
 
-## Commit message
+### Commit hash
+
+A hash of a commit in `Git`.
+
+Docs:
+
+- [Git Has Integrity](https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection#_git_has_integrity)
+- [Revision Selection - Short SHA-1](https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection#_short_sha_1)
+
+### Commit message
 
 A commit message is a short description attached to each commit. It explains **what** was changed and **why**. Good commit messages make the project history readable and help teammates understand changes without reading the code.
 
@@ -42,7 +52,7 @@ Guidelines:
 - Focus on why the change was made, not just what changed.
 - (Optional) follow the [`Conventional Commits`](#conventional-commits) specification.
 
-### `Conventional Commits`
+#### `Conventional Commits`
 
 Rules for creating human- and machine-readable commit history.
 
@@ -50,7 +60,7 @@ Docs:
 
 - [`Conventional Commits`](https://www.conventionalcommits.org/en/v1.0.0/).
 
-#### Common prefixes in `Conventional Commits`
+##### Common prefixes in `Conventional Commits`
 
 - `feat:` for new functionality.
 - `fix:` for bug fixes.
