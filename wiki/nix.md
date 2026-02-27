@@ -12,6 +12,8 @@
   - [Verify `Nix` installation](#verify-nix-installation)
   - [Install `jq`](#install-jq)
   - [Pin `nixpkgs`](#pin-nixpkgs)
+  - [Install `nil`](#install-nil)
+  - [Install `nixfmt`](#install-nixfmt)
 - [Flake](#flake)
   - [`flake.lock`](#flakelock)
   - [Common flake commands](#common-flake-commands)
@@ -71,6 +73,8 @@ Complete these steps:
 2. [Verify `Nix` installation](#verify-nix-installation).
 3. [Install `jq`](#install-jq).
 4. [Pin `nixpkgs`](#pin-nixpkgs).
+5. [Install `nil`](#install-nil).
+6. [Install `nixfmt`](#install-nixfmt).
 
 ### Install `Nix`
 
@@ -135,6 +139,26 @@ Complete these steps:
    ```terminal
    nix registry pin nixpkgs github:nixos/nixpkgs/26eaeac4e409d7b5a6bf6f90a2a2dc223c78d915
    ```
+
+### Install `nil`
+
+> `nil` is a [language server](./vs-code.md#language-server) for [`Nix`](#what-is-nix).
+
+[Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+```terminal
+nix profile add nixpkgs#nil
+```
+
+### Install `nixfmt`
+
+> `nixfmt` is a formatter for [`Nix`](#what-is-nix).
+
+[Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+```terminal
+nix profile add nixpkgs#nixfmt
+```
 
 ## Flake
 
