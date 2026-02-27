@@ -20,6 +20,7 @@
   - [`nix registry pin`](#nix-registry-pin)
 - [Troubleshooting](#troubleshooting)
   - [Enable `nix-daemon`](#enable-nix-daemon)
+  - [Restart `nix-daemon`](#restart-nix-daemon)
 
 ## What is `Nix`
 
@@ -170,3 +171,17 @@ Docs:
 ## Troubleshooting
 
 ### Enable `nix-daemon`
+
+[Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+```terminal
+sudo systemctl enable nix-daemon
+```
+
+### Restart `nix-daemon`
+
+[Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+```terminal
+sudo systemctl restart nix-daemon
+```
