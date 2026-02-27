@@ -186,12 +186,13 @@
 
 ### 1.8. Continue creating a VM
 
+> [!NOTE]
+> Don't overwrite the key if it already exists.
+> You can use the key that you created before for the new VM.
+
 Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-to-the-vm):
 
 1. [Set up `SSH`](../../wiki/ssh.md#set-up-ssh).
-
-   **Note:** Don't overwrite the key if it already exists.
-   You can use the key that you created before for the new VM.
 2. [Create a VM using the subscription](../../wiki/vm.md#create-a-vm-using-the-subscription).
 
 ### 1.9. Set up `Python` in `VS Code`
