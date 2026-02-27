@@ -60,10 +60,10 @@ Complete these steps:
 
 ### Hook `direnv` into your shell
 
-Complete the [`direnv` setup](https://direnv.net/docs/hook.html) for your shell.
+Follow the [instructions for your shell](https://direnv.net/docs/hook.html) to complete the `direnv` setup.
 
 > [!TIP]
-> [Open the file using `VS Code`](./vs-code.md#open-the-file).
+> [Open the file](./vs-code.md#open-the-file) mentioned in these instructions using `VS Code`.
 
 ### (Optional) Set up `nix-direnv`
 
