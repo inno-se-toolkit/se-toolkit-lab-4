@@ -30,11 +30,25 @@ Complete these steps:
 
 ### Install `direnv`
 
-[Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
-```terminal
-nix profile add nixpkgs#direnv
-```
+   ```terminal
+   nix profile add nixpkgs#direnv
+   ```
+
+2. Check `direnv` version:
+
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   direnv --version
+   ```
+
+   The output should be:
+
+   ```terminal
+   2.37.1
+   ```
 
 ### Install `nix-direnv`
 
