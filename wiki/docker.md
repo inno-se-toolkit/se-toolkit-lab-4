@@ -7,7 +7,11 @@
   - [Why containers are useful](#why-containers-are-useful)
   - [Containers and host](#containers-and-host)
 - [What is `Docker`](#what-is-docker)
-- [Install `Docker`](#install-docker)
+- [Set up `Docker`](#set-up-docker)
+  - [Install `Docker`](#install-docker)
+  - [Start `Docker`](#start-docker)
+  - [Clean up `Docker`](#clean-up-docker)
+- [Common `Docker` commands](#common-docker-commands)
   - [`docker run`](#docker-run)
   - [`docker ps`](#docker-ps)
 - [`Docker Compose`](#docker-compose)
@@ -64,9 +68,52 @@ Docs:
 
 - [What is Docker?](https://docs.docker.com/get-started/docker-overview/)
 
-## Install `Docker`
+## Set up `Docker`
+
+Complete these steps:
+
+1. [Install `Docker`](#install-docker).
+2. [Start `Docker`](#start-docker).
+3. [Clean up `Docker`](#clean-up-docker)
+
+### Install `Docker`
 
 Follow the [installation instructions](https://docs.docker.com/get-started/get-docker/).
+
+### Start `Docker`
+
+If you installed `Docker Desktop`:
+
+1. Open `Docker Desktop`.
+2. Skip login.
+3. Wait until you see `Engine running`.
+
+### Clean up `Docker`
+
+1. Stop all running containers:
+
+   [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   docker stop $(docker ps -q) 2>/dev/null
+   ```
+
+2. Remove all stopped containers:
+
+   [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   docker container prune -f
+   ```
+
+3. Delete unused volumes:
+
+   [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   docker volume prune -f
+   ```
+
 
 ### `docker run`
 
