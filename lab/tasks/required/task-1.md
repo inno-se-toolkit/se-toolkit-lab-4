@@ -44,7 +44,7 @@ Title: `[Task] Observe System Component Interaction`
 > This makes the service accessible from outside the VM (e.g., from your laptop).
 
 > [!NOTE]
-> This is a recap of the Lab 3 deployment. If you need a reminder, see the [VM](../../../wiki/vm.md) wiki page.
+> This is a recap of the Lab 3 deployment. If you need a reminder, see the [Lab 3 Task 4](https://github.com/inno-se-toolkit/se-toolkit-lab-3/blob/main/lab/tasks/required/task-4.md). Importantly you need to adjust those instructions to this lab number.
 
 ### 1.3. Open `Swagger UI`
 
