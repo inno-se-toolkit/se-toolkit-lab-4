@@ -78,7 +78,7 @@ Docs:
 4. Write your SQL query, e.g.:
 
    ```sql
-   SELECT * FROM interaction_logs WHERE item_id = 2;
+   SELECT * FROM interacts WHERE item_id = 2;
    ```
 
 5. Click `Execute Script` (or press `F5`).

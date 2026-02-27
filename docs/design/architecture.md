@@ -169,7 +169,7 @@ graph TD
     subgraph "FastAPI Application"
         subgraph "HTTP Routers"
             IR["Items Router\nGET /items\nGET /items/{id}\nPOST /items\nPUT /items/{id}"]
-            INTR["Interactions Router\nGET /interactions"]
+            INTR["Interactions Router\nGET /interactions\nPOST /interactions"]
             LR["Learners Router\nGET /learners\nPOST /learners"]
         end
 
@@ -213,7 +213,7 @@ graph TD
 | Component           | File                      | Description                                                                                                      |
 | ------------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | Items Router        | `routers/items.py`        | CRUD endpoints for learning items. Always enabled.                                                               |
-| Interactions Router | `routers/interactions.py` | Read endpoints for interaction logs. Enabled via `ENABLE_INTERACTIONS=true`.                                     |
+| Interactions Router | `routers/interactions.py` | Read and create endpoints for interaction logs. Enabled via `ENABLE_INTERACTIONS=true`.                           |
 | Learners Router     | `routers/learners.py`     | CRUD endpoints for learner profiles. Enabled via `ENABLE_LEARNERS=true`.                                         |
 | Auth Middleware     | `auth.py`                 | Validates the `Authorization: Bearer <token>` header on every request. Token configured via `API_TOKEN` env var. |
 | Items DB            | `db/items.py`             | Async database operations for the `item` table.                                                                  |

@@ -1,11 +1,12 @@
 """Router for interaction endpoints."""
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException, status
+from sqlalchemy.exc import IntegrityError
 from sqlmodel.ext.asyncio.session import AsyncSession
 
 from app.database import get_session
-from app.db.interactions import read_interactions
-from app.models.interaction import InteractionLog, InteractionModel
+from app.db.interactions import create_interaction, read_interactions
+from app.models.interaction import InteractionLog, InteractionLogCreate, InteractionModel
 
 router = APIRouter()
 
@@ -26,3 +27,22 @@ async def get_interactions(
     """Get all interactions, optionally filtered by item."""
     interactions = await read_interactions(session)
     return _filter_by_item_id(interactions, item_id)
+
+
+@router.post("/", response_model=InteractionLog, status_code=201)
+async def post_interaction(
+    body: InteractionLogCreate, session: AsyncSession = Depends(get_session)
+):
+    """Create a new interaction log."""
+    try:
+        return await create_interaction(
+            session,
+            learner_id=body.learner_id,
+            item_id=body.item_id,
+            kind=body.kind,
+        )
+    except IntegrityError:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_CONTENT,
+            detail="learner_id or item_id does not reference an existing record",
+        )
