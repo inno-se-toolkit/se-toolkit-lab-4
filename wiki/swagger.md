@@ -23,7 +23,15 @@ Actions:
 
 ## Open `Swagger UI`
 
+**Locally** (services running on your machine):
+
 1. Open <http://127.0.0.1:42001/docs> in a browser.
+
+**On a deployed VM:**
+
+1. Open `http://<your-vm-ip-address>:42002/docs` in a browser.
+
+   See [`<your-vm-ip-address>`](./vm.md#your-vm-ip-address).
 
 ## Authorize in `Swagger UI`
 
