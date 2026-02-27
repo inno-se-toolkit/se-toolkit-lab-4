@@ -45,9 +45,7 @@
 ## Clone the repo
 
 > [!NOTE]
-> The [`<repo-url>`](./github.md#repo-url) is the repo [URL](./web-development.md#url).
->
-> The [`<repo-name>`](./github.md#repo-name) is the repo name.
+> See [`<repo-url>`](./github.md#repo-url), [`<repo-name>`](./github.md#repo-name).
 
 <!-- no toc -->
 - Method 1: [Clone the repo using the `VS Code Terminal`](#clone-the-repo-using-the-vs-code-terminal)
