@@ -3,9 +3,9 @@
 - [What is `direnv`](#what-is-direnv)
 - [Set up `direnv`](#set-up-direnv)
   - [Install `direnv`](#install-direnv)
+  - [Hook `direnv` into your shell](#hook-direnv-into-your-shell)
   - [Install `nix-direnv`](#install-nix-direnv)
   - [Reboot your computer](#reboot-your-computer)
-  - [Hook `direnv` into your shell](#hook-direnv-into-your-shell)
   - [Install the `VS Code` extension](#install-the-vs-code-extension)
   - [Run `direnv allow`](#run-direnv-allow)
   - [Reset and reload environment](#reset-and-reload-environment)
@@ -19,9 +19,9 @@
 Complete these steps:
 
 1. [Install `direnv`](#install-direnv).
-2. [Install `nix-direnv`](#install-nix-direnv).
-3. [Reboot your computer](#reboot-your-computer).
-4. [Hook `direnv` into your shell](#hook-direnv-into-your-shell).
+2. [Hook `direnv` into your shell](#hook-direnv-into-your-shell).
+3. [Install `nix-direnv`](#install-nix-direnv).
+4. [Reboot your computer](#reboot-your-computer).
 5. [Install the `VS Code` extension](#install-the-vs-code-extension).
 6. [Run `direnv allow`](#run-direnv-allow).
 7. [Reset and reload environment](#reset-and-reload-environment).
@@ -50,6 +50,13 @@ Complete these steps:
    2.37.1
    ```
 
+### Hook `direnv` into your shell
+
+Complete the [`direnv` setup](https://direnv.net/docs/hook.html) for your shell.
+
+> [!TIP]
+> [Open the file using `VS Code`](./vs-code.md#open-the-file).
+
 ### Install `nix-direnv`
 
 [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
@@ -61,13 +68,6 @@ nix profile add nixpkgs#nix-direnv
 ### Reboot your computer
 
 Reboot.
-
-### Hook `direnv` into your shell
-
-Complete the [`direnv` setup](https://direnv.net/docs/hook.html) for your shell.
-
-> [!TIP]
-> [Open the file using `VS Code`](./vs-code.md#open-the-file).
 
 ### Install the `VS Code` extension
 
