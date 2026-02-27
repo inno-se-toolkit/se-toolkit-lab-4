@@ -83,9 +83,8 @@ Complete these steps:
    ```
 
 2. Follow the prompts to complete the installation.
-
 3. [Delete the current `VS Code Terminal`](./vs-code.md#delete-a-vs-code-terminal).
-4. [Open a new `VS Code Terminal`](./vs-code.md#open-a-new-vs-code-terminal) after the installation finishes.
+4. [Open a new `VS Code Terminal`](./vs-code.md#open-a-new-vs-code-terminal).
 
 ### Verify `Nix` installation
 
