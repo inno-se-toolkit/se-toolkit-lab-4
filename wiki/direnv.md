@@ -4,7 +4,7 @@
 - [Set up `direnv`](#set-up-direnv)
   - [Install `direnv`](#install-direnv)
   - [Hook `direnv` into your shell](#hook-direnv-into-your-shell)
-  - [Install `nix-direnv`](#install-nix-direnv)
+  - [(Optional) Set up `nix-direnv`](#optional-set-up-nix-direnv)
   - [Reboot your computer](#reboot-your-computer)
   - [Install the `VS Code` extension](#install-the-vs-code-extension)
   - [Run `direnv allow`](#run-direnv-allow)
@@ -20,7 +20,7 @@ Complete these steps:
 
 1. [Install `direnv`](#install-direnv).
 2. [Hook `direnv` into your shell](#hook-direnv-into-your-shell).
-3. [Install `nix-direnv`](#install-nix-direnv).
+3. [Set up `nix-direnv`](#optional-set-up-nix-direnv).
 4. [Reboot your computer](#reboot-your-computer).
 5. [Install the `VS Code` extension](#install-the-vs-code-extension).
 6. [Run `direnv allow`](#run-direnv-allow).
@@ -57,13 +57,44 @@ Complete the [`direnv` setup](https://direnv.net/docs/hook.html) for your shell.
 > [!TIP]
 > [Open the file using `VS Code`](./vs-code.md#open-the-file).
 
-### Install `nix-direnv`
+### (Optional) Set up `nix-direnv`
 
-[Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+> [!NOTE]
+> See [`nix-direnv` repository](https://github.com/nix-community/nix-direnv).
+>
+> See [Installation](https://github.com/nix-community/nix-direnv?tab=readme-ov-file#installation).
 
-```terminal
-nix profile add nixpkgs#nix-direnv
-```
+If you use `bash` (see [Check the current shell](./vs-code.md#check-the-current-shell-in-the-vs-code-terminal)):
+
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   nix profile add nixpkgs#nix-direnv
+   ```
+
+2. Create a directory for the `direnv` config:
+
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   mkdir -p $HOME/.config/direnv
+   ```
+
+3. Create the `direnv` config file:
+
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   touch $HOME/.config/direnv/direnvrc
+   ```
+
+4. [Open the file using `VS Code`](./vs-code.md#open-the-file):
+   `~/.config/direnv/direnvrc`.
+5. Write there:
+
+   ```terminal
+   source $HOME/.nix-profile/share/nix-direnv/direnvrc
+   ```
 
 ### Reboot your computer
 
