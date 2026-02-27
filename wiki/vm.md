@@ -39,7 +39,9 @@ See [VM image](./vm-info.md) for the information about your VM.
 
 ## `<your-vm-ip-address>`
 
-The [IP address](./computer-networks.md)
+The [`IP address`](./computer-networks.md) of [your VM](#your-vm).
+
+See [Get the `IP address` of the VM](#get-the-ip-address-of-the-vm).
 
 ## Prepare the connection
 

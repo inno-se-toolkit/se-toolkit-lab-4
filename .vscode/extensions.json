@@ -1,5 +1,11 @@
 {
   "recommendations": [
+    // Direnv support
+    "mkhl.direnv",
+    
+    // Nix language support
+    "jnoortheen.nix-ide",
+    
     // Python language support.
     // Install the whole pack.
     "ms-python.python",

@@ -2,7 +2,7 @@
 
 <h2>Table of contents</h2>
 
-- [Clone the repo](#clone-the-repo)
+- [Clone the repository](#clone-the-repository)
   - [Clone the repo using the `VS Code Terminal`](#clone-the-repo-using-the-vs-code-terminal)
   - [Clone the repo using the `Command Palette`](#clone-the-repo-using-the-command-palette)
 - [Switch to the `<branch-name>` branch](#switch-to-the-branch-name-branch)
@@ -42,12 +42,10 @@
   - [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
   - [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
 
-## Clone the repo
+## Clone the repository
 
 > [!NOTE]
-> The [`<repo-url>`](./github.md#repo-url) is the repo [URL](./web-development.md#url).
->
-> The [`<repo-name>`](./github.md#repo-name) is the repo name.
+> See [`<repo-url>`](./github.md#repo-url), [`<repo-name>`](./github.md#repo-name).
 
 <!-- no toc -->
 - Method 1: [Clone the repo using the `VS Code Terminal`](#clone-the-repo-using-the-vs-code-terminal)
@@ -56,9 +54,22 @@
 ### Clone the repo using the `VS Code Terminal`
 
 1. Open `VS Code`.
-1. [Open the `VS Code Terminal`](./vs-code.md#open-the-vs-code-terminal).
-   Navigate to the directory where you want to clone the repo.
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+2. [Open the `VS Code Terminal`](./vs-code.md#open-the-vs-code-terminal).
+3. Navigate to the directory where you want to clone the repo:
+
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   cd <directory-path>
+   ```
+
+   Example:
+
+   ```terminal
+   cd ~/Desktop/software-engineering-toolkit
+   ```
+
+4. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
     ```terminal
     git clone <repo-url>
@@ -67,10 +78,12 @@
     Example:
 
     ```terminal
-    git clone <repo-url>
+    git clone https://github.com/microsoft/vscode
     ```
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+5. If `git` asks for a password, provide [your PAT](./github.md#create-a-pat-classic).
+
+6. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    ls

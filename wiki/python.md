@@ -13,6 +13,7 @@
   - [Install `Python` and dependencies](#install-python-and-dependencies)
   - [Check that `Python` works](#check-that-python-works)
   - [Select the `Python` interpreter](#select-the-python-interpreter)
+  - [Check that the language server works](#check-that-the-language-server-works)
 - [Testing](#testing)
   - [`pytest`](#pytest)
   - [The `assert` statement](#the-assert-statement)
@@ -60,9 +61,7 @@ def greet(name):
 ### Install `uv`
 
 1. [Check the current shell in the `VS Code Terminal`](./vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
-1. Follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/).
-
-   If you use `Windows`, follow the instructions for `macOS and Linux`.
+1. Follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/) for `macOS and Linux`, even if you use `Windows`.
 
 ## Set up `Python` in `VS Code`
 
@@ -121,6 +120,20 @@ Complete these steps:
 1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
    `Python: Select Interpreter`.
 2. Click `Recommended` to select the interpreter in `./.venv/bin/python`.
+3. [Check that the language server works](#check-that-the-language-server-works).
+
+### Check that the language server works
+
+> [!NOTE]
+> See [`Pylance`](#pylance).
+
+1. [Open the file](./vs-code.md#open-the-file):
+   [`backend/app/main.py`](../backend/app/main.py).
+2. Hover over the `add_middleware` method.
+
+   You should see its type:
+
+   <img alt="Type on hover" src="./images/python/type-on-hover.png" style="width:300px">
 
 ## Testing
 

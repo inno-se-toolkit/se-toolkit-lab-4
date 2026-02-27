@@ -476,12 +476,12 @@ Method 2:
 
 ### Install the extension
 
-1. Open the `Extensions`.
+1. [Open the `Extensions`](#open-the-extensions).
 2. Write:
-   - Option 1: extension name
+   - Option 1: the extension name
 
       Example: `GitHub Copilot Chat`
-   - Option 2: extension identifier
+   - Option 2: the extension identifier
 
       Format: `<extension-publisher>.<extension-name>`
 
@@ -642,7 +642,7 @@ Here are some [workspace settings](#workspace-settings) that you can change:
 
   See [`<file-path>`](./file-system.md#file-path).
 
-1. (`macOS` only) If the `code <file-path>` command doesn't work, [add `VS Code` to `PATH`](#macos-only-add-vs-code-to-path).
+1. (`macOS` only) If the `code <file-path>` shows an error that the `code` command doesn't exist, [add `VS Code` to `PATH`](#macos-only-add-vs-code-to-path).
 
 ### Open the `Markdown` preview
 

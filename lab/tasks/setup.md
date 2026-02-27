@@ -21,12 +21,11 @@
     - [1.6.1. (UPD) Copy your fork `URL`](#161-upd-copy-your-fork-url)
     - [1.6.2. (UPD) Clone your fork](#162-upd-clone-your-fork)
     - [1.6.3. (UPD) Open the cloned repo in `VS Code`](#163-upd-open-the-cloned-repo-in-vs-code)
-  - [1.8. Continue creating a VM](#18-continue-creating-a-vm)
-  - [1.9. Set up `Python` in `VS Code`](#19-set-up-python-in-vs-code)
+  - [1.7. Continue creating a VM](#17-continue-creating-a-vm)
+  - [1.8. (NEW) (Optional) Set up `direnv`](#18-new-optional-set-up-direnv)
+  - [1.9. Set up `Python`](#19-set-up-python)
     - [1.9.1. Install `uv`](#191-install-uv)
-    - [1.9.2. (UPD) Install `Python` and dependencies](#192-upd-install-python-and-dependencies)
-    - [1.9.3. (UPD) Select the `Python` interpreter](#193-upd-select-the-python-interpreter)
-    - [1.9.4. (UPD) Check that `Python` works](#194-upd-check-that-python-works)
+    - [1.9.2. (UPD) Set up `Python` in `VS Code`](#192-upd-set-up-python-in-vs-code)
   - [1.10. (UPD) Start the services](#110-upd-start-the-services)
     - [1.10.1. (UPD) Set up the `Docker` environment](#1101-upd-set-up-the-docker-environment)
     - [1.10.2. (UPD) Start the services using `Docker Compose`](#1102-upd-start-the-services-using-docker-compose)
@@ -129,7 +128,7 @@
 
 1. (Optional) [Read about `Docker`](../../wiki/docker.md#what-is-docker).
 2. [Install `Docker`](../../wiki/docker.md#install-docker) if it's not installed.
-3. If you use `Docker Desktop`, open it.
+3. (`Windows` only) Open `Docker Desktop`.
 
    You should see `Engine running`.
 
@@ -147,7 +146,7 @@
 #### 1.4.5. (NEW) Set up `Nix`
 
 1. (Optional) [Read about `Nix`](../../wiki/nix.md#what-is-nix).
-2. [Set up `Nix`](../../wiki/nix.md#set-up-nix) if it's not installed.
+2. [Set up `Nix`](../../wiki/nix.md#set-up-nix).
 
 ### 1.5. (UPD) Open in `VS Code` the `software-engineering-toolkit` directory
 
@@ -172,7 +171,7 @@
 
 #### 1.6.2. (UPD) Clone your fork
 
-1. [Clone your fork](../../wiki/git-vscode.md#clone-the-repo):
+1. [Clone your fork](../../wiki/git-vscode.md#clone-the-repository):
 
    - Replace `<repo-url>` with [`<your-fork-url>`](../../wiki/github.md#your-fork-url).
    - Replace `<repo-name>` with `se-toolkit-lab-4`.
@@ -184,46 +183,48 @@
 2. [Check the current shell in the `VS Code Terminal`](../../wiki/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 3. [Install recommended extensions](../../wiki/vs-code.md#install-recommended-extensions).
 
-### 1.8. Continue creating a VM
+### 1.7. Continue creating a VM
+
+> [!NOTE]
+> Don't overwrite the key if it already exists.
+> You can use the key that you created before for the new VM.
 
 Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-to-the-vm):
 
 1. [Set up `SSH`](../../wiki/ssh.md#set-up-ssh).
-
-   **Note:** Don't overwrite the key if it already exists.
-   You can use the key that you created before for the new VM.
 2. [Create a VM using the subscription](../../wiki/vm.md#create-a-vm-using-the-subscription).
 
-### 1.9. Set up `Python` in `VS Code`
+### 1.8. (NEW) (Optional) Set up `direnv`
+
+1. [Set up `direnv`](../../wiki/direnv.md#set-up-direnv).
+
+### 1.9. Set up `Python`
+
+> [!NOTE]
+> See [What is `Python`](../../wiki/python.md#what-is-python).
 
 #### 1.9.1. Install `uv`
 
 > [!NOTE]
-> [`uv`](../../wiki/python.md#uv) is a package manager for [`Python`](../../wiki/python.md).
+> See [`uv`](../../wiki/python.md#uv).
+
+> [!TIP]
+> Skip this step if you managed to [set up `direnv`](#18-new-optional-set-up-direnv).
+> You already have `uv` from the [devshell](../../wiki/nix.md#devshell).
 
 1. [Install `uv`](../../wiki/python.md#install-uv).
 
-#### 1.9.2. (UPD) Install `Python` and dependencies
+#### 1.9.2. (UPD) Set up `Python` in `VS Code`
 
 > [!NOTE]
 > The dependencies have been updated in this project version.
 
-1. [Install `Python` and dependencies](../../wiki/python.md#install-python-and-dependencies).
-
-#### 1.9.3. (UPD) Select the `Python` interpreter
-
-1. [Select the `Python` interpreter](../../wiki/python.md#select-the-python-interpreter).
-
-#### 1.9.4. (UPD) Check that `Python` works
-
-1. [Check that `Python` works](../../wiki/python.md#check-that-python-works).
+1. [Set up `Python` in `VS Code`](../../wiki/python.md#set-up-python-in-vs-code).
 
 ### 1.10. (UPD) Start the services
 
 > [!NOTE]
-> A [service](../../wiki/docker.md#service) in [`Docker Compose`](../../wiki/docker-compose.md) defines how to run a [container](../../wiki/docker.md#container).
->
-> `Docker Compose` lets you start multiple containers at once.
+> See [service](../../wiki/docker.md#service).
 
 #### 1.10.1. (UPD) Set up the `Docker` environment
 
@@ -239,7 +240,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 > The `.env.docker.secret` file contains environment variables for the `Docker` containers.
 >
 > It was added to [`.gitignore`](../../.gitignore) because you may specify there
-> [secrets](../../wiki/environments.md#secrets) such as the API key or the address of your VM.
+> [secrets](../../wiki/environments.md#secrets) such as the API key or the [address of your VM](../../wiki/vm.md#your-vm-ip-address).
 
 > [!TIP]
 > No edits are needed for local development.
