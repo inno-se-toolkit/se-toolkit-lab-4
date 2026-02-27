@@ -240,7 +240,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 > The `.env.docker.secret` file contains environment variables for the `Docker` containers.
 >
 > It was added to [`.gitignore`](../../.gitignore) because you may specify there
-> [secrets](../../wiki/environments.md#secrets) such as the API key or the address of your VM.
+> [secrets](../../wiki/environments.md#secrets) such as the API key or the [address of your VM](../../wiki/vm.md#your-vm-ip-address).
 
 > [!TIP]
 > No edits are needed for local development.
