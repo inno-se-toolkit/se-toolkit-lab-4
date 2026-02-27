@@ -16,7 +16,7 @@ services:
       - ENABLE_LEARNERS=${ENABLE_LEARNERS:-false}
       - DB_HOST=postgres
       - DB_PORT=5432
-      - DB_NAME=${POSTGRES_DB:-lab3}
+      - DB_NAME=${POSTGRES_DB:-lab-4}
       - DB_USER=${POSTGRES_USER:-postgres}
       - DB_PASSWORD=${POSTGRES_PASSWORD:-postgres}
     depends_on:
@@ -33,7 +33,7 @@ services:
     image: harbor.pg.innopolis.university/docker-hub-cache/postgres:17-alpine
     restart: unless-stopped
     environment:
-      - POSTGRES_DB=${POSTGRES_DB:-lab3}
+      - POSTGRES_DB=${POSTGRES_DB:-lab-4}
       - POSTGRES_USER=${POSTGRES_USER:-postgres}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres}
     ports:
@@ -42,7 +42,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
       - ./backend/app/data/init.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-lab3}"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-lab-4}"]
       interval: 5s
       timeout: 5s
       retries: 5
