@@ -138,7 +138,10 @@ Complete these steps:
 
 ## Flake
 
-<!-- TODO -->
+Docs:
+
+- [Flakes on NixOS wiki](https://wiki.nixos.org/wiki/Flakes)
+- [Flakes on nix.dev](https://nix.dev/concepts/flakes.html)
 
 ### `flake.lock`
 
