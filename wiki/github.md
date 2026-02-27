@@ -24,12 +24,13 @@
   - [Issue form](#issue-form)
   - [Create an issue](#create-an-issue)
 - [Pull request](#pull-request)
-  - [Base repo](#base-repo)
-  - [Head repo](#head-repo)
+  - [Base repository](#base-repository)
+  - [Head repository](#head-repository)
   - [Default branch](#default-branch)
   - [Base branch](#base-branch)
-  - [Pull request branch](#pull-request-branch)
-  - [Create a pull request](#create-a-pull-request)
+  - [Compare branch](#compare-branch)
+    - [`<compare-branch-name>`](#compare-branch-name)
+- [Create a pull request in your fork](#create-a-pull-request-in-your-fork)
   - [Open the PR editor using `GitHub`](#open-the-pr-editor-using-github)
     - [Open the PR editor using a button](#open-the-pr-editor-using-a-button)
     - [Open the PR editor using `Pull requests`](#open-the-pr-editor-using-pull-requests)
@@ -200,17 +201,17 @@ Examples of issue forms:
 
 ## Pull request
 
-### Base repo
+### Base repository
 
-The base repo is the [repository](#repository) into which the changes are merged.
+The base repository is the [repository](#repository) into which the changes are merged.
 
-When creating a [pull request](#pull-request) from a [fork](#fork), the base repo is the original (upstream) repository that was forked.
+When creating a [pull request](#pull-request) from a [fork](#fork), the base repository can be the fork itself or the [upstream](#upstream) repository that was forked.
 
-### Head repo
+### Head repository
 
-The head repo is the [repository](#repository) that contains the changes you want to merge.
+The head repository is the [repository](#repository) that contains the changes you want to merge.
 
-When creating a [pull request](#pull-request) from a [fork](#fork), the head repo is your fork.
+When creating a [pull request](#pull-request) from a [fork](#fork) for the cours e labs, the head repository is your fork, not the upstream repostory.
 
 ### Default branch
 
@@ -220,15 +221,17 @@ New [pull requests](#pull-request) and code merges target the default branch by 
 
 ### Base branch
 
-The base branch is the branch in the [base repo](#base-repo) that you want to merge your changes into.
+The base branch is the branch in the [base repository](#base-repository) that you want to merge your changes into.
 
-### Pull request branch
+### Compare branch
 
-The pull request branch (also called the compare branch or head branch) is the branch that contains the changes you want to merge into the [base branch](#base-branch).
+The compare branch (also called the pull request branch or head branch) is the branch that contains the changes you want to merge into the [base branch](#base-branch).
 
-### Create a pull request
+#### `<compare-branch-name>`
 
-Create a PR from the `<repo-name>/<branch-name>` to `<repo-name>/main`:
+A placeholder for the name of the [compare branch](#compare-branch).
+
+## Create a pull request in your fork
 
 1. [Open the PR editor using `GitHub`](#open-the-pr-editor-using-github)
 2. [Finish creating a PR](#finish-creating-a-pr)
