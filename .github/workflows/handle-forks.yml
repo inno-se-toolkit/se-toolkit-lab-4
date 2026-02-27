@@ -3,6 +3,7 @@ name: Close PRs from forks
 on:
   pull_request_target:
     types: [opened, synchronize]
+  workflow_dispatch:
 
 jobs:
   check-and-close-fork-prs:
