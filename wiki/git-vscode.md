@@ -78,7 +78,7 @@
     Example:
 
     ```terminal
-    git clone <repo-url>
+    git clone https://github.com/microsoft/vscode
     ```
 
 5. If `git` asks for a password, provide [your PAT](./github.md#create-a-pat-classic).
