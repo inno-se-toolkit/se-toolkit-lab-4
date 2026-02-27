@@ -26,6 +26,7 @@
   - [1.9. Set up `Python` in `VS Code`](#19-set-up-python-in-vs-code)
     - [1.9.1. Install `uv`](#191-install-uv)
     - [1.9.2. (UPD) Set up `Python` in `VS Code`](#192-upd-set-up-python-in-vs-code)
+  - [1.10. (UPD) Set up the services](#110-upd-set-up-the-services)
     - [1.10.1. (UPD) Set up the `Docker` environment](#1101-upd-set-up-the-docker-environment)
     - [1.10.2. (UPD) Start the services using `Docker Compose`](#1102-upd-start-the-services-using-docker-compose)
   - [1.11. (UPD) Open a new terminal](#111-upd-open-a-new-terminal)
@@ -220,12 +221,10 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 1. [Set up `Python` in `VS Code`](../../wiki/python.md#set-up-python-in-vs-code).
 
-### 1.10. (UPD) Start the services
+### 1.10. (UPD) Set up the services
 
 > [!NOTE]
-> A [service](../../wiki/docker.md#service) in [`Docker Compose`](../../wiki/docker-compose.md) defines how to run a [container](../../wiki/docker.md#container).
->
-> `Docker Compose` lets you start multiple containers at once.
+> See [service](../../wiki/docker.md#service).
 
 #### 1.10.1. (UPD) Set up the `Docker` environment
 
