@@ -80,6 +80,9 @@ Title: `[Task] Back-end Testing`
 
    Name the test `test_filter_excludes_interaction_with_different_learner_id`.
 
+> [!NOTE]
+> Feel free to use AI to generate the tests. Make sure to provide them with necessary context.
+
 3. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
