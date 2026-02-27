@@ -55,8 +55,15 @@
 
 1. Open `VS Code`.
 2. [Open the `VS Code Terminal`](./vs-code.md#open-the-vs-code-terminal).
-   Navigate to the directory where you want to clone the repo.
-3. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+3. Navigate to the directory where you want to clone the repo:
+
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   cd path/to/the/directory
+   ```
+
+4. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
     ```terminal
     git clone <repo-url>
@@ -68,7 +75,9 @@
     git clone <repo-url>
     ```
 
-4. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+5. If `git` asks for a password, provide [your PAT](./github.md#create-a-pat-classic).
+
+6. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    ls
