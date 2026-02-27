@@ -216,20 +216,12 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 1. [Install `uv`](../../wiki/python.md#install-uv).
 
-#### 1.9.2. (UPD) Install `Python` and dependencies
+#### 1.9.2. (UPD) Set up `Python` in `VS Code`
 
 > [!NOTE]
 > The dependencies have been updated in this project version.
 
-1. [Install `Python` and dependencies](../../wiki/python.md#install-python-and-dependencies).
-
-#### 1.9.3. (UPD) Select the `Python` interpreter
-
-1. [Select the `Python` interpreter](../../wiki/python.md#select-the-python-interpreter).
-
-#### 1.9.4. (UPD) Check that `Python` works
-
-1. [Check that `Python` works](../../wiki/python.md#check-that-python-works).
+1. [Set up `Python` in `VS Code`](../../wiki/python.md#set-up-python-in-vs-code).
 
 ### 1.10. (UPD) Start the services
 
