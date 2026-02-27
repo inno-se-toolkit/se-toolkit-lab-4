@@ -38,7 +38,7 @@ sequence = ["check", "dev-unsafe"]
 ## Run server
 [tool.poe.tasks.dev-unsafe]
 help = "Run server without static analysis"
-cmd = "python src/app/run.py"
+cmd = "python backend/app/run.py"
 
 # Run static analysis
 
@@ -80,22 +80,22 @@ cmd = "ruff format"
 
 [tool.poe.tasks.test]
 help = "Run unit tests"
-cmd = "pytest tests/unit"
+cmd = "pytest backend/tests/unit"
 
 [tool.poe.tasks.test-e2e]
 help = "Run end-to-end tests against the deployed API"
-cmd = "pytest tests/e2e"
+cmd = "pytest backend/tests/e2e"
 
 [tool.pyright]
-include = ["src", "tests"]
+include = ["backend"]
 exclude = ["**/__pycache__"]
 typeCheckingMode = "strict"
 reportAssignmentType = "none"
 reportIncompatibleVariableOverride = "none"
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
-pythonpath = ["src"]
+testpaths = ["backend/tests"]
+pythonpath = ["backend"]
 
 [tool.ty.src]
-include = ["src", "tests"]
+include = ["backend"]

@@ -2,6 +2,7 @@
 
 <h2>Table of contents</h2>
 
+- [What is `VS Code`](#what-is-vs-code)
 - [`Basic Layout`](#basic-layout)
 - [`Custom Layout`](#custom-layout)
   - [Move the `Primary Sidebar` to the right](#move-the-primary-sidebar-to-the-right)
@@ -23,10 +24,13 @@
   - [Close the `VS Code Terminal`](#close-the-vs-code-terminal)
   - [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal)
   - [Switch to another `VS Code Terminal`](#switch-to-another-vs-code-terminal)
+  - [Delete a `VS Code Terminal`](#delete-a-vs-code-terminal)
   - [Copy text inside the `VS Code Terminal`](#copy-text-inside-the-vs-code-terminal)
   - [Paste text inside the `VS Code Terminal`](#paste-text-inside-the-vs-code-terminal)
+  - [Look at the open `VS Code Terminal`s](#look-at-the-open-vs-code-terminals)
+  - [Look at the current `VS Code Terminal`](#look-at-the-current-vs-code-terminal)
   - [Check the current shell in the `VS Code Terminal`](#check-the-current-shell-in-the-vs-code-terminal)
-  - [(`Windows` only) Set up running `VS Code` in `WSL`](#windows-only-set-up-running-vs-code-in-wsl)
+  - [Expand the sidebar with open `VS Code Terminal`s](#expand-the-sidebar-with-open-vs-code-terminals)
   - [(`Windows` only) Set the default shell for the `VS Code Terminal`](#windows-only-set-the-default-shell-for-the-vs-code-terminal)
   - [Run a command using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal)
 - [`Explorer`](#explorer)
@@ -51,7 +55,9 @@
 - [Workspace settings](#workspace-settings)
   - [Change the workspace settings](#change-the-workspace-settings)
 - [Common actions](#common-actions)
-  - [(`Windows` only) Open the directory in `WSL`](#windows-only-open-the-directory-in-wsl)
+  - [Open the directory](#open-the-directory)
+    - [(`Windows` only) Open the directory in `WSL`](#windows-only-open-the-directory-in-wsl)
+    - [(`Windows` only) Reopen the directory in `WSL`](#windows-only-reopen-the-directory-in-wsl)
   - [Open the file](#open-the-file)
     - [Open the file using `code`](#open-the-file-using-code)
   - [Open the `Markdown` preview](#open-the-markdown-preview)
@@ -60,12 +66,24 @@
   - [Docs on hover](#docs-on-hover)
   - [Go to the definition](#go-to-the-definition)
   - [Rename a symbol](#rename-a-symbol)
+- [Set up `VS Code`](#set-up-vs-code)
+  - [Install `VS Code`](#install-vs-code)
+  - [(`Windows` only) Set up running `VS Code` in `WSL`](#windows-only-set-up-running-vs-code-in-wsl)
+  - [(`macOS` only) Add `VS Code` to `PATH`](#macos-only-add-vs-code-to-path)
 
 > [!IMPORTANT]
 > The first [keyboard shortcut](#keyboard-shortcuts) is always for `Linux`.
 > It usually coincides with the shortcut for `Windows`.
 >
 > You can check shortcuts for your platform in the [reference](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-reference).
+
+## What is `VS Code`
+
+`Visual Studio Code` (`VS Code`) is a free, open-source code editor made by `Microsoft`. It provides features like syntax highlighting, a built-in [terminal](#vs-code-terminal), [extensions](#extensions), and [`Git`](./git.md) integration.
+
+Docs:
+
+- [Visual Studio Code documentation](https://code.visualstudio.com/docs)
 
 ## `Basic Layout`
 
@@ -239,8 +257,6 @@ Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 
 ### Open a new `VS Code Terminal`
 
-Use any of the following methods.
-
 Method 1:
 
 1. Press ```Ctrl+Shift+` ``` (```Cmd+Shift+` ``` on `macOS`).
@@ -254,8 +270,6 @@ Method 2:
 
 ### Switch to another `VS Code Terminal`
 
-Use any of the following methods:
-
 Method 1:
 
 1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
@@ -268,6 +282,15 @@ Method 2:
 1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
 1. Press `Ctrl+PageDown` / `Ctrl+PageUp` (`Cmd+Shift+]` / `Cmd+Shift+[` on `macOS`).
 
+### Delete a `VS Code Terminal`
+
+1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
+2. [Look at the open `VS Code Terminal`s](#look-at-the-open-vs-code-terminals).
+3. Go to the `VS Code Terminal` that should be deleted.
+4. Delete the terminal.
+
+   <img alt="Terminal - Delete Terminal" src="./images/vs-code/terminal-delete-terminal.png" style="width:200px"></img>
+
 ### Copy text inside the `VS Code Terminal`
 
 1. Select text.
@@ -277,71 +300,82 @@ Method 2:
 
 `Ctrl+Shift+V` (`Cmd+V` on `macOS`, `Ctrl+V` on `Windows`)
 
+### Look at the open `VS Code Terminal`s
+
+1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
+2. Look at the sidebar with a list of `VS Code Terminal`s.
+
+   <img alt="Open Terminals" src="./images/vs-code/terminal-current-terminal.png" style="width:300px"></img>
+
+   <img alt="Open Terminals - Narrow" src="./images/vs-code/terminal-open-terminals-narrow.png" style="width:300px"></img>
+
+   If you don't see a list of `VS Code Terminal`s on the right, you have only one `VS Code Terminal` open.
+3. (Optional) [Expand the sidebar with open `VS Code Terminal`s](#expand-the-sidebar-with-open-vs-code-terminals).
+
+### Look at the current `VS Code Terminal`
+
+1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
+2. Look at one of these:
+   - The [`Panel Toolbar`](#panel-toolbar):
+
+      <img alt="Current Terminal Shell" src="./images/vs-code/terminal-single-current-shell-bash.png" style="width:300px"></img>
+
+   - Current (highlighted) `VS Code Terminal`:
+
+      <img alt="Terminals" src="./images/vs-code/terminal-current-terminal.png" style="width:300px"></img>
+
 ### Check the current shell in the `VS Code Terminal`
 
-1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal)
-2. Look at the [`Panel Toolbar`](#panel-toolbar).
-
-   <img alt="Current Terminal Shell" src="./images/vs-code/terminal-single-current-shell-bash.png" style="width:400px"></img>
+1. [Look at the current `VS Code Terminal`](#look-at-the-current-vs-code-terminal).
 
    You should see on:
+
    - `Windows`: `bash`;
 
-     If you see something else, [set the default shell](#windows-only-set-the-default-shell-for-the-vs-code-terminal).
+      If you see something else, [set the default shell](#windows-only-set-the-default-shell-for-the-vs-code-terminal).
    - `macOS`, `Linux`: `zsh`, `bash`, or another [shell](./shell.md#shell-variants) name;
 
-### (`Windows` only) Set up running `VS Code` in `WSL`
+### Expand the sidebar with open `VS Code Terminal`s
 
-1. [Enable `WSL`](https://code.visualstudio.com/docs/remote/wsl-tutorial#_enable-wsl).
-2. Open `VS Code`.
-3. [Install the extension](./vs-code.md#extensions):
-   [`ms-vscode-remote.remote-wsl`](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl).
+1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
+2. Hover, click, and move the mouse:
 
-   It lets you use `WSL` in `VS Code`.
-4. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   wsl --install -d Ubuntu-24.04
-   ```
-
-   **Note:** [`Ubuntu`](./linux.md#ubuntu) is a [`Linux` distro](./linux.md#ubuntu).
-
-5. Open `VS Code` again.
+   <img alt="Terminal - Expand Open Terminals" src="./images/vs-code/terminal-expand-open-terminals.png" style="width:300px"></img>
 
 ### (`Windows` only) Set the default shell for the `VS Code Terminal`
 
 1. Make sure you can [run `VS Code` in WSL](#windows-only-set-up-running-vs-code-in-wsl).
-2. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
-   `WSL: Reopen Folder in WSL`.
+2. [Reopen the directory in `WSL`](#windows-only-reopen-the-directory-in-wsl)
 3. [Run using the `Command Palette`](#run-a-command-using-the-command-palette):
    `Terminal: Select Default Profile`.
 4. There can be the following cases.
 
    - Case 1 (bad): You don't have the recommended extensions installed.
 
-     <img alt="Terminal Default Profile Bad Options" src="./images/vs-code/command-palette-default-terminal-profile-bad-options.png" style="width:400px"></img>
+     <img alt="Terminal Default Profile - Bad Options" src="./images/vs-code/command-palette-default-terminal-profile-bad-options.png" style="width:400px"></img>
 
      Return to the first step and make sure you can [run `VS Code` in WSL](#windows-only-set-up-running-vs-code-in-wsl).
    - Case 2 (good): You're running `VS Code` outside `WSL`.
 
-     <img alt="Terminal Default Profile Outside WSL" src="./images/vs-code/command-palette-default-terminal-profile-outside-wsl-wsl.png" style="width:400px"></img>
+     <img alt="Terminal Default Profile - Outside WSL" src="./images/vs-code/command-palette-default-terminal-profile-outside-wsl-wsl.png" style="width:400px"></img>
 
      Follow the instructions for [setting the default shell](#windows-only-set-the-default-shell-for-the-vs-code-terminal) again.
 
    - Case 3 (the best): You're running `VS Code` inside `WSL`. You've probably [opened the directory inside `WSL`](#windows-only-open-the-directory-in-wsl). This is the best case.
 
-     <img alt="Terminal Default Profile Outside WSL" src="./images/vs-code/command-palette-default-terminal-profile-bash.png" style="width:400px"></img>
+     <img alt="Terminal Default Profile - Bash" src="./images/vs-code/command-palette-default-terminal-profile-bash.png" style="width:400px"></img>
 
      [Select](#select-an-option-from-a-list) `bash`.
 5. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
-6. Close all tabs in the `VS Code Terminal`.
+6. [Delete all `VS Code Terminal`s](#delete-a-vs-code-terminal).
 7. [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal).
 
 ### Run a command using the `VS Code Terminal`
 
 1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
-2. Write or [paste](#paste-text-inside-the-vs-code-terminal) a command.
-3. Press `Enter`.
+2. [Check the current shell in the `VS Code Terminal`](#check-the-current-shell-in-the-vs-code-terminal).
+3. Write or [paste](#paste-text-inside-the-vs-code-terminal) a command.
+4. Press `Enter`.
 
 ## `Explorer`
 
@@ -443,15 +477,17 @@ Method 2:
 ### Install the extension
 
 1. Open the `Extensions`.
-2. Write the extension:
-   - name
-   - or, identifier
+2. Write:
+   - Option 1: extension name
+
+      Example: `GitHub Copilot Chat`
+   - Option 2: extension identifier
 
       Format: `<extension-publisher>.<extension-name>`
 
-      Example: `ms-vscode-remote.remote-wsl`).
+      Example: `github.copilot-chat`.
 3. Click the extension.
-4. Click install.
+4. Click `Install`.
 
 ### Filter the `Extensions`
 
@@ -556,13 +592,37 @@ Here are some [workspace settings](#workspace-settings) that you can change:
 
 ## Common actions
 
-### (`Windows` only) Open the directory in `WSL`
+### Open the directory
+
+> [!NOTE]
+> The `<directory-name>` is the name of a directory that you want to open.
+>
+> Example: `software-engineering-toolkit`
+
+1. [Run using the `Command Palette`](./vs-code.md#command-palette):
+   `File: Open Folder...`
+2. Find the directory `<directory-name>`.
+3. Open this directory.
+
+   `VS Code` should now open in that directory.
+4. [Open the `Explorer`](./vs-code.md#open-the-explorer).
+5. You should see `<DIRECTORY-NAME>` there.
+
+   Example: `SOFTWARE-ENGINEERING-TOOLKIT`
+6. (`Windows` only) [Reopen the directory in `WSL`](#windows-only-reopen-the-directory-in-wsl).
+
+#### (`Windows` only) Open the directory in `WSL`
 
 1. [Run using the `Command Palette`](#command-palette):
    `WSL: Open Folder in WSL...`
 2. Click `Show Local`.
 3. Select the directory.
 4. [Check the current shell in the `VS Code Terminal`](#check-the-current-shell-in-the-vs-code-terminal).
+
+#### (`Windows` only) Reopen the directory in `WSL`
+
+1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
+   `WSL: Reopen Folder in WSL`.
 
 ### Open the file
 
@@ -582,6 +642,8 @@ Here are some [workspace settings](#workspace-settings) that you can change:
 
   See [`<file-path>`](./file-system.md#file-path).
 
+1. (`macOS` only) If the `code <file-path>` command doesn't work, [add `VS Code` to `PATH`](#macos-only-add-vs-code-to-path).
+
 ### Open the `Markdown` preview
 
 > [!NOTE]
@@ -600,10 +662,119 @@ Method 2:
 
 ## Language server
 
+A language server provides smart features for a programming language: type information, documentation, navigation, and refactoring.
+
+`VS Code` uses the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) to communicate with language servers.
+
+Docs:
+
+- [Language Server Protocol](https://code.visualstudio.com/api/language-extensions/language-server-extension-guide)
+
+Actions:
+
+- [Type on hover](#type-on-hover)
+- [Docs on hover](#docs-on-hover)
+- [Go to the definition](#go-to-the-definition)
+- [Rename a symbol](#rename-a-symbol)
+
 ### Type on hover
+
+1. Hover over a variable, function, or other symbol.
+2. A tooltip will show the type information.
 
 ### Docs on hover
 
+1. Hover over a variable, function, or other symbol.
+2. A tooltip will show the documentation (if available).
+
 ### Go to the definition
 
+Method 1:
+
+1. Hold `Ctrl`/`Alt` (`Cmd` on `macOS`).
+2. Click the symbol.
+
+Method 2:
+
+1. Right-click the symbol.
+2. Click `Go to Definition`.
+
+Method 3:
+
+1. Place the cursor on the symbol.
+2. Press `F12`.
+
 ### Rename a symbol
+
+Method 1:
+
+1. Right-click the symbol.
+2. Click `Rename Symbol`.
+3. Type the new name.
+4. Press `Enter`.
+
+Method 2:
+
+1. Place the cursor on the symbol.
+2. Press `F2`.
+3. Type the new name.
+4. Press `Enter`.
+
+## Set up `VS Code`
+
+1. [Install `VS Code`](#install-vs-code)
+2. [(`Windows` only) Set up running `VS Code` in `WSL`](#windows-only-set-up-running-vs-code-in-wsl).
+3. [(`macOS` only) Add `VS Code` to `PATH`](#macos-only-add-vs-code-to-path).
+
+### Install `VS Code`
+
+Follow the installation instructions for your platform:
+
+- [`Linux`](https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux)
+- [`macOS`](https://code.visualstudio.com/docs/setup/mac#_install-vs-code-on-macos)
+- [`Windows`](https://code.visualstudio.com/docs/setup/windows#_install-vs-code-on-windows)
+
+### (`Windows` only) Set up running `VS Code` in `WSL`
+
+<img alt="VS Code and WSL" src="./images/vs-code/vs-code-wsl.png" style="width:400px"></img>
+
+[image source](https://code.visualstudio.com/docs/remote/wsl)
+
+Steps:
+
+1. [Enable `WSL`](https://code.visualstudio.com/docs/remote/wsl-tutorial#_enable-wsl).
+2. Open `VS Code`.
+3. [Install the extension](./vs-code.md#install-the-extension) with the identifier `ms-vscode-remote.remote-wsl`.
+
+   This extension lets you use `VS Code` in [`WSL`](./operating-system.md#wsl).
+4. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   wsl --install -d Ubuntu-24.04
+   ```
+
+   **Note:** [`Ubuntu`](./linux.md#ubuntu) is a [`Linux` distro](./linux.md#ubuntu).
+
+5. Open `VS Code` again.
+
+### (`macOS` only) Add `VS Code` to `PATH`
+
+1. [Add `VS Code` to `PATH`](https://code.visualstudio.com/docs/setup/mac#_configure-the-path-with-vs-code).
+
+   See [`PATH` environment variable](./environments.md#path-environment-variable).
+2. [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal).
+3. Check that the `code` command is available in the `VS Code Terminal`:
+
+    [Run using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal):
+
+    ```terminal
+    code --version
+    ```
+
+    The output should be similar to this text:
+
+    ```terminal
+    1.109.0
+    bdd88df003631aaa0bcbe057cb0a940b80a476fa
+    x64
+    ```

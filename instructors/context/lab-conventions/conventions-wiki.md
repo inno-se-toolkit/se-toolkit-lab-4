@@ -1,4 +1,4 @@
-# Wiki conventions — applies to `lab/wiki/` only
+# Wiki conventions — applies to `wiki/` only
 
 Full source: `instructors/context/lab-conventions/lab-conventions.md` §7, §12.13
 

@@ -27,6 +27,10 @@
   - [URL example](#url-example)
 - [Service](#service)
 - [Feature flag](#feature-flag)
+- [HTML](#html)
+- [CSS](#css)
+- [JavaScript](#javascript)
+- [CDN](#cdn)
 
 ## Web server and web client
 
@@ -224,3 +228,19 @@ A service can call other services over the network, but to the client it still a
 ## Feature flag
 
 A feature flag (also called a feature toggle) is a mechanism that enables or disables a feature at runtime without deploying new code. Feature flags let teams decouple deployment from release, enabling gradual rollouts, `A/B` testing, and quick rollbacks.
+
+## HTML
+
+`HTML` (`HyperText Markup Language`) is the standard language for structuring content on the web. An `HTML` file defines the structure and content of a web page using tags.
+
+## CSS
+
+`CSS` (`Cascading Style Sheets`) is a language for styling `HTML` content — controlling layout, colors, fonts, and other visual properties.
+
+## JavaScript
+
+`JavaScript` is a programming language that runs in the browser and makes web pages interactive. It can update content, respond to events, and communicate with servers.
+
+## CDN
+
+A `CDN` (`Content Delivery Network`) is a network of distributed servers that delivers static files (such as `HTML`, `CSS`, and `JavaScript`) to users from a location close to them. Serving files from a `CDN` reduces load on the origin server and improves response time.

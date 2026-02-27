@@ -16,7 +16,7 @@ See also:
 
 ## Resetting the database
 
-The database is initialized from the file [`src/app/data/init.sql`](../src/app/data/init.sql) on the first start of the container with `PostgreSQL` (see the [service](./docker.md#service) `postgres` in [`docker-compose.yml`](../docker-compose.yml)).
+The database is initialized from the file [`backend/app/data/init.sql`](../backend/app/data/init.sql) on the first start of the container with `PostgreSQL` (see the [service](./docker.md#service) `postgres` in [`docker-compose.yml`](../docker-compose.yml)).
 
 To reset the database to its initial state:
 
@@ -26,7 +26,7 @@ To reset the database to its initial state:
    docker compose --env-file .env.docker.secret down postgres -v
    ```
 
-2. This removes the database [volume](./docker.md#volumes). The next `docker compose up` will re-create the database from [`init.sql`](../src/app/data/init.sql).
+2. This removes the database [volume](./docker.md#volumes). The next `docker compose up` will re-create the database from [`init.sql`](../backend/app/data/init.sql).
 
 3. Start the services again:
 

@@ -4,29 +4,53 @@
 
 - [What is `Git`](#what-is-git)
 - [Commit](#commit)
-  - [Commit message](#commit-message)
-    - [`Conventional Commits`](#conventional-commits)
+- [Commit message](#commit-message)
+  - [`Conventional Commits`](#conventional-commits)
+    - [Common prefixes in `Conventional Commits`](#common-prefixes-in-conventional-commits)
 - [How `Git` works - text](#how-git-works---text)
 - [How `Git` works - videos](#how-git-works---videos)
 - [Merge conflict](#merge-conflict)
 - [Practice `Git`](#practice-git)
 - [`.gitignore`](#gitignore)
 - [`GitHub flow`](#github-flow)
-- [Configuration](#configuration)
-  - [Check your Git config](#check-your-git-config)
-  - [Configure Git](#configure-git)
+- [Check your `Git` config](#check-your-git-config)
+- [Configure `Git`](#configure-git)
+  - [Configure `user.name`](#configure-username)
+  - [Configure `user.email`](#configure-useremail)
 
 ## What is `Git`
 
+`Git` is a distributed version control system that tracks changes in your files and lets multiple people collaborate on the same codebase. It records a history of every change, so you can revert mistakes, compare versions, and work on features in parallel using branches.
+
+Docs:
+
+- [Git Reference](https://git-scm.com/doc)
+- [Git Cheat Sheet](https://git-scm.com/cheat-sheet)
+
 ## Commit
 
-### Commit message
+A commit is a snapshot of your project at a specific point in time. Each commit records what changed since the previous commit, who made the change, and a [commit message](#commit-message) describing why. Commits form a history that you can browse, revert, or branch from.
 
-#### `Conventional Commits`
+## Commit message
 
-- Learn about [`Conventional Commits`](https://www.conventionalcommits.org/en/v1.0.0/) for commit message formatting.
+A commit message is a short description attached to each commit. It explains **what** was changed and **why**. Good commit messages make the project history readable and help teammates understand changes without reading the code.
 
-Common prefixes:
+Guidelines:
+
+- Keep the first line short (under 72 characters).
+- Use the imperative mood ("add feature", not "added feature").
+- Focus on why the change was made, not just what changed.
+- (Optional) follow the [`Conventional Commits`](#conventional-commits) specification.
+
+### `Conventional Commits`
+
+Rules for creating human- and machine-readable commit history.
+
+Docs:
+
+- [`Conventional Commits`](https://www.conventionalcommits.org/en/v1.0.0/).
+
+#### Common prefixes in `Conventional Commits`
 
 - `feat:` for new functionality.
 - `fix:` for bug fixes.
@@ -120,16 +144,11 @@ Typical sequence:
 4. Push branch and open a PR.
 5. Get review and merge.
 
-## Configuration
+## Check your `Git` config
 
-Complete the following steps:
+1. Find out which name and email are used in [commits](#commit):
 
-- [Check your Git config](#check-your-git-config)
-- [Configure Git](#configure-git)
-
-### Check your Git config
-
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    git config --global --list
@@ -138,25 +157,36 @@ Complete the following steps:
    The output should look like this (but with your values):
 
    ```terminal
-   user.name=John Doe
+   user.name=Inno SE Toolkit
    user.email=inno-se-toolkit@gmail.com
    ```
 
-### Configure Git
+## Configure `Git`
 
-> [!IMPORTANT]
-> Replace `<your-name>` with a name and `<your-email>` with an email that you want to see in the commits.
+> [!NOTE]
+> See [docs](https://git-scm.com/docs/git-config#Documentation/git-config.txt-username) about `user.name` and `user.email`.
 
-1. (Optional) See [docs](https://git-scm.com/docs/git-config#Documentation/git-config.txt-username) for an explanation of what these commands do.
-2. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+Complete the following steps:
+
+1. [Check your `Git` config](#check-your-git-config).
+2. [Configure `user.name`](#configure-username).
+3. [Configure `user.email`](#configure-useremail).
+
+### Configure `user.name`
+
+1. Set the name that will be used in [commits](#commit):
+
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
     ```terminal
     git config --global user.name '<your-name>'
     ```
 
-    Example: `git config --global user.name 'John Doe'`
+    Example: `git config --global user.name 'Inno SE Toolkit'`
 
-3. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+### Configure `user.email`
+
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
      ```terminal
      git config --global user.email '<your-email>'

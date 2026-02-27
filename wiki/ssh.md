@@ -19,6 +19,7 @@
   - [`Permission denied (publickey)`](#permission-denied-publickey)
   - [`Bad owner or permissions`](#bad-owner-or-permissions)
   - [`Connection timed out`](#connection-timed-out)
+- [`scp`](#scp)
 
 ## What is `SSH`
 
@@ -142,6 +143,9 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 5. If you see `The agent has no identities`, run the [start `ssh-agent` step](#start-the-ssh-agent) again.
 
 ## Add the host to `SSH`
+
+> [!NOTE]
+> See [host](./computer-networks.md#host).
 
 1. Make sure you have [set up `SSH`](#set-up-ssh).
 2. Get [`<your-vm-ip-address>`](./vm.md#your-vm-ip-address).
@@ -277,3 +281,15 @@ Password-based authentication asks you to type the remote user's password.
    ```
 
 5. Try to stop, delete, and create a new VM if there are still problems.
+
+## `scp`
+
+`scp` (`Secure Copy`) copies files between machines over [`SSH`](#what-is-ssh).
+
+Common pattern:
+
+```terminal
+scp -r <local-path> <user>@<host>:<remote-path>
+```
+
+The `-r` flag copies directories recursively.

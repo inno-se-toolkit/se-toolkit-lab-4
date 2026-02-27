@@ -1,52 +1,48 @@
 # Lab setup
 
 - [1. Required steps](#1-required-steps)
-  - [1.1. (NEW) Find a partner](#11-new-find-a-partner)
+  - [1.1. (UPD) Find a partner](#11-upd-find-a-partner)
   - [1.2. Start creating a VM](#12-start-creating-a-vm)
   - [1.3. Set up your fork](#13-set-up-your-fork)
     - [1.3.1. Sign in on `GitHub`](#131-sign-in-on-github)
-    - [1.3.2. (NEW) Fork the course instructors' repo](#132-new-fork-the-course-instructors-repo)
-    - [1.3.3. (NEW) Go to your fork](#133-new-go-to-your-fork)
-    - [1.3.4. (NEW) Enable issues](#134-new-enable-issues)
-    - [1.3.5. (NEW) Add a classmate as a collaborator](#135-new-add-a-classmate-as-a-collaborator)
-    - [1.3.6. (NEW) Protect your `main` branch](#136-new-protect-your-main-branch)
-  - [1.4. Install programs](#14-install-programs)
-    - [1.4.1. Install `VS Code`](#141-install-vs-code)
-    - [1.4.2. Install `Git`](#142-install-git)
-    - [1.4.3. Install `Docker`](#143-install-docker)
-    - [1.4.4. (`Windows` only) Install `Ubuntu 24.04` using WSL](#144-windows-only-install-ubuntu-2404-using-wsl)
-    - [1.4.5. (NEW) Install `Nix`](#145-new-install-nix)
-  - [1.5. (NEW) Open in `VS Code` the `software-engineering-toolkit` directory](#15-new-open-in-vs-code-the-software-engineering-toolkit-directory)
-  - [1.6. Set up `Git`](#16-set-up-git)
-    - [1.6.1. Check your `Git` config](#161-check-your-git-config)
-    - [1.6.2. Configure `Git`](#162-configure-git)
-  - [1.7. (NEW) Clone your fork and open it in `VS Code`](#17-new-clone-your-fork-and-open-it-in-vs-code)
-    - [1.7.1. (NEW) Copy your fork `URL`](#171-new-copy-your-fork-url)
-    - [1.7.2. (NEW) Clone your fork](#172-new-clone-your-fork)
-    - [1.7.3. (NEW) Open the cloned repo in `VS Code`](#173-new-open-the-cloned-repo-in-vs-code)
-  - [1.8. (NEW) (`Windows` only) Set the default shell](#18-new-windows-only-set-the-default-shell)
-  - [1.9. Continue creating a VM](#19-continue-creating-a-vm)
-  - [1.10. Set up `Python` in `VS Code`](#110-set-up-python-in-vs-code)
-    - [1.10.1. Install `uv`](#1101-install-uv)
-    - [1.10.2. (NEW) Install `Python` and dependencies](#1102-new-install-python-and-dependencies)
-    - [1.10.3. (NEW) Select the `Python` interpreter](#1103-new-select-the-python-interpreter)
-    - [1.10.4. (NEW) Check that `Python` works](#1104-new-check-that-python-works)
-  - [1.11. (NEW) Start the services](#111-new-start-the-services)
-    - [1.11.1. (NEW) Set up the `Docker` environment](#1111-new-set-up-the-docker-environment)
-    - [1.11.2. (NEW) Start the services using `Docker Compose`](#1112-new-start-the-services-using-docker-compose)
-  - [1.12. (NEW) Open a new terminal](#112-new-open-a-new-terminal)
-  - [1.13. (NEW) Observe containers and services](#113-new-observe-containers-and-services)
-    - [1.13.1. (NEW) List running containers](#1131-new-list-running-containers)
-    - [1.13.2. (NEW) See logs of the running services](#1132-new-see-logs-of-the-running-services)
-  - [1.14. (NEW) Set up the services](#114-new-set-up-the-services)
-    - [1.14.1. (NEW) Open `Swagger UI`](#1141-new-open-swagger-ui)
-    - [1.14.2. (NEW) Set up `pgAdmin`](#1142-new-set-up-pgadmin)
-  - [1.15. (NEW) Stop the services](#115-new-stop-the-services)
-  - [1.16. (NEW) Add SSH key for the autochecker](#116-new-add-ssh-key-for-the-autochecker)
-  - [1.17. (NEW) Set up a coding agent](#117-new-set-up-a-coding-agent)
-  - [1.18. (NEW) Log in to the autochecker](#118-new-log-in-to-the-autochecker)
+    - [1.3.2. (UPD) Fork the course instructors' repo](#132-upd-fork-the-course-instructors-repo)
+    - [1.3.3. (UPD) Go to your fork](#133-upd-go-to-your-fork)
+    - [1.3.4. (UPD) Enable issues](#134-upd-enable-issues)
+    - [1.3.5. (UPD) Add a classmate as a collaborator](#135-upd-add-a-classmate-as-a-collaborator)
+    - [1.3.6. (UPD) Protect your `main` branch](#136-upd-protect-your-main-branch)
+  - [1.4. Set up programs](#14-set-up-programs)
+    - [1.4.1. Set up `VS Code`](#141-set-up-vs-code)
+    - [1.4.2. (UPD) Set up `Docker`](#142-upd-set-up-docker)
+    - [1.4.3. (UPD) (`Windows` only) Set the default shell for the `VS Code Terminal`](#143-upd-windows-only-set-the-default-shell-for-the-vs-code-terminal)
+    - [1.4.4. Set up `Git`](#144-set-up-git)
+    - [1.4.5. (NEW) Set up `Nix`](#145-new-set-up-nix)
+  - [1.5. (UPD) Open in `VS Code` the `software-engineering-toolkit` directory](#15-upd-open-in-vs-code-the-software-engineering-toolkit-directory)
+  - [1.6. (UPD) Clone your fork and open it in `VS Code`](#16-upd-clone-your-fork-and-open-it-in-vs-code)
+    - [1.6.1. (UPD) Copy your fork `URL`](#161-upd-copy-your-fork-url)
+    - [1.6.2. (UPD) Clone your fork](#162-upd-clone-your-fork)
+    - [1.6.3. (UPD) Open the cloned repo in `VS Code`](#163-upd-open-the-cloned-repo-in-vs-code)
+  - [1.8. Continue creating a VM](#18-continue-creating-a-vm)
+  - [1.9. Set up `Python` in `VS Code`](#19-set-up-python-in-vs-code)
+    - [1.9.1. Install `uv`](#191-install-uv)
+    - [1.9.2. (UPD) Install `Python` and dependencies](#192-upd-install-python-and-dependencies)
+    - [1.9.3. (UPD) Select the `Python` interpreter](#193-upd-select-the-python-interpreter)
+    - [1.9.4. (UPD) Check that `Python` works](#194-upd-check-that-python-works)
+  - [1.10. (UPD) Start the services](#110-upd-start-the-services)
+    - [1.10.1. (UPD) Set up the `Docker` environment](#1101-upd-set-up-the-docker-environment)
+    - [1.10.2. (UPD) Start the services using `Docker Compose`](#1102-upd-start-the-services-using-docker-compose)
+  - [1.11. (UPD) Open a new terminal](#111-upd-open-a-new-terminal)
+  - [1.12. (UPD) Observe containers and services](#112-upd-observe-containers-and-services)
+    - [1.12.1. (UPD) List running containers](#1121-upd-list-running-containers)
+    - [1.12.2. (UPD) See logs of the running services](#1122-upd-see-logs-of-the-running-services)
+  - [1.13. (UPD) Set up the services](#113-upd-set-up-the-services)
+    - [1.13.1. (UPD) Open `Swagger UI`](#1131-upd-open-swagger-ui)
+    - [1.13.2. (UPD) Set up `pgAdmin`](#1132-upd-set-up-pgadmin)
+  - [1.14. (UPD) Stop the services](#114-upd-stop-the-services)
+  - [1.15. (UPD) Add SSH key for the autochecker](#115-upd-add-ssh-key-for-the-autochecker)
+  - [1.16. (UPD) Set up a coding agent](#116-upd-set-up-a-coding-agent)
+  - [1.17. (UPD) Log in to the autochecker](#117-upd-log-in-to-the-autochecker)
 - [2. Optional steps](#2-optional-steps)
-  - [2.1. (NEW) Learn to go back after clicking a link](#21-new-learn-to-go-back-after-clicking-a-link)
+  - [2.1. (UPD) Learn to go back after clicking a link](#21-upd-learn-to-go-back-after-clicking-a-link)
   - [2.2. Set up a coding agent](#22-set-up-a-coding-agent)
   - [2.3. Set up the shell prompt](#23-set-up-the-shell-prompt)
   - [2.4. Customize the `Source Control`](#24-customize-the-source-control)
@@ -56,19 +52,19 @@
 
 ## 1. Required steps
 
+> [!IMPORTANT]
+> Some steps have the `(UPD)` label.
+>
+> These steps must be completed to get the right setup for this lab,
+> even if you have completed similar steps in the previous lab.
+
 > [!NOTE]
 > We provide all of the hardest steps in the lab setup
 > so that TAs can help you get the right setup during the lab.
 >
 > Tasks are more or less easy when you have the right setup.
 
-> [!NOTE]
-> Some steps have the `(NEW)` label.
->
-> These steps must be completed to get the right setup for this lab,
-> even if you have completed similar steps in the previous lab.
-
-### 1.1. (NEW) Find a partner
+### 1.1. (UPD) Find a partner
 
 1. Find a partner for this lab.
 2. Sit next to them.
@@ -92,29 +88,29 @@
 1. Sign in on [`GitHub`](https://github.com/).
 2. [Find `<your-github-username>`](../../wiki/github.md#find-your-github-username).
 
-#### 1.3.2. (NEW) Fork the course instructors' repo
+#### 1.3.2. (UPD) Fork the course instructors' repo
 
 1. [Fork the course instructors' repo](../../wiki/github.md#fork-a-repo).
 
    The course instructors' repo [URL](../../wiki/web-development.md#url) is <https://github.com/inno-se-toolkit/se-toolkit-lab-4>
 
-#### 1.3.3. (NEW) Go to your fork
+#### 1.3.3. (UPD) Go to your fork
 
 1. [Go to your fork](../../wiki/github.md#go-to-your-fork).
 
    The [URL](../../wiki/web-development.md#url) of your fork should look like `https://github.com/<your-github-username>/se-toolkit-lab-4`.
 
-#### 1.3.4. (NEW) Enable issues
+#### 1.3.4. (UPD) Enable issues
 
 1. [Enable issues](../../wiki/github.md#enable-issues).
 
-#### 1.3.5. (NEW) Add a classmate as a collaborator
+#### 1.3.5. (UPD) Add a classmate as a collaborator
 
 1. [Add a collaborator](../../wiki/github.md#add-a-collaborator) — your partner.
 2. Your partner should add you as a collaborator in their repo.
 3. It's OK if your collaborator can't change `Settings` in your repo.
 
-#### 1.3.6. (NEW) Protect your `main` branch
+#### 1.3.6. (UPD) Protect your `main` branch
 
 > [!NOTE]
 > Branch protection prevents accidental pushes directly to `main`.
@@ -122,86 +118,73 @@
 
 1. [Protect a branch](../../wiki/github.md#protect-a-branch).
 
-### 1.4. Install programs
+### 1.4. Set up programs
 
-#### 1.4.1. Install `VS Code`
+#### 1.4.1. Set up `VS Code`
 
-1. Install [`VS Code`](https://code.visualstudio.com/) if not installed.
-2. (Optional) [Learn more](../../wiki/vs-code.md) about `VS Code`.
+1. (Optional) [Read about `VS Code`](../../wiki/vs-code.md#what-is-vs-code).
+2. [Set up `VS Code`](../../wiki/vs-code.md#set-up-vs-code).
 
-#### 1.4.2. Install `Git`
+#### 1.4.2. (UPD) Set up `Docker`
 
-1. [Install `Git`](https://git-scm.com/install/) if not installed.
+1. (Optional) [Read about `Docker`](../../wiki/docker.md#what-is-docker).
+2. [Install `Docker`](../../wiki/docker.md#install-docker) if it's not installed.
+3. If you use `Docker Desktop`, open it.
 
-2. (Optional) [Learn more](../../wiki/git.md) about `Git`.
+   You should see `Engine running`.
 
-#### 1.4.3. Install `Docker`
-
-1. [Install `Docker`](../../wiki/docker.md#install-docker) if not installed.
-
-2. (Optional) [Learn more](../../wiki/docker.md#what-is-docker) about `Docker`.
-
-#### 1.4.4. (`Windows` only) Install `Ubuntu 24.04` using WSL
+#### 1.4.3. (UPD) (`Windows` only) Set the default shell for the `VS Code Terminal`
 
 1. [Check the current shell in the `VS Code Terminal`](../../wiki/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
-2. [Set up running `VS Code` using `WSL`](../../wiki/vs-code.md#windows-only-set-up-running-vs-code-in-wsl) if the shell is not `bash` or `zsh`.
+2. If it's not `bash` or `zsh`, [set the default shell](../../wiki/vs-code.md#windows-only-set-the-default-shell-for-the-vs-code-terminal) and check again.
 
-#### 1.4.5. (NEW) Install `Nix`
+#### 1.4.4. Set up `Git`
 
-1. [Install `Nix`](../../wiki/nix.md#install-nix) if not installed.
+1. (Optional) [Read about `Git`](../../wiki/git.md#what-is-git).
+2. [Install `Git`](https://git-scm.com/install/) if it's not installed.
+3. (Optional) [Configure `Git`](../../wiki/git.md#configure-git).
 
-2. (Optional) [Learn more](../../wiki/nix.md#what-is-nix) about `Nix`.
+#### 1.4.5. (NEW) Set up `Nix`
 
-### 1.5. (NEW) Open in `VS Code` the `software-engineering-toolkit` directory
+1. (Optional) [Read about `Nix`](../../wiki/nix.md#what-is-nix).
+2. [Set up `Nix`](../../wiki/nix.md#set-up-nix) if it's not installed.
+
+### 1.5. (UPD) Open in `VS Code` the `software-engineering-toolkit` directory
 
 1. Inside the [`Desktop` directory](../../wiki/file-system.md#desktop-directory),
    create the directory `software-engineering-toolkit`.
 
    Skip this step if this directory exists.
 
-2. [Open in `VS Code` the directory](../../wiki/git-vscode.md#open-in-vs-code-the-directory):
+2. [Open in `VS Code` the directory](../../wiki/vs-code.md#open-the-directory):
    `software-engineering-toolkit`.
 
-### 1.6. Set up `Git`
+### 1.6. (UPD) Clone your fork and open it in `VS Code`
 
-#### 1.6.1. Check your `Git` config
+#### 1.6.1. (UPD) Copy your fork `URL`
 
-1. [Check your Git config](../../wiki/git.md#check-your-git-config).
-
-#### 1.6.2. Configure `Git`
-
-[Configure Git](../../wiki/git.md#configure-git) if you want to change the values that you saw while [checking your `Git` config](#161-check-your-git-config).
-
-### 1.7. (NEW) Clone your fork and open it in `VS Code`
-
-#### 1.7.1. (NEW) Copy your fork `URL`
-
-1. [Go to your fork](#133-new-go-to-your-fork).
+1. [Go to your fork](#133-upd-go-to-your-fork).
 2. Copy [`<your-fork-url>`](../../wiki/github.md#your-fork-url).
 
    It should look like `https://github.com/<your-github-username>/se-toolkit-lab-4`.
 
-> [!NOTE]
-> Here, the `<repo-name>` is `se-toolkit-lab-4`.
+   See [`<your-github-username>`](../../wiki/github.md#your-github-username).
 
-#### 1.7.2. (NEW) Clone your fork
+#### 1.6.2. (UPD) Clone your fork
 
 1. [Clone your fork](../../wiki/git-vscode.md#clone-the-repo):
 
    - Replace `<repo-url>` with [`<your-fork-url>`](../../wiki/github.md#your-fork-url).
    - Replace `<repo-name>` with `se-toolkit-lab-4`.
 
-#### 1.7.3. (NEW) Open the cloned repo in `VS Code`
+#### 1.6.3. (UPD) Open the cloned repo in `VS Code`
 
-1. [Open in `VS Code` the directory](../../wiki/git-vscode.md#open-in-vs-code-the-directory):
+1. [Open in `VS Code` the directory](../../wiki/vs-code.md#open-the-directory):
    `se-toolkit-lab-4`.
-2. [Install recommended extensions](../../wiki/vs-code.md#install-recommended-extensions).
+2. [Check the current shell in the `VS Code Terminal`](../../wiki/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
+3. [Install recommended extensions](../../wiki/vs-code.md#install-recommended-extensions).
 
-### 1.8. (NEW) (`Windows` only) Set the default shell
-
-1. [Check and set the current shell in the `VS Code Terminal`](../../wiki/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
-
-### 1.9. Continue creating a VM
+### 1.8. Continue creating a VM
 
 Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-to-the-vm):
 
@@ -211,38 +194,38 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
    You can use the key that you created before for the new VM.
 2. [Create a VM using the subscription](../../wiki/vm.md#create-a-vm-using-the-subscription).
 
-### 1.10. Set up `Python` in `VS Code`
+### 1.9. Set up `Python` in `VS Code`
 
-#### 1.10.1. Install `uv`
+#### 1.9.1. Install `uv`
 
 > [!NOTE]
 > [`uv`](../../wiki/python.md#uv) is a package manager for [`Python`](../../wiki/python.md).
 
 1. [Install `uv`](../../wiki/python.md#install-uv).
 
-#### 1.10.2. (NEW) Install `Python` and dependencies
+#### 1.9.2. (UPD) Install `Python` and dependencies
 
 > [!NOTE]
 > The dependencies have been updated in this project version.
 
 1. [Install `Python` and dependencies](../../wiki/python.md#install-python-and-dependencies).
 
-#### 1.10.3. (NEW) Select the `Python` interpreter
+#### 1.9.3. (UPD) Select the `Python` interpreter
 
 1. [Select the `Python` interpreter](../../wiki/python.md#select-the-python-interpreter).
 
-#### 1.10.4. (NEW) Check that `Python` works
+#### 1.9.4. (UPD) Check that `Python` works
 
 1. [Check that `Python` works](../../wiki/python.md#check-that-python-works).
 
-### 1.11. (NEW) Start the services
+### 1.10. (UPD) Start the services
 
 > [!NOTE]
 > A [service](../../wiki/docker.md#service) in [`Docker Compose`](../../wiki/docker-compose.md) defines how to run a [container](../../wiki/docker.md#container).
 >
 > `Docker Compose` lets you start multiple containers at once.
 
-#### 1.11.1. (NEW) Set up the `Docker` environment
+#### 1.10.1. (UPD) Set up the `Docker` environment
 
 1. Copy the [`.env.docker.example`](../../.env.docker.example) file to the `.env.docker.secret` file:
 
@@ -262,7 +245,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 > No edits are needed for local development.
 > The default values in [`.env.docker.example`](../../.env.docker.example) work out of the box.
 
-#### 1.11.2. (NEW) Start the services using `Docker Compose`
+#### 1.10.2. (UPD) Start the services using `Docker Compose`
 
 1. (`Windows` only) Open the `Docker Desktop` that you [installed](../../wiki/docker.md#install-docker).
 
@@ -283,17 +266,17 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
    > **NOTE**
    >
-   > The database is initialized from [`src/app/data/init.sql`](../../src/app/data/init.sql) only on the **first** start of the `PostgreSQL` container.
+   > The database is initialized from [`backend/app/data/init.sql`](../../backend/app/data/init.sql) only on the **first** start of the `PostgreSQL` container.
    >
    > If you need to re-initialize the database (e.g., after pulling upstream changes to `init.sql`), see [Resetting the database](../../wiki/docker-postgres.md#resetting-the-database).
 
-### 1.12. (NEW) Open a new terminal
+### 1.11. (UPD) Open a new terminal
 
 1. [Open a new `VS Code Terminal`](../../wiki/vs-code.md#open-a-new-vs-code-terminal).
 
-### 1.13. (NEW) Observe containers and services
+### 1.12. (UPD) Observe containers and services
 
-#### 1.13.1. (NEW) List running containers
+#### 1.12.1. (UPD) List running containers
 
 1. [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -301,7 +284,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
    docker compose --env-file .env.docker.secret ps
    ```
 
-#### 1.13.2. (NEW) See logs of the running services
+#### 1.12.2. (UPD) See logs of the running services
 
 1. See logs for all services:
 
@@ -317,18 +300,18 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
    docker compose --env-file .env.docker.secret logs postgres
    ```
 
-### 1.14. (NEW) Set up the services
+### 1.13. (UPD) Set up the services
 
-#### 1.14.1. (NEW) Open `Swagger UI`
+#### 1.13.1. (UPD) Open `Swagger UI`
 
 1. Open in a browser: <http://127.0.0.1:42001/docs>.
 
    You should see the [`Swagger UI`](../../wiki/swagger.md#swagger-ui) page with the [API](../../wiki/web-development.md#api) documentation.
 
-#### 1.14.2. (NEW) Set up `pgAdmin`
+#### 1.13.2. (UPD) Set up `pgAdmin`
 
 > [!NOTE]
-> [`pgAdmin`](../../wiki/pgadmin.md#what-is-pgadmin) takes 2-3 minutes to start after you have [started the services](#111-new-start-the-services).
+> [`pgAdmin`](../../wiki/pgadmin.md#what-is-pgadmin) takes 2-3 minutes to start after you have [started the services](#110-upd-start-the-services).
 
 1. [Open `pgAdmin`](../../wiki/pgadmin.md#open-pgadmin).
 2. [Add a server in `pgAdmin`](../../wiki/pgadmin.md#add-a-server-in-pgadmin).
@@ -349,7 +332,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 > [!TIP]
 > To view the data in a table, right-click the table and select `View/Edit Data` -> `All Rows`.
 
-### 1.15. (NEW) Stop the services
+### 1.14. (UPD) Stop the services
 
 1. [Check that the current directory is `se-toolkit-lab-4`](../../wiki/shell.md#check-the-current-directory-is-directory-name).
 2. [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
@@ -358,17 +341,17 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
    docker compose --env-file .env.docker.secret down
    ```
 
-### 1.16. (NEW) Add SSH key for the autochecker
+### 1.15. (UPD) Add SSH key for the autochecker
 
 1. [Connect to your VM](../../wiki/vm.md#connect-to-the-vm).
 2. [Create the `autochecker` user](../../wiki/vm-autochecker.md#create-the-autochecker-user).
 3. [Add the instructor's SSH public key to the `autochecker` user](../../wiki/vm-autochecker.md#add-an-ssh-public-key-to-the-autochecker-user):
 
-### 1.17. (NEW) Set up a coding agent
+### 1.16. (UPD) Set up a coding agent
 
 Follow the [`Coding agents`](../../wiki/coding-agents.md) guide to set up a coding agent on your machine.
 
-### 1.18. (NEW) Log in to the autochecker
+### 1.17. (UPD) Log in to the autochecker
 
 <!-- TODO: add autochecker login steps and link to wiki once the autochecker web UI is available -->
 
@@ -381,14 +364,14 @@ Follow the [`Coding agents`](../../wiki/coding-agents.md) guide to set up a codi
 
 These enhancements can make your life easier:
 
-- [(NEW)Learn to go back after clicking a link](#21-new-learn-to-go-back-after-clicking-a-link)
+- [Learn to go back after clicking a link](#21-upd-learn-to-go-back-after-clicking-a-link)
 - [Set up a coding agent](#22-set-up-a-coding-agent)
 - [Set up the shell prompt](#23-set-up-the-shell-prompt)
 - [Customize the `Source Control`](#24-customize-the-source-control)
 - [Get familiar with `GitLens`](#25-get-familiar-with-gitlens)
 - [Create a label for tasks](#26-create-a-label-for-tasks)
 
-### 2.1. (NEW) Learn to go back after clicking a link
+### 2.1. (UPD) Learn to go back after clicking a link
 
 > [!NOTE]
 

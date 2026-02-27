@@ -3,7 +3,10 @@
 <h2>Table of contents</h2>
 
 - [What is `Nix`](#what-is-nix)
+- [`nixpkgs`](#nixpkgs)
+- [Set up `Nix`](#set-up-nix)
 - [Install `Nix`](#install-nix)
+- [Verify `Nix` installation](#verify-nix-installation)
 
 ## What is `Nix`
 
@@ -13,23 +16,47 @@ It allows you to install tools and dependencies without affecting the rest of yo
 Docs:
 
 - [Nix documentation](https://nix.dev/)
-- [Determinate Systems installer](https://github.com/DeterminateSystems/nix-installer#install-determinate-nix)
+- [NixOS & Flakes Book](https://nixos-and-flakes.thiscute.world/introduction/)
+
+## `nixpkgs`
+
+`nixpkgs` is the official package collection for `Nix`, containing over 120,000 packages.
+It is the source from which `Nix` installs tools and dependencies.
+
+According to `Repology`, `nixpkgs` contains the largest number of the newest versions of packages among `Linux` repositories.
+
+Docs:
+
+- [`nixpkgs` repository on `GitHub`](https://github.com/nixos/nixpkgs)
+- [Nixpkgs Reference Manual](https://nixos.org/manual/nixpkgs/stable/)
+- [Search nixpkgs](https://search.nixos.org/packages)
+- [`nixpkgs` on `Repology`](https://repology.org/repositories/statistics/newest)
+
+## Set up `Nix`
+
+Complete these steps:
+
+1. [Install `Nix`](#install-nix).
+2. [Verify `Nix` installation](#verify-nix-installation).
 
 ## Install `Nix`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. Install `Nix` using the [`Determinate Systems` installer](https://github.com/DeterminateSystems/nix-installer#install-determinate-nix):
+
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
-   curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+   curl -fsSL https://install.determinate.systems/nix | sh -s -- install
    ```
 
 2. Follow the prompts to complete the installation.
 
-3. Open a new terminal after the installation finishes.
+3. [Delete the current `VS Code Terminal`](./vs-code.md#delete-a-vs-code-terminal).
+4. [Open a new `VS Code Terminal`](./vs-code.md#open-a-new-vs-code-terminal) after the installation finishes.
 
-   [Open a new `VS Code Terminal`](./vs-code.md#open-a-new-vs-code-terminal).
+## Verify `Nix` installation
 
-4. Verify the installation.
+1. Check the version of the `nix` [program](./linux.md#program):
 
    [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 

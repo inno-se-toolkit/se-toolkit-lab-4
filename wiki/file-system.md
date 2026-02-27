@@ -76,7 +76,7 @@ Starts from the current directory.
 
 Examples:
 
-- `src/app`
+- `backend/app`
 - `./docs`
 
 ## Special paths
