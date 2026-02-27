@@ -354,10 +354,10 @@ Follow the [`Coding agents`](../../wiki/coding-agents.md) guide to set up a codi
 
 ### 1.17. (UPD) Log in to the autochecker
 
-<!-- TODO: add autochecker login steps and link to wiki once the autochecker web UI is available -->
+1. Open the autochecker in Telegram: <https://t.me/auchebot>
+2. Log in.
 
-1. Open the autochecker in a browser: `<autochecker-url>`
-2. Log in using your `GitHub` credentials.
+Use the autochecker to check the task completion.
 
 ---
 
