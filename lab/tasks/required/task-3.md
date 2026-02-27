@@ -123,9 +123,9 @@ Title: `[Task] Add Front-end`
 
 #### 1.4.2. Verify in the browser
 
-1. Open in a browser: `http://<your-vm-ip-address>:<api-port>/`.
+1. Open in a browser: `http://<your-vm-ip-address>:<frontend-port>/`.
 
-   Replace [`<your-vm-ip-address>`](../../../wiki/vm.md#your-vm-ip-address) with the IP address of your VM. See [`<api-port>`](../../../wiki/placeholders.md#api-port).
+   Replace [`<your-vm-ip-address>`](../../../wiki/vm.md#your-vm-ip-address) with the IP address of your VM. See [`<frontend-port>`](../../../wiki/placeholders.md#frontend-port).
 
 2. Verify that the front-end loads and displays data from the API.
 
@@ -179,7 +179,7 @@ Title: `[Task] Add Front-end`
    docker compose --env-file .env.docker.secret up --build caddy -d
    ```
 
-6. Open `http://<your-vm-ip-address>:<api-port>/` in the browser and verify the new column appears in the production build.
+6. Open `http://<your-vm-ip-address>:<frontend-port>/` in the browser and verify the new column appears in the production build.
 
 ### 1.6. Finish the task
 
