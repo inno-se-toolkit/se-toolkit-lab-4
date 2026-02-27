@@ -2,6 +2,7 @@
 
 <h2>Table of contents</h2>
 
+- [What is `GitHub`](#what-is-github)
 - [The `GitHub` site](#the-github-site)
 - [`GitHub` username](#github-username)
   - [`<your-github-username>`](#your-github-username)
@@ -94,6 +95,15 @@ Placeholder values:
 
 - See [`<repo-owner-github-username>`](#repo-owner-github-username).
 - `<repo-name>` is the name of the repository.
+
+### Browse a repository revision
+
+You can browse a repository at a particular [revision](./git.md#revision): `<repo-url>/tree/<revision>`.
+
+- See [`<repo-url>`](#repo-url).
+- Replace the `<revision>` at the end of the [URL](./web-development.md#url) with an actual [revision](./git.md#revision).
+
+Example: <https://github.com/nixos/nixpkgs/tree/26eaeac4e409d7b5a6bf6f90a2a2dc223c78d915>
 
 ### Make your repository public
 
