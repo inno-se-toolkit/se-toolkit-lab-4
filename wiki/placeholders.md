@@ -46,4 +46,4 @@ The port `Caddy` serves the front-end on. This is the same as `CADDY_HOST_PORT` 
 
 ## `<frontend-url>`
 
-The full URL of the front-end: `http://<your-vm-ip-address>:42002/`.
+The full URL of the front-end: `http://<your-vm-ip-address>:<frontend-port>/`.

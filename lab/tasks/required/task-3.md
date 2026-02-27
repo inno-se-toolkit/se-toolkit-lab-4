@@ -123,9 +123,9 @@ Title: `[Task] Add Front-end`
 
 #### 1.4.2. Verify in the browser
 
-1. Open in a browser: `http://<your-vm-ip-address>:42002/`.
+1. Open in a browser: `http://<your-vm-ip-address>:<api-port>/`.
 
-   Replace [`<your-vm-ip-address>`](../../../wiki/vm.md#your-vm-ip-address) with the IP address of your VM.
+   Replace [`<your-vm-ip-address>`](../../../wiki/vm.md#your-vm-ip-address) with the IP address of your VM. See [`<api-port>`](../../../wiki/placeholders.md#api-port).
 
 2. Verify that the front-end loads and displays data from the API.
 
@@ -164,8 +164,22 @@ Title: `[Task] Add Front-end`
    ```
 
 2. Push your changes.
-3. Deploy the updated front-end using the [same method as in Part B](#141-deploy-the-front-end-to-the-vm).
-4. Open `http://<your-vm-ip-address>:42002/` in the browser and verify the new column appears in the production build.
+3. [Connect to your VM](../../../wiki/vm.md#connect-to-the-vm).
+4. Navigate to the project directory and checkout your task branch:
+
+   ```terminal
+   cd se-toolkit-lab-4 && git fetch origin && git checkout <task-branch-name>
+   ```
+
+   Replace [`<task-branch-name>`](../../../wiki/git-workflow.md#task-branch-name) with the name of your branch.
+
+5. Rebuild and restart the `caddy` service:
+
+   ```terminal
+   docker compose --env-file .env.docker.secret up --build caddy -d
+   ```
+
+6. Open `http://<your-vm-ip-address>:<api-port>/` in the browser and verify the new column appears in the production build.
 
 ### 1.6. Finish the task
 

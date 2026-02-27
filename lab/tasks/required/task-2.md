@@ -183,10 +183,10 @@ return [i for i in interactions if i.item_id == item_id]
    1. Set the base URL of your deployed API:
 
       ```terminal
-      export API_BASE_URL=http://<your-vm-ip-address>:42002
+      export API_BASE_URL=http://<your-vm-ip-address>:<api-port>
       ```
 
-      Replace [`<your-vm-ip-address>`](../../../wiki/vm.md#your-vm-ip-address) with the IP address of your VM.
+      Replace [`<your-vm-ip-address>`](../../../wiki/vm.md#your-vm-ip-address) with the IP address of your VM. See [`<api-port>`](../../../wiki/placeholders.md#api-port).
 
    2. Set the API token (use the same value as in your `.env.secret`):
 
