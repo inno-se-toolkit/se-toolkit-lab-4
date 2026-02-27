@@ -251,6 +251,8 @@ A placeholder for the name of the [compare branch](#compare-branch).
 1. [Go to your fork](#go-to-your-fork).
 2. If you see the `Compare & pull request` button, click it.
 
+   Otherwise, [open the PR editor using another method](#open-the-pr-editor-using-github).
+
 #### Open the PR editor using `Pull requests`
 
 1. [Go to your fork](#go-to-your-fork).
