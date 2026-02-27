@@ -38,7 +38,7 @@ See [`<db-name>`](./database.md#db-name) in the [`Database` wiki](./database.md)
 
 ## `<api-port>`
 
-The port the API is accessible on. From your `.env` file, this is `CADDY_HOST_PORT`.
+The port the API is accessible on. From your `.env.docker.secret` file, this is `CADDY_HOST_PORT`.
 
 ## `<frontend-port>`
 

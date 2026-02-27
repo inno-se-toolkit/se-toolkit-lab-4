@@ -34,17 +34,36 @@ Title: `[Task] Observe System Component Interaction`
 
 ### 1.2. Deploy the back-end to the VM
 
-<!-- TODO: add specific deployment steps referencing the Lab 3 deployment wiki page or process once finalized -->
+1. [Connect to your VM](../../../wiki/vm.md#connect-to-the-vm).
+2. Clone your fork on the VM (or `git pull` if already cloned):
 
-1. Deploy the back-end to your VM using the same process as in Lab 3.
+   ```terminal
+   cd se-toolkit-lab-4 && git pull
+   ```
 
-> [!Important]
-> Remember to expose your services to connections from other machines by setting relevant `HOST_ADDRESS`es to `0.0.0.0`.
+3. Create the `.env.docker.secret` file (if it does not exist):
+
+   ```terminal
+   cp .env.docker.example .env.docker.secret
+   ```
+
+4. Set `CADDY_HOST_ADDRESS` to `0.0.0.0` in `.env.docker.secret`.
+
+> [!IMPORTANT]
 > `0.0.0.0` means the server listens on **all network interfaces**.
 > This makes the service accessible from outside the VM (e.g., from your laptop).
 
-> [!NOTE]
-> This is a recap of the Lab 3 deployment. If you need a reminder, see the [Lab 3 Task 4](https://github.com/inno-se-toolkit/se-toolkit-lab-3/blob/main/lab/tasks/required/task-4.md). Importantly you need to adjust those instructions to this lab number.
+5. Start the services:
+
+   ```terminal
+   docker compose --env-file .env.docker.secret up --build -d
+   ```
+
+6. Check that the containers are running:
+
+   ```terminal
+   docker compose --env-file .env.docker.secret ps
+   ```
 
 ### 1.3. Open `Swagger UI`
 
