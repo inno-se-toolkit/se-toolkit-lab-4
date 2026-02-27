@@ -23,7 +23,7 @@
     - [1.6.3. (UPD) Open the cloned repo in `VS Code`](#163-upd-open-the-cloned-repo-in-vs-code)
   - [1.7. Continue creating a VM](#17-continue-creating-a-vm)
   - [1.8. (NEW) (Optional) Set up `direnv`](#18-new-optional-set-up-direnv)
-  - [1.9. Set up `Python` in `VS Code`](#19-set-up-python-in-vs-code)
+  - [1.9. Set up `Python`](#19-set-up-python)
     - [1.9.1. Install `uv`](#191-install-uv)
     - [1.9.2. (UPD) Set up `Python` in `VS Code`](#192-upd-set-up-python-in-vs-code)
   - [1.10. (UPD) Start the services](#110-upd-start-the-services)
@@ -198,7 +198,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 1. [Set up `direnv`](../../wiki/direnv.md#set-up-direnv).
 
-### 1.9. Set up `Python` in `VS Code`
+### 1.9. Set up `Python`
 
 > [!NOTE]
 > See [What is `Python`](../../wiki/python.md#what-is-python).
