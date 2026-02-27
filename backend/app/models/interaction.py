@@ -17,6 +17,14 @@ class InteractionLog(SQLModel, table=True):
     created_at: datetime | None = Field(default=None)
 
 
+class InteractionLogCreate(SQLModel):
+    """Request schema for creating an interaction log."""
+
+    learner_id: int
+    item_id: int
+    kind: str
+
+
 class InteractionModel(SQLModel):
     """Response schema for an interaction."""
 

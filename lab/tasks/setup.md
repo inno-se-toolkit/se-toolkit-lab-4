@@ -322,7 +322,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 1. [Open `pgAdmin`](../../wiki/pgadmin.md#open-pgadmin).
 2. [Add a server in `pgAdmin`](../../wiki/pgadmin.md#add-a-server-in-pgadmin).
-3. [Browse the `interaction_logs` table](../../wiki/pgadmin.md#browse-tables)
+3. [Browse the `interacts` table](../../wiki/pgadmin.md#browse-tables)
 
    You should see rows of data stored in the database.
 
@@ -334,7 +334,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 4. Verify that the following tables exist and contain data:
    - `items`
    - `learners`
-   - `interaction_logs`
+   - `interacts`
 
 > [!TIP]
 > To view the data in a table, right-click the table and select `View/Edit Data` -> `All Rows`.

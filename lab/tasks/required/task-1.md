@@ -66,7 +66,7 @@ Title: `[Task] Observe System Component Interaction`
 
 ### 1.5. Send a request and observe
 
-1. In `Swagger UI`, expand the `POST /interaction_logs` endpoint.
+1. In `Swagger UI`, expand the `POST /interactions` endpoint.
 2. Click `Try it out`.
 3. Enter a request body in [`JSON`](../../../wiki/file-formats.md#json) format, for example:
 
@@ -79,7 +79,7 @@ Title: `[Task] Observe System Component Interaction`
    ```
 
 4. Click `Execute`.
-5. In the browser developer tools `Network` tab, find the request to `/interaction_logs`.
+5. In the browser developer tools `Network` tab, find the request to `/interactions`.
 6. Click on the request to open its details.
 7. Observe the following:
    - The `Headers` tab: the [HTTP method](../../../wiki/http.md#http-method) and the request URL.
@@ -92,22 +92,22 @@ Title: `[Task] Observe System Component Interaction`
 ### 1.6. Verify in `pgAdmin`
 
 1. [Open `pgAdmin`](../../../wiki/pgadmin.md#open-pgadmin).
-2. [Run a query](../../../wiki/pgadmin.md#run-a-query) on the `interaction_logs` table:
+2. [Run a query](../../../wiki/pgadmin.md#run-a-query) on the `interacts` table:
 
    ```sql
-   SELECT * FROM interaction_logs ORDER BY id DESC LIMIT 5;
+   SELECT * FROM interacts ORDER BY id DESC LIMIT 5;
    ```
 
 3. Verify that the row you just created appears in the results.
 
 ### 1.7. Send another request and check the database
 
-1. In `Swagger UI`, send another `POST /interaction_logs` request with different values.
+1. In `Swagger UI`, send another `POST /interactions` request with different values.
 2. In `pgAdmin`, run the query again and verify the new row appears.
 
 ### 1.8. Write a comment for the issue
 
-1. Take a screenshot of the browser developer tools `Network` tab showing the `POST /interaction_logs` request and response.
+1. Take a screenshot of the browser developer tools `Network` tab showing the `POST /interactions` request and response.
 2. Take a screenshot of `pgAdmin` showing the corresponding row in the database.
 3. Write a comment on the issue and paste both screenshots.
 4. Close the issue.
