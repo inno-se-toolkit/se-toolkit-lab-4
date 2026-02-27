@@ -22,7 +22,6 @@
     - [1.6.2. (UPD) Clone your fork](#162-upd-clone-your-fork)
     - [1.6.3. (UPD) Open the cloned repo in `VS Code`](#163-upd-open-the-cloned-repo-in-vs-code)
   - [1.7. Continue creating a VM](#17-continue-creating-a-vm)
-  - [1.8. (NEW) (Optional) Set up `direnv`](#18-new-optional-set-up-direnv)
   - [1.9. Set up `Python`](#19-set-up-python)
     - [1.9.1. Install `uv`](#191-install-uv)
     - [1.9.2. (UPD) Set up `Python` in `VS Code`](#192-upd-set-up-python-in-vs-code)
@@ -43,6 +42,7 @@
   - [1.17. (UPD) Set up a coding agent](#117-upd-set-up-a-coding-agent)
   - [1.18. (UPD) Log in to the autochecker](#118-upd-log-in-to-the-autochecker)
 - [2. Optional steps](#2-optional-steps)
+  - [1.8. (NEW) Set up `direnv`](#18-new-set-up-direnv)
   - [2.1. (UPD) Learn to go back after clicking a link](#21-upd-learn-to-go-back-after-clicking-a-link)
   - [2.2. Set up a coding agent](#22-set-up-a-coding-agent)
   - [2.3. Set up the shell prompt](#23-set-up-the-shell-prompt)
@@ -193,10 +193,6 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 1. [Set up `SSH`](../../wiki/ssh.md#set-up-ssh).
 2. [Create a VM using the subscription](../../wiki/vm.md#create-a-vm-using-the-subscription).
-
-### 1.8. (NEW) (Optional) Set up `direnv`
-
-1. [Set up `direnv`](../../wiki/direnv.md#set-up-direnv).
 
 ### 1.9. Set up `Python`
 
@@ -376,12 +372,17 @@ Use the autochecker to check the task completion.
 
 These enhancements can make your life easier:
 
+- [Set up `direnv`](#18-new-set-up-direnv)
 - [Learn to go back after clicking a link](#21-upd-learn-to-go-back-after-clicking-a-link)
 - [Set up a coding agent](#22-set-up-a-coding-agent)
 - [Set up the shell prompt](#23-set-up-the-shell-prompt)
 - [Customize the `Source Control`](#24-customize-the-source-control)
 - [Get familiar with `GitLens`](#25-get-familiar-with-gitlens)
 - [Create a label for tasks](#26-create-a-label-for-tasks)
+
+### 1.8. (NEW) Set up `direnv`
+
+1. [Set up `direnv`](../../wiki/direnv.md#set-up-direnv).
 
 ### 2.1. (UPD) Learn to go back after clicking a link
 
