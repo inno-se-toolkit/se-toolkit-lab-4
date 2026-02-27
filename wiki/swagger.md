@@ -29,9 +29,9 @@ Actions:
 
 **On a deployed VM:**
 
-1. Open in a browser: `http://<your-vm-ip-address>:42002/docs`.
+1. Open in a browser: `http://<your-vm-ip-address>:<api-port>/docs`.
 
-   Replace [`<your-vm-ip-address>`](./vm.md#your-vm-ip-address) with the IP address of your VM.
+   Replace [`<your-vm-ip-address>`](./vm.md#your-vm-ip-address) with the IP address of your VM. See [`<api-port>`](./placeholders.md#api-port).
 
 ## Authorize in `Swagger UI`
 

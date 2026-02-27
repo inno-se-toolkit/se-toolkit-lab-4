@@ -42,8 +42,8 @@ The port the API is accessible on. From your `.env` file, this is `CADDY_HOST_PO
 
 ## `<frontend-port>`
 
-The port `Caddy` serves the front-end on. Choose a free port on the VM (e.g., `3000`).
+The port `Caddy` serves the front-end on. This is the same as `CADDY_HOST_PORT` (default: `42002`), because `Caddy` serves both the front-end and the API on the same port.
 
 ## `<frontend-url>`
 
-The full URL of the front-end: `http://<your-vm-ip-address>:<frontend-port>`.
+The full URL of the front-end: `http://<your-vm-ip-address>:<frontend-port>/`.
