@@ -202,6 +202,9 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 ### 1.9. Set up `Python` in `VS Code`
 
+> [!NOTE]
+> See [What is `Python`](../../wiki/python.md#what-is-python).
+
 #### 1.9.1. Install `uv`
 
 > [!NOTE]
