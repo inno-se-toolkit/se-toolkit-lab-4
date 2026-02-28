@@ -6,7 +6,7 @@
   - [Structure of a wiki file](#structure-of-a-wiki-file)
   - [Key rules](#key-rules)
   - [Standard wiki topics to include](#standard-wiki-topics-to-include)
-- [12.13. Wiki section structure pattern](#1213-wiki-section-structure-pattern)
+- [12.13. `vs-code.md` section structure pattern](#1213-vs-codemd-section-structure-pattern)
 - [17. Checklist before publishing](#17-checklist-before-publishing)
 
 ## 7. Wiki documents (`wiki/`)
@@ -105,9 +105,9 @@ Depending on the lab, consider creating wiki files for:
 
 ----
 
-## 12.13. Wiki section structure pattern
+## 12.13. `vs-code.md` section structure pattern
 
-Each wiki section for a VS Code feature or tool should follow this pattern:
+Each section in `vs-code.md` should follow this pattern (other wiki files use the simpler "What is" + "Docs:" structure described above):
 
 ```markdown
 ## <Feature Name>
