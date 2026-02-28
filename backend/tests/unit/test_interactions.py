@@ -24,3 +24,20 @@ def test_filter_returns_interaction_with_matching_ids() -> None:
     result = _filter_by_item_id(interactions, 1)
     assert len(result) == 1
     assert result[0].id == 1
+
+def test_filter_includes_interaction_with_same_item_id_different_learner_id() -> None:
+    """Test that filtering by item_id includes interactions with matching item_id
+    even when they have different learner_ids."""
+    
+    interactions = [
+        _make_log(1, 1, 1),
+        _make_log(2, 2, 1),  # same item_id, different learner_id
+        _make_log(3, 3, 2),
+    ]
+    
+    result = _filter_by_item_id(interactions, 1)
+    
+    assert len(result) == 2
+    assert result[0].id == 1
+    assert result[1].id == 2
+    assert result[0].learner_id != result[1].learner_id
