@@ -10,7 +10,7 @@
   - [IPv6](#ipv6)
 - [Host](#host)
   - [Hostname](#hostname)
-  - [`localhost`](#localhost)
+    - [`localhost`](#localhost)
   - [Remote host](#remote-host)
 - [Wi-Fi](#wi-fi)
   - [Wi-Fi network](#wi-fi-network)
@@ -74,7 +74,7 @@ It is used to identify the host instead of its [IP address](#ip-address).
 
 Examples: `localhost`, `my-server`, `vm.innopolis.university`.
 
-### `localhost`
+#### `localhost`
 
 `localhost` is a [hostname](#hostname) that refers to the current [host](#host).
 
