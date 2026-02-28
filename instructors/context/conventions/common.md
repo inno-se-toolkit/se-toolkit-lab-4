@@ -35,7 +35,9 @@
 
 ## 4.2. Terminal commands
 
-Write each command for the `VS Code Terminal` in a multi-line code block with the type `terminal`. Always precede with a link to the wiki:
+Write each command for the `VS Code Terminal` in a multi-line code block with the type `terminal`. Always precede with a link to the wiki.
+
+From a task file:
 
 ~~~markdown
 1. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
@@ -45,12 +47,35 @@ Write each command for the `VS Code Terminal` in a multi-line code block with th
    ```
 ~~~
 
+From a wiki file:
+
+~~~markdown
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   <command>
+   ```
+~~~
+
+Exception: `vs-code.md` itself is exempt because the link would be self-referential.
+
 ## 4.3. Command Palette commands
+
+From a task file:
 
 ~~~markdown
 1. [Run using the `Command Palette`](../../../wiki/vs-code.md#run-a-command-using-the-command-palette):
    `<command>`
 ~~~
+
+From a wiki file:
+
+~~~markdown
+1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
+   `<command>`
+~~~
+
+Exception: `vs-code.md` itself is exempt because the link would be self-referential.
 
 ## 4.4. Options vs steps
 
