@@ -6,12 +6,12 @@
 
 <h4>Purpose</h4>
 
-Trace a request from [`Swagger UI`](../../../wiki/swagger.md#swagger-ui) through the [API](../../../wiki/web-development.md#api) to the [database](../../../wiki/database.md#what-is-a-database) using the browser developer tools and [`pgAdmin`](../../../wiki/pgadmin.md#what-is-pgadmin).
+Trace a request from [`Swagger UI`](../../../wiki/swagger.md#what-is-swagger-ui) through the [`API`](../../../wiki/web-development.md#api) to the [database](../../../wiki/database.md#what-is-a-database) using the browser developer tools and [`pgAdmin`](../../../wiki/pgadmin.md#what-is-pgadmin).
 
 <h4>Context</h4>
 
-Before adding new features, you will redeploy the system from Lab 3 and confirm it still works.
-Then you will send requests and observe how data flows through the components: browser → API → database.
+Before adding new features, you will deploy the system to your VM and confirm it works.
+Then you will send requests and observe how data flows through the components: browser → `API` → database.
 
 <h4>Table of contents</h4>
 
@@ -35,31 +35,37 @@ Title: `[Task] Observe System Component Interaction`
 ### 1.2. Deploy the back-end to the VM
 
 1. [Connect to your VM](../../../wiki/vm.md#connect-to-the-vm).
-2. Clone your fork on the VM (or `git pull` if already cloned):
+2. Clone your fork on the VM (skip this step if already cloned):
+
+   ```terminal
+   git clone <your-fork-url> se-toolkit-lab-4
+   ```
+
+   Replace [`<your-fork-url>`](../../../wiki/github.md#your-fork-url).
+
+3. Navigate to the project directory and pull the latest changes:
 
    ```terminal
    cd se-toolkit-lab-4 && git pull
    ```
 
-3. Create the `.env.docker.secret` file (if it does not exist):
+4. Create the `.env.docker.secret` file (if it does not exist):
 
    ```terminal
    cp .env.docker.example .env.docker.secret
    ```
 
-4. Set `CADDY_HOST_ADDRESS` to `0.0.0.0` in `.env.docker.secret`.
+5. Set `CADDY_HOST_ADDRESS` to `0.0.0.0` in `.env.docker.secret`.
 
-> [!IMPORTANT]
-> `0.0.0.0` means the server listens on **all network interfaces**.
-> This makes the service accessible from outside the VM (e.g., from your laptop).
+   **Important:** `0.0.0.0` means the server listens on **all network interfaces**. This makes the service accessible from outside the VM (e.g., from your laptop).
 
-5. Start the services:
+6. Start the services:
 
    ```terminal
    docker compose --env-file .env.docker.secret up --build -d
    ```
 
-6. Check that the containers are running:
+7. Check that the containers are running:
 
    ```terminal
    docker compose --env-file .env.docker.secret ps
@@ -76,9 +82,9 @@ Title: `[Task] Observe System Component Interaction`
 ### 1.4. Open the browser developer tools
 
 > [!NOTE]
-> The browser developer tools let you inspect [HTTP](../../../wiki/http.md) requests and responses that your browser sends and receives.
+> The browser developer tools let you inspect [`HTTP`](../../../wiki/http.md#what-is-http) requests and responses that your browser sends and receives.
 
-1. Open the browser developer tools. Complete the following steps:
+1. Open the browser developer tools using one of the following methods.
 
    Method 1: press `F12`.
 
@@ -104,7 +110,7 @@ Title: `[Task] Observe System Component Interaction`
 5. In the browser developer tools `Network` tab, find the request to `/interactions`.
 6. Click on the request to open its details.
 7. Observe the following:
-   - The `Headers` tab: the [HTTP method](../../../wiki/http.md#http-method) and the request URL.
+   - The `Headers` tab: the [`HTTP` method](../../../wiki/http.md#http-method) and the request URL.
    - The `Payload` tab: the request body you sent.
    - The `Response` tab: the [status code](../../../wiki/http.md#http-response-status-code) and response body.
 
@@ -139,6 +145,6 @@ Title: `[Task] Observe System Component Interaction`
 ## 2. Acceptance criteria
 
 - [ ] Issue has the correct title.
-- [ ] Issue comment includes a screenshot of the browser developer tools showing the HTTP request and response.
+- [ ] Issue comment includes a screenshot of the browser developer tools showing the `HTTP` request and response.
 - [ ] Issue comment includes a screenshot of `pgAdmin` showing the corresponding database row.
 - [ ] Issue is closed.
