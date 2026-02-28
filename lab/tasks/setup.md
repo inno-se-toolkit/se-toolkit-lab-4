@@ -367,6 +367,13 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 ### 1.17. (UPD) Set up a coding agent
 
+A coding agent can help you write code, explain concepts, and debug issues.
+
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+  <img alt="Qwen request" src="../images/tasks/setup/qwen-request.png" style="width:300px">
+  <img alt="Qwen response" src="../images/tasks/setup/qwen-response.png" style="width:300px">
+</div>
+
 - Option 1: [Set up a `Qwen Code`-based agent](../../wiki/coding-agents.md#set-up-qwen-code-based-agent)
 - Option 2: [Choose another coding agent](../../wiki/coding-agents.md#choose-a-coding-agent).
 
@@ -386,15 +393,6 @@ These enhancements can make your life easier:
 - [Create a label for tasks](#28-create-a-label-for-tasks)
 
 ### 2.1. Set up a coding agent
-
-A coding agent can help you write code, explain concepts, and debug issues.
-
-See [Coding agents](../../wiki/coding-agents.md).
-
-<div style="display:flex;flex-wrap:wrap;gap:10px">
-  <img alt="Qwen request" src="../images/tasks/setup/qwen-request.png" style="width:300px">
-  <img alt="Qwen response" src="../images/tasks/setup/qwen-response.png" style="width:300px">
-</div>
 
 ### 2.2. (NEW) Set up `Nix`
 
