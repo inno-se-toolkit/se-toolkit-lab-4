@@ -180,7 +180,7 @@ Typical sequence:
 
 1. Find out which name and email are used in [commits](#commit):
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git config --global --list
@@ -208,7 +208,7 @@ Complete the following steps:
 
 1. Set the name that will be used in [commits](#commit):
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
     ```terminal
     git config --global user.name '<your-name>'
@@ -218,7 +218,7 @@ Complete the following steps:
 
 ### Configure `user.email`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
      ```terminal
      git config --global user.email '<your-email>'

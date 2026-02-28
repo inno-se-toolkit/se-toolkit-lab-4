@@ -236,7 +236,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 1. Copy the [`.env.docker.example`](../../.env.docker.example) file to the `.env.docker.secret` file:
 
-   [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    cp .env.docker.example .env.docker.secret
@@ -261,7 +261,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 1. Start services using the [`docker compose up` command](../../wiki/docker-compose.md#docker-compose-up):
 
-   [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret up --build
@@ -288,7 +288,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 #### 1.13.1. (UPD) List running containers
 
-1. [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret ps
@@ -298,7 +298,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 1. See logs for all services:
 
-   [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret logs
@@ -345,7 +345,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 ### 1.15. (UPD) Stop the services
 
 1. [Check that the current directory is `se-toolkit-lab-4`](../../wiki/shell.md#check-the-current-directory-is-directory-name).
-2. [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+2. [Run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret down

@@ -83,7 +83,7 @@ Servers and VMs usually run multiple users.
 
 ### Get my current user
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
     ```terminal
     whoami

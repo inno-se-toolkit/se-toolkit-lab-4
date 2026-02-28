@@ -74,7 +74,7 @@ Complete these steps:
 ### Install `Python` and dependencies
 
 1. [Open in `VS Code` the project directory](./vs-code.md#open-the-directory).
-2. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+2. [Run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    uv sync
@@ -100,7 +100,7 @@ Complete these steps:
 ### Check that `Python` works
 
 1. [Open a new `VS Code Terminal`](./vs-code.md#open-a-new-vs-code-terminal).
-2. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+2. [Run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    uv run python --version
@@ -141,7 +141,7 @@ Complete these steps:
 
 `pytest` is a testing framework for `Python`. It discovers and runs test functions automatically.
 
-To run all tests, [run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+To run all tests, [run using the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
 ```terminal
 uv run pytest

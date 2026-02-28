@@ -20,7 +20,7 @@ The database is initialized from the file [`backend/app/data/init.sql`](../backe
 
 To reset the database to its initial state:
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret down postgres -v

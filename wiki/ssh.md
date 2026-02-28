@@ -67,7 +67,7 @@ We'll use the `ed25519` algorithm, which is the modern standard for security and
 
 Steps:
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ssh-keygen -t ed25519 -C "se-toolkit-student" -f ~/.ssh/se_toolkit_key
@@ -89,7 +89,7 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 
 1. Verify they were created:
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ls ~/.ssh/se_toolkit_key*
@@ -103,7 +103,7 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 
 3. View the content of the public key file:
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    cat ~/.ssh/se_toolkit_key.pub
@@ -121,7 +121,7 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 
 ### Start the `ssh-agent`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    eval "$(ssh-agent -s)"
@@ -132,7 +132,7 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 
 1. [Open a new `VS Code Terminal`](./vs-code.md#open-a-new-vs-code-terminal).
 2. [Check the current shell in the `VS Code Terminal`](./vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
-3. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+3. [Run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ssh-add -l
@@ -182,7 +182,7 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 
 You can connect using the alias that you [added to your `SSH` config](#add-the-host-to-ssh).
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ssh se-toolkit-vm
@@ -224,7 +224,7 @@ Password-based authentication asks you to type the remote user's password.
 > [!NOTE]
 > Password authentication may be disabled on the VM. Use [key-based authentication](#login-without-password) instead.
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ssh -o PasswordAuthentication=yes root@<your-vm-ip-address>
@@ -242,7 +242,7 @@ Password-based authentication asks you to type the remote user's password.
 
 ### `Bad owner or permissions`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    chmod 700 ~/.ssh
@@ -256,7 +256,7 @@ Password-based authentication asks you to type the remote user's password.
 2. Verify the VM is running.
 3. Try to ping the VM:
 
-   Run using the `VS Code Terminal`:
+   Run in the `VS Code Terminal`:
 
    ```terminal
    ping <your-vm-ip-address>

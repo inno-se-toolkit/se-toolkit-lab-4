@@ -68,19 +68,19 @@ Title: `[Task] Add Front-end`
 > The dev server proxies API requests (e.g., `/items`) to the `VITE_API_TARGET` URL.
 > The API token is entered at runtime through the front-end UI — it is not stored in the `.env` file.
 
-4. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run in the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    npm install
    ```
 
-5. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+2. [Run in the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    npm run dev
    ```
 
-6. Open the URL shown in the terminal output in a browser.
+3. Open the URL shown in the terminal output in a browser.
 
    The output should be similar to this:
 
@@ -88,7 +88,7 @@ Title: `[Task] Add Front-end`
    Local: http://localhost:5173/
    ```
 
-7. Verify that the front-end loads and displays data from the API.
+4. Verify that the front-end loads and displays data from the API.
 
 #### 1.3.2. Edit a source file and observe hot reload
 

@@ -52,7 +52,7 @@ See [Get the IP address of the VM](#get-the-ip-address-of-the-vm).
 
 1. Disable `VPN`.
 2. Connect your computer to the `Wi-Fi` network `UniversityStudent`.
-3. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+3. [Run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ping <your-vm-ip-address>
