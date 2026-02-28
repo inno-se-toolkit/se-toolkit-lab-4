@@ -145,12 +145,6 @@ Complete these steps:
 
 `pytest` is a testing framework for `Python`. It discovers and runs test functions automatically.
 
-To run all tests, [run using the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
-
-```terminal
-uv run pytest
-```
-
 Docs:
 
 - [`pytest` documentation](https://docs.pytest.org/)
