@@ -62,7 +62,7 @@ A host is any [machine](#machine) that:
 
 Hosts can send and receive data over the [network](#what-is-a-network).
 
-Examples: computers, servers, [virtual machines](./vm.md).
+Examples: computers, servers, [virtual machines](./vm.md#what-is-a-vm).
 
 ### Hostname
 
