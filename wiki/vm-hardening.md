@@ -60,13 +60,15 @@ Docs:
    chmod 600 /home/<username>/.ssh/authorized_keys
    ```
 
-5. Verify you can `SSH` as the new user (from your laptop):
+5. Verify you can `SSH` as the new user. Open a new terminal on your laptop:
 
    [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    ssh <username>@<vm-ip>
    ```
+
+6. Disconnect from the root session and use the non-root user for all remaining steps.
 
 ### Configure `ufw` firewall
 
@@ -197,7 +199,7 @@ Docs:
 
 The `autochecker` user is a restricted user for the instructor to verify VM hardening.
 
-1. Create the user (no sudo):
+1. Create the user without `sudo` privileges:
 
    [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -238,8 +240,31 @@ The `autochecker` user is a restricted user for the instructor to verify VM hard
 
 After changing the [`SSH`](./ssh.md#what-is-ssh) config, restart the `SSH` service.
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. Validate the config:
+
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   sudo sshd -t
+   ```
+
+   If the command prints no output, the config is valid. If it prints errors, fix them in `/etc/ssh/sshd_config` before continuing.
+
+2. Restart the service:
+
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    sudo systemctl restart sshd
    ```
+
+3. Verify you can still connect. Open a **new** terminal on your laptop and log in:
+
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   ssh <username>@<vm-ip>
+   ```
+
+> [!IMPORTANT]
+> Keep your current `SSH` session open until you confirm the new connection works. If the new connection fails, use the existing session to fix the config.
