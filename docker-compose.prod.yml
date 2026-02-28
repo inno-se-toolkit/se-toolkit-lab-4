@@ -1,0 +1,69 @@
+services:
+  app:
+    image: ${DOCKERHUB_USERNAME}/se-toolkit-lab-4-app:${IMAGE_TAG}
+    restart: unless-stopped
+    ports:
+      - ${APP_HOST_ADDRESS}:${APP_HOST_PORT}:${APP_CONTAINER_PORT}
+    expose:
+      - ${APP_CONTAINER_PORT}
+    environment:
+      - NAME=${APP_NAME:-'Learning Management Service'}
+      - DEBUG=${APP_DEBUG:-false}
+      - ADDRESS=${APP_CONTAINER_ADDRESS:?'APP_CONTAINER_ADDRESS is a required environment variable'}
+      - PORT=${APP_CONTAINER_PORT:?'APP_CONTAINER_PORT is a required environment variable'}
+      - API_TOKEN=${API_TOKEN:?'API_TOKEN is a required environment variable'}
+      - ENABLE_INTERACTIONS=${ENABLE_INTERACTIONS:-false}
+      - ENABLE_LEARNERS=${ENABLE_LEARNERS:-false}
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=${POSTGRES_DB:-lab-4}
+      - DB_USER=${POSTGRES_USER:-postgres}
+      - DB_PASSWORD=${POSTGRES_PASSWORD:-postgres}
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    image: harbor.pg.innopolis.university/docker-hub-cache/postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB:-lab-4}
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres}
+    ports:
+      - ${POSTGRES_HOST_ADDRESS:-127.0.0.1}:${POSTGRES_HOST_PORT:-5432}:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/app/data/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-lab-4}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: harbor.pg.innopolis.university/docker-hub-cache/dpage/pgadmin4:latest
+    restart: unless-stopped
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_EMAIL:-admin@example.com}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_PASSWORD:-admin}
+    ports:
+      - ${PGADMIN_HOST_ADDRESS:-127.0.0.1}:${PGADMIN_HOST_PORT:-5050}:80
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  caddy:
+    image: ${DOCKERHUB_USERNAME}/se-toolkit-lab-4-frontend:${IMAGE_TAG}
+    depends_on:
+      - app
+    environment:
+      - CADDY_CONTAINER_PORT=${CADDY_CONTAINER_PORT:?'CADDY_CONTAINER_PORT is a required environment variable'}
+      - APP_CONTAINER_PORT=${APP_CONTAINER_PORT:?'APP_CONTAINER_PORT is a required environment variable'}
+    ports:
+      - ${CADDY_HOST_ADDRESS}:${CADDY_HOST_PORT}:${CADDY_CONTAINER_PORT}
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+
+volumes:
+  postgres_data:
