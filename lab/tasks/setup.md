@@ -32,13 +32,10 @@
     - [1.12.1. (UPD) Open a new `VS Code Terminal`](#1121-upd-open-a-new-vs-code-terminal)
     - [1.12.2. (UPD) List running containers](#1122-upd-list-running-containers)
     - [1.12.3. (UPD) See logs of the running services](#1123-upd-see-logs-of-the-running-services)
-  - [1.13. (UPD) Set up the services](#113-upd-set-up-the-services)
-    - [1.13.1. (UPD) Open `Swagger UI`](#1131-upd-open-swagger-ui)
-    - [1.13.2. (UPD) Set up `pgAdmin`](#1132-upd-set-up-pgadmin)
-  - [1.14. (UPD) Stop the services](#114-upd-stop-the-services)
-  - [1.15. (UPD) Add SSH key for the autochecker](#115-upd-add-ssh-key-for-the-autochecker)
-  - [1.16. (UPD) Set up a coding agent](#116-upd-set-up-a-coding-agent)
-  - [1.17. (UPD) Log in to the autochecker](#117-upd-log-in-to-the-autochecker)
+  - [1.13. (UPD) Set up `Swagger UI`](#113-upd-set-up-swagger-ui)
+  - [1.14. Set up `pgAdmin`](#114-set-up-pgadmin)
+    - [1.14.1. (UPD) Connect `pgAdmin` to the database](#1141-upd-connect-pgadmin-to-the-database)
+    - [1.14.2. (UPD) Inspect the tables](#1142-upd-inspect-the-tables)
 - [2. Optional steps](#2-optional-steps)
   - [2.1. Set up a coding agent](#21-set-up-a-coding-agent)
   - [2.2. (NEW) Set up `Nix`](#22-new-set-up-nix)
@@ -305,37 +302,38 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
    docker compose --env-file .env.docker.secret logs postgres
    ```
 
-### 1.13. (UPD) Set up the services
-
-#### 1.13.1. (UPD) Open `Swagger UI`
+### 1.13. (UPD) Set up `Swagger UI`
 
 1. Open in a browser: <http://127.0.0.1:42001/docs>.
 
    You should see the [`Swagger UI`](../../wiki/swagger.md#swagger-ui) page with the [API](../../wiki/web-development.md#api) documentation.
 
-#### 1.13.2. (UPD) Set up `pgAdmin`
+   <img alt="Swagger UI" src="../images/tasks/setup/swagger-ui.png" style="width:400px">
+
+### 1.14. Set up `pgAdmin`
+
+#### 1.14.1. (UPD) Connect `pgAdmin` to the database
 
 > [!NOTE]
 > [`pgAdmin`](../../wiki/pgadmin.md#what-is-pgadmin) takes 2-3 minutes to start after you have started the services.
 
 1. [Open `pgAdmin`](../../wiki/pgadmin.md#open-pgadmin).
 2. [Add a server in `pgAdmin`](../../wiki/pgadmin.md#add-a-server-in-pgadmin).
-3. [Browse the `interacts` table](../../wiki/pgadmin.md#browse-tables)
+
+#### 1.14.2. (UPD) Inspect the tables
+
+1. [Browse the `interacts` table](../../wiki/pgadmin.md#browse-tables)
 
    You should see rows of data stored in the database.
 
    <img alt="Interaction logs" src="../images/tasks/setup/database-interaction-logs.png" style="width:400px">
 
-   These are records of what `learners` did with `items` (courses, labs, tasks, steps).
-   They `attempt`ed, `complete`d or just `view`ed them.
+   These are records of what `learner`s did with `item`s (courses, labs, tasks, steps).
+   `learner`s `attempt`ed, `complete`d or just `view`ed `item`s.
 
-4. Verify that the following tables exist and contain data:
-   - `items`
-   - `learners`
-   - `interacts`
-
-> [!TIP]
-> To view the data in a table, right-click the table and select `View/Edit Data` -> `All Rows`.
+2. Verify that the following tables also exist:
+   - `item`
+   - `learner`
 
 ### 1.14. (UPD) Stop the services
 
