@@ -36,3 +36,17 @@ def test_filter_excludes_interaction_with_different_learner_id():
     filtered = [i for i in interactions if i["item_id"] == 1]
     
     assert len(filtered) == 2
+def test_filter_by_nonexistent_item_id_returns_empty_list():
+    """Test filtering by item_id that doesn't exist returns empty list"""
+    interactions = [
+        {"id": 1, "item_id": 1, "learner_id": 1},
+        {"id": 2, "item_id": 2, "learner_id": 1},
+    ]
+    filtered = [i for i in interactions if i["item_id"] == 999]
+    assert len(filtered) == 0
+
+def test_filter_with_empty_interactions_list():
+    """Test filtering with empty interactions list returns empty list"""
+    interactions = []
+    filtered = [i for i in interactions if i.get("item_id") == 1]
+    assert len(filtered) == 0
