@@ -36,6 +36,11 @@
   - [1.14. Set up `pgAdmin`](#114-set-up-pgadmin)
     - [1.14.1. (UPD) Connect `pgAdmin` to the database](#1141-upd-connect-pgadmin-to-the-database)
     - [1.14.2. (UPD) Inspect the tables](#1142-upd-inspect-the-tables)
+  - [1.15. (UPD) Stop the services](#115-upd-stop-the-services)
+  - [1.16. Set up the autochecker](#116-set-up-the-autochecker)
+    - [1.16.1. (UPD) Log in to the autochecker](#1161-upd-log-in-to-the-autochecker)
+    - [1.16.2. (UPD) Prepare your VM for checking](#1162-upd-prepare-your-vm-for-checking)
+  - [1.17. (UPD) Set up a coding agent](#117-upd-set-up-a-coding-agent)
 - [2. Optional steps](#2-optional-steps)
   - [2.1. Set up a coding agent](#21-set-up-a-coding-agent)
   - [2.2. (NEW) Set up `Nix`](#22-new-set-up-nix)
@@ -344,22 +349,26 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
    docker compose --env-file .env.docker.secret down
    ```
 
-### 1.15. (UPD) Add SSH key for the autochecker
+### 1.16. Set up the autochecker
+
+> [!NOTE]
+> The autochecker is a bot that checks your repository and VM.
+
+#### 1.16.1. (UPD) Log in to the autochecker
+
+1. Open in Telegram: <https://t.me/auchebot>
+2. Log in.
+
+#### 1.16.2. (UPD) Prepare your VM for checking
 
 1. [Connect to your VM](../../wiki/vm.md#connect-to-the-vm).
 2. [Create the `autochecker` user](../../wiki/vm-autochecker.md#create-the-autochecker-user).
-3. [Add the instructor's SSH public key to the `autochecker` user](../../wiki/vm-autochecker.md#add-an-ssh-public-key-to-the-autochecker-user):
+3. [Add the instructor's `SSH` public key to the `autochecker` user](../../wiki/vm-autochecker.md#add-an-ssh-public-key-to-the-autochecker-user):
 
-### 1.16. (UPD) Set up a coding agent
+### 1.17. (UPD) Set up a coding agent
 
-Follow the [`Coding agents`](../../wiki/coding-agents.md) guide to set up a coding agent on your machine.
-
-### 1.17. (UPD) Log in to the autochecker
-
-1. Open the autochecker in Telegram: <https://t.me/auchebot>
-2. Log in.
-
-Use the autochecker to check the task completion.
+- Option 1: [Set up a `Qwen Code`-based agent](../../wiki/coding-agents.md#set-up-qwen-code-based-agent)
+- Option 2: [Choose another coding agent](../../wiki/coding-agents.md#choose-a-coding-agent).
 
 ---
 
