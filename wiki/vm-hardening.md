@@ -14,7 +14,7 @@
 
 ## What is VM hardening
 
-VM hardening is the process of securing a virtual machine by reducing its attack surface.
+VM hardening is the process of securing a [virtual machine](./vm.md#what-is-a-vm) by reducing its attack surface.
 
 Docs:
 
@@ -74,7 +74,10 @@ Docs:
 
 `ufw` (`Uncomplicated Firewall`) is a simple firewall for [`Linux`](./linux.md#what-is-linux).
 
-1. To allow [`SSH`](./ssh.md#what-is-ssh),
+1. Look up the value of `CADDY_HOST_PORT` in the `.env.docker.secret` file.
+   This is your [`<app-port>`](./placeholders.md#app-port).
+
+2. To allow [`SSH`](./ssh.md#what-is-ssh),
 
    [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
@@ -82,15 +85,15 @@ Docs:
    sudo ufw allow 22
    ```
 
-2. To allow the application port,
+3. To allow the application port,
 
    [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
-   sudo ufw allow 42002
+   sudo ufw allow <api-port>
    ```
 
-3. To enable the firewall,
+4. To enable the firewall,
 
    [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
@@ -98,7 +101,7 @@ Docs:
    sudo ufw enable
    ```
 
-4. To check the status,
+5. To check the status,
 
    [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
