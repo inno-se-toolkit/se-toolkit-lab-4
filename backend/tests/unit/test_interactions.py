@@ -24,3 +24,10 @@ def test_filter_returns_interaction_with_matching_ids() -> None:
     result = _filter_by_item_id(interactions, 1)
     assert len(result) == 1
     assert result[0].id == 1
+
+
+def test_filter_excludes_interaction_with_different_learner_id() -> None:
+    interactions = [_make_log(1, 2, 1)]
+    result = _filter_by_item_id(interactions, 1)
+    assert result == []
+    

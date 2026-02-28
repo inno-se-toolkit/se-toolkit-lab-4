@@ -10,7 +10,7 @@ import pytest
 def api_base_url() -> str:
     url = os.environ.get("API_BASE_URL", "")
     if not url:
-        pytest.skip("API_BASE_URL environment variable is not set")
+        pytest.skip("API_BASE_URL environment variable is not set (e.g., http://localhost:8000)")
     return url.rstrip("/")
 
 
@@ -28,3 +28,5 @@ def client(api_base_url: str, api_token: str) -> httpx.Client:
         base_url=api_base_url,
         headers={"Authorization": f"Bearer {api_token}"},
     )
+
+
