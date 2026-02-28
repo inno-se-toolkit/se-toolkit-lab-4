@@ -3,7 +3,7 @@
 <h2>Table of contents</h2>
 
 - [API key authentication](#api-key-authentication)
-- [VM security](#vm-security)
+- [VM hardening](#vm-hardening)
 
 ## API key authentication
 
@@ -19,6 +19,6 @@ How it works:
 > This is a simple shared key mechanism. It has no user accounts, roles, or permissions.
 > It is sufficient for protecting a development API but not for production systems with many users.
 
-## VM security
+## VM hardening
 
-See [`VM security`](./security/vm-security.md).
+See [`VM hardening`](./vm-hardening.md).

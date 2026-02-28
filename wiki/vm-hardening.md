@@ -1,9 +1,9 @@
-# VM security
+# VM hardening
 
 <h2>Table of contents</h2>
 
-- [What is VM security](#what-is-vm-security)
-- [VM hardening](#vm-hardening)
+- [What is VM hardening](#what-is-vm-hardening)
+- [Hardening steps](#hardening-steps)
   - [Create a non-root user](#create-a-non-root-user)
   - [Configure `ufw` firewall](#configure-ufw-firewall)
   - [Configure `fail2ban`](#configure-fail2ban)
@@ -12,19 +12,17 @@
   - [Create the `autochecker` user](#create-the-autochecker-user)
   - [Restart `sshd`](#restart-sshd)
 
-## What is VM security
+## What is VM hardening
 
-VM security is the set of practices used to protect a virtual machine from unauthorized access and attacks.
+VM hardening is the process of securing a virtual machine by reducing its attack surface.
 
-## VM hardening
-
-VM hardening is the process of securing a server by reducing its attack surface.
+## Hardening steps
 
 ### Create a non-root user
 
 1. Connect to the VM as root:
 
-   [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    ssh root@<vm-ip>
@@ -32,7 +30,7 @@ VM hardening is the process of securing a server by reducing its attack surface.
 
 2. Create a new user:
 
-   [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    adduser <username>
@@ -40,15 +38,15 @@ VM hardening is the process of securing a server by reducing its attack surface.
 
 3. Add the user to the `sudo` group:
 
-   [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    usermod -aG sudo <username>
    ```
 
-4. Copy your [`SSH`](../ssh.md) key to the new user:
+4. Copy your [`SSH`](./ssh.md) key to the new user:
 
-   [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    mkdir -p /home/<username>/.ssh
@@ -60,7 +58,7 @@ VM hardening is the process of securing a server by reducing its attack surface.
 
 5. Verify you can `SSH` as the new user (from your laptop):
 
-   [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    ssh <username>@<vm-ip>
@@ -68,11 +66,11 @@ VM hardening is the process of securing a server by reducing its attack surface.
 
 ### Configure `ufw` firewall
 
-`ufw` (`Uncomplicated Firewall`) is a simple firewall for [`Linux`](../linux.md).
+`ufw` (`Uncomplicated Firewall`) is a simple firewall for [`Linux`](./linux.md).
 
-1. Allow [`SSH`](../ssh.md):
+1. Allow [`SSH`](./ssh.md):
 
-   [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    sudo ufw allow 22
@@ -80,7 +78,7 @@ VM hardening is the process of securing a server by reducing its attack surface.
 
 2. Allow the application port:
 
-   [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    sudo ufw allow 42002
@@ -88,7 +86,7 @@ VM hardening is the process of securing a server by reducing its attack surface.
 
 3. Enable the firewall:
 
-   [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    sudo ufw enable
@@ -96,7 +94,7 @@ VM hardening is the process of securing a server by reducing its attack surface.
 
 4. Check the status:
 
-   [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    sudo ufw status
@@ -111,7 +109,7 @@ VM hardening is the process of securing a server by reducing its attack surface.
 
 1. Update the package list:
 
-   [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    sudo apt update
@@ -119,7 +117,7 @@ VM hardening is the process of securing a server by reducing its attack surface.
 
 2. Install `fail2ban`:
 
-   [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    sudo apt install -y fail2ban
@@ -127,7 +125,7 @@ VM hardening is the process of securing a server by reducing its attack surface.
 
 3. Start and enable the service:
 
-   [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    sudo systemctl enable fail2ban
@@ -136,7 +134,7 @@ VM hardening is the process of securing a server by reducing its attack surface.
 
 4. Check the status:
 
-   [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    sudo systemctl status fail2ban
@@ -144,9 +142,9 @@ VM hardening is the process of securing a server by reducing its attack surface.
 
 ### Disable root `SSH` login
 
-1. Open the [`SSH`](../ssh.md) config:
+1. Open the [`SSH`](./ssh.md) config:
 
-   [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    sudo nano /etc/ssh/sshd_config
@@ -165,9 +163,9 @@ VM hardening is the process of securing a server by reducing its attack surface.
 
 ### Disable password authentication
 
-1. Open the [`SSH`](../ssh.md) config:
+1. Open the [`SSH`](./ssh.md) config:
 
-   [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    sudo nano /etc/ssh/sshd_config
@@ -190,7 +188,7 @@ The `autochecker` user is a restricted user for the instructor to verify VM hard
 
 1. Create the user (no sudo):
 
-   [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    sudo adduser --disabled-password --gecos "" autochecker
@@ -198,16 +196,16 @@ The `autochecker` user is a restricted user for the instructor to verify VM hard
 
 2. Create the `.ssh` directory:
 
-   [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    sudo mkdir -p /home/autochecker/.ssh
    sudo chmod 700 /home/autochecker/.ssh
    ```
 
-3. Add the instructor's [`SSH`](../ssh.md) public key:
+3. Add the instructor's [`SSH`](./ssh.md) public key:
 
-   [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    echo "<instructor-public-key>" | sudo tee /home/autochecker/.ssh/authorized_keys
@@ -215,7 +213,7 @@ The `autochecker` user is a restricted user for the instructor to verify VM hard
 
 4. Set permissions:
 
-   [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    sudo chown -R autochecker:autochecker /home/autochecker/.ssh
@@ -227,9 +225,9 @@ The `autochecker` user is a restricted user for the instructor to verify VM hard
 
 ### Restart `sshd`
 
-After changing the [`SSH`](../ssh.md) config, restart the `SSH` service.
+After changing the [`SSH`](./ssh.md) config, restart the `SSH` service.
 
-1. [Run using the `VS Code Terminal`](../vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    sudo systemctl restart sshd
