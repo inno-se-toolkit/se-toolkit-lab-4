@@ -14,12 +14,6 @@
   - [Pin `nixpkgs`](#pin-nixpkgs)
   - [Install `nil`](#install-nil)
   - [Install `nixfmt`](#install-nixfmt)
-- [Flake](#flake)
-  - [`flake.lock`](#flakelock)
-  - [Common flake commands](#common-flake-commands)
-    - [`nix flake update`](#nix-flake-update)
-- [Flake registry](#flake-registry)
-  - [`nix registry pin`](#nix-registry-pin)
 - [Troubleshooting](#troubleshooting)
   - [Enable `nix-daemon`](#enable-nix-daemon)
   - [Restart `nix-daemon`](#restart-nix-daemon)
@@ -118,7 +112,7 @@ Complete these steps:
 
 ### Pin `nixpkgs`
 
-1. To get the [commit hash](./git.md#commit-hash) of the [`nixpkgs` repository](#nixpkgs-repository) specified in the [`flake.lock`](#flakelock),
+1. To get the [commit hash](./git.md#commit-hash) of the [`nixpkgs` repository](#nixpkgs-repository) specified in the [`flake.lock`](./nix-flake.md#flakelock),
 
    [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
@@ -132,7 +126,7 @@ Complete these steps:
    26eaeac4e409d7b5a6bf6f90a2a2dc223c78d915
    ```
 
-2. To pin `nixpkgs` in your [flake registry](#flake-registry) to the same commit hash,
+2. To pin `nixpkgs` in your [flake registry](./nix-flake.md#flake-registry) to the same commit hash,
 
    [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
@@ -191,37 +185,6 @@ Complete these steps:
    ```terminal
    nixfmt 1.2.0
    ```
-
-## Flake
-
-Docs:
-
-- [Flakes on NixOS wiki](https://wiki.nixos.org/wiki/Flakes)
-- [Flakes on nix.dev](https://nix.dev/concepts/flakes.html)
-
-### `flake.lock`
-
-Docs:
-
-- [Lock files](https://nix.dev/manual/nix/2.33/command-ref/new-cli/nix3-flake.html#lock-files)
-
-Example: [`flake.lock`](../flake.lock).
-
-### Common flake commands
-
-#### `nix flake update`
-
-Update the revision of inputs used in this project using the [`nix flake update`](https://nix.dev/manual/nix/2.33/command-ref/new-cli/nix3-flake-update.html) command.
-
-## Flake registry
-
-Docs:
-
-- [`nix registry`](https://nix.dev/manual/nix/2.33/command-ref/new-cli/nix3-registry.html)
-
-### `nix registry pin`
-
-<https://nix.dev/manual/nix/2.33/command-ref/new-cli/nix3-registry-pin.html>
 
 ## Troubleshooting
 

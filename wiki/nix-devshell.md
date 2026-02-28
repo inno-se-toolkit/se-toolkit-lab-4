@@ -9,7 +9,7 @@
 
 ## What is a devshell
 
-A devshell (`Nix` devshell) is a [development environment](./environments.md#development-environment) defined in a [`Nix` flake](./nix.md#flake).
+A devshell (`Nix` devshell) is a [development environment](./environments.md#development-environment) defined in a [`Nix` flake](./nix-flake.md#what-is-a-flake).
 It provides a set of [tools](./package-manager.md#tool) and [environment variables](./environments.md#environment-variables) that are available only inside the [shell](./shell.md#what-is-shell) session.
 
 In this project, the devshell is defined in [`flake.nix`](../flake.nix) and provides tools grouped by purpose (e.g., frontend tools, backend tools, lint scripts).
