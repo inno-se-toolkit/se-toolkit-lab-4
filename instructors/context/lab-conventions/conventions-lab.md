@@ -1,80 +1,99 @@
 # Lab creation conventions
 
 - [1. Repository structure](#1-repository-structure)
-- [2. `README.md`](#2-readmemd)
-- [5. `lab/setup.md`](#5-labsetupmd)
-- [6. `lab/tasks/git-workflow.md`](#6-labtasksgit-workflowmd)
+- [2. `README.md` — Main entry point](#2-readmemd--main-entry-point)
+  - [Key rules for `README.md`](#key-rules-for-readmemd)
+- [5. `lab/setup.md` — Lab setup](#5-labsetupmd--lab-setup)
+  - [Key rules for setup](#key-rules-for-setup)
+- [6. `wiki/git-workflow.md` — Reusable Git workflow](#6-wikigit-workflowmd--reusable-git-workflow)
+  - [Key rules for git workflow](#key-rules-for-git-workflow)
 - [8. GitHub templates](#8-github-templates)
-  - [`01-task.yml` — Lab Task](#01-taskyml--lab-task)
-  - [`02-bug-report.yml` — Bug Report](#02-bug-reportyml--bug-report)
-  - [`config.yml`](#configyml)
-  - [`pull_request_template.md`](#pull_request_templatemd)
-- [9. `.vscode/settings.json`](#9-vscodesettingsjson)
-- [10. `.vscode/extensions.json`](#10-vscodeextensionsjson)
-- [11. Task runner config](#11-task-runner-config)
+  - [Issue templates](#issue-templates)
+    - [`01-task.yml` — Lab Task](#01-taskyml--lab-task)
+    - [`02-bug-report.yml` — Bug Report](#02-bug-reportyml--bug-report)
+    - [`config.yml`](#configyml)
+  - [PR template (`pull_request_template.md`)](#pr-template-pull_request_templatemd)
+- [9. VS Code settings (`.vscode/settings.json`)](#9-vs-code-settings-vscodesettingsjson)
+- [10. VS Code recommended extensions (`.vscode/extensions.json`)](#10-vs-code-recommended-extensions-vscodeextensionsjson)
+  - [Rules for extensions](#rules-for-extensions)
+- [11. Task runner and package manager config](#11-task-runner-and-package-manager-config)
+  - [Rules for task runner](#rules-for-task-runner)
 - [13. Lab story and narrative](#13-lab-story-and-narrative)
 - [14. Docker and deployment pattern](#14-docker-and-deployment-pattern)
-- [16. `CONTRIBUTORS.md`](#16-contributorsmd)
+- [16. `CONTRIBUTORS.md` pattern](#16-contributorsmd-pattern)
 - [17. Checklist before publishing](#17-checklist-before-publishing)
 - [18. Security integration pattern](#18-security-integration-pattern)
 - [19. Database naming conventions](#19-database-naming-conventions)
-
-Full source: `instructors/context/lab-conventions/lab-conventions.md` §1, §2, §5, §6, §8–11, §13–14, §16–19
 
 Use this file when creating or restructuring a lab repository.
 
 ## 1. Repository structure
 
+Create the following directory and file layout. Items marked *(conditional)* are included only when the lab needs them.
+
 ```text
 <repo-root>/
-├── README.md
-├── CONTRIBUTING.md
-├── CONTRIBUTORS.md
+├── README.md                          # Main entry point
+├── CONTRIBUTING.md                    # Docs style guide (reuse as-is)
+├── CONTRIBUTORS.md                    # List of student contributors
 ├── lab/
-│   ├── setup.md
+│   ├── setup.md                       # Lab setup instructions
 │   ├── tasks/
-│   │   ├── git-workflow.md
+│   │   ├── git-workflow.md            # Reusable Git workflow procedure
 │   │   ├── required/
 │   │   │   ├── task-1.md
+│   │   │   ├── task-2.md
 │   │   │   └── ...
 │   │   └── optional/
+│   │       ├── task-1.md
 │   │       └── ...
-│   ├── wiki/
+│   ├── wiki/                      # Reference docs for tools & concepts
 │   │   ├── vs-code.md
 │   │   ├── git.md
-│   │   └── ...
-│   ├── design/                    # Internal (not student-facing)
+│   │   ├── git-vscode.md
+│   │   ├── github.md
+│   │   ├── shell.md
+│   │   └── ...                        # One file per tool/concept
+│   ├── design/                        # Internal design notes (not student-facing)
 │   │   ├── lab-plan.md
 │   │   ├── feedback.md
+│   │   ├── formatting.md
 │   │   └── todo.md
-│   └── images/
+│   └── images/                        # Screenshots and diagrams
 │       ├── wiki/
+│       │   ├── vs-code/
+│       │   ├── gitlens/
+│       │   └── ...
 │       └── git-workflow.drawio.svg
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
-│   │   ├── 01-task.yml
-│   │   ├── 02-bug-report.yml
-│   │   └── config.yml
-│   ├── pull_request_template.md
-│   └── workflows/                 # (conditional)
+│   │   ├── 01-task.yml                # Lab Task issue form
+│   │   ├── 02-bug-report.yml          # Bug Report issue form
+│   │   └── config.yml                 # blank_issues_enabled: false
+│   ├── pull_request_template.md       # PR template with checklist
+│   └── workflows/                     # GitHub Actions (optional)
 ├── .vscode/
-│   ├── settings.json
-│   └── extensions.json
-├── src/                           # (conditional)
-├── tests/                         # (conditional)
+│   ├── settings.json                  # Editor, formatter, ToC settings
+│   └── extensions.json                # Recommended VS Code extensions
+├── src/                               # Application source code (conditional)
+├── tests/                             # Test suite (conditional)
 ├── .gitignore
-├── .env.example                   # (conditional)
-├── .env.docker.example            # (conditional)
-├── .dockerignore                  # (conditional)
-├── Dockerfile                     # (conditional)
-├── docker-compose.yml             # (conditional)
-└── <package-manager-config>
+├── .env.example                       # Template for local env vars (conditional)
+├── .env.docker.example                # Template for Docker env vars (conditional)
+├── .dockerignore                      # (conditional — only if using Docker)
+├── Dockerfile                         # (conditional — only if using Docker)
+├── docker-compose.yml                 # (conditional — only if using Docker)
+└── <package-manager-config>           # e.g., pyproject.toml, package.json
 ```
 
-## 2. `README.md`
+----
+
+## 2. `README.md` — Main entry point
+
+Structure the `README.md` exactly as follows:
 
 ```markdown
-# Lab <N> — <Short title>
+# Lab <N> — <Short title summarizing the lab>
 
 <h2>Table of contents</h2>
 
@@ -87,6 +106,9 @@ Use this file when creating or restructuring a lab repository.
   - [Optional](#optional)
 
 ## Lab story
+
+<!-- A narrative scenario that gives students a realistic context.
+     Example: "You were hired by a company that develops a novel e-learning system." -->
 
 ## Learning advice
 
@@ -109,10 +131,14 @@ Evaluate LLM answers critically, and verify them against credible sources such a
 By the end of this lab, you should be able to:
 
 - <Outcome 1>
+- <Outcome 2>
+- ...
 
 In simple words, you should be able to say:
 >
 > 1. <Simple statement 1>
+> 2. <Simple statement 2>
+> ...
 
 ## Tasks
 
@@ -123,20 +149,29 @@ In simple words, you should be able to say:
 ### Required
 
 1. [<Task 1 title>](./lab/tasks/required/task-1.md)
+2. [<Task 2 title>](./lab/tasks/required/task-2.md)
+...
 
 ### Optional
 
 1. [<Optional task 1 title>](./lab/tasks/optional/task-1.md)
+...
 ```
 
-Key rules:
+### Key rules for `README.md`
 
-- `<h2>Table of contents</h2>` uses an HTML tag so it doesn't appear in its own ToC.
+- The `<h2>Table of contents</h2>` uses an HTML tag so it doesn't appear in its own ToC.
+- The ToC is generated by the `Markdown All in One` VS Code extension.
 - Learning outcomes are a bullet list of concrete, observable skills.
 - The "In simple words" block restates outcomes as first-person statements.
-- Required tasks build sequentially; optional tasks are independent.
+- Required tasks build on each other sequentially.
+- Optional tasks are independent extensions.
 
-## 5. `lab/setup.md`
+----
+
+## 5. `lab/setup.md` — Lab setup
+
+Structure:
 
 ```markdown
 # Lab setup
@@ -144,7 +179,10 @@ Key rules:
 - [Steps](#steps)
   - [1. Find a partner](#1-find-a-partner)
   - [2. <Setup step>](#2-setup-step)
+  - ...
 - [Optional steps](#optional-steps)
+  - [1. <Optional setup>](#1-optional-setup)
+  - ...
 
 ## Steps
 
@@ -159,7 +197,6 @@ Key rules:
 > You and your partner work together when reviewing each other's work.
 
 ### 2. <Setup step>
-
 ...
 
 ----
@@ -167,18 +204,30 @@ Key rules:
 ## Optional steps
 
 These enhancements can make your life easier:
+
+- [1. <Enhancement>](#1-enhancement)
+- ...
 ```
 
-Key rules:
+### Key rules for setup
 
-- Step 1 is always "Find a partner" (students review each other's PRs).
+- Setup is the prerequisite for all tasks.
 - Includes: forking the repo, cloning, installing tools, configuring the environment.
-- Separate required steps from optional enhancements with `----`.
+- Separate required steps from optional enhancements with `---`.
+- Partner setup is always step 1 (students review each other's PRs).
 - Each step links to wiki docs for detailed instructions.
 
-## 6. `lab/tasks/git-workflow.md`
+----
 
-Outline (every section links to the relevant wiki doc):
+## 6. `wiki/git-workflow.md` — Reusable Git workflow
+
+This file describes the workflow students follow for every task that produces code changes:
+
+```text
+Issue → Branch → Commits → PR → Review → Merge
+```
+
+Structure:
 
 ```markdown
 # `Git workflow` for tasks
@@ -200,15 +249,22 @@ Outline:
 - [Clean up](#clean-up)
 ```
 
-Key rules:
+### Key rules for git workflow
 
-- The workflow is fork-based: students fork the course repo, work in branches, create PRs to their own fork's `main`.
+- Every section links to the relevant wiki doc for the detailed how-to.
 - Task documents reference this file via `` [`Git workflow`](../git-workflow.md) ``.
+- The workflow is fork-based: students fork the course repo, work in branches, create PRs to their own fork's `main`.
 - PR review rules are included: reviewer checks acceptance criteria, leaves comments, approves.
+
+----
 
 ## 8. GitHub templates
 
-### `01-task.yml` — Lab Task
+> The templates below are the canonical starting point. The actual files in `.github/` may include lab-specific additions.
+
+### Issue templates
+
+#### `01-task.yml` — Lab Task
 
 ```yaml
 name: Lab Task
@@ -233,21 +289,27 @@ body:
       placeholder: |
         - [ ] Step 1
         - [ ] Step 2
+        ...
     validations:
       required: true
 ```
 
-### `02-bug-report.yml` — Bug Report
+#### `02-bug-report.yml` — Bug Report
 
-Same structure as `01-task.yml`. Required fields: `Brief problem description`, `Steps to Reproduce`, `Expected Result`, `Actual Result`.
+Same structure as `01-task.yml`. Required fields:
 
-### `config.yml`
+- `Brief problem description`
+- `Steps to Reproduce`
+- `Expected Result`
+- `Actual Result`
+
+#### `config.yml`
 
 ```yaml
 blank_issues_enabled: false
 ```
 
-### `pull_request_template.md`
+### PR template (`pull_request_template.md`)
 
 ```markdown
 ## Summary
@@ -266,7 +328,11 @@ blank_issues_enabled: false
 - [ ] I understand the changes I'm submitting.
 ```
 
-## 9. `.vscode/settings.json`
+----
+
+## 9. VS Code settings (`.vscode/settings.json`)
+
+> The template below is the canonical starting point. The actual file in `.vscode/` may include lab-specific additions.
 
 ```json
 {
@@ -286,12 +352,18 @@ blank_issues_enabled: false
 
 Add language-specific formatter settings as needed (e.g., Python with Ruff, JS with Prettier).
 
-## 10. `.vscode/extensions.json`
+----
+
+## 10. VS Code recommended extensions (`.vscode/extensions.json`)
+
+> The template below is the canonical starting point. The actual file in `.vscode/` may include lab-specific additions.
+
+Provide a curated list of recommended extensions so students can install them all at once:
 
 ```json
 {
   "recommendations": [
-    // Language support (adjust per lab)
+    // Language support (adjust per lab): Python, Node.js, Go, Rust, etc.
 
     // Git
     "eamodio.gitlens",
@@ -299,17 +371,17 @@ Add language-specific formatter settings as needed (e.g., Python with Ruff, JS w
     // Remote development (if lab uses SSH/VMs/containers)
     "ms-vscode-remote.remote-ssh",
 
-    // Markdown
+    // Markdown authoring and preview
     "DavidAnson.vscode-markdownlint",
     "yzhang.markdown-all-in-one",
 
     // GitHub integration
     "github.vscode-pull-request-github",
 
-    // File format support
+    // File format support (include what the lab uses)
     "tamasfe.even-better-toml",
 
-    // Utilities
+    // Useful utilities
     "usernamehw.errorlens",
     "gruntfuggly.todo-tree",
     "ms-vsliveshare.vsliveshare"
@@ -317,61 +389,126 @@ Add language-specific formatter settings as needed (e.g., Python with Ruff, JS w
 }
 ```
 
-Key rules:
+### Rules for extensions
 
 - Group extensions by purpose with `//` comments.
-- Setup doc instructs students to install via `Extensions` > `Filter` > `Recommended` > `Install Workspace Recommended extensions`.
+- Include extensions for: the lab's programming language, Git, remote development, Markdown, GitHub, and relevant file formats.
+- The setup doc instructs students to install these via `Extensions` > `Filter` > `Recommended` > `Install Workspace Recommended extensions`.
 
-## 11. Task runner config
+----
 
-Choose a task runner for the lab's ecosystem:
+## 11. Task runner and package manager config
 
-- **Python:** `pyproject.toml` + `poethepoet` → `uv run poe <task>`
-- **Node.js:** `package.json` scripts → `npm run <task>`
-- **Go / Rust / other:** `Makefile` or `Taskfile.yml` → `make <task>` or `task <task>`
+Define common project commands using a task runner so students run simple commands rather than remembering complex CLI invocations.
 
-Key rules:
+Choose a task runner appropriate for the lab's ecosystem:
 
-- Students run one short command — no raw CLI invocations to memorize.
-- Document task runner commands in `> [!NOTE]` blocks on first use:
+- **Python**: `pyproject.toml` + [`poethepoet`](https://poethepoet.natn.io/) (run via `uv run poe <task>`)
+- **Node.js**: `package.json` scripts (run via `npm run <task>`)
+- **Go / Rust / other**: `Makefile` or `Taskfile.yml` (run via `make <task>` or `task <task>`)
+
+Example with `pyproject.toml` + `poethepoet`:
+
+```toml
+[tool.poe.tasks.dev]
+help = "Run server after static analysis"
+sequence = ["check", "start"]
+
+[tool.poe.tasks.test]
+help = "Run pytest"
+cmd = "pytest"
+```
+
+Example with `package.json`:
+
+```json
+{
+  "scripts": {
+    "dev": "npm run check && npm run start",
+    "start": "node src/index.js",
+    "check": "npm run format && npm run lint",
+    "test": "jest"
+  }
+}
+```
+
+### Rules for task runner
+
+- Students run a single short command (e.g., `uv run poe dev`, `npm run dev`) — no need to memorize raw commands.
+- Document task runner commands in `> [!NOTE]` blocks the first time they appear:
 
   ```markdown
   > [!NOTE]
   > `<runner>` can run tasks specified in the `<config-file>`.
   ```
 
+----
+
 ## 13. Lab story and narrative
 
-- Frame the lab as a realistic work scenario ("You were hired by a company...", "Your team was asked to...").
-- Introduce a senior engineer giving the assignment. Use blockquotes for their words:
+- Frame the lab as a realistic work scenario (e.g., "You were hired by a company...", "Your team was asked to...").
+- Introduce a senior engineer (or team lead) giving the assignment.
+- Use blockquotes for the senior engineer's words. The quoted tasks should mirror the actual required tasks:
 
   ```markdown
   A senior engineer explains your first assignment:
 
   > 1. <High-level description of task 1>.
   > 2. <High-level description of task 2>.
+  > 3. <High-level description of task 3>.
+  > ...
 
   > [!IMPORTANT]
   > Communicate through issues and PRs and deliver <the expected outcome>.
   ```
 
-- The quoted tasks should mirror the actual required tasks.
-- **Cross-lab continuity:** Keep one product across multiple labs, growing the data model incrementally. Each lab picks up where the previous one left off.
+- The story should make the tasks feel purposeful, not academic.
+- Adapt the scenario to the lab's domain (web development, data processing, CLI tools, infrastructure, etc.).
+- **Cross-lab continuity:** When a course has multiple labs, keep one product across labs and grow the data model incrementally. Example: Lab 2 deploys the service, Lab 3 adds endpoints and security, Lab 4 adds outcomes and verification. Each lab picks up where the previous one left off. This gives students a sense of building something real over time.
+
+----
 
 ## 14. Docker and deployment pattern
 
-Only include when the lab involves containerization or remote deployment.
+> Include this section only if the lab involves containerization or remote deployment. Omit the Docker/deployment files from the repository structure if not needed.
+
+If the lab involves deployment:
 
 1. Provide `.env.example` and `.env.docker.example` as templates.
-2. Students copy them to `.env.secret` and `.env.docker.secret` (gitignored via `*.secret`).
-3. Use `docker-compose.yml` with environment variable substitution from `.env.docker.secret`.
-4. Include a reverse proxy service (e.g., Caddy) in `docker-compose.yml`.
-5. Use a multi-stage `Dockerfile` (builder stage + slim runtime).
-6. Deployment flow: SSH into VM → clone repo → create `.env.docker.secret` → `docker compose up --build -d`.
-7. Distinguish local vs remote: local uses `APP_HOST_ADDRESS=127.0.0.1`; remote uses `CADDY_HOST_ADDRESS=0.0.0.0`.
-8. Use an institutional container registry for base images to avoid Docker Hub rate limits.
+2. Students copy them to `.env.secret` and `.env.docker.secret` (which are `.gitignore`d via the `*.secret` pattern in `.gitignore`).
+3. Use `docker-compose.yml` with environment variable substitution from the `.env.docker.secret` file:
 
-## 16. `CONTRIBUTORS.md`
+   ```yaml
+   services:
+     app:
+       build: .
+       ports:
+         - ${APP_HOST_ADDRESS}:${APP_HOST_PORT}:${APP_CONTAINER_PORT}
+       environment:
+         - PORT=${APP_CONTAINER_PORT}
+     caddy:
+       image: caddy:2-alpine
+       depends_on:
+         - app
+       ports:
+         - ${CADDY_HOST_ADDRESS}:${CADDY_HOST_PORT}:${CADDY_CONTAINER_PORT}
+       volumes:
+         - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+   ```
+
+4. Include a reverse proxy service (e.g., Caddy) in `docker-compose.yml`.
+5. Use a multi-stage `Dockerfile` for production builds (builder stage + slim runtime).
+6. Deployment task flow: SSH into VM → clone repo → create `.env.docker.secret` → `docker compose up --build -d`.
+7. Distinguish local vs remote env differences:
+   - Local: `APP_HOST_ADDRESS=127.0.0.1` (localhost only).
+   - Remote: `CADDY_HOST_ADDRESS=0.0.0.0` (accessible from outside).
+8. **Use an institutional container registry** (e.g., Harbor cache proxy) for base images to avoid Docker Hub rate limits ("too many requests" errors). Reference the registry in `docker-compose.yml` image fields instead of pulling directly from Docker Hub.
+
+----
+
+## 16. `CONTRIBUTORS.md` pattern
+
+Include a `CONTRIBUTORS.md` file where students add their GitHub username via a PR:
 
 ```markdown
 # Contributors
@@ -388,7 +525,7 @@ Replace @johndoe with @<your-username> where
 - @johndoe
 ```
 
-Students add their GitHub username via a PR.
+----
 
 ## 17. Checklist before publishing
 
@@ -406,7 +543,7 @@ Students add their GitHub username via a PR.
 - [ ] `.gitignore` excludes generated files and secrets for the lab's ecosystem.
 - [ ] Ordered lists use `1. 2. 3.` (not `1. 1. 1.`).
 - [ ] Compound instructions are split into separate steps.
-- [ ] All sentences end with `.`
+- [ ] All sentences end with `.`.
 - [ ] Options and steps are clearly differentiated.
 - [ ] Tool/concept names are wrapped in backticks: `` `VS Code` ``, `` `Git` ``, `` `Docker` ``.
 - [ ] `Git workflow` is referenced from tasks that produce code changes.
@@ -421,24 +558,30 @@ Students add their GitHub username via a PR.
 
 **Conditional (include when applicable):**
 
-- [ ] `.env.example` files are provided; `.env.secret` files are gitignored.
-- [ ] `.dockerignore` excludes tests, docs, `.git/`, build caches, markdown files.
-- [ ] At least one test intentionally fails for the debugging task.
-- [ ] Task runner commands are documented in the config file.
-- [ ] Seed project has three tiers: reference (working), debug (commented out with bugs), implement (placeholder templates).
-- [ ] Placeholder templates include `# Reference:` comments.
+- [ ] `.env.example` files are provided; `.env.secret` files are gitignored (if the lab uses environment variables).
+- [ ] `.dockerignore` excludes tests, docs, `.git/`, build caches, markdown files (if the lab uses Docker).
+- [ ] At least one test intentionally fails for the debugging task (if the lab has a testing/debugging task).
+- [ ] Task runner commands are documented in the config file (if the lab uses a task runner).
+- [ ] Seed project has three tiers: reference (working), debug (commented out with bugs), implement (placeholder templates) (if the lab uses the seed project pattern).
+- [ ] Placeholder templates include `# Reference:` comments mapping new resources to reference counterparts (if the lab uses placeholder-based implementation).
 - [ ] All tasks are completable without LLMs.
-- [ ] Docker images use an institutional container registry.
-- [ ] API key or auth mechanism is set via environment variable and encountered naturally during exploration.
+- [ ] Docker images use an institutional container registry (if the lab uses Docker in an institutional setting).
+- [ ] API key or auth mechanism is set via environment variable and encountered naturally during exploration (if the lab includes security).
+
+----
 
 ## 18. Security integration pattern
 
-Only include when the lab involves API authentication or server hardening.
+> Include this section only if the lab involves API authentication or server hardening. Omit for labs without security concerns.
 
-1. **Simple API key via environment variable.** One shared key in `API_TOKEN` (or similar). No user accounts or roles. Students encounter `401 Unauthorized` naturally during exploration.
-2. **Natural discovery.** Place the API key requirement on endpoints students use in the exploration task. Auth is discovered organically, not announced upfront.
-3. **Environment-based configuration.** Key lives in `.env.secret` (local) and `.env.docker.secret` (Docker). Students learn to set different keys per environment.
-4. **Server hardening (optional advanced task).** For deployment labs: non-root SSH user, firewall (`ufw`), `fail2ban`, disable root login and password authentication.
+Introduce security as something students encounter naturally, not as a standalone lecture:
+
+1. **Simple API key via environment variable.** Use one shared key set via an `API_TOKEN` (or similar) environment variable. No user accounts, no roles, no permissions matrix. Students discover the mechanism when they try an endpoint and get `401 Unauthorized`.
+2. **Natural discovery.** Place the API key requirement on endpoints students will use in the exploration task. They encounter auth organically rather than being told about it in isolation.
+3. **Environment-based configuration.** The key lives in `.env.secret` (local) and `.env.docker.secret` (Docker/deployment). Students learn to set different keys per environment.
+4. **Server hardening (optional advanced task).** For deployment labs, consider including VM hardening as a separate task: non-root SSH user, firewall (`ufw`), `fail2ban`, disable root login and password authentication. This is infrastructure security, distinct from application-level auth.
+
+----
 
 ## 19. Database naming conventions
 
@@ -449,7 +592,7 @@ Name tables according to their role in the schema:
 - **Entity tables** — singular noun (e.g., `learner`, `item`).
 - **Relationship tables** — verb (e.g., `interacts`).
 
-| Role | Convention | Example |
-|------|-----------|---------|
-| Entity | singular noun | `learner`, `item` |
-| Relationship | verb | `interacts` |
+| Role         | Convention    | Example           |
+| ------------ | ------------- | ----------------- |
+| Entity       | singular noun | `learner`, `item` |
+| Relationship | verb          | `interacts`       |
