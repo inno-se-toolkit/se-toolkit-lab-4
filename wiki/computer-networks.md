@@ -17,7 +17,7 @@
 
 ## What is a network
 
-A computer network is a group of interconnected [machines](#machine) that can communicate and share resources over wired or wireless connections.
+A network (formally "computer network") is a group of interconnected [machines](#machine) that can communicate and share resources over wired or wireless connections.
 
 ## Machine
 
