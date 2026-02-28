@@ -142,7 +142,7 @@ Complete these steps to create a VM:
 
 1. (If not completed) [Add your VM to the `SSH` config](./ssh.md#add-the-host-to-ssh).
 2. Disable `VPN`.
-3. Connect your computer to the `Wi-Fi` network `UniversityStudent`.
+3. Connect your computer to the [`Wi-Fi` network](./computer-networks.md#wi-fi-network) `UniversityStudent`.
 4. Open [`VS Code`](./vs-code.md).
 5. [Connect to the VM](./ssh.md#connect-to-the-vm).
 6. If the connection is successful, you should see:
@@ -157,7 +157,7 @@ Complete these steps to create a VM:
 
 ### `ping` times out
 
-1. Connect to the Wi `UniversityStudent`
+1. Connect your computer to the [`Wi-Fi` network](./computer-networks.md#wi-fi-network) `UniversityStudent`.
 2. recreate the VM.
 
    Use the same public key as before.
