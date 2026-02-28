@@ -38,6 +38,8 @@ See [VM image](./vm-info.md) for the information about your VM.
 
 ## `<your-vm-name>`
 
+The name you chose when [creating the VM](#create-a-vm-using-the-subscription).
+
 ## `<your-vm-ip-address>`
 
 The [IP address](./computer-networks.md#ip-address) of [your VM](#your-vm).
@@ -119,7 +121,6 @@ Complete these steps to create a VM:
 
 ## Go to the VM page
 
-<!-- TODO open vm -->
 1. [Go to the VMs site](#go-to-the-vms-site).
 2. Open the `VIRTUALS MACHINES` tab ([https://vm.innopolis.university/#Workspaces/VMExtension/VirtualMachines](https://vm.innopolis.university/#Workspaces/VMExtension/VirtualMachines)).
 3. Look at the `NAME`.
@@ -148,17 +149,20 @@ Complete these steps to create a VM:
 6. If the connection is successful, you should see:
    1. The host fingerprint prompt (first connection only).
    2. A remote [shell prompt](./shell.md#shell-prompt) on the VM (for example, `root@<your-vm-name>:~#`).
-   3. If you use the `ms-vscode-remote.remote-ssh` exntension in `VS Code`, the status bar should show that you are connected to a remote host.
+   3. If you use the `ms-vscode-remote.remote-ssh` extension in `VS Code`, the status bar should show that you are connected to a remote host.
 7. Otherwise, see [troubleshooting](#troubleshooting).
 
 ## Delete VM
+
+1. [Go to the VM page](#go-to-the-vm-page).
+2. Click `DELETE`.
 
 ## Troubleshooting
 
 ### `ping` times out
 
 1. Connect your computer to the [`Wi-Fi` network](./computer-networks.md#wi-fi-network) `UniversityStudent`.
-2. recreate the VM.
+2. Recreate the VM.
 
    Use the same public key as before.
 

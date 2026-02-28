@@ -38,8 +38,6 @@ Docs:
 >
 > The actual values are in `.env.docker.secret`.
 
-<!-- TODO specify postgres port -->
-
 1. [Open `pgAdmin`](#open-pgadmin).
 2. Right-click `Servers` in the left panel.
 3. Click `Register` -> `Server...`.

@@ -186,8 +186,8 @@ graph TD
 
         subgraph "Models (SQLModel)"
             IM["Item\nItemCreate\nItemUpdate\nItemRecord"]
-            INTM["Interaction\nInteractionCreate\nInteractionRecord"]
-            LM["Learner\nLearnerCreate\nLearnerRecord"]
+            INTM["InteractionLog\nInteractionLogCreate\nInteractionModel"]
+            LM["Learner\nLearnerCreate"]
         end
 
         CFG["settings.py\nPydantic Settings\n(env vars)"]
@@ -290,7 +290,7 @@ sequenceDiagram
     Note over Student,Caddy: Authorization: Bearer <token>
     Caddy->>API: Proxy POST /interactions
     API->>API: verify_api_key()
-    API->>API: Validate request body (InteractionCreate)
+    API->>API: Validate request body (InteractionLogCreate)
     API->>DB: INSERT INTO interacts (learner_id, item_id, kind) RETURNING *
     DB-->>API: new interacts row
     API-->>Caddy: 201 Created — JSON {id, learner_id, item_id, kind, ...}

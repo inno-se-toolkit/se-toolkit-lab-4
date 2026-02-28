@@ -13,8 +13,6 @@
 
 `FastAPI` auto-generates `Swagger UI` at the `/docs` path.
 
-<!-- TODO screenshot -->
-
 Actions:
 
 - [Open `Swagger UI`](#open-swagger-ui)

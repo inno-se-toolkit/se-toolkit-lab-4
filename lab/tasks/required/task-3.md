@@ -62,8 +62,11 @@ Title: `[Task] Add Front-end`
 
    1. [Open the file](../../../wiki/vs-code.md#open-the-file) [`frontend/.env.example`](../../../frontend/.env.example).
    2. Copy it to `frontend/.env`.
-   3. Fill in `VITE_API_URL` with your API URL, for example `http://<your-vm-ip-address>:<api-port>`.
-   4. Fill in `VITE_API_TOKEN` with your [`<api-token>`](../../../wiki/web-development.md#api-token).
+   3. Set `VITE_API_TARGET` to the URL of your back-end API, for example `http://<your-vm-ip-address>:<api-port>`.
+
+> [!NOTE]
+> The dev server proxies API requests (e.g., `/items`) to the `VITE_API_TARGET` URL.
+> The API token is entered at runtime through the front-end UI — it is not stored in the `.env` file.
 
 4. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 

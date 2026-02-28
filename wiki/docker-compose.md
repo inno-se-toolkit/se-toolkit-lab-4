@@ -25,8 +25,6 @@ See also:
 
 - [`Docker`](./docker.md) for general `Docker` concepts ([images](./docker.md#image), [containers](./docker.md#container), [volumes](./docker.md#volumes), [health checks](./docker.md#health-checks), etc.).
 
-<!-- TODO add installation instructions -->
-
 ## Commands
 
 ## `docker compose up`

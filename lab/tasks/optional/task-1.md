@@ -44,7 +44,7 @@ Title: `[Task] CI/CD`
 2. Add a workflow that does the following on every push to `main`:
    1. Checks out the repository.
    2. Runs all back-end unit tests using `uv run poe test`.
-   3. Runs all end-to-end tests with a headless browser.
+   3. Runs all end-to-end tests against the deployed API.
 3. [Commit](../../../wiki/git-workflow.md#commit) the workflow file.
 4. Push the branch to `GitHub` and verify the workflow runs and passes in the `Actions` tab of your fork.
 
@@ -88,8 +88,8 @@ Title: `[Task] CI/CD`
 4. On the VM, pull and restart the services:
 
    ```terminal
-   docker compose pull
-   docker compose up -d
+   docker compose --env-file .env.docker.secret pull
+   docker compose --env-file .env.docker.secret up -d
    ```
 
 5. Verify the back-end is running using the same checks as in Task 1.
