@@ -335,7 +335,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
    - `item`
    - `learner`
 
-### 1.14. (UPD) Stop the services
+### 1.15. (UPD) Stop the services
 
 1. [Check that the current directory is `se-toolkit-lab-4`](../../wiki/shell.md#check-the-current-directory-is-directory-name).
 2. [Run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
