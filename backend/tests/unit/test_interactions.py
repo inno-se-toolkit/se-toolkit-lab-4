@@ -41,3 +41,12 @@ def test_filter_excludes_interaction_with_different_learner_id() -> None:
     assert result[0].id == 1
     assert result[0].item_id == 1
     assert result[0].learner_id == 2
+
+def test_get_interactions_returns_200(client: httpx.Client) -> None:
+    response = client.get("/interactions/")
+    assert response.status_code == 200
+
+
+def test_get_interactions_response_is_a_list(client: httpx.Client) -> None:
+    response = client.get("/interactions/")
+    assert isinstance(response.json(), list)
