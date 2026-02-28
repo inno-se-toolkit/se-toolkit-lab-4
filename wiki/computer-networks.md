@@ -31,7 +31,7 @@ It uses standardized communication protocols (such as `TCP/IP`) to link billions
 
 ## IP address
 
-An `IP address` (Internet Protocol address) is a numerical label assigned to each device connected to a [network](#what-is-a-network).
+An IP address (Internet Protocol address) is a numerical label assigned to each device connected to a [network](#what-is-a-network).
 
 It identifies the device and its location in the network.
 

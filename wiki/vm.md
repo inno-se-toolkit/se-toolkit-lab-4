@@ -12,7 +12,7 @@
   - [Create a subscription](#create-a-subscription)
   - [Create a VM using the subscription](#create-a-vm-using-the-subscription)
 - [Go to the VM page](#go-to-the-vm-page)
-- [Get the `IP address` of the VM](#get-the-ip-address-of-the-vm)
+- [Get the IP address of the VM](#get-the-ip-address-of-the-vm)
 - [Connect to the VM](#connect-to-the-vm)
 - [Delete VM](#delete-vm)
 - [Troubleshooting](#troubleshooting)
@@ -39,9 +39,9 @@ See [VM image](./vm-info.md) for the information about your VM.
 
 ## `<your-vm-ip-address>`
 
-The [`IP address`](./computer-networks.md) of [your VM](#your-vm).
+The [IP address](./computer-networks.md) of [your VM](#your-vm).
 
-See [Get the `IP address` of the VM](#get-the-ip-address-of-the-vm).
+See [Get the IP address of the VM](#get-the-ip-address-of-the-vm).
 
 ## Prepare the connection
 
@@ -126,13 +126,13 @@ Complete these steps to create a VM:
 7. Click `DASHBOARD`.
 8. You should be on the VM page.
 
-## Get the `IP address` of the VM
+## Get the IP address of the VM
 
 1. [Go to the VM page](#go-to-the-vm-page).
 2. Go to the `quick glance` sidebar (on the right).
 3. Go to `IP Address(es)`.
 4. You should see there `StudentsCourses01 - 10.93.24.98`.
-5. The `10.93.24.98` string is the [`IP address`](./computer-networks.md#ip-address) of the VM in a university network.
+5. The `10.93.24.98` string is the [IP address](./computer-networks.md#ip-address) of the VM in a university network.
 6. We'll refer to this string as `<your-vm-ip-address>`.
 
 ## Connect to the VM
@@ -163,7 +163,7 @@ If you can't connect:
 
 1. [Go to the VM page](#go-to-the-vm-page).
 2. Verify the VM is in `Running` status.
-3. Verify the VM `IP address` has not changed.
+3. Verify the VM IP address has not changed.
 4. In your local terminal, test the [`SSH`](./ssh.md) connection in verbose mode:
 
    ```terminal
