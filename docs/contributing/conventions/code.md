@@ -68,7 +68,7 @@ quality attribute so the reasoning behind every rule is explicit.
 | Element | Style | Example |
 | --- | --- | --- |
 | Markdown file | `kebab-case.md` | `bug-report.md` |
-| Directory | `kebab-case` | `lab-conventions/` |
+| Directory | `kebab-case` | `conventions/` |
 | Docker / Compose | lowercase | `docker-compose.yml` |
 | Nix | lowercase | `flake.nix` |
 

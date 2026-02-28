@@ -15,14 +15,12 @@
     - [1.4.2. (UPD) Set up `Docker`](#142-upd-set-up-docker)
     - [1.4.3. (UPD) (`Windows` only) Set the default shell for the `VS Code Terminal`](#143-upd-windows-only-set-the-default-shell-for-the-vs-code-terminal)
     - [1.4.4. Set up `Git`](#144-set-up-git)
-    - [1.4.5. (NEW) Set up `Nix`](#145-new-set-up-nix)
   - [1.5. (UPD) Open in `VS Code` the `software-engineering-toolkit` directory](#15-upd-open-in-vs-code-the-software-engineering-toolkit-directory)
-  - [1.6. (UPD) Clone your fork and open it in `VS Code`](#16-upd-clone-your-fork-and-open-it-in-vs-code)
+  - [1.6. (UPD) Clone your fork](#16-upd-clone-your-fork)
     - [1.6.1. (UPD) Copy your fork `URL`](#161-upd-copy-your-fork-url)
     - [1.6.2. (UPD) Clone your fork](#162-upd-clone-your-fork)
-    - [1.6.3. (UPD) Open the cloned repo in `VS Code`](#163-upd-open-the-cloned-repo-in-vs-code)
-  - [1.7. Continue creating a VM](#17-continue-creating-a-vm)
-  - [1.8. (NEW) (Optional) Set up `direnv`](#18-new-optional-set-up-direnv)
+  - [1.7. (UPD) Open the cloned repo and set up `VS Code`](#17-upd-open-the-cloned-repo-and-set-up-vs-code)
+  - [1.8. Continue creating a VM](#18-continue-creating-a-vm)
   - [1.9. Set up `Python`](#19-set-up-python)
     - [1.9.1. Install `uv`](#191-install-uv)
     - [1.9.2. (UPD) Set up `Python` in `VS Code`](#192-upd-set-up-python-in-vs-code)
@@ -43,13 +41,15 @@
   - [1.17. (UPD) Set up a coding agent](#117-upd-set-up-a-coding-agent)
   - [1.18. (UPD) Log in to the autochecker](#118-upd-log-in-to-the-autochecker)
 - [2. Optional steps](#2-optional-steps)
-  - [2.1. (UPD) Learn to go back after clicking a link](#21-upd-learn-to-go-back-after-clicking-a-link)
-  - [2.2. Set up a coding agent](#22-set-up-a-coding-agent)
-  - [2.3. Set up the shell prompt](#23-set-up-the-shell-prompt)
-  - [2.4. Customize the `Source Control`](#24-customize-the-source-control)
-  - [2.5. Get familiar with `GitLens`](#25-get-familiar-with-gitlens)
-  - [2.6. Create a label for tasks](#26-create-a-label-for-tasks)
-  - [2.7. View `Markdown` files in `VS Code`](#27-view-markdown-files-in-vs-code)
+  - [2.4. Set up a coding agent](#24-set-up-a-coding-agent)
+  - [2.1. (NEW) Set up `Nix`](#21-new-set-up-nix)
+  - [2.2. (NEW) Set up `direnv`](#22-new-set-up-direnv)
+  - [2.3. (UPD) Learn to go back after clicking a link](#23-upd-learn-to-go-back-after-clicking-a-link)
+  - [2.5. Set up the shell prompt](#25-set-up-the-shell-prompt)
+  - [2.6. Customize the `Source Control`](#26-customize-the-source-control)
+  - [2.7. Get familiar with `GitLens`](#27-get-familiar-with-gitlens)
+  - [2.8. Create a label for tasks](#28-create-a-label-for-tasks)
+  - [2.9. View `Markdown` files in `VS Code`](#29-view-markdown-files-in-vs-code)
 
 ## 1. Required steps
 
@@ -149,11 +149,6 @@
 2. [Install `Git`](https://git-scm.com/install/) if it's not installed.
 3. (Optional) [Configure `Git`](../../wiki/git.md#configure-git).
 
-#### 1.4.5. (NEW) Set up `Nix`
-
-1. (Optional) [Read about `Nix`](../../wiki/nix.md#what-is-nix).
-2. [Set up `Nix`](../../wiki/nix.md#set-up-nix).
-
 ### 1.5. (UPD) Open in `VS Code` the `software-engineering-toolkit` directory
 
 1. Inside the [`Desktop` directory](../../wiki/file-system.md#desktop-directory),
@@ -164,7 +159,7 @@
 2. [Open in `VS Code` the directory](../../wiki/vs-code.md#open-the-directory):
    `software-engineering-toolkit`.
 
-### 1.6. (UPD) Clone your fork and open it in `VS Code`
+### 1.6. (UPD) Clone your fork
 
 #### 1.6.1. (UPD) Copy your fork `URL`
 
@@ -182,14 +177,19 @@
    - Replace `<repo-url>` with [`<your-fork-url>`](../../wiki/github.md#your-fork-url).
    - Replace `<repo-name>` with `se-toolkit-lab-4`.
 
-#### 1.6.3. (UPD) Open the cloned repo in `VS Code`
+### 1.7. (UPD) Open the cloned repo and set up `VS Code`
+
+> [!IMPORTANT]
+> Go by the links in the steps below and complete the checks ("You should see ...").
+> Otherwise, your setup will be broken.
 
 1. [Open in `VS Code` the directory](../../wiki/vs-code.md#open-the-directory):
    `se-toolkit-lab-4`.
 2. [Check the current shell in the `VS Code Terminal`](../../wiki/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 3. [Install recommended extensions](../../wiki/vs-code.md#install-recommended-extensions).
+4. Ask the TA if something doesn't work.
 
-### 1.7. Continue creating a VM
+### 1.8. Continue creating a VM
 
 > [!NOTE]
 > Don't overwrite the key if it already exists.
@@ -200,10 +200,6 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 1. [Set up `SSH`](../../wiki/ssh.md#set-up-ssh).
 2. [Create a VM using the subscription](../../wiki/vm.md#create-a-vm-using-the-subscription).
 
-### 1.8. (NEW) (Optional) Set up `direnv`
-
-1. [Set up `direnv`](../../wiki/direnv.md#set-up-direnv).
-
 ### 1.9. Set up `Python`
 
 > [!NOTE]
@@ -213,10 +209,6 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 > [!NOTE]
 > See [`uv`](../../wiki/python.md#uv).
-
-> [!TIP]
-> Skip this step if you managed to [set up `direnv`](#18-new-optional-set-up-direnv).
-> You already have `uv` from the [devshell](../../wiki/nix.md#devshell).
 
 1. [Install `uv`](../../wiki/python.md#install-uv).
 
@@ -382,23 +374,16 @@ Use the autochecker to check the task completion.
 
 These enhancements can make your life easier:
 
-- [Learn to go back after clicking a link](#21-upd-learn-to-go-back-after-clicking-a-link)
-- [Set up a coding agent](#22-set-up-a-coding-agent)
-- [Set up the shell prompt](#23-set-up-the-shell-prompt)
-- [Customize the `Source Control`](#24-customize-the-source-control)
-- [Get familiar with `GitLens`](#25-get-familiar-with-gitlens)
-- [Create a label for tasks](#26-create-a-label-for-tasks)
+- [Set up a coding agent](#24-set-up-a-coding-agent)
+- [Set up `Nix`](#21-new-set-up-nix)
+- [Set up `direnv`](#22-new-set-up-direnv)
+- [Learn to go back after clicking a link](#23-upd-learn-to-go-back-after-clicking-a-link)
+- [Set up the shell prompt](#25-set-up-the-shell-prompt)
+- [Customize the `Source Control`](#26-customize-the-source-control)
+- [Get familiar with `GitLens`](#27-get-familiar-with-gitlens)
+- [Create a label for tasks](#28-create-a-label-for-tasks)
 
-### 2.1. (UPD) Learn to go back after clicking a link
-
-> [!NOTE]
-
-- `VS Code` - see the [shortcut](../../wiki/vs-code.md#shortcut-go-back)
-- Browsers:
-  - `Firefox`: `Alt+ArrowLeft`
-  - Other browsers: google
-
-### 2.2. Set up a coding agent
+### 2.4. Set up a coding agent
 
 A coding agent can help you write code, explain concepts, and debug issues.
 
@@ -409,7 +394,26 @@ See [Coding agents](../../wiki/coding-agents.md).
   <img alt="Qwen response" src="../images/tasks/setup/qwen-response.png" style="width:300px">
 </div>
 
-### 2.3. Set up the shell prompt
+### 2.1. (NEW) Set up `Nix`
+
+1. (Optional) [Read about `Nix`](../../wiki/nix.md#what-is-nix).
+2. [Set up `Nix`](../../wiki/nix.md#set-up-nix).
+
+### 2.2. (NEW) Set up `direnv`
+
+1. [Set up `Nix`](#21-new-set-up-nix).
+2. [Set up `direnv`](../../wiki/direnv.md#set-up-direnv).
+
+### 2.3. (UPD) Learn to go back after clicking a link
+
+> [!NOTE]
+
+- `VS Code` - see the [shortcut](../../wiki/vs-code.md#shortcut-go-back)
+- Browsers:
+  - `Firefox`: `Alt+ArrowLeft`
+  - Other browsers: google
+
+### 2.5. Set up the shell prompt
 
 `Starship` shows your current `Git` branch, status, and other useful info directly in your [shell prompt](../../wiki/shell.md#shell-prompt) in almost any terminal, including the [`VS Code Terminal`](../../wiki/vs-code.md#vs-code-terminal).
 
@@ -422,7 +426,7 @@ Complete these steps:
 
    <img alt="Starship in the VS Code Terminal" src="../../wiki/images/starship/terminal-prompt.png" style="width:400px"></img>
 
-### 2.4. Customize the `Source Control`
+### 2.6. Customize the `Source Control`
 
 1. [Open the `Source Control`](../../wiki/vs-code.md#open-the-source-control).
 2. Click three dots to the right of `SOURCE CONTROL`.
@@ -430,7 +434,7 @@ Complete these steps:
 
    <img alt="Changes and GitLens" src="../../wiki/images/vs-code/source-control-allowed-views.png" style="width:400px"></img>
 
-### 2.5. Get familiar with `GitLens`
+### 2.7. Get familiar with `GitLens`
 
 [`GitLens`](../../wiki/gitlens.md) helps you work with `Git` in `VS Code`.
 
@@ -441,7 +445,7 @@ Complete these steps:
 3. [Inspect the current branch](../../wiki/gitlens.md#inspect-the-current-branch)
 4. [Inspect the remotes](../../wiki/gitlens.md#inspect-the-remotes)
 
-### 2.6. Create a label for tasks
+### 2.8. Create a label for tasks
 
 [Labels](../../wiki/github.md#label) help you filter and organize issues.
 
@@ -456,7 +460,7 @@ Complete these steps:
 2. [Add the label to issues](../../wiki/github.md#add-a-label-to-issues).
 3. [See all issues with the label](../../wiki/github.md#see-all-issues-with-a-label).
 
-### 2.7. View `Markdown` files in `VS Code`
+### 2.9. View `Markdown` files in `VS Code`
 
 If you want to view [`README.md`](../../README.md) and other `Markdown` files in `VS Code` instead of on `GitHub`:
 

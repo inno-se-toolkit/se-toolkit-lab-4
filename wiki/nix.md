@@ -93,7 +93,7 @@ Complete these steps:
 
 ### Verify `Nix` installation
 
-1. Check the version of the `nix` [program](./linux.md#program):
+1. Check the version of the `nix` [program](./operating-system.md#program):
 
    [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 

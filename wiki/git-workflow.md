@@ -9,7 +9,7 @@ Issue ➜ Branch ➜ Commits ➜ PR ➜ Review ➜ Merge
 
 The following diagram shows this workflow in the context of repositories:
 
-![Git workflow](./images/git-workflow/git-workflow.drawio.svg)
+<img alt="Git workflow" src="./images/git-workflow/git-workflow.drawio.svg" style="width:100%"></img>
 
 Outline:
 
@@ -90,7 +90,7 @@ We'll refer to the new branch as `<task-branch-name>`.
 
 ## Create a PR to the `main` branch in your fork
 
-[Create a PR](./github.md#create-a-pull-request) from the branch [`<task-branch-name>`](#task-branch-name) to the branch `<main>`.
+[Create a PR](./github.md#create-a-pull-request-in-your-fork) from the branch [`<task-branch-name>`](#task-branch-name) to the branch `<main>`.
 Placeholder values:
 
 - `<repo-name>` is `se-toolkit-lab-<N>` where `<N>` is the number of the lab.

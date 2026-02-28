@@ -1,4 +1,4 @@
-# Networks
+# Computer networks
 
 <h2>Table of contents</h2>
 
@@ -10,12 +10,19 @@
   - [IPv6](#ipv6)
 - [Host](#host)
   - [Hostname](#hostname)
-  - [`localhost`](#localhost)
+    - [`localhost`](#localhost)
   - [Remote host](#remote-host)
+- [Port](#port)
+  - [Port number](#port-number)
+  - [System port](#system-port)
+  - [User port](#user-port)
+  - [Listen on a port](#listen-on-a-port)
+- [Wi-Fi](#wi-fi)
+  - [Wi-Fi network](#wi-fi-network)
 
 ## What is a network
 
-A computer network is a group of interconnected [machines](#machine) that can communicate and share resources over wired or wireless connections.
+A network (formally "computer network") is a group of interconnected [machines](#machine) that can communicate and share resources over wired or wireless connections.
 
 ## Machine
 
@@ -25,13 +32,13 @@ Examples: a personal laptop, a university server, a [virtual machine](./vm.md#wh
 
 ## Internet
 
-The Internet is a global [network](#what-is-a-network) of interconnected [computer networks](#networks).
+The Internet is a global [network](#what-is-a-network) that connects millions of smaller networks worldwide.
 
-It uses standardized communication protocols (such as `TCP/IP`) to link billions of devices worldwide, enabling communication and access to information across the globe.
+It uses standardized communication protocols (such as `TCP/IP`) to link billions of devices, enabling communication and access to information across the globe.
 
 ## IP address
 
-An `IP address` (Internet Protocol address) is a numerical label assigned to each device connected to a [network](#what-is-a-network).
+An IP address (Internet Protocol address) is a numerical label assigned to each device connected to a [network](#what-is-a-network).
 
 It identifies the device and its location in the network.
 
@@ -62,7 +69,7 @@ A host is any [machine](#machine) that:
 
 Hosts can send and receive data over the [network](#what-is-a-network).
 
-Examples: computers, servers, [virtual machines](./vm.md).
+Examples: computers, servers, [virtual machines](./vm.md#what-is-a-vm).
 
 ### Hostname
 
@@ -70,9 +77,9 @@ A hostname is a human-readable label assigned to a [host](#host) on a [network](
 
 It is used to identify the host instead of its [IP address](#ip-address).
 
-Examples: `localhost`, `my-server`, `vm.innopolis.university`.
+Examples: [`localhost`](#localhost), `my-server`, [`vm.innopolis.university`](./vm.md#go-to-the-vms-site).
 
-### `localhost`
+#### `localhost`
 
 `localhost` is a [hostname](#hostname) that refers to the current [host](#host).
 
@@ -85,3 +92,46 @@ Connections to `localhost` never leave the host — they are handled entirely wi
 A remote [host](#host) is a host that is not the [local host](#localhost) — it is accessed over a [network](#what-is-a-network).
 
 Example: [your VM](./vm.md#your-vm) you connect to via [`SSH`](./ssh.md) is a remote host.
+
+## Port
+
+A [*network port*](https://en.wikipedia.org/wiki/Port_(computer_networking)) (or simply *port*) is a [numbered](#port-number) communication endpoint on a [host](#host).
+
+### Port number
+
+A port number is a numerical identifier used in networking to distinguish between different [processes](./operating-system.md#process) running on a single [host](#host).
+
+Only one process can bind to a specific port number on a given network interface.
+
+### System port
+
+The port numbers in the range from 0 to 1023 are the **well-known ports** or **system ports**.
+They are used by system processes that provide widely used types of network services.
+[[source](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers#Well-known_ports)]
+
+### User port
+
+A **user port** (or **registered port**) is a [network port](#port) designated for use with a certain protocol or application.
+[[source](https://en.wikipedia.org/wiki/Registered_port)]
+
+### Listen on a port
+
+When a [process](./operating-system.md#process) "listens on a port", it means the process has bound itself to a specific network port number and is waiting for incoming network connections on that port.
+
+The [operating system](./operating-system.md) allocates the port to that process, and any incoming network traffic directed to that port will be handled by the listening process.
+
+This is how [services](./operating-system.md#service) like [web servers](./web-development.md), [SSH daemons](./ssh.md#ssh-daemon), or [databases](./database.md) accept connections from clients. A port can only be listened to by one process at a time.
+
+## Wi-Fi
+
+`Wi-Fi` is a wireless technology that allows [machines](#machine) to connect to a [network](#what-is-a-network) without physical cables.
+
+It uses radio waves to transmit data between devices and a wireless access point (a router).
+
+### Wi-Fi network
+
+A `Wi-Fi` network is a [network](#what-is-a-network) that [machines](#machine) connect to using [Wi-Fi](#wi-fi).
+
+Each `Wi-Fi` network has a name (called `SSID`) that identifies it to nearby devices.
+
+Example: `UniversityStudent`, `Home_Network`.

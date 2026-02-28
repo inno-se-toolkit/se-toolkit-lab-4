@@ -97,7 +97,7 @@ Docs:
 
 Schema that we use in docs:
 
-![Basic Layout Schema](./images/vs-code/vs-code-ui.drawio.svg)
+<img alt="Basic Layout schema" src="./images/vs-code/vs-code-ui.drawio.svg" style="width:100%"></img>
 
 ## `Custom Layout`
 
@@ -344,7 +344,7 @@ Method 2:
 
 ### (`Windows` only) Set the default shell for the `VS Code Terminal`
 
-1. Make sure you can [run `VS Code` in WSL](#windows-only-set-up-running-vs-code-in-wsl).
+1. Make sure you can [run `VS Code` in `WSL`](#windows-only-set-up-running-vs-code-in-wsl).
 2. [Reopen the directory in `WSL`](#windows-only-reopen-the-directory-in-wsl)
 3. [Run using the `Command Palette`](#run-a-command-using-the-command-palette):
    `Terminal: Select Default Profile`.
@@ -354,7 +354,7 @@ Method 2:
 
      <img alt="Terminal Default Profile - Bad Options" src="./images/vs-code/command-palette-default-terminal-profile-bad-options.png" style="width:400px"></img>
 
-     Return to the first step and make sure you can [run `VS Code` in WSL](#windows-only-set-up-running-vs-code-in-wsl).
+     Return to the first step and make sure you can [run `VS Code` in `WSL`](#windows-only-set-up-running-vs-code-in-wsl).
    - Case 2 (good): You're running `VS Code` outside `WSL`.
 
      <img alt="Terminal Default Profile - Outside WSL" src="./images/vs-code/command-palette-default-terminal-profile-outside-wsl-wsl.png" style="width:400px"></img>
@@ -606,10 +606,11 @@ Here are some [workspace settings](#workspace-settings) that you can change:
 
    `VS Code` should now open in that directory.
 4. [Open the `Explorer`](./vs-code.md#open-the-explorer).
-5. You should see `<DIRECTORY-NAME>` there.
+
+   You should see `<DIRECTORY-NAME>` there.
 
    Example: `SOFTWARE-ENGINEERING-TOOLKIT`
-6. (`Windows` only) [Reopen the directory in `WSL`](#windows-only-reopen-the-directory-in-wsl).
+5. (`Windows` only) [Reopen the directory in `WSL`](#windows-only-reopen-the-directory-in-wsl).
 
 #### (`Windows` only) Open the directory in `WSL`
 

@@ -8,6 +8,11 @@
   - [`macOS`](#macos)
   - [`Windows`](#windows)
     - [`WSL`](#wsl)
+- [Program](#program)
+  - [Useful programs](#useful-programs)
+- [Process](#process)
+  - [PID](#pid)
+- [Service](#service)
 
 ## What is an operating system
 
@@ -47,3 +52,45 @@ Docs:
 
 > [!TIP]
 > To use `WSL` with `VS Code`, see [(`Windows` only) Set up running `VS Code` in `WSL`](./vs-code.md#windows-only-set-up-running-vs-code-in-wsl).
+
+## Program
+
+A program is an executable file containing instructions that can be run by the operating system.
+
+It's a static entity stored on disk that becomes a [process](#process) when executed.
+
+Programs can be compiled binaries, scripts, or other executable files that perform specific tasks when run by a user or system.
+
+### Useful programs
+
+See [Useful programs](./useful-programs.md).
+
+## Process
+
+A process is an instance of a running [program](#program).
+
+When you execute a program, the operating system creates a process that contains the program's code, memory space, variables, and system resources. Each process has a unique process ID (PID) and runs independently of other processes.
+
+Processes can be created, managed, and terminated using various [shell commands](./shell.md#shell-command).
+
+They form the basis of multitasking in the operating system.
+
+### PID
+
+A PID (Process ID) is a unique numerical identifier assigned by the operating system to each running process. PIDs help the operating system to track and manage individual processes.
+
+PIDs are used by various system commands to interact with specific processes, such as terminating them, checking their status, or monitoring their resource usage.
+
+PIDs let the operating system handle multitasking.
+
+## Service
+
+A service is a long-running [process](#process) that performs specific system functions or provides functionality to other processes and applications.
+
+Services typically start automatically during system boot and run in the background without direct user interaction. They can be managed using system service managers like `systemd`, `init`, or service scripts.
+
+Common examples include [web servers](./web-development.md), [database servers](./database.md#database-server) (`MySQL`/`PostgreSQL`), [SSH daemons](./ssh.md#ssh-daemon), and network services.
+
+Services often [listen on specific ports](./computer-networks.md#listen-on-a-port) to handle incoming requests.
+
+They form the backbone of system functionality and network communications.

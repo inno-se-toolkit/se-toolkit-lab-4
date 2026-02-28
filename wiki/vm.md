@@ -12,7 +12,7 @@
   - [Create a subscription](#create-a-subscription)
   - [Create a VM using the subscription](#create-a-vm-using-the-subscription)
 - [Go to the VM page](#go-to-the-vm-page)
-- [Get the `IP address` of the VM](#get-the-ip-address-of-the-vm)
+- [Get the IP address of the VM](#get-the-ip-address-of-the-vm)
 - [Connect to the VM](#connect-to-the-vm)
 - [Delete VM](#delete-vm)
 - [Troubleshooting](#troubleshooting)
@@ -20,7 +20,8 @@
 
 ## What is a VM
 
-A virtual machine (`VM`) is a software-emulated computer that runs on a physical host machine, with its own [operating system](./operating-system.md) and isolated environment.
+A virtual machine (`VM`) is a software-emulated computer that runs on a physical [host machine](./computer-networks.md#host), with its own [operating system](./operating-system.md#what-is-an-operating-system) and isolated environment.
+
 In this lab, you use a `VM` provided by the university to deploy and run the application remotely over [SSH](./ssh.md).
 
 Docs:
@@ -39,9 +40,11 @@ See [VM image](./vm-info.md) for the information about your VM.
 
 ## `<your-vm-ip-address>`
 
-The [`IP address`](./computer-networks.md) of [your VM](#your-vm).
+The [IP address](./computer-networks.md#ip-address) of [your VM](#your-vm).
 
-See [Get the `IP address` of the VM](#get-the-ip-address-of-the-vm).
+Example: `10.93.24.1`.
+
+See [Get the IP address of the VM](#get-the-ip-address-of-the-vm).
 
 ## Prepare the connection
 
@@ -126,20 +129,20 @@ Complete these steps to create a VM:
 7. Click `DASHBOARD`.
 8. You should be on the VM page.
 
-## Get the `IP address` of the VM
+## Get the IP address of the VM
 
 1. [Go to the VM page](#go-to-the-vm-page).
 2. Go to the `quick glance` sidebar (on the right).
 3. Go to `IP Address(es)`.
 4. You should see there `StudentsCourses01 - 10.93.24.98`.
-5. The `10.93.24.98` string is the [`IP address`](./computer-networks.md#ip-address) of the VM in a university network.
+5. The `10.93.24.98` string is the [IP address](./computer-networks.md#ip-address) of the VM in a university network.
 6. We'll refer to this string as `<your-vm-ip-address>`.
 
 ## Connect to the VM
 
 1. (If not completed) [Add your VM to the `SSH` config](./ssh.md#add-the-host-to-ssh).
 2. Disable `VPN`.
-3. Connect your computer to the `Wi-Fi` network `UniversityStudent`.
+3. Connect your computer to the [`Wi-Fi` network](./computer-networks.md#wi-fi-network) `UniversityStudent`.
 4. Open [`VS Code`](./vs-code.md).
 5. [Connect to the VM](./ssh.md#connect-to-the-vm).
 6. If the connection is successful, you should see:
@@ -154,7 +157,7 @@ Complete these steps to create a VM:
 
 ### `ping` times out
 
-1. Connect to the Wi `UniversityStudent`
+1. Connect your computer to the [`Wi-Fi` network](./computer-networks.md#wi-fi-network) `UniversityStudent`.
 2. recreate the VM.
 
    Use the same public key as before.
@@ -163,7 +166,7 @@ If you can't connect:
 
 1. [Go to the VM page](#go-to-the-vm-page).
 2. Verify the VM is in `Running` status.
-3. Verify the VM `IP address` has not changed.
+3. Verify the VM IP address has not changed.
 4. In your local terminal, test the [`SSH`](./ssh.md) connection in verbose mode:
 
    ```terminal

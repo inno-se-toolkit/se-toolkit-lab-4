@@ -42,7 +42,7 @@ These [environment variables](#environment-variables) are available in most [ope
 
 ### `PATH` environment variable
 
-`PATH` contains a list of [directories](./file-system.md#directory) separated by `:`. When you run a command in the [terminal](./vs-code.md#vs-code-terminal), the system looks for the [program](./linux.md#program) in each directory listed in `PATH`, from left to right.
+`PATH` contains a list of [directories](./file-system.md#directory) separated by `:`. When you run a command in the [terminal](./vs-code.md#vs-code-terminal), the system looks for the [program](./operating-system.md#program) in each directory listed in `PATH`, from left to right.
 
 1. [Check the current shell in the `VS Code Terminal`](./vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 2. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):

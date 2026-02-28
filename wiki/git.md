@@ -3,6 +3,7 @@
 <h2>Table of contents</h2>
 
 - [What is `Git`](#what-is-git)
+- [Remote](#remote)
 - [Commit](#commit)
   - [Commit hash](#commit-hash)
   - [Commit message](#commit-message)
@@ -28,6 +29,18 @@ Docs:
 
 - [Git Reference](https://git-scm.com/doc)
 - [Git Cheat Sheet](https://git-scm.com/cheat-sheet)
+
+## Remote
+
+A remote is a version of your [repository](./github.md#repository) hosted on a [remote host](./computer-networks.md#remote-host) (e.g., on [`GitHub`](./github.md#what-is-github)).
+
+Remotes let you push and pull changes between your local repository and the remote host.
+
+Docs:
+
+- [Git Remotes](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes)
+
+See also [`upstream`](./github.md#upstream) and [`origin`](./github.md#origin).
 
 ## Commit
 

@@ -314,7 +314,7 @@ We call that branch `origin/<branch-name>`.
 
 ## Commit changes
 
-> ![NOTE]
+> [!NOTE]
 > Commit message format is: `type: short description`
 >
 > Common types:

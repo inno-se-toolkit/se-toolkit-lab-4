@@ -23,7 +23,7 @@
 
 ## What is `SSH`
 
-`Secure Shell` (`SSH`) is a protocol used to securely connect to remote machines.
+`SSH` (`Secure Shell`) is a protocol used to securely connect to remote machines.
 
 You can use it to connect to [your virtual machine](./vm.md#your-vm).
 
@@ -34,7 +34,7 @@ All commands below assume a Unix shell: `Bash` (`Linux`, `WSL`) or `Zsh` (`macOS
 
 ## SSH daemon
 
-The `SSH` daemon (`sshd`) is a program that runs on the [remote host](./computer-networks.md#remote-host) and [listens](./linux.md#listen-on-a-port) for incoming `SSH` connections.
+The `SSH` daemon (`sshd`) is a program that runs on the [remote host](./computer-networks.md#remote-host) and [listens](./computer-networks.md#listen-on-a-port) for incoming `SSH` connections.
 
 You do not need to configure it — your [VM](./vm.md#your-vm) already has it running.
 
