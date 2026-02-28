@@ -27,9 +27,7 @@
   - [1.10. (NEW) Prepare `Docker`](#110-new-prepare-docker)
   - [1.11. Start the services](#111-start-the-services)
     - [1.11.1. (UPD) Set up the `Docker` environment](#1111-upd-set-up-the-docker-environment)
-    - [1.11.2. (UPD) Prepare `Docker`](#1112-upd-prepare-docker)
-    - [1.11.3. (UPD) Start the services using `Docker Compose`](#1113-upd-start-the-services-using-docker-compose)
-  - [1.12. (UPD) Open a new terminal](#112-upd-open-a-new-terminal)
+    - [1.11.2. (UPD) Start the services using `Docker Compose`](#1112-upd-start-the-services-using-docker-compose)
   - [1.13. (UPD) Observe containers and services](#113-upd-observe-containers-and-services)
     - [1.13.1. (UPD) List running containers](#1131-upd-list-running-containers)
     - [1.13.2. (UPD) See logs of the running services](#1132-upd-see-logs-of-the-running-services)
@@ -219,13 +217,14 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 1. [Set up `Python` in `VS Code`](../../wiki/python.md#set-up-python-in-vs-code).
 
-### 1.10. (NEW) Clean up `Docker`
+### 1.10. (NEW) Prepare `Docker`
 
 > [!NOTE]
 > Old containers and volumes from a previous lab version may conflict with the updated services.
 > Stop running containers, remove stopped containers, and delete unused volumes so you start with a clean state.
 
-1. [Clean up `Docker`](../../wiki/docker.md#clean-up-docker).
+1. [Start `Docker`](../../wiki/docker.md#start-docker).
+2. [Clean up `Docker`](../../wiki/docker.md#clean-up-docker).
 
 ### 1.11. Start the services
 
@@ -252,12 +251,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 > No edits are needed for local development.
 > The default values in [`.env.docker.example`](../../.env.docker.example) work out of the box.
 
-#### 1.11.2. (UPD) Prepare `Docker`
-
-1. [Start `Docker`](../../wiki/docker.md#start-docker).
-2. [Clean up `Docker`](../../wiki/docker.md#clean-up-docker).
-
-#### 1.11.3. (UPD) Start the services using `Docker Compose`
+#### 1.11.2. (UPD) Start the services using `Docker Compose`
 
 1. Start services using the [`docker compose up` command](../../wiki/docker-compose.md#docker-compose-up):
 
