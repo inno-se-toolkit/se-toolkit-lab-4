@@ -12,6 +12,11 @@
   - [Hostname](#hostname)
     - [`localhost`](#localhost)
   - [Remote host](#remote-host)
+- [Port](#port)
+  - [Port number](#port-number)
+  - [System port](#system-port)
+  - [User port](#user-port)
+  - [Listen on a port](#listen-on-a-port)
 - [Wi-Fi](#wi-fi)
   - [Wi-Fi network](#wi-fi-network)
 
@@ -87,6 +92,35 @@ Connections to `localhost` never leave the host — they are handled entirely wi
 A remote [host](#host) is a host that is not the [local host](#localhost) — it is accessed over a [network](#what-is-a-network).
 
 Example: [your VM](./vm.md#your-vm) you connect to via [`SSH`](./ssh.md) is a remote host.
+
+## Port
+
+A [*network port*](https://en.wikipedia.org/wiki/Port_(computer_networking)) (or simply *port*) is a [numbered](#port-number) communication endpoint on a [host](#host).
+
+### Port number
+
+A port number is a numerical identifier used in networking to distinguish between different [processes](./linux.md#process) running on a single [host](#host).
+
+Only one process can bind to a specific port number on a given network interface.
+
+### System port
+
+The port numbers in the range from 0 to 1023 are the **well-known ports** or **system ports**.
+They are used by system processes that provide widely used types of network services.
+[[source](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers#Well-known_ports)]
+
+### User port
+
+A **user port** (or **registered port**) is a [network port](#port) designated for use with a certain protocol or application.
+[[source](https://en.wikipedia.org/wiki/Registered_port)]
+
+### Listen on a port
+
+When a [process](./linux.md#process) "listens on a port", it means the process has bound itself to a specific network port number and is waiting for incoming network connections on that port.
+
+The [operating system](./operating-system.md) allocates the port to that process, and any incoming network traffic directed to that port will be handled by the listening process.
+
+This is how [services](./linux.md#service) like [web servers](./web-development.md), [SSH daemons](./ssh.md#ssh-daemon), or [databases](./database.md) accept connections from clients. A port can only be listened to by one process at a time.
 
 ## Wi-Fi
 
