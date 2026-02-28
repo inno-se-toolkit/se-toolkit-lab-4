@@ -37,12 +37,14 @@
 
 Write each command for the `VS Code Terminal` in a multi-line code block with the type `terminal`. Always precede with a link to the wiki.
 
-- **Explain intention first.** Before the terminal instruction, add a short sentence explaining what the command does and why the reader is running it. Never present a bare command without context.
+- **Use the "To…" intention pattern.** Start with "To \<intention\>," (ending with a comma), then a blank line for visual separation, then the run instruction. This forms one grammatical sentence — the blank line is only for readability. The "run" is lowercase because it continues the sentence. Never present a bare command without context.
 
 From a task file:
 
 ~~~markdown
-1. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To <intention>,
+
+   [run in the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    <command>
@@ -52,7 +54,9 @@ From a task file:
 From a wiki file:
 
 ~~~markdown
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To <intention>,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    <command>
