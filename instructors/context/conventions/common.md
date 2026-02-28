@@ -20,6 +20,7 @@
 - [4.18. Inline formatting of technical terms](#418-inline-formatting-of-technical-terms)
 - [4.19. Steps with sub-steps](#419-steps-with-sub-steps)
 - [4.20. Placeholders in docs](#420-placeholders-in-docs)
+- [4.21. `docker compose up` commands](#421-docker-compose-up-commands)
 
 ## 4.1. Instructions wording
 
@@ -62,6 +63,8 @@ From a wiki file:
    <command>
    ```
 ~~~
+
+Commands that run on a VM (after an SSH connection) use the same pattern — students type them in the `VS Code Terminal` via the SSH session.
 
 Exception: `vs-code.md` itself is exempt because the link would be self-referential.
 
@@ -277,3 +280,11 @@ Bad: `` Open <http://127.0.0.1:5050> in a browser. ``
 Good: `` Open <pgadmin-url> in a browser. ``
 
 Define every placeholder in `wiki/placeholders.md`. Each placeholder gets its own section that links to its definition in the relevant wiki doc.
+
+## 4.21. `docker compose up` commands
+
+Always include the `--build` flag when writing `docker compose up` commands in instructions. This ensures containers are rebuilt from the latest source, preventing students from running stale images.
+
+Good: `docker compose up --build`
+
+Bad: `docker compose up`
