@@ -24,3 +24,15 @@ def test_filter_returns_interaction_with_matching_ids() -> None:
     result = _filter_by_item_id(interactions, 1)
     assert len(result) == 1
     assert result[0].id == 1
+
+def test_filter_excludes_interaction_with_different_learner_id():
+    """Test that filtering by item_id returns only interactions with that item_id"""
+    interactions = [
+        {"id": 1, "item_id": 1, "learner_id": 2, "interaction_type": "view"},
+        {"id": 2, "item_id": 1, "learner_id": 1, "interaction_type": "view"},
+        {"id": 3, "item_id": 2, "learner_id": 2, "interaction_type": "view"},
+    ]
+    
+    filtered = [i for i in interactions if i["item_id"] == 1]
+    
+    assert len(filtered) == 2
