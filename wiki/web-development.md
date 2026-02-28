@@ -174,8 +174,8 @@ curl -s https://jsonplaceholder.typicode.com/todos/1 | jq .
 
 `Firefox`:
 
-1. Click `Raw Data`
-2. Clik `Pretty Print`
+1. Click `Raw Data`.
+2. Click `Pretty Print`.
 
 <!-- TODO other browsers -->
 
