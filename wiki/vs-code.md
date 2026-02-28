@@ -97,7 +97,7 @@ Docs:
 
 Schema that we use in docs:
 
-![Basic Layout Schema](./images/vs-code/vs-code-ui.drawio.svg)
+<img alt="Basic Layout schema" src="./images/vs-code/vs-code-ui.drawio.svg" style="width:100%"></img>
 
 ## `Custom Layout`
 

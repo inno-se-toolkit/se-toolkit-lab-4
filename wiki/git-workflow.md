@@ -9,7 +9,7 @@ Issue ➜ Branch ➜ Commits ➜ PR ➜ Review ➜ Merge
 
 The following diagram shows this workflow in the context of repositories:
 
-![Git workflow](./images/git-workflow/git-workflow.drawio.svg)
+<img alt="Git workflow" src="./images/git-workflow/git-workflow.drawio.svg" style="width:100%"></img>
 
 Outline:
 
