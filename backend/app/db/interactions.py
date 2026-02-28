@@ -1,4 +1,5 @@
 """Database operations for interactions."""
+from datetime import datetime
 
 from sqlmodel import select
 from sqlmodel.ext.asyncio.session import AsyncSession
@@ -20,7 +21,7 @@ async def create_interaction(
 ) -> InteractionLog:
     """Create a new interaction log in the database."""
     interaction = InteractionLog(
-        learner_id=learner_id, item_id=item_id, kind=kind
+        learner_id=learner_id, item_id=item_id, kind=kind, created_at=datetime.utcnow(),
     )
     session.add(interaction)
     await session.commit()
