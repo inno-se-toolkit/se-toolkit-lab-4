@@ -72,7 +72,7 @@ A hostname is a human-readable label assigned to a [host](#host) on a [network](
 
 It is used to identify the host instead of its [IP address](#ip-address).
 
-Examples: `localhost`, `my-server`, `vm.innopolis.university`.
+Examples: [`localhost`](#localhost), `my-server`, [`vm.innopolis.university`](./vm.md#go-to-the-vms-site).
 
 #### `localhost`
 
