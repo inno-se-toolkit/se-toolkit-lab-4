@@ -6,7 +6,11 @@ from sqlmodel.ext.asyncio.session import AsyncSession
 
 from app.database import get_session
 from app.db.interactions import create_interaction, read_interactions
-from app.models.interaction import InteractionLog, InteractionLogCreate, InteractionModel
+from app.models.interaction import (
+    InteractionLog,
+    InteractionLogCreate,
+    InteractionModel,
+)
 
 router = APIRouter()
 
