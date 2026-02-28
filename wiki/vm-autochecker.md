@@ -1,73 +1,84 @@
-# VM autochecker setup
+# VM autochecker
 
 <h2>Table of contents</h2>
 
+- [What is the VM autochecker](#what-is-the-vm-autochecker)
 - [Create the `autochecker` user](#create-the-autochecker-user)
-- [Add an SSH public key to the `autochecker` user](#add-an-ssh-public-key-to-the-autochecker-user)
-- [Copy SSH authorized keys to a user](#copy-ssh-authorized-keys-to-a-user)
+- [Add an `SSH` public key to the `autochecker` user](#add-an-ssh-public-key-to-the-autochecker-user)
+- [Copy `SSH` authorized keys to a user](#copy-ssh-authorized-keys-to-a-user)
+
+## What is the VM autochecker
+
+The VM autochecker is a bot that verifies VM setup by connecting via [`SSH`](./ssh.md#what-is-ssh) as a restricted user. The `autochecker` user account has no `sudo` access.
 
 ## Create the `autochecker` user
 
-The `autochecker` user is a restricted account for the autochecker bot. It has no `sudo` access.
+1. To create the `autochecker` user without `sudo` privileges,
 
-1. Create the `autochecker` user:
-
-   ```terminal
-   adduser --disabled-password --gecos "" autochecker
-   ```
-
-2. Create the `.ssh` directory for `autochecker`:
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
-   mkdir -p /home/autochecker/.ssh
-   chmod 700 /home/autochecker/.ssh
-   chown autochecker:autochecker /home/autochecker/.ssh
+   sudo adduser --disabled-password --gecos "" autochecker
    ```
 
-## Add an SSH public key to the `autochecker` user
+2. To create the `.ssh` directory for `autochecker`,
 
-1. Create the `authorized_keys` file for `autochecker`:
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
-   nano /home/autochecker/.ssh/authorized_keys
+   sudo mkdir -p /home/autochecker/.ssh
+   sudo chmod 700 /home/autochecker/.ssh
+   sudo chown autochecker:autochecker /home/autochecker/.ssh
    ```
 
-2. Paste the SSH public key:
+## Add an `SSH` public key to the `autochecker` user
 
-   ```text
-   ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKiL0DDQZw7L0Uf1c9cNlREY7IS6ZkIbGVWNsClqGNCZ se-toolkit-autochecker
-   ```
+1. To add the autochecker [`SSH`](./ssh.md#what-is-ssh) public key,
 
-3. Save the file and exit (`Ctrl+O`, `Enter`, `Ctrl+X`).
-4. Set the correct permissions:
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
-   chmod 600 /home/autochecker/.ssh/authorized_keys
-   chown autochecker:autochecker /home/autochecker/.ssh/authorized_keys
+   echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKiL0DDQZw7L0Uf1c9cNlREY7IS6ZkIbGVWNsClqGNCZ se-toolkit-autochecker" | sudo tee /home/autochecker/.ssh/authorized_keys
    ```
 
-## Copy SSH authorized keys to a user
+2. To set the correct permissions,
 
-Copy the `authorized_keys` file from the current user to another user so they can log in with the same SSH key.
-
-1. Create the `.ssh` directory:
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
-   mkdir -p /home/<username>/.ssh
+   sudo chmod 600 /home/autochecker/.ssh/authorized_keys
+   sudo chown autochecker:autochecker /home/autochecker/.ssh/authorized_keys
    ```
 
-2. Copy the authorized keys:
+## Copy `SSH` authorized keys to a user
+
+Copy the `authorized_keys` file from the current user to another user so they can log in with the same [`SSH`](./ssh.md#what-is-ssh) key.
+
+> [!NOTE]
+> Replace `<username>` with the name of the target user.
+
+1. To create the `.ssh` directory,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
-   cp ~/.ssh/authorized_keys /home/<username>/.ssh/authorized_keys
+   sudo mkdir -p /home/<username>/.ssh
    ```
 
-3. Set the correct ownership and permissions:
+2. To copy the authorized keys,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
-   chown -R <username>:<username> /home/<username>/.ssh
-   chmod 700 /home/<username>/.ssh
-   chmod 600 /home/<username>/.ssh/authorized_keys
+   sudo cp ~/.ssh/authorized_keys /home/<username>/.ssh/authorized_keys
    ```
 
-Replace `<username>` with the name of the target user.
+3. To set the correct ownership and permissions,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
+
+   ```terminal
+   sudo chown -R <username>:<username> /home/<username>/.ssh
+   sudo chmod 700 /home/<username>/.ssh
+   sudo chmod 600 /home/<username>/.ssh/authorized_keys
+   ```

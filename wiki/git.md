@@ -178,9 +178,9 @@ Typical sequence:
 
 ## Check your `Git` config
 
-1. Find out which name and email are used in [commits](#commit):
+1. To find out which name and email are used in [commits](#commit),
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git config --global --list
@@ -206,22 +206,24 @@ Complete the following steps:
 
 ### Configure `user.name`
 
-1. Set the name that will be used in [commits](#commit):
+1. To set the name that will be used in [commits](#commit),
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
-    ```terminal
-    git config --global user.name '<your-name>'
-    ```
+   ```terminal
+   git config --global user.name '<your-name>'
+   ```
 
-    Example: `git config --global user.name 'Inno SE Toolkit'`
+   Example: `git config --global user.name 'Inno SE Toolkit'`
 
 ### Configure `user.email`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To set the email that will be used in [commits](#commit),
 
-     ```terminal
-     git config --global user.email '<your-email>'
-     ```
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
-     Example: `git config --global user.email 'inno-se-toolkit@gmail.com'`
+   ```terminal
+   git config --global user.email '<your-email>'
+   ```
+
+   Example: `git config --global user.email 'inno-se-toolkit@gmail.com'`

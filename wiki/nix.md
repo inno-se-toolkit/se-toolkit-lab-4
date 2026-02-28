@@ -14,13 +14,6 @@
   - [Pin `nixpkgs`](#pin-nixpkgs)
   - [Install `nil`](#install-nil)
   - [Install `nixfmt`](#install-nixfmt)
-- [Flake](#flake)
-  - [`flake.lock`](#flakelock)
-  - [Devshell](#devshell)
-  - [Common flake commands](#common-flake-commands)
-    - [`nix flake update`](#nix-flake-update)
-- [Flake registry](#flake-registry)
-  - [`nix registry pin`](#nix-registry-pin)
 - [Troubleshooting](#troubleshooting)
   - [Enable `nix-daemon`](#enable-nix-daemon)
   - [Restart `nix-daemon`](#restart-nix-daemon)
@@ -79,9 +72,9 @@ Complete these steps:
 
 ### Install `Nix`
 
-1. Install `Nix` using the [`Determinate Systems` installer](https://github.com/DeterminateSystems/nix-installer#install-determinate-nix):
+1. To install `Nix` using the [`Determinate Systems` installer](https://github.com/DeterminateSystems/nix-installer#install-determinate-nix),
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    curl -fsSL https://install.determinate.systems/nix | sh -s -- install
@@ -93,9 +86,9 @@ Complete these steps:
 
 ### Verify `Nix` installation
 
-1. Check the version of the `nix` [program](./operating-system.md#program):
+1. To check the version of the `nix` [program](./operating-system.md#program),
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    nix --version
@@ -109,9 +102,9 @@ Complete these steps:
 
 ### Install `jq`
 
-1. Install [`jq`](./useful-programs.md#jq) from [`nixpkgs`](#nixpkgs):
+1. To install [`jq`](./useful-programs.md#jq) from [`nixpkgs`](#nixpkgs),
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    nix profile add nixpkgs#jq
@@ -119,9 +112,9 @@ Complete these steps:
 
 ### Pin `nixpkgs`
 
-1. Get the [commit hash](./git.md#commit-hash) of the [`nixpkgs` repository](#nixpkgs-repository) specified in the [`flake.lock`](#flakelock):
+1. To get the [commit hash](./git.md#commit-hash) of the [`nixpkgs` repository](#nixpkgs-repository) specified in the [`flake.lock`](./nix-flake.md#flakelock),
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    nix flake metadata --json | jq -r '.locks.nodes.nixpkgs.locked.rev'
@@ -133,9 +126,9 @@ Complete these steps:
    26eaeac4e409d7b5a6bf6f90a2a2dc223c78d915
    ```
 
-2. Pin `nixpkgs` in your [flake registry](#flake-registry) to the same commit hash:
+2. To pin `nixpkgs` in your [flake registry](./nix-flake.md#flake-registry) to the same commit hash,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    nix registry pin nixpkgs github:nixos/nixpkgs/26eaeac4e409d7b5a6bf6f90a2a2dc223c78d915
@@ -145,15 +138,17 @@ Complete these steps:
 
 > `nil` is a [language server](./vs-code.md#language-server) for [`Nix`](#what-is-nix).
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To install `nil`,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    nix profile add nixpkgs#nil
    ```
 
-2. Check the `nil` version:
+2. To check the `nil` version,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    nil --version
@@ -169,15 +164,17 @@ Complete these steps:
 
 > `nixfmt` is a formatter for [`Nix`](#what-is-nix).
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To install `nixfmt`,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    nix profile add nixpkgs#nixfmt
    ```
 
-2. Check the `nixfmt` version:
+2. To check the `nixfmt` version,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    nixfmt --version
@@ -189,46 +186,13 @@ Complete these steps:
    nixfmt 1.2.0
    ```
 
-## Flake
-
-Docs:
-
-- [Flakes on NixOS wiki](https://wiki.nixos.org/wiki/Flakes)
-- [Flakes on nix.dev](https://nix.dev/concepts/flakes.html)
-
-### `flake.lock`
-
-Docs:
-
-- [Lock files](https://nix.dev/manual/nix/2.33/command-ref/new-cli/nix3-flake.html#lock-files)
-
-Example: [`flake.lock`](../flake.lock).
-
-### Devshell
-
-<!-- TODO -->
-
-### Common flake commands
-
-#### `nix flake update`
-
-Update the revision of inputs used in this project using the [`nix flake update`](https://nix.dev/manual/nix/2.33/command-ref/new-cli/nix3-flake-update.html) command.
-
-## Flake registry
-
-Docs:
-
-- [`nix registry`](https://nix.dev/manual/nix/2.33/command-ref/new-cli/nix3-registry.html)
-
-### `nix registry pin`
-
-<https://nix.dev/manual/nix/2.33/command-ref/new-cli/nix3-registry-pin.html>
-
 ## Troubleshooting
 
 ### Enable `nix-daemon`
 
-[Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+To enable `nix-daemon`,
+
+[run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
 ```terminal
 sudo systemctl enable nix-daemon
@@ -236,7 +200,9 @@ sudo systemctl enable nix-daemon
 
 ### Restart `nix-daemon`
 
-[Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+To restart `nix-daemon`,
+
+[run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
 ```terminal
 sudo systemctl restart nix-daemon

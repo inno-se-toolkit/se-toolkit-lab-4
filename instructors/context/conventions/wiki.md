@@ -6,7 +6,7 @@
   - [Structure of a wiki file](#structure-of-a-wiki-file)
   - [Key rules](#key-rules)
   - [Standard wiki topics to include](#standard-wiki-topics-to-include)
-- [12.13. Wiki section structure pattern](#1213-wiki-section-structure-pattern)
+- [12.13. `vs-code.md` section structure pattern](#1213-vs-codemd-section-structure-pattern)
 - [17. Checklist before publishing](#17-checklist-before-publishing)
 
 ## 7. Wiki documents (`wiki/`)
@@ -64,28 +64,50 @@ Depending on the lab, consider creating wiki files for:
 - `vs-code.md` — VS Code basics: terminal, Command Palette, editor, extensions, layout.
 - `git.md` — Git concepts: commits, branches, merging, rebasing.
 - `git-vscode.md` — Git operations in VS Code: clone, commit, push, pull, switch branches.
+- `git-workflow.md` — GitHub Flow-based git workflow for tasks and pull requests.
 - `github.md` — GitHub: forks, issues, PRs, GitHub flow.
 - `gitlens.md` — GitLens extension usage.
 - `shell.md` — Shell basics: commands, arguments, environment variables.
+- `bash.md` — Bash shell syntax basics and command execution patterns.
 - `linux.md` — Linux basics: ports, processes, package management.
-- `docker.md` — Docker and Docker Compose concepts.
+- `docker.md` — Docker concepts and container management.
+- `docker-compose.md` — Docker Compose commands for multi-container orchestration.
+- `docker-postgres.md` — PostgreSQL Docker container management and database reset.
 - `environments.md` — Environment variables, `.env` files, secrets.
+- `direnv.md` — Direnv setup for automatic environment variable loading per directory.
+- `nix.md` — Nix package manager, nixpkgs, devshell, and flake configuration.
+- `package-manager.md` — Package managers, tools, and dependencies overview.
 - `ssh.md` — SSH setup and usage.
 - `python.md` — Python, virtual environments, package managers (`uv`).
 - `testing.md` — Testing concepts, `pytest`, assertions.
+- `http.md` — HTTP protocol, requests, responses, and status codes.
+- `http-auth.md` — HTTP authentication via API keys and authorization.
 - `web-development.md` — HTTP, endpoints, status codes, URLs, JSON, APIs.
+- `database.md` — Database concepts, PostgreSQL, pgAdmin, SQL, and schema management.
+- `sql.md` — SQL basics: SELECT, INSERT, WHERE statements.
+- `pgadmin.md` — pgAdmin web interface for PostgreSQL database management.
+- `swagger.md` — Swagger UI for interactive REST API exploration and testing.
+- `caddy.md` — Caddy reverse proxy configuration and Caddyfile setup.
+- `security.md` — API key authentication and security hardening.
 - `file-system.md` — Files, directories, paths.
 - `file-formats.md` — JSON, YAML, TOML, Markdown.
 - `vm.md` — Virtual machines: creation, access, IP addresses.
+- `vm-info.md` — VM base image information and preinstalled programs.
+- `vm-hardening.md` — VM security hardening: firewall, fail2ban, SSH configuration.
+- `vm-autochecker.md` — Autochecker user account setup with SSH key authentication.
 - `operating-system.md` — OS concepts.
 - `computer-networks.md` — Networking basics.
+- `architectural-views.md` — PlantUML component, sequence, and deployment diagrams.
+- `visualize-architecture.md` — Draw.io, PlantUML, and Mermaid for architecture diagrams.
+- `coding-agents.md` — LLM-based coding agents setup and configuration.
+- `useful-programs.md` — Command-line tools: curl, jq, find, ripgrep.
 - `placeholders.md` — Index of all placeholders used in the lab, each linking to its definition in the relevant wiki doc.
 
 ----
 
-## 12.13. Wiki section structure pattern
+## 12.13. `vs-code.md` section structure pattern
 
-Each wiki section for a VS Code feature or tool should follow this pattern:
+Each section in `vs-code.md` should follow this pattern (other wiki files use the simpler "What is" + "Docs:" structure described above):
 
 ```markdown
 ## <Feature Name>
@@ -118,7 +140,7 @@ This provides: what it is, where to find it, official docs, and how to use it.
 
 - [ ] `README.md` has: story, learning advice, learning outcomes, task list.
 - [ ] Every task file has: Time, Purpose, Context, ToC, Steps, Acceptance criteria.
-- [ ] Every terminal command has a `` [Run using the `VS Code Terminal`] `` link prefix.
+- [ ] Every terminal command uses the "To…" intention pattern with a `` [run in the `VS Code Terminal`] `` link.
 - [ ] Every Command Palette command has a `` [Run using the `Command Palette`] `` link prefix.
 - [ ] All cross-references use relative paths and are valid.
 - [ ] Wiki docs exist for every tool/concept linked from tasks.

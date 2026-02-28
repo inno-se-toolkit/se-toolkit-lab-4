@@ -10,7 +10,8 @@
 - [`<db-name>`](#db-name)
 - [`<api-port>`](#api-port)
 - [`<frontend-port>`](#frontend-port)
-- [`<frontend-url>`](#frontend-url)
+- [`<app-port>`](#app-port)
+- [`<app-url>`](#app-url)
 
 ## `<your-github-username>`
 
@@ -38,12 +39,22 @@ See [`<db-name>`](./database.md#db-name) in the [`Database` wiki](./database.md)
 
 ## `<api-port>`
 
-The port the API is accessible on. From your `.env.docker.secret` file, this is `CADDY_HOST_PORT`.
+The port the API (backend) is accessible on.
+
+This is the value of `CADDY_HOST_PORT` in your `.env.docker.secret` file.
 
 ## `<frontend-port>`
 
-The port `Caddy` serves the front-end on. This is the same as `CADDY_HOST_PORT` (default: `42002`), because `Caddy` serves both the front-end and the API on the same port.
+The port `Caddy` serves the frontend on.
 
-## `<frontend-url>`
+This is the value of `CADDY_HOST_PORT` in your `.env.docker.secret` file.
 
-The full URL of the front-end: `http://<your-vm-ip-address>:<frontend-port>/`.
+## `<app-port>`
+
+`Caddy` serves both the frontend and the API on the same port (see [`<api-port>`](#api-port), [`<frontend-port>`](#frontend-port)).
+
+## `<app-url>`
+
+The full URL of the app deployed to [your VM](./vm.md#your-vm): `http://<your-vm-ip-address>:<app-port>/`.
+
+See [`<your-vm-ip-address>`](./vm.md#your-vm-ip-address) and [`<app-port>`](#app-port).

@@ -95,7 +95,9 @@ The current working directory is the directory where commands run by default.
 
 ### Show the current working directory (full path)
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To show the current working directory,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    pwd
@@ -108,15 +110,19 @@ The current working directory is the directory where commands run by default.
 
 ### Navigate directories
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To navigate to a directory,
 
-    ```terminal
-    cd /
-    cd ~
-    cd ..
-    ```
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
-List files in the current working directory:
+   ```terminal
+   cd /
+   cd ~
+   cd ..
+   ```
+
+To list files in the current working directory,
+
+[run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
 ```terminal
 ls
@@ -135,8 +141,10 @@ These commands run programs:
 
 ### Check what shell is running
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To check what shell is running,
 
-    ```terminal
-    echo "$SHELL"
-    ```
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
+
+   ```terminal
+   echo "$SHELL"
+   ```

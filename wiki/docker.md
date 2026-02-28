@@ -13,7 +13,10 @@
   - [Clean up `Docker`](#clean-up-docker)
 - [Common `Docker` commands](#common-docker-commands)
   - [`docker run`](#docker-run)
+    - [`docker run` typical pattern](#docker-run-typical-pattern)
+    - [`docker run` useful flags](#docker-run-useful-flags)
   - [`docker ps`](#docker-ps)
+    - [`docker ps` useful variants](#docker-ps-useful-variants)
 - [`Docker Compose`](#docker-compose)
   - [Service](#service)
 - [Volumes](#volumes)
@@ -90,25 +93,25 @@ If you installed `Docker Desktop`:
 
 ### Clean up `Docker`
 
-1. Stop all running containers:
+1. To stop all running containers,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker stop $(docker ps -q) 2>/dev/null
    ```
 
-2. Remove all stopped containers:
+2. To remove all stopped containers,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker container prune -f
    ```
 
-3. Delete unused volumes:
+3. To delete unused volumes,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker volume prune -f
@@ -120,13 +123,13 @@ If you installed `Docker Desktop`:
 
 `docker run` starts a container from an image.
 
-Common pattern:
+#### `docker run` typical pattern
 
 ```terminal
 docker run --name <container-name> -p <host-port>:<container-port> <image-name>
 ```
 
-Useful flags:
+#### `docker run` useful flags
 
 - `-d` - run in background (detached mode).
 - `--rm` - remove container after it exits.
@@ -136,12 +139,7 @@ Useful flags:
 
 `docker ps` shows running containers.
 
-Useful variants:
-
-```terminal
-docker ps
-docker ps -a
-```
+#### `docker ps` useful variants
 
 - `docker ps` - only running containers.
 - `docker ps -a` - all containers (including stopped).

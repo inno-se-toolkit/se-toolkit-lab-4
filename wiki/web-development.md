@@ -152,7 +152,9 @@ See [`curl`](./useful-programs.md#send-a-get-request-with-curl).
 ### Pretty-print the `JSON` response using `jq`
 
 1. [Install `jq`](./useful-programs.md#jq) if not installed.
-2. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+2. To pretty-print the `JSON` response,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    <command-that-produces-json-response> | jq .

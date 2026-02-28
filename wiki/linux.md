@@ -83,11 +83,13 @@ Servers and VMs usually run multiple users.
 
 ### Get my current user
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To get the current user,
 
-    ```terminal
-    whoami
-    ```
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
+
+   ```terminal
+   whoami
+   ```
 
 ### Create a non-root user
 
@@ -95,30 +97,38 @@ Servers and VMs usually run multiple users.
 
 For `Ubuntu`/`Debian` systems:
 
-1. Create a new user:
+1. To create a new user,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    sudo adduser <username>
    ```
 
-2. Allow the user to run administrative commands:
+2. To allow the user to run administrative commands,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    sudo usermod -aG sudo <username>
    ```
 
-3. Switch to that user:
+3. To switch to that user,
 
-    ```terminal
-    su - <username>
-    ```
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
-4. Verify:
+   ```terminal
+   su - <username>
+   ```
 
-    ```terminal
-    whoami
-    id
-    ```
+4. To verify the current user,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
+
+   ```terminal
+   whoami
+   id
+   ```
 
 If you plan to log in via `SSH` as that user, copy `authorized_keys` to the new user's home and fix permissions before logging out from `root`.
 
@@ -127,6 +137,10 @@ If you plan to log in via `SSH` as that user, copy `authorized_keys` to the new 
 ### The `sudo` command
 
 `sudo` runs a command with elevated permissions.
+
+To run a command with elevated permissions,
+
+[run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
 ```terminal
 sudo <command>
@@ -141,11 +155,19 @@ Use the following commands to inspect [ports](./computer-networks.md#port) on a 
 
 ### See listening TCP ports
 
+To see all listening TCP ports,
+
+[run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
+
 ```terminal
 ss -ltn
 ```
 
 ### Inspect a specific port
+
+To inspect a specific port,
+
+[run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
 ```terminal
 ss -ltn 'sport = :42000'

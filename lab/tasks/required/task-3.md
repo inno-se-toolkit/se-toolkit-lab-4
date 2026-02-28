@@ -68,19 +68,19 @@ Title: `[Task] Add Front-end`
 > The dev server proxies API requests (e.g., `/items`) to the `VITE_API_TARGET` URL.
 > The API token is entered at runtime through the front-end UI — it is not stored in the `.env` file.
 
-4. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run in the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    npm install
    ```
 
-5. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+2. [Run in the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    npm run dev
    ```
 
-6. Open the URL shown in the terminal output in a browser.
+3. Open the URL shown in the terminal output in a browser.
 
    The output should be similar to this:
 
@@ -88,7 +88,7 @@ Title: `[Task] Add Front-end`
    Local: http://localhost:5173/
    ```
 
-7. Verify that the front-end loads and displays data from the API.
+4. Verify that the front-end loads and displays data from the API.
 
 #### 1.3.2. Edit a source file and observe hot reload
 
@@ -126,9 +126,12 @@ Title: `[Task] Add Front-end`
 
 #### 1.4.2. Verify in the browser
 
-1. Open in a browser: `http://<your-vm-ip-address>:<frontend-port>/`.
+1. Open in a browser: `http://<your-vm-ip-address>:<app-port>/`.
 
-   Replace [`<your-vm-ip-address>`](../../../wiki/vm.md#your-vm-ip-address) with the IP address of your VM. See [`<frontend-port>`](../../../wiki/placeholders.md#frontend-port).
+   Replace:
+
+   - [`<your-vm-ip-address>`](../../../wiki/vm.md#your-vm-ip-address)
+   - [`<app-port>`](../../../wiki/placeholders.md#app-port).
 
 2. Verify that the front-end loads and displays data from the API.
 
@@ -182,7 +185,7 @@ Title: `[Task] Add Front-end`
    docker compose --env-file .env.docker.secret up --build caddy -d
    ```
 
-6. Open `http://<your-vm-ip-address>:<frontend-port>/` in the browser and verify the new column appears in the production build.
+6. Open the [`<app-url>`](../../../wiki/placeholders.md#app-url) in the browser and verify the new column appears in the production build.
 
 ### 1.6. Finish the task
 

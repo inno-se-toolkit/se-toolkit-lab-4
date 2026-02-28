@@ -55,9 +55,9 @@
 
 1. Open `VS Code`.
 2. [Open the `VS Code Terminal`](./vs-code.md#open-the-vs-code-terminal).
-3. Navigate to the directory where you want to clone the repo:
+3. To navigate to the directory where you want to clone the repo,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    cd <directory-path>
@@ -69,21 +69,25 @@
    cd ~/Desktop/software-engineering-toolkit
    ```
 
-4. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+4. To clone the repo,
 
-    ```terminal
-    git clone <repo-url>
-    ```
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
-    Example:
+   ```terminal
+   git clone <repo-url>
+   ```
 
-    ```terminal
-    git clone https://github.com/microsoft/vscode
-    ```
+   Example:
+
+   ```terminal
+   git clone https://github.com/microsoft/vscode
+   ```
 
 5. If `git` asks for a password, provide [your PAT](./github.md#create-a-pat-classic).
 
-6. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+6. To verify that the repo was cloned,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ls
@@ -111,7 +115,9 @@
 
 ### Switch to the `<branch-name>` branch using the `VS Code Terminal`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To switch to the `<branch-name>` branch,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git switch <branch name>
@@ -161,13 +167,17 @@ Resolve a [merge conflict](./git.md#merge-conflict).
    - `Accept Incoming Change` — keep the other branch's version.
    - `Accept Both Changes` — keep both versions.
 3. Save the file.
-4. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+4. To stage the resolved file,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git add <file-path>
    ```
 
-5. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+5. To continue the merge,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git merge --continue
@@ -200,7 +210,9 @@ For each conflicting file, complete the following steps:
 
 ### Resolve a merge conflict using the `VS Code Terminal`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To see which files have conflicts,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git status
@@ -212,13 +224,17 @@ For each conflicting file, complete the following steps:
 3. Find the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`).
 4. Edit the file to keep the correct content.
 5. Remove all conflict markers from the file.
-6. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+6. To stage the resolved file,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git add <file-path>
    ```
 
-7. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+7. To continue the merge,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git merge --continue
@@ -239,7 +255,9 @@ We call that branch `origin/<branch-name>`.
 
 ### Pull changes from `origin/<branch-name>` using the `VS Code Terminal`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To pull changes from `origin/<branch-name>`,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git pull origin <branch-name>
@@ -264,7 +282,9 @@ We call that branch `origin/<branch-name>`.
 
 ### Pull and rebase using the `VS Code Terminal`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To pull and rebase onto `origin/<branch-name>`,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git pull --rebase origin <branch-name>
@@ -331,13 +351,15 @@ We call that branch `origin/<branch-name>`.
 ### Commit using the `VS Code Terminal`
 
 1. Open the [`VS Code Terminal`](./vs-code.md#open-the-vs-code-terminal).
-2. Run:
+2. To stage and commit your changes,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git add <file-path>
    # example: git add README.md
    # example (path with spaces): git add 'path/some image.svg'
-   
+
    git commit -m '<type>: <short description>'
    # example: git commit -m 'docs: add architecture diagram'
    ```
@@ -369,7 +391,9 @@ We call that branch `origin/<branch-name>`.
 
 ### Undo commits using the `VS Code Terminal`
 
-[Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+To undo the last commit and keep the changes staged,
+
+[run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
 ```terminal
 git reset --soft HEAD~1
@@ -377,13 +401,17 @@ git reset --soft HEAD~1
 
 Your changes are staged now.
 
-You can stage more changes.
+To stage more changes,
+
+[run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
 ```terminal
 git add some-file
 ```
 
-Then, you can commit using the previous message.
+To commit using the previous message,
+
+[run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
 ```terminal
 git commit -C ORIG_HEAD
@@ -397,7 +425,9 @@ See [Undo commit on the current branch](./gitlens.md#undo-a-commit-on-the-curren
 
 ### Publish using the `VS Code Terminal`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To publish the branch to `origin`,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git push -u origin <branch-name>
@@ -415,7 +445,9 @@ See [Undo commit on the current branch](./gitlens.md#undo-a-commit-on-the-curren
 
 ### Push using the `VS Code Terminal`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To push commits to the remote,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git push
@@ -451,15 +483,17 @@ See [Undo commit on the current branch](./gitlens.md#undo-a-commit-on-the-curren
    git checkout <branch-name>
    ```
 
-4. [Run the copied command using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal).
+4. [Run the copied command using the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal).
 
 ### Switch to a new branch using the `VS Code Terminal`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To create and switch to a new branch,
 
-    ```terminal
-    git checkout -b <branch-name>
-    ```
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
+
+   ```terminal
+   git checkout -b <branch-name>
+   ```
 
 ### Switch to a new branch using `GitLens`
 

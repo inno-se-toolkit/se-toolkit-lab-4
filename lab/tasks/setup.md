@@ -24,27 +24,28 @@
   - [1.9. Set up `Python`](#19-set-up-python)
     - [1.9.1. Install `uv`](#191-install-uv)
     - [1.9.2. (UPD) Set up `Python` in `VS Code`](#192-upd-set-up-python-in-vs-code)
-  - [1.10. (NEW) Clean up `Docker`](#110-new-clean-up-docker)
+  - [1.10. (NEW) Prepare `Docker`](#110-new-prepare-docker)
   - [1.11. Start the services](#111-start-the-services)
     - [1.11.1. (UPD) Set up the `Docker` environment](#1111-upd-set-up-the-docker-environment)
-    - [1.11.2. (UPD) Prepare `Docker`](#1112-upd-prepare-docker)
-    - [1.11.3. (UPD) Start the services using `Docker Compose`](#1113-upd-start-the-services-using-docker-compose)
-  - [1.12. (UPD) Open a new terminal](#112-upd-open-a-new-terminal)
-  - [1.13. (UPD) Observe containers and services](#113-upd-observe-containers-and-services)
-    - [1.13.1. (UPD) List running containers](#1131-upd-list-running-containers)
-    - [1.13.2. (UPD) See logs of the running services](#1132-upd-see-logs-of-the-running-services)
-  - [1.14. (UPD) Set up the services](#114-upd-set-up-the-services)
-    - [1.14.1. (UPD) Open `Swagger UI`](#1141-upd-open-swagger-ui)
-    - [1.14.2. (UPD) Set up `pgAdmin`](#1142-upd-set-up-pgadmin)
+    - [1.11.2. (UPD) Start the services using `Docker Compose`](#1112-upd-start-the-services-using-docker-compose)
+  - [1.12. (UPD) Observe containers and services](#112-upd-observe-containers-and-services)
+    - [1.12.1. (UPD) Open a new `VS Code Terminal`](#1121-upd-open-a-new-vs-code-terminal)
+    - [1.12.2. (UPD) List running containers](#1122-upd-list-running-containers)
+    - [1.12.3. (UPD) See logs of the running services](#1123-upd-see-logs-of-the-running-services)
+  - [1.13. (UPD) Set up `Swagger UI`](#113-upd-set-up-swagger-ui)
+  - [1.14. Set up `pgAdmin`](#114-set-up-pgadmin)
+    - [1.14.1. (UPD) Connect `pgAdmin` to the database](#1141-upd-connect-pgadmin-to-the-database)
+    - [1.14.2. (UPD) Inspect the tables](#1142-upd-inspect-the-tables)
   - [1.15. (UPD) Stop the services](#115-upd-stop-the-services)
-  - [1.16. (UPD) Add SSH key for the autochecker](#116-upd-add-ssh-key-for-the-autochecker)
+  - [1.16. Set up the autochecker](#116-set-up-the-autochecker)
+    - [1.16.1. (UPD) Log in to the autochecker](#1161-upd-log-in-to-the-autochecker)
+    - [1.16.2. (UPD) Prepare your VM for checking](#1162-upd-prepare-your-vm-for-checking)
   - [1.17. (UPD) Set up a coding agent](#117-upd-set-up-a-coding-agent)
-  - [1.18. (UPD) Log in to the autochecker](#118-upd-log-in-to-the-autochecker)
 - [2. Optional steps](#2-optional-steps)
-  - [2.4. Set up a coding agent](#24-set-up-a-coding-agent)
-  - [2.1. (NEW) Set up `Nix`](#21-new-set-up-nix)
-  - [2.2. (NEW) Set up `direnv`](#22-new-set-up-direnv)
-  - [2.3. (UPD) Learn to go back after clicking a link](#23-upd-learn-to-go-back-after-clicking-a-link)
+  - [2.1. Set up a coding agent](#21-set-up-a-coding-agent)
+  - [2.2. (NEW) Set up `Nix`](#22-new-set-up-nix)
+  - [2.3. (NEW) Set up `direnv`](#23-new-set-up-direnv)
+  - [2.4. (UPD) Learn to go back after clicking a link](#24-upd-learn-to-go-back-after-clicking-a-link)
   - [2.5. Set up the shell prompt](#25-set-up-the-shell-prompt)
   - [2.6. Customize the `Source Control`](#26-customize-the-source-control)
   - [2.7. Get familiar with `GitLens`](#27-get-familiar-with-gitlens)
@@ -219,13 +220,14 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 1. [Set up `Python` in `VS Code`](../../wiki/python.md#set-up-python-in-vs-code).
 
-### 1.10. (NEW) Clean up `Docker`
+### 1.10. (NEW) Prepare `Docker`
 
 > [!NOTE]
 > Old containers and volumes from a previous lab version may conflict with the updated services.
 > Stop running containers, remove stopped containers, and delete unused volumes so you start with a clean state.
 
-1. [Clean up `Docker`](../../wiki/docker.md#clean-up-docker).
+1. [Start `Docker`](../../wiki/docker.md#start-docker).
+2. [Clean up `Docker`](../../wiki/docker.md#clean-up-docker).
 
 ### 1.11. Start the services
 
@@ -236,7 +238,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 1. Copy the [`.env.docker.example`](../../.env.docker.example) file to the `.env.docker.secret` file:
 
-   [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    cp .env.docker.example .env.docker.secret
@@ -252,16 +254,11 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 > No edits are needed for local development.
 > The default values in [`.env.docker.example`](../../.env.docker.example) work out of the box.
 
-#### 1.11.2. (UPD) Prepare `Docker`
-
-1. [Start `Docker`](../../wiki/docker.md#start-docker).
-2. [Clean up `Docker`](../../wiki/docker.md#clean-up-docker).
-
-#### 1.11.3. (UPD) Start the services using `Docker Compose`
+#### 1.11.2. (UPD) Start the services using `Docker Compose`
 
 1. Start services using the [`docker compose up` command](../../wiki/docker-compose.md#docker-compose-up):
 
-   [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret up --build
@@ -280,25 +277,25 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
    >
    > If you need to re-initialize the database (e.g., after pulling upstream changes to `init.sql`), see [Resetting the database](../../wiki/docker-postgres.md#resetting-the-database).
 
-### 1.12. (UPD) Open a new terminal
+### 1.12. (UPD) Observe containers and services
+
+#### 1.12.1. (UPD) Open a new `VS Code Terminal`
 
 1. [Open a new `VS Code Terminal`](../../wiki/vs-code.md#open-a-new-vs-code-terminal).
 
-### 1.13. (UPD) Observe containers and services
+#### 1.12.2. (UPD) List running containers
 
-#### 1.13.1. (UPD) List running containers
-
-1. [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret ps
    ```
 
-#### 1.13.2. (UPD) See logs of the running services
+#### 1.12.3. (UPD) See logs of the running services
 
 1. See logs for all services:
 
-   [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret logs
@@ -310,63 +307,75 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
    docker compose --env-file .env.docker.secret logs postgres
    ```
 
-### 1.14. (UPD) Set up the services
-
-#### 1.14.1. (UPD) Open `Swagger UI`
+### 1.13. (UPD) Set up `Swagger UI`
 
 1. Open in a browser: <http://127.0.0.1:42001/docs>.
 
    You should see the [`Swagger UI`](../../wiki/swagger.md#swagger-ui) page with the [API](../../wiki/web-development.md#api) documentation.
 
-#### 1.14.2. (UPD) Set up `pgAdmin`
+   <img alt="Swagger UI" src="../images/tasks/setup/swagger-ui.png" style="width:400px">
+
+### 1.14. Set up `pgAdmin`
+
+#### 1.14.1. (UPD) Connect `pgAdmin` to the database
 
 > [!NOTE]
 > [`pgAdmin`](../../wiki/pgadmin.md#what-is-pgadmin) takes 2-3 minutes to start after you have started the services.
 
 1. [Open `pgAdmin`](../../wiki/pgadmin.md#open-pgadmin).
 2. [Add a server in `pgAdmin`](../../wiki/pgadmin.md#add-a-server-in-pgadmin).
-3. [Browse the `interacts` table](../../wiki/pgadmin.md#browse-tables)
+
+#### 1.14.2. (UPD) Inspect the tables
+
+1. [Browse the `interacts` table](../../wiki/pgadmin.md#browse-tables)
 
    You should see rows of data stored in the database.
 
    <img alt="Interaction logs" src="../images/tasks/setup/database-interaction-logs.png" style="width:400px">
 
-   These are records of what `learners` did with `items` (courses, labs, tasks, steps).
-   They `attempt`ed, `complete`d or just `view`ed them.
+   These are records of what `learner`s did with `item`s (courses, labs, tasks, steps).
+   `learner`s `attempt`ed, `complete`d or just `view`ed `item`s.
 
-4. Verify that the following tables exist and contain data:
-   - `items`
-   - `learners`
-   - `interacts`
-
-> [!TIP]
-> To view the data in a table, right-click the table and select `View/Edit Data` -> `All Rows`.
+2. Verify that the following tables also exist:
+   - `item`
+   - `learner`
 
 ### 1.15. (UPD) Stop the services
 
 1. [Check that the current directory is `se-toolkit-lab-4`](../../wiki/shell.md#check-the-current-directory-is-directory-name).
-2. [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+2. [Run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret down
    ```
 
-### 1.16. (UPD) Add SSH key for the autochecker
+### 1.16. Set up the autochecker
+
+> [!NOTE]
+> The autochecker is a bot that checks your repository and VM.
+
+#### 1.16.1. (UPD) Log in to the autochecker
+
+1. Open in Telegram: <https://t.me/auchebot>
+2. Log in.
+
+#### 1.16.2. (UPD) Prepare your VM for checking
 
 1. [Connect to your VM](../../wiki/vm.md#connect-to-the-vm).
 2. [Create the `autochecker` user](../../wiki/vm-autochecker.md#create-the-autochecker-user).
-3. [Add the instructor's SSH public key to the `autochecker` user](../../wiki/vm-autochecker.md#add-an-ssh-public-key-to-the-autochecker-user):
+3. [Add the instructor's `SSH` public key to the `autochecker` user](../../wiki/vm-autochecker.md#add-an-ssh-public-key-to-the-autochecker-user):
 
 ### 1.17. (UPD) Set up a coding agent
 
-Follow the [`Coding agents`](../../wiki/coding-agents.md) guide to set up a coding agent on your machine.
+A coding agent can help you write code, explain concepts, and debug issues.
 
-### 1.18. (UPD) Log in to the autochecker
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+  <img alt="Qwen request" src="../images/tasks/setup/qwen-request.png" style="width:300px">
+  <img alt="Qwen response" src="../images/tasks/setup/qwen-response.png" style="width:300px">
+</div>
 
-1. Open the autochecker in Telegram: <https://t.me/auchebot>
-2. Log in.
-
-Use the autochecker to check the task completion.
+- Option 1: [Set up a `Qwen Code`-based agent](../../wiki/coding-agents.md#set-up-qwen-code-based-agent)
+- Option 2: [Choose another coding agent](../../wiki/coding-agents.md#choose-a-coding-agent).
 
 ---
 
@@ -374,37 +383,27 @@ Use the autochecker to check the task completion.
 
 These enhancements can make your life easier:
 
-- [Set up a coding agent](#24-set-up-a-coding-agent)
-- [Set up `Nix`](#21-new-set-up-nix)
-- [Set up `direnv`](#22-new-set-up-direnv)
-- [Learn to go back after clicking a link](#23-upd-learn-to-go-back-after-clicking-a-link)
+- [Set up `Nix`](#22-new-set-up-nix)
+- [Set up `direnv`](#23-new-set-up-direnv)
+- [Learn to go back after clicking a link](#24-upd-learn-to-go-back-after-clicking-a-link)
 - [Set up the shell prompt](#25-set-up-the-shell-prompt)
 - [Customize the `Source Control`](#26-customize-the-source-control)
 - [Get familiar with `GitLens`](#27-get-familiar-with-gitlens)
 - [Create a label for tasks](#28-create-a-label-for-tasks)
 
-### 2.4. Set up a coding agent
+### 2.1. Set up a coding agent
 
-A coding agent can help you write code, explain concepts, and debug issues.
-
-See [Coding agents](../../wiki/coding-agents.md).
-
-<div style="display:flex;flex-wrap:wrap;gap:10px">
-  <img alt="Qwen request" src="../images/tasks/setup/qwen-request.png" style="width:300px">
-  <img alt="Qwen response" src="../images/tasks/setup/qwen-response.png" style="width:300px">
-</div>
-
-### 2.1. (NEW) Set up `Nix`
+### 2.2. (NEW) Set up `Nix`
 
 1. (Optional) [Read about `Nix`](../../wiki/nix.md#what-is-nix).
 2. [Set up `Nix`](../../wiki/nix.md#set-up-nix).
 
-### 2.2. (NEW) Set up `direnv`
+### 2.3. (NEW) Set up `direnv`
 
-1. [Set up `Nix`](#21-new-set-up-nix).
+1. [Set up `Nix`](#22-new-set-up-nix).
 2. [Set up `direnv`](../../wiki/direnv.md#set-up-direnv).
 
-### 2.3. (UPD) Learn to go back after clicking a link
+### 2.4. (UPD) Learn to go back after clicking a link
 
 > [!NOTE]
 

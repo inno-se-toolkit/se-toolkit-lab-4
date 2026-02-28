@@ -14,7 +14,7 @@
 
 ## What is VM hardening
 
-VM hardening is the process of securing a virtual machine by reducing its attack surface.
+VM hardening is the process of securing a [virtual machine](./vm.md#what-is-a-vm) by reducing its attack surface.
 
 Docs:
 
@@ -24,33 +24,33 @@ Docs:
 
 ### Create a non-root user
 
-1. Connect to the VM as root:
+1. To connect to the VM as root,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ssh root@<vm-ip>
    ```
 
-2. Create a new user:
+2. To create a new user,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    adduser <username>
    ```
 
-3. Add the user to the `sudo` group:
+3. To add the user to the `sudo` group,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    usermod -aG sudo <username>
    ```
 
-4. Copy your [`SSH`](./ssh.md#what-is-ssh) key to the new user:
+4. To copy your [`SSH`](./ssh.md#what-is-ssh) key to the new user,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    mkdir -p /home/<username>/.ssh
@@ -60,9 +60,9 @@ Docs:
    chmod 600 /home/<username>/.ssh/authorized_keys
    ```
 
-5. Verify you can `SSH` as the new user. Open a new terminal on your laptop:
+5. To verify you can `SSH` as the new user,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ssh <username>@<vm-ip>
@@ -74,33 +74,36 @@ Docs:
 
 `ufw` (`Uncomplicated Firewall`) is a simple firewall for [`Linux`](./linux.md#what-is-linux).
 
-1. Allow [`SSH`](./ssh.md#what-is-ssh):
+1. Look up the value of `CADDY_HOST_PORT` in the `.env.docker.secret` file.
+   This is your [`<app-port>`](./placeholders.md#app-port).
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+2. To allow [`SSH`](./ssh.md#what-is-ssh),
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    sudo ufw allow 22
    ```
 
-2. Allow the application port:
+3. To allow the application port,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
-   sudo ufw allow 42002
+   sudo ufw allow <api-port>
    ```
 
-3. Enable the firewall:
+4. To enable the firewall,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    sudo ufw enable
    ```
 
-4. Check the status:
+5. To check the status,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    sudo ufw status
@@ -113,41 +116,41 @@ Docs:
 
 `fail2ban` blocks IP addresses that make too many failed login attempts.
 
-1. Update the package list:
+1. To update the package list,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    sudo apt update
    ```
 
-2. Install `fail2ban`:
+2. To install `fail2ban`,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    sudo apt install -y fail2ban
    ```
 
-3. Enable the service:
+3. To enable the service,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    sudo systemctl enable fail2ban
    ```
 
-4. Start the service:
+4. To start the service,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    sudo systemctl start fail2ban
    ```
 
-5. Check the status:
+5. To check the status,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    sudo systemctl status fail2ban
@@ -155,9 +158,9 @@ Docs:
 
 ### Disable root `SSH` login
 
-1. Open the [`SSH`](./ssh.md#what-is-ssh) config:
+1. To open the [`SSH`](./ssh.md#what-is-ssh) config,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    sudo nano /etc/ssh/sshd_config
@@ -176,9 +179,9 @@ Docs:
 
 ### Disable password authentication
 
-1. Open the [`SSH`](./ssh.md#what-is-ssh) config:
+1. To open the [`SSH`](./ssh.md#what-is-ssh) config,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    sudo nano /etc/ssh/sshd_config
@@ -197,52 +200,16 @@ Docs:
 
 ### Create the `autochecker` user
 
-The `autochecker` user is a restricted user for the instructor to verify VM hardening.
-
-1. Create the user without `sudo` privileges:
-
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   sudo adduser --disabled-password --gecos "" autochecker
-   ```
-
-2. Create the `.ssh` directory:
-
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   sudo mkdir -p /home/autochecker/.ssh
-   sudo chmod 700 /home/autochecker/.ssh
-   ```
-
-3. Add the instructor's [`SSH`](./ssh.md#what-is-ssh) public key:
-
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   echo "<instructor-public-key>" | sudo tee /home/autochecker/.ssh/authorized_keys
-   ```
-
-4. Set permissions:
-
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   sudo chown -R autochecker:autochecker /home/autochecker/.ssh
-   sudo chmod 600 /home/autochecker/.ssh/authorized_keys
-   ```
-
-> [!NOTE]
-> The instructor will provide the public key to add.
+1. [Create the `autochecker` user](./vm-autochecker.md#create-the-autochecker-user).
+2. [Add the `SSH` public key to the `autochecker` user](./vm-autochecker.md#add-an-ssh-public-key-to-the-autochecker-user).
 
 ### Restart `sshd`
 
 After changing the [`SSH`](./ssh.md#what-is-ssh) config, restart the `SSH` service.
 
-1. Validate the config:
+1. To validate the config,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    sudo sshd -t
@@ -250,17 +217,17 @@ After changing the [`SSH`](./ssh.md#what-is-ssh) config, restart the `SSH` servi
 
    If the command prints no output, the config is valid. If it prints errors, fix them in `/etc/ssh/sshd_config` before continuing.
 
-2. Restart the service:
+2. To restart the service,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    sudo systemctl restart sshd
    ```
 
-3. Verify you can still connect. Open a **new** terminal on your laptop and log in:
+3. To verify you can still connect,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ssh <username>@<vm-ip>

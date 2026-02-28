@@ -32,7 +32,7 @@
   - [Check the current shell in the `VS Code Terminal`](#check-the-current-shell-in-the-vs-code-terminal)
   - [Expand the sidebar with open `VS Code Terminal`s](#expand-the-sidebar-with-open-vs-code-terminals)
   - [(`Windows` only) Set the default shell for the `VS Code Terminal`](#windows-only-set-the-default-shell-for-the-vs-code-terminal)
-  - [Run a command using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal)
+  - [Run a command in the `VS Code Terminal`](#run-a-command-in-the-vs-code-terminal)
 - [`Explorer`](#explorer)
   - [Open the `Explorer`](#open-the-explorer)
   - [Open the local file using the `Explorer`](#open-the-local-file-using-the-explorer)
@@ -245,7 +245,7 @@ Actions:
 - [Switch to another `VS Code Terminal`](#switch-to-another-vs-code-terminal)
 - [Copy text inside the `VS Code Terminal`](#copy-text-inside-the-vs-code-terminal)
 - [Paste text inside the `VS Code Terminal`](#paste-text-inside-the-vs-code-terminal)
-- [Run a command using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal)
+- [Run a command in the `VS Code Terminal`](#run-a-command-in-the-vs-code-terminal)
 
 ### Open the `VS Code Terminal`
 
@@ -370,7 +370,7 @@ Method 2:
 6. [Delete all `VS Code Terminal`s](#delete-a-vs-code-terminal).
 7. [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal).
 
-### Run a command using the `VS Code Terminal`
+### Run a command in the `VS Code Terminal`
 
 1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
 2. [Check the current shell in the `VS Code Terminal`](#check-the-current-shell-in-the-vs-code-terminal).
@@ -635,15 +635,17 @@ Here are some [workspace settings](#workspace-settings) that you can change:
 #### Open the file using `code`
 
 1. [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal) if something is running in your current `VS Code Terminal`.
-2. [Run using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal):
+2. To open a file from the terminal,
 
-  ```terminal
-  code <file-path>
-  ```
+   [run in the `VS Code Terminal`](#run-a-command-in-the-vs-code-terminal):
 
-  See [`<file-path>`](./file-system.md#file-path).
+   ```terminal
+   code <file-path>
+   ```
 
-1. (`macOS` only) If the `code <file-path>` shows an error that the `code` command doesn't exist, [add `VS Code` to `PATH`](#macos-only-add-vs-code-to-path).
+   See [`<file-path>`](./file-system.md#file-path).
+
+3. (`macOS` only) If the `code <file-path>` shows an error that the `code` command doesn't exist, [add `VS Code` to `PATH`](#macos-only-add-vs-code-to-path).
 
 ### Open the `Markdown` preview
 
@@ -748,7 +750,9 @@ Steps:
 3. [Install the extension](./vs-code.md#install-the-extension) with the identifier `ms-vscode-remote.remote-wsl`.
 
    This extension lets you use `VS Code` in [`WSL`](./operating-system.md#wsl).
-4. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+4. To install `Ubuntu` in `WSL`,
+
+   [run in the `VS Code Terminal`](#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    wsl --install -d Ubuntu-24.04
@@ -764,18 +768,18 @@ Steps:
 
    See [`PATH` environment variable](./environments.md#path-environment-variable).
 2. [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal).
-3. Check that the `code` command is available in the `VS Code Terminal`:
+3. To check that the `code` command is available,
 
-    [Run using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](#run-a-command-in-the-vs-code-terminal):
 
-    ```terminal
-    code --version
-    ```
+   ```terminal
+   code --version
+   ```
 
-    The output should be similar to this text:
+   The output should be similar to this text:
 
-    ```terminal
-    1.109.0
-    bdd88df003631aaa0bcbe057cb0a940b80a476fa
-    x64
-    ```
+   ```terminal
+   1.109.0
+   bdd88df003631aaa0bcbe057cb0a940b80a476fa
+   x64
+   ```
