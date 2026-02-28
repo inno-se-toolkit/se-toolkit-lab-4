@@ -1,4 +1,4 @@
-# VM
+# Virtual machine
 
 <h2>Table of contents</h2>
 
@@ -20,9 +20,9 @@
 
 ## What is a VM
 
-A virtual machine (`VM`) is a software-emulated computer that runs on a physical [host machine](./computer-networks.md#host), with its own [operating system](./operating-system.md#what-is-an-operating-system) and isolated environment.
+A VM (virtual machine) is a software-emulated computer that runs on a physical [host machine](./computer-networks.md#host), with its own [operating system](./operating-system.md#what-is-an-operating-system) and isolated environment.
 
-In this lab, you use a `VM` provided by the university to deploy and run the application remotely over [SSH](./ssh.md).
+In this lab, you use a VM provided by the university to deploy and run the application remotely over [SSH](./ssh.md#what-is-ssh).
 
 Docs:
 
