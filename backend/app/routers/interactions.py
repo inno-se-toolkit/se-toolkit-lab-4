@@ -16,7 +16,7 @@ def _filter_by_item_id(
 ) -> list[InteractionLog]:
     if item_id is None:
         return interactions
-    return [i for i in interactions if i.learner_id == item_id]
+    return [i for i in interactions if i.item_id == item_id]
 
 
 @router.get("/", response_model=list[InteractionModel])
@@ -47,3 +47,4 @@ async def post_interaction(
             status_code=status.HTTP_422_UNPROCESSABLE_CONTENT,
             detail=str(exc.orig),
         )
+        
