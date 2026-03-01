@@ -42,15 +42,14 @@
     - [1.16.2. (UPD) Prepare your VM for checking](#1162-upd-prepare-your-vm-for-checking)
   - [1.17. (UPD) Set up a coding agent](#117-upd-set-up-a-coding-agent)
 - [2. Optional steps](#2-optional-steps)
-  - [2.1. Set up a coding agent](#21-set-up-a-coding-agent)
-  - [2.2. (NEW) Set up `Nix`](#22-new-set-up-nix)
-  - [2.3. (NEW) Set up `direnv`](#23-new-set-up-direnv)
-  - [2.4. (UPD) Learn to go back after clicking a link](#24-upd-learn-to-go-back-after-clicking-a-link)
-  - [2.5. Set up the shell prompt](#25-set-up-the-shell-prompt)
-  - [2.6. Customize the `Source Control`](#26-customize-the-source-control)
-  - [2.7. Get familiar with `GitLens`](#27-get-familiar-with-gitlens)
-  - [2.8. Create a label for tasks](#28-create-a-label-for-tasks)
-  - [2.9. View `Markdown` files in `VS Code`](#29-view-markdown-files-in-vs-code)
+  - [2.1. (NEW) Set up `Nix`](#21-new-set-up-nix)
+  - [2.2. (NEW) Set up `direnv`](#22-new-set-up-direnv)
+  - [2.3. (UPD) Learn to go back after clicking a link](#23-upd-learn-to-go-back-after-clicking-a-link)
+  - [2.4. Set up the shell prompt](#24-set-up-the-shell-prompt)
+  - [2.5. Customize the `Source Control`](#25-customize-the-source-control)
+  - [2.6. Get familiar with `GitLens`](#26-get-familiar-with-gitlens)
+  - [2.7. Create a label for tasks](#27-create-a-label-for-tasks)
+  - [2.8. View `Markdown` files in `VS Code`](#28-view-markdown-files-in-vs-code)
 
 ## 1. Required steps
 
@@ -100,7 +99,7 @@
 
 1. [Fork the course instructors' repo](../../wiki/github.md#fork-a-repo).
 
-   The course instructors' repo [URL](../../wiki/web-development.md#url) is <https://github.com/inno-se-toolkit/se-toolkit-lab-4>
+   The course instructors' repo [URL](../../wiki/web-development.md#url) is <https://github.com/inno-se-toolkit/se-toolkit-lab-4>.
 
 #### 1.3.3. (UPD) Go to your fork
 
@@ -142,7 +141,8 @@
 #### 1.4.3. (UPD) (`Windows` only) Set the default shell for the `VS Code Terminal`
 
 1. [Check the current shell in the `VS Code Terminal`](../../wiki/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
-2. If it's not `bash` or `zsh`, [set the default shell](../../wiki/vs-code.md#windows-only-set-the-default-shell-for-the-vs-code-terminal) and check again.
+2. If it's not `bash` or `zsh`, [set the default shell](../../wiki/vs-code.md#windows-only-set-the-default-shell-for-the-vs-code-terminal).
+3. [Check the current shell](../../wiki/vs-code.md#check-the-current-shell-in-the-vs-code-terminal) again.
 
 #### 1.4.4. Set up `Git`
 
@@ -236,9 +236,9 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 #### 1.11.1. (UPD) Set up the `Docker` environment
 
-1. Copy the [`.env.docker.example`](../../.env.docker.example) file to the `.env.docker.secret` file:
+1. To copy the [`.env.docker.example`](../../.env.docker.example) file to the `.env.docker.secret` file,
 
-   [Run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    cp .env.docker.example .env.docker.secret
@@ -256,26 +256,24 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 #### 1.11.2. (UPD) Start the services using `Docker Compose`
 
-1. Start services using the [`docker compose up` command](../../wiki/docker-compose.md#docker-compose-up):
+1. To start the services,
 
-   [Run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret up --build
    ```
 
-   > **NOTE**
-   >
-   > [`Docker Compose`](../../wiki/docker-compose.md) reads environment variables from `.env.docker.secret`
-   > and uses them to configure the containers defined in [`docker-compose.yml`](../../docker-compose.yml).
+> [!NOTE]
+> [`Docker Compose`](../../wiki/docker-compose.md) reads environment variables from `.env.docker.secret`
+> and uses them to configure the containers defined in [`docker-compose.yml`](../../docker-compose.yml).
 
-2. Wait for the services to start. You should see log output from the `app`, `postgres`, `pgadmin`, and `caddy` containers.
+1. Wait for the services to start. You should see log output from the `app`, `postgres`, `pgadmin`, and `caddy` containers.
 
-   > **NOTE**
-   >
-   > The database is initialized from [`backend/app/data/init.sql`](../../backend/app/data/init.sql) only on the **first** start of the `PostgreSQL` container.
-   >
-   > If you need to re-initialize the database (e.g., after pulling upstream changes to `init.sql`), see [Resetting the database](../../wiki/docker-postgres.md#resetting-the-database).
+> [!NOTE]
+> The database is initialized from [`backend/app/data/init.sql`](../../backend/app/data/init.sql) only on the **first** start of the `PostgreSQL` container.
+>
+> If you need to re-initialize the database (e.g., after pulling upstream changes to `init.sql`), see [Resetting the database](../../wiki/docker-postgres.md#resetting-the-database).
 
 ### 1.12. (UPD) Observe containers and services
 
@@ -285,7 +283,9 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 #### 1.12.2. (UPD) List running containers
 
-1. [Run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
+1. To list running containers,
+
+   [run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret ps
@@ -293,15 +293,17 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 #### 1.12.3. (UPD) See logs of the running services
 
-1. See logs for all services:
+1. To see logs for all services,
 
-   [Run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret logs
    ```
 
-2. See logs for the `postgres` service:
+2. To see logs for the `postgres` service,
+
+   [run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret logs postgres
@@ -309,11 +311,11 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 ### 1.13. (UPD) Set up `Swagger UI`
 
-1. Open in a browser: <http://127.0.0.1:42001/docs>.
+1. [Open `Swagger UI`](../../wiki/swagger.md#open-swagger-ui).
 
-   You should see the [`Swagger UI`](../../wiki/swagger.md#swagger-ui) page with the [API](../../wiki/web-development.md#api) documentation.
+   You should see the [`Swagger UI`](../../wiki/swagger.md#what-is-swagger-ui) page with the [API](../../wiki/web-development.md#api) documentation.
 
-   <img alt="Swagger UI" src="../images/tasks/setup/swagger-ui.png" style="width:400px">
+   <img alt="Swagger UI" src="../images/tasks/setup/swagger-ui.png" style="width:400px"></img>
 
 ### 1.14. Set up `pgAdmin`
 
@@ -323,15 +325,15 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 > [`pgAdmin`](../../wiki/pgadmin.md#what-is-pgadmin) takes 2-3 minutes to start after you have started the services.
 
 1. [Open `pgAdmin`](../../wiki/pgadmin.md#open-pgadmin).
-2. [Add a server in `pgAdmin`](../../wiki/pgadmin.md#add-a-server-in-pgadmin).
+2. [Add a server in `pgAdmin`](../../wiki/pgadmin.md#connect-to-the-postgresql-server).
 
 #### 1.14.2. (UPD) Inspect the tables
 
-1. [Browse the `interacts` table](../../wiki/pgadmin.md#browse-tables)
+1. [Browse the data in the `interacts` table](../../wiki/pgadmin.md#browse-data-in-the-table).
 
    You should see rows of data stored in the database.
 
-   <img alt="Interaction logs" src="../images/tasks/setup/database-interaction-logs.png" style="width:400px">
+   <img alt="Interaction logs" src="../images/tasks/setup/database-interaction-logs.png" style="width:400px"></img>
 
    These are records of what `learner`s did with `item`s (courses, labs, tasks, steps).
    `learner`s `attempt`ed, `complete`d or just `view`ed `item`s.
@@ -343,7 +345,9 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 ### 1.15. (UPD) Stop the services
 
 1. [Check that the current directory is `se-toolkit-lab-4`](../../wiki/shell.md#check-the-current-directory-is-directory-name).
-2. [Run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
+2. To stop the services,
+
+   [run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret down
@@ -363,18 +367,18 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 1. [Connect to your VM](../../wiki/vm.md#connect-to-the-vm).
 2. [Create the `autochecker` user](../../wiki/vm-autochecker.md#create-the-autochecker-user).
-3. [Add the instructor's `SSH` public key to the `autochecker` user](../../wiki/vm-autochecker.md#add-an-ssh-public-key-to-the-autochecker-user):
+3. [Add the instructor's `SSH` public key to the `autochecker` user](../../wiki/vm-autochecker.md#add-an-ssh-public-key-to-the-autochecker-user).
 
 ### 1.17. (UPD) Set up a coding agent
 
 A coding agent can help you write code, explain concepts, and debug issues.
 
 <div style="display:flex;flex-wrap:wrap;gap:10px">
-  <img alt="Qwen request" src="../images/tasks/setup/qwen-request.png" style="width:300px">
-  <img alt="Qwen response" src="../images/tasks/setup/qwen-response.png" style="width:300px">
+  <img alt="Qwen request" src="../images/tasks/setup/qwen-request.png" style="width:300px"></img>
+  <img alt="Qwen response" src="../images/tasks/setup/qwen-response.png" style="width:300px"></img>
 </div>
 
-- Option 1: [Set up a `Qwen Code`-based agent](../../wiki/coding-agents.md#set-up-qwen-code-based-agent)
+- Option 1: [Set up a `Qwen Code`-based agent](../../wiki/coding-agents.md#set-up-qwen-code-based-agent).
 - Option 2: [Choose another coding agent](../../wiki/coding-agents.md#choose-a-coding-agent).
 
 ---
@@ -383,36 +387,34 @@ A coding agent can help you write code, explain concepts, and debug issues.
 
 These enhancements can make your life easier:
 
-- [Set up `Nix`](#22-new-set-up-nix)
-- [Set up `direnv`](#23-new-set-up-direnv)
-- [Learn to go back after clicking a link](#24-upd-learn-to-go-back-after-clicking-a-link)
-- [Set up the shell prompt](#25-set-up-the-shell-prompt)
-- [Customize the `Source Control`](#26-customize-the-source-control)
-- [Get familiar with `GitLens`](#27-get-familiar-with-gitlens)
-- [Create a label for tasks](#28-create-a-label-for-tasks)
+- [Set up `Nix`](#21-new-set-up-nix)
+- [Set up `direnv`](#22-new-set-up-direnv)
+- [Learn to go back after clicking a link](#23-upd-learn-to-go-back-after-clicking-a-link)
+- [Set up the shell prompt](#24-set-up-the-shell-prompt)
+- [Customize the `Source Control`](#25-customize-the-source-control)
+- [Get familiar with `GitLens`](#26-get-familiar-with-gitlens)
+- [Create a label for tasks](#27-create-a-label-for-tasks)
 
-### 2.1. Set up a coding agent
-
-### 2.2. (NEW) Set up `Nix`
+### 2.1. (NEW) Set up `Nix`
 
 1. (Optional) [Read about `Nix`](../../wiki/nix.md#what-is-nix).
 2. [Set up `Nix`](../../wiki/nix.md#set-up-nix).
 
-### 2.3. (NEW) Set up `direnv`
+### 2.2. (NEW) Set up `direnv`
 
-1. [Set up `Nix`](#22-new-set-up-nix).
+1. [Set up `Nix`](#21-new-set-up-nix).
 2. [Set up `direnv`](../../wiki/direnv.md#set-up-direnv).
 
-### 2.4. (UPD) Learn to go back after clicking a link
+### 2.3. (UPD) Learn to go back after clicking a link
 
 > [!NOTE]
+> Shortcuts for going back after clicking a link:
+>
+> - `VS Code` — see the [shortcut](../../wiki/vs-code.md#shortcut-go-back).
+> - `Firefox` — `Alt+ArrowLeft`.
+> - Other browsers — google.
 
-- `VS Code` - see the [shortcut](../../wiki/vs-code.md#shortcut-go-back)
-- Browsers:
-  - `Firefox`: `Alt+ArrowLeft`
-  - Other browsers: google
-
-### 2.5. Set up the shell prompt
+### 2.4. Set up the shell prompt
 
 `Starship` shows your current `Git` branch, status, and other useful info directly in your [shell prompt](../../wiki/shell.md#shell-prompt) in almost any terminal, including the [`VS Code Terminal`](../../wiki/vs-code.md#vs-code-terminal).
 
@@ -425,7 +427,7 @@ Complete these steps:
 
    <img alt="Starship in the VS Code Terminal" src="../../wiki/images/starship/terminal-prompt.png" style="width:400px"></img>
 
-### 2.6. Customize the `Source Control`
+### 2.5. Customize the `Source Control`
 
 1. [Open the `Source Control`](../../wiki/vs-code.md#open-the-source-control).
 2. Click three dots to the right of `SOURCE CONTROL`.
@@ -433,18 +435,18 @@ Complete these steps:
 
    <img alt="Changes and GitLens" src="../../wiki/images/vs-code/source-control-allowed-views.png" style="width:400px"></img>
 
-### 2.7. Get familiar with `GitLens`
+### 2.6. Get familiar with `GitLens`
 
 [`GitLens`](../../wiki/gitlens.md) helps you work with `Git` in `VS Code`.
 
 Complete these steps:
 
-1. [See all branches](../../wiki/gitlens.md#see-all-branches)
-2. [Look at the commit graph](../../wiki/gitlens.md#look-at-the-commit-graph)
-3. [Inspect the current branch](../../wiki/gitlens.md#inspect-the-current-branch)
-4. [Inspect the remotes](../../wiki/gitlens.md#inspect-the-remotes)
+1. [See all branches](../../wiki/gitlens.md#see-all-branches).
+2. [Look at the commit graph](../../wiki/gitlens.md#look-at-the-commit-graph).
+3. [Inspect the current branch](../../wiki/gitlens.md#inspect-the-current-branch).
+4. [Inspect the remotes](../../wiki/gitlens.md#inspect-the-remotes).
 
-### 2.8. Create a label for tasks
+### 2.7. Create a label for tasks
 
 [Labels](../../wiki/github.md#label) help you filter and organize issues.
 
@@ -459,7 +461,7 @@ Complete these steps:
 2. [Add the label to issues](../../wiki/github.md#add-a-label-to-issues).
 3. [See all issues with the label](../../wiki/github.md#see-all-issues-with-a-label).
 
-### 2.9. View `Markdown` files in `VS Code`
+### 2.8. View `Markdown` files in `VS Code`
 
 If you want to view [`README.md`](../../README.md) and other `Markdown` files in `VS Code` instead of on `GitHub`:
 
