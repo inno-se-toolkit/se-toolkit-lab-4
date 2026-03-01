@@ -10,7 +10,7 @@ Docs:
 
 ## Open the developer tools
 
-Docs:
+See:
 
 - [How to open the devtools in your browser](https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools#how_to_open_the_devtools_in_your_browser).
 - [How To Use The Safari Developer Tools](https://www.debugbear.com/blog/safari-developer-tools)
@@ -26,7 +26,7 @@ Docs:
 ### Open the `Network` tab
 
 1. [Open the developer tools](#open-the-developer-tools).
-1. Click `Network`.
+2. Click `Network`.
 
     - `Chrome`
 
