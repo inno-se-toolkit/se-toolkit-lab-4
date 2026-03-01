@@ -115,7 +115,9 @@
 
 1. [Add a collaborator](../../wiki/github.md#add-a-collaborator) — your partner.
 2. Your partner should add you as a collaborator in their repo.
-3. It's OK if your collaborator can't change `Settings` in your repo.
+
+> [!NOTE]
+> It's OK if your collaborator can't change `Settings` in your repo.
 
 #### 1.3.6. (UPD) Protect your `main` branch
 
@@ -196,7 +198,7 @@
 > Don't overwrite the key if it already exists.
 > You can use the key that you created before for the new VM.
 
-Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-to-the-vm):
+If you can't [connect to your VM](../../wiki/vm.md#connect-to-the-vm), complete these steps:
 
 1. [Set up `SSH`](../../wiki/ssh.md#set-up-ssh).
 2. [Create a VM using the subscription](../../wiki/vm.md#create-a-vm-using-the-subscription).
@@ -265,10 +267,10 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
    ```
 
 > [!NOTE]
-> [`Docker Compose`](../../wiki/docker-compose.md) reads environment variables from `.env.docker.secret`
+> [`Docker Compose`](../../wiki/docker-compose.md#what-is-docker-compose) reads environment variables from `.env.docker.secret`
 > and uses them to configure the containers defined in [`docker-compose.yml`](../../docker-compose.yml).
 
-1. Wait for the services to start. You should see log output from the `app`, `postgres`, `pgadmin`, and `caddy` containers.
+2. Wait for the services to start. You should see log output from the `app`, `postgres`, `pgadmin`, and `caddy` containers.
 
 > [!NOTE]
 > The database is initialized from [`backend/app/data/init.sql`](../../backend/app/data/init.sql) only on the **first** start of the `PostgreSQL` container.
@@ -360,7 +362,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 #### 1.16.1. (UPD) Log in to the autochecker
 
-1. Open in Telegram: <https://t.me/auchebot>
+1. Open in `Telegram`: <https://t.me/auchebot>
 2. Log in.
 
 #### 1.16.2. (UPD) Prepare your VM for checking
@@ -378,8 +380,8 @@ A coding agent can help you write code, explain concepts, and debug issues.
   <img alt="Qwen response" src="../images/tasks/setup/qwen-response.png" style="width:300px"></img>
 </div>
 
-- Option 1: [Set up a `Qwen Code`-based agent](../../wiki/coding-agents.md#set-up-qwen-code-based-agent).
-- Option 2: [Choose another coding agent](../../wiki/coding-agents.md#choose-a-coding-agent).
+- Method 1: [Set up a `Qwen Code`-based agent](../../wiki/coding-agents.md#set-up-qwen-code-based-agent).
+- Method 2: [Choose another coding agent](../../wiki/coding-agents.md#choose-a-coding-agent).
 
 ---
 
@@ -437,7 +439,7 @@ Complete these steps:
 
 ### 2.6. Get familiar with `GitLens`
 
-[`GitLens`](../../wiki/gitlens.md) helps you work with `Git` in `VS Code`.
+[`GitLens`](../../wiki/gitlens.md#what-is-gitlens) helps you work with `Git` in `VS Code`.
 
 Complete these steps:
 
