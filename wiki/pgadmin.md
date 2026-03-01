@@ -86,6 +86,7 @@ Actions:
 
 Actions:
 
+<!-- no toc -->
 - [Open the database](#open-the-database)
 - [Open schemas in the database](#open-schemas-in-the-database)
 - [Open tables in the database](#open-tables-in-the-database)
