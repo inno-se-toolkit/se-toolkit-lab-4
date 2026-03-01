@@ -1,5 +1,18 @@
 # Browser developer tools
 
+- [What are browser developer tools](#what-are-browser-developer-tools)
+- [Open the developer tools](#open-the-developer-tools)
+- [The `Network` tab](#the-network-tab)
+  - [Open the `Network` tab](#open-the-network-tab)
+- [Inspect a request](#inspect-a-request)
+  - [Select the request](#select-the-request)
+  - [Inspect the request headers](#inspect-the-request-headers)
+  - [Inspect the request payload](#inspect-the-request-payload)
+  - [Inspect the response](#inspect-the-response)
+- [Copy request information](#copy-request-information)
+  - [Copy request as `fetch` code](#copy-request-as-fetch-code)
+  - [Copy response](#copy-response)
+
 ## What are browser developer tools
 
 Docs:
