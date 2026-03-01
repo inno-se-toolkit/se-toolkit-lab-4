@@ -9,9 +9,9 @@
   - [Inspect the request headers](#inspect-the-request-headers)
   - [Inspect the request payload](#inspect-the-request-payload)
   - [Inspect the response](#inspect-the-response)
-- [Copy request information](#copy-request-information)
-  - [Copy request as `fetch` code](#copy-request-as-fetch-code)
-  - [Copy response](#copy-response)
+- [Copy the request information](#copy-the-request-information)
+  - [Copy the request as `fetch` code](#copy-the-request-as-fetch-code)
+  - [Copy the response](#copy-the-response)
 
 ## What are browser developer tools
 
@@ -127,18 +127,18 @@ Complete these steps:
 
 <!-- TODO safari -->
 
-## Copy request information
+## Copy the request information
 
 You can:
 
-- [Copy request as `fetch` code](#copy-request-as-fetch-code)
-- [Copy response](#copy-response)
+- [Copy the request as `fetch` code](#copy-the-request-as-fetch-code)
+- [Copy the response](#copy-the-response)
 
-### Copy request as `fetch` code
+### Copy the request as `fetch` code
 
 1. [Select the request](#select-the-request).
 2. Right-click the request.
-3. Copy request to clipboard as `fetch` code:
+3. Copy the request to clipboard as `fetch` code:
 
     - `Chrome`:
 
@@ -155,11 +155,11 @@ You can:
       1. Click `Copy`.
       2. Click `Copy as Fetch`.
 
-### Copy response
+### Copy the response
 
 1. [Select the request](#select-the-request).
 2. Right-click the request.
-3. Copy response to clipboard:
+3. Copy the response to clipboard:
 
     - `Chrome`:
 
