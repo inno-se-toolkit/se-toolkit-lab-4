@@ -6,7 +6,7 @@
   - [Web server](#web-server)
   - [Web client](#web-client)
 - [Backend](#backend)
-- [Frotend](#frotend)
+- [Frontend](#frontend)
 - [Protocol](#protocol)
 - [Data format](#data-format)
   - [`JSON`](#json)
