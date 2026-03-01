@@ -51,3 +51,4 @@ def test_filter_by_item_id_uses_correct_field() -> None:
     assert filtered2[0].id == 3
     assert filtered2[0].item_id == 30
     assert filtered2[0].learner_id == 30
+    
