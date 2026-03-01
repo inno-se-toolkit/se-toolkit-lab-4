@@ -1,5 +1,3 @@
-"""Unit tests for interaction filtering logic."""
-
 from app.models.interaction import InteractionLog
 from app.routers.interactions import _filter_by_item_id
 
