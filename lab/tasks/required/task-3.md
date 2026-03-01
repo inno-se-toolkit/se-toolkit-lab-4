@@ -62,7 +62,7 @@ Title: `[Task] Add Front-end`
 
    1. [Open the file](../../../wiki/vs-code.md#open-the-file) [`frontend/.env.example`](../../../frontend/.env.example).
    2. Copy it to `frontend/.env`.
-   3. Set `VITE_API_TARGET` to the URL of your back-end API, for example `http://<your-vm-ip-address>:<api-port>`.
+   3. Set `VITE_API_TARGET` to the URL of your back-end API, for example `http://<your-vm-ip-address>:<caddy-port>`.
 
 > [!NOTE]
 > The dev server proxies API requests (e.g., `/items`) to the `VITE_API_TARGET` URL.
@@ -126,12 +126,12 @@ Title: `[Task] Add Front-end`
 
 #### 1.4.2. Verify in the browser
 
-1. Open in a browser: `http://<your-vm-ip-address>:<app-port>/`.
+1. Open in a browser: `http://<your-vm-ip-address>:<caddy-port>/`.
 
    Replace:
 
    - [`<your-vm-ip-address>`](../../../wiki/vm.md#your-vm-ip-address)
-   - [`<app-port>`](../../../wiki/placeholders.md#app-port).
+   - [`<caddy-port>`](../../../wiki/caddy.md#caddy-port).
 
 2. Verify that the front-end loads and displays data from the API.
 

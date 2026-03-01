@@ -89,7 +89,7 @@ Docs:
    [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
-   sudo ufw allow <api-port>
+   sudo ufw allow <caddy-port>
    ```
 
 4. To enable the firewall,

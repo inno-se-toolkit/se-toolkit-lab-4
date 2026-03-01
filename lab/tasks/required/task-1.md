@@ -97,10 +97,10 @@ Title: `[Task] Observe System Component Interaction`
 
 ### 1.3. Open `Swagger UI`
 
-1. Open in a browser: `http://<your-vm-ip-address>:<api-port>/docs`. Replace:
+1. Open in a browser: `http://<your-vm-ip-address>:<caddy-port>/docs`. Replace:
 
    - [`<your-vm-ip-address>`](../../../wiki/vm.md#your-vm-ip-address);
-   - [`<api-port>`](../../../wiki/placeholders.md#api-port).
+   - [`<caddy-port>`](../../../wiki/caddy.md#caddy-port).
 
 2. [Authorize](../../../wiki/swagger.md#authorize-in-swagger-ui) with the API key (`API_TOKEN`) from `.env.docker.secret`.
 
