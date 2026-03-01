@@ -185,7 +185,12 @@ Title: `[Task] Add Front-end`
    docker compose --env-file .env.docker.secret up --build caddy -d
    ```
 
-6. Open the [`<app-url>`](../../../wiki/placeholders.md#app-url) in the browser and verify the new column appears in the production build.
+6. Open in the browser: `http://<your-vm-ip-address>:<caddy-port>`. Replace:
+
+   - [`<your-vm-ip-address>`](../../../wiki/vm.md#your-vm-ip-address)
+   - [`<caddy-port>`](../../../wiki/caddy.md#caddy-port)
+
+7. Verify the new column appears in the production build.
 
 ### 1.6. Finish the task
 
