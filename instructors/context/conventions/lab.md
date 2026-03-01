@@ -592,7 +592,5 @@ Name tables according to their role in the schema:
 - **Entity tables** — singular noun (e.g., `learner`, `item`).
 - **Relationship tables** — verb (e.g., `interacts`).
 
-| Role         | Convention    | Example           |
-| ------------ | ------------- | ----------------- |
-| Entity       | singular noun | `learner`, `item` |
-| Relationship | verb          | `interacts`       |
+- **Entity** — singular noun — `learner`, `item`
+- **Relationship** — verb — `interacts`

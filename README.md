@@ -23,7 +23,7 @@ The `API` is deployed and secured. Now the team wants to prove it works with rea
 
 A senior engineer explains your next assignment:
 
-> 1. Redeploy the back-end and observe how requests flow from `Swagger` through the `API` to the database.
+> 1. Redeploy the back-end and observe how requests flow from `Swagger UI` through the `API` to the database.
 > 2. Write unit and end-to-end tests, discover existing bugs, and fix them.
 > 3. Add a front-end to the system and modify it using an AI coding agent.
 
@@ -50,7 +50,7 @@ By the end of this lab, you should be able to:
 
 - Deploy a back-end service to a remote VM.
 - Use browser developer tools to inspect `HTTP` requests.
-- Examine the request path from `Swagger` through the `API` to the database.
+- Examine the request path from `Swagger UI` through the `API` to the database.
 - Construct unit and end-to-end tests for boundary-value cases.
 - Diagnose bugs from failing test output and apply fixes.
 - Use an AI coding agent to generate and refine tests.

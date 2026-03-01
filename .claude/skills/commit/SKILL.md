@@ -17,10 +17,10 @@ Read `docs/contributing/conventions/commits.md` for the full reference
 Always append this trailer:
 
 ```text
-Co-Authored-By: <your current model name> <noreply@anthropic.com>
+Co-Authored-By: <model name> <noreply email>
 ```
 
-Use your actual model name (e.g. `Claude Opus 4.6`, `Claude Sonnet 4.6`).
+Use your actual model name and vendor no-reply email (e.g. `Claude Opus 4.6 <noreply@anthropic.com>`, `Qwen 2.5 <noreply@alibaba.com>`).
 
 ## Staging and committing
 

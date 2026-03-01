@@ -38,11 +38,11 @@ See [VM image](./vm-info.md) for the information about your VM.
 
 ## `<your-vm-name>`
 
-The name you chose when [creating the VM](#create-a-vm-using-the-subscription).
+The name you chose when [creating the VM](#create-a-vm-using-the-subscription) (without `<` and `>`).
 
 ## `<your-vm-ip-address>`
 
-The [IP address](./computer-networks.md#ip-address) of [your VM](#your-vm).
+The [IP address](./computer-networks.md#ip-address) of [your VM](#your-vm) (without `<` and `>`).
 
 Example: `10.93.24.1`.
 

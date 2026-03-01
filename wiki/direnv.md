@@ -15,7 +15,7 @@
 
 ## What is `direnv`
 
-`direnv` is a [shell](./shell.md#what-is-shell) extension that automatically loads and unloads [environment variables](./environments.md#environment-variables) when you enter or leave a [directory](./file-system.md#directory).
+`direnv` is a [shell](./shell.md#what-is-a-shell) extension that automatically loads and unloads [environment variables](./environments.md#environment-variable) when you enter or leave a [directory](./file-system.md#directory).
 
 In this project, `direnv` reads the [`.envrc`](../.envrc) file and uses [`Nix`](./nix.md#what-is-nix) to set up the [development environment](./environments.md#development-environment) with the correct [tools](./package-manager.md#tool) and [dependencies](./package-manager.md#dependency).
 

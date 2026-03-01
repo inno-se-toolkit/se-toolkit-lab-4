@@ -52,6 +52,7 @@ The VM autochecker is a bot that verifies VM setup by connecting via [`SSH`](./s
 
 ## Copy `SSH` authorized keys to a user
 
+<!-- TODO remove? -->
 Copy the `authorized_keys` file from the current user to another user so they can log in with the same [`SSH`](./ssh.md#what-is-ssh) key.
 
 > [!NOTE]

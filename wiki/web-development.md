@@ -5,6 +5,8 @@
 - [Web server and web client](#web-server-and-web-client)
   - [Web server](#web-server)
   - [Web client](#web-client)
+- [Backend](#backend)
+- [Frontend](#frontend)
 - [Protocol](#protocol)
 - [Data format](#data-format)
   - [`JSON`](#json)
@@ -50,6 +52,14 @@ A web server is software that delivers content or services to [web clients](#web
 A web client is software that requests content from a [web server](#web-server) and displays the received content.
 
 Web clients include browsers (`Chrome`, `Firefox`) and command-line tools ([`curl`](#send-a-get-request-using-curl)).
+
+## Backend
+
+<!-- TODO -->
+
+## Frontend
+
+<!-- TODO -->
 
 ## Protocol
 
@@ -182,6 +192,8 @@ curl -s https://jsonplaceholder.typicode.com/todos/1 | jq .
 <!-- TODO other browsers -->
 
 ## URL
+
+<!-- TODO move to computer networks -->
 
 A URL (`Uniform Resource Locator`) is a reference or address used to identify and locate resources on the Internet. It's commonly known as a "web address" and specifies the location of a resource on a web server as well as the protocol used to access it.
 

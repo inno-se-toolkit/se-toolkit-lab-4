@@ -15,6 +15,7 @@
 
 Actions:
 
+- [What is `Swagger UI`](#what-is-swagger-ui)
 - [Open `Swagger UI`](#open-swagger-ui)
 - [Authorize in `Swagger UI`](#authorize-in-swagger-ui)
 - [Try an endpoint in `Swagger UI`](#try-an-endpoint-in-swagger-ui)
@@ -27,9 +28,10 @@ Actions:
 
 **On a deployed VM:**
 
-1. Open in a browser: `http://<your-vm-ip-address>:<api-port>/docs`.
+1. Open in a browser: `http://<your-vm-ip-address>:<caddy-port>/docs`. Replace:
 
-   Replace [`<your-vm-ip-address>`](./vm.md#your-vm-ip-address) with the IP address of your VM. See [`<api-port>`](./placeholders.md#api-port).
+   - [`<your-vm-ip-address>`](./vm.md#your-vm-ip-address)
+   - [`<caddy-port>`](./caddy.md#caddy-port)
 
 ## Authorize in `Swagger UI`
 

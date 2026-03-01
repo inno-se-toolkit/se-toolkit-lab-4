@@ -93,6 +93,9 @@ If you installed `Docker Desktop`:
 
 ### Clean up `Docker`
 
+> [!NOTE]
+> If there are permission errors, replace `docker` with `sudo docker`.
+
 1. To stop all running containers,
 
    [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
@@ -151,6 +154,8 @@ docker run --name <container-name> -p <host-port>:<container-port> <image-name>
 See [`Docker Compose`](./docker-compose.md) for the full list of commands.
 
 ### Service
+
+<!-- TODO move to docker-compose.md -->
 
 A service is a named entry under the `services:` key in `docker-compose.yml`. It defines how to build or pull an [image](#image) and run it as a [container](#container).
 

@@ -20,15 +20,15 @@
 - [4.18. Inline formatting of technical terms](#418-inline-formatting-of-technical-terms)
 - [4.19. Steps with sub-steps](#419-steps-with-sub-steps)
 - [4.20. Placeholders in docs](#420-placeholders-in-docs)
+- [4.21. `docker compose up` commands](#421-docker-compose-up-commands)
 
 ## 4.1. Instructions wording
 
-| Action             | Wording                                        |
-| ------------------ | ---------------------------------------------- |
-| Navigate somewhere | `Go to X.`                                     |
-| Click something    | `Click X.`                                     |
-| Choose an option   | `Method N:` prefix (see [4.6](#46-little-toc)) |
-| Complete all steps | `Complete the following steps:`                |
+- **Navigate somewhere** — `Go to X.`
+- **Click something** — `Click X.`
+- **Choose an option** — `Method N:` prefix (see [4.6](#46-little-toc))
+- **Complete all steps** — `Complete these steps:`
+- **Conditional steps** — `If <condition>, complete these steps:`
 
 - **Split compound instructions.** Never write "Do A and do B." Instead, split into two numbered steps.
 - **Finish complete sentences with a `.`**
@@ -62,6 +62,8 @@ From a wiki file:
    <command>
    ```
 ~~~
+
+Commands that run on a VM (after an SSH connection) use the same pattern — students type them in the `VS Code Terminal` via the SSH session.
 
 Exception: `vs-code.md` itself is exempt because the link would be self-referential.
 
@@ -127,6 +129,7 @@ Don't provide a little ToC when all lists of items are short.
 - Tasks can reference steps in other tasks: `[Run the web server](./task-1.md#8-run-the-web-server)`.
 - **Don't link to the top-level heading** (the `#` title) of a file. Link to a specific subsection instead. The top-level heading is just the document title — linking to it is the same as linking to the file with no anchor. Good: `[Linux](./linux.md#what-is-linux)`. Bad: `[Linux](./linux.md#linux)`.
 - **Compound phrases:** When a tool name and a concept naturally form a single phrase (e.g., `` `GitHub` pull request ``, `` `VS Code` Terminal ``), link the whole phrase to the concept's section rather than creating two adjacent links. Good: `` [`GitHub` pull request](./github.md#pull-request) ``. Bad: `` [`GitHub`](./github.md) [pull request](./github.md#pull-request) ``.
+- **No consecutive links:** Two links next to each other with no plain text between them look like a single link in the rendered preview — the reader can't tell where one ends and the next begins. Reword the sentence so at least one plain-text word separates them. Good: `a [process](…) that [listens on a port](…)`. Bad: `a [process](…) [listens on a port](…)`.
 
 ## 4.9. Notes, tips, warnings
 
@@ -276,4 +279,12 @@ Bad: `` Open <http://127.0.0.1:5050> in a browser. ``
 
 Good: `` Open <pgadmin-url> in a browser. ``
 
-Define every placeholder in `wiki/placeholders.md`. Each placeholder gets its own section that links to its definition in the relevant wiki doc.
+When defining a placeholder, clarify that the value does not include `<` and `>` wherever it may not be obvious to the reader. Use the format: ``(without `<` and `>`)`` at the end of the description sentence.
+
+## 4.21. `docker compose up` commands
+
+Always include the `--build` flag when writing `docker compose up` commands in instructions. This ensures containers are rebuilt from the latest source, preventing students from running stale images.
+
+Good: `docker compose up --build`
+
+Bad: `docker compose up`

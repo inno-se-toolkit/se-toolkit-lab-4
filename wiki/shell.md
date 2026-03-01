@@ -2,7 +2,7 @@
 
 <h2>Table of contents</h2>
 
-- [What is shell](#what-is-shell)
+- [What is a shell](#what-is-a-shell)
   - [Login shell](#login-shell)
 - [Shell variants](#shell-variants)
   - [`bash`](#bash)
@@ -17,7 +17,7 @@
 - [Useful commands](#useful-commands)
   - [Check what shell is running](#check-what-shell-is-running)
 
-## What is shell
+## What is a shell
 
 An [operating system](./operating-system.md) shell is a computer program that provides relatively broad and direct access to the system on which it runs.
 [[source](https://en.wikipedia.org/wiki/Shell_(computing))]

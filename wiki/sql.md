@@ -3,9 +3,7 @@
 <h2>Table of contents</h2>
 
 - [What is `SQL`](#what-is-sql)
-- [`SELECT`](#select)
-- [`INSERT`](#insert)
-- [`WHERE`](#where)
+- [`SQL` query](#sql-query)
 
 ## What is `SQL`
 
@@ -14,33 +12,12 @@
 Docs:
 
 - [PostgreSQL SQL syntax](https://www.postgresql.org/docs/current/sql.html)
+- [SQL Tutorial](https://www.w3schools.com/sql/sql_intro.asp)
 
-## `SELECT`
+## `SQL` query
 
-Retrieve data from a table:
+<!-- TODO improve description -->
 
-```sql
-SELECT * FROM items;
-```
+An `SQL` script that can be run against a database.
 
-Retrieve specific columns:
-
-```sql
-SELECT title, description FROM items;
-```
-
-## `INSERT`
-
-Add a new row to a table:
-
-```sql
-INSERT INTO items (title, description) VALUES ('New Item', 'A description.');
-```
-
-## `WHERE`
-
-Filter rows by a condition:
-
-```sql
-SELECT * FROM learners WHERE enrolled_at >= '2025-10-01';
-```
+You can [run queries using `pgAdmin`](./pgadmin.md#run-a-query).

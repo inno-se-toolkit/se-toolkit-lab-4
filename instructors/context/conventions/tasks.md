@@ -7,7 +7,7 @@
 - [12. Task design principles](#12-task-design-principles)
   - [12.1. Progressive complexity](#121-progressive-complexity)
   - [12.2. Every task teaches something](#122-every-task-teaches-something)
-  - [12.3. High-level instructions with low-level fallbacks](#123-high-level-instructions-with-low-level-fallbacks)
+  - [12.3. Step-by-step instructions](#123-step-by-step-instructions)
   - [12.4. Provide fallback methods](#124-provide-fallback-methods)
   - [12.5. Localize instructions](#125-localize-instructions)
   - [12.6. Git workflow integration](#126-git-workflow-integration)
@@ -169,19 +169,17 @@ Each task has a clear **Purpose** (what the student learns) and **Context** (why
 
 When the lab has multiple domain entities (e.g., resources, models, tables), assign each entity a distinct learning role:
 
-| Role      | What students do              | Example                                                |
-| --------- | ----------------------------- | ------------------------------------------------------ |
-| Reference | Study existing implementation | `items` endpoints (fully implemented)                  |
-| Debug     | Enable and fix broken code    | `interactions` endpoint (commented out, contains bugs) |
-| Implement | Build from a template         | `learners` endpoint (placeholder-based template)       |
+- **Reference** — study existing implementation — `items` endpoints (fully implemented)
+- **Debug** — enable and fix broken code — `interactions` endpoint (commented out, contains bugs)
+- **Implement** — build from a template — `learners` endpoint (placeholder-based template)
 
 This prevents overlap and ensures each task has a unique learning objective.
 
-### 12.3. High-level instructions with low-level fallbacks
+### 12.3. Step-by-step instructions
 
-- Write high-level instructions in the task document.
-- Link to wiki sections for detailed, step-by-step breakdowns.
-- This way, experienced students move fast while beginners can follow detailed guides.
+- Provide explicit step-by-step instructions in the task document. Each numbered step should be a single concrete action — "Open the file", "Click `Execute`", "Run in the `VS Code Terminal`".
+- Link to wiki sections for reusable tool operations (e.g., how to run a command in the terminal, how to open a file). This keeps task steps focused on the domain while letting beginners follow tool-specific guides.
+- When a step repeats a process from an earlier task, reference the earlier task step instead of repeating the full instructions (see [12.12. Cross-task references](#1212-cross-task-references)).
 
 ### 12.4. Provide fallback methods
 

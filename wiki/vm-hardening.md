@@ -74,8 +74,7 @@ Docs:
 
 `ufw` (`Uncomplicated Firewall`) is a simple firewall for [`Linux`](./linux.md#what-is-linux).
 
-1. Look up the value of `CADDY_HOST_PORT` in the `.env.docker.secret` file.
-   This is your [`<app-port>`](./placeholders.md#app-port).
+1. Find the [`<caddy-port>`](./caddy.md#caddy-port).
 
 2. To allow [`SSH`](./ssh.md#what-is-ssh),
 
@@ -90,7 +89,7 @@ Docs:
    [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
-   sudo ufw allow <api-port>
+   sudo ufw allow <caddy-port>
    ```
 
 4. To enable the firewall,

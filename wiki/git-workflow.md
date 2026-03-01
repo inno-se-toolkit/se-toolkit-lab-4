@@ -60,6 +60,8 @@ Complete the following steps:
 1. [Pull and rebase from `origin/main`](./git-vscode.md#pull-changes-from-originbranch-name-and-rebase).
 2. If conflicts occur, [resolve them](./git-vscode.md#resolve-a-merge-conflict).
 
+<!-- TODO pull from upstream -->
+
 ## Switch to a new branch
 
 [Create a new branch and switch to it](./git-vscode.md#switch-to-a-new-branch).

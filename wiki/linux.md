@@ -11,6 +11,7 @@
 - [Groups](#groups)
 - [Users](#users)
   - [The `root` user](#the-root-user)
+  - [A non-root user](#a-non-root-user)
   - [Get my current user](#get-my-current-user)
   - [Create a non-root user](#create-a-non-root-user)
 - [Permissions](#permissions)
@@ -80,6 +81,10 @@ Servers and VMs usually run multiple users.
 ### The `root` user
 
 `root` is the administrator user.
+
+### A non-root user
+
+<!-- TODO -->
 
 ### Get my current user
 

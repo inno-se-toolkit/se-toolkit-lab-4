@@ -12,7 +12,7 @@
 ## What is a flake
 
 A flake is a [`Nix`](./nix.md#what-is-nix) project that declares its [dependencies](./package-manager.md#dependency) and outputs in a `flake.nix` file.
-It provides a standardized way to define reproducible [environments](./environments.md#what-is-environment), [packages](./package-manager.md#package), and [devshells](./nix-devshell.md#what-is-a-devshell).
+It provides a standardized way to define reproducible [environments](./environments.md#what-is-an-environment), [packages](./package-manager.md#package), and [devshells](./nix-devshell.md#what-is-a-devshell).
 
 In this project, the flake is defined in [`flake.nix`](../flake.nix).
 

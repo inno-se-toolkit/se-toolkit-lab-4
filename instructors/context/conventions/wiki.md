@@ -101,7 +101,6 @@ Depending on the lab, consider creating wiki files for:
 - `visualize-architecture.md` — Draw.io, PlantUML, and Mermaid for architecture diagrams.
 - `coding-agents.md` — LLM-based coding agents setup and configuration.
 - `useful-programs.md` — Command-line tools: curl, jq, find, ripgrep.
-- `placeholders.md` — Index of all placeholders used in the lab, each linking to its definition in the relevant wiki doc.
 
 ----
 
