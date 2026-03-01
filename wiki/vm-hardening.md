@@ -74,8 +74,7 @@ Docs:
 
 `ufw` (`Uncomplicated Firewall`) is a simple firewall for [`Linux`](./linux.md#what-is-linux).
 
-1. Look up the value of `CADDY_HOST_PORT` in the `.env.docker.secret` file.
-   This is your [`<app-port>`](./placeholders.md#app-port).
+1. Find the [`<caddy-port>`](./caddy.md#caddy-port).
 
 2. To allow [`SSH`](./ssh.md#what-is-ssh),
 
