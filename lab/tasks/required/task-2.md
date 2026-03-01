@@ -100,7 +100,7 @@ Title: `[Task] Back-end Testing`
 
    An interaction where `item_id` and `learner_id` are different values — for example, `item_id=1` and `learner_id=2`. When filtering by `item_id=1`, this interaction should appear in the results.
 
-   Name the test `test_filter_excludes_interaction_with_different_learner_id`.
+   Name the test `test_filter_includes_interaction_with_different_learner_id`.
 
 3. To run the tests,
 
@@ -115,13 +115,13 @@ Title: `[Task] Back-end Testing`
    The output should be similar to this:
 
    ```terminal
-   FAILED backend/tests/unit/test_interactions.py::test_filter_excludes_interaction_with_different_learner_id - AssertionError: assert 0 == 1
+   FAILED backend/tests/unit/test_interactions.py::test_filter_includes_interaction_with_different_learner_id - AssertionError: assert 0 == 1
    ```
 
    This line means the following:
    - The test failed (`FAILED`).
    - The test is in the file `backend/tests/unit/test_interactions.py`.
-   - The name of the failing test is `test_filter_excludes_interaction_with_different_learner_id`.
+   - The name of the failing test is `test_filter_includes_interaction_with_different_learner_id`.
    - The failed assertion is `assert 0 == 1` — the filter returned 0 interactions, but 1 was expected.
 
 #### 1.3.3. Fix the bug
@@ -165,6 +165,12 @@ return [i for i in interactions if i.item_id == item_id]
 
 2. All tests should pass.
 
+   The output should be similar to this:
+
+   ```terminal
+   ===================== 4 passed in X.XXs =====================
+   ```
+
 #### 1.3.5. Commit the fix
 
 1. [Commit](../../../wiki/git-workflow.md#commit) your changes.
@@ -185,7 +191,7 @@ return [i for i in interactions if i.item_id == item_id]
 
 #### 1.4.1. Redeploy the fixed version
 
-1. Deploy the fixed version to your VM. Follow the same deployment process as in Task 1 (see the [VM](../../../wiki/vm.md) wiki page for a reminder).
+1. [Deploy the fixed version to your VM](./task-1.md#12-deploy-the-back-end-to-the-vm).
 
 #### 1.4.2. Run existing end-to-end tests
 
@@ -233,14 +239,6 @@ return [i for i in interactions if i.item_id == item_id]
 
    - Test 1: `GET /interactions/` returns [HTTP status code](../../../wiki/http.md#http-response-status-code) `200`.
    - Test 2: `GET /interactions/` response body is a [JSON](../../../wiki/file-formats.md#json) array.
-
-   <details><summary>Click to open a hint</summary>
-
-   The response model for `GET /interactions/` defines the fields the API must return.
-   Compare the field names in the response model to the column names in the database.
-   A mismatch there causes the server to fail when building the response.
-
-   </details>
 
    <details><summary>Click to open the solution</summary>
 
@@ -310,7 +308,7 @@ return [i for i in interactions if i.item_id == item_id]
 
 #### 1.4.5. Redeploy and rerun
 
-1. Deploy the fixed version to the VM.
+1. [Deploy the fixed version to the VM](./task-1.md#12-deploy-the-back-end-to-the-vm).
 2. To run the end-to-end tests,
 
    [run in the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
@@ -338,7 +336,7 @@ return [i for i in interactions if i.item_id == item_id]
 
 #### 1.5.1. Generate tests
 
-1. Open the AI agent in the back-end project directory.
+1. Open the [coding agent](../../../wiki/coding-agents.md#what-is-a-coding-agent) in the back-end project directory.
 2. Give it this prompt:
 
    > "Read the back-end source code and the existing unit tests. Generate five new unit tests that cover edge cases and boundary values not already tested."
