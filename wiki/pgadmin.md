@@ -11,6 +11,7 @@
 - [Browse the table](#browse-the-table)
 - [Inspect columns in the table](#inspect-columns-in-the-table)
 - [Run a query](#run-a-query)
+- [Copy the data output](#copy-the-data-output)
 - [Get the ER diagram](#get-the-er-diagram)
 
 ## What is `pgAdmin`
@@ -144,4 +145,15 @@ The value of [`PGADMIN_HOST_PORT` in `.env.docker.secret`](./dotenv-docker-secre
    In the `Messages` tab, you should see the text report about your query.
 
    <img alt="Query messages tab" src="./images/pgadmin/query-messages-tab.png" style="width:300px">
+
+## Copy the data output
+
+1. [Run a query](#run-a-query).
+2. Open the `Data Output` tab.
+3. Click the upper-left corner in the `Data Output` tab to select the full table.
+
+   <img alt="Data Output - select all" src="./images/pgadmin/data-output-select-all.png" style="width:400px">
+4. Click `Copy` to copy the full table to the clipboard.
+
+   <img alt="Data Output - select all" src="./images/pgadmin/data-output-copy.png" style="width:400px">
 
