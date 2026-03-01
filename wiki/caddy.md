@@ -58,6 +58,6 @@ This configuration:
 
 The [port number](./computer-networks.md#port-number) (without `<` and `>`) which `Caddy` [listens on](./computer-networks.md#listen-on-a-port).
 
-The port number is the value of [`CADDY_HOST_PORT`](./dotenv-docker-secret.md#caddy_host_port).
+The port number is the value of [`CADDY_HOST_PORT`](./dotenv-docker-secret.md#caddy_host_port) in [`.env.docker.secret`](./dotenv-docker-secret.md#what-is-envdockersecret).
 
 Example: `42000`.
