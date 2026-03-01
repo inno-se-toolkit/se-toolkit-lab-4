@@ -136,6 +136,9 @@ You can:
 
 ### Copy the request as `fetch` code
 
+> [!NOTE]
+> The code is written in [`JavaScript`](./programming-language.md#javascript).
+
 1. [Select the request](#select-the-request).
 2. Right-click the request.
 3. Copy the request to clipboard as `fetch` code:
