@@ -280,8 +280,6 @@ Bad: `` Open <http://127.0.0.1:5050> in a browser. ``
 
 Good: `` Open <pgadmin-url> in a browser. ``
 
-Define every placeholder in `wiki/placeholders.md`. Each placeholder gets its own section that links to its definition in the relevant wiki doc.
-
 When defining a placeholder, clarify that the value does not include `<` and `>` wherever it may not be obvious to the reader. Use the format: ``(without `<` and `>`)`` at the end of the description sentence.
 
 ## 4.21. `docker compose up` commands
