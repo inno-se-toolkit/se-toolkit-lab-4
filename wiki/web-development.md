@@ -57,7 +57,7 @@ Web clients include browsers (`Chrome`, `Firefox`) and command-line tools ([`cur
 
 <!-- TODO -->
 
-## Frotend
+## Frontend
 
 <!-- TODO -->
 
