@@ -99,7 +99,7 @@ function App() {
             </tr>
           </thead>
           <tbody>
-            {items.map((item) => (
+            {items.map( (item) => (
               <tr key={item.id}>
                 <td>{item.id}</td>
                 <td>{item.type}</td>
@@ -116,3 +116,4 @@ function App() {
 }
 
 export default App
+
