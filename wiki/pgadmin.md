@@ -3,21 +3,36 @@
 <h2>Table of contents</h2>
 
 - [What is `pgAdmin`](#what-is-pgadmin)
+- [`<pgadmin-port>`](#pgadmin-port)
 - [Open `pgAdmin`](#open-pgadmin)
-- [Add a server in `pgAdmin`](#add-a-server-in-pgadmin)
-- [Browse tables](#browse-tables)
-- [Inspect columns](#inspect-columns)
+- [Connect to a `PostgreSQL` server](#connect-to-a-postgresql-server)
+- [Open the database](#open-the-database)
+- [Open tables in the database](#open-tables-in-the-database)
+- [Browse the table](#browse-the-table)
+- [Inspect columns in the table](#inspect-columns-in-the-table)
 - [Run a query](#run-a-query)
+- [Get the ER diagram](#get-the-er-diagram)
 
 ## What is `pgAdmin`
 
 `pgAdmin` is a web-based graphical tool for managing `PostgreSQL` databases.
 
-It lets you browse tables, run SQL queries, and inspect the database schema.
+It lets you:
+
+<!-- no toc -->
+- [connect to a `PostgreSQL` server](#connect-to-a-postgresql-server);
+- [open a database](#open-the-database) on that server;
+- inspect the [database schema](./database.md#database-schema);
+- [browse tables](#browse-the-table) in that database;
+- run [`SQL` queries](./sql.md#sql-query) against that database.
 
 Docs:
 
 - [Official PgAdmin docs](https://www.pgadmin.org/docs/)
+
+## `<pgadmin-port>`
+
+The value of [`PGADMIN_HOST_PORT` in `.env.docker.secret`](./dotenv-docker-secret.md#pgadmin_host_port) that you used to run the `pgadmin` [service](./docker.md#service).
 
 ## Open `pgAdmin`
 
@@ -26,29 +41,33 @@ Docs:
 >
 > The actual values are in `.env.docker.secret`.
 
-1. Open <http://127.0.0.1:42003> in a browser.
+1. Open `http://<address>:<pgadmin-port>` in a browser. Replace:
+   - `<address>` with:
+     - [`localhost`](./computer-networks.md#localhost) if you deployed on your local machine.
+     - [`<your-vm-ip-address>`](vm.md#your-vm-ip-address) if you deployed on [your VM](./vm.md#your-vm);
+   - [`<pgadmin-port>`](#pgadmin-port).
 2. Log in with the credentials from `.env.docker.secret`:
    - `Email`: the value of `PGADMIN_EMAIL` (default: `admin@example.com`).
    - `Password`: the value of `PGADMIN_PASSWORD` (default: `admin`).
 
-## Add a server in `pgAdmin`
+<!-- TODO servers.json -->
+
+## Connect to a `PostgreSQL` server
 
 > [!NOTE]
-> The default values are defined in [`.env.docker.example`](../.env.docker.example).
->
-> The actual values are in `.env.docker.secret`.
+> The environment variables are defined in the [`.env.docker.secret`](./dotenv-docker-secret.md#what-is-envdockersecret) file that you used to deploy the [`pgadmin` service](./docker-compose-yml.md#pgadmin-service).
 
 1. [Open `pgAdmin`](#open-pgadmin).
 2. Right-click `Servers` in the left panel.
 3. Click `Register` -> `Server...`.
 4. In the `General` tab:
-   - Name: [`<db-name>`](./database.md#db-name).
+   - `Name`: the value of [`POSTGRES_SERVER_NAME`](./dotenv-docker-secret.md#postgres_server_name).
 5. In the `Connection` tab:
-   - Host name/address: `postgres` (the [service](./docker.md#service) name defined in [`docker-compose.yml`](../docker-compose.yml)).
-   - Port: `5432`.
-   - Maintenance database: `<db-name>`.
-   - Username: the value of `POSTGRES_USER` (default: `postgres`).
-   - Password: the value of `POSTGRES_PASSWORD` (default: `postgres`).
+   - `Host name/address`: the value of the [`PostgreSQL` service name](./constants.md#postgresql-service-name) (see [`Docker Compose` networking](./docker-compose.md#networking)).
+   - `Port`: The value of the [default `PostgreSQL` port](./constants.md#default-postgresql-port).
+   - `Maintenance database`: the value of [`POSTGRES_SERVER_NAME`](./dotenv-docker-secret.md#postgres_server_name).
+   - `Username`: the value of [`POSTGRES_USER`](./dotenv-docker-secret.md#postgres_user).
+   - `Password`: the value of [`POSTGRES_PASSWORD`](./dotenv-docker-secret.md#postgres_password).
 6. Click `Save`.
 
 > [!IMPORTANT]
@@ -56,27 +75,73 @@ Docs:
 > This is because `pgAdmin` and `PostgreSQL` run in separate `Docker` containers.
 > `Docker Compose` creates a network where services can reach each other by their service name.
 
-## Browse tables
+## Open the database
 
-1. [Add a server](#add-a-server-in-pgadmin) if you haven't already.
-2. Expand: `Servers` -> [`<db-name>`](./database.md#db-name) -> `Databases` -> `<db-name>` -> `Schemas` -> `public` -> `Tables`.
-3. Right-click a table -> `View/Edit Data` -> `All Rows`.
+> [!NOTE]
+> The `<db-name>` is the name of the database which you want to open.
 
-## Inspect columns
+1. Expand `Servers`.
+2. Expand `<server-name>`.
+3. Expand `Databases`.
+4. Expand `<db-name>`.
 
-1. [Add a server](#add-a-server-in-pgadmin) if you haven't already.
-2. Expand: `Servers` -> [`<db-name>`](./database.md#db-name) -> `Databases` -> `<db-name>` -> `Schemas` -> `public` -> `Tables`.
-3. Right-click a table -> `Properties` -> `Columns`.
+## Open tables in the database
+
+> [!NOTE]
+> The `<db-name>` is the name of the database where you want to open tables.
+
+1. [Open the database `<db-name>`](#open-the-database).
+2. Expand `Schemas`.
+3. Expand `public`.
+4. Expand `Tables`.
+
+## Browse the table
+
+> [!NOTE]
+> The `<db-name>` is the name of the database where you want to browse tables.
+>
+> The `<table-name>` is the name of the table that you want to inspect.
+
+1. [Open tables in the database `<db-name>`](#open-tables-in-the-database).
+2. Right-click `<table-name>`.
+3. Click `View/Edit Data`.
+4. Click `All Rows`.
+
+## Inspect columns in the table
+
+> [!NOTE]
+> The `<db-name>` is the name of the database where you want to inspect columns in the table `<table-name>`.
+>
+> The `<table-name>` is the name of the table where you want to inspect columns.
+
+1. [Open tables in the database `<db-name>`](#open-tables-in-the-database).
+2. Right-click `<table-name>`.
+3. Click `Properties`.
+4. Click `Columns`.
 
 ## Run a query
 
-1. [Add a server](#add-a-server-in-pgadmin) if you haven't already.
-2. Right-click the [`<db-name>`](./database.md#db-name) database.
+> [!NOTE]
+> The `<db-name>` is the name of the database where you want to run a query.
+
+1. [Open the database `<db-name>`](#open-the-database).
+2. Right-click `<db-name>`.
 3. Click `Query Tool`.
-4. Write your SQL query, e.g.:
+4. Write your [`SQL`](./sql.md) query, e.g.:
 
    ```sql
-   SELECT * FROM interacts WHERE item_id = 2;
+   SELECT tablename FROM pg_tables WHERE schemaname = 'public';
    ```
 
-5. Click `Execute Script` (or press `F5`).
+5. Click `Execute Script`.
+
+   <img alt="Execute script" src="./images/pgadmin/execute-script.png" style="width:300px">
+
+   In the `Data Output` tab, you should see a table with the data returned by the query:
+
+   <img alt="Query data output tab" src="./images/pgadmin/query-data-output-tab.png" style="width:300px">
+
+   In the `Messages` tab, you should see the text report about your query.
+
+   <img alt="Query messages tab" src="./images/pgadmin/query-messages-tab.png" style="width:300px">
+
