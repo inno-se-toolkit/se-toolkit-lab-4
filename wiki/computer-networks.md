@@ -97,7 +97,7 @@ Connections to `localhost` never leave the host — they are handled entirely wi
 
 `0.0.0.0` is a special [IP address](#ip-address) that means "all network interfaces on this [host](#host)."
 
-When a [process](./operating-system.md#process) [listens on a port](#listen-on-a-port) bound to `0.0.0.0`, it accepts connections from any network interface — including [`localhost`](#localhost) and external networks. In contrast, binding to `127.0.0.1` restricts connections to the local host only.
+When a [process](./operating-system.md#process) that [listens on a port](#listen-on-a-port) is bound to `0.0.0.0`, it accepts connections from any network interface — including [`localhost`](#localhost) and external networks. In contrast, binding to `127.0.0.1` restricts connections to the local host only.
 
 This is commonly used to make a service accessible from outside the [machine](#machine) (e.g., from your laptop to a [virtual machine](./vm.md#what-is-a-vm)).
 
