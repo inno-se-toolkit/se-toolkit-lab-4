@@ -19,9 +19,7 @@ async def create_interaction(
     kind: str,
 ) -> InteractionLog:
     """Create a new interaction log in the database."""
-    interaction = InteractionLog(
-        learner_id=learner_id, item_id=item_id, kind=kind
-    )
+    interaction = InteractionLog(learner_id=learner_id, item_id=item_id, kind=kind)
     session.add(interaction)
     await session.commit()
     await session.refresh(interaction)

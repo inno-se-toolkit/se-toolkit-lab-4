@@ -1,1 +1,11 @@
 """End-to-end tests for the GET /interactions endpoint."""
+
+
+def test_get_interactions_returns_200(client):
+    response = client.get("/interactions/", follow_redirects=True)
+    assert response.status_code == 200
+
+
+def test_get_interactions_response_is_a_list(client):
+    response = client.get("/interactions/", follow_redirects=True)
+    assert isinstance(response.json(), list)
