@@ -17,7 +17,7 @@
     - [1.4.4. Set up `Git`](#144-set-up-git)
   - [1.5. (UPD) Open in `VS Code` the `software-engineering-toolkit` directory](#15-upd-open-in-vs-code-the-software-engineering-toolkit-directory)
   - [1.6. (UPD) Clone your fork](#16-upd-clone-your-fork)
-    - [1.6.1. (UPD) Copy your fork `URL`](#161-upd-copy-your-fork-url)
+    - [1.6.1. (UPD) Copy your fork URL](#161-upd-copy-your-fork-url)
     - [1.6.2. (UPD) Clone your fork](#162-upd-clone-your-fork)
   - [1.7. (UPD) Open the cloned repo and set up `VS Code`](#17-upd-open-the-cloned-repo-and-set-up-vs-code)
   - [1.8. Continue creating a VM](#18-continue-creating-a-vm)
@@ -164,7 +164,7 @@
 
 ### 1.6. (UPD) Clone your fork
 
-#### 1.6.1. (UPD) Copy your fork `URL`
+#### 1.6.1. (UPD) Copy your fork URL
 
 1. [Go to your fork](#133-upd-go-to-your-fork).
 2. Copy [`<your-fork-url>`](../../wiki/github.md#your-fork-url).
