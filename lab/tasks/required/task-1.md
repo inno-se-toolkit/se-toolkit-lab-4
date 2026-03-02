@@ -27,10 +27,10 @@ Then you will send requests and observe how data flows through the components: b
   - [1.7. Verify in `pgAdmin`](#17-verify-in-pgadmin)
   - [1.8. Send another request and check the database](#18-send-another-request-and-check-the-database)
   - [1.9. Write comments for the issue](#19-write-comments-for-the-issue)
-    - [1.9.1. Write the request as `fetch` code](#191-write-the-request-as-fetch-code)
-    - [1.9.2. Write the response](#192-write-the-response)
-    - [1.9.3. Write the data output from `pgAdmin`](#193-write-the-data-output-from-pgadmin)
-    - [1.9.4. Paste the ERD from `pgAdmin`](#194-paste-the-erd-from-pgadmin)
+    - [1.9.1. Comment 1: write the request as `fetch` code](#191-comment-1-write-the-request-as-fetch-code)
+    - [1.9.2. Comment 2: write the response](#192-comment-2-write-the-response)
+    - [1.9.3. Comment 3: write the data output from `pgAdmin`](#193-comment-3-write-the-data-output-from-pgadmin)
+    - [1.9.4. Comment 4: paste the ERD from `pgAdmin`](#194-comment-4-paste-the-erd-from-pgadmin)
   - [1.10. Close the issue](#110-close-the-issue)
 - [2. Acceptance criteria](#2-acceptance-criteria)
 
@@ -173,12 +173,12 @@ Title: `[Task] Observe System Component Interaction`
 > [!NOTE]
 > Select the last successful `POST /interactions` request.
 
-Comment 1: [Write the request as `fetch` code](#191-write-the-request-as-fetch-code)
-Comment 2: [Write the response](#192-write-the-response)
-Comment 3: [Write the data output from `pgAdmin`](#193-write-the-data-output-from-pgadmin)
-Comment 4: [Paste the ERD from `pgAdmin`](#194-paste-the-erd-from-pgadmin)
+- [Comment 1: write the request as `fetch` code](#191-comment-1-write-the-request-as-fetch-code)
+- [Comment 2: write the response](#192-comment-2-write-the-response)
+- [Comment 3: write the data output from `pgAdmin`](#193-comment-3-write-the-data-output-from-pgadmin)
+- [Comment 4: paste the ERD from `pgAdmin`](#194-comment-4-paste-the-erd-from-pgadmin)
 
-#### 1.9.1. Write the request as `fetch` code
+#### 1.9.1. Comment 1: write the request as `fetch` code
 
 1. [Copy the selected request as `fetch` code](../../../wiki/browser-developer-tools.md#copy-the-request-as-fetch-code).
 2. Paste this [`JavaScript`](../../../wiki/programming-language.md#javascript) code in a [`Markdown` code block](../../../wiki/file-formats.md#markdown-code-block).
@@ -202,7 +202,7 @@ Comment 4: [Paste the ERD from `pgAdmin`](#194-paste-the-erd-from-pgadmin)
    ```
    ~~~
 
-#### 1.9.2. Write the response
+#### 1.9.2. Comment 2: write the response
 
 1. [Copy the response](../../../wiki/browser-developer-tools.md#copy-the-response) to the selected request.
 2. Paste the response as [`JSON`](../../../wiki/file-formats.md#json) in a [`Markdown` code block](../../../wiki/file-formats.md#markdown-code-block).
@@ -223,7 +223,7 @@ Comment 4: [Paste the ERD from `pgAdmin`](#194-paste-the-erd-from-pgadmin)
    ```
    ~~~
 
-#### 1.9.3. Write the data output from `pgAdmin`
+#### 1.9.3. Comment 3: write the data output from `pgAdmin`
 
 1. [Copy the full data output](../../../wiki/pgadmin.md#copy-the-query-data-output) that you got when verifying in the `pgAdmin` that a new row appeared.
 2. Paste the output as [`CSV`](../../../wiki/file-formats.md#csv) in a [`Markdown` code block](../../../wiki/file-formats.md#markdown-code-block).
@@ -248,7 +248,7 @@ Comment 4: [Paste the ERD from `pgAdmin`](#194-paste-the-erd-from-pgadmin)
    ```
    ~~~
 
-#### 1.9.4. Paste the ERD from `pgAdmin`
+#### 1.9.4. Comment 4: paste the ERD from `pgAdmin`
 
 1. [View the ERD in Chen notation](../../../wiki/pgadmin.md#view-the-erd-in-chen-notation).
 2. Make a screenshot where all three tables are fully visible.
