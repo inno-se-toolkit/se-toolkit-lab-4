@@ -258,7 +258,9 @@ Create the file `docs.md` with the following sections:
 
 ## 4.18. Inline formatting of technical terms
 
-Wrap tool names, technical terms, and acronyms in backticks: `` `VS Code` ``, `` `Git` ``, `` `Docker` ``, `` `Python` ``, `` `SQL` ``, `` `WSL` ``, `` `SSH` ``.
+Wrap names of tools, languages, formats, and protocols in backticks: `` `VS Code` ``, `` `Git` ``, `` `Docker` ``, `` `Python` ``, `` `SQL` ``, `` `JSON` ``, `` `CSV` ``, `` `SSH` ``, `` `WSL` ``.
+
+Don't backtick acronyms that aren't names: VM, API, URL, ERD.
 
 ## 4.19. Steps with sub-steps
 
