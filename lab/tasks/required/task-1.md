@@ -23,7 +23,7 @@ Then you will send requests and observe how data flows through the components: b
   - [1.3. Open `Swagger UI`](#13-open-swagger-ui)
   - [1.4. Open the browser developer tools](#14-open-the-browser-developer-tools)
   - [1.5. Send a request using `Swagger UI`](#15-send-a-request-using-swagger-ui)
-  - [1.6. Observe the request](#16-observe-the-request)
+  - [1.6. Inspect the request using browser developer tools](#16-inspect-the-request-using-browser-developer-tools)
   - [1.7. Verify in `pgAdmin`](#17-verify-in-pgadmin)
   - [1.8. Send another request and check the database](#18-send-another-request-and-check-the-database)
   - [1.9. Write comments for the issue](#19-write-comments-for-the-issue)
@@ -141,7 +141,7 @@ Title: `[Task] Observe System Component Interaction`
      }
      ```
 
-### 1.6. Observe the request
+### 1.6. Inspect the request using browser developer tools
 
 1. [Inspect the request to `/interactions`](../../../wiki/browser-developer-tools.md#inspect-a-request).
 
