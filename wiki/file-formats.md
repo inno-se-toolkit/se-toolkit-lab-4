@@ -9,6 +9,7 @@
   - [`Markdown`](#markdown)
     - [`Markdown` docs](#markdown-docs)
     - [`Markdown` in this project](#markdown-in-this-project)
+    - [`Markdown` code block](#markdown-code-block)
   - [`JSON`](#json)
     - [`JSON` docs](#json-docs)
     - [`JSON` example](#json-example)
@@ -29,6 +30,7 @@
     - [`Python` docs](#python-docs)
     - [`Python` example](#python-example)
     - [`Python` in this project](#python-in-this-project)
+  - [`CSV`](#csv)
 
 ## What is a file format?
 
@@ -48,6 +50,10 @@ The [file extension](./file-system.md#extension) (e.g., [`.json`](#json), [`.tom
 
 ### `Markdown`
 
+<!-- TODO create markdown.md -->
+<!-- add section about syntax and code blocks -->
+<!-- reference that section from task-1.md -->
+
 `Markdown` is a [markup language](https://en.wikipedia.org/wiki/Markup_language).
 
 `Markdown` gets translated into [`HTML`](https://en.wikipedia.org/wiki/HTML).
@@ -63,6 +69,8 @@ You see the rendered `HTML` when you [open the `Markdown` preview](./vs-code.md#
 - [`./file-formats.md`](./file-formats.md) — this file.
 - [`README.md`](../README.md) — project overview.
 - [`.github/pull_request_template.md`](../.github/pull_request_template.md) — [`GitHub` pull request](./github.md#pull-request) template.
+
+#### `Markdown` code block
 
 ### `JSON`
 
@@ -176,3 +184,5 @@ def greet(name: str) -> str:
 #### `Python` in this project
 
 Used for the application code and tests.
+
+### `CSV`
