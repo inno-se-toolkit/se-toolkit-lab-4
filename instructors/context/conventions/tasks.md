@@ -346,6 +346,28 @@ Checkpoints can take different forms:
 - **Visual confirmation:** A screenshot or description of what the UI should look like after the step.
 - **State check:** A command that shows the current state (e.g., "Run `git status` and verify you see the new file").
 
+**Checkpoints are part of the step, not separate steps.** Indent checkpoint content (text, screenshots, expected output) under the action step it verifies. This keeps step counts meaningful (only real actions are numbered) and lets readers scan for what to *do* next without confusing verifications for actions.
+
+Good:
+
+~~~markdown
+1. [Open `Swagger UI`](../../wiki/swagger.md#open-swagger-ui).
+
+   You should see the `Swagger UI` page with the API documentation.
+
+   <img alt="Swagger UI" src="../images/tasks/setup/swagger-ui.png" style="width:400px"></img>
+~~~
+
+Bad:
+
+~~~markdown
+1. [Open `Swagger UI`](../../wiki/swagger.md#open-swagger-ui).
+
+2. You should see the `Swagger UI` page with the API documentation.
+
+   <img alt="Swagger UI" src="../images/tasks/setup/swagger-ui.png" style="width:400px"></img>
+~~~
+
 ---
 
 ## 15. Testing pattern
