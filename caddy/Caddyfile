@@ -22,3 +22,8 @@
         file_server
     }
 }
+
+:42000 {
+    root * /var/www/frontend/dist
+    file_server
+}
