@@ -40,3 +40,21 @@ def test_filter_excludes_interaction_with_different_learner_id() -> None:
     result = _filter_by_item_id(interactions, 10)
     assert len(result) == 1
     assert result[0].item_id == 10
+
+
+def test_filter_returns_empty_when_no_item_matches() -> None:
+    interactions = [
+        _make_log(1, 1, 10),
+        _make_log(2, 2, 20),
+    ]
+    result = _filter_by_item_id(interactions, 999)
+    assert result == []
+
+
+def test_filter_with_single_interaction_match() -> None:
+    interactions = [
+        _make_log(1, 5, 42),
+    ]
+    result = _filter_by_item_id(interactions, 42)
+    assert len(result) == 1
+    assert result[0].item_id == 42
