@@ -22,6 +22,7 @@
 - [4.20. Placeholders in docs](#420-placeholders-in-docs)
 - [4.21. `docker compose up` commands](#421-docker-compose-up-commands)
 - [4.22. Environment variable references](#422-environment-variable-references)
+- [4.23. Horizontal rules](#423-horizontal-rules)
 
 ## 4.1. Instructions wording
 
@@ -91,7 +92,7 @@ Exception: `vs-code.md` itself is exempt because the link would be self-referent
 Clearly differentiate:
 
 - **Options:** List with `Method N:` prefix (see [4.6](#46-little-toc)).
-- **Steps:** "Complete the following steps:" (then list steps in order).
+- **Steps:** "Complete these steps:" (then list steps in order).
 
 ## 4.5. Ordered lists
 
@@ -332,3 +333,11 @@ From a task file:
 Following [4.8](#48-links-and-cross-references), the `.env.docker.secret` link only needs to appear once per section when multiple variables are referenced together.
 
 Exception: variables inside fenced code blocks cannot use markdown links — use plain text there.
+
+## 4.23. Horizontal rules
+
+Use exactly three dashes (`---`) for horizontal rules.
+
+Good: `---`
+
+Bad: `----`, `-----`, `***`, `___`
