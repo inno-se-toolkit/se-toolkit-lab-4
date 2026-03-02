@@ -68,6 +68,9 @@ Title: `[Task] <Task title>`
 
 ### 1.3. <Step title>
 
+- [1.3.1. <Sub-step title>](#131-sub-step-title)
+- [1.3.2. <Sub-step title>](#132-sub-step-title)
+
 #### 1.3.1. <Sub-step title>
 
 <Step-by-step instructions>
@@ -96,7 +99,7 @@ Title: `[Task] <Task title>`
 
 - **Time, Purpose, Context, Table of contents** use `<h4>` HTML tags so they don't appear in the document's auto-generated ToC.
 - **Top-level sections are numbered:** `## 1. Steps` and `## 2. Acceptance criteria`. Steps are numbered as `### 1.1.`, `### 1.2.`, etc. This matches the pattern used in `setup.md` and makes anchor links unambiguous.
-- When a `###` step covers multiple distinct sub-goals, split it into `####` sub-sections with a deeper number (`#### 1.3.1.`, `#### 1.3.2.`, etc.) and a descriptive title for each. Reflect the hierarchy in the ToC with indented entries. Use a flat numbered list only when all actions serve a single, unified goal within the same sub-section.
+- When a `###` step covers multiple distinct sub-goals, split it into `####` sub-sections with a deeper number (`#### 1.3.1.`, `#### 1.3.2.`, etc.) and a descriptive title for each. Reflect the hierarchy in the ToC with indented entries. Add an inline mini-ToC (a bullet list of links to the sub-sections) right after the `###` heading so readers see the structure without scrolling back to the document-level ToC. Use a flat numbered list only when all actions serve a single, unified goal within the same sub-section.
 - **Step 1.1** ("Follow the Git workflow") is present in tasks that require a branch + PR. Omit for tasks that don't produce commits (e.g., "Run the web server").
 - **Step 1.2** is always "Create an issue" (either a `Lab Task` or specific issue type). When step 1.1 is omitted, "Create an issue" becomes step 1.1.
 - The **last step** is either "Finish the task" (create PR, get review) or "Write a comment for the issue" (close with evidence).
