@@ -22,6 +22,7 @@
   - [12.16. Holistic task design](#1216-holistic-task-design)
   - [12.17. LLM-independence](#1217-llm-independence)
   - [12.18. Multi-bug debugging tasks](#1218-multi-bug-debugging-tasks)
+  - [12.19. Step checkpoints](#1219-step-checkpoints)
 - [15. Testing pattern](#15-testing-pattern)
 - [17. Checklist before publishing](#17-checklist-before-publishing)
 
@@ -334,6 +335,17 @@ When designing debugging tasks, include multiple bugs at different layers of the
 
 Structure the task so each bug is discovered sequentially: the first fix unblocks progress but reveals the next failure. Provide collapsible hints for each bug.
 
+### 12.19. Step checkpoints
+
+Every non-trivial step should include a checkpoint — a quick way for students to verify they completed the step correctly and are in the right environment. Without checkpoints, students may proceed through multiple steps before discovering something went wrong early on, making debugging much harder.
+
+Checkpoints can take different forms:
+
+- **Expected output:** Show the terminal output the student should see (see [12.9](#129-expected-output)).
+- **Smoke test:** A quick command or action that confirms the change worked (e.g., "Refresh the page and verify the new endpoint appears").
+- **Visual confirmation:** A screenshot or description of what the UI should look like after the step.
+- **State check:** A command that shows the current state (e.g., "Run `git status` and verify you see the new file").
+
 ---
 
 ## 15. Testing pattern
@@ -378,6 +390,7 @@ Structure the task so each bug is discovered sequentially: the first fix unblock
 - [ ] `.vscode/settings.json` and `.vscode/extensions.json` are configured.
 - [ ] `.gitignore` excludes generated files and secrets for the lab's ecosystem.
 - [ ] Ordered lists use `1. 2. 3.` (not `1. 1. 1.`).
+- [ ] Non-trivial steps include a checkpoint (expected output, smoke test, visual confirmation, or state check).
 - [ ] Compound instructions are split into separate steps.
 - [ ] All sentences end with `.`.
 - [ ] Options and steps are clearly differentiated.
