@@ -70,7 +70,10 @@ Title: `[Task] Add Front-end`
    2. Copy it to `frontend/.env`.
    3. Set `VITE_API_TARGET` to the URL of your back-end API, for example `http://<your-vm-ip-address>:<caddy-port>`.
 
-      Replace [`<your-vm-ip-address>`](../../../wiki/vm.md#your-vm-ip-address) with the IP address of your VM. See [`<caddy-port>`](../../../wiki/caddy.md#caddy-port).
+      Replace:
+
+      - [`<your-vm-ip-address>`](../../../wiki/vm.md#your-vm-ip-address)
+      - [`<caddy-port>`](../../../wiki/caddy.md#caddy-port)
 
 4. To install dependencies,
 
@@ -146,12 +149,12 @@ Title: `[Task] Add Front-end`
 
 #### 1.4.2. Verify in the browser
 
-1. Open in a browser: `http://<your-vm-ip-address>:<caddy-port>/`.
+1. Open in a browser the [URL](../../../wiki/web-development.md#url): `http://<your-vm-ip-address>:<caddy-port>`.
 
    Replace:
 
    - [`<your-vm-ip-address>`](../../../wiki/vm.md#your-vm-ip-address)
-   - [`<caddy-port>`](../../../wiki/caddy.md#caddy-port).
+   - [`<caddy-port>`](../../../wiki/caddy.md#caddy-port)
 
 2. Verify that the front-end loads and displays data from the API.
 
@@ -207,7 +210,7 @@ Title: `[Task] Add Front-end`
    git fetch origin && git checkout <task-branch-name>
    ```
 
-   Replace [`<task-branch-name>`](../../../wiki/git-workflow.md#task-branch-name) with the name of your branch.
+   Replace [`<task-branch-name>`](../../../wiki/git-workflow.md#task-branch-name).
 
 6. To rebuild and restart the `caddy` service,
 

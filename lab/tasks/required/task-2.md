@@ -205,7 +205,10 @@ return [i for i in interactions if i.item_id == item_id]
       export API_BASE_URL=http://<your-vm-ip-address>:<caddy-port>
       ```
 
-      Replace [`<your-vm-ip-address>`](../../../wiki/vm.md#your-vm-ip-address) with the IP address of your VM. See [`<caddy-port>`](../../../wiki/caddy.md#caddy-port).
+      Replace:
+
+      - [`<your-vm-ip-address>`](../../../wiki/vm.md#your-vm-ip-address)
+      - [`<caddy-port>`](../../../wiki/caddy.md#caddy-port)
 
    2. To set the API key (use the same value as in your `.env.secret`),
 
