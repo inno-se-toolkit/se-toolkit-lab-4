@@ -21,6 +21,7 @@
 - [4.19. Steps with sub-steps](#419-steps-with-sub-steps)
 - [4.20. Placeholders in docs](#420-placeholders-in-docs)
 - [4.21. `docker compose up` commands](#421-docker-compose-up-commands)
+- [4.22. Environment variable references](#422-environment-variable-references)
 
 ## 4.1. Instructions wording
 
@@ -311,3 +312,23 @@ Always include the `--build` flag when writing `docker compose up` commands in i
 Good: `docker compose up --build`
 
 Bad: `docker compose up`
+
+## 4.22. Environment variable references
+
+When referencing an environment variable from `.env.docker.secret` in prose, link it to its section in the wiki and link `.env.docker.secret` to indicate the source:
+
+From a wiki file:
+
+```markdown
+[`VARIABLE_NAME`](./dotenv-docker-secret.md#variable_name) in [`.env.docker.secret`](./dotenv-docker-secret.md#what-is-envdockersecret)
+```
+
+From a task file:
+
+```markdown
+[`VARIABLE_NAME`](../../../wiki/dotenv-docker-secret.md#variable_name) in [`.env.docker.secret`](../../../wiki/dotenv-docker-secret.md#what-is-envdockersecret)
+```
+
+Following [4.8](#48-links-and-cross-references), the `.env.docker.secret` link only needs to appear once per section when multiple variables are referenced together.
+
+Exception: variables inside fenced code blocks cannot use markdown links — use plain text there.
