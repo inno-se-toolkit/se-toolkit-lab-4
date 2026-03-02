@@ -6,12 +6,12 @@
 
 <h4>Purpose</h4>
 
-Build a `CI` pipeline that runs tests and publishes container images, and update the deployment to use published images.
+Build a CI pipeline that runs tests and publishes container images, and update the deployment to use published images.
 
 <h4>Context</h4>
 
 Running tests manually works for a single developer.
-With `CI`, tests run automatically on every push to `GitHub`, and a passing pipeline publishes a ready-to-deploy image.
+With CI, tests run automatically on every push to `GitHub`, and a passing pipeline publishes a ready-to-deploy image.
 Your VM then pulls the published image instead of building from source.
 
 <h4>Table of contents</h4>
@@ -46,7 +46,8 @@ Title: `[Task] CI/CD`
    2. Runs all back-end unit tests using `uv run poe test`.
    3. Runs all end-to-end tests against the deployed API.
 3. [Commit](../../../wiki/git-workflow.md#commit) the workflow file.
-4. Push the branch to `GitHub` and verify the workflow runs and passes in the `Actions` tab of your fork.
+4. Push the branch to `GitHub`.
+5. Verify the workflow runs and passes in the `Actions` tab of your fork.
 
 ### 1.4. Publish images to `DockerHub`
 
@@ -59,10 +60,11 @@ Title: `[Task] CI/CD`
    - `DOCKERHUB_TOKEN`
 3. Update `.github/workflows/ci.yml` to add a publish step after tests pass:
    1. Log in to `DockerHub` using the secrets.
-   2. Build the Docker image.
+   2. Build the `Docker` image.
    3. Push the image to `DockerHub` as `<your-dockerhub-username>/se-toolkit-lab:<git-sha>`.
 4. [Commit](../../../wiki/git-workflow.md#commit) the workflow update.
-5. Push and verify the image appears on `DockerHub` after the workflow passes.
+5. Push the branch to `GitHub`.
+6. Verify the image appears on `DockerHub` after the workflow passes.
 
 ### 1.5. Deploy using published images
 
@@ -85,14 +87,23 @@ Title: `[Task] CI/CD`
      image: <your-dockerhub-username>/se-toolkit-lab:<git-sha>
    ```
 
-4. On the VM, pull and restart the services:
+4. To pull the containers,
+
+   [run in the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker compose --env-file .env.docker.secret pull
-   docker compose --env-file .env.docker.secret up -d
    ```
 
-5. Verify the back-end is running using the same checks as in Task 1.
+5. To start the services,
+
+   [run in the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
+
+   ```terminal
+   docker compose --env-file .env.docker.secret up --build -d
+   ```
+
+6. [Verify the back-end is running](../required/task-1.md#12-deploy-the-back-end-to-the-vm) using the same checks as in Task 1.
 
 ### 1.6. Finish the task
 
