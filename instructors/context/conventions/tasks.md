@@ -23,6 +23,7 @@
   - [12.17. LLM-independence](#1217-llm-independence)
   - [12.18. Multi-bug debugging tasks](#1218-multi-bug-debugging-tasks)
   - [12.19. Step checkpoints](#1219-step-checkpoints)
+  - [12.20. Recovery guidance](#1220-recovery-guidance)
 - [15. Testing pattern](#15-testing-pattern)
 - [17. Checklist before publishing](#17-checklist-before-publishing)
 
@@ -372,6 +373,50 @@ Bad:
    <img alt="Swagger UI" src="../images/tasks/setup/swagger-ui.png" style="width:400px"></img>
 ~~~
 
+### 12.20. Recovery guidance
+
+Steps that involve infrastructure or environment-dependent operations (`Docker`, databases, services on ports) can fail for reasons outside the task's scope — port conflicts, stale containers, missing environment variables. Instead of directing students to "ask the TA," include a collapsible troubleshooting block so students can self-diagnose common failures.
+
+Key rules:
+
+- **Place after the checkpoint.** The troubleshooting block follows the "You should see…" checkpoint, because students only need it when the checkpoint fails.
+- **Use the summary `Troubleshooting`.** This keeps a consistent label that students learn to look for.
+- **Bold the symptom.** Start each entry with the symptom in bold (what the student sees), then the fix.
+- **Keep it brief.** Cover only the 2–3 most common failures per block. Rare edge cases can still go to the TA.
+- **Only add to infrastructure steps.** Steps involving external systems or environment-dependent operations where common failures are predictable. Simple file edits or `Git` commands don't need troubleshooting blocks.
+
+Good:
+
+~~~markdown
+1. Start `Docker` containers.
+
+   You should see all containers running.
+
+   <details><summary>Troubleshooting</summary>
+
+   **Port conflict (`port is already allocated`)**
+
+   Stop the process that uses the port, then retry.
+
+   **Containers exit immediately**
+
+   To rebuild all containers from scratch,
+
+   [run in the `VS Code Terminal`](...):
+
+   ```terminal
+   docker compose down && docker compose up --build
+   ```
+
+   </details>
+~~~
+
+Bad:
+
+~~~markdown
+4. Ask the TA if something doesn't work.
+~~~
+
 ---
 
 ## 15. Testing pattern
@@ -417,6 +462,7 @@ Bad:
 - [ ] `.gitignore` excludes generated files and secrets for the lab's ecosystem.
 - [ ] Ordered lists use `1. 2. 3.` (not `1. 1. 1.`).
 - [ ] Non-trivial steps include a checkpoint (expected output, smoke test, visual confirmation, or state check).
+- [ ] Infrastructure steps include a collapsible troubleshooting block (not "ask the TA").
 - [ ] Compound instructions are split into separate steps.
 - [ ] All sentences end with `.`.
 - [ ] Options and steps are clearly differentiated.
