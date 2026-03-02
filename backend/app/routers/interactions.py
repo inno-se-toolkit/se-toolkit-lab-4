@@ -16,7 +16,9 @@ def _filter_by_item_id(
 ) -> list[InteractionLog]:
     if item_id is None:
         return interactions
-    return [i for i in interactions if i.learner_id == item_id]
+
+    interactions = [i for i in interactions if i.item_id == item_id]
+    return interactions
 
 
 @router.get("/", response_model=list[InteractionModel])
