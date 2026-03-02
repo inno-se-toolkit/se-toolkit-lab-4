@@ -15,7 +15,8 @@
   - [`Protobuf`](#protobuf)
 - [REST API](#rest-api)
 - [API](#api)
-  - [`<api-token>`](#api-token)
+  - [API key](#api-key)
+  - [`<api-key>`](#api-key-1)
 - [Endpoint](#endpoint)
 - [Send a `GET` request](#send-a-get-request)
   - [Send a `GET` request using a browser](#send-a-get-request-using-a-browser)
@@ -129,7 +130,11 @@ Docs:
 
 - [An introduction to APIs: A comprehensive guide](https://zapier.com/blog/api/)
 
-### `<api-token>`
+### API key
+
+<!-- TODO -->
+
+### `<api-key>`
 
 The value that you use to authenticate in the API.
 

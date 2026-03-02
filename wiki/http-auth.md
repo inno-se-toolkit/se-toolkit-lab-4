@@ -14,10 +14,10 @@ In `HTTP` APIs, a common mechanism is an **API key** — a secret value the clie
 The API key is sent in the `Authorization` header:
 
 ```http
-Authorization: Bearer <api-token>
+Authorization: Bearer <api-key>
 ```
 
-See [`<api-token>`](./web-development.md#api-token) for the value used in this lab.
+See [`<api-key>`](./web-development.md#api-key).
 
 Docs:
 

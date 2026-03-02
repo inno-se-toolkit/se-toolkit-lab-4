@@ -39,7 +39,7 @@ If the API requires authentication:
 
 1. [Open `Swagger UI`](#open-swagger-ui).
 2. Click the `Authorize` button (lock icon at the top right).
-3. In the `Value` field, enter the [`<api-token>`](./web-development.md#api-token).
+3. In the `Value` field, enter the [`<api-key>`](./web-development.md#api-key).
 4. Click `Authorize`.
 5. Click `Close`.
 
