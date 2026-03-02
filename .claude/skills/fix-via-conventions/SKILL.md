@@ -9,7 +9,7 @@ Fix convention violations in a task file using the report produced by `/review-v
 ## Steps
 
 1. Parse `$ARGUMENTS` to get the file path. Accept paths like `lab/tasks/setup.md`, `lab/tasks/required/task-2.md`, or `lab/tasks/optional/task-1.md`. If the path is missing or does not point to a file under `lab/tasks/`, ask the user.
-2. Derive the report path: `tmp/<filename>-review-via-conventions-report.md`, where `<filename>` is the basename of the target file without the `.md` extension. If the report file does not exist, tell the user to run `/review-via-conventions <path>` first and stop.
+2. Derive the report path: `tmp/review-via-conventions/<relative-path>`, where `<relative-path>` is the target file's path relative to `lab/tasks/` (e.g., `tmp/review-via-conventions/setup.md` for `lab/tasks/setup.md`, `tmp/review-via-conventions/required/task-1.md` for `lab/tasks/required/task-1.md`). If the report file does not exist, tell the user to run `/review-via-conventions <path>` first and stop.
 3. Read the report file.
 4. Read the target task file.
 5. Read the convention files referenced in the report header so every fix is grounded in the actual convention text:

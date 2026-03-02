@@ -26,7 +26,7 @@ Review a single task file for violations of the lab authoring conventions. The f
 
 ## Output format
 
-Write the report to `tmp/<filename>-review-via-conventions-report.md`, where `<filename>` is the basename of the reviewed file without the `.md` extension (e.g., `tmp/setup-review-via-conventions-report.md` for `lab/tasks/setup.md`, `tmp/task-2-review-via-conventions-report.md` for `lab/tasks/required/task-2.md`). Create the `tmp/` directory if it does not exist.
+Write the report to `tmp/review-via-conventions/<relative-path>`, where `<relative-path>` is the file's path relative to `lab/tasks/` (e.g., `tmp/review-via-conventions/setup.md` for `lab/tasks/setup.md`, `tmp/review-via-conventions/required/task-1.md` for `lab/tasks/required/task-1.md`). Create intermediate directories if they do not exist.
 
 The report must be self-contained so another session or agent can act on it without extra context. Structure:
 
