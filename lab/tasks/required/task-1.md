@@ -127,7 +127,7 @@ Title: `[Task] Observe System Component Interaction`
 
 4. Click `Execute`.
 
-   In `Server response` you should see:
+   In `Server response`, you should see:
    - `Code`: 201
    - `Details`: `Response body`:
 
