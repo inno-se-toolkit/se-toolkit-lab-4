@@ -189,7 +189,18 @@
    `se-toolkit-lab-4`.
 2. [Check the current shell in the `VS Code Terminal`](../../wiki/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 3. [Install recommended extensions](../../wiki/vs-code.md#install-recommended-extensions).
-4. Ask the TA if something doesn't work.
+
+<details><summary>Troubleshooting</summary>
+
+<h4>The terminal shell is not <code>bash</code> or <code>zsh</code></h4>
+
+Go back to [step 1.4.3](#143-upd-windows-only-set-the-default-shell-for-the-vs-code-terminal) and set the default shell.
+
+<h4>Recommended extensions did not install</h4>
+
+Reload the `VS Code` window: press `Ctrl+Shift+P`, type `Reload Window`, and press `Enter`.
+
+</details>
 
 ### 1.8. Continue creating a VM
 
@@ -260,7 +271,7 @@ If you can't [connect to your VM](../../wiki/vm.md#connect-to-the-vm), complete 
 #### 1.11.2. (UPD) Start the services using `Docker Compose`
 
 > [!NOTE]
-> [`Docker Compose`](../../wiki/docker-compose.md#what-is-docker-compose) reads environment variables from `.env.docker.secret`
+> [`Docker Compose`](../../wiki/docker-compose.md#what-is-docker-compose) reads environment variables from [`.env.docker.secret`](../../wiki/dotenv-docker-secret.md#what-is-envdockersecret)
 > and uses them to configure the containers defined in [`docker-compose.yml`](../../docker-compose.yml).
 
 1. To start the services,
@@ -271,7 +282,29 @@ If you can't [connect to your VM](../../wiki/vm.md#connect-to-the-vm), complete 
    docker compose --env-file .env.docker.secret up --build
    ```
 
-2. Wait for the services to start. You should see log output from the `app`, `postgres`, `pgadmin`, and `caddy` containers.
+   Wait for the services to start. You should see log output from the `app`, `postgres`, `pgadmin`, and `caddy` containers.
+
+   <details><summary>Troubleshooting</summary>
+
+   <h4>Port conflict (<code>port is already allocated</code>)</h4>
+
+   Stop the process that uses the port, then retry.
+
+   <h4>Containers exit immediately</h4>
+
+   To rebuild all containers from scratch,
+
+   [run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
+
+   ```terminal
+   docker compose --env-file .env.docker.secret down && docker compose --env-file .env.docker.secret up --build
+   ```
+
+   <h4>Image pull fails</h4>
+
+   Check your internet connection. If you are behind a proxy, configure `Docker` to use it.
+
+   </details>
 
 > [!NOTE]
 > The database is initialized from [`backend/app/data/init.sql`](../../backend/app/data/init.sql) only on the **first** start of the `PostgreSQL` container.
@@ -294,6 +327,8 @@ If you can't [connect to your VM](../../wiki/vm.md#connect-to-the-vm), complete 
    docker compose --env-file .env.docker.secret ps
    ```
 
+   You should see four services (`app`, `postgres`, `pgadmin`, `caddy`) with the status `Up`.
+
 #### 1.12.3. (UPD) See logs of the running services
 
 1. To see logs for all services,
@@ -304,6 +339,8 @@ If you can't [connect to your VM](../../wiki/vm.md#connect-to-the-vm), complete 
    docker compose --env-file .env.docker.secret logs
    ```
 
+   You should see log output from the `app`, `postgres`, `pgadmin`, and `caddy` services.
+
 2. To see logs for the `postgres` service,
 
    [run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
@@ -311,6 +348,8 @@ If you can't [connect to your VM](../../wiki/vm.md#connect-to-the-vm), complete 
    ```terminal
    docker compose --env-file .env.docker.secret logs postgres
    ```
+
+   You should see only the `postgres` service logs, including a line like `database system is ready to accept connections`.
 
 ### 1.13. (UPD) Set up `Swagger UI`
 
@@ -329,6 +368,18 @@ If you can't [connect to your VM](../../wiki/vm.md#connect-to-the-vm), complete 
 
 1. [Open `pgAdmin`](../../wiki/pgadmin.md#open-pgadmin).
 2. [Add a server in `pgAdmin`](../../wiki/pgadmin.md#connect-to-the-postgresql-server).
+
+<details><summary>Troubleshooting</summary>
+
+<h4><code>pgAdmin</code> page does not load</h4>
+
+`pgAdmin` takes 2–3 minutes to start. Wait and refresh the page.
+
+<h4>Connection to the server refused</h4>
+
+Make sure the services are running. Go back to [step 1.11.2](#1112-upd-start-the-services-using-docker-compose) and start them.
+
+</details>
 
 #### 1.14.2. (UPD) Inspect the tables
 
@@ -398,6 +449,7 @@ These enhancements can make your life easier:
 - [Customize the `Source Control`](#25-customize-the-source-control)
 - [Get familiar with `GitLens`](#26-get-familiar-with-gitlens)
 - [Create a label for tasks](#27-create-a-label-for-tasks)
+- [View `Markdown` files in `VS Code`](#28-view-markdown-files-in-vs-code)
 
 ### 2.1. (UPD) Set up `Nix`
 
