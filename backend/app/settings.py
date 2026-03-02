@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     port: int = Field(default=8000, alias="PORT")
     reload: bool = Field(default=False, alias="RELOAD")
 
-    api_token: str = Field(alias="API_TOKEN")
+    api_key: str = Field(alias="API_KEY")
 
     cors_origins: list[str] = Field(default=[], alias="CORS_ORIGINS")
 

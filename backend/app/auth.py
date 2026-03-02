@@ -13,11 +13,11 @@ def verify_api_key(
 ) -> str:
     """Verify the API key from the Authorization header.
 
-    Expects: Authorization: Bearer <API_TOKEN>
-    Returns the token string if valid.
+    Expects: Authorization: Bearer <API_KEY>
+    Returns the key string if valid.
     Raises 401 if invalid.
     """
-    if credentials.credentials != settings.api_token:
+    if credentials.credentials != settings.api_key:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Invalid API key",

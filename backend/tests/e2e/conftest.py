@@ -15,16 +15,16 @@ def api_base_url() -> str:
 
 
 @pytest.fixture(scope="session")
-def api_token() -> str:
-    token = os.environ.get("API_TOKEN", "")
-    if not token:
-        pytest.skip("API_TOKEN environment variable is not set")
-    return token
+def api_key() -> str:
+    key = os.environ.get("API_KEY", "")
+    if not key:
+        pytest.skip("API_KEY environment variable is not set")
+    return key
 
 
 @pytest.fixture(scope="session")
-def client(api_base_url: str, api_token: str) -> httpx.Client:
+def client(api_base_url: str, api_key: str) -> httpx.Client:
     return httpx.Client(
         base_url=api_base_url,
-        headers={"Authorization": f"Bearer {api_token}"},
+        headers={"Authorization": f"Bearer {api_key}"},
     )

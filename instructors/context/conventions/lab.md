@@ -576,7 +576,7 @@ Replace @johndoe with @<your-username> where
 
 Introduce security as something students encounter naturally, not as a standalone lecture:
 
-1. **Simple API key via environment variable.** Use one shared key set via an `API_TOKEN` (or similar) environment variable. No user accounts, no roles, no permissions matrix. Students discover the mechanism when they try an endpoint and get `401 Unauthorized`.
+1. **Simple API key via environment variable.** Use one shared key set via an `API_KEY` (or similar) environment variable. No user accounts, no roles, no permissions matrix. Students discover the mechanism when they try an endpoint and get `401 Unauthorized`.
 2. **Natural discovery.** Place the API key requirement on endpoints students will use in the exploration task. They encounter auth organically rather than being told about it in isolation.
 3. **Environment-based configuration.** The key lives in `.env.secret` (local) and `.env.docker.secret` (Docker/deployment). Students learn to set different keys per environment.
 4. **Server hardening (optional advanced task).** For deployment labs, consider including VM hardening as a separate task: non-root SSH user, firewall (`ufw`), `fail2ban`, disable root login and password authentication. This is infrastructure security, distinct from application-level auth.

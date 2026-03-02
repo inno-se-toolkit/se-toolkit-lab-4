@@ -9,7 +9,7 @@
   - [`APP_CONTAINER_PORT`](#app_container_port)
   - [`APP_HOST_ADDRESS`](#app_host_address)
   - [`APP_HOST_PORT`](#app_host_port)
-  - [`API_TOKEN`](#api_token)
+  - [`API_KEY`](#api_key)
   - [`APP_ENABLE_INTERACTIONS`](#app_enable_interactions)
   - [`APP_ENABLE_LEARNERS`](#app_enable_learners)
 - [`postgres`](#postgres)
@@ -67,7 +67,7 @@ Default: `127.0.0.1`
 
 Default: `42001`
 
-### `API_TOKEN`
+### `API_KEY`
 
 Default: `my-secret-api-key`
 

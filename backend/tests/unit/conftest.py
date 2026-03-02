@@ -2,6 +2,6 @@
 
 import os
 
-# The import chain (routers → database → settings) requires API_TOKEN.
+# The import chain (routers → database → settings) requires API_KEY.
 # Unit tests never call the real API, so a dummy value is sufficient.
-os.environ.setdefault("API_TOKEN", "test")
+os.environ.setdefault("API_KEY", "test")

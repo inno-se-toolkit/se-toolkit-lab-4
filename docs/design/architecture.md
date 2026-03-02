@@ -215,7 +215,7 @@ graph TD
 | Items Router        | `routers/items.py`        | CRUD endpoints for learning items. Always enabled.                                                               |
 | Interactions Router | `routers/interactions.py` | Read and create endpoints for interaction logs. Enabled via `ENABLE_INTERACTIONS=true`.                           |
 | Learners Router     | `routers/learners.py`     | CRUD endpoints for learner profiles. Enabled via `ENABLE_LEARNERS=true`.                                         |
-| Auth Middleware     | `auth.py`                 | Validates the `Authorization: Bearer <token>` header on every request. Token configured via `API_TOKEN` env var. |
+| Auth Middleware     | `auth.py`                 | Validates the `Authorization: Bearer <key>` header on every request. Key configured via `API_KEY` env var.       |
 | Items DB            | `db/items.py`             | Async database operations for the `item` table.                                                                  |
 | Interactions DB     | `db/interactions.py`      | Async database operations for the `interacts` table.                                                             |
 | Learners DB         | `db/learners.py`          | Async database operations for the `learner` table.                                                               |

@@ -11,7 +11,7 @@ API key authentication is a simple mechanism to protect endpoints.
 
 How it works:
 
-1. The server has a secret key stored in an environment variable (e.g., `API_TOKEN`).
+1. The server has a secret key stored in an environment variable (e.g., `API_KEY`).
 2. The client sends the key in the `Authorization` header: `Authorization: Bearer <key>`.
 3. The server checks if the key matches. If not, it returns `401 Unauthorized`.
 

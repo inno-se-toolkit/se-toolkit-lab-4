@@ -11,7 +11,7 @@ services:
       - DEBUG=${APP_DEBUG:-false}
       - ADDRESS=${APP_CONTAINER_ADDRESS:?'APP_CONTAINER_ADDRESS is a required environment variable'}
       - PORT=${APP_CONTAINER_PORT:?'APP_CONTAINER_PORT is a required environment variable'}
-      - API_TOKEN=${API_TOKEN:?'API_TOKEN is a required environment variable'}
+      - API_KEY=${API_KEY:?'API_KEY is a required environment variable'}
       - ENABLE_INTERACTIONS=${ENABLE_INTERACTIONS:-false}
       - ENABLE_LEARNERS=${ENABLE_LEARNERS:-false}
       - DB_HOST=postgres

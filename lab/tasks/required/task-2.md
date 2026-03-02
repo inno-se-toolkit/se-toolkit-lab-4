@@ -207,12 +207,12 @@ return [i for i in interactions if i.item_id == item_id]
 
       Replace [`<your-vm-ip-address>`](../../../wiki/vm.md#your-vm-ip-address) with the IP address of your VM. See [`<caddy-port>`](../../../wiki/caddy.md#caddy-port).
 
-   2. To set the API token (use the same value as in your `.env.secret`),
+   2. To set the API key (use the same value as in your `.env.secret`),
 
       [run in the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
       ```terminal
-      export API_TOKEN=<your-api-token>
+      export API_KEY=<your-api-key>
       ```
 
 2. To run the end-to-end tests,
