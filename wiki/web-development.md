@@ -15,8 +15,8 @@
   - [`Protobuf`](#protobuf)
 - [REST API](#rest-api)
 - [API](#api)
-  - [API key](#api-key)
-  - [`<api-key>`](#api-key-1)
+  - [What is API key](#what-is-api-key)
+  - [`<api-key>`](#api-key)
 - [Endpoint](#endpoint)
 - [Send a `GET` request](#send-a-get-request)
   - [Send a `GET` request using a browser](#send-a-get-request-using-a-browser)
@@ -130,7 +130,7 @@ Docs:
 
 - [An introduction to APIs: A comprehensive guide](https://zapier.com/blog/api/)
 
-### API key
+### What is API key
 
 <!-- TODO -->
 
