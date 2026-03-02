@@ -24,3 +24,16 @@ def test_filter_returns_interaction_with_matching_ids() -> None:
     result = _filter_by_item_id(interactions, 1)
     assert len(result) == 1
     assert result[0].id == 1
+
+def test_filter_excludes_interaction_with_different_learner_id():
+    from app.routers.interactions import _filter_by_item_id
+    from app.models.interaction import InteractionModel
+    interaction = InteractionModel(
+        id=1,
+        item_id=1,
+        learner_id=2,
+        kind="attempt",
+        timestamp="2023-01-01T00:00:00"
+    )
+    results = _filter_by_item_id([interaction], item_id=1)
+    assert len(results) == 1
