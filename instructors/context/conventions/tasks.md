@@ -217,6 +217,7 @@ Provide instructions where they're easy to keep in mind. Don't make students jum
 - Every task ends with `## Acceptance criteria`.
 - Criteria are concrete, binary, and verifiable by a PR reviewer.
 - Use `- [ ]` checkbox format.
+- **Criteria must match the task content.** Every criterion must trace back to a specific step or deliverable in the task. Don't list criteria for work the task doesn't ask for, and don't leave task deliverables uncovered by criteria.
 - Examples of good criteria:
   - `Issue has the correct title.`
   - `All tests pass after the fix.`
