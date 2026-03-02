@@ -24,14 +24,14 @@ Then you will send requests and observe how data flows through the components: b
   - [1.4. Open the browser developer tools](#14-open-the-browser-developer-tools)
   - [1.5. Send a request using `Swagger UI`](#15-send-a-request-using-swagger-ui)
   - [1.6. Observe the request](#16-observe-the-request)
-  - [1.6. Verify in `pgAdmin`](#16-verify-in-pgadmin)
-  - [1.7. Send another request and check the database](#17-send-another-request-and-check-the-database)
-  - [1.8. Write comments for the issue](#18-write-comments-for-the-issue)
-    - [1.8.1. Write the request as `fetch` code](#181-write-the-request-as-fetch-code)
-    - [1.8.2. Write the response](#182-write-the-response)
-    - [1.8.3. Write the data output from `pgAdmin`](#183-write-the-data-output-from-pgadmin)
-    - [1.8.4. Paste the ERD from `pgAdmin`](#184-paste-the-erd-from-pgadmin)
-  - [Close the issue](#close-the-issue)
+  - [1.7. Verify in `pgAdmin`](#17-verify-in-pgadmin)
+  - [1.8. Send another request and check the database](#18-send-another-request-and-check-the-database)
+  - [1.9. Write comments for the issue](#19-write-comments-for-the-issue)
+    - [1.9.1. Write the request as `fetch` code](#191-write-the-request-as-fetch-code)
+    - [1.9.2. Write the response](#192-write-the-response)
+    - [1.9.3. Write the data output from `pgAdmin`](#193-write-the-data-output-from-pgadmin)
+    - [1.9.4. Paste the ERD from `pgAdmin`](#194-paste-the-erd-from-pgadmin)
+  - [1.10. Close the issue](#110-close-the-issue)
 - [2. Acceptance criteria](#2-acceptance-criteria)
 
 ## 1. Steps
@@ -102,7 +102,7 @@ Title: `[Task] Observe System Component Interaction`
    - [`<your-vm-ip-address>`](../../../wiki/vm.md#your-vm-ip-address)
    - [`<caddy-port>`](../../../wiki/caddy.md#caddy-port)
 
-2. [Authorize](../../../wiki/swagger.md#authorize-in-swagger-ui) with the API key (`API_KEY`) from `.env.docker.secret`.
+2. [Authorize](../../../wiki/swagger.md#authorize-in-swagger-ui) with [`API_KEY`](../../../wiki/dotenv-docker-secret.md#api_key) from [`.env.docker.secret`](../../../wiki/dotenv-docker-secret.md#what-is-envdockersecret).
 
 ### 1.4. Open the browser developer tools
 
@@ -149,7 +149,7 @@ Title: `[Task] Observe System Component Interaction`
 
    You should see headers, payload, response.
 
-### 1.6. Verify in `pgAdmin`
+### 1.7. Verify in `pgAdmin`
 
 > [!NOTE]
 > The API transformed the `JSON` from your request into a row in the `interacts` table.
@@ -163,22 +163,22 @@ Title: `[Task] Observe System Component Interaction`
 
 3. Verify that the data that you sent via `Swagger UI` appears as a row in the `Data Output` tab.
 
-### 1.7. Send another request and check the database
+### 1.8. Send another request and check the database
 
 1. In `Swagger UI`, send another `POST /interactions` request with different values.
 2. In `pgAdmin`, run the query again and verify the new row appears.
 
-### 1.8. Write comments for the issue
+### 1.9. Write comments for the issue
 
 > [!NOTE]
 > Select the last successful `POST /interactions` request.
 
-Comment 1: [Write the request as `fetch` code](#181-write-the-request-as-fetch-code)
-Comment 2: [Write the response](#182-write-the-response)
-Comment 3: [Write the data output from `pgAdmin`](#183-write-the-data-output-from-pgadmin)
-Comment 4: [Paste the ERD from `pgAdmin`](#184-paste-the-erd-from-pgadmin)
+Comment 1: [Write the request as `fetch` code](#191-write-the-request-as-fetch-code)
+Comment 2: [Write the response](#192-write-the-response)
+Comment 3: [Write the data output from `pgAdmin`](#193-write-the-data-output-from-pgadmin)
+Comment 4: [Paste the ERD from `pgAdmin`](#194-paste-the-erd-from-pgadmin)
 
-#### 1.8.1. Write the request as `fetch` code
+#### 1.9.1. Write the request as `fetch` code
 
 1. [Copy the selected request as `fetch` code](../../../wiki/browser-developer-tools.md#copy-the-request-as-fetch-code).
 2. Paste this code in a `Markdown` code block.
@@ -202,7 +202,7 @@ Comment 4: [Paste the ERD from `pgAdmin`](#184-paste-the-erd-from-pgadmin)
    ```
    ~~~
 
-#### 1.8.2. Write the response
+#### 1.9.2. Write the response
 
 1. [Copy the response](../../../wiki/browser-developer-tools.md#copy-the-response) to the selected request.
 2. Paste the response as `JSON` in a `Markdown` code block.
@@ -223,7 +223,7 @@ Comment 4: [Paste the ERD from `pgAdmin`](#184-paste-the-erd-from-pgadmin)
    ```
    ~~~
 
-#### 1.8.3. Write the data output from `pgAdmin`
+#### 1.9.3. Write the data output from `pgAdmin`
 
 1. [Copy the full data output](../../../wiki/pgadmin.md#copy-the-query-data-output) that you got when verifying in the `pgAdmin` that a new row appeared.
 2. Paste the output as `CSV` in a `Markdown` code block.
@@ -231,7 +231,7 @@ Comment 4: [Paste the ERD from `pgAdmin`](#184-paste-the-erd-from-pgadmin)
    Format of the block (see in [`Markdown` preview](../../../wiki/vs-code.md#open-the-markdown-preview) if you read in `VS Code`):
 
    ~~~
-   ```json
+   ```csv
    <data-output>
    ```
    ~~~
@@ -248,13 +248,13 @@ Comment 4: [Paste the ERD from `pgAdmin`](#184-paste-the-erd-from-pgadmin)
    ```
    ~~~
 
-#### 1.8.4. Paste the ERD from `pgAdmin`
+#### 1.9.4. Paste the ERD from `pgAdmin`
 
 1. [View the ERD in Chen notation](../../../wiki/pgadmin.md#view-the-erd-in-chen-notation).
 2. Make a screenshot where all three tables are fully visible.
 3. Paste the screenshot.
 
-### Close the issue
+### 1.10. Close the issue
 
 Close the issue.
 
