@@ -35,3 +35,22 @@ def test_filter_excludes_interaction_with_different_learner_id():
     )
     results = _filter_by_item_id([interaction], item_id=1)
     assert len(results) == 1
+def test_filter_returns_empty_list_for_nonexistent_item(session: Session):
+    """Проверка: если ищем item_id, которого нет, получаем пустой список."""
+    log = InteractionLog(learner_id=1, item_id=1, kind="view")
+    session.add(log)
+    session.commit()
+    results = session.query(InteractionLog).filter(InteractionLog.item_id == 999).all()
+    assert results == []
+
+def test_filter_by_both_ids_simultaneously(session: Session):
+    """Проверка: фильтрация одновременно по ученику и предмету."""
+    log = InteractionLog(learner_id=5, item_id=5, kind="test")
+    session.add(log)
+    session.commit()
+    results = session.query(InteractionLog).filter(
+        InteractionLog.learner_id == 5,
+        InteractionLog.item_id == 5
+    ).all()
+    assert len(results) == 1
+    assert results[0].kind == "test"
