@@ -11,8 +11,7 @@ Understand the difference between a dev server and production static files, and 
 <h4>Context</h4>
 
 The back-end API is running on the VM. You will add a front-end that connects to it.
-First you will run it locally with a dev server (fast iteration, hot reload).
-Then you will build and deploy a production version (static files served by `Caddy`).
+First you will run it locally with a dev server, then build and deploy a production version served by `Caddy`.
 Finally, you will use an AI agent to add a new feature to the front-end.
 
 <h4>Table of contents</h4>
@@ -27,7 +26,7 @@ Finally, you will use an AI agent to add a new feature to the front-end.
     - [1.4.1. Deploy the front-end to the VM](#141-deploy-the-front-end-to-the-vm)
     - [1.4.2. Verify in the browser](#142-verify-in-the-browser)
   - [1.5. Part C: Modify the front-end with an AI agent](#15-part-c-modify-the-front-end-with-an-ai-agent)
-    - [1.5.1. Add a column using the AI agent](#151-add-a-column-using-the-ai-agent)
+    - [1.5.1. Add a `description` column](#151-add-a-description-column)
     - [1.5.2. Verify in the dev server](#152-verify-in-the-dev-server)
     - [1.5.3. Deploy the change to the VM](#153-deploy-the-change-to-the-vm)
   - [1.6. Finish the task](#16-finish-the-task)
@@ -66,7 +65,7 @@ Title: `[Task] Add Front-end`
 
 3. Configure the environment. Complete the following steps:
 
-   1. [Open the file](../../../wiki/vs-code.md#open-the-file) [`frontend/.env.example`](../../../frontend/.env.example).
+   1. Open the file [`frontend/.env.example`](../../../frontend/.env.example) ([how to open a file](../../../wiki/vs-code.md#open-the-file)).
    2. Copy it to `frontend/.env`.
    3. Set `VITE_API_TARGET` to the URL of your back-end API, for example `http://<your-vm-ip-address>:<caddy-port>`.
 
@@ -103,7 +102,7 @@ Title: `[Task] Add Front-end`
 
 #### 1.3.2. Edit a source file and observe hot reload
 
-1. [Open the file](../../../wiki/vs-code.md#open-the-file) [`frontend/src/App.tsx`](../../../frontend/src/App.tsx).
+1. Open the file [`frontend/src/App.tsx`](../../../frontend/src/App.tsx) ([how to open a file](../../../wiki/vs-code.md#open-the-file)).
 2. Make a small visible change, for example change a heading text.
 3. Save the file.
 4. Observe that the browser updates automatically without a page refresh.
@@ -111,7 +110,7 @@ Title: `[Task] Add Front-end`
 ### 1.4. Part B: Prod version
 
 > [!NOTE]
-> A production build compiles the front-end into static [HTML](../../../wiki/web-development.md#html), [CSS](../../../wiki/web-development.md#css), and [JavaScript](../../../wiki/web-development.md#javascript) files.
+> A production build compiles the front-end into static [`HTML`](../../../wiki/web-development.md#html), [`CSS`](../../../wiki/web-development.md#css), and [`JavaScript`](../../../wiki/web-development.md#javascript) files.
 > In this project, [`Caddy`](../../../wiki/caddy.md#what-is-caddy) runs in a [`Docker`](../../../wiki/docker.md#what-is-docker) container that builds the front-end and serves the static files.
 > The [`Caddyfile`](../../../wiki/caddy.md#caddyfile) routes API requests to the back-end and serves the front-end for all other paths.
 
@@ -164,7 +163,11 @@ Title: `[Task] Add Front-end`
 > The AI agent can read all front-end source files and find the right component to modify.
 > Your job is to give a clear prompt and verify the result.
 
-#### 1.5.1. Add a column using the AI agent
+#### 1.5.1. Add a `description` column
+
+Add a `description` column to the data table using one of the following methods.
+
+Method 1:
 
 1. Open the AI agent in the front-end project directory.
 2. Give it this prompt:
@@ -172,6 +175,13 @@ Title: `[Task] Add Front-end`
    > "Add a `description` column to the data table. The API already returns this field. Add it to the table header and display the value in each row."
 
 3. Wait for the agent to make the changes.
+
+Method 2:
+
+1. Open the file [`frontend/src/App.tsx`](../../../frontend/src/App.tsx) ([how to open a file](../../../wiki/vs-code.md#open-the-file)).
+2. Add `description: string` to the `Item` interface.
+3. Add a `Description` header to the table.
+4. Add a cell that displays `item.description` in each row.
 
 #### 1.5.2. Verify in the dev server
 
@@ -192,7 +202,7 @@ Title: `[Task] Add Front-end`
    feat: add description column to the front-end table
    ```
 
-2. Push your changes.
+2. [Push your changes](../../../wiki/git-workflow.md#push-more-commits).
 3. [Connect to your VM](../../../wiki/vm.md#connect-to-the-vm).
 4. To navigate to the project directory,
 
