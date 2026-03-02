@@ -10,8 +10,8 @@
   - [`APP_HOST_ADDRESS`](#app_host_address)
   - [`APP_HOST_PORT`](#app_host_port)
   - [`API_TOKEN`](#api_token)
-  - [`ENABLE_INTERACTIONS`](#enable_interactions)
-  - [`ENABLE_LEARNERS`](#enable_learners)
+  - [`APP_ENABLE_INTERACTIONS`](#app_enable_interactions)
+  - [`APP_ENABLE_LEARNERS`](#app_enable_learners)
 - [`postgres`](#postgres)
   - [`POSTGRES_DB`](#postgres_db)
   - [`POSTGRES_USER`](#postgres_user)
@@ -71,13 +71,13 @@ Default: `42001`
 
 Default: `my-secret-api-key`
 
-### `ENABLE_INTERACTIONS`
+### `APP_ENABLE_INTERACTIONS`
 
 Feature flag
 
 Default: `true`
 
-### `ENABLE_LEARNERS`
+### `APP_ENABLE_LEARNERS`
 
 Feature flag for enabling the `/learners` endpoint.
 
@@ -87,7 +87,7 @@ Default: `true`
 
 ### `POSTGRES_DB`
 
-Default: `lab-4`
+Default: `db-lab-4`
 
 ### `POSTGRES_USER`
 
