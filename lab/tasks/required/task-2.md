@@ -91,7 +91,7 @@ Title: `[Task] Back-end Testing`
 
 #### 1.3.3. Add a new unit test
 
-> [!NOTE]
+> [!TIP]
 > Feel free to use AI to generate the tests. Make sure to provide them with necessary context.
 
 1. [Open the file](../../../wiki/vs-code.md#open-the-file):
@@ -130,28 +130,28 @@ Title: `[Task] Back-end Testing`
    [`backend/app/routers/interactions.py`](../../../backend/app/routers/interactions.py).
 2. Fix the bug in the `_filter_by_item_id` function.
 
-<details><summary>Click to open a hint</summary>
+3. <details><summary>Click to open a hint</summary>
 
-The filter is applied in-memory after all interactions are fetched from the database.
-Look at the condition that decides which interactions to include — it compares the wrong field on the interaction object.
+   The filter is applied in-memory after all interactions are fetched from the database.
+   Look at the condition that decides which interactions to include — it compares the wrong field on the interaction object.
 
-</details>
+   </details>
 
-<details><summary>Click to open the solution</summary>
+4. <details><summary>Click to open the solution</summary>
 
-Find this line in `_filter_by_item_id`:
+   Find this line in `_filter_by_item_id`:
 
-```python
-return [i for i in interactions if i.learner_id == item_id]  # BUG
-```
+   ```python
+   return [i for i in interactions if i.learner_id == item_id]  # BUG
+   ```
 
-Change it to:
+   Change it to:
 
-```python
-return [i for i in interactions if i.item_id == item_id]
-```
+   ```python
+   return [i for i in interactions if i.item_id == item_id]
+   ```
 
-</details>
+   </details>
 
 #### 1.3.5. Rerun unit tests
 
@@ -187,7 +187,7 @@ return [i for i in interactions if i.item_id == item_id]
 ### 1.4. Part B: Run end-to-end tests remotely
 
 > [!NOTE]
-> End-to-end tests run on your local machine and send real [HTTP](../../../wiki/http.md) requests to the deployed version on the VM.
+> End-to-end tests run on your local machine and send real [`HTTP`](../../../wiki/http.md) requests to the deployed version on the VM.
 
 #### 1.4.1. Redeploy the fixed version
 
@@ -210,13 +210,15 @@ return [i for i in interactions if i.item_id == item_id]
       - [`<your-vm-ip-address>`](../../../wiki/vm.md#your-vm-ip-address)
       - [`<caddy-port>`](../../../wiki/caddy.md#caddy-port)
 
-   2. To set the API key (use the same value as in your `.env.secret`),
+   2. To set the API key,
 
       [run in the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
       ```terminal
       export API_KEY=<your-api-key>
       ```
+
+      Replace `<your-api-key>` with the same value as in your `.env.secret` file.
 
 2. To run the end-to-end tests,
 
@@ -240,8 +242,8 @@ return [i for i in interactions if i.item_id == item_id]
    [`backend/tests/e2e/test_interactions.py`](../../../backend/tests/e2e/test_interactions.py).
 2. Add two end-to-end tests that cover the following boundary-value cases:
 
-   - Test 1: `GET /interactions/` returns [HTTP status code](../../../wiki/http.md#http-response-status-code) `200`.
-   - Test 2: `GET /interactions/` response body is a [JSON](../../../wiki/file-formats.md#json) array.
+   - Test 1: `GET /interactions/` returns [`HTTP` status code](../../../wiki/http.md#http-response-status-code) `200`.
+   - Test 2: `GET /interactions/` response body is a [`JSON`](../../../wiki/file-formats.md#json) array.
 
    <details><summary>Click to open the solution</summary>
 
@@ -286,14 +288,14 @@ return [i for i in interactions if i.item_id == item_id]
    [`backend/app/models/interaction.py`](../../../backend/app/models/interaction.py).
 2. Fix the bug in `InteractionModel`.
 
-   <details><summary>Click to open a hint</summary>
+3. <details><summary>Click to open a hint</summary>
 
    The response model has a field whose name does not match the corresponding column in the database.
    When `FastAPI` tries to serialize the database row into the response model, it cannot find the expected field and returns a `500` error.
 
    </details>
 
-   <details><summary>Click to open the solution</summary>
+4. <details><summary>Click to open the solution</summary>
 
    Find this line in `InteractionModel`:
 
