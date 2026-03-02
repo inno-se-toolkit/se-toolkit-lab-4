@@ -82,7 +82,7 @@ Title: `[Task] <Task title>`
 1. [Create a PR](../git-workflow.md#create-a-pr) with your changes.
 2. [Get a PR review](../git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
 
-----
+---
 
 ## 2. Acceptance criteria
 
@@ -102,7 +102,7 @@ Title: `[Task] <Task title>`
 - **Acceptance criteria** use `- [ ]` checkboxes. Reviewers check them during PR review.
 - Acceptance criteria are concrete and verifiable: issue titles, passing tests, merged PRs, specific comments.
 
-----
+---
 
 ## 4.12. Commit message format
 
@@ -134,7 +134,7 @@ When a task specifies a commit message, provide it in a code block:
    \`\`\`
 ```
 
-----
+---
 
 ## 4.19. Steps with sub-steps
 
@@ -149,7 +149,7 @@ When multiple actions serve a single logical goal, group them under one step. Wr
 
 When actions don't share a logical goal, flatten them into separate top-level steps (see [Instructions wording](./common.md#41-instructions-wording)).
 
-----
+---
 
 ## 12. Task design principles
 
@@ -334,7 +334,7 @@ When designing debugging tasks, include multiple bugs at different layers of the
 
 Structure the task so each bug is discovered sequentially: the first fix unblocks progress but reveals the next failure. Provide collapsible hints for each bug.
 
-----
+---
 
 ## 15. Testing pattern
 
@@ -361,7 +361,7 @@ Structure the task so each bug is discovered sequentially: the first fix unblock
 - Acceptance criteria should include "All tests pass."
 - **Vary bug types across the request path.** When a lab includes multiple bugs, place them at different layers (e.g., schema–database mismatch at the data layer, logic error at the processing layer). This teaches students to trace failures across the full stack, not just look for one kind of mistake.
 
-----
+---
 
 ## 17. Checklist before publishing
 
