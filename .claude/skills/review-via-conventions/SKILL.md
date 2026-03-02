@@ -26,4 +26,12 @@ Review a single task file for violations of the lab authoring conventions. The f
 
 ## Output format
 
-Write the review directly in the conversation. Group findings by convention number (e.g., "4.2. Terminal commands", "Section 3. Task document structure"). Under each group, list findings as numbered items with line numbers. If a group has no findings, write "No issues found." At the end, add a **Summary** section with the total violation count and a short overall assessment.
+Write the report to `tmp/<filename>-review-via-conventions-report.md`, where `<filename>` is the basename of the reviewed file without the `.md` extension (e.g., `tmp/setup-review-via-conventions-report.md` for `lab/tasks/setup.md`, `tmp/task-2-review-via-conventions-report.md` for `lab/tasks/required/task-2.md`). Create the `tmp/` directory if it does not exist.
+
+The report must be self-contained so another session or agent can act on it without extra context. Structure:
+
+1. **Header** — file path reviewed, date, convention files used.
+2. **Findings** — grouped by convention number (e.g., "4.2. Terminal commands", "Section 3. Task document structure"). Under each group, list findings as numbered items with line numbers. If a group has no findings, write "No issues found."
+3. **Summary** — total violation count and a short overall assessment.
+
+After writing the file, print its path in the conversation so the user can find it.
