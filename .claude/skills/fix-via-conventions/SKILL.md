@@ -4,17 +4,21 @@ description: Fix convention violations found by /review-via-conventions
 argument-hint: "<path>"
 ---
 
-Fix convention violations in a task file using the report produced by `/review-via-conventions`.
+Fix convention violations in a file using the report produced by `/review-via-conventions`.
 
 ## Steps
 
-1. Parse `$ARGUMENTS` to get the file path. Accept paths like `lab/tasks/setup.md`, `lab/tasks/required/task-2.md`, or `lab/tasks/optional/task-1.md`. If the path is missing or does not point to a file under `lab/tasks/`, ask the user.
-2. Derive the report path: `tmp/review-via-conventions/<relative-path>`, where `<relative-path>` is the target file's path relative to `lab/tasks/` (e.g., `tmp/review-via-conventions/setup.md` for `lab/tasks/setup.md`, `tmp/review-via-conventions/required/task-1.md` for `lab/tasks/required/task-1.md`). If the report file does not exist, tell the user to run `/review-via-conventions <path>` first and stop.
+1. Parse `$ARGUMENTS` to get the file path. Accept paths under `lab/tasks/` (e.g., `lab/tasks/setup.md`, `lab/tasks/required/task-2.md`) or `wiki/` (e.g., `wiki/web-development.md`). If the path is missing or does not point to a file under one of these directories, ask the user.
+2. Derive the report path: `tmp/review-via-conventions/<repo-root-path>`, where `<repo-root-path>` is the target file's path from the repository root (e.g., `tmp/review-via-conventions/lab/tasks/required/task-1.md` for `lab/tasks/required/task-1.md`, `tmp/review-via-conventions/wiki/web-development.md` for `wiki/web-development.md`). If the report file does not exist, tell the user to run `/review-via-conventions <path>` first and stop.
 3. Read the report file.
-4. Read the target task file.
+4. Read the target file.
 5. Read the convention files referenced in the report header so every fix is grounded in the actual convention text:
-   - `instructors/context/conventions/common.md`
-   - `instructors/context/conventions/tasks.md`
+   - **For `lab/tasks/` files:**
+     - `instructors/context/conventions/common.md`
+     - `instructors/context/conventions/tasks.md`
+   - **For `wiki/` files:**
+     - `instructors/context/conventions/common.md`
+     - `instructors/context/conventions/wiki.md`
 6. Work through the report findings **one group at a time**. For each violation, apply the minimal edit that resolves it. Use line numbers from the report as a starting guide, but always verify against the current file content (earlier fixes may shift lines).
 
 ## Rules
