@@ -5,7 +5,7 @@
 - [4.3. Command Palette commands](#43-command-palette-commands)
 - [4.4. Options vs steps](#44-options-vs-steps)
 - [4.5. Ordered lists](#45-ordered-lists)
-- [4.6. Little ToC](#46-little-toc)
+- [4.6. Mini-ToC](#46-mini-toc)
 - [4.7. Table of contents](#47-table-of-contents)
 - [4.8. Links and cross-references](#48-links-and-cross-references)
 - [4.9. Notes, tips, warnings](#49-notes-tips-warnings)
@@ -28,7 +28,7 @@
 
 - **Navigate somewhere** — `Go to X.`
 - **Click something** — `Click X.`
-- **Choose an option** — `Method N:` prefix (see [4.6](#46-little-toc))
+- **Choose an option** — `Method N:` prefix (see [4.6](#46-mini-toc))
 - **Complete all steps** — `Complete these steps:`
 - **Conditional steps** — `If <condition>, complete these steps:`
 
@@ -91,14 +91,14 @@ Exception: `vs-code.md` itself is exempt because the link would be self-referent
 
 Clearly differentiate:
 
-- **Options:** List with `Method N:` prefix (see [4.6](#46-little-toc)).
+- **Options:** List with `Method N:` prefix (see [4.6](#46-mini-toc)).
 - **Steps:** "Complete these steps:" (then list steps in order).
 
 ## 4.5. Ordered lists
 
 Each ordered list must use `1. 2. 3.`, **not** `1. 1. 1.`.
 
-## 4.6. Little ToC
+## 4.6. Mini-ToC
 
 Provide a little table of contents when the list of options or steps is long. Use `Method N:` prefixes with full heading text as the link:
 
@@ -112,7 +112,7 @@ Provide a little table of contents when the list of options or steps is long. Us
 ### Do X using `GitLens`
 ```
 
-Don't provide a little ToC when all lists of items are short.
+Don't provide a mini-ToC when all lists of items are short.
 
 ## 4.7. Table of contents
 
