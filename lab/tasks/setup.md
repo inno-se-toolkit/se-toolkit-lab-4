@@ -16,7 +16,7 @@
     - [1.4.3. (UPD) (`Windows` only) Set the default shell for the `VS Code Terminal`](#143-upd-windows-only-set-the-default-shell-for-the-vs-code-terminal)
     - [1.4.4. Set up `Git`](#144-set-up-git)
   - [1.5. (UPD) Open in `VS Code` the `software-engineering-toolkit` directory](#15-upd-open-in-vs-code-the-software-engineering-toolkit-directory)
-  - [1.6. (UPD) Clone your fork](#16-upd-clone-your-fork)
+  - [1.6. Clone your fork](#16-clone-your-fork)
     - [1.6.1. (UPD) Copy your fork URL](#161-upd-copy-your-fork-url)
     - [1.6.2. (UPD) Clone your fork](#162-upd-clone-your-fork)
   - [1.7. (UPD) Open the cloned repo and set up `VS Code`](#17-upd-open-the-cloned-repo-and-set-up-vs-code)
@@ -24,11 +24,11 @@
   - [1.9. Set up `Python`](#19-set-up-python)
     - [1.9.1. Install `uv`](#191-install-uv)
     - [1.9.2. (UPD) Set up `Python` in `VS Code`](#192-upd-set-up-python-in-vs-code)
-  - [1.10. (NEW) Prepare `Docker`](#110-new-prepare-docker)
+  - [1.10. (UPD) Prepare `Docker`](#110-upd-prepare-docker)
   - [1.11. Start the services](#111-start-the-services)
     - [1.11.1. (UPD) Set up the `Docker` environment](#1111-upd-set-up-the-docker-environment)
     - [1.11.2. (UPD) Start the services using `Docker Compose`](#1112-upd-start-the-services-using-docker-compose)
-  - [1.12. (UPD) Observe containers and services](#112-upd-observe-containers-and-services)
+  - [1.12. Observe containers and services](#112-observe-containers-and-services)
     - [1.12.1. (UPD) Open a new `VS Code Terminal`](#1121-upd-open-a-new-vs-code-terminal)
     - [1.12.2. (UPD) List running containers](#1122-upd-list-running-containers)
     - [1.12.3. (UPD) See logs of the running services](#1123-upd-see-logs-of-the-running-services)
@@ -42,9 +42,9 @@
     - [1.16.2. (UPD) Prepare your VM for checking](#1162-upd-prepare-your-vm-for-checking)
   - [1.17. (UPD) Set up a coding agent](#117-upd-set-up-a-coding-agent)
 - [2. Optional steps](#2-optional-steps)
-  - [2.1. (NEW) Set up `Nix`](#21-new-set-up-nix)
-  - [2.2. (NEW) Set up `direnv`](#22-new-set-up-direnv)
-  - [2.3. (UPD) Learn to go back after clicking a link](#23-upd-learn-to-go-back-after-clicking-a-link)
+  - [2.1. (UPD) Set up `Nix`](#21-upd-set-up-nix)
+  - [2.2. (UPD) Set up `direnv`](#22-upd-set-up-direnv)
+  - [2.3. Learn to go back after clicking a link](#23-learn-to-go-back-after-clicking-a-link)
   - [2.4. Set up the shell prompt](#24-set-up-the-shell-prompt)
   - [2.5. Customize the `Source Control`](#25-customize-the-source-control)
   - [2.6. Get familiar with `GitLens`](#26-get-familiar-with-gitlens)
@@ -58,12 +58,6 @@
 >
 > These steps must be completed to get the right setup for this lab,
 > even if you have completed similar steps in the previous lab.
-
-> [!IMPORTANT]
-> Some steps have the `(NEW)` label.
->
-> These steps were not present in previous setups.
-> Pay extra attention to these steps to ensure that you have the right setup for this lab.
 
 > [!NOTE]
 > We provide all of the hardest steps in the lab setup
@@ -167,7 +161,7 @@
 2. [Open in `VS Code` the directory](../../wiki/vs-code.md#open-the-directory):
    `software-engineering-toolkit`.
 
-### 1.6. (UPD) Clone your fork
+### 1.6. Clone your fork
 
 #### 1.6.1. (UPD) Copy your fork URL
 
@@ -227,7 +221,7 @@ If you can't [connect to your VM](../../wiki/vm.md#connect-to-the-vm), complete 
 
 1. [Set up `Python` in `VS Code`](../../wiki/python.md#set-up-python-in-vs-code).
 
-### 1.10. (NEW) Prepare `Docker`
+### 1.10. (UPD) Prepare `Docker`
 
 > [!NOTE]
 > Old containers and volumes from a previous lab version may conflict with the updated services.
@@ -284,7 +278,7 @@ If you can't [connect to your VM](../../wiki/vm.md#connect-to-the-vm), complete 
 >
 > If you need to re-initialize the database (e.g., after pulling upstream changes to `init.sql`), see [Resetting the database](../../wiki/docker-postgres.md#resetting-the-database).
 
-### 1.12. (UPD) Observe containers and services
+### 1.12. Observe containers and services
 
 #### 1.12.1. (UPD) Open a new `VS Code Terminal`
 
@@ -397,26 +391,26 @@ A coding agent can help you write code, explain concepts, and debug issues.
 These enhancements can make your life easier:
 
 <!-- no toc -->
-- [Set up `Nix`](#21-new-set-up-nix)
-- [Set up `direnv`](#22-new-set-up-direnv)
-- [Learn to go back after clicking a link](#23-upd-learn-to-go-back-after-clicking-a-link)
+- [Set up `Nix`](#21-upd-set-up-nix)
+- [Set up `direnv`](#22-upd-set-up-direnv)
+- [Learn to go back after clicking a link](#23-learn-to-go-back-after-clicking-a-link)
 - [Set up the shell prompt](#24-set-up-the-shell-prompt)
 - [Customize the `Source Control`](#25-customize-the-source-control)
 - [Get familiar with `GitLens`](#26-get-familiar-with-gitlens)
 - [Create a label for tasks](#27-create-a-label-for-tasks)
 
-### 2.1. (NEW) Set up `Nix`
+### 2.1. (UPD) Set up `Nix`
 
 1. (Optional) [Read about `Nix`](../../wiki/nix.md#what-is-nix).
 2. [Set up `Nix`](../../wiki/nix.md#set-up-nix).
 
-### 2.2. (NEW) Set up `direnv`
+### 2.2. (UPD) Set up `direnv`
 
 1. (Optional) [Read about `direnv`](../../wiki/direnv.md#what-is-direnv).
-2. [Set up `Nix`](#21-new-set-up-nix).
+2. [Set up `Nix`](#21-upd-set-up-nix).
 3. [Set up `direnv`](../../wiki/direnv.md#set-up-direnv).
 
-### 2.3. (UPD) Learn to go back after clicking a link
+### 2.3. Learn to go back after clicking a link
 
 <!-- TODO formulate not as a note -->
 
