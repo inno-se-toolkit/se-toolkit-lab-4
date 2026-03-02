@@ -94,7 +94,7 @@ function App() {
               <th>ID</th>
               <th>Type</th>
               <th>Title</th>
-              <th>Description</th> {/* Новый заголовок */}
+              <th>Description</th>
               <th>Created at</th>
             </tr>
           </thead>
