@@ -34,3 +34,4 @@ def test_filter_excludes_interaction_with_different_learner_id() -> None:
     # Should return the interaction with item_id=1 (not learner_id=1)
     assert len(filtered) >= 1
     assert filtered[0].item_id == 1
+
