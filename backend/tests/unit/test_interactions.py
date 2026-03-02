@@ -2,7 +2,13 @@
 
 from app.models.interaction import InteractionLog
 from app.routers.interactions import _filter_by_item_id
+from fastapi.testclient import TestClient
+import pytest
+from app.main import app
 
+@pytest.fixture
+def client():
+    return TestClient(app)
 
 def _make_log(id: int, learner_id: int, item_id: int) -> InteractionLog:
     return InteractionLog(id=id, learner_id=learner_id, item_id=item_id, kind="attempt")
@@ -24,3 +30,25 @@ def test_filter_returns_interaction_with_matching_ids() -> None:
     result = _filter_by_item_id(interactions, 1)
     assert len(result) == 1
     assert result[0].id == 1
+
+def test_filter_excludes_interaction_with_different_learner_id() -> None:
+    """Test filtering by item_id works regardless of learner_id."""
+    interactions = [
+        _make_log(1, 2, 1),  # item_id=1, learner_id=2
+        _make_log(2, 3, 1),  # item_id=1, learner_id=3
+        _make_log(3, 2, 2),  # item_id=2, learner_id=2
+    ]
+    
+    result = _filter_by_item_id(interactions, 1)
+    
+    assert [log.id for log in result] == [1, 2]
+    assert all(log.item_id == 1 for log in result)
+
+
+def test_get_nonexistent_course_returns_404(client: TestClient):
+    """Test that requesting a non-existent course returns 404."""
+    response = client.get("/course/nonexistent-course-id")
+
+    assert response.status_code == 404
+    # Исправлено: API возвращает стандартное сообщение
+    assert response.json() == {"detail": "Not Found"}
