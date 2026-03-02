@@ -20,4 +20,4 @@ Docs:
 
 An `SQL` script that can be run against a database.
 
-You can [run queries using `pgAdmin`](./pgadmin.md#run-a-query).
+You can [run queries using `pgAdmin`](./pgadmin.md#run-the-query).
