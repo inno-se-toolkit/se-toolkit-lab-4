@@ -24,7 +24,7 @@ def test_filter_returns_interaction_with_matching_ids() -> None:
     result = _filter_by_item_id(interactions, 1)
     assert len(result) == 1
     assert result[0].id == 1
-    
+
 def test_filter_excludes_interaction_with_different_learner_id() -> None:
     interactions = [
         _make_log(1, learner_id=1, item_id=1),
@@ -34,3 +34,28 @@ def test_filter_excludes_interaction_with_different_learner_id() -> None:
     result = _filter_by_item_id(interactions, 1)
     assert len(result) == 2
     assert all(i.item_id == 1 for i in result)
+def test_filter_returns_empty_when_no_matching_item_id() -> None:
+    interactions = [_make_log(1, 1, 2), _make_log(2, 2, 3)]
+    result = _filter_by_item_id(interactions, 1)
+    assert result == []
+
+def test_filter_returns_multiple_matching_interactions() -> None:
+    interactions = [_make_log(1, 1, 5), _make_log(2, 2, 5), _make_log(3, 3, 6)]
+    result = _filter_by_item_id(interactions, 5)
+    assert len(result) == 2
+
+def test_filter_returns_single_item_list_unchanged_when_matches() -> None:
+    interactions = [_make_log(1, 1, 1)]
+    result = _filter_by_item_id(interactions, 1)
+    assert result == interactions
+
+def test_filter_returns_empty_for_single_non_matching_item() -> None:
+    interactions = [_make_log(1, 1, 99)]
+    result = _filter_by_item_id(interactions, 1)
+    assert result == []
+
+def test_filter_does_not_modify_original_list() -> None:
+    interactions = [_make_log(1, 1, 1), _make_log(2, 2, 2)]
+    original_length = len(interactions)
+    _filter_by_item_id(interactions, 1)
+    assert len(interactions) == original_length    
