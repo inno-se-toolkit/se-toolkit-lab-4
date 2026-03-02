@@ -412,6 +412,8 @@ These enhancements can make your life easier:
 
 ### 2.3. (UPD) Learn to go back after clicking a link
 
+<!-- TODO formulate not as a note -->
+
 > [!NOTE]
 > Shortcuts for going back after clicking a link:
 >
