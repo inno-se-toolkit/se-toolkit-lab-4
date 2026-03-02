@@ -88,6 +88,11 @@
 
 [Create a subscription](../../wiki/vm.md#create-a-subscription) to be able to create a VM.
 
+> [!TIP]
+> Subscription approval may take time.
+> Continue with the next steps while you wait — you will
+> [finish creating the VM](#18-continue-creating-a-vm) later.
+
 ### 1.3. Set up your fork
 
 #### 1.3.1. Sign in on `GitHub`
