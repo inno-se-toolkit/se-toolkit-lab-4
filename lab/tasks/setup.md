@@ -406,8 +406,9 @@ These enhancements can make your life easier:
 
 ### 2.2. (NEW) Set up `direnv`
 
-1. [Set up `Nix`](#21-new-set-up-nix).
-2. [Set up `direnv`](../../wiki/direnv.md#set-up-direnv).
+1. (Optional) [Read about `direnv`](../../wiki/direnv.md#what-is-direnv).
+2. [Set up `Nix`](#21-new-set-up-nix).
+3. [Set up `direnv`](../../wiki/direnv.md#set-up-direnv).
 
 ### 2.3. (UPD) Learn to go back after clicking a link
 
