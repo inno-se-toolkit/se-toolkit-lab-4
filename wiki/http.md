@@ -6,6 +6,7 @@
 - [Communication using `HTTP`](#communication-using-http)
 - [`HTTP` request](#http-request)
   - [`HTTP` request method](#http-request-method)
+- [`HTTP` request header](#http-request-header)
   - [`HTTP` request payload](#http-request-payload)
   - [Query parameter](#query-parameter)
 - [`HTTP` response](#http-response)
@@ -59,6 +60,10 @@ Common methods:
 - `POST` — create a new resource.
 - `PUT` — update an existing resource.
 - `DELETE` — remove a resource.
+
+## `HTTP` request header
+
+<!-- TODO -->
 
 ### `HTTP` request payload
 
