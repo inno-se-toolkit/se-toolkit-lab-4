@@ -19,12 +19,12 @@ You will discover and fix them by writing tests, then use an AI agent to generat
   - [1.1. Follow the `Git workflow`](#11-follow-the-git-workflow)
   - [1.2. Create a `Lab Task` issue](#12-create-a-lab-task-issue)
   - [1.3. Part A: Run unit tests locally](#13-part-a-run-unit-tests-locally)
-    - [1.3.0. Create the `.env.secret` file](#130-create-the-envsecret-file)
-    - [1.3.1. Run existing unit tests](#131-run-existing-unit-tests)
-    - [1.3.2. Add a new unit test](#132-add-a-new-unit-test)
-    - [1.3.3. Fix the bug](#133-fix-the-bug)
-    - [1.3.4. Rerun unit tests](#134-rerun-unit-tests)
-    - [1.3.5. Commit the fix](#135-commit-the-fix)
+    - [1.3.1. Create the `.env.secret` file](#131-create-the-envsecret-file)
+    - [1.3.2. Run existing unit tests](#132-run-existing-unit-tests)
+    - [1.3.3. Add a new unit test](#133-add-a-new-unit-test)
+    - [1.3.4. Fix the bug](#134-fix-the-bug)
+    - [1.3.5. Rerun unit tests](#135-rerun-unit-tests)
+    - [1.3.6. Commit the fix](#136-commit-the-fix)
   - [1.4. Part B: Run end-to-end tests remotely](#14-part-b-run-end-to-end-tests-remotely)
     - [1.4.1. Redeploy the fixed version](#141-redeploy-the-fixed-version)
     - [1.4.2. Run existing end-to-end tests](#142-run-existing-end-to-end-tests)
@@ -55,7 +55,7 @@ Title: `[Task] Back-end Testing`
 > [!NOTE]
 > Unit tests do not require a running server. They test individual functions in isolation.
 
-#### 1.3.0. Create the `.env.secret` file
+#### 1.3.1. Create the `.env.secret` file
 
 1. [Check that the current directory is `se-toolkit-lab-4`](../../../wiki/shell.md#check-the-current-directory-is-directory-name).
 2. To create the `.env.secret` file from the example,
@@ -71,7 +71,7 @@ Title: `[Task] Back-end Testing`
 > The test runner needs it to configure the application settings.
 > The default values in [`.env.example`](../../../.env.example) work out of the box.
 
-#### 1.3.1. Run existing unit tests
+#### 1.3.2. Run existing unit tests
 
 1. To run the existing unit tests,
 
@@ -89,7 +89,7 @@ Title: `[Task] Back-end Testing`
    ===================== 3 passed in X.XXs =====================
    ```
 
-#### 1.3.2. Add a new unit test
+#### 1.3.3. Add a new unit test
 
 > [!NOTE]
 > Feel free to use AI to generate the tests. Make sure to provide them with necessary context.
@@ -124,7 +124,7 @@ Title: `[Task] Back-end Testing`
    - The name of the failing test is `test_filter_includes_interaction_with_different_learner_id`.
    - The failed assertion is `assert 0 == 1` — the filter returned 0 interactions, but 1 was expected.
 
-#### 1.3.3. Fix the bug
+#### 1.3.4. Fix the bug
 
 1. [Open the file](../../../wiki/vs-code.md#open-the-file):
    [`backend/app/routers/interactions.py`](../../../backend/app/routers/interactions.py).
@@ -153,7 +153,7 @@ return [i for i in interactions if i.item_id == item_id]
 
 </details>
 
-#### 1.3.4. Rerun unit tests
+#### 1.3.5. Rerun unit tests
 
 1. To rerun the unit tests,
 
@@ -171,7 +171,7 @@ return [i for i in interactions if i.item_id == item_id]
    ===================== 4 passed in X.XXs =====================
    ```
 
-#### 1.3.5. Commit the fix
+#### 1.3.6. Commit the fix
 
 1. [Commit](../../../wiki/git-workflow.md#commit) your changes.
 
