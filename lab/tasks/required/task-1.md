@@ -69,7 +69,7 @@ Title: `[Task] Observe System Component Interaction`
    git pull
    ```
 
-5. To create the `.env.docker.secret` file (if it does not exist),
+5. To create the [`.env.docker.secret`](../../../wiki/dotenv-docker-secret.md#what-is-envdockersecret) file (if it does not exist),
 
    [run in the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
@@ -161,12 +161,12 @@ Title: `[Task] Observe System Component Interaction`
    SELECT * FROM interacts ORDER BY id DESC LIMIT 5;
    ```
 
-3. Verify that the data that you sent via `Swagger UI` appears as a row in the `Data Output` tab.
+3. Verify that the data that you sent via [`Swagger UI`](../../../wiki/swagger.md#what-is-swagger-ui) appears as a row in the `Data Output` tab.
 
 ### 1.8. Send another request and check the database
 
-1. In `Swagger UI`, send another `POST /interactions` request with different values.
-2. In `pgAdmin`, run the query again and verify the new row appears.
+1. In [`Swagger UI`](../../../wiki/swagger.md#what-is-swagger-ui), send another `POST /interactions` request with different values.
+2. In [`pgAdmin`](../../../wiki/pgadmin.md#what-is-pgadmin), run the query again and verify the new row appears.
 
 ### 1.9. Write comments for the issue
 
@@ -181,7 +181,7 @@ Comment 4: [Paste the ERD from `pgAdmin`](#194-paste-the-erd-from-pgadmin)
 #### 1.9.1. Write the request as `fetch` code
 
 1. [Copy the selected request as `fetch` code](../../../wiki/browser-developer-tools.md#copy-the-request-as-fetch-code).
-2. Paste this code in a `Markdown` code block.
+2. Paste this [`JavaScript`](../../../wiki/programming-language.md#javascript) code in a [`Markdown` code block](../../../wiki/file-formats.md#markdown-code-block).
 
    Format of the block (see in [`Markdown` preview](../../../wiki/vs-code.md#open-the-markdown-preview) if you read in `VS Code`):
 
@@ -205,7 +205,7 @@ Comment 4: [Paste the ERD from `pgAdmin`](#194-paste-the-erd-from-pgadmin)
 #### 1.9.2. Write the response
 
 1. [Copy the response](../../../wiki/browser-developer-tools.md#copy-the-response) to the selected request.
-2. Paste the response as `JSON` in a `Markdown` code block.
+2. Paste the response as [`JSON`](../../../wiki/file-formats.md#json) in a [`Markdown` code block](../../../wiki/file-formats.md#markdown-code-block).
 
    Format of the block (see in [`Markdown` preview](../../../wiki/vs-code.md#open-the-markdown-preview) if you read in `VS Code`):
 
@@ -226,7 +226,7 @@ Comment 4: [Paste the ERD from `pgAdmin`](#194-paste-the-erd-from-pgadmin)
 #### 1.9.3. Write the data output from `pgAdmin`
 
 1. [Copy the full data output](../../../wiki/pgadmin.md#copy-the-query-data-output) that you got when verifying in the `pgAdmin` that a new row appeared.
-2. Paste the output as `CSV` in a `Markdown` code block.
+2. Paste the output as [`CSV`](../../../wiki/file-formats.md#csv) in a [`Markdown` code block](../../../wiki/file-formats.md#markdown-code-block).
 
    Format of the block (see in [`Markdown` preview](../../../wiki/vs-code.md#open-the-markdown-preview) if you read in `VS Code`):
 
