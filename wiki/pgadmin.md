@@ -33,7 +33,7 @@ Docs:
 
 ## `<pgadmin-port>`
 
-The value of [`PGADMIN_HOST_PORT` in `.env.docker.secret`](./dotenv-docker-secret.md#pgadmin_host_port) that you used to run the `pgadmin` [service](./docker.md#service).
+The value of [`PGADMIN_HOST_PORT`](./dotenv-docker-secret.md#pgadmin_host_port) in [`.env.docker.secret`](./dotenv-docker-secret.md#what-is-envdockersecret).
 
 ## Open `pgAdmin`
 
@@ -69,10 +69,10 @@ Actions:
 2. Right-click `Servers` in the left panel.
 3. Click `Register` -> `Server...`.
 4. In the `General` tab:
-   - `Name`: the value of [`POSTGRES_SERVER_NAME`](./constants.md#postgresql-server-name-in-pgadmin).
+   - `Name`: the value of [`CONST_POSTGRESQL_SERVER_NAME`](./dotenv-docker-secret.md#const_postgresql_server_name).
 5. In the `Connection` tab:
-   - `Host name/address`: the value of the [`PostgreSQL` service name](./constants.md#postgresql-service-name-in-docker-compose) (see [`Docker Compose` networking](./docker-compose.md#docker-compose-networking)).
-   - `Port`: The value of the [default `PostgreSQL` port](./constants.md#default-postgresql-port).
+   - `Host name/address`: the value of [`CONST_POSTGRESQL_SERVICE_NAME`](./dotenv-docker-secret.md#const_postgresql_service_name) (see [`Docker Compose` networking](./docker-compose.md#docker-compose-networking)).
+   - `Port`: the value of [`CONST_POSTGRESQL_DEFAULT_PORT`](./dotenv-docker-secret.md#const_postgresql_default_port).
    - `Maintenance database`: the value of [`POSTGRES_DB`](./dotenv-docker-secret.md#postgres_db).
    - `Username`: the value of [`POSTGRES_USER`](./dotenv-docker-secret.md#postgres_user).
    - `Password`: the value of [`POSTGRES_PASSWORD`](./dotenv-docker-secret.md#postgres_password).

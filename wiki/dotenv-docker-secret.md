@@ -27,6 +27,10 @@
   - [`CADDY_CONTAINER_PORT`](#caddy_container_port)
   - [`CADDY_HOST_ADDRESS`](#caddy_host_address)
   - [`CADDY_HOST_PORT`](#caddy_host_port)
+- [Constants](#constants)
+  - [`CONST_POSTGRESQL_SERVICE_NAME`](#const_postgresql_service_name)
+  - [`CONST_POSTGRESQL_SERVER_NAME`](#const_postgresql_server_name)
+  - [`CONST_POSTGRESQL_DEFAULT_PORT`](#const_postgresql_default_port)
 
 ## What is `.env.docker.secret`
 
@@ -136,3 +140,17 @@ Default: `0.0.0.0`
 ### `CADDY_HOST_PORT`
 
 Default: `42002`
+
+## Constants
+
+### `CONST_POSTGRESQL_SERVICE_NAME`
+
+Default: `postgres`
+
+### `CONST_POSTGRESQL_SERVER_NAME`
+
+Default: `postgres-lab-4`
+
+### `CONST_POSTGRESQL_DEFAULT_PORT`
+
+Default: `5432`
