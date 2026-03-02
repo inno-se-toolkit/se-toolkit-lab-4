@@ -20,6 +20,9 @@ Then you will send requests and observe how data flows through the components: b
 - [1. Steps](#1-steps)
   - [1.1. Create a `Lab Task` issue](#11-create-a-lab-task-issue)
   - [1.2. Deploy the back-end to the VM](#12-deploy-the-back-end-to-the-vm)
+    - [1.2.1. Connect and get the code](#121-connect-and-get-the-code)
+    - [1.2.2. Prepare the environment](#122-prepare-the-environment)
+    - [1.2.3. Start the services](#123-start-the-services)
   - [1.3. Open `Swagger UI`](#13-open-swagger-ui)
   - [1.4. Open the browser developer tools](#14-open-the-browser-developer-tools)
   - [1.5. Send a request using `Swagger UI`](#15-send-a-request-using-swagger-ui)
@@ -41,6 +44,8 @@ Then you will send requests and observe how data flows through the components: b
 Title: `[Task] Observe System Component Interaction`
 
 ### 1.2. Deploy the back-end to the VM
+
+#### 1.2.1. Connect and get the code
 
 1. [Connect to your VM](../../../wiki/vm.md#connect-to-the-vm).
 2. To clone your fork on the VM (skip this step if already cloned),
@@ -69,7 +74,9 @@ Title: `[Task] Observe System Component Interaction`
    git pull
    ```
 
-5. To create the [`.env.docker.secret`](../../../wiki/dotenv-docker-secret.md#what-is-envdockersecret) file (if it does not exist),
+#### 1.2.2. Prepare the environment
+
+1. To create the [`.env.docker.secret`](../../../wiki/dotenv-docker-secret.md#what-is-envdockersecret) file (if it does not exist),
 
    [run in the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
@@ -77,9 +84,11 @@ Title: `[Task] Observe System Component Interaction`
    cp .env.docker.example .env.docker.secret
    ```
 
-6. [Clean up `Docker`](../../../wiki/docker.md#clean-up-docker).
+2. [Clean up `Docker`](../../../wiki/docker.md#clean-up-docker).
 
-7. To start the services,
+#### 1.2.3. Start the services
+
+1. To start the services,
 
    [run in the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
@@ -87,7 +96,7 @@ Title: `[Task] Observe System Component Interaction`
    docker compose --env-file .env.docker.secret up --build -d
    ```
 
-8. To check that the containers are running,
+2. To check that the containers are running,
 
    [run in the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
