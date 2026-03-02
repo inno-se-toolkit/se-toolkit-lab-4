@@ -138,10 +138,10 @@ When a task specifies a commit message, provide it in a code block:
 
 ## 4.19. Steps with sub-steps
 
-When multiple actions serve a single logical goal, group them under one step. Write the step as a complete sentence followed by "Complete the following steps:", then list the sub-steps as a nested ordered list:
+When multiple actions serve a single logical goal, group them under one step. Write the step as a complete sentence followed by "Complete these steps:", then list the sub-steps as a nested ordered list:
 
 ```markdown
-1. Configure the environment. Complete the following steps:
+1. Configure the environment. Complete these steps:
    1. Open `.env.example`.
    2. Copy it to `.env.secret`.
    3. Fill in the values.
@@ -317,12 +317,13 @@ Separate concerns into different tasks only when they produce fundamentally diff
 
 ### 12.17. LLM-independence
 
-All tasks must be completable without LLMs. This means:
+Tasks must be completable without LLMs unless the task explicitly states that students must use an AI. This means:
 
 - Provide placeholder templates, clear examples, and explicit step-by-step guidance.
 - Use simple, direct language in student-facing materials.
 - Provide fallback methods for every major operation.
 - The "Learning advice" section encourages LLM use for understanding, but tasks must not require it.
+- When a task explicitly requires AI use (e.g., "Generate tests with an AI agent"), mark it as a separate, clearly labeled part so students and reviewers can distinguish AI-required steps from AI-optional ones.
 
 ### 12.18. Multi-bug debugging tasks
 
@@ -399,6 +400,6 @@ Structure the task so each bug is discovered sequentially: the first fix unblock
 - [ ] Task runner commands are documented in the config file (if the lab uses a task runner).
 - [ ] Seed project has three tiers: reference (working), debug (commented out with bugs), implement (placeholder templates) (if the lab uses the seed project pattern).
 - [ ] Placeholder templates include `# Reference:` comments mapping new resources to reference counterparts (if the lab uses placeholder-based implementation).
-- [ ] All tasks are completable without LLMs.
+- [ ] All tasks are completable without LLMs, unless the task explicitly states that students must use an AI.
 - [ ] Docker images use an institutional container registry (if the lab uses Docker in an institutional setting).
 - [ ] API key or auth mechanism is set via environment variable and encountered naturally during exploration (if the lab includes security).
