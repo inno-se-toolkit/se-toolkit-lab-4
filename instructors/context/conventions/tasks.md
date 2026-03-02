@@ -381,7 +381,7 @@ Key rules:
 
 - **Place after the checkpoint.** The troubleshooting block follows the "You should see…" checkpoint, because students only need it when the checkpoint fails.
 - **Use the summary `Troubleshooting`.** This keeps a consistent label that students learn to look for.
-- **Bold the symptom.** Start each entry with the symptom in bold (what the student sees), then the fix.
+- **Use `<h4>` for each symptom.** Start each entry with an `<h4>` tag containing the symptom (what the student sees), then the fix. `<h4>` renders as a visible heading but stays out of the auto-generated ToC — the same pattern used for Time, Purpose, and Context in the task template.
 - **Keep it brief.** Cover only the 2–3 most common failures per block. Rare edge cases can still go to the TA.
 - **Only add to infrastructure steps.** Steps involving external systems or environment-dependent operations where common failures are predictable. Simple file edits or `Git` commands don't need troubleshooting blocks.
 
@@ -394,11 +394,11 @@ Good:
 
    <details><summary>Troubleshooting</summary>
 
-   **Port conflict (`port is already allocated`)**
+   <h4>Port conflict (<code>port is already allocated</code>)</h4>
 
    Stop the process that uses the port, then retry.
 
-   **Containers exit immediately**
+   <h4>Containers exit immediately</h4>
 
    To rebuild all containers from scratch,
 
