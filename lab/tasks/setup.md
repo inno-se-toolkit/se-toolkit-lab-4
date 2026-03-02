@@ -238,7 +238,7 @@ If you can't [connect to your VM](../../wiki/vm.md#connect-to-the-vm), complete 
 
 #### 1.11.1. (UPD) Set up the `Docker` environment
 
-1. To copy the [`.env.docker.example`](../../.env.docker.example) file to the `.env.docker.secret` file,
+1. To copy the [`.env.docker.example`](../../.env.docker.example) file to the [`.env.docker.secret`](../../wiki/dotenv-docker-secret.md#what-is-envdockersecret) file,
 
    [run in the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-in-the-vs-code-terminal):
 
@@ -364,7 +364,7 @@ If you can't [connect to your VM](../../wiki/vm.md#connect-to-the-vm), complete 
 
 #### 1.16.1. (UPD) Log in to the autochecker
 
-1. Open in `Telegram`: <https://t.me/auchebot>
+1. Open in `Telegram`: <https://t.me/auchebot>.
 2. Log in.
 
 #### 1.16.2. (UPD) Prepare your VM for checking
@@ -391,6 +391,7 @@ A coding agent can help you write code, explain concepts, and debug issues.
 
 These enhancements can make your life easier:
 
+<!-- no toc -->
 - [Set up `Nix`](#21-new-set-up-nix)
 - [Set up `direnv`](#22-new-set-up-direnv)
 - [Learn to go back after clicking a link](#23-upd-learn-to-go-back-after-clicking-a-link)
