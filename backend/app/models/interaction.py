@@ -38,3 +38,4 @@ class InteractionModel(SQLModel):
     item_id: int
     kind: str
     timestamp: datetime
+
