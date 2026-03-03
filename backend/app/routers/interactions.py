@@ -9,7 +9,6 @@ from ..models.interaction import (
     InteractionModel,
 )
 
-
 router = APIRouter()
 
 
