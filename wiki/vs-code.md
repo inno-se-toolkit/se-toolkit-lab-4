@@ -32,7 +32,7 @@
   - [Check the current shell in the `VS Code Terminal`](#check-the-current-shell-in-the-vs-code-terminal)
   - [Expand the sidebar with open `VS Code Terminal`s](#expand-the-sidebar-with-open-vs-code-terminals)
   - [(`Windows` only) Set the default shell for the `VS Code Terminal`](#windows-only-set-the-default-shell-for-the-vs-code-terminal)
-  - [Run a command using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal)
+  - [Run a command in the `VS Code Terminal`](#run-a-command-in-the-vs-code-terminal)
 - [`Explorer`](#explorer)
   - [Open the `Explorer`](#open-the-explorer)
   - [Open the local file using the `Explorer`](#open-the-local-file-using-the-explorer)
@@ -41,9 +41,9 @@
   - [Close the `Source Control`](#close-the-source-control)
 - [`Extensions`](#extensions)
   - [Open the `Extensions`](#open-the-extensions)
-  - [Install the extension](#install-the-extension)
-  - [Filter the `Extensions`](#filter-the-extensions)
-  - [Install recommended `Extensions`](#install-recommended-extensions)
+  - [Install the `VS Code` extension](#install-the-vs-code-extension)
+  - [Filter the `VS Code` extensions](#filter-the-vs-code-extensions)
+  - [Install the recommended `VS Code` extensions](#install-the-recommended-vs-code-extensions)
 - [Keyboard shortcuts](#keyboard-shortcuts)
   - [Frequently used shortcuts](#frequently-used-shortcuts)
     - [Shortcut: `Go back`](#shortcut-go-back)
@@ -60,6 +60,7 @@
     - [(`Windows` only) Reopen the directory in `WSL`](#windows-only-reopen-the-directory-in-wsl)
   - [Open the file](#open-the-file)
     - [Open the file using `code`](#open-the-file-using-code)
+    - [Open the file using a context menu](#open-the-file-using-a-context-menu)
   - [Open the `Markdown` preview](#open-the-markdown-preview)
 - [Language server](#language-server)
   - [Type on hover](#type-on-hover)
@@ -79,11 +80,12 @@
 
 ## What is `VS Code`
 
-`Visual Studio Code` (`VS Code`) is a free, open-source code editor made by `Microsoft`. It provides features like syntax highlighting, a built-in [terminal](#vs-code-terminal), [extensions](#extensions), and [`Git`](./git.md) integration.
+`VS Code` (`Visual Studio Code`) is a free, open-source code editor made by `Microsoft`. It provides features like syntax highlighting, a built-in [terminal](#vs-code-terminal), [extensions](#extensions), and [`Git`](./git.md) integration.
 
 Docs:
 
 - [Visual Studio Code documentation](https://code.visualstudio.com/docs)
+- [`VS Code` on `GitHub`](https://github.com/microsoft/vscode)
 
 ## `Basic Layout`
 
@@ -97,7 +99,7 @@ Docs:
 
 Schema that we use in docs:
 
-![Basic Layout Schema](./images/vs-code/vs-code-ui.drawio.svg)
+<img alt="Basic Layout schema" src="./images/vs-code/vs-code-ui.drawio.svg" style="width:100%"></img>
 
 ## `Custom Layout`
 
@@ -245,7 +247,7 @@ Actions:
 - [Switch to another `VS Code Terminal`](#switch-to-another-vs-code-terminal)
 - [Copy text inside the `VS Code Terminal`](#copy-text-inside-the-vs-code-terminal)
 - [Paste text inside the `VS Code Terminal`](#paste-text-inside-the-vs-code-terminal)
-- [Run a command using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal)
+- [Run a command in the `VS Code Terminal`](#run-a-command-in-the-vs-code-terminal)
 
 ### Open the `VS Code Terminal`
 
@@ -344,7 +346,7 @@ Method 2:
 
 ### (`Windows` only) Set the default shell for the `VS Code Terminal`
 
-1. Make sure you can [run `VS Code` in WSL](#windows-only-set-up-running-vs-code-in-wsl).
+1. Make sure you can [run `VS Code` in `WSL`](#windows-only-set-up-running-vs-code-in-wsl).
 2. [Reopen the directory in `WSL`](#windows-only-reopen-the-directory-in-wsl)
 3. [Run using the `Command Palette`](#run-a-command-using-the-command-palette):
    `Terminal: Select Default Profile`.
@@ -354,7 +356,7 @@ Method 2:
 
      <img alt="Terminal Default Profile - Bad Options" src="./images/vs-code/command-palette-default-terminal-profile-bad-options.png" style="width:400px"></img>
 
-     Return to the first step and make sure you can [run `VS Code` in WSL](#windows-only-set-up-running-vs-code-in-wsl).
+     Return to the first step and make sure you can [run `VS Code` in `WSL`](#windows-only-set-up-running-vs-code-in-wsl).
    - Case 2 (good): You're running `VS Code` outside `WSL`.
 
      <img alt="Terminal Default Profile - Outside WSL" src="./images/vs-code/command-palette-default-terminal-profile-outside-wsl-wsl.png" style="width:400px"></img>
@@ -370,7 +372,7 @@ Method 2:
 6. [Delete all `VS Code Terminal`s](#delete-a-vs-code-terminal).
 7. [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal).
 
-### Run a command using the `VS Code Terminal`
+### Run a command in the `VS Code Terminal`
 
 1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
 2. [Check the current shell in the `VS Code Terminal`](#check-the-current-shell-in-the-vs-code-terminal).
@@ -460,8 +462,8 @@ Docs:
 Actions:
 
 - [Open the `Extensions`](#open-the-extensions)
-- [Filter the `Extensions`](#filter-the-extensions)
-- [Install recommended `Extensions`](#install-recommended-extensions)
+- [Filter the `VS Code` extensions](#filter-the-vs-code-extensions)
+- [Install the recommended `VS Code` extensions](#install-the-recommended-vs-code-extensions)
 
 ### Open the `Extensions`
 
@@ -474,7 +476,7 @@ Method 2:
 
 1. Press `Ctrl+Shift+X` (`Cmd+Shift+X` on `macOS`).
 
-### Install the extension
+### Install the `VS Code` extension
 
 1. [Open the `Extensions`](#open-the-extensions).
 2. Write:
@@ -489,7 +491,7 @@ Method 2:
 3. Click the extension.
 4. Click `Install`.
 
-### Filter the `Extensions`
+### Filter the `VS Code` extensions
 
 1. [Open the `Extensions`](#open-the-extensions).
 2. Click the icon `Filter Extensions...`.
@@ -498,17 +500,20 @@ Method 2:
 3. A menu will open.
 4. Select a filter in the menu and click it to apply the filter.
 
-### Install recommended `Extensions`
+### Install the recommended `VS Code` extensions
 
 > [!NOTE]
 > Recommended extensions are listed in [`.vscode/extensions.json`](../.vscode/extensions.json).
 
-1. [Filter the extensions](#filter-the-extensions).
-2. Click `Recommended` in the menu.
-3. Click `WORKSPACE RECOMMENDATIONS` to uncollapse this view.
-4. Click the icon `Install Workspace Recommended extensions`.
+1. [Open in `VS Code` the directory](#open-the-directory) that contains `.vscode/extensions.json`.
+2. [Filter the `VS Code` extensions](#filter-the-vs-code-extensions).
+3. Click `Recommended` in the menu.
+4. Click `WORKSPACE RECOMMENDATIONS` to uncollapse this view.
+5. Click the icon `Install Workspace Recommended extensions`.
 
    <img alt="Install Workspace Recommended Extensions" src="./images/vs-code/extensions-install-workspace-recommended.png" style="width:400px"></img>
+
+**Tip:** (`Windows` only) If you want these extensions to be available when you open `VS Code` not in `WSL`, complete these steps again without first opening the directory in `WSL` .
 
 ## Keyboard shortcuts
 
@@ -606,10 +611,12 @@ Here are some [workspace settings](#workspace-settings) that you can change:
 
    `VS Code` should now open in that directory.
 4. [Open the `Explorer`](./vs-code.md#open-the-explorer).
-5. You should see `<DIRECTORY-NAME>` there.
+
+   You should see `<DIRECTORY-NAME>` there.
 
    Example: `SOFTWARE-ENGINEERING-TOOLKIT`
-6. (`Windows` only) [Reopen the directory in `WSL`](#windows-only-reopen-the-directory-in-wsl).
+5. (`Windows` only) [Reopen the directory in `WSL`](#windows-only-reopen-the-directory-in-wsl)
+   to use the [file system](./file-system.md#what-is-a-file-system) of [`Linux`](./linux.md#what-is-linux).
 
 #### (`Windows` only) Open the directory in `WSL`
 
@@ -623,6 +630,8 @@ Here are some [workspace settings](#workspace-settings) that you can change:
 
 1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
    `WSL: Reopen Folder in WSL`.
+2. Choose `Ubuntu 24.04`.
+3. If you don't see such an option, [set up running `VS Code` in `WSL`](#windows-only-set-up-running-vs-code-in-wsl)
 
 ### Open the file
 
@@ -630,19 +639,28 @@ Here are some [workspace settings](#workspace-settings) that you can change:
 - Method 1: [Open the local file using `Explorer`](#open-the-local-file-using-the-explorer)
 - Method 2: [Open the file using `Quick Open`](#open-the-file-using-quick-open)
 - Method 3: [Open the file using `code`](#open-the-file-using-code)
+- Method 4: [Open the file using a context menu](#open-the-file-using-a-context-menu)
 
 #### Open the file using `code`
 
 1. [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal) if something is running in your current `VS Code Terminal`.
-2. [Run using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal):
+2. To open a file from the terminal,
 
-  ```terminal
-  code <file-path>
-  ```
+   [run in the `VS Code Terminal`](#run-a-command-in-the-vs-code-terminal):
 
-  See [`<file-path>`](./file-system.md#file-path).
+   ```terminal
+   code <file-path>
+   ```
 
-1. (`macOS` only) If the `code <file-path>` shows an error that the `code` command doesn't exist, [add `VS Code` to `PATH`](#macos-only-add-vs-code-to-path).
+   See [`<file-path>`](./file-system.md#file-path).
+
+3. (`macOS` only) If the `code <file-path>` shows an error that the `code` command doesn't exist, [add `VS Code` to `PATH`](#macos-only-add-vs-code-to-path).
+
+#### Open the file using a context menu
+
+1. Right-click a file.
+2. Find `Open with...` or similar.
+3. Choose `VS Code`.
 
 ### Open the `Markdown` preview
 
@@ -743,11 +761,10 @@ Follow the installation instructions for your platform:
 Steps:
 
 1. [Enable `WSL`](https://code.visualstudio.com/docs/remote/wsl-tutorial#_enable-wsl).
-2. Open `VS Code`.
-3. [Install the extension](./vs-code.md#install-the-extension) with the identifier `ms-vscode-remote.remote-wsl`.
+2. Open a terminal (not the `VS Code Terminal`).
+3. To install `Ubuntu` in `WSL`,
 
-   This extension lets you use `VS Code` in [`WSL`](./operating-system.md#wsl).
-4. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    wsl --install -d Ubuntu-24.04
@@ -755,7 +772,10 @@ Steps:
 
    **Note:** [`Ubuntu`](./linux.md#ubuntu) is a [`Linux` distro](./linux.md#ubuntu).
 
-5. Open `VS Code` again.
+4. Open [`VS Code`](#what-is-vs-code).
+5. [Install the extension](./vs-code.md#install-the-vs-code-extension) with the identifier `ms-vscode-remote.remote-wsl`.
+
+   This extension lets you use `VS Code` in [`WSL`](./operating-system.md#wsl).
 
 ### (`macOS` only) Add `VS Code` to `PATH`
 
@@ -763,18 +783,18 @@ Steps:
 
    See [`PATH` environment variable](./environments.md#path-environment-variable).
 2. [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal).
-3. Check that the `code` command is available in the `VS Code Terminal`:
+3. To check that the `code` command is available,
 
-    [Run using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](#run-a-command-in-the-vs-code-terminal):
 
-    ```terminal
-    code --version
-    ```
+   ```terminal
+   code --version
+   ```
 
-    The output should be similar to this text:
+   The output should be similar to this text:
 
-    ```terminal
-    1.109.0
-    bdd88df003631aaa0bcbe057cb0a940b80a476fa
-    x64
-    ```
+   ```terminal
+   1.109.0
+   bdd88df003631aaa0bcbe057cb0a940b80a476fa
+   x64
+   ```

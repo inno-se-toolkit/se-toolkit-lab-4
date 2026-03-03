@@ -1,4 +1,4 @@
-# https://caddyserver.com/docs/caddyfile/concepts#environment-variables
+# See wiki/caddy.md
 
 :{$CADDY_CONTAINER_PORT} {
     handle /items* {

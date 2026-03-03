@@ -28,7 +28,6 @@
   - [`Linux`](#linux)
   - [Operating system (OS)](#operating-system-os)
   - [`pgAdmin`](#pgadmin)
-  - [Placeholders](#placeholders)
   - [`Python`](#python)
   - [Security](#security)
   - [Shell](#shell)
@@ -177,10 +176,6 @@ Overview of `Linux`, `macOS`, and `Windows`.
 ### [`pgAdmin`](./wiki/pgadmin.md)
 
 Web-based GUI for browsing tables, running SQL queries, and managing `PostgreSQL` databases.
-
-### [Placeholders](./wiki/placeholders.md)
-
-Reference for `<your-github-username>`, `<repo-name>`, and other placeholders used in the lab.
 
 ### [`Python`](./wiki/python.md)
 

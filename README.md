@@ -1,8 +1,7 @@
 # Lab 4 — Testing, Front-end, and AI Agents
 
-> [!CAUTION]
-> The lab is UNDER CONSTRUCTION!!
-> Instructions may change.
+> [!NOTE]
+> The lab will be modified throughout the course.
 
 [Sync your cloned repo with the upstream](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork#syncing-a-fork-branch-from-the-command-line) from time to time.
 
@@ -24,7 +23,7 @@ The `API` is deployed and secured. Now the team wants to prove it works with rea
 
 A senior engineer explains your next assignment:
 
-> 1. Redeploy the back-end and observe how requests flow from `Swagger` through the `API` to the database.
+> 1. Redeploy the back-end and observe how requests flow from `Swagger UI` through the `API` to the database.
 > 2. Write unit and end-to-end tests, discover existing bugs, and fix them.
 > 3. Add a front-end to the system and modify it using an AI coding agent.
 
@@ -41,11 +40,9 @@ When stuck or not sure, ask an LLM:
 
 > Why is this task important? What exactly do I need to do?
 
-Provide enough context by giving it the whole file, not one or two lines.
+Provide enough context by giving it the whole file, not one or two lines. Ideally pass the setup file too.
 
 Remember: Use the LLM to enhance your understanding, not replace it.
-
-Evaluate LLM answers critically, and verify them against credible sources such as official documentation, course materials, and what you observe in reality.
 
 ## Learning outcomes
 
@@ -53,7 +50,7 @@ By the end of this lab, you should be able to:
 
 - Deploy a back-end service to a remote VM.
 - Use browser developer tools to inspect `HTTP` requests.
-- Examine the request path from `Swagger` through the `API` to the database.
+- Examine the request path from `Swagger UI` through the `API` to the database.
 - Construct unit and end-to-end tests for boundary-value cases.
 - Diagnose bugs from failing test output and apply fixes.
 - Use an AI coding agent to generate and refine tests.

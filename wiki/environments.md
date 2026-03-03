@@ -2,8 +2,8 @@
 
 <h2>Table of contents</h2>
 
-- [What is environment](#what-is-environment)
-- [Environment variables](#environment-variables)
+- [What is an environment](#what-is-an-environment)
+- [Environment variable](#environment-variable)
 - [Common environment variables](#common-environment-variables)
   - [`PATH` environment variable](#path-environment-variable)
 - [`.env` file](#env-file)
@@ -18,15 +18,21 @@
   - [Staging environment](#staging-environment)
   - [Production environment](#production-environment)
 
-## What is environment
+## What is an environment
 
-## Environment variables
+An environment (deployment environment) is ...
+
+<!-- TODO -->
+
+## Environment variable
 
 Environment variables are named values that are available to a program running in a particular [deployment environment](#deployment-environments).
 
 Look at the environment variables available to the `VS Code Terminal`:
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To list all environment variables,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    env
@@ -36,16 +42,18 @@ Look at the environment variables available to the `VS Code Terminal`:
 
 ## Common environment variables
 
-These [environment variables](#environment-variables) are available in most [operating systems](./operating-system.md#what-is-an-operating-system):
+These [environment variables](#environment-variable) are available in most [operating systems](./operating-system.md#what-is-an-operating-system):
 
 - [`PATH`](#path-environment-variable)
 
 ### `PATH` environment variable
 
-`PATH` contains a list of [directories](./file-system.md#directory) separated by `:`. When you run a command in the [terminal](./vs-code.md#vs-code-terminal), the system looks for the [program](./linux.md#program) in each directory listed in `PATH`, from left to right.
+`PATH` contains a list of [directories](./file-system.md#directory) separated by `:`. When you run a command in the [terminal](./vs-code.md#vs-code-terminal), the system looks for the [program](./operating-system.md#program) in each directory listed in `PATH`, from left to right.
 
 1. [Check the current shell in the `VS Code Terminal`](./vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
-2. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+2. To view the `PATH` variable,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    echo $PATH
@@ -55,7 +63,7 @@ These [environment variables](#environment-variables) are available in most [ope
 
 ## `.env` file
 
-We call `.env` file a file that contains a list of [environment variables](#environment-variables) in the `<env-variable-name>=<env-variable-value>` format.
+We call `.env` file a file that contains a list of [environment variables](#environment-variable) in the `<env-variable-name>=<env-variable-value>` format.
 
 Examples:
 
@@ -106,7 +114,7 @@ Match in [`.gitignore`](./git.md#gitignore) all files that can contain [unencryp
 
 A program can run in multiple [deployment environments](https://github.com/inno-se/the-guide?tab=readme-ov-file#environments).
 
-Each development environment may need a specific set of [environment variables](#environment-variables). This set can be different for each environment.
+Each development environment may need a specific set of [environment variables](#environment-variable). This set can be different for each environment.
 
 ### Development environment
 

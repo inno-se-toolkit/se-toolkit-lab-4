@@ -19,6 +19,8 @@
   - [Search text with `rg`](#search-text-with-rg)
   - [Common `rg` flags](#common-rg-flags)
 
+<!-- TODO mention supported platforms -->
+
 ## `curl`
 
 `curl` is a command-line tool for transferring data with URLs, commonly used to send `HTTP` requests.

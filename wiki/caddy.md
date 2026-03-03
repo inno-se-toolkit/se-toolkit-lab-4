@@ -3,41 +3,61 @@
 <h2>Table of contents</h2>
 
 - [What is `Caddy`](#what-is-caddy)
-- [`Caddyfile`](#caddyfile)
+  - [`Caddyfile`](#caddyfile)
+- [`Caddy` in this project](#caddy-in-this-project)
   - [`Caddyfile` in this project](#caddyfile-in-this-project)
+  - [`Caddy` serves frontend files](#caddy-serves-frontend-files)
+  - [`Caddy` forwards requests to backend](#caddy-forwards-requests-to-backend)
+  - [`<caddy-port>`](#caddy-port)
 
 ## What is `Caddy`
 
-`Caddy` is an open-source [web server](./web-development.md#web-server) used in this project as a reverse proxy. A reverse proxy is a server that sits in front of a backend [service](./web-development.md#service) and forwards incoming client requests to it.
+`Caddy` is an open-source [web server](./web-development.md#web-server) and [reverse proxy](./computer-networks.md#reverse-proxy).
 
-In this project, `Caddy` receives requests from clients and forwards them to the `app` [service](./docker.md#service) running inside the `Docker` network.
+`Caddy` is configured via a [`Caddyfile`](#caddyfile).
+
+See [`Caddy` in this project](#caddy-in-this-project).
 
 Docs:
 
 - [Caddy](https://caddyserver.com/docs/)
 
-## `Caddyfile`
+### `Caddyfile`
 
-A `Caddyfile` is `Caddy`'s configuration file. It defines which port `Caddy` listens on and where to forward requests.
+A `Caddyfile` is `Caddy`'s configuration file. It defines which port `Caddy` [listens](./computer-networks.md#listen-on-a-port) on and where to [forward requests](./computer-networks.md#forward-request).
 
 Docs:
 
 - [Caddyfile concepts](https://caddyserver.com/docs/caddyfile/concepts)
 - [Environment variables in `Caddyfile`](https://caddyserver.com/docs/caddyfile/concepts#environment-variables)
 
+## `Caddy` in this project
+
 ### `Caddyfile` in this project
 
-In this project, the `Caddyfile` is at [`caddy/Caddyfile`](../caddy/Caddyfile):
-
-```caddyfile
-:{$CADDY_CONTAINER_PORT} {
-    reverse_proxy http://app:{$APP_CONTAINER_PORT}
-}
-```
+In this project, the [`Caddyfile`](#caddyfile) is at [`caddy/Caddyfile`](../caddy/Caddyfile).
 
 This configuration:
 
-- Listens on the port specified by the `CADDY_CONTAINER_PORT` [environment variable](./environments.md#environment-variables).
-- Forwards all requests to the `app` service on the port specified by `APP_CONTAINER_PORT`.
+- Reads the value of [`CADDY_CONTAINER_PORT`](./dotenv-docker-secret.md#caddy_container_port).
+- Makes `Caddy` [listen on the port](./computer-networks.md#listen-on-a-port) listen on this port inside a [`Docker` container](./docker.md#container).
+- [Serves frontend files](#caddy-serves-frontend-files)
+- [Forward requests to backend](#caddy-forwards-requests-to-backend)
 
-The `{$VARIABLE}` syntax reads the value of an [environment variable](./environments.md#environment-variables) at runtime.
+### `Caddy` serves frontend files
+
+`Caddy` serves static [front-end](./web-development.md#frontend) files from `/srv` for all other paths. The `try_files` directive falls back to `index.html` for client-side routing.
+
+### `Caddy` forwards requests to backend
+
+<!-- TODO Rename API endpoints -> API paths? -->
+
+`Caddy` routes [API endpoints](./web-development.md#endpoint) (`/items*`, `/learners*`, `/interactions*`, `/docs*`, `/openapi.json`) to the [`app` service](./docker-compose-yml.md#app-service).
+
+### `<caddy-port>`
+
+The [port number](./computer-networks.md#port-number) (without `<` and `>`) which `Caddy` [listens on](./computer-networks.md#listen-on-a-port).
+
+The port number is the value of [`CADDY_HOST_PORT`](./dotenv-docker-secret.md#caddy_host_port) in [`.env.docker.secret`](./dotenv-docker-secret.md#what-is-envdockersecret).
+
+Example: `42000`.

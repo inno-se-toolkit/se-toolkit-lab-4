@@ -2,23 +2,33 @@
 
 <h2>Table of contents</h2>
 
+- [What is `Docker`](#what-is-docker)
 - [Image](#image)
 - [Container](#container)
   - [Why containers are useful](#why-containers-are-useful)
   - [Containers and host](#containers-and-host)
-- [What is `Docker`](#what-is-docker)
+  - [Container ID](#container-id)
 - [Set up `Docker`](#set-up-docker)
   - [Install `Docker`](#install-docker)
   - [Start `Docker`](#start-docker)
   - [Clean up `Docker`](#clean-up-docker)
 - [Common `Docker` commands](#common-docker-commands)
   - [`docker run`](#docker-run)
+    - [`docker run` typical pattern](#docker-run-typical-pattern)
+    - [`docker run` useful flags](#docker-run-useful-flags)
   - [`docker ps`](#docker-ps)
+    - [`docker ps` useful variants](#docker-ps-useful-variants)
 - [`Docker Compose`](#docker-compose)
-  - [Service](#service)
-- [Volumes](#volumes)
-- [Health checks](#health-checks)
 - [`DockerHub`](#dockerhub)
+  - [`<your-dockerhub-username>`](#your-dockerhub-username)
+
+## What is `Docker`
+
+`Docker` is a platform for building and running [containers](#container).
+
+Docs:
+
+- [What is Docker?](https://docs.docker.com/get-started/docker-overview/)
 
 ## Image
 
@@ -60,13 +70,9 @@ A container is an isolated runtime for an application and its dependencies.
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-## What is `Docker`
+### Container ID
 
-`Docker` is a platform for building and running [containers](#container).
-
-Docs:
-
-- [What is Docker?](https://docs.docker.com/get-started/docker-overview/)
+<!-- TODO -->
 
 ## Set up `Docker`
 
@@ -74,7 +80,7 @@ Complete these steps:
 
 1. [Install `Docker`](#install-docker).
 2. [Start `Docker`](#start-docker).
-3. [Clean up `Docker`](#clean-up-docker)
+3. [Clean up `Docker`](#clean-up-docker).
 
 ### Install `Docker`
 
@@ -90,28 +96,47 @@ If you installed `Docker Desktop`:
 
 ### Clean up `Docker`
 
-1. Stop all running containers:
+> [!NOTE]
+> If there are permission errors, replace `docker` with `sudo docker`.
 
-   [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To stop all running containers,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker stop $(docker ps -q) 2>/dev/null
    ```
 
-2. Remove all stopped containers:
+   You should see removed [container IDs](#container-id).
 
-   [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+2. To remove all stopped containers,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    docker container prune -f
    ```
 
-3. Delete unused volumes:
-
-   [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+   The output should be empty or similar to this:
 
    ```terminal
-   docker volume prune -f
+   ...
+   Total reclaimed space: ...
+   ```
+
+3. To delete unused [volumes](./docker-compose.md#volume),
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
+
+   ```terminal
+   docker volume prune -f --all
+   ```
+
+   The output should be similar to this:
+
+   ```terminal
+   ...
+   Total reclaimed space: ...
    ```
 
 ## Common `Docker` commands
@@ -120,13 +145,13 @@ If you installed `Docker Desktop`:
 
 `docker run` starts a container from an image.
 
-Common pattern:
+#### `docker run` typical pattern
 
 ```terminal
 docker run --name <container-name> -p <host-port>:<container-port> <image-name>
 ```
 
-Useful flags:
+#### `docker run` useful flags
 
 - `-d` - run in background (detached mode).
 - `--rm` - remove container after it exits.
@@ -136,68 +161,14 @@ Useful flags:
 
 `docker ps` shows running containers.
 
-Useful variants:
-
-```terminal
-docker ps
-docker ps -a
-```
+#### `docker ps` useful variants
 
 - `docker ps` - only running containers.
 - `docker ps -a` - all containers (including stopped).
 
 ## `Docker Compose`
 
-`Docker Compose` runs multi-container apps from a `docker-compose.yml` file.
-
-See [`Docker Compose`](./docker-compose.md) for the full list of commands.
-
-### Service
-
-A service is a named entry under the `services:` key in `docker-compose.yml`. It defines how to build or pull an [image](#image) and run it as a [container](#container).
-
-For example, this project defines four services in [`docker-compose.yml`](../docker-compose.yml): `app`, `postgres`, `pgadmin`, and `caddy`.
-
-## Volumes
-
-A volume is persistent storage managed by `Docker`. Data in a volume survives container restarts.
-
-Volumes are defined in `docker-compose.yml`:
-
-```yaml
-volumes:
-  postgres_data:
-```
-
-A service can mount a volume to store data:
-
-```yaml
-services:
-  postgres:
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-```
-
-## Health checks
-
-A health check is a command that `Docker` runs periodically to check if a container is healthy.
-
-Other services can wait for a container to be healthy before starting:
-
-```yaml
-services:
-  app:
-    depends_on:
-      postgres:
-        condition: service_healthy
-
-  postgres:
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
-```
+[`Docker Compose`](./docker-compose.md#what-is-docker-compose) runs multi-[container](#container) apps from a `docker-compose.yml` file.
 
 ## `DockerHub`
 
@@ -208,3 +179,7 @@ You can push a locally built image to `DockerHub` so that other machines (such a
 Docs:
 
 - [`DockerHub`](https://hub.docker.com/)
+
+### `<your-dockerhub-username>`
+
+Your [`DockerHub`](#dockerhub) username (without `<` and `>`).

@@ -5,18 +5,18 @@
 - [Clone the repository](#clone-the-repository)
   - [Clone the repo using the `VS Code Terminal`](#clone-the-repo-using-the-vs-code-terminal)
   - [Clone the repo using the `Command Palette`](#clone-the-repo-using-the-command-palette)
-- [Switch to the `<branch-name>` branch](#switch-to-the-branch-name-branch)
-  - [Switch to the `<branch-name>` branch using the `VS Code Terminal`](#switch-to-the-branch-name-branch-using-the-vs-code-terminal)
-  - [Switch to the `<branch-name>` branch using `GitLens`](#switch-to-the-branch-name-branch-using-gitlens)
+- [Switch to the `<branch>`](#switch-to-the-branch)
+  - [Switch to the `<branch>` using the `VS Code Terminal`](#switch-to-the-branch-using-the-vs-code-terminal)
+  - [Switch to the `<branch>` using `GitLens`](#switch-to-the-branch-using-gitlens)
 - [Detect conflicts](#detect-conflicts)
 - [Resolve a merge conflict](#resolve-a-merge-conflict)
   - [Resolve a merge conflict using `VS Code`](#resolve-a-merge-conflict-using-vs-code)
   - [Resolve a merge conflict using `GitLens`](#resolve-a-merge-conflict-using-gitlens)
   - [Resolve a merge conflict using the `VS Code Terminal`](#resolve-a-merge-conflict-using-the-vs-code-terminal)
-- [Pull changes from `origin/<branch-name>`](#pull-changes-from-originbranch-name)
-  - [Pull changes from `origin/<branch-name>` using the `VS Code Terminal`](#pull-changes-from-originbranch-name-using-the-vs-code-terminal)
-  - [Pull changes from `origin/<branch-name>` using `GitLens`](#pull-changes-from-originbranch-name-using-gitlens)
-- [Pull changes from `origin/<branch-name>` and rebase](#pull-changes-from-originbranch-name-and-rebase)
+- [Pull changes from the `<branch>` on `<remote>`](#pull-changes-from-the-branch-on-remote)
+  - [Pull changes from `<branch>` on `<remote>` using the `VS Code Terminal`](#pull-changes-from-branch-on-remote-using-the-vs-code-terminal)
+  - [Pull changes from `<branch>` on `<remote>` using `GitLens`](#pull-changes-from-branch-on-remote-using-gitlens)
+- [Pull changes from `<branch>` on `<remote>` and rebase](#pull-changes-from-branch-on-remote-and-rebase)
   - [Pull and rebase using the `VS Code Terminal`](#pull-and-rebase-using-the-vs-code-terminal)
   - [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
 - [Stage using the `Source Control`](#stage-using-the-source-control)
@@ -55,42 +55,85 @@
 
 1. Open `VS Code`.
 2. [Open the `VS Code Terminal`](./vs-code.md#open-the-vs-code-terminal).
-3. Navigate to the directory where you want to clone the repo:
+3. To create the [directory](./file-system.md#directory) where you want to clone the repo,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
+
+   ```terminal
+   mkdir -p <directory-path>
+   ```
+
+   Replace `<directory-path>` with a [path](./file-system.md#path) to the directory.
+
+   The output should be empty.
+
+   Example:
+
+   ```terminal
+   mkdir -p microsoft
+   ```
+
+4. To navigate to the directory where you want to clone the repo,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    cd <directory-path>
    ```
 
+   The current directory in the [shell prompt](./shell.md#shell-prompt) should now end in `<directory-path>`
+
    Example:
 
    ```terminal
-   cd ~/Desktop/software-engineering-toolkit
+   username@hostname:~$ cd microsoft
    ```
 
-4. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   After `cd`:
 
-    ```terminal
-    git clone <repo-url>
-    ```
+   ```terminal
+   username@hostname:~/microsoft$
+   ```
 
-    Example:
+5. To clone the repo,
 
-    ```terminal
-    git clone https://github.com/microsoft/vscode
-    ```
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
-5. If `git` asks for a password, provide [your PAT](./github.md#create-a-pat-classic).
+   ```terminal
+   git clone <repo-url>
+   ```
 
-6. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   Replace [`<repo-url>`](./github.md#repo-url).
+
+   Example:
+
+   ```terminal
+   git clone https://github.com/microsoft/vscode
+   ```
+
+6. If `git` asks for a password, provide [your `GitHub` PAT](./github.md#create-a-pat-classic).
+
+7. To verify that the repo was cloned,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ls
    ```
 
-   You should see `<repo-name>` - the output of the command.
-   This is the directory that contains the cloned repo.
+   The output should include the `<repo-name>` - the name of the repo.
+
+8. To verify that the repo isn't empty,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
+
+   ```terminal
+   ls <repo-name>
+   ```
+  
+   Replace `<repo-name>`.
+
+   The output should be the list of names of files in the repo.
 
 ### Clone the repo using the `Command Palette`
 
@@ -103,15 +146,17 @@
 6. Choose a directory where to clone the repo.
 7. Confirm the choice.
 
-## Switch to the `<branch-name>` branch
+## Switch to the `<branch>`
 
 <!-- no toc -->
-- Method 1: [Switch to the `<branch-name>` branch using the `VS Code Terminal`](#switch-to-the-branch-name-branch-using-the-vs-code-terminal)
-- Method 2: [Switch to the `<branch-name>` branch using `GitLens`](#switch-to-the-branch-name-branch-using-gitlens)
+- Method 1: [Switch to the `<branch>` using the `VS Code Terminal`](#switch-to-the-branch-using-the-vs-code-terminal)
+- Method 2: [Switch to the `<branch>` using `GitLens`](#switch-to-the-branch-using-gitlens)
 
-### Switch to the `<branch-name>` branch using the `VS Code Terminal`
+### Switch to the `<branch>` using the `VS Code Terminal`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To switch to the `<branch>`,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git switch <branch name>
@@ -123,24 +168,22 @@
    git switch main
    ```
 
-### Switch to the `<branch-name>` branch using `GitLens`
+### Switch to the `<branch>` using `GitLens`
 
 1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
    `GitLens: Git Switch to..`.
-2. [Select](./vs-code.md#select-an-option-from-a-list) the `<branch-name>` branch.
+2. [Select](./vs-code.md#select-an-option-from-a-list) the `<branch>`.
 
 ## Detect conflicts
 
-It can happen that commits on your `origin/<branch-name>` are different from commits
-on the `<branch-name>` branch in your cloned repo on your computer.
-
-Check whether you have such conflicts:
+It can happen that commits in `<branch>` on `<remote>` are different from commits
+on the `<branch>` in the cloned repo on your computer.
 
 1. Look at the [`Status Bar`](./vs-code.md#status-bar).
 
    <img alt="Commit Conflict" src="./images/vs-code/status-bar-commit-conflict.png" style="width:400px"></img>
 
-   You should see that there is a non-zero number of commits to pull from `origin/<branch-name>`.
+   You should see that there is a non-zero number of commits to pull from `origin/<branch>`.
 
 ## Resolve a merge conflict
 
@@ -161,13 +204,17 @@ Resolve a [merge conflict](./git.md#merge-conflict).
    - `Accept Incoming Change` — keep the other branch's version.
    - `Accept Both Changes` — keep both versions.
 3. Save the file.
-4. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+4. To stage the resolved file,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git add <file-path>
    ```
 
-5. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+5. To continue the merge,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git merge --continue
@@ -200,7 +247,9 @@ For each conflicting file, complete the following steps:
 
 ### Resolve a merge conflict using the `VS Code Terminal`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To see which files have conflicts,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git status
@@ -212,37 +261,39 @@ For each conflicting file, complete the following steps:
 3. Find the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`).
 4. Edit the file to keep the correct content.
 5. Remove all conflict markers from the file.
-6. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+6. To stage the resolved file,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git add <file-path>
    ```
 
-7. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+7. To continue the merge,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git merge --continue
    ```
 
-## Pull changes from `origin/<branch-name>`
+## Pull changes from the `<branch>` on `<remote>`
 
 > [!NOTE]
-> `origin` is an alias for your fork on `GitHub` (see [Inspect remotes](./gitlens.md#inspect-remotes)).
-
-Pull changes from the `<branch-name>` branch in your fork on `GitHub`.
-
-We call that branch `origin/<branch-name>`.
+> See [`<branch>`](./git.md#branch), [`<remote>`](./git.md#remote).
 
 <!-- no toc -->
-- Method 1: [Pull changes from `origin/<branch-name>` using the `VS Code Terminal`](#pull-changes-from-originbranch-name-using-the-vs-code-terminal)
-- Method 2: [Pull changes from `origin/<branch-name>` using `GitLens`](#pull-changes-from-originbranch-name-using-gitlens)
+- Method 1: [Pull changes from `<branch>` on `<remote>` using the `VS Code Terminal`](#pull-changes-from-branch-on-remote-using-the-vs-code-terminal)
+- Method 2: [Pull changes from `<branch>` on `<remote>` using `GitLens`](#pull-changes-from-branch-on-remote-using-gitlens)
 
-### Pull changes from `origin/<branch-name>` using the `VS Code Terminal`
+### Pull changes from `<branch>` on `<remote>` using the `VS Code Terminal`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To pull changes from `<branch>` on `<remote>`,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
-   git pull origin <branch-name>
+   git pull <remote> <branch>
    ```
 
    Example:
@@ -251,12 +302,12 @@ We call that branch `origin/<branch-name>`.
    git pull origin main
    ```
 
-### Pull changes from `origin/<branch-name>` using `GitLens`
+### Pull changes from `<branch>` on `<remote>` using `GitLens`
 
 1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
    `GitLens: Pull`
 
-## Pull changes from `origin/<branch-name>` and rebase
+## Pull changes from `<branch>` on `<remote>` and rebase
 
 <!-- no toc -->
 - Method 1: [Pull and rebase using the `VS Code Terminal`](#pull-and-rebase-using-the-vs-code-terminal)
@@ -264,10 +315,12 @@ We call that branch `origin/<branch-name>`.
 
 ### Pull and rebase using the `VS Code Terminal`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To pull changes from `<branch>` on `<remote>` and rebase onto it,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
-   git pull --rebase origin <branch-name>
+   git pull --rebase <remote> <branch>
    ```
 
    Example:
@@ -275,6 +328,8 @@ We call that branch `origin/<branch-name>`.
    ```terminal
    git pull --rebase origin main
    ```
+
+2. If `Git` asks for a password, provide [your `GitHub` PAT](./github.md#create-a-pat-classic).
 
 ### Pull and rebase using `GitLens`
 
@@ -314,7 +369,7 @@ We call that branch `origin/<branch-name>`.
 
 ## Commit changes
 
-> ![NOTE]
+> [!NOTE]
 > Commit message format is: `type: short description`
 >
 > Common types:
@@ -331,13 +386,15 @@ We call that branch `origin/<branch-name>`.
 ### Commit using the `VS Code Terminal`
 
 1. Open the [`VS Code Terminal`](./vs-code.md#open-the-vs-code-terminal).
-2. Run:
+2. To stage and commit your changes,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git add <file-path>
    # example: git add README.md
    # example (path with spaces): git add 'path/some image.svg'
-   
+
    git commit -m '<type>: <short description>'
    # example: git commit -m 'docs: add architecture diagram'
    ```
@@ -369,7 +426,9 @@ We call that branch `origin/<branch-name>`.
 
 ### Undo commits using the `VS Code Terminal`
 
-[Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+To undo the last commit and keep the changes staged,
+
+[run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
 ```terminal
 git reset --soft HEAD~1
@@ -377,13 +436,17 @@ git reset --soft HEAD~1
 
 Your changes are staged now.
 
-You can stage more changes.
+To stage more changes,
+
+[run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
 ```terminal
 git add some-file
 ```
 
-Then, you can commit using the previous message.
+To commit using the previous message,
+
+[run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
 ```terminal
 git commit -C ORIG_HEAD
@@ -397,10 +460,12 @@ See [Undo commit on the current branch](./gitlens.md#undo-a-commit-on-the-curren
 
 ### Publish using the `VS Code Terminal`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To publish the branch to `origin`,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
-   git push -u origin <branch-name>
+   git push -u origin <branch>
    ```
 
 ### Publish using `GitLens`
@@ -408,14 +473,16 @@ See [Undo commit on the current branch](./gitlens.md#undo-a-commit-on-the-curren
 1. [Open the `Source Control`](./vs-code.md#open-the-source-control).
 2. Click `GITLENS` to open the `GitLens` panel.
 3. Click the `Commits` icon.
-4. Click the `Publish Branch` icon to the right of `Publish <branch-name> to GitHub`.
+4. Click the `Publish Branch` icon to the right of `Publish <branch> to GitHub`.
 5. Press `Enter` to confirm.
 
 ## Push more commits
 
 ### Push using the `VS Code Terminal`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To push commits to the remote,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    git push
@@ -436,7 +503,7 @@ See [Undo commit on the current branch](./gitlens.md#undo-a-commit-on-the-curren
 - Method 3: [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
 
 > [!IMPORTANT]
-> Replace the `<branch-name>` with the actual branch name.
+> Replace the `<branch>` with the actual branch name.
 
 ### Switch to a new branch using `GitHub`
 
@@ -448,18 +515,20 @@ See [Undo commit on the current branch](./gitlens.md#undo-a-commit-on-the-curren
 
    ```terminal
    git fetch origin
-   git checkout <branch-name>
+   git checkout <branch>
    ```
 
-4. [Run the copied command using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal).
+4. [Run the copied command using the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal).
 
 ### Switch to a new branch using the `VS Code Terminal`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To create and switch to a new branch,
 
-    ```terminal
-    git checkout -b <branch-name>
-    ```
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
+
+   ```terminal
+   git checkout -b <branch>
+   ```
 
 ### Switch to a new branch using `GitLens`
 
@@ -467,7 +536,7 @@ See [Undo commit on the current branch](./gitlens.md#undo-a-commit-on-the-curren
    `GitLens: Git Create Branch...`.
 2. [Select](./vs-code.md#select-an-option-from-a-list)
    `main` as the base branch.
-3. Write `<branch-name>` to provide the new branch name.
+3. Write `<branch>` to provide the new branch name.
 4. Press `Enter` to confirm.
 5. [Select](./vs-code.md#select-an-option-from-a-list)
    `Create & Switch to Branch`.

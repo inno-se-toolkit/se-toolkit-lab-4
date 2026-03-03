@@ -1,26 +1,26 @@
 # Lab authoring conventions
 
-Full reference: `instructors/context/lab-conventions/lab-conventions.md`
+Full reference: `instructors/context/conventions/lab.md`
 
 ## When editing `lab/tasks/`
 
 Read before making changes:
 
-- [`instructors/context/lab-conventions/conventions-common.md`](instructors/context/lab-conventions/conventions-common.md) — writing conventions (formatting, links, alerts, etc.)
-- [`instructors/context/lab-conventions/conventions-tasks.md`](instructors/context/lab-conventions/conventions-tasks.md) — task structure and design principles
+- [`instructors/context/conventions/common.md`](instructors/context/conventions/common.md) — writing conventions (formatting, links, alerts, etc.)
+- [`instructors/context/conventions/tasks.md`](instructors/context/conventions/tasks.md) — task structure and design principles
 
 ## When editing `wiki/`
 
 Read before making changes:
 
-- [`instructors/context/lab-conventions/conventions-common.md`](instructors/context/lab-conventions/conventions-common.md) — writing conventions (formatting, links, alerts, etc.)
-- [`instructors/context/lab-conventions/conventions-wiki.md`](instructors/context/lab-conventions/conventions-wiki.md) — wiki file structure and section patterns
+- [`instructors/context/conventions/common.md`](instructors/context/conventions/common.md) — writing conventions (formatting, links, alerts, etc.)
+- [`instructors/context/conventions/wiki.md`](instructors/context/conventions/wiki.md) — wiki file structure and section patterns
 
 ## When creating or restructuring a lab
 
 Read before making changes:
 
-- [`instructors/context/lab-conventions/conventions-lab.md`](instructors/context/lab-conventions/conventions-lab.md) — repo structure, README, setup, git-workflow, GitHub templates, VS Code config, task runner, narrative, Docker, CONTRIBUTORS, checklist, security
+- [`instructors/context/conventions/lab.md`](instructors/context/conventions/lab.md) — repo structure, README, setup, git-workflow, GitHub templates, VS Code config, task runner, narrative, Docker, CONTRIBUTORS, checklist, security
 
 ## When editing code (`backend/`, `frontend/`)
 

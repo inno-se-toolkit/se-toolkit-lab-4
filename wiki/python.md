@@ -61,7 +61,20 @@ def greet(name):
 ### Install `uv`
 
 1. [Check the current shell in the `VS Code Terminal`](./vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
-1. Follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/) for `macOS and Linux`, even if you use `Windows`.
+2. Follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/) for `macOS and Linux`, even if you use `Windows`.
+3. To check that `uv` is installed,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
+
+   ```terminal
+   uv --version
+   ```
+
+4. The output should be similar to this:
+
+   ```terminal
+   uv 0.10.4
+   ```
 
 ## Set up `Python` in `VS Code`
 
@@ -74,7 +87,9 @@ Complete these steps:
 ### Install `Python` and dependencies
 
 1. [Open in `VS Code` the project directory](./vs-code.md#open-the-directory).
-2. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+2. To install `Python` and project dependencies,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    uv sync
@@ -100,7 +115,9 @@ Complete these steps:
 ### Check that `Python` works
 
 1. [Open a new `VS Code Terminal`](./vs-code.md#open-a-new-vs-code-terminal).
-2. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+2. To check the `Python` version,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    uv run python --version
@@ -140,12 +157,6 @@ Complete these steps:
 ### `pytest`
 
 `pytest` is a testing framework for `Python`. It discovers and runs test functions automatically.
-
-To run all tests, [run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-```terminal
-uv run pytest
-```
 
 Docs:
 

@@ -79,5 +79,5 @@ Set up a coding agent in `VS Code` using any of the following methods:
    `Chat: Open Chat`
 9. The `CHAT` panel will open.
 10. Go to `CHAT`.
-11. Click `Auto` (`Pick Model`)
+11. Click `Auto` (`Pick Model`).
 12. Click `Qwen 3 Coder Plus`.

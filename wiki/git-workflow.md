@@ -9,17 +9,17 @@ Issue ➜ Branch ➜ Commits ➜ PR ➜ Review ➜ Merge
 
 The following diagram shows this workflow in the context of repositories:
 
-![Git workflow](./images/git-workflow/git-workflow.drawio.svg)
+<img alt="Git workflow" src="./images/git-workflow/git-workflow.drawio.svg" style="width:100%"></img>
 
 Outline:
 
 - [Create a `Lab Task` issue](#create-a-lab-task-issue)
 - [Switch to the `main` branch](#switch-to-the-main-branch)
 - [Detect conflicts](#detect-conflicts)
-- [Pull changes from `origin/main`](#pull-changes-from-originmain)
-- [Pull changes from `origin/main` and rebase](#pull-changes-from-originmain-and-rebase)
+- [Pull changes from `main` on `origin`](#pull-changes-from-main-on-origin)
+- [Pull changes from `main` on `upstream`](#pull-changes-from-main-on-upstream)
 - [Switch to a new branch](#switch-to-a-new-branch)
-  - [`<task-branch-name>`](#task-branch-name)
+  - [`<task-branch>`](#task-branch)
 - [Edit files](#edit-files)
 - [Commit](#commit)
 - [(Optional) Undo commits](#optional-undo-commits)
@@ -39,34 +39,27 @@ Outline:
 
 ## Switch to the `main` branch
 
-[Switch to the `main` branch](./git-vscode.md#switch-to-the-branch-name-branch) in `VS Code`.
+[Switch to the `main` branch](./git-vscode.md#switch-to-the-branch) in `VS Code`.
 
 ## Detect conflicts
 
 [Detect conflicts with the `origin/main`](./git-vscode.md#detect-conflicts).
 
-## Pull changes from `origin/main`
+## Pull changes from `main` on `origin`
 
-[Pull changes from the `main` branch in your fork on `GitHub`](./git-vscode.md#pull-changes-from-originbranch-name).
+[Pull changes](./git-vscode.md#pull-changes-from-the-branch-on-remote) from `main` on [`origin`](./github.md#origin).
 
-## Pull changes from `origin/main` and rebase
+## Pull changes from `main` on `upstream`
 
-You may see errors and messages about conflicts after pulling.
-
-Rebasing places your local commits on top of the commits from `origin/main`. Conflicts occur when commits from `origin/main` modified the same lines in the same files as your local commits.
-
-Complete the following steps:
-
-1. [Pull and rebase from `origin/main`](./git-vscode.md#pull-changes-from-originbranch-name-and-rebase).
-2. If conflicts occur, [resolve them](./git-vscode.md#resolve-a-merge-conflict).
+[Pull changes](./git-vscode.md#pull-changes-from-the-branch-on-remote) from `main` on [`upstream`](./github.md#upstream) to get the latest fixes from the instructors' repository.
 
 ## Switch to a new branch
 
 [Create a new branch and switch to it](./git-vscode.md#switch-to-a-new-branch).
 
-### `<task-branch-name>`
+### `<task-branch>`
 
-We'll refer to the new branch as `<task-branch-name>`.
+We'll refer to the [new branch](#switch-to-a-new-branch) as `<task-branch>`.
 
 ## Edit files
 
@@ -74,7 +67,7 @@ We'll refer to the new branch as `<task-branch-name>`.
 
 ## Commit
 
-[Commit changes](./git-vscode.md#commit-changes) to the [`<task-branch-name>`](#task-branch-name) to complete the task.
+[Commit changes](./git-vscode.md#commit-changes) to the [`<task-branch>`](#task-branch) to complete the task.
 
 ## (Optional) Undo commits
 
@@ -90,11 +83,10 @@ We'll refer to the new branch as `<task-branch-name>`.
 
 ## Create a PR to the `main` branch in your fork
 
-[Create a PR](./github.md#create-a-pull-request) from the branch [`<task-branch-name>`](#task-branch-name) to the branch `<main>`.
-Placeholder values:
+[Create a PR](./github.md#create-a-pull-request-in-your-fork) from the branch [`<task-branch>`](#task-branch) to `main`. Replace:
 
-- `<repo-name>` is `se-toolkit-lab-<N>` where `<N>` is the number of the lab.
-- `<branch-name>` is `<task-branch-name>`.
+- `<repo-name>` with `se-toolkit-lab-<N>` where `<N>` is the number of the lab.
+- `<branch>` with `<task-branch>`.
 - [`<repo-owner-github-username>`] is `inno-se-toolkit`.
 - [`<your-github-username>`](./github.md#your-github-username) is your `GitHub` username.
 
