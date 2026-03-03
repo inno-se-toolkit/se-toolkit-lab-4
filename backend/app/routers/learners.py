@@ -1,30 +1,44 @@
-"""Router for learner endpoints."""
-
-from datetime import datetime
-
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException, status
+from sqlalchemy import select
 from sqlmodel.ext.asyncio.session import AsyncSession
 
-from app.database import get_session
-from app.db.learners import read_learners, create_learner
-from app.models.learner import Learner, LearnerCreate
+from ..database import get_session
+from ..models.learner import Learner, LearnerCreate, LearnerRead
+
 
 router = APIRouter()
 
 
-@router.get("/", response_model=list[Learner])
-async def get_learners(
-    enrolled_after: datetime | None = None,
+@router.get("/", response_model=list[LearnerRead])
+async def get_learners(session: AsyncSession = Depends(get_session)):
+    result = await session.exec(select(Learner))
+    return list(result.scalars().all())
+
+
+@router.get("/{learner_id}", response_model=LearnerRead)
+async def get_learner(
+    learner_id: int,
     session: AsyncSession = Depends(get_session),
 ):
-    """Get all learners, optionally filtered by enrollment date."""
-    return await read_learners(session, enrolled_after)
+    result = await session.exec(
+        select(Learner).where(Learner.id == learner_id)
+    )
+    learner = result.scalar_one_or_none()
+    if learner is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Learner not found",
+        )
+    return learner
 
 
-@router.post("/", response_model=Learner, status_code=201)
-async def post_learner(
+@router.post("/", response_model=LearnerRead, status_code=201)
+async def create_learner(
     body: LearnerCreate,
     session: AsyncSession = Depends(get_session),
 ):
-    """Create a new learner."""
-    return await create_learner(session, name=body.name, email=body.email)
+    learner = Learner(name=body.name, email=body.email)
+    session.add(learner)
+    await session.commit()
+    await session.refresh(learner)
+    return learner

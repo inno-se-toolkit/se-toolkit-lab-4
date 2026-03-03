@@ -1,20 +1,21 @@
-"""Database operations for items."""
+from typing import Sequence
 
-from sqlmodel import select
+from sqlalchemy import select
 from sqlmodel.ext.asyncio.session import AsyncSession
 
-from app.models.item import ItemRecord
+from ..models.item import ItemRecord
 
 
 async def read_items(session: AsyncSession) -> list[ItemRecord]:
-    """Read all items from the database."""
     result = await session.exec(select(ItemRecord))
-    return list(result.all())
+    return list(result.scalars().all())
 
 
 async def read_item(session: AsyncSession, item_id: int) -> ItemRecord | None:
-    """Read a single item by id."""
-    return await session.get(ItemRecord, item_id)
+    result = await session.exec(
+        select(ItemRecord).where(ItemRecord.id == item_id)
+    )
+    return result.scalar_one_or_none()
 
 
 async def create_item(
@@ -24,9 +25,11 @@ async def create_item(
     title: str,
     description: str,
 ) -> ItemRecord:
-    """Create a new item in the database."""
     item = ItemRecord(
-        type=type, parent_id=parent_id, title=title, description=description
+        type=type,
+        parent_id=parent_id,
+        title=title,
+        description=description,
     )
     session.add(item)
     await session.commit()
@@ -35,14 +38,20 @@ async def create_item(
 
 
 async def update_item(
-    session: AsyncSession, item_id: int, title: str, description: str
+    session: AsyncSession,
+    item_id: int,
+    title: str | None,
+    description: str | None,
 ) -> ItemRecord | None:
-    """Update an existing item in the database."""
-    item = await session.get(ItemRecord, item_id)
+    item = await read_item(session, item_id)
     if item is None:
         return None
-    item.title = title
-    item.description = description
+
+    if title is not None:
+        item.title = title
+    if description is not None:
+        item.description = description
+
     session.add(item)
     await session.commit()
     await session.refresh(item)

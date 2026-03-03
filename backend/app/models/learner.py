@@ -1,23 +1,24 @@
-"""Pydantic models for learners."""
-
 from datetime import datetime
 
 from sqlmodel import Field, SQLModel
 
 
 class Learner(SQLModel, table=True):
-    """A learner in the learning management system."""
-
     __tablename__ = "learner"
 
     id: int | None = Field(default=None, primary_key=True)
     name: str
     email: str
-    enrolled_at: datetime | None = Field(default=None)
+    enrolled_at: datetime | None = None
 
 
 class LearnerCreate(SQLModel):
-    """Schema for creating a learner."""
-
     name: str
     email: str
+
+
+class LearnerRead(SQLModel):
+    id: int
+    name: str
+    email: str
+    enrolled_at: datetime | None = None

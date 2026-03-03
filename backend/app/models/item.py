@@ -1,49 +1,26 @@
-"""Models for course items."""
-
-from datetime import datetime, timezone
+from datetime import datetime
 from typing import Any
 
-from sqlalchemy import Column
-from sqlalchemy.dialects.postgresql import JSONB
+from sqlalchemy import JSON
 from sqlmodel import Field, SQLModel
 
 
-# ===
-# Database models
-# ===
-#
-# These [`SQLModel`](https://sqlmodel.tiangolo.com/) classes map to the `item`
-# PostgreSQL table. `SQLModel` combines SQLAlchemy (database ORM) with
-# Pydantic (data validation) in a single class hierarchy.
-#
-# Items form a tree: course → labs → tasks → steps.
-# The tree structure is stored using the
-# [adjacency list](https://en.wikipedia.org/wiki/Adjacency_list) pattern (`parent_id`).
-# Type-specific attributes are stored in a
-# [`JSONB`](https://www.postgresql.org/docs/current/datatype-json.html) column.
-
-
 class ItemRecord(SQLModel, table=True):
-    """A row in the items table."""
-
     __tablename__ = "item"
 
     id: int | None = Field(default=None, primary_key=True)
-    type: str = "step"
+    type: str = Field(default="step")
     parent_id: int | None = Field(default=None, foreign_key="item.id")
     title: str
-    description: str = ""
+    description: str = Field(default="")
     attributes: dict[str, Any] = Field(
-        default_factory=dict, sa_column=Column(JSONB, nullable=False)
+        default_factory=dict,
+        sa_type=JSON,
     )
-    created_at: datetime = Field(
-        default_factory=lambda: datetime.now(timezone.utc).replace(tzinfo=None)
-    )
+    created_at: datetime | None = None
 
 
 class ItemCreate(SQLModel):
-    """Schema for creating an item."""
-
     type: str = "step"
     parent_id: int | None = None
     title: str
@@ -51,7 +28,5 @@ class ItemCreate(SQLModel):
 
 
 class ItemUpdate(SQLModel):
-    """Schema for updating an item."""
-
-    title: str
-    description: str = ""
+    title: str | None = None
+    description: str | None = None

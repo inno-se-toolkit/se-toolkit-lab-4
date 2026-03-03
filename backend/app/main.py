@@ -1,25 +1,26 @@
-"""Learning Management Service — FastAPI application."""
-
 from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.auth import verify_api_key
-from app.routers import interactions, items, learners
-from app.settings import settings
+from .auth import verify_api_key
+from .routers import interactions, items, learners
+from .settings import settings
+
 
 app = FastAPI(
     title=settings.app_name,
     debug=settings.debug,
-    description="A learning management service API.",
     version="0.1.0",
 )
 
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.cors_origins,
+    allow_origins=settings.cors_origins or ["*"],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 app.include_router(
     items.router,

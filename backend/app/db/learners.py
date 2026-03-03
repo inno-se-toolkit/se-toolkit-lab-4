@@ -5,7 +5,7 @@ from datetime import datetime
 from sqlmodel import col, select
 from sqlmodel.ext.asyncio.session import AsyncSession
 
-from app.models.learner import Learner
+from ..models.learner import Learner
 
 
 async def read_learners(

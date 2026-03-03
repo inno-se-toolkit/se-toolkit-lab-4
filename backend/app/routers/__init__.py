@@ -1,6 +1,7 @@
-from app.routers import items
+# backend/app/routers/__init__.py
 
-# from app.routers import interactions
-# from app.routers import learners
+from . import items
+# from . import interactions
+# from . import learners
 
 __all__ = ["items"]

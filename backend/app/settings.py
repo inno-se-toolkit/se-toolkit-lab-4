@@ -3,19 +3,17 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    # Environment variables
-
     app_name: str = Field(default="Learning Management Service", alias="NAME")
     debug: bool = Field(default=False, alias="DEBUG")
     address: str = Field(default="127.0.0.1", alias="ADDRESS")
     port: int = Field(default=8000, alias="PORT")
     reload: bool = Field(default=False, alias="RELOAD")
 
-    api_token: str = Field(alias="API_TOKEN")
+    api_token: str = Field(default="dev-token", alias="API_TOKEN")
 
     cors_origins: list[str] = Field(default=[], alias="CORS_ORIGINS")
 
-    enable_interactions: bool = Field(default=False, alias="ENABLE_INTERACTIONS")
+    enable_interactions: bool = Field(default=True, alias="ENABLE_INTERACTIONS")
     enable_learners: bool = Field(default=False, alias="ENABLE_LEARNERS")
 
     db_host: str = Field(default="localhost", alias="DB_HOST")
