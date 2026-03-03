@@ -1,7 +1,7 @@
 import { useState, useEffect, FormEvent } from 'react'
 import './App.css'
 
-const STORAGE_KEY = 'api_token'
+const STORAGE_KEY = 'api_key'
 
 interface Item {
   id: number
@@ -61,8 +61,8 @@ function App() {
   if (!token) {
     return (
       <form className="token-form" onSubmit={handleConnect}>
-        <h1>API Token</h1>
-        <p>Enter your API token to connect.</p>
+        <h1>API Key</h1>
+        <p>Enter your API key to connect.</p>
         <input
           type="password"
           placeholder="Token"

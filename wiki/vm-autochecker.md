@@ -1,73 +1,92 @@
-# VM autochecker setup
+# VM autochecker
 
 <h2>Table of contents</h2>
 
-- [Create the `autochecker` user](#create-the-autochecker-user)
-- [Add an SSH public key to the `autochecker` user](#add-an-ssh-public-key-to-the-autochecker-user)
-- [Copy SSH authorized keys to a user](#copy-ssh-authorized-keys-to-a-user)
+- [What is the VM autochecker](#what-is-the-vm-autochecker)
+- [Set up the VM for autochecker](#set-up-the-vm-for-autochecker)
 
-## Create the `autochecker` user
+## What is the VM autochecker
 
-The `autochecker` user is a restricted account for the autochecker bot. It has no `sudo` access.
+The VM autochecker is a bot that verifies VM setup by connecting via [`SSH`](./ssh.md#what-is-ssh) as a restricted user. The `autochecker` user account has no `sudo` access.
 
-1. Create the `autochecker` user:
+## Set up the VM for autochecker
 
-   ```terminal
-   adduser --disabled-password --gecos "" autochecker
-   ```
+1. To create the `autochecker` user without `sudo` privileges,
 
-2. Create the `.ssh` directory for `autochecker`:
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
-   mkdir -p /home/autochecker/.ssh
-   chmod 700 /home/autochecker/.ssh
-   chown autochecker:autochecker /home/autochecker/.ssh
+   sudo adduser --disabled-password --gecos "" autochecker
    ```
 
-## Add an SSH public key to the `autochecker` user
-
-1. Create the `authorized_keys` file for `autochecker`:
+   The output should be similar to this:
 
    ```terminal
-   nano /home/autochecker/.ssh/authorized_keys
+   ...
+   info: Adding user `autochecker' to group `users' ...
    ```
 
-2. Paste the SSH public key:
+2. To create the `.ssh` directory for `autochecker`,
 
-   ```text
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
+
+   ```terminal
+   sudo mkdir -p /home/autochecker/.ssh
+   sudo chmod 700 /home/autochecker/.ssh
+   sudo chown autochecker:autochecker /home/autochecker/.ssh
+   ```
+
+   You should see no output.
+
+3. To check the information about the directory `/home/autochecker/.ssh/`,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
+
+   ```terminal
+   ls -ld /home/autochecker/.ssh
+   ```
+
+   The output should be similar to this:
+
+   ```terminal
+   drwx------ 2 autochecker autochecker 4096 Mar  2 19:16 /home/autochecker/.ssh
+   ```
+
+4. To add the autochecker [`SSH`](./ssh.md#what-is-ssh) public key,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
+
+   ```terminal
+   echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKiL0DDQZw7L0Uf1c9cNlREY7IS6ZkIbGVWNsClqGNCZ se-toolkit-autochecker" | sudo tee /home/autochecker/.ssh/authorized_keys
+   ```
+
+   You should see the public key:
+
+   ```terminal
    ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKiL0DDQZw7L0Uf1c9cNlREY7IS6ZkIbGVWNsClqGNCZ se-toolkit-autochecker
    ```
 
-3. Save the file and exit (`Ctrl+O`, `Enter`, `Ctrl+X`).
-4. Set the correct permissions:
+5. To set the correct permissions,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
-   chmod 600 /home/autochecker/.ssh/authorized_keys
-   chown autochecker:autochecker /home/autochecker/.ssh/authorized_keys
+   sudo chmod 600 /home/autochecker/.ssh/authorized_keys
+   sudo chown autochecker:autochecker /home/autochecker/.ssh/authorized_keys
    ```
 
-## Copy SSH authorized keys to a user
+   You should see no output.
 
-Copy the `authorized_keys` file from the current user to another user so they can log in with the same SSH key.
+6. To check the information about the file `/home/autochecker/.ssh/authorized_keys`,
 
-1. Create the `.ssh` directory:
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
-   mkdir -p /home/<username>/.ssh
+   ls -l /home/autochecker/.ssh/authorized_keys
    ```
 
-2. Copy the authorized keys:
+   The output should be similar to this:
 
-   ```terminal
-   cp ~/.ssh/authorized_keys /home/<username>/.ssh/authorized_keys
    ```
-
-3. Set the correct ownership and permissions:
-
-   ```terminal
-   chown -R <username>:<username> /home/<username>/.ssh
-   chmod 700 /home/<username>/.ssh
-   chmod 600 /home/<username>/.ssh/authorized_keys
+   -rw------- 1 autochecker autochecker 104 Mar  2 19:16 /home/autochecker/.ssh/authorized_keys
    ```
-
-Replace `<username>` with the name of the target user.

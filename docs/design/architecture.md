@@ -186,8 +186,8 @@ graph TD
 
         subgraph "Models (SQLModel)"
             IM["Item\nItemCreate\nItemUpdate\nItemRecord"]
-            INTM["Interaction\nInteractionCreate\nInteractionRecord"]
-            LM["Learner\nLearnerCreate\nLearnerRecord"]
+            INTM["InteractionLog\nInteractionLogCreate\nInteractionModel"]
+            LM["Learner\nLearnerCreate"]
         end
 
         CFG["settings.py\nPydantic Settings\n(env vars)"]
@@ -210,18 +210,18 @@ graph TD
 
 #### Component Descriptions
 
-| Component           | File                      | Description                                                                                                      |
-| ------------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Items Router        | `routers/items.py`        | CRUD endpoints for learning items. Always enabled.                                                               |
-| Interactions Router | `routers/interactions.py` | Read and create endpoints for interaction logs. Enabled via `ENABLE_INTERACTIONS=true`.                           |
-| Learners Router     | `routers/learners.py`     | CRUD endpoints for learner profiles. Enabled via `ENABLE_LEARNERS=true`.                                         |
-| Auth Middleware     | `auth.py`                 | Validates the `Authorization: Bearer <token>` header on every request. Token configured via `API_TOKEN` env var. |
-| Items DB            | `db/items.py`             | Async database operations for the `item` table.                                                                  |
-| Interactions DB     | `db/interactions.py`      | Async database operations for the `interacts` table.                                                             |
-| Learners DB         | `db/learners.py`          | Async database operations for the `learner` table.                                                               |
-| Database Connection | `database.py`             | Creates and manages the async SQLAlchemy engine and session factory.                                             |
-| Models              | `models/`                 | SQLModel classes: define table schema, validate input (Pydantic), and shape API responses.                       |
-| Settings            | `settings.py`             | Pydantic `BaseSettings`: reads all configuration from environment variables.                                     |
+| Component           | File                      | Description                                                                                                |
+| ------------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Items Router        | `routers/items.py`        | CRUD endpoints for learning items. Always enabled.                                                         |
+| Interactions Router | `routers/interactions.py` | Read and create endpoints for interaction logs. Enabled via `APP_ENABLE_INTERACTIONS=true`.                |
+| Learners Router     | `routers/learners.py`     | CRUD endpoints for learner profiles. Enabled via `APP_ENABLE_LEARNERS=true`.                               |
+| Auth Middleware     | `auth.py`                 | Validates the `Authorization: Bearer <key>` header on every request. Key configured via `API_KEY` env var. |
+| Items DB            | `db/items.py`             | Async database operations for the `item` table.                                                            |
+| Interactions DB     | `db/interactions.py`      | Async database operations for the `interacts` table.                                                       |
+| Learners DB         | `db/learners.py`          | Async database operations for the `learner` table.                                                         |
+| Database Connection | `database.py`             | Creates and manages the async SQLAlchemy engine and session factory.                                       |
+| Models              | `models/`                 | SQLModel classes: define table schema, validate input (Pydantic), and shape API responses.                 |
+| Settings            | `settings.py`             | Pydantic `BaseSettings`: reads all configuration from environment variables.                               |
 
 ---
 
@@ -290,7 +290,7 @@ sequenceDiagram
     Note over Student,Caddy: Authorization: Bearer <token>
     Caddy->>API: Proxy POST /interactions
     API->>API: verify_api_key()
-    API->>API: Validate request body (InteractionCreate)
+    API->>API: Validate request body (InteractionLogCreate)
     API->>DB: INSERT INTO interacts (learner_id, item_id, kind) RETURNING *
     DB-->>API: new interacts row
     API-->>Caddy: 201 Created — JSON {id, learner_id, item_id, kind, ...}
@@ -331,7 +331,7 @@ sequenceDiagram
 
 ### 7.4 Feature Flags for Optional Endpoints
 
-**Decision:** The interactions and learners routers are conditionally included based on environment variables (`ENABLE_INTERACTIONS`, `ENABLE_LEARNERS`).
+**Decision:** The interactions and learners routers are conditionally included based on environment variables (`APP_ENABLE_INTERACTIONS`, `APP_ENABLE_LEARNERS`).
 
 **Rationale:** Students implement parts of the API incrementally across labs. Feature flags let the instructor control which endpoints are active without changing code.
 

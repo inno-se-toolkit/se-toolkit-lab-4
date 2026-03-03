@@ -44,6 +44,7 @@
                       --exclude-path '.venv' \
                       --exclude-path '.direnv' \
                       --exclude-path 'node_modules' \
+                      --exclude-path 'tmp' \
                       --root-dir . \
                       --cache \
                       --format json \

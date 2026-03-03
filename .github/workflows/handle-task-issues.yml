@@ -1,0 +1,34 @@
+name: Close student task issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  close-task-issue:
+    if: contains(github.event.issue.title, '[Task]')
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+
+    steps:
+      - name: Close with redirect message
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const issueNumber = context.payload.issue.number;
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: issueNumber,
+              body: "This looks like a task issue for your own project — please create it in your fork, not the upstream repo. Issues here are for reporting problems with the lab itself."
+            });
+
+            await github.rest.issues.update({
+              owner,
+              repo,
+              issue_number: issueNumber,
+              state: 'closed'
+            });

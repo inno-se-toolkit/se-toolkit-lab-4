@@ -3,9 +3,12 @@
 <h2>Table of contents</h2>
 
 - [What is `SSH`](#what-is-ssh)
-- [SSH daemon](#ssh-daemon)
+- [`SSH` keys](#ssh-keys)
+  - [`SSH` public key](#ssh-public-key)
+  - [`SSH` private key](#ssh-private-key)
+- [`SSH` daemon](#ssh-daemon)
 - [`ssh-agent`](#ssh-agent)
-- [Set up SSH](#set-up-ssh)
+- [Set up `SSH`](#set-up-ssh)
   - [Create a new `SSH` key](#create-a-new-ssh-key)
   - [Find the `SSH` key files](#find-the-ssh-key-files)
   - [Start the `ssh-agent`](#start-the-ssh-agent)
@@ -23,7 +26,7 @@
 
 ## What is `SSH`
 
-`Secure Shell` (`SSH`) is a protocol used to securely connect to remote machines.
+`SSH` (`Secure Shell`) is a protocol used to securely connect to remote machines.
 
 You can use it to connect to [your virtual machine](./vm.md#your-vm).
 
@@ -32,9 +35,15 @@ All commands below assume a Unix shell: `Bash` (`Linux`, `WSL`) or `Zsh` (`macOS
 > [!IMPORTANT]
 > **Windows users:** Use `WSL` (Windows Subsystem for Linux). Do not use `PowerShell`, `cmd.exe`, or `Git Bash` — the commands below are not guaranteed to work there.
 
-## SSH daemon
+## `SSH` keys
 
-The `SSH` daemon (`sshd`) is a program that runs on the [remote host](./computer-networks.md#remote-host) and [listens](./linux.md#listen-on-a-port) for incoming `SSH` connections.
+### `SSH` public key
+
+### `SSH` private key
+
+## `SSH` daemon
+
+The `SSH` daemon (`sshd`) is a program that runs on the [remote host](./computer-networks.md#remote-host) and [listens](./computer-networks.md#listen-on-a-port) for incoming `SSH` connections.
 
 You do not need to configure it — your [VM](./vm.md#your-vm) already has it running.
 
@@ -46,7 +55,7 @@ When `ssh-agent` holds your key, you do not need to type a passphrase every time
 
 See [Start the `ssh-agent`](#start-the-ssh-agent) for setup instructions.
 
-## Set up SSH
+## Set up `SSH`
 
 Set up [`SSH`](#what-is-ssh) to connect to a [remote host](./computer-networks.md#remote-host).
 
@@ -67,7 +76,9 @@ We'll use the `ed25519` algorithm, which is the modern standard for security and
 
 Steps:
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To generate the key pair,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ssh-keygen -t ed25519 -C "se-toolkit-student" -f ~/.ssh/se_toolkit_key
@@ -87,9 +98,9 @@ Steps:
 
 Because you used a custom name, your keys are named `se_toolkit_key` (private) and `se_toolkit_key.pub` (public).
 
-1. Verify they were created:
+1. To verify the keys were created,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ls ~/.ssh/se_toolkit_key*
@@ -101,9 +112,9 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 
    Another file contains the private key.
 
-3. View the content of the public key file:
+3. To view the content of the public key file,
 
-   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    cat ~/.ssh/se_toolkit_key.pub
@@ -121,7 +132,9 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 
 ### Start the `ssh-agent`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To start the agent and load your key,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    eval "$(ssh-agent -s)"
@@ -132,7 +145,9 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 
 1. [Open a new `VS Code Terminal`](./vs-code.md#open-a-new-vs-code-terminal).
 2. [Check the current shell in the `VS Code Terminal`](./vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
-3. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+3. To list the loaded keys,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ssh-add -l
@@ -182,7 +197,9 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 
 You can connect using the alias that you [added to your `SSH` config](#add-the-host-to-ssh).
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To connect to the VM,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ssh se-toolkit-vm
@@ -209,9 +226,9 @@ You can connect using the alias that you [added to your `SSH` config](#add-the-h
 
 Key-based authentication uses your private key to prove your identity. The remote host checks whether the matching public key is listed as authorized.
 
-This is the recommended method and is what [Set up SSH](#set-up-ssh) configures.
+This is the recommended method and is what [Set up `SSH`](#set-up-ssh) configures.
 
-1. [Set up SSH](#set-up-ssh).
+1. [Set up `SSH`](#set-up-ssh).
 2. Ensure your public key is added to the remote host.
 3. [Connect to the VM](#connect-to-the-vm).
 
@@ -224,7 +241,9 @@ Password-based authentication asks you to type the remote user's password.
 > [!NOTE]
 > Password authentication may be disabled on the VM. Use [key-based authentication](#login-without-password) instead.
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To connect with a password,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ssh -o PasswordAuthentication=yes root@<your-vm-ip-address>
@@ -242,7 +261,9 @@ Password-based authentication asks you to type the remote user's password.
 
 ### `Bad owner or permissions`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. To fix the permissions,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    chmod 700 ~/.ssh
@@ -254,9 +275,9 @@ Password-based authentication asks you to type the remote user's password.
 
 1. Verify host IP and network connectivity.
 2. Verify the VM is running.
-3. Try to ping the VM:
+3. To ping the VM,
 
-   Run using the `VS Code Terminal`:
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ping <your-vm-ip-address>
@@ -274,7 +295,9 @@ Password-based authentication asks you to type the remote user's password.
    ...
    ```
 
-4. Use verbose logs to debug:
+4. To enable verbose logs for debugging,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ssh -v se-toolkit-vm

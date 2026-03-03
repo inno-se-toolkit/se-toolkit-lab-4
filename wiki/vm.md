@@ -1,4 +1,4 @@
-# VM
+# Virtual machine
 
 <h2>Table of contents</h2>
 
@@ -12,7 +12,7 @@
   - [Create a subscription](#create-a-subscription)
   - [Create a VM using the subscription](#create-a-vm-using-the-subscription)
 - [Go to the VM page](#go-to-the-vm-page)
-- [Get the `IP address` of the VM](#get-the-ip-address-of-the-vm)
+- [Get the IP address of the VM](#get-the-ip-address-of-the-vm)
 - [Connect to the VM](#connect-to-the-vm)
 - [Delete VM](#delete-vm)
 - [Troubleshooting](#troubleshooting)
@@ -20,8 +20,9 @@
 
 ## What is a VM
 
-A virtual machine (`VM`) is a software-emulated computer that runs on a physical host machine, with its own [operating system](./operating-system.md) and isolated environment.
-In this lab, you use a `VM` provided by the university to deploy and run the application remotely over [SSH](./ssh.md).
+A VM (virtual machine) is a software-emulated computer that runs on a physical [host machine](./computer-networks.md#host), with its own [operating system](./operating-system.md#what-is-an-operating-system) and isolated environment.
+
+In this lab, you use a VM provided by the university to deploy and run the application remotely over [`SSH`](./ssh.md#what-is-ssh).
 
 Docs:
 
@@ -37,17 +38,23 @@ See [VM image](./vm-info.md) for the information about your VM.
 
 ## `<your-vm-name>`
 
+The name you chose when [creating the VM](#create-a-vm-using-the-subscription) (without `<` and `>`).
+
 ## `<your-vm-ip-address>`
 
-The [`IP address`](./computer-networks.md) of [your VM](#your-vm).
+The [IP address](./computer-networks.md#ip-address) of [your VM](#your-vm) (without `<` and `>`).
 
-See [Get the `IP address` of the VM](#get-the-ip-address-of-the-vm).
+Example: `10.93.24.1`.
+
+See [Get the IP address of the VM](#get-the-ip-address-of-the-vm).
 
 ## Prepare the connection
 
 1. Disable `VPN`.
 2. Connect your computer to the `Wi-Fi` network `UniversityStudent`.
-3. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+3. To check the connection to your VM,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ping <your-vm-ip-address>
@@ -116,7 +123,6 @@ Complete these steps to create a VM:
 
 ## Go to the VM page
 
-<!-- TODO open vm -->
 1. [Go to the VMs site](#go-to-the-vms-site).
 2. Open the `VIRTUALS MACHINES` tab ([https://vm.innopolis.university/#Workspaces/VMExtension/VirtualMachines](https://vm.innopolis.university/#Workspaces/VMExtension/VirtualMachines)).
 3. Look at the `NAME`.
@@ -126,36 +132,39 @@ Complete these steps to create a VM:
 7. Click `DASHBOARD`.
 8. You should be on the VM page.
 
-## Get the `IP address` of the VM
+## Get the IP address of the VM
 
 1. [Go to the VM page](#go-to-the-vm-page).
 2. Go to the `quick glance` sidebar (on the right).
 3. Go to `IP Address(es)`.
 4. You should see there `StudentsCourses01 - 10.93.24.98`.
-5. The `10.93.24.98` string is the [`IP address`](./computer-networks.md#ip-address) of the VM in a university network.
+5. The `10.93.24.98` string is the [IP address](./computer-networks.md#ip-address) of the VM in a university network.
 6. We'll refer to this string as `<your-vm-ip-address>`.
 
 ## Connect to the VM
 
 1. (If not completed) [Add your VM to the `SSH` config](./ssh.md#add-the-host-to-ssh).
 2. Disable `VPN`.
-3. Connect your computer to the `Wi-Fi` network `UniversityStudent`.
+3. Connect your computer to the [`Wi-Fi` network](./computer-networks.md#wi-fi-network) `UniversityStudent`.
 4. Open [`VS Code`](./vs-code.md).
 5. [Connect to the VM](./ssh.md#connect-to-the-vm).
 6. If the connection is successful, you should see:
    1. The host fingerprint prompt (first connection only).
    2. A remote [shell prompt](./shell.md#shell-prompt) on the VM (for example, `root@<your-vm-name>:~#`).
-   3. If you use the `ms-vscode-remote.remote-ssh` exntension in `VS Code`, the status bar should show that you are connected to a remote host.
+   3. If you use the `ms-vscode-remote.remote-ssh` extension in `VS Code`, the status bar should show that you are connected to a remote host.
 7. Otherwise, see [troubleshooting](#troubleshooting).
 
 ## Delete VM
+
+1. [Go to the VM page](#go-to-the-vm-page).
+2. Click `DELETE`.
 
 ## Troubleshooting
 
 ### `ping` times out
 
-1. Connect to the Wi `UniversityStudent`
-2. recreate the VM.
+1. Connect your computer to the [`Wi-Fi` network](./computer-networks.md#wi-fi-network) `UniversityStudent`.
+2. Recreate the VM.
 
    Use the same public key as before.
 
@@ -163,8 +172,10 @@ If you can't connect:
 
 1. [Go to the VM page](#go-to-the-vm-page).
 2. Verify the VM is in `Running` status.
-3. Verify the VM `IP address` has not changed.
-4. In your local terminal, test the [`SSH`](./ssh.md) connection in verbose mode:
+3. Verify the VM IP address has not changed.
+4. To test the [`SSH`](./ssh.md) connection in verbose mode,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    ssh -v se-toolkit-vm
@@ -172,8 +183,8 @@ If you can't connect:
 
 5. If you get `Permission denied (publickey)`, check:
    1. Your public key was added to the VM configuration.
-   2. `IdentityFile` in your SSH config points to the correct private key.
-   3. Your private key file permissions are correct (`chmod 600 ~/.ssh/se_toolkit_key` on Linux/macOS/WSL).
+   2. `IdentityFile` in your `SSH` config points to the correct private key.
+   3. Your private key file permissions are correct (`chmod 600 ~/.ssh/se_toolkit_key` on `Linux`/`macOS`/`WSL`).
 6. Ask the TA to help and show them:
    1. The VM page.
    2. The output of `ssh -v se-toolkit-vm`.

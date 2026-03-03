@@ -5,6 +5,8 @@
 - [Web server and web client](#web-server-and-web-client)
   - [Web server](#web-server)
   - [Web client](#web-client)
+- [Backend](#backend)
+- [Frontend](#frontend)
 - [Protocol](#protocol)
 - [Data format](#data-format)
   - [`JSON`](#json)
@@ -13,7 +15,8 @@
   - [`Protobuf`](#protobuf)
 - [REST API](#rest-api)
 - [API](#api)
-  - [`<api-token>`](#api-token)
+  - [What is API key](#what-is-api-key)
+  - [`<api-key>`](#api-key)
 - [Endpoint](#endpoint)
 - [Send a `GET` request](#send-a-get-request)
   - [Send a `GET` request using a browser](#send-a-get-request-using-a-browser)
@@ -50,6 +53,14 @@ A web server is software that delivers content or services to [web clients](#web
 A web client is software that requests content from a [web server](#web-server) and displays the received content.
 
 Web clients include browsers (`Chrome`, `Firefox`) and command-line tools ([`curl`](#send-a-get-request-using-curl)).
+
+## Backend
+
+<!-- TODO -->
+
+## Frontend
+
+<!-- TODO -->
 
 ## Protocol
 
@@ -111,6 +122,8 @@ Example:
 
 ## API
 
+<!-- TODO move to separate doc -->
+
 An API (`Application Programming Interface`) is a set of rules that lets programs communicate with each other.
 
 A web API exposes [endpoints](#endpoint) that clients can call over `HTTP`.
@@ -119,7 +132,11 @@ Docs:
 
 - [An introduction to APIs: A comprehensive guide](https://zapier.com/blog/api/)
 
-### `<api-token>`
+### What is API key
+
+<!-- TODO -->
+
+### `<api-key>`
 
 The value that you use to authenticate in the API.
 
@@ -152,7 +169,9 @@ See [`curl`](./useful-programs.md#send-a-get-request-with-curl).
 ### Pretty-print the `JSON` response using `jq`
 
 1. [Install `jq`](./useful-programs.md#jq) if not installed.
-2. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+2. To pretty-print the `JSON` response,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
    <command-that-produces-json-response> | jq .
@@ -174,12 +193,14 @@ curl -s https://jsonplaceholder.typicode.com/todos/1 | jq .
 
 `Firefox`:
 
-1. Click `Raw Data`
-2. Clik `Pretty Print`
+1. Click `Raw Data`.
+2. Click `Pretty Print`.
 
 <!-- TODO other browsers -->
 
 ## URL
+
+<!-- TODO move to computer networks -->
 
 A URL (`Uniform Resource Locator`) is a reference or address used to identify and locate resources on the Internet. It's commonly known as a "web address" and specifies the location of a resource on a web server as well as the protocol used to access it.
 
@@ -193,7 +214,7 @@ A typical URL consists of several components:
 
 - **Scheme/Protocol**: Specifies how to access the resource (e.g., `http`, `https`, `ftp`).
 - **[Host](./computer-networks.md#host)/Domain**: The server where the resource is located (e.g., `www.example.com`).
-- **[Port](./linux.md#port)** (optional): The specific port number on the server (e.g., `:8080`).
+- **[Port](./computer-networks.md#port)** (optional): The specific port number on the server (e.g., `:8080`).
 - **Path**: The location of the specific resource on the server (e.g., `/folder/page.html`).
 - **Query parameters** (optional): Additional data passed to the server (e.g., `?param1=value1&param2=value2`).
 - **Fragment** (optional): Points to a specific section within the resource (e.g., `#section1`).

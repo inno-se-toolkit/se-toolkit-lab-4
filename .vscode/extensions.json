@@ -28,6 +28,9 @@
     // However, it didn't work for me.
     // "tombi-toml.tombi",
 
+    // CSV support
+    "mechatroner.rainbow-csv",
+    
     // Share your VS Code with a friend.
     "ms-vsliveshare.vsliveshare",
 
