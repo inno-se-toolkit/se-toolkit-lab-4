@@ -8,6 +8,7 @@ interface Item {
   type: string
   title: string
   created_at: string
+  description: string   // <-- добавили поле description
 }
 
 function App() {
@@ -94,6 +95,7 @@ function App() {
               <th>Type</th>
               <th>Title</th>
               <th>Created at</th>
+              <th>Description</th>   {/* <-- добавили заголовок колонки */}
             </tr>
           </thead>
           <tbody>
@@ -103,6 +105,7 @@ function App() {
                 <td>{item.type}</td>
                 <td>{item.title}</td>
                 <td>{item.created_at}</td>
+                <td>{item.description}</td>   {/* <-- добавили ячейку с описанием */}
               </tr>
             ))}
           </tbody>
