@@ -24,3 +24,23 @@ def test_filter_returns_interaction_with_matching_ids() -> None:
     result = _filter_by_item_id(interactions, 1)
     assert len(result) == 1
     assert result[0].id == 1
+
+def test_filter_by_item_id_without_item_id_returns_all() -> None:
+    interactions = [
+        InteractionLog(id=1, learner_id=1, item_id=1, kind="view", created_at=None),
+        InteractionLog(id=2, learner_id=2, item_id=2, kind="click", created_at=None),
+    ]
+
+    result = _filter_by_item_id(interactions, item_id=None)
+
+    assert result == interactions
+
+def test_filter_by_item_id_returns_empty_when_no_match() -> None:
+    interactions = [
+        InteractionLog(id=1, learner_id=1, item_id=1, kind="view", created_at=None),
+        InteractionLog(id=2, learner_id=2, item_id=2, kind="click", created_at=None),
+    ]
+
+    result = _filter_by_item_id(interactions, item_id=999)
+
+    assert result == []
