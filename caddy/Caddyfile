@@ -22,3 +22,8 @@
         file_server
     }
 }
+
+:<frontend-port> {
+    root * /var/www/frontend/dist
+    file_server
+}
