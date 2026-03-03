@@ -17,6 +17,7 @@ class InteractionLog(SQLModel, table=True):
     )
 
 
+
 class InteractionLogCreate(SQLModel):
     learner_id: int
     item_id: int
