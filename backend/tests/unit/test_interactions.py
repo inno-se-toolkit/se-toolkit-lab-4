@@ -4,7 +4,7 @@ from app.models.interaction import InteractionLog
 from app.routers.interactions import _filter_by_item_id
 
 
-def _make_log(id: int, learner_id: int, item_id: int) -> InteractionLog:
+def test_filter_excludes_interaction_with_different_learner_id(id: int, learner_id: int, item_id: int) -> InteractionLog:
     return InteractionLog(id=id, learner_id=learner_id, item_id=item_id, kind="attempt")
 
 
