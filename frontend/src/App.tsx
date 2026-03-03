@@ -1,4 +1,4 @@
-import { useState, useEffect, FormEvent } from 'react'
+import { useEffect, useState, FormEvent } from 'react'
 import './App.css'
 
 const STORAGE_KEY = 'api_token'
@@ -8,12 +8,11 @@ interface Item {
   type: string
   title: string
   created_at: string
+  description: string
 }
 
 function App() {
-  const [token, setToken] = useState(
-    () => localStorage.getItem(STORAGE_KEY) ?? '',
-  )
+  const [token, setToken] = useState(() => localStorage.getItem(STORAGE_KEY) ?? '')
   const [draft, setDraft] = useState('')
   const [items, setItems] = useState<Item[]>([])
   const [loading, setLoading] = useState(false)
@@ -25,11 +24,14 @@ function App() {
     setLoading(true)
     setError(null)
 
-    fetch('/items', {
+    fetch('/items/', {
       headers: { Authorization: `Bearer ${token}` },
     })
-      .then((res) => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+      .then(async (res) => {
+        if (!res.ok) {
+          const text = await res.text().catch(() => '')
+          throw new Error(`HTTP ${res.status}${text ? `: ${text}` : ''}`)
+        }
         return res.json()
       })
       .then((data: Item[]) => {
@@ -93,6 +95,7 @@ function App() {
               <th>ID</th>
               <th>Type</th>
               <th>Title</th>
+              <th>Description</th>
               <th>Created at</th>
             </tr>
           </thead>
@@ -102,6 +105,7 @@ function App() {
                 <td>{item.id}</td>
                 <td>{item.type}</td>
                 <td>{item.title}</td>
+                <td>{item.description}</td>
                 <td>{item.created_at}</td>
               </tr>
             ))}

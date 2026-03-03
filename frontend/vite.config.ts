@@ -9,11 +9,11 @@ export default defineConfig(({ mode }) => {
     plugins: [react()],
     server: {
       proxy: {
-        '/items': target,
-        '/learners': target,
-        '/interactions': target,
-        '/docs': target,
-        '/openapi.json': target,
+        '/items': { target, changeOrigin: true, secure: false },
+        '/learners': { target, changeOrigin: true, secure: false },
+        '/interactions': { target, changeOrigin: true, secure: false },
+        '/docs': { target, changeOrigin: true, secure: false },
+        '/openapi.json': { target, changeOrigin: true, secure: false },
       },
     },
   }
