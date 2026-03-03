@@ -1,7 +1,9 @@
+
 """Unit tests for interaction filtering logic."""
 
 from app.models.interaction import InteractionLog
 from app.routers.interactions import filter_by_max_item_id
+from datetime import datetime
 
 
 def _make_log(id: int, learner_id: int, item_id: int) -> InteractionLog:
@@ -24,3 +26,19 @@ def test_filter_returns_interactions_below_max() -> None:
     result = filter_by_max_item_id(interactions=interactions, max_item_id=2)
     assert len(result) == 1
     assert result[0].id == 1
+
+def test_filter_includes_interaction_at_boundary() -> None:
+	interactions = [
+		InteractionLog(
+			id=1,
+			learner_id=1,
+			item_id=2,
+			kind="view",
+			created_at=datetime.now(),
+		)
+	]
+	
+	result = filter_by_max_item_id(interactions, max_item_id=2)
+
+	assert len(result) == 1
+	assert result[0].item_id == 2
