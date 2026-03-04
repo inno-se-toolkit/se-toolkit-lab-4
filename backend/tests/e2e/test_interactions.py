@@ -11,6 +11,7 @@ def test_post_interaction_returns_201(client: httpx.Client) -> None:
     assert response.status_code == 201
 
 
+
 def test_get_interactions_returns_200(client: httpx.Client) -> None:
     response = client.get("/interactions/")
     assert response.status_code == 200
