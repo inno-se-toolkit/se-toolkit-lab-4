@@ -1,26 +1,26 @@
 # Wiki conventions — applies to `wiki/` only
 
-- [7. Wiki documents (`wiki/`)](#7-wiki-documents-wiki)
-  - [Purpose](#purpose)
-  - [Naming](#naming)
-  - [Structure of a wiki file](#structure-of-a-wiki-file)
-  - [Key rules](#key-rules)
-  - [Standard wiki topics to include](#standard-wiki-topics-to-include)
-- [12.13. `vs-code.md` section structure pattern](#1213-vs-codemd-section-structure-pattern)
-- [17. Checklist before publishing](#17-checklist-before-publishing)
+- [1. Wiki documents (`wiki/`)](#1-wiki-documents-wiki)
+  - [1.1. Purpose](#11-purpose)
+  - [1.2. Naming](#12-naming)
+  - [1.3. Structure of a wiki file](#13-structure-of-a-wiki-file)
+  - [1.4. Key rules](#14-key-rules)
+  - [1.5. Standard wiki topics to include](#15-standard-wiki-topics-to-include)
+- [2. `vs-code.md` section structure pattern](#2-vs-codemd-section-structure-pattern)
+- [3. Checklist before publishing](#3-checklist-before-publishing)
 
-## 7. Wiki documents (`wiki/`)
+## 1. Wiki documents (`wiki/`)
 
-### Purpose
+### 1.1. Purpose
 
 Wiki files are **reference documents** — one file per tool or concept. They are linked from task docs whenever a concept or operation is first mentioned.
 
-### Naming
+### 1.2. Naming
 
 - One file per tool/concept: `vs-code.md`, `git.md`, `docker.md`, `python.md`, `shell.md`, etc.
 - Use lowercase with hyphens.
 
-### Structure of a wiki file
+### 1.3. Structure of a wiki file
 
 ```markdown
 # <Tool or Concept Name>
@@ -46,18 +46,24 @@ Docs:
 ...
 ```
 
-### Key rules
+### 1.4. Key rules
 
 - Each section is self-contained and linkable (task docs link to `wiki/<file>.md#<section>`).
 - Start every wiki file with a `## What is <tool or concept>` section that defines the tool/concept in 1–3 sentences and includes a link to official docs. The heading may use natural phrasing (articles, singular/plural) that differs from the H1 title — e.g., `# Computer Networks` → `## What is a computer network`.
 - Provide both explanation and how-to instructions.
 - Link to other wiki sections whenever a concept appears for the first time in a section (see [Links and cross-references](./common.md#48-links-and-cross-references)).
+- **Connect the dots.** Wiki files are often read in isolation — readers jump in from a task link. Don't just define a concept; situate it. Use cross-links and connecting wording (e.g., `` `X` works together with `Y` to… ``, `` When using `Z`, you will also need… ``) to help readers understand how concepts relate to each other and to the broader system.
 - Use `<h2>Table of contents</h2>` (HTML) so the ToC heading itself doesn't appear in the auto-generated ToC.
 - When an operation can be done multiple ways, list them as options: "Use any of the following methods:"
+- These wiki files must stay in sync with their corresponding source files — variable names, default values, and grouping must match:
+  - `wiki/dotenv-docker-secret.md` ↔ `.env.docker.example`
+  - `wiki/dotenv-tests-unit-secret.md` ↔ `.env.tests.unit.example`
+  - `wiki/dotenv-tests-e2e-secret.md` ↔ `.env.tests.e2e.example`
+  - `wiki/pyproject-toml.md` ↔ `pyproject.toml`
 - Vendor instructions that aren't good enough anywhere else (e.g., rewrite unclear official docs).
 - Provide fallback methods when one method may not work for all students.
 
-### Standard wiki topics to include
+### 1.5. Standard wiki topics to include
 
 Depending on the lab, consider creating wiki files for:
 
@@ -79,7 +85,7 @@ Depending on the lab, consider creating wiki files for:
 - `package-manager.md` — Package managers, tools, and dependencies overview.
 - `ssh.md` — SSH setup and usage.
 - `python.md` — Python, virtual environments, package managers (`uv`).
-- `testing.md` — Testing concepts, `pytest`, assertions.
+- `quality-assurance.md` — Quality assurance concepts, `pytest`, assertions.
 - `http.md` — HTTP protocol, requests, responses, and status codes.
 - `http-auth.md` — HTTP authentication via API keys and authorization.
 - `web-development.md` — HTTP, endpoints, status codes, URLs, JSON, APIs.
@@ -101,11 +107,10 @@ Depending on the lab, consider creating wiki files for:
 - `visualize-architecture.md` — Draw.io, PlantUML, and Mermaid for architecture diagrams.
 - `coding-agents.md` — LLM-based coding agents setup and configuration.
 - `useful-programs.md` — Command-line tools: curl, jq, find, ripgrep.
-- `placeholders.md` — Index of all placeholders used in the lab, each linking to its definition in the relevant wiki doc.
 
 ----
 
-## 12.13. `vs-code.md` section structure pattern
+## 2. `vs-code.md` section structure pattern
 
 Each section in `vs-code.md` should follow this pattern (other wiki files use the simpler "What is" + "Docs:" structure described above):
 
@@ -134,7 +139,7 @@ This provides: what it is, where to find it, official docs, and how to use it.
 
 ----
 
-## 17. Checklist before publishing
+## 3. Checklist before publishing
 
 **Always required:**
 
@@ -166,6 +171,11 @@ This provides: what it is, where to find it, official docs, and how to use it.
 **Conditional (include when applicable):**
 
 - [ ] `.env.example` files are provided; `.env.secret` files are gitignored (if the lab uses environment variables).
+- [ ] Wiki files are in sync with their corresponding source files — variable names, defaults, and grouping match (if the lab has dotenv or pyproject-toml wiki pages):
+  - `wiki/dotenv-docker-secret.md` ↔ `.env.docker.example`
+  - `wiki/dotenv-tests-unit-secret.md` ↔ `.env.tests.unit.example`
+  - `wiki/dotenv-tests-e2e-secret.md` ↔ `.env.tests.e2e.example`
+  - `wiki/pyproject-toml.md` ↔ `pyproject.toml`
 - [ ] `.dockerignore` excludes tests, docs, `.git/`, build caches, markdown files (if the lab uses Docker).
 - [ ] At least one test intentionally fails for the debugging task (if the lab has a testing/debugging task).
 - [ ] Task runner commands are documented in the config file (if the lab uses a task runner).

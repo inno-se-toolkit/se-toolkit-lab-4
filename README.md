@@ -23,7 +23,7 @@ The `API` is deployed and secured. Now the team wants to prove it works with rea
 
 A senior engineer explains your next assignment:
 
-> 1. Redeploy the back-end and observe how requests flow from `Swagger` through the `API` to the database.
+> 1. Redeploy the back-end and observe how requests flow from `Swagger UI` through the `API` to the database.
 > 2. Write unit and end-to-end tests, discover existing bugs, and fix them.
 > 3. Add a front-end to the system and modify it using an AI coding agent.
 
@@ -34,13 +34,9 @@ A senior engineer explains your next assignment:
 
 Read the tasks and complete them by yourself.
 
-When stuck or not sure, ask an LLM:
+When stuck or not sure, ask the [AI coding agent](./wiki/coding-agents.md#what-is-a-coding-agent).
 
-> Give me directions on how to solve this task. I want to maximize learning.
-
-> Why is this task important? What exactly do I need to do?
-
-Provide enough context by giving it the whole file, not one or two lines. Ideally pass the setup file too.
+Use appropriate [prompts](./wiki/lab.md#prompts-for-coding-agents).
 
 Remember: Use the LLM to enhance your understanding, not replace it.
 
@@ -50,7 +46,7 @@ By the end of this lab, you should be able to:
 
 - Deploy a back-end service to a remote VM.
 - Use browser developer tools to inspect `HTTP` requests.
-- Examine the request path from `Swagger` through the `API` to the database.
+- Examine the request path from `Swagger UI` through the `API` to the database.
 - Construct unit and end-to-end tests for boundary-value cases.
 - Diagnose bugs from failing test output and apply fixes.
 - Use an AI coding agent to generate and refine tests.
@@ -68,13 +64,12 @@ In simple words, you should be able to say:
 ### Prerequisites
 
 1. Complete the [lab setup](./lab/tasks/setup.md)
-2. Set up an [AI coding agent](./wiki/coding-agents.md)
 
 ### Required
 
-1. [Observe system component interaction](./lab/tasks/required/task-1.md)
+1. [Observe the interaction of the  system components](./lab/tasks/required/task-1.md)
 2. [Back-end testing](./lab/tasks/required/task-2.md)
-3. [Add front-end](./lab/tasks/required/task-3.md)
+3. [Add frontend](./lab/tasks/required/task-3.md)
 
 ### Optional
 

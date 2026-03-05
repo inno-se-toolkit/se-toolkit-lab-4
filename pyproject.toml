@@ -24,21 +24,9 @@ dev = [
 ]
 
 [tool.ruff.lint]
-select = [ "RET503" ]
+select = ["RET503"]
 
 [tool.poe.tasks]
-# Run server
-
-## Check code and run server in dev mode
-
-[tool.poe.tasks.dev]
-help = "Run server after static analysis"
-sequence = ["check", "dev-unsafe"]
-
-## Run server
-[tool.poe.tasks.dev-unsafe]
-help = "Run server without static analysis"
-cmd = "python backend/app/run.py"
 
 # Run static analysis
 
@@ -52,7 +40,7 @@ sequence = ["format", "lint", "typecheck"]
 
 [tool.poe.tasks.typecheck]
 help = "Run all typecheckers"
-parallel = ["ty-check", "pyright-check"]
+sequence = ["ty-check", "pyright-check"]
 
 [tool.poe.tasks.ty-check]
 help = "Run the 'ty' typechecker"
@@ -79,16 +67,22 @@ cmd = "ruff format"
 ## Run tests
 
 [tool.poe.tasks.test]
+help = "Run all tests"
+sequence = ["test-unit", "test-e2e"]
+
+[tool.poe.tasks.test-unit]
 help = "Run unit tests"
 cmd = "pytest backend/tests/unit"
+envfile = ".env.tests.unit.secret"
 
 [tool.poe.tasks.test-e2e]
 help = "Run end-to-end tests against the deployed API"
 cmd = "pytest backend/tests/e2e"
+envfile = ".env.tests.e2e.secret"
 
 [tool.pyright]
 include = ["backend"]
-exclude = ["**/__pycache__"]
+exclude = ["**/__pycache__", "**/node_modules", "**/.*", ".venv", ".direnv"]
 typeCheckingMode = "strict"
 reportAssignmentType = "none"
 reportIncompatibleVariableOverride = "none"

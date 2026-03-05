@@ -1,7 +1,7 @@
-import { useState, useEffect, FormEvent } from 'react'
+import { useState, useEffect, useReducer, FormEvent } from 'react'
 import './App.css'
 
-const STORAGE_KEY = 'api_token'
+const STORAGE_KEY = 'api_key'
 
 interface Item {
   id: number
@@ -10,36 +10,51 @@ interface Item {
   created_at: string
 }
 
+type FetchState =
+  | { status: 'idle' }
+  | { status: 'loading' }
+  | { status: 'success'; items: Item[] }
+  | { status: 'error'; message: string }
+
+type FetchAction =
+  | { type: 'fetch_start' }
+  | { type: 'fetch_success'; data: Item[] }
+  | { type: 'fetch_error'; message: string }
+
+function fetchReducer(_state: FetchState, action: FetchAction): FetchState {
+  switch (action.type) {
+    case 'fetch_start':
+      return { status: 'loading' }
+    case 'fetch_success':
+      return { status: 'success', items: action.data }
+    case 'fetch_error':
+      return { status: 'error', message: action.message }
+  }
+}
+
 function App() {
   const [token, setToken] = useState(
     () => localStorage.getItem(STORAGE_KEY) ?? '',
   )
   const [draft, setDraft] = useState('')
-  const [items, setItems] = useState<Item[]>([])
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+  const [fetchState, dispatch] = useReducer(fetchReducer, { status: 'idle' })
 
   useEffect(() => {
     if (!token) return
 
-    setLoading(true)
-    setError(null)
+    dispatch({ type: 'fetch_start' })
 
-    fetch('/items', {
+    fetch('/items/', {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
         return res.json()
       })
-      .then((data: Item[]) => {
-        setItems(data)
-        setLoading(false)
-      })
-      .catch((err: Error) => {
-        setError(err.message)
-        setLoading(false)
-      })
+      .then((data: Item[]) => dispatch({ type: 'fetch_success', data }))
+      .catch((err: Error) =>
+        dispatch({ type: 'fetch_error', message: err.message }),
+      )
   }, [token])
 
   function handleConnect(e: FormEvent) {
@@ -54,15 +69,13 @@ function App() {
     localStorage.removeItem(STORAGE_KEY)
     setToken('')
     setDraft('')
-    setItems([])
-    setError(null)
   }
 
   if (!token) {
     return (
       <form className="token-form" onSubmit={handleConnect}>
-        <h1>API Token</h1>
-        <p>Enter your API token to connect.</p>
+        <h1>API Key</h1>
+        <p>Enter your API key to connect.</p>
         <input
           type="password"
           placeholder="Token"
@@ -83,21 +96,21 @@ function App() {
         </button>
       </header>
 
-      {loading && <p>Loading...</p>}
-      {error && <p>Error: {error}</p>}
+      {fetchState.status === 'loading' && <p>Loading...</p>}
+      {fetchState.status === 'error' && <p>Error: {fetchState.message}</p>}
 
-      {!loading && !error && (
+      {fetchState.status === 'success' && (
         <table>
           <thead>
             <tr>
               <th>ID</th>
-              <th>Type</th>
+              <th>ItemType</th>
               <th>Title</th>
               <th>Created at</th>
             </tr>
           </thead>
           <tbody>
-            {items.map((item) => (
+            {fetchState.items.map((item) => (
               <tr key={item.id}>
                 <td>{item.id}</td>
                 <td>{item.type}</td>

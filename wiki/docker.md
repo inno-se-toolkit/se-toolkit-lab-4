@@ -2,11 +2,12 @@
 
 <h2>Table of contents</h2>
 
+- [What is `Docker`](#what-is-docker)
 - [Image](#image)
 - [Container](#container)
   - [Why containers are useful](#why-containers-are-useful)
   - [Containers and host](#containers-and-host)
-- [What is `Docker`](#what-is-docker)
+  - [Container ID](#container-id)
 - [Set up `Docker`](#set-up-docker)
   - [Install `Docker`](#install-docker)
   - [Start `Docker`](#start-docker)
@@ -17,11 +18,16 @@
     - [`docker run` useful flags](#docker-run-useful-flags)
   - [`docker ps`](#docker-ps)
     - [`docker ps` useful variants](#docker-ps-useful-variants)
-- [`Docker Compose`](#docker-compose)
-  - [Service](#service)
-- [Volumes](#volumes)
-- [Health checks](#health-checks)
 - [`DockerHub`](#dockerhub)
+  - [`<your-dockerhub-username>`](#your-dockerhub-username)
+
+## What is `Docker`
+
+`Docker` is a platform for building and running [containers](#container).
+
+Docs:
+
+- [What is Docker?](https://docs.docker.com/get-started/docker-overview/)
 
 ## Image
 
@@ -63,13 +69,22 @@ A container is an isolated runtime for an application and its dependencies.
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-## What is `Docker`
+### Container ID
 
-`Docker` is a platform for building and running [containers](#container).
+A container ID is a unique string that `Docker` assigns to each [container](#container) when it is created.
 
-Docs:
+`Docker` commands use the container ID (or its short prefix) to target a specific container — for example, to stop or inspect it.
 
-- [What is Docker?](https://docs.docker.com/get-started/docker-overview/)
+You can view container IDs with [`docker ps`](#docker-ps).
+
+For example:
+
+```terminal
+CONTAINER ID   IMAGE     ...
+a3f5b9c2d1e4   my-app    ...
+```
+
+`a3f5b9c2d1e4` is the container ID (a short prefix of the full 64-character string).
 
 ## Set up `Docker`
 
@@ -77,7 +92,7 @@ Complete these steps:
 
 1. [Install `Docker`](#install-docker).
 2. [Start `Docker`](#start-docker).
-3. [Clean up `Docker`](#clean-up-docker)
+3. [Clean up `Docker`](#clean-up-docker).
 
 ### Install `Docker`
 
@@ -93,6 +108,9 @@ If you installed `Docker Desktop`:
 
 ### Clean up `Docker`
 
+> [!NOTE]
+> If there are permission errors, replace `docker` with `sudo docker`.
+
 1. To stop all running containers,
 
    [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
@@ -100,6 +118,8 @@ If you installed `Docker Desktop`:
    ```terminal
    docker stop $(docker ps -q) 2>/dev/null
    ```
+
+   You should see removed [container IDs](#container-id).
 
 2. To remove all stopped containers,
 
@@ -109,12 +129,26 @@ If you installed `Docker Desktop`:
    docker container prune -f
    ```
 
-3. To delete unused volumes,
+   The output should be empty or similar to this:
+
+   ```terminal
+   ...
+   Total reclaimed space: ...
+   ```
+
+3. To delete unused [volumes](./docker-compose.md#volume),
 
    [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
    ```terminal
-   docker volume prune -f
+   docker volume prune -f --all
+   ```
+
+   The output should be similar to this:
+
+   ```terminal
+   ...
+   Total reclaimed space: ...
    ```
 
 ## Common `Docker` commands
@@ -144,59 +178,6 @@ docker run --name <container-name> -p <host-port>:<container-port> <image-name>
 - `docker ps` - only running containers.
 - `docker ps -a` - all containers (including stopped).
 
-## `Docker Compose`
-
-`Docker Compose` runs multi-container apps from a `docker-compose.yml` file.
-
-See [`Docker Compose`](./docker-compose.md) for the full list of commands.
-
-### Service
-
-A service is a named entry under the `services:` key in `docker-compose.yml`. It defines how to build or pull an [image](#image) and run it as a [container](#container).
-
-For example, this project defines four services in [`docker-compose.yml`](../docker-compose.yml): `app`, `postgres`, `pgadmin`, and `caddy`.
-
-## Volumes
-
-A volume is persistent storage managed by `Docker`. Data in a volume survives container restarts.
-
-Volumes are defined in `docker-compose.yml`:
-
-```yaml
-volumes:
-  postgres_data:
-```
-
-A service can mount a volume to store data:
-
-```yaml
-services:
-  postgres:
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-```
-
-## Health checks
-
-A health check is a command that `Docker` runs periodically to check if a container is healthy.
-
-Other services can wait for a container to be healthy before starting:
-
-```yaml
-services:
-  app:
-    depends_on:
-      postgres:
-        condition: service_healthy
-
-  postgres:
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
-```
-
 ## `DockerHub`
 
 `DockerHub` is a public container registry where you can store and pull [Docker images](#image).
@@ -206,3 +187,7 @@ You can push a locally built image to `DockerHub` so that other machines (such a
 Docs:
 
 - [`DockerHub`](https://hub.docker.com/)
+
+### `<your-dockerhub-username>`
+
+Your [`DockerHub`](#dockerhub) username (without `<` and `>`).

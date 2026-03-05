@@ -20,7 +20,7 @@
 
 ## What is `Nix`
 
-`Nix` is a cross-platform [package manager](./package-manager.md#package) that provides reproducible, isolated software [environments](./environments.md#what-is-environment).
+`Nix` is a cross-platform [package manager](./package-manager.md#package) that provides reproducible, isolated software [environments](./environments.md#what-is-an-environment).
 It allows you to install [tools](./package-manager.md#tool) and [dependencies](./package-manager.md#dependency) without affecting the rest of your system.
 
 Many of the packages are available in [`nixpkgs`](#nixpkgs).
@@ -60,6 +60,9 @@ Example: `https://github.com/nixos/nixpkgs/tree/26eaeac4e409d7b5a6bf6f90a2a2dc22
 [Search nixpkgs](https://search.nixos.org/packages).
 
 ## Set up `Nix`
+
+> [!NOTE]
+> Downloads via `Nix` might be slow in Russia.
 
 Complete these steps:
 

@@ -11,8 +11,12 @@
 - [Program](#program)
   - [Useful programs](#useful-programs)
 - [Process](#process)
+  - [Background process](#background-process)
   - [PID](#pid)
 - [Service](#service)
+- [User](#user)
+  - [`<user>` placeholder](#user-placeholder)
+- [Group](#group)
 
 ## What is an operating system
 
@@ -75,6 +79,16 @@ Processes can be created, managed, and terminated using various [shell commands]
 
 They form the basis of multitasking in the operating system.
 
+### Background process
+
+A background process is a [process](#process) that runs without holding the terminal — the shell prompt returns immediately and the process continues running while it is not attached to any terminal session.
+
+You can start a background process in the [shell](./shell.md#what-is-a-shell) by appending `&` to a command:
+
+```terminal
+<command> &
+```
+
 ### PID
 
 A PID (Process ID) is a unique numerical identifier assigned by the operating system to each running process. PIDs help the operating system to track and manage individual processes.
@@ -89,8 +103,26 @@ A service is a long-running [process](#process) that performs specific system fu
 
 Services typically start automatically during system boot and run in the background without direct user interaction. They can be managed using system service managers like `systemd`, `init`, or service scripts.
 
-Common examples include [web servers](./web-development.md), [database servers](./database.md#database-server) (`MySQL`/`PostgreSQL`), [`SSH` daemons](./ssh.md#ssh-daemon), and network services.
+Common examples include [web servers](./http.md#web-server), [database servers](./database.md#database-server) (`MySQL`/`PostgreSQL`), [`SSH` daemons](./ssh.md#ssh-daemon), and network services.
 
 Services often [listen on specific ports](./computer-networks.md#listen-on-a-port) to handle incoming requests.
 
 They form the backbone of system functionality and network communications.
+
+## User
+
+A user is an account on the operating system that can run [processes](#process) and own [files](./file-system.md#file).
+
+Each user has a primary account name and a set of permissions that determine what resources they can access or modify.
+
+### `<user>` placeholder
+
+The [user](#user) name (without `<` and `>`).
+
+## Group
+
+A group is a collection of [users](#user) that share the same access permissions to [files](./file-system.md#file) and [directories](./file-system.md#directory).
+
+Groups allow an administrator to manage permissions for multiple users at once: adding a user to a group grants them all the group's permissions.
+
+Each user has a primary group and can belong to additional supplementary groups.

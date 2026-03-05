@@ -3,124 +3,118 @@
 <h2>Table of contents</h2>
 
 - [What is `Docker Compose`](#what-is-docker-compose)
-- [Commands](#commands)
-  - [`docker compose up`](#docker-compose-up)
-  - [`docker compose up` a specific service](#docker-compose-up-a-specific-service)
-  - [`docker compose down`](#docker-compose-down)
-  - [`docker compose down` a specific service](#docker-compose-down-a-specific-service)
-  - [`docker compose ps`](#docker-compose-ps)
-  - [`docker compose logs`](#docker-compose-logs)
-  - [`docker compose logs` for a specific service](#docker-compose-logs-for-a-specific-service)
-  - [`docker compose -f`](#docker-compose--f)
-  - [`docker compose --env-file`](#docker-compose---env-file)
-  - [`docker compose down -v`](#docker-compose-down--v)
+- [`docker-compose.yml`](#docker-composeyml)
+- [Service](#service)
+  - [Service name](#service-name)
+- [`Docker Compose` networking](#docker-compose-networking)
+- [Volume](#volume)
+- [Health checks](#health-checks)
+- [Actions](#actions)
+  - [Stop and remove all containers](#stop-and-remove-all-containers)
+  - [Stop and remove all containers and volumes](#stop-and-remove-all-containers-and-volumes)
+  - [Stop and remove all containers, volumes, and images](#stop-and-remove-all-containers-volumes-and-images)
 
 ## What is `Docker Compose`
 
-`Docker Compose` runs multi-container apps from a `docker-compose.yml` file.
+`Docker Compose` runs multi-container apps from a [`docker-compose.yml`](#docker-composeyml) file.
 
 Example of the file: [`docker-compose.yml`](../docker-compose.yml).
 
 See also:
 
-- [`Docker`](./docker.md) for general `Docker` concepts ([images](./docker.md#image), [containers](./docker.md#container), [volumes](./docker.md#volumes), [health checks](./docker.md#health-checks), etc.).
+- [`Docker`](./docker.md) for general `Docker` concepts ([images](./docker.md#image), [containers](./docker.md#container), etc.).
 
-## Commands
+## `docker-compose.yml`
 
-## `docker compose up`
+## Service
 
-Start services:
+A service is a named entry under the `services:` key in [`docker-compose.yml`](#docker-composeyml). It defines how to build or pull an [image](./docker.md#image) and run it as a [container](./docker.md#container).
 
-```terminal
-docker compose up
+For example, this project defines four services in [`docker-compose.yml`](../docker-compose.yml): `app`, `postgres`, `pgadmin`, and `caddy`.
+
+### Service name
+
+<!-- TODO -->
+
+## `Docker Compose` networking
+
+`Docker Compose` creates a [network](./computer-networks.md#what-is-a-network) where [services](#service) can reach each other by their [service name](#service-name).
+
+Docs:
+
+- [Networking in Compose](https://docs.docker.com/compose/how-tos/networking/)
+
+## Volume
+
+A volume is persistent storage managed by `Docker`. Data in a volume survives [container](./docker.md#container) restarts.
+
+Volumes are defined in [`docker-compose.yml`](#docker-composeyml):
+
+```yaml
+volumes:
+  postgres_data:
 ```
 
-Build images and start services:
+A [service](#service) can mount a volume to store data:
 
-```terminal
-docker compose up --build
+```yaml
+services:
+  postgres:
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
 ```
 
-## `docker compose up` a specific service
+## Health checks
 
-Start a single service (and its dependencies):
+A health check is a command that `Docker` runs periodically to check if a [container](./docker.md#container) is healthy.
 
-```terminal
-docker compose up <service>
+Other [services](#service) can wait for a container to be healthy before starting:
+
+```yaml
+services:
+  app:
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 ```
 
-Build and start a single service:
+## Actions
 
-```terminal
-docker compose up <service> --build
-```
+<!-- TODO all - not globally -->
 
-## `docker compose down`
+### Stop and remove all containers
 
-Stop and remove resources created by `up`:
+1. To stop all running [services](#service) and remove [containers](./docker.md#container),
 
-```terminal
-docker compose down
-```
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
-## `docker compose down` a specific service
+   ```terminal
+   docker compose --env-file .env.docker.secret down
+   ```
 
-Stop and remove a single service:
+### Stop and remove all containers and volumes
 
-```terminal
-docker compose down <service>
-```
+1. To stop all running [services](#service), remove [containers](./docker.md#container), and remove [volumes](#volume),
 
-## `docker compose ps`
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
-List running containers:
+   ```terminal
+   docker compose --env-file .env.docker.secret down -v
+   ```
 
-```terminal
-docker compose ps
-```
+### Stop and remove all containers, volumes, and images
 
-## `docker compose logs`
+1. To stop all running [services](#service), remove [containers](./docker.md#container), remove [volumes](#volume), and remove [images](./docker.md#image),
 
-Show logs from all services:
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
 
-```terminal
-docker compose logs
-```
-
-## `docker compose logs` for a specific service
-
-Show logs for one service:
-
-```terminal
-docker compose logs <service>
-```
-
-## `docker compose -f`
-
-Use a specific compose file:
-
-```terminal
-docker compose -f <compose-file> up
-```
-
-## `docker compose --env-file`
-
-Load environment variables from a specific file:
-
-```terminal
-docker compose --env-file <env-file> up --build
-```
-
-This is useful when you need different settings for local/dev/test/prod environments.
-
-## `docker compose down -v`
-
-Stop services and remove volumes (including database data):
-
-```terminal
-docker compose down -v
-```
-
-> [!IMPORTANT]
-> The `-v` flag removes named volumes. This deletes all data stored in the database.
-> Use this when you want to reset the database to its initial state.
+   ```terminal
+   docker compose --env-file .env.docker.secret down -v --rmi all
+   ```

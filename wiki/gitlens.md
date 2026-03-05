@@ -17,7 +17,6 @@
 - [Open a commit menu on the current branch](#open-a-commit-menu-on-the-current-branch)
 - [Undo a commit on the current branch](#undo-a-commit-on-the-current-branch)
 - [Inspect the current branch](#inspect-the-current-branch)
-- [Inspect remotes](#inspect-remotes)
 - [Inspect the remotes](#inspect-the-remotes)
 
 ## What is `GitLens`
@@ -87,8 +86,8 @@ See [Open the commit graph](#open-the-commit-graph).
 2. Click the icon `Commits`.
 
    <img alt="View Commits" src="./images/gitlens/view-commits.png" style="width:400px"></img>
-3. Look at something like `- on <branch-name> fetched 1 minute ago`.
-4. Below that text are the commits on the branch `<branch-name>`.
+3. Look at something like `- on <branch> fetched 1 minute ago`.
+4. Below that text are the commits on the `<branch>`.
 5. Here, the latest not pushed commit is highlighted:
 
    <img alt="Latest commit" src="./images/gitlens/view-commits-latest.png" style="width:400px"></img>
@@ -119,17 +118,15 @@ Inspect the current branch using these sections:
 1. [Open commits on the current branch](#open-commits-on-the-current-branch).
 2. [View changes in a commit on the current branch](#view-changes-in-a-commit-on-the-current-branch).
 
-## Inspect remotes
+## Inspect the remotes
 
 1. [Open the `GITLENS` view](#open-the-gitlens-view).
 2. Hover over the `GITLENS` view name.
 3. Click the icon `Remotes`.
 
     <img alt="View Remotes" src="./images/gitlens/view-remotes.png" style="width:400px"></img>
-4. Make sure `origin` points to your repo URL:
+4. (Optional) Make sure [`origin`](./github.md#origin) points to [`<your-fork-url>`](./github.md#your-fork-url):
    1. Hover over `origin`.
-   2. Look at URLs.
+   2. Look at URLs for fetching and pushing changes.
 
-## Inspect the remotes
-
-See [Inspect remotes](#inspect-remotes).
+      They should both be `<your-fork-url>`.
