@@ -22,7 +22,7 @@ Docs:
 ## Open `pgAdmin`
 
 > [!NOTE]
-> The default values are defined in [`.env.docker.example`](../.env.docker.example).
+> The default values are defined in [`.env.docker.example`](../.env.docker.secret).
 >
 > The actual values are in `.env.docker.secret`.
 
@@ -34,7 +34,7 @@ Docs:
 ## Add a server in `pgAdmin`
 
 > [!NOTE]
-> The default values are defined in [`.env.docker.example`](../.env.docker.example).
+> The default values are defined in [`.env.docker.example`](../.env.docker.secret).
 >
 > The actual values are in `.env.docker.secret`.
 

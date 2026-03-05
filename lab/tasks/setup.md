@@ -242,7 +242,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 #### 1.11.1. (UPD) Set up the `Docker` environment
 
-1. Copy the [`.env.docker.example`](../../.env.docker.example) file to the `.env.docker.secret` file:
+1. Copy the [`.env.docker.example`](../../.env.docker.secret) file to the `.env.docker.secret` file:
 
    [Run using the `VS Code Terminal`](../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -258,7 +258,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 > [!TIP]
 > No edits are needed for local development.
-> The default values in [`.env.docker.example`](../../.env.docker.example) work out of the box.
+> The default values in [`.env.docker.example`](../../.env.docker.secret) work out of the box.
 
 #### 1.11.2. (UPD) Prepare `Docker`
 

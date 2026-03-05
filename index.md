@@ -101,7 +101,7 @@ Database seed:
 - [`docker-compose.yml`](docker-compose.yml) — defines the `app`, `postgres`, `pgadmin`, and `caddy` services.
 - [`Dockerfile`](Dockerfile) — builds the application container image.
 - [`caddy/Caddyfile`](caddy/Caddyfile) — reverse proxy configuration.
-- [`.env.docker.example`](.env.docker.example) — template for container environment variables.
+- [`.env.docker.example`](.env.docker.secret) — template for container environment variables.
 - [`pyproject.toml`](pyproject.toml) — Python project metadata and dependencies.
 
 ## Wiki
