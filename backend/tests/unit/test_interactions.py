@@ -24,3 +24,15 @@ def test_filter_returns_interactions_below_max() -> None:
     result = filter_by_max_item_id(interactions=interactions, max_item_id=2)
     assert len(result) == 1
     assert result[0].id == 1
+def test_filter_includes_interaction_at_boundary():
+    """Взаимодействие с item_id=2 должно включаться при max_item_id=2"""
+    from datetime import datetime
+    from app.models.interaction import InteractionLog
+    from app.routers.interactions import filter_by_max_item_id
+    
+    interactions = [
+        InteractionLog(id=1, learner_id=1, item_id=2, kind="view", created_at=datetime.now()),
+    ]
+    filtered = filter_by_max_item_id(interactions, 2)
+    assert len(filtered) == 1
+    
