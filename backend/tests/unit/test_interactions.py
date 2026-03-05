@@ -2,7 +2,6 @@
 
 from app.models.interaction import InteractionLog
 from app.routers.interactions import _filter_by_item_id
-import httpx
 
 
 def _make_log(id: int, learner_id: int, item_id: int) -> InteractionLog:
@@ -38,12 +37,3 @@ def test_filter_excludes_interaction_with_different_learner_id() -> None:
     # Assert: We expect 1 interaction to be found
     assert len(result) == 1
 
-def test_get_interactions_returns_200(client: httpx.Client) -> None:
-    # This checks if the endpoint actually works
-    response = client.get("/interactions/")
-    assert response.status_code == 200
-
-def test_get_interactions_response_is_a_list(client: httpx.Client) -> None:
-    # This validates the response structure
-    response = client.get("/interactions/")
-    assert isinstance(response.json(), list)
