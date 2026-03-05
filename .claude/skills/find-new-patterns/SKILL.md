@@ -52,7 +52,7 @@ Scan `lab/tasks/` and/or `wiki/` files for recurring structural, formatting, or 
 Write the report to `tmp/find-new-patterns/report.md`. Create intermediate directories if they do not exist.
 
 Structure:
-
+bla bla bla
 1. **Header** — scope scanned, date, convention files consulted, total files read.
 2. **Candidate patterns** — one subsection per candidate, in descending order of occurrence count. Each subsection contains:
    - Occurrence count and file list
