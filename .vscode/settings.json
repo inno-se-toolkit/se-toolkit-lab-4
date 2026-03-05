@@ -33,5 +33,6 @@
   
   "nix.enableLanguageServer": true,
   "nix.serverPath": "nil",
-  "nix.formatterPath": "nixfmt"
+  "nix.formatterPath": "nixfmt",
+  "python-envs.defaultEnvManager": "ms-python.python:venv"
 }
