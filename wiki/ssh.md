@@ -3,9 +3,12 @@
 <h2>Table of contents</h2>
 
 - [What is `SSH`](#what-is-ssh)
-- [SSH daemon](#ssh-daemon)
+- [`SSH` keys](#ssh-keys)
+  - [`SSH` public key](#ssh-public-key)
+  - [`SSH` private key](#ssh-private-key)
+- [`SSH` daemon](#ssh-daemon)
 - [`ssh-agent`](#ssh-agent)
-- [Set up SSH](#set-up-ssh)
+- [Set up `SSH`](#set-up-ssh)
   - [Create a new `SSH` key](#create-a-new-ssh-key)
   - [Find the `SSH` key files](#find-the-ssh-key-files)
   - [Start the `ssh-agent`](#start-the-ssh-agent)
@@ -32,7 +35,13 @@ All commands below assume a Unix shell: `Bash` (`Linux`, `WSL`) or `Zsh` (`macOS
 > [!IMPORTANT]
 > **Windows users:** Use `WSL` (Windows Subsystem for Linux). Do not use `PowerShell`, `cmd.exe`, or `Git Bash` — the commands below are not guaranteed to work there.
 
-## SSH daemon
+## `SSH` keys
+
+### `SSH` public key
+
+### `SSH` private key
+
+## `SSH` daemon
 
 The `SSH` daemon (`sshd`) is a program that runs on the [remote host](./computer-networks.md#remote-host) and [listens](./computer-networks.md#listen-on-a-port) for incoming `SSH` connections.
 
@@ -46,7 +55,7 @@ When `ssh-agent` holds your key, you do not need to type a passphrase every time
 
 See [Start the `ssh-agent`](#start-the-ssh-agent) for setup instructions.
 
-## Set up SSH
+## Set up `SSH`
 
 Set up [`SSH`](#what-is-ssh) to connect to a [remote host](./computer-networks.md#remote-host).
 
@@ -197,10 +206,12 @@ You can connect using the alias that you [added to your `SSH` config](#add-the-h
    ```
 
 2. If this is your first time connecting:
+
    1. You will see a message:
       `The authenticity of host ... can't be established.`
 
    2. Type `yes` and press `Enter`.
+
 3. After a successful login, you should see the [shell prompt](./shell.md#shell-prompt):
 
    ```terminal
@@ -208,6 +219,8 @@ You can connect using the alias that you [added to your `SSH` config](#add-the-h
    ```
 
    See [`<your-vm-name>`](./vm.md#your-vm-name).
+
+4. You are in the [home directory (`~`)](./file-system.md#home-directory-).
 
 ## Login
 
@@ -217,9 +230,9 @@ You can connect using the alias that you [added to your `SSH` config](#add-the-h
 
 Key-based authentication uses your private key to prove your identity. The remote host checks whether the matching public key is listed as authorized.
 
-This is the recommended method and is what [Set up SSH](#set-up-ssh) configures.
+This is the recommended method and is what [Set up `SSH`](#set-up-ssh) configures.
 
-1. [Set up SSH](#set-up-ssh).
+1. [Set up `SSH`](#set-up-ssh).
 2. Ensure your public key is added to the remote host.
 3. [Connect to the VM](#connect-to-the-vm).
 
@@ -277,11 +290,11 @@ Password-based authentication asks you to type the remote user's password.
    You should see logs like these:
 
    ```terminal
-   PING 10.93.24.112 (10.93.24.112) 56(84) bytes of data.
+   PING 192.0.2.1 (192.0.2.1) 56(84) bytes of data.
 
-   64 bytes from 10.93.24.112: icmp_seq=1 ttl=61 time=2.15 ms
-   64 bytes from 10.93.24.112: icmp_seq=2 ttl=61 time=0.996 ms
-   64 bytes from 10.93.24.112: icmp_seq=3 ttl=61 time=1.08 ms
+   64 bytes from 192.0.2.1: icmp_seq=1 ttl=61 time=2.15 ms
+   64 bytes from 192.0.2.1: icmp_seq=2 ttl=61 time=0.996 ms
+   64 bytes from 192.0.2.1: icmp_seq=3 ttl=61 time=1.08 ms
    
    ...
    ```

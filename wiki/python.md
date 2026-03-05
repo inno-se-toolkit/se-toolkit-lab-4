@@ -61,7 +61,24 @@ def greet(name):
 ### Install `uv`
 
 1. [Check the current shell in the `VS Code Terminal`](./vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
-1. Follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/) for `macOS and Linux`, even if you use `Windows`.
+
+   ([`Windows`](./operating-system.md#linux) only) Now you use a `Linux` shell.
+
+2. Follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/) for [`macOS`](./operating-system.md#macos) and [`Linux`](./operating-system.md#linux), even if you use `Windows`.
+
+3. To check that `uv` is installed,
+
+   [run in the `VS Code Terminal`](./vs-code.md#run-a-command-in-the-vs-code-terminal):
+
+   ```terminal
+   uv --version
+   ```
+
+4. The output should be similar to this:
+
+   ```terminal
+   uv 0.10.4
+   ```
 
 ## Set up `Python` in `VS Code`
 
@@ -151,7 +168,7 @@ Docs:
 
 ### The `assert` statement
 
-The `assert` statement checks that a condition is true. If the condition is false, the test fails with an `AssertionError`.
+The `assert` statement checks that a condition is true (see [Assertion](./quality-assurance.md#assertion)). If the condition is false, the test fails with an `AssertionError`.
 
 ```python
 assert result == expected

@@ -29,6 +29,12 @@ Read and follow:
 - [`docs/design/architecture.md`](docs/design/architecture.md) — C4 architecture, domain model, container layout, component structure, and design decisions
 - [`docs/contributing/conventions/code.md`](docs/contributing/conventions/code.md) — naming, comments, type safety, linting, shift-left testing, security
 
+## When editing `instructors/context/conventions/`
+
+Read before making changes:
+
+- [`instructors/context/conventions/conventions.md`](instructors/context/conventions/conventions.md) — conventions for writing conventions
+
 ## Other files
 
 Do NOT apply task/wiki conventions to files under `instructors/` (internal design notes).

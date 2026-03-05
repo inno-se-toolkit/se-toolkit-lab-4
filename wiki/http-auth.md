@@ -7,17 +7,17 @@
 
 ## HTTP authentication
 
-Authentication is the process of verifying the identity of a client making a request to an [API](./web-development.md#api).
+Authentication is the process of verifying the identity of a client making a request to an [API](./api.md#what-is-an-api).
 
 In `HTTP` APIs, a common mechanism is an **API key** — a secret value the client sends with each request. The server checks the key and rejects unknown keys with `401 Unauthorized`.
 
 The API key is sent in the `Authorization` header:
 
 ```http
-Authorization: Bearer <api-token>
+Authorization: Bearer <api-key>
 ```
 
-See [`<api-token>`](./web-development.md#api-token) for the value used in this lab.
+See [`<api-key>`](./api.md#api-key).
 
 Docs:
 
@@ -25,7 +25,7 @@ Docs:
 
 ## HTTP authorization
 
-Authorization is the process of determining whether an authenticated client has permission to access a specific [endpoint](./web-development.md#endpoint) or resource.
+Authorization is the process of determining whether an authenticated client has permission to access a specific [endpoint](./api.md#endpoint) or resource.
 
 A client can be authenticated (identity verified) but still lack permission for certain resources.
 

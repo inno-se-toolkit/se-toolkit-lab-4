@@ -3,46 +3,51 @@ services:
     build: .
     restart: unless-stopped
     ports:
-      - ${APP_HOST_ADDRESS}:${APP_HOST_PORT}:${APP_CONTAINER_PORT}
+      - ${APP_HOST_ADDRESS:?'APP_HOST_ADDRESS is required'}:${APP_HOST_PORT:?'APP_HOST_PORT is required'}:${APP_CONTAINER_PORT}
     expose:
       - ${APP_CONTAINER_PORT}
     environment:
-      - NAME=${APP_NAME:-'Learning Management Service'}
-      - DEBUG=${APP_DEBUG:-false}
-      - ADDRESS=${APP_CONTAINER_ADDRESS:?'APP_CONTAINER_ADDRESS is a required environment variable'}
-      - PORT=${APP_CONTAINER_PORT:?'APP_CONTAINER_PORT is a required environment variable'}
-      - API_TOKEN=${API_TOKEN:?'API_TOKEN is a required environment variable'}
-      - ENABLE_INTERACTIONS=${ENABLE_INTERACTIONS:-false}
-      - ENABLE_LEARNERS=${ENABLE_LEARNERS:-false}
-      - DB_HOST=postgres
-      - DB_PORT=5432
-      - DB_NAME=${POSTGRES_DB:-lab-4}
-      - DB_USER=${POSTGRES_USER:-postgres}
-      - DB_PASSWORD=${POSTGRES_PASSWORD:-postgres}
+      - NAME=${APP_NAME:?'APP_NAME is required'}
+      - DEBUG=${APP_DEBUG:?'APP_DEBUG is required'}
+      - ADDRESS=${APP_CONTAINER_ADDRESS:?'APP_CONTAINER_ADDRESS is required'}
+      - PORT=${APP_CONTAINER_PORT:?'APP_CONTAINER_PORT is required'}
+      - RELOAD=${APP_RELOAD:?'APP_RELOAD is required'}
+      - API_KEY=${API_KEY:?'API_KEY is required'}
+      - APP_ENABLE_INTERACTIONS=${APP_ENABLE_INTERACTIONS:?'APP_ENABLE_INTERACTIONS is required'}
+      - APP_ENABLE_LEARNERS=${APP_ENABLE_LEARNERS:?'APP_ENABLE_LEARNERS is required'}
+      - DB_HOST=${CONST_POSTGRESQL_SERVICE_NAME:?'CONST_POSTGRESQL_SERVICE_NAME is required'}
+      - DB_PORT=${CONST_POSTGRESQL_DEFAULT_PORT:?'CONST_POSTGRESQL_DEFAULT_PORT is required'}
+      - DB_NAME=${POSTGRES_DB:?'POSTGRES_DB is required'}
+      - DB_USER=${POSTGRES_USER:?'POSTGRES_USER is required'}
+      - DB_PASSWORD=${POSTGRES_PASSWORD:?'POSTGRES_PASSWORD is required'}
     depends_on:
       postgres:
         condition: service_healthy
 
   postgres:
     # A portable solution: download image from Docker Hub.
-    # image: postgres:17-alpine
+    # image: postgres:18.3-alpine
 
     # A less portable solution: download image through a cache proxy provided by the University.
     # This solution is necessary to avoid "Too many requests" errors.
     # This solution won't work outside the University network.
-    image: harbor.pg.innopolis.university/docker-hub-cache/postgres:17-alpine
+    image: harbor.pg.innopolis.university/docker-hub-cache/postgres:18.3-alpine
     restart: unless-stopped
     environment:
-      - POSTGRES_DB=${POSTGRES_DB:-lab-4}
-      - POSTGRES_USER=${POSTGRES_USER:-postgres}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres}
+      - POSTGRES_DB=${POSTGRES_DB:?'POSTGRES_DB is required'}
+      - POSTGRES_USER=${POSTGRES_USER:?'POSTGRES_USER is required'}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:?'POSTGRES_PASSWORD is required'}
     ports:
-      - ${POSTGRES_HOST_ADDRESS:-127.0.0.1}:${POSTGRES_HOST_PORT:-5432}:5432
+      - ${POSTGRES_HOST_ADDRESS:?'POSTGRES_HOST_ADDRESS is required'}:${POSTGRES_HOST_PORT:?'POSTGRES_HOST_PORT is required'}:${CONST_POSTGRESQL_DEFAULT_PORT:?'CONST_POSTGRESQL_DEFAULT_PORT is required'}
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./backend/app/data/init.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-lab-4}"]
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U ${POSTGRES_USER:?'POSTGRES_USER is required'} -d ${POSTGRES_DB:?'POSTGRES_DB is required'}",
+        ]
       interval: 5s
       timeout: 5s
       retries: 5
@@ -57,10 +62,10 @@ services:
     image: harbor.pg.innopolis.university/docker-hub-cache/dpage/pgadmin4:latest
     restart: unless-stopped
     environment:
-      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_EMAIL:-admin@example.com}
-      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_PASSWORD:-admin}
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_EMAIL:?'PGADMIN_EMAIL is required'}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_PASSWORD:?'PGADMIN_PASSWORD is required'}
     ports:
-      - ${PGADMIN_HOST_ADDRESS:-127.0.0.1}:${PGADMIN_HOST_PORT:-5050}:80
+      - ${PGADMIN_HOST_ADDRESS:?'PGADMIN_HOST_ADDRESS is required'}:${PGADMIN_HOST_PORT:?'PGADMIN_HOST_PORT is required'}:80
     depends_on:
       postgres:
         condition: service_healthy
@@ -70,10 +75,10 @@ services:
     depends_on:
       - app
     environment:
-      - CADDY_CONTAINER_PORT=${CADDY_CONTAINER_PORT:?'CADDY_CONTAINER_PORT is a required environment variable'}
-      - APP_CONTAINER_PORT=${APP_CONTAINER_PORT:?'APP_CONTAINER_PORT is a required environment variable'}
+      - CADDY_CONTAINER_PORT=${CADDY_CONTAINER_PORT:?'CADDY_CONTAINER_PORT is required'}
+      - APP_CONTAINER_PORT=${APP_CONTAINER_PORT:?'APP_CONTAINER_PORT is required'}
     ports:
-      - ${CADDY_HOST_ADDRESS}:${CADDY_HOST_PORT}:${CADDY_CONTAINER_PORT}
+      - ${CADDY_HOST_ADDRESS:?'CADDY_HOST_ADDRESS is required'}:${CADDY_HOST_PORT:?'CADDY_HOST_PORT is required'}:${CADDY_CONTAINER_PORT}
     volumes:
       - ./caddy/Caddyfile:/etc/caddy/Caddyfile
 

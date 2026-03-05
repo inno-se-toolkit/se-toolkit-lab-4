@@ -17,10 +17,19 @@ quality attribute so the reasoning behind every rule is explicit.
 - [Type safety](#type-safety)
   - [Python types](#python-types)
   - [TypeScript types](#typescript-types)
+- [API calls](#api-calls)
+  - [Frontend fetch URLs](#frontend-fetch-urls)
 - [Linting and formatting](#linting-and-formatting)
   - [Python tools](#python-tools)
+    - [`Ruff` (format)](#ruff-format)
+    - [`Ruff` (lint)](#ruff-lint)
+    - [`Pyright`](#pyright)
+    - [`ty`](#ty)
   - [TypeScript tools](#typescript-tools)
+    - [`ESLint`](#eslint)
+    - [`tsc`](#tsc)
   - [Markdown tools](#markdown-tools)
+    - [`markdownlint-cli2`](#markdownlint-cli2)
   - [Run everything at once](#run-everything-at-once)
 - [Shift-left testing](#shift-left-testing)
   - [Writing tests](#writing-tests)
@@ -35,42 +44,34 @@ quality attribute so the reasoning behind every rule is explicit.
 
 ### Python (`backend/`)
 
-| Element | Style | Example |
-| --- | --- | --- |
-| File / module | `snake_case` | `interaction_logs.py` |
-| Function / variable | `snake_case` | `read_learners` |
-| Constant | `UPPER_SNAKE_CASE` | `DEFAULT_PAGE_SIZE` |
-| Class | `PascalCase` | `LearnerCreate` |
-| SQLModel table name | `snake_case` singular | `__tablename__ = "learner"` |
-| Test file | `test_<module>.py` | `test_interactions.py` |
-| Test function | `test_<behaviour>` | `test_filters_by_item_id` |
+- **File / module** — `snake_case` — e.g., `interaction_logs.py`
+- **Function / variable** — `snake_case` — e.g., `read_learners`
+- **Constant** — `UPPER_SNAKE_CASE` — e.g., `DEFAULT_PAGE_SIZE`
+- **Class** — `PascalCase` — e.g., `LearnerCreate`
+- **SQLModel table name** — `snake_case` singular — e.g., `__tablename__ = "learner"`
+- **Test file** — `test_<module>.py` — e.g., `test_interactions.py`
+- **Test function** — `test_<behaviour>` — e.g., `test_filters_by_item_id`
 
 ### TypeScript / React (`frontend/`)
 
-| Element | Style | Example |
-| --- | --- | --- |
-| File — component | `PascalCase.tsx` | `App.tsx` |
-| File — utility | `camelCase.ts` | `apiClient.ts` |
-| Function / variable | `camelCase` | `setItems` |
-| Constant | `UPPER_SNAKE_CASE` | `API_URL` |
-| Component | `PascalCase` | `function App()` |
-| CSS file | matches component | `App.css` |
+- **File — component** — `PascalCase.tsx` — e.g., `App.tsx`
+- **File — utility** — `camelCase.ts` — e.g., `apiClient.ts`
+- **Function / variable** — `camelCase` — e.g., `setItems`
+- **Constant** — `UPPER_SNAKE_CASE` — e.g., `API_URL`
+- **Component** — `PascalCase` — e.g., `function App()`
+- **CSS file** — matches component — e.g., `App.css`
 
 ### Environment variables
 
-| Scope | Prefix | Example |
-| --- | --- | --- |
-| Backend | *(none)* | `APP_NAME`, `DATABASE_URL` |
-| Frontend (Vite) | `VITE_` | `VITE_API_URL` |
+- **Backend** — no prefix — e.g., `APP_NAME`, `DATABASE_URL`
+- **Frontend (`Vite`)** — `VITE_` prefix — e.g., `VITE_API_URL`
 
 ### Markdown / config files
 
-| Element | Style | Example |
-| --- | --- | --- |
-| Markdown file | `kebab-case.md` | `bug-report.md` |
-| Directory | `kebab-case` | `conventions/` |
-| Docker / Compose | lowercase | `docker-compose.yml` |
-| Nix | lowercase | `flake.nix` |
+- **Markdown file** — `kebab-case.md` — e.g., `bug-report.md`
+- **Directory** — `kebab-case` — e.g., `conventions/`
+- **Docker / Compose** — lowercase — e.g., `docker-compose.yml`
+- **Nix** — lowercase — e.g., `flake.nix`
 
 ## Comments and docstrings
 
@@ -113,7 +114,7 @@ Mark unfinished work with `TODO` so it can be found by search:
   and return type).
 - Use `X | None` union syntax, not `Optional[X]`.
 - Pyright runs in **strict** mode — zero errors allowed.
-- ty runs in parallel as a second opinion.
+- ty runs as a second opinion.
 
 ### TypeScript types
 
@@ -121,6 +122,20 @@ Mark unfinished work with `TODO` so it can be found by search:
   interfaces**.
 - Use the `strict` compiler option — zero errors allowed.
 - Prefer `interface` over `type` for object shapes.
+
+## API calls
+
+> Quality attribute: **Functional Suitability — Functional Correctness**
+>
+> Consistent URL formatting prevents routing mismatches between the
+> frontend and the FastAPI backend.
+
+### Frontend fetch URLs
+
+- Always end API path strings with a trailing slash — e.g., `/items/`,
+  not `/items`.
+- FastAPI redirects requests without a trailing slash, which can cause
+  `fetch` to silently lose the request body or method.
 
 ## Linting and formatting
 
@@ -131,24 +146,37 @@ Mark unfinished work with `TODO` so it can be found by search:
 
 ### Python tools
 
-| Tool | Purpose | Command |
-| --- | --- | --- |
-| Ruff (format) | Auto-formatter | `poe format` |
-| Ruff (lint) | Linter | `poe lint` |
-| Pyright | Type checker (strict) | `poe pyright-check` |
-| ty | Type checker | `poe ty-check` |
+#### `Ruff` (format)
+
+Auto-formatter: `poe format`
+
+#### `Ruff` (lint)
+
+Linter: `poe lint`
+
+#### `Pyright`
+
+Type checker (strict): `poe pyright-check`
+
+#### `ty`
+
+Type checker: `poe ty-check`
 
 ### TypeScript tools
 
-| Tool | Purpose | Command |
-| --- | --- | --- |
-| tsc | Type checker (strict, no emit) | `cd frontend && npx tsc --noEmit` |
+#### `ESLint`
+
+Linter: `cd frontend && npm run lint`
+
+#### `tsc`
+
+Type checker (strict, no emit): `cd frontend && npx tsc --noEmit`
 
 ### Markdown tools
 
-| Tool | Purpose | Command |
-| --- | --- | --- |
-| markdownlint-cli2 | Markdown linter | `markdownlint-cli2` |
+#### `markdownlint-cli2`
+
+Markdown linter: `markdownlint-cli2`
 
 ### Run everything at once
 
@@ -165,12 +193,10 @@ poe dev            # check + run server
 > Catch defects as early in the pipeline as possible: editor → commit →
 > CI.
 
-| Layer | What runs | When |
-| --- | --- | --- |
-| Editor | Ruff format + lint on save | Every save (VS Code) |
-| Pre-run | `poe check` (format, lint, typecheck) | Before `poe dev` |
-| Unit tests | `poe test` (pytest `tests/unit/`) | Before merging |
-| E2E tests | `poe test-e2e` (pytest `tests/e2e/`) | Against deployed API |
+- **Editor** — Ruff format + lint on save — every save (`VS Code`)
+- **Pre-run** — `poe check` (format, lint, typecheck) — before `poe dev`
+- **Unit tests** — `poe test` (pytest `tests/unit/`) — before merging
+- **E2E tests** — `poe test-e2e` (pytest `tests/e2e/`) — against deployed API
 
 ### Writing tests
 
@@ -186,6 +212,5 @@ poe dev            # check + run server
 > Secrets never enter version control.
 
 - Store secrets in `.env` files. These files are git-ignored.
-- Reference `.env.example` / `.env.docker.example` for the expected
-  variable names.
-- Never hard-code API tokens or database passwords in source code.
+- Reference `.env.docker.example` for the expected variable names.
+- Never hard-code API keys, API tokens, or database passwords in source code.

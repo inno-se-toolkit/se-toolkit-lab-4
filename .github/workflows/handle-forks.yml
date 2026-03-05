@@ -3,50 +3,33 @@ name: Close PRs from forks
 on:
   pull_request_target:
     types: [opened, synchronize]
-  workflow_dispatch:
 
 jobs:
-  check-and-close-fork-prs:
+  close-fork-pr:
+    if: github.event.pull_request.head.repo.full_name != github.event.pull_request.base.repo.full_name
     runs-on: ubuntu-latest
-    # Grant write permissions to the GITHUB_TOKEN
     permissions:
       pull-requests: write
       issues: write
-    
+
     steps:
-      - name: Check if PR is from a fork
-        run: |
-          echo "Repository: ${{ github.repository }}"
-          echo "Base Repository: ${{ github.event.pull_request.base.repo.full_name }}"
-          echo "Head Repository: ${{ github.event.pull_request.head.repo.full_name }}"
-          
-          if [[ "${{ github.event.pull_request.head.repo.full_name }}" != "${{ github.event.pull_request.base.repo.full_name }}" ]]; then
-            echo "PR is from a fork. Preparing to close..."
-            echo "IS_FORK=true" >> $GITHUB_ENV
-          else
-            echo "PR is from the same repository. Skipping closure..."
-            echo "IS_FORK=false" >> $GITHUB_ENV
-          fi
-      
-      - name: Close fork PRs with message
-        if: env.IS_FORK == 'true'
+      - name: Close fork PR with message
         uses: actions/github-script@v8
         with:
           script: |
-            const { owner, repo, number } = context.issue;
-            
-            // Add a comment to the PR
+            const { owner, repo } = context.repo;
+            const prNumber = context.payload.pull_request.number;
+
             await github.rest.issues.createComment({
               owner,
               repo,
-              issue_number: number,
+              issue_number: prNumber,
               body: "Please create a new PR and choose your fork as the base repo. You've made a PR to the instructors' repo."
             });
-            
-            // Close the pull request
+
             await github.rest.pulls.update({
               owner,
               repo,
-              pull_number: number,
+              pull_number: prNumber,
               state: 'closed'
             });

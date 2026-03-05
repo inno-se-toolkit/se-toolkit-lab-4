@@ -22,7 +22,7 @@
 
 A VM (virtual machine) is a software-emulated computer that runs on a physical [host machine](./computer-networks.md#host), with its own [operating system](./operating-system.md#what-is-an-operating-system) and isolated environment.
 
-In this lab, you use a VM provided by the university to deploy and run the application remotely over [SSH](./ssh.md#what-is-ssh).
+In this lab, you use a VM provided by the university to deploy and run the application remotely over [`SSH`](./ssh.md#what-is-ssh).
 
 Docs:
 
@@ -38,13 +38,13 @@ See [VM image](./vm-info.md) for the information about your VM.
 
 ## `<your-vm-name>`
 
-The name you chose when [creating the VM](#create-a-vm-using-the-subscription).
+The name you chose when [creating the VM](#create-a-vm-using-the-subscription) (without `<` and `>`).
 
 ## `<your-vm-ip-address>`
 
-The [IP address](./computer-networks.md#ip-address) of [your VM](#your-vm).
+The [IP address](./computer-networks.md#ip-address) (without `<` and `>`) of [your VM](#your-vm) in the `UniversityStudent` [network](./computer-networks.md#what-is-a-network).
 
-Example: `10.93.24.1`.
+Example: `192.0.2.1`.
 
 See [Get the IP address of the VM](#get-the-ip-address-of-the-vm).
 
@@ -137,9 +137,9 @@ Complete these steps to create a VM:
 1. [Go to the VM page](#go-to-the-vm-page).
 2. Go to the `quick glance` sidebar (on the right).
 3. Go to `IP Address(es)`.
-4. You should see there `StudentsCourses01 - 10.93.24.98`.
-5. The `10.93.24.98` string is the [IP address](./computer-networks.md#ip-address) of the VM in a university network.
-6. We'll refer to this string as `<your-vm-ip-address>`.
+4. You should see there `StudentsCourses01` - [`<your-vm-ip-address>`](#your-vm-ip-address).
+
+   Example: `StudentsCourses01` - `192.0.2.1`
 
 ## Connect to the VM
 
@@ -183,8 +183,8 @@ If you can't connect:
 
 5. If you get `Permission denied (publickey)`, check:
    1. Your public key was added to the VM configuration.
-   2. `IdentityFile` in your SSH config points to the correct private key.
-   3. Your private key file permissions are correct (`chmod 600 ~/.ssh/se_toolkit_key` on Linux/macOS/WSL).
+   2. `IdentityFile` in your `SSH` config points to the correct private key.
+   3. Your private key file permissions are correct (`chmod 600 ~/.ssh/se_toolkit_key` on `Linux`/`macOS`/`WSL`).
 6. Ask the TA to help and show them:
    1. The VM page.
    2. The output of `ssh -v se-toolkit-vm`.

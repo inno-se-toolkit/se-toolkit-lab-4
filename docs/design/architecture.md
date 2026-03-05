@@ -210,18 +210,18 @@ graph TD
 
 #### Component Descriptions
 
-| Component           | File                      | Description                                                                                                      |
-| ------------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Items Router        | `routers/items.py`        | CRUD endpoints for learning items. Always enabled.                                                               |
-| Interactions Router | `routers/interactions.py` | Read and create endpoints for interaction logs. Enabled via `ENABLE_INTERACTIONS=true`.                           |
-| Learners Router     | `routers/learners.py`     | CRUD endpoints for learner profiles. Enabled via `ENABLE_LEARNERS=true`.                                         |
-| Auth Middleware     | `auth.py`                 | Validates the `Authorization: Bearer <token>` header on every request. Token configured via `API_TOKEN` env var. |
-| Items DB            | `db/items.py`             | Async database operations for the `item` table.                                                                  |
-| Interactions DB     | `db/interactions.py`      | Async database operations for the `interacts` table.                                                             |
-| Learners DB         | `db/learners.py`          | Async database operations for the `learner` table.                                                               |
-| Database Connection | `database.py`             | Creates and manages the async SQLAlchemy engine and session factory.                                             |
-| Models              | `models/`                 | SQLModel classes: define table schema, validate input (Pydantic), and shape API responses.                       |
-| Settings            | `settings.py`             | Pydantic `BaseSettings`: reads all configuration from environment variables.                                     |
+| Component           | File                      | Description                                                                                                |
+| ------------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Items Router        | `routers/items.py`        | CRUD endpoints for learning items. Always enabled.                                                         |
+| Interactions Router | `routers/interactions.py` | Read and create endpoints for interaction logs. Enabled via `APP_ENABLE_INTERACTIONS=true`.                |
+| Learners Router     | `routers/learners.py`     | CRUD endpoints for learner profiles. Enabled via `APP_ENABLE_LEARNERS=true`.                               |
+| Auth Middleware     | `auth.py`                 | Validates the `Authorization: Bearer <key>` header on every request. Key configured via `API_KEY` env var. |
+| Items DB            | `db/items.py`             | Async database operations for the `item` table.                                                            |
+| Interactions DB     | `db/interactions.py`      | Async database operations for the `interacts` table.                                                       |
+| Learners DB         | `db/learners.py`          | Async database operations for the `learner` table.                                                         |
+| Database Connection | `database.py`             | Creates and manages the async SQLAlchemy engine and session factory.                                       |
+| Models              | `models/`                 | SQLModel classes: define table schema, validate input (Pydantic), and shape API responses.                 |
+| Settings            | `settings.py`             | Pydantic `BaseSettings`: reads all configuration from environment variables.                               |
 
 ---
 
@@ -229,7 +229,7 @@ graph TD
 
 ### 6.1 Student Fetches Items via Frontend
 
-The most common interaction: a student opens the browser, Caddy serves the React SPA as static files, and the SPA calls the API through Caddy. The API token is entered at runtime through the UI and persisted in `localStorage`.
+The most common interaction: a student opens the browser, Caddy serves the React SPA as static files, and the SPA calls the API through Caddy. The API key is entered at runtime through the UI and persisted in `localStorage`.
 
 ```mermaid
 sequenceDiagram
@@ -241,8 +241,8 @@ sequenceDiagram
 
     Student->>Caddy: GET / (opens app in browser)
     Caddy-->>Browser: index.html + JS bundle (static files)
-    Note over Student,Browser: Student enters API token in the UI
-    Browser->>Browser: Save token to localStorage
+    Note over Student,Browser: Student enters API key in the UI
+    Browser->>Browser: Save the key to localStorage
     Browser->>Caddy: GET /items (Authorization: Bearer <token>)
     Caddy->>API: Proxy GET /items
     API->>API: verify_api_key()
@@ -331,7 +331,7 @@ sequenceDiagram
 
 ### 7.4 Feature Flags for Optional Endpoints
 
-**Decision:** The interactions and learners routers are conditionally included based on environment variables (`ENABLE_INTERACTIONS`, `ENABLE_LEARNERS`).
+**Decision:** The interactions and learners routers are conditionally included based on environment variables (`APP_ENABLE_INTERACTIONS`, `APP_ENABLE_LEARNERS`).
 
 **Rationale:** Students implement parts of the API incrementally across labs. Feature flags let the instructor control which endpoints are active without changing code.
 
