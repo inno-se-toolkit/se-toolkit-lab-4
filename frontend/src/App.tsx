@@ -38,6 +38,7 @@ function App() {
   )
   const [draft, setDraft] = useState('')
   const [fetchState, dispatch] = useReducer(fetchReducer, { status: 'idle' })
+  const [selectedType, setSelectedType] = useState<string>('All')
 
   useEffect(() => {
     if (!token) return
@@ -56,6 +57,10 @@ function App() {
         dispatch({ type: 'fetch_error', message: err.message }),
       )
   }, [token])
+
+  const uniqueTypes = fetchState.status === 'success'
+    ? Array.from(new Set(fetchState.items.map((item) => item.type)))
+    : []
 
   function handleConnect(e: FormEvent) {
     e.preventDefault()
@@ -100,26 +105,48 @@ function App() {
       {fetchState.status === 'error' && <p>Error: {fetchState.message}</p>}
 
       {fetchState.status === 'success' && (
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Type</th>
-              <th>Title</th>
-              <th>Created at</th>
-            </tr>
-          </thead>
-          <tbody>
-            {fetchState.items.map((item) => (
-              <tr key={item.id}>
-                <td>{item.id}</td>
-                <td>{item.type}</td>
-                <td>{item.title}</td>
-                <td>{item.created_at}</td>
+        <>
+          <div className="filter-container">
+            <label htmlFor="type-filter">Filter by type: </label>
+            <select
+              id="type-filter"
+              value={selectedType}
+              onChange={(e) => setSelectedType(e.target.value)}
+            >
+              <option value="All">All</option>
+              {uniqueTypes.map((type) => (
+                <option key={type} value={type}>
+                  {type}
+                </option>
+              ))}
+            </select>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Type</th>
+                <th>Title</th>
+                <th>Created at</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {fetchState.items
+                .filter(
+                  (item) =>
+                    selectedType === 'All' || item.type === selectedType,
+                )
+                .map((item) => (
+                  <tr key={item.id}>
+                    <td>{item.id}</td>
+                    <td>{item.type}</td>
+                    <td>{item.title}</td>
+                    <td>{item.created_at}</td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </>
       )}
     </div>
   )

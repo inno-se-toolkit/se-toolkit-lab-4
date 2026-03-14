@@ -59,3 +59,27 @@ tr:nth-child(even) {
   padding: 0.25rem 0.75rem;
   font-size: 0.85rem;
 }
+
+/* Type filter */
+
+.filter-container {
+  margin-bottom: 1rem;
+}
+
+.filter-container label {
+  margin-right: 0.5rem;
+  font-weight: 500;
+}
+
+.filter-container select {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.filter-container select:hover {
+  border-color: #bbb;
+}
