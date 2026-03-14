@@ -104,7 +104,7 @@ function App() {
           <thead>
             <tr>
               <th>ID</th>
-              <th>ItemType</th>
+              <th>Type</th>
               <th>Title</th>
               <th>Created at</th>
             </tr>
